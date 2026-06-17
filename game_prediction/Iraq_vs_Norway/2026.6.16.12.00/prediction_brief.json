@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "match": {
+    "match_id": "IRQ_NOR",
+    "team_a": "Iraq",
+    "team_b": "Norway",
+    "kickoff_utc": "2026-06-16T22:00:00Z",
+    "venue": "Boston Stadium, Foxborough",
+    "stage": "group",
+    "group": "I",
+    "neutral_site": true,
+    "freeze_time": "2026-06-16T12:22:00Z"
+  },
+  "status": "provisional",
+  "win_draw_loss": {
+    "team_a_win": 0.11222222222222222,
+    "draw": 0.22,
+    "team_b_win": 0.6677777777777778
+  },
+  "most_likely_outcome": {
+    "label": "Norway胜",
+    "probability": 0.6677777777777778
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.14148148148148149
+    },
+    {
+      "score": "0-2",
+      "probability": 0.13962962962962963
+    },
+    {
+      "score": "1-1",
+      "probability": 0.10222222222222223
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "伊拉克被反复描述为直接、顽强且具备定位球威胁，因此伊拉克若在运动战中难以长时间推进，会更依赖前场犯规、角球和长传二次进攻。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_d444246cb485",
+        "E_84dbc1b4fb45",
+        "E_bd97899e1c43",
+        "E_2fda80836c77",
+        "E_53f565e71eea",
+        "E_8a21c77be8a9",
+        "E_73309fcc8283"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times",
+        "['The Athletic']",
+        "Goal.com"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "伊拉克被描述为防守顽强，并且持球直接，因此伊拉克若采用紧凑防守限制中路，挪威中路组合空间会下降。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_d444246cb485",
+        "E_84dbc1b4fb45",
+        "E_50dd8510b917",
+        "E_4c0b28588a90",
+        "E_4413e13d4a76",
+        "E_ef4a7ff5f00f",
+        "E_6158055bdd62",
+        "E_a3ae422e66e2"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times",
+        "['The Athletic']",
+        "The Athletic"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "多项赛前材料称挪威在Solbakken下采用高压、快速转换的4-3-3，因此挪威前场高压压缩伊拉克门将和中卫的短传出口。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_49ed7a638c0f",
+        "E_6491bf99e6f3",
+        "E_377bbabb625b",
+        "E_d444246cb485",
+        "E_84dbc1b4fb45",
+        "E_53f565e71eea",
+        "E_07f4e842d5a7"
+      ],
+      "source_names": [
+        "Goal.com",
+        "['Goal.com', 'OneFootball']",
+        "OneFootball"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "比赛环境：Iraq vs Norway is scheduled for Tuesday, June 16, 2026 at 6 p.m. U.S. ET。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_d7e41a3eb748"
+      ],
+      "source_names": [
+        "ESPN"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛环境：The Iraq vs Norway match is scheduled for 6 p.m. and is one of seven World Cup matches hoste…",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_2184561011bd"
+      ],
+      "source_names": [
+        "MassLive"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛环境：Norway vs Iraq is scheduled for 6 p.m. on Tuesday, June 16 at Boston Stadium in Foxborough/G…",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_2c49cf552214"
+      ],
+      "source_names": [
+        "The Herald News"
+      ],
+      "generated_by": "fallback"
+    }
+  ]
+}

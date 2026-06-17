@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>高考 985 录取分数线预测 | FutureCast Intelligence</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header home-nav-shell" data-shared-nav data-active-page="gaokao" data-nav-variant="gaokao"></header>
+
+  <main class="compact-page gaokao-page gaokao-prediction-page" data-gaokao-prediction-page>
+    <section class="gaokao-hero">
+      <div class="container gaokao-hero-grid">
+        <div class="gaokao-hero-copy">
+          <p class="kicker">985 ADMISSION FORECAST</p>
+          <h1>高考 985 录取分数线预测</h1>
+          <p>选择生源省份和科类后，在高校地图上查看 985 高校面向该省该科类的预测分数线。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact-section gaokao-workbench-section">
+      <div class="container gaokao-simple-layout">
+        <article class="module-card gaokao-control-panel gaokao-control-panel--simple">
+          <div class="module-head gaokao-panel-head">
+            <div>
+              <p class="kicker">PROVINCE ENTRY</p>
+              <h2>选择省份和科类</h2>
+              <p>切换后，下方高校地图会同步显示对应预测分数线。</p>
+            </div>
+            <div class="gaokao-data-badge" data-gaokao-data-badge>示例数据</div>
+          </div>
+
+          <div class="gaokao-control-grid">
+            <label class="gaokao-field">
+              <span>生源省份</span>
+              <select data-gaokao-province-select aria-label="选择省份"></select>
+            </label>
+            <label class="gaokao-field">
+              <span>科类 / 批次</span>
+              <select data-gaokao-subject-select aria-label="选择科类或批次"></select>
+            </label>
+          </div>
+
+          <div class="gaokao-quick-row" data-gaokao-province-quick-list aria-label="热门省份快捷选择"></div>
+        </article>
+
+        <article class="module-card gaokao-map-panel">
+          <div class="module-head gaokao-map-head">
+            <div>
+              <p class="kicker">UNIVERSITY SCORE MAP</p>
+              <h2 data-gaokao-map-heading>985 高校预测地图</h2>
+              <p data-gaokao-map-summary>选择省份和科类后查看预测分数线。</p>
+            </div>
+            <span class="gaokao-warning-chip">预测仅供参考</span>
+          </div>
+
+          <div class="gaokao-map-body">
+            <div class="gaokao-map-main">
+              <div class="gaokao-prediction-map-shell">
+                <div class="gaokao-prediction-map" data-gaokao-prediction-map data-map-source-height="980" data-map-crop-height="700" aria-label="985 高校预测分数线地图"></div>
+              </div>
+              <p class="gaokao-map-note">示例/占位数据用于展示交互结构，正式发布前请替换为官方投档线、最低位次和模型预测结果；最终以省教育考试院和高校招生章程为准。</p>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="gaokao-detail-modal" data-gaokao-detail-modal aria-hidden="true">
+    <div class="gaokao-detail-backdrop" data-close-gaokao-detail></div>
+    <section class="gaokao-detail-card" role="dialog" aria-modal="true" aria-labelledby="gaokao-detail-title">
+      <button class="modal-close gaokao-detail-close" type="button" data-close-gaokao-detail aria-label="关闭高校详情">×</button>
+      <div class="gaokao-detail-body" data-gaokao-detail-body></div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>FutureCast Intelligence · <span data-year></span></span>
+      <div class="footer-links">
+        <a href="about.html#sources">来源说明</a>
+        <a href="index.html">首页</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="gaokao-history-data.js"></script>
+  <script src="gaokao-prediction-data.js"></script>
+  <script src="gaokao-admission-prediction-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

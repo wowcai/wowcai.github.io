@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "match": {
+    "match_id": "FRA_SEN",
+    "team_a": "France",
+    "team_b": "Senegal",
+    "kickoff_utc": "2026-06-16T19:00:00Z",
+    "venue": "New York/New Jersey Stadium, East Rutherford",
+    "stage": "group",
+    "group": "I",
+    "neutral_site": true,
+    "freeze_time": "2026-06-16T09:16:00Z"
+  },
+  "status": "provisional",
+  "win_draw_loss": {
+    "team_a_win": 0.46444444444444444,
+    "draw": 0.30148148148148146,
+    "team_b_win": 0.23407407407407407
+  },
+  "most_likely_outcome": {
+    "label": "France胜",
+    "probability": 0.46444444444444444
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.13703703703703704
+    },
+    {
+      "score": "1-0",
+      "probability": 0.13666666666666666
+    },
+    {
+      "score": "0-0",
+      "probability": 0.10703703703703704
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "姆巴佩被指转向9号位，法国可用他中路纵深威胁压迫塞内加尔中卫身后。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_df14da46afa2"
+      ],
+      "source_names": [
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "盖耶预计居中拖后，身旁有Pape Gueye和Diarra，塞内加尔三中场可压缩中路。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_c4ac4a62838e"
+      ],
+      "source_names": [
+        "Evening Standard"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "萨利巴已回归法国合练，若背伤疑虑缓解，法国防线前压和回追更有保障。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_6087e8e1996c"
+      ],
+      "source_names": [
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "库利巴利带伤仍进28人名单，塞内加尔防线领袖的可用性仍是赛前变量。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_a9f14fb714b0"
+      ],
+      "source_names": [
+        "ESPN Africa"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛下午3点在东卢瑟福开球，若体感偏热，双方持续压迫可能下降、节奏更碎。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_cdf723e2c3fb",
+        "E_604a7e83fc8f",
+        "E_fa71a9ef4f41"
+      ],
+      "source_names": [
+        "MetLife Stadium",
+        "PIX11",
+        "National Weather Service"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}

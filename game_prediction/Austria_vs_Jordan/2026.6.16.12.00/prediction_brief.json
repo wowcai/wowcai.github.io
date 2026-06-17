@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "match": {
+    "match_id": "AUT_JOR",
+    "team_a": "Austria",
+    "team_b": "Jordan",
+    "kickoff_utc": "2026-06-17T04:00:00Z",
+    "venue": "San Francisco Bay Area Stadium, Santa Clara",
+    "stage": "group",
+    "group": "J",
+    "neutral_site": true,
+    "freeze_time": "2026-06-16T12:22:00Z"
+  },
+  "status": "final",
+  "win_draw_loss": {
+    "team_a_win": 0.4362962962962963,
+    "draw": 0.31777777777777777,
+    "team_b_win": 0.24592592592592594
+  },
+  "most_likely_outcome": {
+    "label": "Austria胜",
+    "probability": 0.4362962962962963
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.15074074074074073
+    },
+    {
+      "score": "1-0",
+      "probability": 0.14296296296296296
+    },
+    {
+      "score": "0-0",
+      "probability": 0.1237037037037037
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "奥地利的朗尼克式高压可逼约旦长传或失误，增加前场二次进攻时间。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_02e58c7efeba",
+        "E_f6fd3e306def",
+        "E_e9ff9b145454"
+      ],
+      "source_names": [
+        "RotoWire",
+        "Sports Yahoo",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "鲍姆加特纳严重大腿伤缺席，削弱奥地利线间接应和最后一传，破低位块效率受损。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_60119ea89286",
+        "E_ee4e840ce2cb"
+      ],
+      "source_names": [
+        "ESPN",
+        "The Straits Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "约旦反击主要看穆萨·塔马里边路推进，但纳伊马特缺席会限制锋线终点质量。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_78c6e6277717",
+        "E_0d4d8f4a20d9",
+        "E_e05b9686fba8"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "Sports Mole",
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "圣克拉拉21点预报19°C晴朗，混合草皮合规，环境不明显惩罚奥地利高强度压迫。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_34b2a2a900fc",
+        "E_b8165ed41b55",
+        "E_b2d39ff8050b"
+      ],
+      "source_names": [
+        "Goal.com",
+        "Knox News",
+        "KQED"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "奥地利6月1日热身赛1比0胜突尼斯，并以欧预赛H组头名结束28年世界杯缺席。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_cc0444613998",
+        "E_8223b16bcf95",
+        "E_2a465d59b177"
+      ],
+      "source_names": [
+        "UEFA.com",
+        "FIFA",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}
