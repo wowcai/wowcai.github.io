@@ -1,0 +1,589 @@
+{
+  "schema_version": "1.0",
+  "match_id": "POR_COD",
+  "team_a": "Portugal",
+  "team_b": "DR Congo",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-0",
+      "deviation": 0.0,
+      "probability": 0.12481481481481481,
+      "probability_percent": 12.4815,
+      "outcome": "team_a",
+      "sample_count": 337,
+      "path_deviation": 0.6575140633912515,
+      "result_surprise": 0.0,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏；Portugal在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo"
+      ]
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.009919022958728733,
+      "probability": 0.10666666666666667,
+      "probability_percent": 10.6667,
+      "outcome": "draw",
+      "sample_count": 288,
+      "path_deviation": 0.5853063782314263,
+      "result_surprise": 0.14540059347181,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.10963499879067007,
+      "probability": 0.1,
+      "probability_percent": 10.0,
+      "outcome": "team_a",
+      "sample_count": 270,
+      "path_deviation": 0.6177177674828456,
+      "result_surprise": 0.19881305637982183,
+      "reason_cn": "Portugal打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.11400088632882202,
+      "probability": 0.09777777777777778,
+      "probability_percent": 9.7778,
+      "outcome": "team_a",
+      "sample_count": 264,
+      "path_deviation": 0.610809220576757,
+      "result_surprise": 0.2166172106824925,
+      "reason_cn": "Portugal在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.32455391678647494,
+      "probability": 0.06407407407407407,
+      "probability_percent": 6.4074,
+      "outcome": "team_b",
+      "sample_count": 173,
+      "path_deviation": 0.5945748769895929,
+      "result_surprise": 0.48664688427299696,
+      "reason_cn": "DR Congo通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.3448842082609437,
+      "probability": 0.06296296296296296,
+      "probability_percent": 6.2963,
+      "outcome": "team_a",
+      "sample_count": 170,
+      "path_deviation": 0.6022533088857113,
+      "result_surprise": 0.49554896142433236,
+      "reason_cn": "Portugal打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.3776238698086528,
+      "probability": 0.06851851851851852,
+      "probability_percent": 6.8519,
+      "outcome": "draw",
+      "sample_count": 185,
+      "path_deviation": 0.6463049727543918,
+      "result_surprise": 0.4510385756676557,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.41280352389370406,
+      "probability": 0.05444444444444444,
+      "probability_percent": 5.4444,
+      "outcome": "draw",
+      "sample_count": 147,
+      "path_deviation": 0.6071696168073477,
+      "result_surprise": 0.5637982195845697,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.43179031476249785,
+      "probability": 0.05851851851851852,
+      "probability_percent": 5.8519,
+      "outcome": "team_a",
+      "sample_count": 158,
+      "path_deviation": 0.6363931844198853,
+      "result_surprise": 0.5311572700296736,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏；Portugal打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.4381815359217396,
+      "probability": 0.04703703703703704,
+      "probability_percent": 4.7037,
+      "outcome": "team_b",
+      "sample_count": 127,
+      "path_deviation": 0.5907818844207152,
+      "result_surprise": 0.6231454005934718,
+      "reason_cn": "DR Congo通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.5113020208551139,
+      "probability": 0.013333333333333334,
+      "probability_percent": 1.3333,
+      "outcome": "draw",
+      "sample_count": 36,
+      "path_deviation": 0.49023791831761115,
+      "result_surprise": 0.8931750741839762,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.5182159614359227,
+      "probability": 0.026296296296296297,
+      "probability_percent": 2.6296,
+      "outcome": "team_a",
+      "sample_count": 71,
+      "path_deviation": 0.5504026622226477,
+      "result_surprise": 0.7893175074183976,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.5493892548619265,
+      "probability": 0.02925925925925926,
+      "probability_percent": 2.9259,
+      "outcome": "team_a",
+      "sample_count": 79,
+      "path_deviation": 0.5823087579819819,
+      "result_surprise": 0.7655786350148368,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.5943561484187704,
+      "probability": 0.022222222222222223,
+      "probability_percent": 2.2222,
+      "outcome": "team_b",
+      "sample_count": 60,
+      "path_deviation": 0.5795358656584731,
+      "result_surprise": 0.8219584569732937,
+      "reason_cn": "DR Congo充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6170649270208002,
+      "probability": 0.014444444444444444,
+      "probability_percent": 1.4444,
+      "outcome": "team_b",
+      "sample_count": 39,
+      "path_deviation": 0.5599128516983606,
+      "result_surprise": 0.884272997032641,
+      "reason_cn": "抢断后的快速转换；DR Congo充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.62584272014901,
+      "probability": 0.017407407407407406,
+      "probability_percent": 1.7407,
+      "outcome": "team_b",
+      "sample_count": 47,
+      "path_deviation": 0.5780801625944758,
+      "result_surprise": 0.8605341246290801,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "8-3",
+      "deviation": 0.6337266560744441,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5094174553531662,
+      "result_surprise": 0.9970326409495549,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.6702618972042699,
+      "probability": 0.020370370370370372,
+      "probability_percent": 2.037,
+      "outcome": "team_a",
+      "sample_count": 55,
+      "path_deviation": 0.6181121025227616,
+      "result_surprise": 0.8367952522255193,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏、紧凑防守对进攻空间的压缩；Portugal打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo",
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.6813720572969865,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5386460909457698,
+      "result_surprise": 0.9970326409495549,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；DR Congo充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window",
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "6-4",
+      "deviation": 0.6813720572969865,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5386460909457698,
+      "result_surprise": 0.9970326409495549,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window",
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.6954221684813722,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.5520587241904189,
+      "result_surprise": 0.9881305637982196,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.7028818781788381,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_a",
+      "sample_count": 9,
+      "path_deviation": 0.5646240150389052,
+      "result_surprise": 0.973293768545994,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7052753109606277,
+      "probability": 0.012222222222222223,
+      "probability_percent": 1.2222,
+      "outcome": "team_a",
+      "sample_count": 33,
+      "path_deviation": 0.6044397039890043,
+      "result_surprise": 0.9020771513353115,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.7758308821818448,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.5981907843639219,
+      "result_surprise": 0.9940652818991098,
+      "reason_cn": "抢断后的快速转换、小组首战与刚果民主共和国防守韧性压低前段节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window",
+        "H_opener_risk_management_low_tempo"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.7802305071305944,
+      "probability": 0.0044444444444444444,
+      "probability_percent": 0.4444,
+      "outcome": "team_a",
+      "sample_count": 12,
+      "path_deviation": 0.6168678735834071,
+      "result_surprise": 0.9643916913946587,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.8090657303106326,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_b",
+      "sample_count": 11,
+      "path_deviation": 0.6329593739878981,
+      "result_surprise": 0.9673590504451038,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.8133788711052948,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.6276162776868641,
+      "result_surprise": 0.9821958456973294,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_wide_cross_vs_compact_block",
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "6-3",
+      "deviation": 0.8437526416157839,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.6398581920121509,
+      "result_surprise": 0.9940652818991098,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.8586401731662322,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.6553823594164895,
+      "result_surprise": 0.9821958456973294,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.8672634519368999,
+      "probability": 0.013333333333333334,
+      "probability_percent": 1.3333,
+      "outcome": "team_a",
+      "sample_count": 36,
+      "path_deviation": 0.7086066734785749,
+      "result_surprise": 0.8931750741839762,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo"
+      ]
+    },
+    {
+      "score": "5-5",
+      "deviation": 0.8754988614437422,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 0.6577354777820741,
+      "result_surprise": 0.9970326409495549,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo",
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.9024791720392786,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_a",
+      "sample_count": 14,
+      "path_deviation": 0.6950583821684779,
+      "result_surprise": 0.9584569732937686,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.916852227396539,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "team_b",
+      "sample_count": 20,
+      "path_deviation": 0.7134625554986644,
+      "result_surprise": 0.9406528189910979,
+      "reason_cn": "紧凑防守对进攻空间的压缩、小组首战与刚果民主共和国防守韧性压低前段节奏；DR Congo充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_wide_cross_vs_compact_block",
+        "H_opener_risk_management_low_tempo"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.9228531039863604,
+      "probability": 0.005555555555555556,
+      "probability_percent": 0.5556,
+      "outcome": "team_a",
+      "sample_count": 15,
+      "path_deviation": 0.709154820707189,
+      "result_surprise": 0.9554896142433235,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo",
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "7-1",
+      "deviation": 0.9513711874045647,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.7074758720550675,
+      "result_surprise": 0.9910979228486647,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-4",
+      "deviation": 0.9631374224975016,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.7162918170270172,
+      "result_surprise": 0.9881305637982196,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo",
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "8-1",
+      "deviation": 0.9849219482679893,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7248623661729425,
+      "result_surprise": 0.9970326409495549,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_absence_transition_window",
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 1.0,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.7421012191582542,
+      "result_surprise": 0.9821958456973294,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_wide_cross_vs_compact_block",
+        "H_dias_absence_transition_window"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.8859118259273581,
+      "result_surprise": 0.9910979228486647,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo",
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.7455422614289926,
+      "result_surprise": 0.9940652818991098,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo",
+        "H_wide_cross_vs_compact_block"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9970326409495549,
+      "reason_cn": "小组首战与刚果民主共和国防守韧性压低前段节奏、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_opener_risk_management_low_tempo",
+        "H_wide_cross_vs_compact_block"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

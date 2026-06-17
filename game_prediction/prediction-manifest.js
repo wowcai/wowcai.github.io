@@ -1,19 +1,19 @@
 window.WORLD_CUP_GAME_PREDICTION_DIR = "game_prediction";
 window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
   {
-    matchFolder: "Argentina_vs_Algeria",
-    versions: ["2026.6.16.12.00"]
+    matchFolder: "England_vs_Croatia",
+    versions: ["2026.6.17.20.30"]
   },
   {
-    matchFolder: "Austria_vs_Jordan",
-    versions: ["2026.6.16.12.00"]
+    matchFolder: "Ghana_vs_Panama",
+    versions: ["2026.6.17.20.30"]
   },
   {
-    matchFolder: "France_vs_Senegal",
-    versions: ["2026.6.16.12.00"]
+    matchFolder: "Portugal_vs_DR_Congo",
+    versions: ["2026.6.17.20.30"]
   },
   {
-    matchFolder: "Iraq_vs_Norway",
-    versions: ["2026.6.16.12.00"]
+    matchFolder: "Uzbekistan_vs_Colombia",
+    versions: ["2026.6.17.20.30"]
   }
 ];

@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "match": {
+    "match_id": "GHA_PAN",
+    "team_a": "Ghana",
+    "team_b": "Panama",
+    "kickoff_utc": "2026-06-17T23:00:00Z",
+    "venue": "Toronto Stadium",
+    "stage": "group",
+    "group": "L",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "win_draw_loss": {
+    "team_a_win": 0.19,
+    "draw": 0.2733333333333333,
+    "team_b_win": 0.5366666666666666
+  },
+  "most_likely_outcome": {
+    "label": "Panama胜",
+    "probability": 0.5366666666666666
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.15333333333333332
+    },
+    {
+      "score": "1-1",
+      "probability": 0.1262962962962963
+    },
+    {
+      "score": "0-2",
+      "probability": 0.11296296296296296
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "Reuters等确认Thomas Partey因入境加拿大受阻缺席，加纳中场少一名核心。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_1fc09d44a43f",
+        "E_9ee18965fc72",
+        "E_5c8a9637f9b6"
+      ],
+      "source_names": [
+        "ESPN",
+        "WhoScored",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "BBC Pidgin称Salisu、Alexander Djiku伤缺；Djiku被Goal称为防线支点。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_5bbf624661ba",
+        "E_f0b523f9363b"
+      ],
+      "source_names": [
+        "BBC Pidgin",
+        "Goal"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "The Guardian称巴拿马预选赛小组仅丢4球，防守端具备稳定基础。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_2af716c3c0c5"
+      ],
+      "source_names": [
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "RotoWire称加纳会用前场速度冲击巴拿马三中卫身后，依赖转换机会。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_129ca0b4a251",
+        "E_9e18420ab617"
+      ],
+      "source_names": [
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "FIFA确认多伦多19点开球；预报晴朗约27℃，没有极端天气信号。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_06ad4ce0744e",
+        "E_45e491394d03"
+      ],
+      "source_names": [
+        "FIFA",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}

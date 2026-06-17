@@ -1,0 +1,562 @@
+{
+  "schema_version": "1.0",
+  "match_id": "GHA_PAN",
+  "team_a": "Ghana",
+  "team_b": "Panama",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "0-1",
+      "deviation": 0.0,
+      "probability": 0.15333333333333332,
+      "probability_percent": 15.3333,
+      "outcome": "team_b",
+      "sample_count": 414,
+      "path_deviation": 0.6624413640248952,
+      "result_surprise": 0.0,
+      "reason_cn": "Panama通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-7",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "天气与场地条件、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.14513895470638666,
+      "probability": 0.1262962962962963,
+      "probability_percent": 12.6296,
+      "outcome": "draw",
+      "sample_count": 341,
+      "path_deviation": 0.6575918210719984,
+      "result_surprise": 0.17632850241545883,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.23959529925047218,
+      "probability": 0.10407407407407407,
+      "probability_percent": 10.4074,
+      "outcome": "draw",
+      "sample_count": 281,
+      "path_deviation": 0.6381887130149504,
+      "result_surprise": 0.321256038647343,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.2540499053157745,
+      "probability": 0.11296296296296296,
+      "probability_percent": 11.2963,
+      "outcome": "team_b",
+      "sample_count": 305,
+      "path_deviation": 0.6783767274994017,
+      "result_surprise": 0.2632850241545893,
+      "reason_cn": "Panama充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.3881134427789317,
+      "probability": 0.08851851851851852,
+      "probability_percent": 8.8519,
+      "outcome": "team_b",
+      "sample_count": 239,
+      "path_deviation": 0.6757564218187129,
+      "result_surprise": 0.4227053140096617,
+      "reason_cn": "Panama通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.4903910973013859,
+      "probability": 0.07740740740740741,
+      "probability_percent": 7.7407,
+      "outcome": "team_a",
+      "sample_count": 209,
+      "path_deviation": 0.7002274284685774,
+      "result_surprise": 0.49516908212560384,
+      "reason_cn": "天气与场地条件；Ghana在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.5171848036580146,
+      "probability": 0.04814814814814815,
+      "probability_percent": 4.8148,
+      "outcome": "team_a",
+      "sample_count": 130,
+      "path_deviation": 0.6141100039817771,
+      "result_surprise": 0.6859903381642511,
+      "reason_cn": "天气与场地条件；Ghana在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.5442328165657057,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_b",
+      "sample_count": 9,
+      "path_deviation": 0.47352391014582795,
+      "result_surprise": 0.9782608695652174,
+      "reason_cn": "紧凑防守对进攻空间的压缩、天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H3"
+      ]
+    },
+    {
+      "score": "0-7",
+      "deviation": 0.5569055600744706,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.4748874938759784,
+      "result_surprise": 0.9903381642512077,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.5905152939112743,
+      "probability": 0.03777777777777778,
+      "probability_percent": 3.7778,
+      "outcome": "team_b",
+      "sample_count": 102,
+      "path_deviation": 0.6232130092335181,
+      "result_surprise": 0.7536231884057971,
+      "reason_cn": "Panama充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.6026583687441536,
+      "probability": 0.046296296296296294,
+      "probability_percent": 4.6296,
+      "outcome": "team_b",
+      "sample_count": 125,
+      "path_deviation": 0.6606654840039359,
+      "result_surprise": 0.6980676328502415,
+      "reason_cn": "Panama充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.6224152734806259,
+      "probability": 0.0362962962962963,
+      "probability_percent": 3.6296,
+      "outcome": "draw",
+      "sample_count": 98,
+      "path_deviation": 0.6378127391507774,
+      "result_surprise": 0.7632850241545893,
+      "reason_cn": "天气与场地条件；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6306632685908343,
+      "probability": 0.011481481481481481,
+      "probability_percent": 1.1481,
+      "outcome": "team_a",
+      "sample_count": 31,
+      "path_deviation": 0.5557904449265747,
+      "result_surprise": 0.9251207729468599,
+      "reason_cn": "天气与场地条件、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.6899083088875844,
+      "probability": 0.022222222222222223,
+      "probability_percent": 2.2222,
+      "outcome": "team_b",
+      "sample_count": 60,
+      "path_deviation": 0.6302857639040937,
+      "result_surprise": 0.855072463768116,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.7164151502882107,
+      "probability": 0.02,
+      "probability_percent": 2.0,
+      "outcome": "team_b",
+      "sample_count": 54,
+      "path_deviation": 0.6389363815827674,
+      "result_surprise": 0.8695652173913043,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7233238473880995,
+      "probability": 0.017037037037037038,
+      "probability_percent": 1.7037,
+      "outcome": "team_b",
+      "sample_count": 46,
+      "path_deviation": 0.6328199760427856,
+      "result_surprise": 0.8888888888888888,
+      "reason_cn": "Panama充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.7296714393865992,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_a",
+      "sample_count": 10,
+      "path_deviation": 0.5899375698592022,
+      "result_surprise": 0.9758454106280193,
+      "reason_cn": "天气与场地条件、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.8034442204402018,
+      "probability": 0.027037037037037037,
+      "probability_percent": 2.7037,
+      "outcome": "team_a",
+      "sample_count": 73,
+      "path_deviation": 0.7176726198249996,
+      "result_surprise": 0.8236714975845411,
+      "reason_cn": "Ghana打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.8155730646271286,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6328568776392935,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.8278859612313921,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome": "team_b",
+      "sample_count": 21,
+      "path_deviation": 0.6652122441668302,
+      "result_surprise": 0.9492753623188406,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.8892916876816221,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.6773178773756832,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "天气与场地条件、紧凑防守对进攻空间的压缩；Ghana打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.8899696176661758,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "team_a",
+      "sample_count": 30,
+      "path_deviation": 0.7154570300627109,
+      "result_surprise": 0.927536231884058,
+      "reason_cn": "天气与场地条件；Ghana打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.8999555333709668,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.6930419969119522,
+      "result_surprise": 0.9806763285024155,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.9332941350942783,
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296,
+      "outcome": "draw",
+      "sample_count": 17,
+      "path_deviation": 0.7254429796297561,
+      "result_surprise": 0.9589371980676329,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.9358132382198905,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_b",
+      "sample_count": 23,
+      "path_deviation": 0.7348105305154745,
+      "result_surprise": 0.9444444444444444,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-7",
+      "deviation": 0.9570471413516819,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7193778070458586,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "2-8",
+      "deviation": 0.9570471413516819,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7193778070458586,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.9862804973496376,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_a",
+      "sample_count": 16,
+      "path_deviation": 0.7570342045527176,
+      "result_surprise": 0.961352657004831,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Ghana打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.9884126692297374,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.7440508241866228,
+      "result_surprise": 0.9879227053140096,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.9916722329440059,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.7447736018323216,
+      "result_surprise": 0.9903381642512077,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 1.0,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_b",
+      "sample_count": 23,
+      "path_deviation": 0.7746551561506898,
+      "result_surprise": 0.9444444444444444,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 1.0,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.8615699068547411,
+      "result_surprise": 0.9879227053140096,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.8095589083929298,
+      "result_surprise": 0.9903381642512077,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.8386589386878416,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "天气与场地条件、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.7585509597251892,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.9930235024188073,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7977241124045197,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "schema_version": "1.0",
+  "match_id": "UZB_COL",
+  "team_a": "Uzbekistan",
+  "team_b": "Colombia",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "0-1",
+      "deviation": 0.0,
+      "probability": 0.15333333333333332,
+      "probability_percent": 15.3333,
+      "outcome": "team_b",
+      "sample_count": 414,
+      "path_deviation": 0.6081988737979814,
+      "result_surprise": 0.0,
+      "reason_cn": "Colombia通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-8",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_002",
+        "H_001"
+      ]
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.11786509957050727,
+      "probability": 0.12481481481481481,
+      "probability_percent": 12.4815,
+      "outcome": "draw",
+      "sample_count": 337,
+      "path_deviation": 0.5868124840891895,
+      "result_surprise": 0.18599033816425115,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.1369426544543732,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.16514988264970382,
+      "result_surprise": 0.9927536231884058,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001",
+        "H_002"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.21050876737262425,
+      "probability": 0.11703703703703704,
+      "probability_percent": 11.7037,
+      "outcome": "team_b",
+      "sample_count": 316,
+      "path_deviation": 0.6214074849266832,
+      "result_surprise": 0.23671497584541057,
+      "reason_cn": "Colombia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.2886797866900778,
+      "probability": 0.0974074074074074,
+      "probability_percent": 9.7407,
+      "outcome": "draw",
+      "sample_count": 263,
+      "path_deviation": 0.6047110578112078,
+      "result_surprise": 0.36473429951690817,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.30227288019989385,
+      "probability": 0.09,
+      "probability_percent": 9.0,
+      "outcome": "team_b",
+      "sample_count": 243,
+      "path_deviation": 0.5877818811108814,
+      "result_surprise": 0.4130434782608695,
+      "reason_cn": "Colombia通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-7",
+      "deviation": 0.3476494989521675,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.30595276704121044,
+      "result_surprise": 0.9927536231884058,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001",
+        "H_002"
+      ]
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.38278969228687926,
+      "probability": 0.07518518518518519,
+      "probability_percent": 7.5185,
+      "outcome": "team_a",
+      "sample_count": 203,
+      "path_deviation": 0.5895612207039364,
+      "result_surprise": 0.5096618357487922,
+      "reason_cn": "Uzbekistan在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.5066811673437196,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.41092356503791616,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.5376642065801092,
+      "probability": 0.05296296296296296,
+      "probability_percent": 5.2963,
+      "outcome": "team_b",
+      "sample_count": 143,
+      "path_deviation": 0.6150167668426177,
+      "result_surprise": 0.6545893719806763,
+      "reason_cn": "Colombia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-7",
+      "deviation": 0.5785199332022691,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.45892915056181566,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.5871252484333143,
+      "probability": 0.04148148148148148,
+      "probability_percent": 4.1481,
+      "outcome": "team_a",
+      "sample_count": 112,
+      "path_deviation": 0.6077490631321959,
+      "result_surprise": 0.7294685990338163,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Uzbekistan在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.5885482369940516,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_a",
+      "sample_count": 22,
+      "path_deviation": 0.49164310578393167,
+      "result_surprise": 0.9468599033816425,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Uzbekistan打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.5939304048651485,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "draw",
+      "sample_count": 20,
+      "path_deviation": 0.49263842581439327,
+      "result_surprise": 0.9516908212560387,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.5979609035331316,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome": "team_b",
+      "sample_count": 21,
+      "path_deviation": 0.4966324007078847,
+      "result_surprise": 0.9492753623188406,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.6023714059030812,
+      "probability": 0.0362962962962963,
+      "probability_percent": 3.6296,
+      "outcome": "draw",
+      "sample_count": 98,
+      "path_deviation": 0.5997283214238872,
+      "result_surprise": 0.7632850241545893,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_002"
+      ]
+    },
+    {
+      "score": "3-6",
+      "deviation": 0.6351179979878696,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.49544964794911145,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.6351179979878696,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.49544964794911145,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Uzbekistan打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.6351179979878696,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 0.49544964794911145,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6529182627121162,
+      "probability": 0.0437037037037037,
+      "probability_percent": 4.3704,
+      "outcome": "team_b",
+      "sample_count": 118,
+      "path_deviation": 0.6595184219406525,
+      "result_surprise": 0.714975845410628,
+      "reason_cn": "Colombia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.6631171717191631,
+      "probability": 0.022962962962962963,
+      "probability_percent": 2.2963,
+      "outcome": "team_b",
+      "sample_count": 62,
+      "path_deviation": 0.5934983706158065,
+      "result_surprise": 0.8502415458937198,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_002"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.6759925415629247,
+      "probability": 0.01962962962962963,
+      "probability_percent": 1.963,
+      "outcome": "team_a",
+      "sample_count": 53,
+      "path_deviation": 0.5903965308566173,
+      "result_surprise": 0.8719806763285024,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Uzbekistan打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_002"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.704856217134775,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "team_a",
+      "sample_count": 18,
+      "path_deviation": 0.5641623022186373,
+      "result_surprise": 0.9565217391304348,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Uzbekistan打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_002",
+        "H_001"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7188752146455659,
+      "probability": 0.023703703703703703,
+      "probability_percent": 2.3704,
+      "outcome": "team_b",
+      "sample_count": 64,
+      "path_deviation": 0.6333594264335569,
+      "result_surprise": 0.8454106280193237,
+      "reason_cn": "Colombia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.7643429494409029,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.5831036487139308,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.7669977080414507,
+      "probability": 0.012592592592592593,
+      "probability_percent": 1.2593,
+      "outcome": "team_a",
+      "sample_count": 34,
+      "path_deviation": 0.6264978819313861,
+      "result_surprise": 0.9178743961352657,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.7836926217382842,
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296,
+      "outcome": "team_b",
+      "sample_count": 17,
+      "path_deviation": 0.6155433628586509,
+      "result_surprise": 0.9589371980676329,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.8047034066636634,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.610074147967856,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_002"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.8121340719426877,
+      "probability": 0.021111111111111112,
+      "probability_percent": 2.1111,
+      "outcome": "team_b",
+      "sample_count": 57,
+      "path_deviation": 0.686574366211406,
+      "result_surprise": 0.8623188405797101,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.8295182340793952,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_b",
+      "sample_count": 14,
+      "path_deviation": 0.642264005861901,
+      "result_surprise": 0.966183574879227,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.856813983714782,
+      "probability": 0.007037037037037037,
+      "probability_percent": 0.7037,
+      "outcome": "team_b",
+      "sample_count": 19,
+      "path_deviation": 0.6670072947514069,
+      "result_surprise": 0.9541062801932367,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.8974606053652568,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.6707576494787502,
+      "result_surprise": 0.9975845410628019,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_002",
+        "H_001"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.9008270282379577,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.6795103888549566,
+      "result_surprise": 0.9855072463768116,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.9683292767424332,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.7246181370868462,
+      "result_surprise": 0.9855072463768116,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.9972607542275952,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.7400494319785706,
+      "result_surprise": 0.9927536231884058,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_002"
+      ]
+    },
+    {
+      "score": "0-6",
+      "deviation": 1.0,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.7457818026339198,
+      "result_surprise": 0.9855072463768116,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 1.0,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.7617390471403966,
+      "result_surprise": 0.9879227053140096,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_002"
+      ]
+    },
+    {
+      "score": "0-7",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.7952276367258243,
+      "result_surprise": 0.9927536231884058,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "0-8",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.7463023897772912,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.8353788247393751,
+      "result_surprise": 0.9951690821256038,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_001"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

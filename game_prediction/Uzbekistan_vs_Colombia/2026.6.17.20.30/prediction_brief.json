@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "match": {
+    "match_id": "UZB_COL",
+    "team_a": "Uzbekistan",
+    "team_b": "Colombia",
+    "kickoff_utc": "2026-06-18T02:00:00Z",
+    "venue": "Mexico City Stadium",
+    "stage": "group",
+    "group": "K",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "win_draw_loss": {
+    "team_a_win": 0.17,
+    "draw": 0.2662962962962963,
+    "team_b_win": 0.5637037037037037
+  },
+  "most_likely_outcome": {
+    "label": "Colombia胜",
+    "probability": 0.5637037037037037
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.15333333333333332
+    },
+    {
+      "score": "1-1",
+      "probability": 0.12481481481481481
+    },
+    {
+      "score": "0-2",
+      "probability": 0.11703703703703704
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "Luis Diaz预计领衔哥伦比亚首战，James Rodriguez赛前状态信息偏正面。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_9b73c0598ace",
+        "E_1973cd1700ee",
+        "E_942cd03cede9"
+      ],
+      "source_names": [
+        "CBS Sports",
+        "Straits Times",
+        "KTVB (Associated Press syndication)"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "预览称哥伦比亚会控球拆解低位防守，由James找空当、Diaz冲击边路。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_28a010fa972b"
+      ],
+      "source_names": [
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "乌兹别克防线由Abdukodir Khusanov领衔，Cannavaro前7战仅丢5球。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_255e772a0d8c",
+        "E_c43dee0f7ef4"
+      ],
+      "source_names": [
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "多家预览预计乌兹别克采用三中卫或有组织低位防守，重点保护禁区。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_2ef63c307fa6",
+        "E_13695a224b11",
+        "E_172240593bb2"
+      ],
+      "source_names": [
+        "Sporting Life",
+        "Uzbekistan-Colombia - FIFA World Cup 2026 Statistical Preview",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在墨西哥城球场进行，预报比赛期间气温约21°C，海拔约7300英尺。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_b68b7abf18ce",
+        "E_ef94289b805c",
+        "E_ad4e8c38cc69"
+      ],
+      "source_names": [
+        "Uzbekistan v Colombia | World Cup | Match Preview - FIFA",
+        "World Cup 2026 weather updates: Forecasts for key matches ...",
+        "American Grass Could Ruin the World Cup - The Atlantic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "乌兹别克暂无确认伤停，但Khojiakbar Alijonov因小腿问题被列为疑问。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_640e5287ea07",
+        "E_c85a17c78956"
+      ],
+      "source_names": [
+        "Sports Mole",
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}

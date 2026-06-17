@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "purpose_cn": "网页最小预测输出：文本结论、比分偏离空间和蒙特卡洛比分矩阵。",
+  "files": {
+    "brief_markdown": "web_export/prediction_brief.md",
+    "brief_json": "web_export/prediction_brief.json",
+    "score_deviation_json": "web_export/score_deviation_space.json",
+    "score_deviation_csv": "web_export/score_deviation_space.csv",
+    "score_matrix_json": "web_export/monte_carlo_score_matrix.json",
+    "score_matrix_csv": "web_export/monte_carlo_score_matrix.csv",
+    "manifest": "web_export/manifest.json"
+  },
+  "notes_cn": [
+    "偏离度越大，表示该比分相对主流比赛路径越激进。",
+    "比分矩阵纵轴为Uzbekistan，横轴为Colombia。",
+    "所有概率字段均使用0到1的小数；probability_percent仅用于直接显示。"
+  ]
+}

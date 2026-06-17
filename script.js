@@ -28,6 +28,7 @@ const worldCupLatestMatchIds = window.WORLD_CUP_LATEST_MATCH_IDS;
 const worldCupPredictionReports = window.WORLD_CUP_PREDICTION_REPORTS;
 let currentWorldCupTournamentPredictions = worldCupTournamentPredictionSpecs;
 let currentWorldCupMatches = worldCupMatches || [];
+const worldCupGamePredictionLoadCache = new Map();
 
 if (historyData && predictionData && mapModal) {
   initGaokaoMaps(historyData, predictionData);
@@ -44,6 +45,7 @@ if (document.querySelector("[data-gaokao-prediction-page]")) {
 }
 
 if (worldCupMatches && worldCupTournamentPredictions) {
+  updateWorldCupPredictionRangeBadges();
   initWorldCupBoards(worldCupMatches, worldCupTournamentPredictionSpecs);
   loadWorldCupGamePredictions(worldCupMatches);
   loadWorldCupTournamentEvidence(worldCupTournamentPredictionSpecs);
@@ -153,6 +155,10 @@ function initWorldCupBoards(matches, tournamentPredictions) {
 
   if (routeMap && (worldCupRouteData || worldCupRouteRounds) && worldCupTeams) {
     routeMap.innerHTML = renderTournamentRouteMap(worldCupRouteData || worldCupRouteRounds, matches);
+    if (!routeMap.dataset.groupPredictionBound) {
+      routeMap.addEventListener("click", handleWorldCupRouteMapClick);
+      routeMap.dataset.groupPredictionBound = "true";
+    }
   }
 
   if (latestMatches) {
@@ -195,12 +201,14 @@ async function loadWorldCupTournamentEvidence(predictionSpecs) {
     window.WORLD_CUP_TOURNAMENT_PREDICTIONS = predictions;
     currentWorldCupTournamentPredictions = predictions;
     renderTournamentSummaryMount(summaryPanel, predictions);
+    updateTournamentPredictionRangeBadge(worldCupTournamentEvidenceFiles);
   } catch (error) {
     console.warn("Failed to load tournament prediction evidence files.", error);
     const fallback = buildTournamentPredictionsFromEvidence(predictionSpecs, []);
     window.WORLD_CUP_TOURNAMENT_PREDICTIONS = fallback;
     currentWorldCupTournamentPredictions = fallback;
     renderTournamentSummaryMount(summaryPanel, fallback);
+    updateTournamentPredictionRangeBadge(worldCupTournamentEvidenceFiles);
   }
 }
 
@@ -317,6 +325,63 @@ function compareTournamentEvidenceFiles(a, b) {
   return String(a || "").localeCompare(String(b || ""), "zh-CN", { numeric: true });
 }
 
+function updateWorldCupPredictionRangeBadges() {
+  updateGamePredictionRangeBadge(normalizeGamePredictionManifest(worldCupGamePredictionManifest));
+  updateTournamentPredictionRangeBadge(worldCupTournamentEvidenceFiles);
+}
+
+function updateGamePredictionRangeBadge(specs = []) {
+  const node = document.querySelector("[data-worldcup-game-prediction-range]");
+
+  if (!node) {
+    return;
+  }
+
+  node.textContent = formatPredictionRangeLabel(getGamePredictionVersionLabels(specs));
+}
+
+function updateTournamentPredictionRangeBadge(files = []) {
+  const node = document.querySelector("[data-worldcup-tournament-prediction-range]");
+
+  if (!node) {
+    return;
+  }
+
+  node.textContent = formatPredictionRangeLabel(getTournamentEvidenceTimeLabels(files));
+}
+
+function getGamePredictionVersionLabels(specs = []) {
+  return (specs || [])
+    .flatMap((spec) => spec?.versions || [])
+    .map((version) => formatGamePredictionVersionTime(version))
+    .filter((label) => label && label !== "时间待定")
+    .sort(comparePredictionTimeLabels);
+}
+
+function getTournamentEvidenceTimeLabels(files = []) {
+  return (files || [])
+    .map((fileName) => extractTournamentEvidenceDate(fileName))
+    .filter(Boolean)
+    .sort(comparePredictionTimeLabels);
+}
+
+function comparePredictionTimeLabels(a, b) {
+  return String(a || "").localeCompare(String(b || ""), "zh-CN", { numeric: true });
+}
+
+function formatPredictionRangeLabel(labels) {
+  const uniqueLabels = [...new Set(labels || [])].filter(Boolean);
+
+  if (!uniqueLabels.length) {
+    return "时间待定";
+  }
+
+  const first = uniqueLabels[0];
+  const last = uniqueLabels[uniqueLabels.length - 1];
+
+  return first === last ? first : `${first} 至 ${last}`;
+}
+
 function renderTournamentSummaryMount(summaryPanel, predictions) {
   summaryPanel.innerHTML = renderWorldCupSummaryPanel(predictions);
   summaryPanel.querySelectorAll("[data-open-tournament-modal]").forEach((button) => {
@@ -381,8 +446,143 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
     latestMatches.querySelectorAll("[data-open-match-modal]").forEach((button) => {
       button.addEventListener("click", () => openMatchPredictionModal(button.dataset.matchId));
     });
+    updateGamePredictionRangeBadge(normalizeGamePredictionManifest(worldCupGamePredictionManifest));
   } catch (error) {
     console.warn("Failed to load game prediction folders.", error);
+  }
+}
+
+function handleWorldCupRouteMapClick(event) {
+  const button = event.target.closest("[data-open-group-prediction-modal]");
+
+  if (!button) {
+    return;
+  }
+
+  openGroupPredictionModal(button.dataset.matchId);
+}
+
+async function openGroupPredictionModal(matchId) {
+  const match = (currentWorldCupMatches || worldCupMatches || []).find((item) => String(item.id) === String(matchId));
+
+  if (!match) {
+    return;
+  }
+
+  const loadedMatch = await loadGroupPredictionMatch(match);
+
+  if (!loadedMatch) {
+    return;
+  }
+
+  openMatchPredictionModal(loadedMatch.id);
+}
+
+async function loadGroupPredictionMatch(match) {
+  const matchFolder = buildGamePredictionFolderName(match);
+  const cacheKey = matchFolder || match?.id;
+
+  if (!matchFolder) {
+    return null;
+  }
+
+  if (worldCupGamePredictionLoadCache.has(cacheKey)) {
+    return worldCupGamePredictionLoadCache.get(cacheKey);
+  }
+
+  const loadPromise = (async () => {
+    const versionFolders = await discoverGamePredictionVersionFolders(matchFolder);
+
+    if (!versionFolders.length) {
+      return null;
+    }
+
+    const loaded = await loadGamePredictionMatch({ matchFolder, versions: versionFolders }, worldCupMatches || []);
+
+    if (!loaded) {
+      return null;
+    }
+
+    mergeWorldCupMatchPrediction(loaded);
+    return loaded;
+  })();
+
+  worldCupGamePredictionLoadCache.set(cacheKey, loadPromise);
+
+  try {
+    return await loadPromise;
+  } finally {
+    worldCupGamePredictionLoadCache.delete(cacheKey);
+  }
+}
+
+async function discoverGamePredictionVersionFolders(matchFolder) {
+  try {
+    const versionHtml = await fetchTextFile(`${worldCupGamePredictionDir}/${encodeURIComponent(matchFolder)}/`);
+    return extractDirectoryLinks(versionHtml)
+      .filter((folder) => /^\d{4}\.\d{1,2}\.\d{1,2}\.\d{1,2}\.\d{1,2}$/.test(folder))
+      .sort(compareGamePredictionVersions);
+  } catch (error) {
+    console.warn(`Unable to load game prediction versions for ${matchFolder}.`, error);
+    return [];
+  }
+}
+
+function buildGamePredictionFolderName(match) {
+  const homeTeam = getWorldCupTeam(match?.homeTeamId);
+  const awayTeam = getWorldCupTeam(match?.awayTeamId);
+  const home = normalizeGamePredictionFolderSegment(homeTeam?.nameEn || match?.homeTeam || "");
+  const away = normalizeGamePredictionFolderSegment(awayTeam?.nameEn || match?.awayTeam || "");
+
+  if (!home || !away) {
+    return "";
+  }
+
+  return `${home}_vs_${away}`;
+}
+
+function normalizeGamePredictionFolderSegment(value) {
+  return String(value || "")
+    .replace(/&/g, "and")
+    .replace(/\s+/g, "_")
+    .replace(/[^A-Za-z0-9_]+/g, "_")
+    .replace(/_+/g, "_")
+    .replace(/^_|_$/g, "");
+}
+
+function mergeWorldCupMatchPrediction(loadedMatch) {
+  const current = currentWorldCupMatches || worldCupMatches || [];
+  const next = current.map((match) => (
+    String(match.id) === String(loadedMatch.id) ? { ...match, ...loadedMatch } : match
+  ));
+  const exists = next.some((match) => String(match.id) === String(loadedMatch.id));
+
+  currentWorldCupMatches = exists ? next : [...next, loadedMatch];
+  window.WORLD_CUP_MATCH_PREDICTIONS = currentWorldCupMatches;
+
+  const latestMatches = document.querySelector("[data-worldcup-latest-matches]");
+  const routeMap = document.querySelector("[data-worldcup-route-map]");
+  const matchSummary = document.querySelector("[data-worldcup-match-summary]");
+
+  if (latestMatches) {
+    latestMatches.innerHTML = renderLatestMatchPredictions(getLatestWorldCupMatches(currentWorldCupMatches));
+    latestMatches.querySelectorAll("[data-open-match-modal]").forEach((button) => {
+      button.addEventListener("click", () => openMatchPredictionModal(button.dataset.matchId));
+    });
+  }
+
+  if (routeMap && (worldCupRouteData || worldCupRouteRounds) && worldCupTeams) {
+    routeMap.innerHTML = renderTournamentRouteMap(worldCupRouteData || worldCupRouteRounds, currentWorldCupMatches);
+  }
+
+  if (matchSummary) {
+    const predictedMatches = currentWorldCupMatches.filter((item) => item.predictionStatus === "predicted");
+    const finishedMatches = currentWorldCupMatches.filter((item) => item.matchStatus === "finished");
+    matchSummary.innerHTML = `
+      <div><strong>${currentWorldCupMatches.length}</strong><span>总赛程</span></div>
+      <div><strong>${predictedMatches.length}</strong><span>已预测</span></div>
+      <div><strong>${finishedMatches.length}</strong><span>已结束</span></div>
+    `;
   }
 }
 
@@ -948,7 +1148,7 @@ function renderGroupSnapshotCard(group, matches = worldCupMatches || []) {
         ${(group.teams || []).map((teamId) => renderGroupTeamRow(teamId)).join("")}
       </ul>
       <div class="group-result-list">
-        <strong>赛程 / 赛果</strong>
+        <strong>赛程 / 状态</strong>
         ${groupMatches.length
           ? groupMatches.map((match) => renderGroupResultLine(match)).join("")
           : `<span class="group-result-empty">暂无比赛数据</span>`}
@@ -988,15 +1188,23 @@ function getGroupMatches(group, matches = worldCupMatches || []) {
 function renderGroupResultLine(match) {
   const homeTeam = getWorldCupTeam(match.homeTeamId);
   const awayTeam = getWorldCupTeam(match.awayTeamId);
-  const resultText = getRouteMatchResultText(match);
+  const matchStatus = getMatchStatus(match);
 
   return `
-    <span class="group-result-line">
+    <button
+      class="group-result-line"
+      type="button"
+      data-open-group-prediction-modal
+      data-match-id="${match.id}"
+      aria-label="查看 ${formatTeamName(homeTeam, match.homeTeam)} 对 ${formatTeamName(awayTeam, match.awayTeam)} 的预测历史"
+    >
       <em>${match.matchNo}</em>
       <b>${formatTeamName(homeTeam, match.homeTeam)} vs ${formatTeamName(awayTeam, match.awayTeam)}</b>
-      <small>${formatMatchField(match.matchTime, "time")}</small>
-      <strong>${resultText}</strong>
-    </span>
+      <span class="group-result-meta">
+        <small>${formatMatchField(match.matchTime, "time")}</small>
+        <strong class="route-match-status ${matchStatus}">${getMatchStatusLabel(matchStatus)}</strong>
+      </span>
+    </button>
   `;
 }
 
@@ -1063,7 +1271,7 @@ function renderFinalChampionPanel(finalData, championNode, matches = worldCupMat
 function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
   const team = getWorldCupTeam(node.teamId);
   const match = findWorldCupMatchByNo(node.matchNo || node.matchId, matches);
-  const statusText = {
+  const nodeStatusText = {
     empty: "未确定",
     scheduled: "席位来源",
     live: "进行中",
@@ -1076,13 +1284,13 @@ function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
   }[node.status] || "待定";
   const isSourceSlot = !team && node.status === "scheduled";
   const nodeLabel = team ? team.nameZh : (node.slotLabel || "待定");
-  const stateLabel = team ? statusText : (node.descriptionZh || node.sourceLabel || statusText);
+  const stateLabel = team ? nodeStatusText : (node.descriptionZh || node.sourceLabel || nodeStatusText);
   const metaLabel = team
     ? (node.sourceLabel || node.matchNo || node.matchId || "")
     : (node.matchNo || node.matchId || "");
   const teamsText = getRouteMatchTeamsText(match, node);
   const timeText = match ? formatMatchField(match.matchTime, "time") : "时间待定";
-  const resultText = getRouteMatchResultText(match);
+  const matchStatus = getMatchStatus(match);
 
   return `
     <article class="team-route-card ${node.status} ${side}">
@@ -1093,7 +1301,7 @@ function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
       <div class="route-match-info">
         <span class="route-match-teams">${teamsText}</span>
         <time>${timeText}</time>
-        <strong class="route-match-result">${resultText}</strong>
+        <strong class="route-match-status ${matchStatus}">${getMatchStatusLabel(matchStatus)}</strong>
       </div>
     </article>
   `;
@@ -1122,22 +1330,63 @@ function getRouteMatchTeamsText(match, node) {
   return node?.descriptionZh || node?.slotLabel || "对阵待定";
 }
 
-function getRouteMatchResultText(match) {
-  if (!match || match.matchStatus !== "finished") {
-    return "未开赛";
+function getMatchStatus(match, now = new Date()) {
+  if (match?.actualScore) {
+    return "finished";
   }
 
-  if (match.actualResult && match.actualResult !== "待赛果") {
-    return formatMatchField(match.actualResult, "actual");
+  const startDate = getMatchStartDate(match);
+
+  if (!startDate) {
+    return match?.matchStatus === "live" || match?.matchStatus === "finished"
+      ? match.matchStatus
+      : "scheduled";
   }
 
-  if (match.actualScore) {
-    const homeTeam = getWorldCupTeam(match.homeTeamId);
-    const awayTeam = getWorldCupTeam(match.awayTeamId);
-    return `${formatTeamName(homeTeam, match.homeTeam)} ${match.actualScore} ${formatTeamName(awayTeam, match.awayTeam)}`;
+  const nowTime = now instanceof Date ? now.getTime() : new Date(now).getTime();
+  const startTime = startDate.getTime();
+
+  if (!Number.isFinite(nowTime) || nowTime < startTime) {
+    return "scheduled";
   }
 
-  return "已结束";
+  return nowTime <= startTime + 120 * 60 * 1000 ? "live" : "finished";
+}
+
+function getMatchStatusLabel(status) {
+  return {
+    scheduled: "未开赛",
+    live: "进行中",
+    finished: "已结束"
+  }[status] || "未开赛";
+}
+
+function getMatchStartDate(match) {
+  if (!match) {
+    return null;
+  }
+
+  const kickoffValue = match.kickoffUtc || match.kickoffUTC || match.startTime || match.kickoffTime;
+
+  if (kickoffValue) {
+    const kickoffDate = new Date(kickoffValue);
+
+    if (!Number.isNaN(kickoffDate.getTime())) {
+      return kickoffDate;
+    }
+  }
+
+  const parsed = String(match.matchTime || "").match(/(\d{1,2})月(\d{1,2})日\s+(\d{1,2}):(\d{2})\s+UTC([+-])(\d{1,2})(?::?(\d{2}))?/);
+
+  if (!parsed) {
+    return null;
+  }
+
+  const [, month, day, hour, minute, sign, offsetHour, offsetMinute = "0"] = parsed;
+  const offsetMinutes = (sign === "-" ? -1 : 1) * (Number(offsetHour) * 60 + Number(offsetMinute));
+  const utcTime = Date.UTC(2026, Number(month) - 1, Number(day), Number(hour), Number(minute)) - offsetMinutes * 60 * 1000;
+
+  return new Date(utcTime);
 }
 
 function renderLatestMatchPredictions(matches) {

@@ -1,0 +1,626 @@
+{
+  "schema_version": "1.0",
+  "match_id": "ENG_CRO",
+  "team_a": "England",
+  "team_b": "Croatia",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.1325925925925926,
+      "probability_percent": 13.2593,
+      "outcome": "draw",
+      "sample_count": 358,
+      "path_deviation": 0.6681613067109702,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.12153468099197623,
+      "probability": 0.11074074074074074,
+      "probability_percent": 11.0741,
+      "outcome": "team_a",
+      "sample_count": 299,
+      "path_deviation": 0.6669213495644807,
+      "result_surprise": 0.16480446927374304,
+      "reason_cn": "England在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.15354715867630056,
+      "probability": 0.09777777777777778,
+      "probability_percent": 9.7778,
+      "outcome": "team_a",
+      "sample_count": 264,
+      "path_deviation": 0.6373263764072808,
+      "result_surprise": 0.26256983240223464,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；England在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 0.23255777010545345,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.3001417600628017,
+      "result_surprise": 0.994413407821229,
+      "reason_cn": "天气与场地条件、克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003",
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.2858683397002345,
+      "probability": 0.07703703703703704,
+      "probability_percent": 7.7037,
+      "outcome": "team_a",
+      "sample_count": 208,
+      "path_deviation": 0.6483645865320015,
+      "result_surprise": 0.4189944134078212,
+      "reason_cn": "England打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.311071923342718,
+      "probability": 0.0737037037037037,
+      "probability_percent": 7.3704,
+      "outcome": "draw",
+      "sample_count": 199,
+      "path_deviation": 0.6529735823405229,
+      "result_surprise": 0.44413407821229056,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；双方防守结构有效，机会转化不足。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.3212022917466465,
+      "probability": 0.08,
+      "probability_percent": 8.0,
+      "outcome": "team_b",
+      "sample_count": 216,
+      "path_deviation": 0.6858365118904279,
+      "result_surprise": 0.3966480446927374,
+      "reason_cn": "天气与场地条件；Croatia通过压迫或转换取得一球优势。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.347163843085351,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.38566246966045725,
+      "result_surprise": 0.9888268156424581,
+      "reason_cn": "天气与场地条件、克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003",
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.3945024708922291,
+      "probability": 0.05074074074074074,
+      "probability_percent": 5.0741,
+      "outcome": "team_a",
+      "sample_count": 137,
+      "path_deviation": 0.619787674305859,
+      "result_surprise": 0.61731843575419,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；England打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.43157293681199704,
+      "probability": 0.05592592592592593,
+      "probability_percent": 5.5926,
+      "outcome": "draw",
+      "sample_count": 151,
+      "path_deviation": 0.6675343267096686,
+      "result_surprise": 0.5782122905027933,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.44803195872897567,
+      "probability": 0.05851851851851852,
+      "probability_percent": 5.8519,
+      "outcome": "team_b",
+      "sample_count": 158,
+      "path_deviation": 0.6899128503083832,
+      "result_surprise": 0.558659217877095,
+      "reason_cn": "Croatia通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.47086442138183804,
+      "probability": 0.035925925925925924,
+      "probability_percent": 3.5926,
+      "outcome": "team_a",
+      "sample_count": 97,
+      "path_deviation": 0.6146024276995984,
+      "result_surprise": 0.729050279329609,
+      "reason_cn": "天气与场地条件；England打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "2-7",
+      "deviation": 0.50487711657534,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.49469851124975595,
+      "result_surprise": 0.9972067039106145,
+      "reason_cn": "天气与场地条件、克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003",
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "6-3",
+      "deviation": 0.50487711657534,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.49469851124975595,
+      "result_surprise": 0.9972067039106145,
+      "reason_cn": "天气与场地条件、克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003",
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.5140926359516588,
+      "probability": 0.016296296296296295,
+      "probability_percent": 1.6296,
+      "outcome": "team_a",
+      "sample_count": 44,
+      "path_deviation": 0.5660089253081287,
+      "result_surprise": 0.8770949720670391,
+      "reason_cn": "天气与场地条件；England打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "3-6",
+      "deviation": 0.5246516841893999,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5089355394398613,
+      "result_surprise": 0.9972067039106145,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.5337794401829203,
+      "probability": 0.034074074074074076,
+      "probability_percent": 3.4074,
+      "outcome": "team_b",
+      "sample_count": 92,
+      "path_deviation": 0.6523787272581284,
+      "result_surprise": 0.7430167597765363,
+      "reason_cn": "天气与场地条件；Croatia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.5766660630151987,
+      "probability": 0.017777777777777778,
+      "probability_percent": 1.7778,
+      "outcome": "team_b",
+      "sample_count": 48,
+      "path_deviation": 0.617076032812185,
+      "result_surprise": 0.8659217877094972,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁、天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002",
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6085938354101317,
+      "probability": 0.015925925925925927,
+      "probability_percent": 1.5926,
+      "outcome": "team_a",
+      "sample_count": 43,
+      "path_deviation": 0.6325425499659448,
+      "result_surprise": 0.8798882681564246,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6170010014161985,
+      "probability": 0.02962962962962963,
+      "probability_percent": 2.963,
+      "outcome": "team_a",
+      "sample_count": 80,
+      "path_deviation": 0.6942464815396018,
+      "result_surprise": 0.776536312849162,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.6201159419938018,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "draw",
+      "sample_count": 30,
+      "path_deviation": 0.6212850092296253,
+      "result_surprise": 0.9162011173184358,
+      "reason_cn": "天气与场地条件、克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003",
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.6298114152612456,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5846470333624522,
+      "result_surprise": 0.9972067039106145,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.6316781504627598,
+      "probability": 0.01037037037037037,
+      "probability_percent": 1.037,
+      "outcome": "team_a",
+      "sample_count": 28,
+      "path_deviation": 0.6266012481176265,
+      "result_surprise": 0.9217877094972067,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.6340015148010226,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_a",
+      "sample_count": 16,
+      "path_deviation": 0.6102250027222564,
+      "result_surprise": 0.9553072625698324,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.6435550174905145,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_b",
+      "sample_count": 10,
+      "path_deviation": 0.6080787105033185,
+      "result_surprise": 0.9720670391061452,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁、天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002",
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 0.649440665110869,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6002835201256034,
+      "result_surprise": 0.994413407821229,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6609229476328324,
+      "probability": 0.024074074074074074,
+      "probability_percent": 2.4074,
+      "outcome": "team_b",
+      "sample_count": 65,
+      "path_deviation": 0.7033075781298735,
+      "result_surprise": 0.8184357541899441,
+      "reason_cn": "Croatia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.6616336350616928,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.6150783812704447,
+      "result_surprise": 0.9832402234636871,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.6742196833153148,
+      "probability": 0.012592592592592593,
+      "probability_percent": 1.2593,
+      "outcome": "team_b",
+      "sample_count": 34,
+      "path_deviation": 0.6662542258961172,
+      "result_surprise": 0.9050279329608939,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；Croatia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.6944926045910201,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.635727576786981,
+      "result_surprise": 0.9888268156424581,
+      "reason_cn": "天气与场地条件、克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003",
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.6992695316426396,
+      "probability": 0.0044444444444444444,
+      "probability_percent": 0.4444,
+      "outcome": "team_a",
+      "sample_count": 12,
+      "path_deviation": 0.6511994647869522,
+      "result_surprise": 0.9664804469273743,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.7254089150838701,
+      "probability": 0.005555555555555556,
+      "probability_percent": 0.5556,
+      "outcome": "team_b",
+      "sample_count": 15,
+      "path_deviation": 0.674531195309872,
+      "result_surprise": 0.9581005586592178,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.7293946037978668,
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296,
+      "outcome": "team_b",
+      "sample_count": 17,
+      "path_deviation": 0.6804089230769597,
+      "result_surprise": 0.952513966480447,
+      "reason_cn": "天气与场地条件、克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003",
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.7478569323227814,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "draw",
+      "sample_count": 5,
+      "path_deviation": 0.6756521928370606,
+      "result_surprise": 0.9860335195530726,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.7864122829485373,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_a",
+      "sample_count": 16,
+      "path_deviation": 0.7199556651034136,
+      "result_surprise": 0.9553072625698324,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.8445104530420873,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.7437354169128106,
+      "result_surprise": 0.9888268156424581,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.8623707829348487,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.7596024229005365,
+      "result_surprise": 0.9832402234636871,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.9270344315973215,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.8001417600628017,
+      "result_surprise": 0.994413407821229,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.9625476935424997,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.8272142049915109,
+      "result_surprise": 0.9916201117318436,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-4",
+      "deviation": 1.0,
+      "probability": 0.004814814814814815,
+      "probability_percent": 0.4815,
+      "outcome": "team_b",
+      "sample_count": 13,
+      "path_deviation": 0.869219439789923,
+      "result_surprise": 0.9636871508379888,
+      "reason_cn": "Croatia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-5",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.9542445522495276,
+      "result_surprise": 0.9888268156424581,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.9406795474244645,
+      "result_surprise": 0.994413407821229,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9972067039106145,
+      "reason_cn": "克罗地亚经验型中场可缓解英格兰压迫，但未必能稳定转化为禁；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CRO_MIDFIELD_RELEASE_002"
+      ]
+    },
+    {
+      "score": "6-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.9389927363327035,
+      "result_surprise": 0.9972067039106145,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_DALLAS_TEMPO_003"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}
