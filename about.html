@@ -3,49 +3,157 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us | FutureCast Intelligence</title>
+  <title>关于我们 | 我猜 wowcai</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="about-brand-page">
+<body class="about-brand-page" data-title-zh="关于我们 | 我猜 wowcai" data-title-en="About | wowcai">
   <header class="site-header home-nav-shell" data-shared-nav data-active-page="about" data-nav-variant="dark"></header>
 
   <main class="about-page">
     <section class="about-hero" aria-labelledby="about-title">
       <div class="about-hero-backdrop" aria-hidden="true"></div>
       <div class="about-hero-copy">
-        <p class="about-eyebrow">ABOUT FUTURECAST</p>
-        <h1 id="about-title">Forecasting systems for decisions under uncertainty.</h1>
-        <p>
-          FutureCast Intelligence builds prediction interfaces for competitive events and admission decisions. We turn scattered signals into structured probabilities, evidence notes, and readable dashboards.
-        </p>
+        <p class="about-eyebrow" data-zh="技术能力" data-en="Engineering & models">技术能力</p>
+        <h1 id="about-title" data-zh="把不确定性，工程化为可复核的概率系统。" data-en="Engineering uncertainty into auditable probability systems.">把不确定性，工程化为可复核的概率系统。</h1>
+        <p data-zh="我猜（wowcai）用数据管道、概率模拟与可视化引擎，把世界杯、高考这类高不确定性事件，转化为结构化的概率、可追溯的证据，与清晰的决策看板。" data-en="wowcai combines a data pipeline, probabilistic simulation, and a visualization engine to turn high-uncertainty events like the World Cup and Gaokao into structured probabilities, traceable evidence, and clear decision dashboards.">我猜（wowcai）用数据管道、概率模拟与可视化引擎，把世界杯、高考这类高不确定性事件，转化为结构化的概率、可追溯的证据，与清晰的决策看板。</p>
         <div class="about-hero-actions">
-          <a class="home-cta" href="#capabilities">Capabilities</a>
-          <a class="home-cta home-cta-secondary" href="#principles">Principles</a>
+          <a class="home-cta" href="#capabilities" data-zh="核心能力" data-en="Capabilities">核心能力</a>
+          <a class="home-cta home-cta-secondary" href="#methods" data-zh="技术方法" data-en="Methods">技术方法</a>
         </div>
       </div>
     </section>
 
     <section id="capabilities" class="about-band">
+      <div class="about-container">
+        <div class="about-section-head narrow">
+          <p class="about-eyebrow" data-zh="核心技术能力" data-en="Core capabilities">核心技术能力</p>
+          <h2 data-zh="四个相互衔接的模块，构成我猜的预测引擎。" data-en="Four connected modules make up the wowcai prediction engine.">四个相互衔接的模块，构成我猜的预测引擎。</h2>
+          <p data-zh="从数据进入到看板呈现，每一步都为「可复核」而设计：可以追问每个概率来自哪些信号、用了哪个版本、何时更新。" data-en="From data intake to dashboard, every step is built to be auditable. You can ask which signals a probability came from, which version produced it, and when it was updated.">从数据进入到看板呈现，每一步都为「可复核」而设计：可以追问每个概率来自哪些信号、用了哪个版本、何时更新。</p>
+        </div>
+        <div class="cap-grid">
+          <article class="cap-card">
+            <div class="cap-media"><img src="cap-pipeline.png" alt="" loading="lazy"></div>
+            <div class="cap-body">
+              <span class="cap-index">01</span>
+              <h3 data-zh="多源数据管道" data-en="Multi-source data pipeline">多源数据管道</h3>
+              <p data-zh="汇聚官方赛程、历史战绩、实时资讯与模型输入，统一清洗为结构化的数据契约（JSON / CSV / Markdown），供下游模型与界面直接消费。" data-en="We aggregate official schedules, historical records, live context, and model inputs, then normalize them into structured data contracts (JSON / CSV / Markdown) that models and the UI consume directly.">汇聚官方赛程、历史战绩、实时资讯与模型输入，统一清洗为结构化的数据契约（JSON / CSV / Markdown），供下游模型与界面直接消费。</p>
+              <ul class="cap-tags">
+                <li data-zh="官方赛程" data-en="Schedules">官方赛程</li>
+                <li data-zh="历史数据" data-en="History">历史数据</li>
+                <li data-zh="模型输入" data-en="Model inputs">模型输入</li>
+              </ul>
+            </div>
+          </article>
+          <article class="cap-card">
+            <div class="cap-media"><img src="cap-simulation.png" alt="" loading="lazy"></div>
+            <div class="cap-body">
+              <span class="cap-index">02</span>
+              <h3 data-zh="概率建模与蒙特卡洛模拟" data-en="Probabilistic modeling & Monte Carlo">概率建模与蒙特卡洛模拟</h3>
+              <p data-zh="通过大量蒙特卡洛模拟生成比分矩阵、胜平负概率与最可能赛果，用概率分布而不是一个数字来描述结果。" data-en="Large-scale Monte Carlo simulation produces a score matrix, win/draw/loss probabilities, and the most likely outcome, describing results as a distribution rather than a single number.">通过大量蒙特卡洛模拟生成比分矩阵、胜平负概率与最可能赛果，用概率分布而不是一个数字来描述结果。</p>
+              <ul class="cap-tags">
+                <li data-zh="比分矩阵" data-en="Score matrix">比分矩阵</li>
+                <li data-zh="胜平负概率" data-en="W/D/L">胜平负概率</li>
+                <li data-zh="区间预测" data-en="Intervals">区间预测</li>
+              </ul>
+            </div>
+          </article>
+          <article class="cap-card">
+            <div class="cap-media"><img src="cap-evidence.png" alt="" loading="lazy"></div>
+            <div class="cap-body">
+              <span class="cap-index">03</span>
+              <h3 data-zh="证据链与版本追溯" data-en="Evidence chain & versioning">证据链与版本追溯</h3>
+              <p data-zh="每个预测都附带证据条目、信息来源与版本时间线，可以回看预测如何随新信息一步步演变。" data-en="Every prediction carries evidence entries, source references, and a version timeline, so you can trace how a forecast evolved as new information arrived.">每个预测都附带证据条目、信息来源与版本时间线，可以回看预测如何随新信息一步步演变。</p>
+              <ul class="cap-tags">
+                <li data-zh="证据条目" data-en="Evidence">证据条目</li>
+                <li data-zh="版本历史" data-en="Versions">版本历史</li>
+                <li data-zh="更新时间" data-en="Timestamps">更新时间</li>
+              </ul>
+            </div>
+          </article>
+          <article class="cap-card">
+            <div class="cap-media"><img src="cap-dashboard.png" alt="" loading="lazy"></div>
+            <div class="cap-body">
+              <span class="cap-index">04</span>
+              <h3 data-zh="可视化决策看板" data-en="Visualization engine">可视化决策看板</h3>
+              <p data-zh="概率扇形图、比分矩阵热力图、偏差空间散点与录取区间地图，全部由数据实时渲染，并支持中英双语即时切换。" data-en="Probability donuts, score-matrix heatmaps, deviation-space scatter, and admission maps are all rendered live from data, with instant Chinese / English switching.">概率扇形图、比分矩阵热力图、偏差空间散点与录取区间地图，全部由数据实时渲染，并支持中英双语即时切换。</p>
+              <ul class="cap-tags">
+                <li data-zh="实时渲染" data-en="Live render">实时渲染</li>
+                <li data-zh="交互图表" data-en="Interactive">交互图表</li>
+                <li data-zh="中英双语" data-en="Bilingual">中英双语</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pipeline" class="about-band about-band-muted">
+      <div class="about-container">
+        <div class="about-section-head narrow">
+          <p class="about-eyebrow" data-zh="预测流程" data-en="Prediction pipeline">预测流程</p>
+          <h2 data-zh="从原始信号到可复核预测的五个步骤。" data-en="From raw signal to auditable forecast in five steps.">从原始信号到可复核预测的五个步骤。</h2>
+        </div>
+        <ol class="tech-flow">
+          <li>
+            <span class="flow-step">01</span>
+            <h3 data-zh="采集" data-en="Collect">采集</h3>
+            <p data-zh="汇入官方赛程、历史战绩、实时资讯与模型输入。" data-en="Pull in official schedules, historical records, live context, and model inputs.">汇入官方赛程、历史战绩、实时资讯与模型输入。</p>
+          </li>
+          <li>
+            <span class="flow-step">02</span>
+            <h3 data-zh="结构化" data-en="Structure">结构化</h3>
+            <p data-zh="清洗去重，统一为 JSON / CSV / Markdown 数据契约。" data-en="Clean, de-duplicate, and normalize into JSON / CSV / Markdown contracts.">清洗去重，统一为 JSON / CSV / Markdown 数据契约。</p>
+          </li>
+          <li>
+            <span class="flow-step">03</span>
+            <h3 data-zh="模拟" data-en="Simulate">模拟</h3>
+            <p data-zh="蒙特卡洛模拟输出比分分布、胜平负概率与区间。" data-en="Monte Carlo simulation outputs score distributions, W/D/L probabilities, and ranges.">蒙特卡洛模拟输出比分分布、胜平负概率与区间。</p>
+          </li>
+          <li>
+            <span class="flow-step">04</span>
+            <h3 data-zh="校准与复核" data-en="Calibrate & review">校准与复核</h3>
+            <p data-zh="对照真实赛果与录取线复核，记录证据与版本。" data-en="Check against real results and cut-off lines; log evidence and versions.">对照真实赛果与录取线复核，记录证据与版本。</p>
+          </li>
+          <li>
+            <span class="flow-step">05</span>
+            <h3 data-zh="发布" data-en="Publish">发布</h3>
+            <p data-zh="以双语看板呈现，支持浏览、对比与进一步查证。" data-en="Ship as a bilingual dashboard for scanning, comparison, and follow-up.">以双语看板呈现，支持浏览、对比与进一步查证。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="methods" class="about-band">
       <div class="about-container about-split">
         <div class="about-section-head">
-          <p class="about-eyebrow">WHAT WE BUILD</p>
-          <h2>Prediction products that keep probability, evidence, and judgement in the same frame.</h2>
+          <p class="about-eyebrow" data-zh="技术方法" data-en="Methods">技术方法</p>
+          <h2 data-zh="用概率与区间表达结论，而不是一个数字。" data-en="We express conclusions as probabilities and ranges, not a single number.">用概率与区间表达结论，而不是一个数字。</h2>
+          <p data-zh="这些方法都能在产品里直接看到，每张图都对应一种可复核的建模手段。" data-en="Each of these methods is visible inside the product, and every chart maps to an auditable modeling technique.">这些方法都能在产品里直接看到，每张图都对应一种可复核的建模手段。</p>
         </div>
-        <div class="about-card-grid three">
-          <article class="about-card">
-            <span>01</span>
-            <h3>World Cup Intelligence</h3>
-            <p>Match prediction, tournament routes, deviation space, score distributions, and model evidence for football forecasting workflows.</p>
+        <div class="method-grid">
+          <article class="method-card">
+            <h3 data-zh="蒙特卡洛比分矩阵" data-en="Monte Carlo score matrix">蒙特卡洛比分矩阵</h3>
+            <p data-zh="对每场比赛进行大量模拟，得到各比分的联合概率，呈现为可读的热力矩阵。" data-en="Many simulations per match yield a joint probability over scorelines, shown as a readable heatmap.">对每场比赛进行大量模拟，得到各比分的联合概率，呈现为可读的热力矩阵。</p>
           </article>
-          <article class="about-card">
-            <span>02</span>
-            <h3>Gaokao Admission Forecast</h3>
-            <p>Provincial score trends, university-level prediction ranges, map exploration, and candidate-facing decision support.</p>
+          <article class="method-card">
+            <h3 data-zh="胜平负概率" data-en="Win–draw–loss">胜平负概率</h3>
+            <p data-zh="由模拟结果聚合出胜、平、负三种结果的概率，并标注最可能赛果。" data-en="Aggregates the simulation into win, draw, and loss probabilities, with the most likely outcome flagged.">由模拟结果聚合出胜、平、负三种结果的概率，并标注最可能赛果。</p>
           </article>
-          <article class="about-card">
-            <span>03</span>
-            <h3>Scenario Dashboards</h3>
-            <p>Compact analytics modules designed for repeated review, comparison, and transparent updates as new information arrives.</p>
+          <article class="method-card">
+            <h3 data-zh="比分偏差空间" data-en="Score deviation space">比分偏差空间</h3>
+            <p data-zh="在概率与偏差的坐标系中定位每个比分，直观对比最可能与高赔率比分。" data-en="Places each scoreline in a probability-vs-deviation space to compare likely and high-odds results.">在概率与偏差的坐标系中定位每个比分，直观对比最可能与高赔率比分。</p>
+          </article>
+          <article class="method-card">
+            <h3 data-zh="录取区间预测" data-en="Admission interval forecast">录取区间预测</h3>
+            <p data-zh="高考预测以分数与位次的区间表达，而非单点，匹配真实的不确定性。" data-en="Gaokao forecasts use score and rank intervals instead of point estimates, matching real uncertainty.">高考预测以分数与位次的区间表达，而非单点，匹配真实的不确定性。</p>
+          </article>
+          <article class="method-card">
+            <h3 data-zh="录取分档" data-en="Admission tiering">录取分档</h3>
+            <p data-zh="结合考生分数与院校历史，给出「冲 / 稳 / 保」的录取概率分档。" data-en="Combines a candidate's score with university history to tier schools into reach / match / safe.">结合考生分数与院校历史，给出「冲 / 稳 / 保」的录取概率分档。</p>
+          </article>
+          <article class="method-card">
+            <h3 data-zh="校准与回测" data-en="Calibration & backtesting">校准与回测</h3>
+            <p data-zh="预测结果对照真实赛果与录取线持续复核，用于校准模型并迭代。" data-en="Outputs are continuously checked against real results and cut-off lines to calibrate and iterate.">预测结果对照真实赛果与录取线持续复核，用于校准模型并迭代。</p>
           </article>
         </div>
       </div>
@@ -53,87 +161,38 @@
 
     <section class="about-band about-band-muted">
       <div class="about-container">
-        <div class="about-section-head narrow">
-          <p class="about-eyebrow">OPERATING MODEL</p>
-          <h2>A workflow built around traceability instead of one-shot prediction.</h2>
-        </div>
-        <div class="about-process">
-          <article>
-            <span>Signal Intake</span>
-            <h3>Collect</h3>
-            <p>Gather official schedules, historical records, model inputs, and market-relevant context before publishing a forecast.</p>
-          </article>
-          <article>
-            <span>Simulation Layer</span>
-            <h3>Model</h3>
-            <p>Translate signals into probabilistic outputs, ranges, and scenario views without hiding uncertainty behind a single number.</p>
-          </article>
-          <article>
-            <span>Review Notes</span>
-            <h3>Explain</h3>
-            <p>Attach readable evidence and version context so users can understand why an output changed over time.</p>
-          </article>
-          <article>
-            <span>Decision Surface</span>
-            <h3>Publish</h3>
-            <p>Present the result in a dashboard format that supports scanning, comparison, and follow-up investigation.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="principles" class="about-band">
-      <div class="about-container about-principle-layout">
-        <div class="about-section-head">
-          <p class="about-eyebrow">DESIGN PRINCIPLES</p>
-          <h2>Professional prediction tools should be useful without pretending to be certain.</h2>
-          <p>
-            The product language is intentionally restrained: dark analytical surfaces, clear contrast, strong hierarchy, and enough context to make the forecast auditable.
-          </p>
-        </div>
-        <div class="about-principles">
-          <article>
-            <h3>Clarity</h3>
-            <p>Scores, probabilities, and assumptions are separated visually so the user can read the chart before reading the explanation.</p>
-          </article>
-          <article>
-            <h3>Traceability</h3>
-            <p>Each major prediction surface should make data source, model version, and update timing easy to recover.</p>
-          </article>
-          <article>
-            <h3>Human Review</h3>
-            <p>Model output is treated as evidence for judgement, not as an automatic decision or final recommendation.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-band about-band-muted">
-      <div class="about-container about-two-column">
-        <article class="about-notice">
-          <p class="about-eyebrow">RESPONSIBILITY</p>
-          <h2>Prediction is a decision aid, not a guarantee.</h2>
-          <p>
-            Forecasts can be wrong when inputs change, hidden constraints appear, or real-world behavior diverges from historical patterns. FutureCast should be read as an analytical reference alongside official information and expert judgement.
-          </p>
+        <article class="disclaimer-panel">
+          <div class="disclaimer-head">
+            <p class="about-eyebrow" data-zh="责任声明" data-en="Responsibility">责任声明</p>
+            <h2 data-zh="预测是决策的辅助，而非保证。" data-en="Prediction is a decision aid, not a guarantee.">预测是决策的辅助，而非保证。</h2>
+            <p data-zh="我猜公开每个预测背后的概率、证据与版本；但预测关乎尚未发生的未来，请把它当作分析参考，而不是确定的答案。" data-en="wowcai exposes the probability, evidence, and version behind every prediction. But a forecast is about a future that hasn't happened yet, so treat it as an analytical reference, not a definite answer.">我猜公开每个预测背后的概率、证据与版本；但预测关乎尚未发生的未来，请把它当作分析参考，而不是确定的答案。</p>
+          </div>
+          <div class="disclaimer-points">
+            <div>
+              <span data-zh="何时可能出错" data-en="When it can be wrong">何时可能出错</span>
+              <p data-zh="当输入数据变化、出现未被建模的隐藏约束，或现实表现偏离历史规律时，预测可能与真实结果不符。" data-en="A forecast can diverge from reality when inputs change, hidden constraints appear, or behavior departs from historical patterns.">当输入数据变化、出现未被建模的隐藏约束，或现实表现偏离历史规律时，预测可能与真实结果不符。</p>
+            </div>
+            <div>
+              <span data-zh="请这样使用" data-en="How to use it">请这样使用</span>
+              <p data-zh="把我猜作为参考之一，与官方信息、权威渠道和你自己的判断一起使用，不要作为唯一依据。" data-en="Use wowcai as one input among many, alongside official information, authoritative sources, and your own judgement. Never use it as the sole basis for a decision.">把我猜作为参考之一，与官方信息、权威渠道和你自己的判断一起使用，不要作为唯一依据。</p>
+            </div>
+            <div>
+              <span data-zh="我们的承诺" data-en="Our commitment">我们的承诺</span>
+              <p data-zh="公开概率、证据链与更新版本，让每个结论都可被复核、质疑与修正。" data-en="We publish probabilities, evidence chains, and version history, so every conclusion can be reviewed, challenged, and corrected.">公开概率、证据链与更新版本，让每个结论都可被复核、质疑与修正。</p>
+            </div>
+          </div>
         </article>
-        <div class="about-roles" aria-label="Team capabilities">
-          <span>Product Strategy</span>
-          <span>Data Modeling</span>
-          <span>Frontend Engineering</span>
-          <span>Research Validation</span>
-        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer about-footer">
     <div class="footer-inner">
-      <span>FutureCast Intelligence - <span data-year></span></span>
+      <span><span data-zh="我猜 wowcai" data-en="wowcai">我猜 wowcai</span> · <span data-year></span></span>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="worldcup.html">World Cup</a>
-        <a href="gaokao.html">Gaokao</a>
+        <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+        <a href="worldcup.html" data-zh="世界杯" data-en="World Cup">世界杯</a>
+        <a href="gaokao.html" data-zh="高考" data-en="Gaokao">高考</a>
       </div>
     </div>
   </footer>

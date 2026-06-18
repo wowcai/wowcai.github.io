@@ -5,6 +5,7 @@ yearNodes.forEach((node) => {
 });
 
 initSharedNavigation();
+initLanguage();
 initHomeBrandPage();
 
 const historyData = window.GAOKAO_HISTORY_DATA;
@@ -30,18 +31,266 @@ let currentWorldCupTournamentPredictions = worldCupTournamentPredictionSpecs;
 let currentWorldCupMatches = worldCupMatches || [];
 const worldCupGamePredictionLoadCache = new Map();
 
-if (historyData && predictionData && mapModal) {
-  initGaokaoMaps(historyData, predictionData);
+// ---------------------------------------------------------------------------
+// World Cup dynamic-content i18n layer.
+// Render helpers emit content in the active language plus data-zh/data-en
+// attributes, so the shared language toggle (initLanguage) can re-localize
+// dynamically generated nodes without re-rendering.
+// ---------------------------------------------------------------------------
+const WC_DICT = {
+  "已预测": "Predicted",
+  "待预测": "Pending",
+  "未预测": "Pending",
+  "已结束": "Finished",
+  "进行中": "Live",
+  "未开赛": "Upcoming",
+  "待赛": "Upcoming",
+  "待定": "TBD",
+  "未确定": "TBD",
+  "已晋级": "Qualified",
+  "已淘汰": "Eliminated",
+  "冠军待定": "Champion TBD",
+  "席位来源": "Seed source",
+  "待定席位": "TBD slot",
+  "命中": "Hit",
+  "未命中": "Missed",
+  "待复核": "Pending review",
+  "待结算": "Pending result",
+  "待赛果": "Pending result",
+  "时间待定": "Time TBD",
+  "场馆待定": "Venue TBD",
+  "对阵待定": "Matchup TBD",
+  "待补充": "TBD",
+  "胜率待补充": "Win rate TBD",
+  "待更新": "Pending",
+  "长期预测": "Long-term",
+  "平局": "Draw",
+  "总赛程": "Fixtures",
+  "小组赛": "Group Stage",
+  "1/16 决赛": "Round of 32",
+  "1/8 决赛": "Round of 16",
+  "1/4 决赛": "Quarterfinals",
+  "半决赛": "Semifinals",
+  "三四名决赛": "Third Place",
+  "决赛": "Final",
+  "冠军": "Champion",
+  "亚军": "Runner-up"
+};
+
+const WC_VENUE_ZH = {
+  "Estadio Azteca, Mexico City": "阿兹特克体育场（墨西哥城）",
+  "Estadio Akron, Zapopan": "阿克隆体育场（萨波潘）",
+  "Estadio BBVA, Guadalupe": "BBVA 体育场（瓜达卢佩）",
+  "Mercedes-Benz Stadium, Atlanta": "梅赛德斯-奔驰体育场（亚特兰大）",
+  "BMO Field, Toronto": "BMO 球场（多伦多）",
+  "Levi's Stadium, Santa Clara": "李维斯体育场（圣克拉拉）",
+  "SoFi Stadium, Inglewood": "SoFi 体育场（英格尔伍德）",
+  "BC Place, Vancouver": "BC Place 体育场（温哥华）",
+  "Lumen Field, Seattle": "流明球场（西雅图）",
+  "Gillette Stadium, Foxborough": "吉列体育场（福克斯堡）",
+  "MetLife Stadium, East Rutherford": "大都会人寿体育场（东卢瑟福）",
+  "Lincoln Financial Field, Philadelphia": "林肯金融球场（费城）",
+  "Hard Rock Stadium, Miami Gardens": "硬石体育场（迈阿密花园）",
+  "NRG Stadium, Houston": "NRG 体育场（休斯顿）",
+  "Arrowhead Stadium, Kansas City": "箭头体育场（堪萨斯城）",
+  "AT&T Stadium, Arlington": "AT&T 体育场（阿灵顿）"
+};
+
+const WC_CITY_ZH = {
+  "Houston": "休斯顿",
+  "Dallas": "达拉斯",
+  "Toronto": "多伦多",
+  "Mexico City": "墨西哥城",
+  "Atlanta": "亚特兰大",
+  "Kansas City": "堪萨斯城",
+  "Los Angeles": "洛杉矶",
+  "Boston": "波士顿",
+  "Miami": "迈阿密",
+  "Philadelphia": "费城",
+  "Seattle": "西雅图",
+  "Vancouver": "温哥华",
+  "Monterrey": "蒙特雷",
+  "Guadalajara": "瓜达拉哈拉",
+  "New York": "纽约/新泽西",
+  "New York/New Jersey": "纽约/新泽西",
+  "San Francisco": "旧金山湾区",
+  "San Francisco Bay Area": "旧金山湾区"
+};
+
+const WC_EN_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+const WC_AWARD = {
+  champion: { name: "Champion", type: "Champion", category: "Standings" },
+  runnerUp: { name: "Runner-up", type: "Runner-up", category: "Standings" },
+  thirdPlace: { name: "Third place", type: "Third place", category: "Standings" },
+  fourthPlace: { name: "Fourth place", type: "Fourth place", category: "Standings" },
+  goldenBall: { name: "Golden Ball", type: "Golden Ball", category: "Player awards" },
+  goldenBoot: { name: "Golden Boot", type: "Golden Boot", category: "Player awards" },
+  goldenGlove: { name: "Golden Glove", type: "Golden Glove", category: "Player awards" },
+  youngPlayer: { name: "Best Young Player", type: "Best Young Player", category: "Player awards" },
+  finalMvp: { name: "Final MVP", type: "Final MVP", category: "Player awards" },
+  bestGoal: { name: "Best Goal", type: "Best Goal", category: "Tournament content" },
+  fairPlay: { name: "Fair Play Team", type: "Fair Play Team", category: "Team awards" },
+  entertainingTeam: { name: "Most Entertaining Team", type: "Most Entertaining Team", category: "Team awards" }
+};
+
+function awardPair(item, field) {
+  const en = WC_AWARD[item?.id]?.[field];
+  const zh = field === "name" ? item?.predictionName : field === "type" ? item?.type : item?.category;
+  return { zh: zh || "", en: en || zh || "" };
 }
 
-if (document.querySelector("[data-gaokao-prediction-page]")) {
-  initGaokaoPredictionPage({
-    admissionData: admissionPredictionData,
-    meta: admissionPredictionMeta,
-    releaseData: scoreReleaseData,
-    historyData,
-    predictionData
-  });
+function getLang() {
+  return document.documentElement.dataset.lang === "en" ? "en" : "zh";
+}
+
+function wcEn(zh) {
+  const s = String(zh ?? "");
+  return Object.prototype.hasOwnProperty.call(WC_DICT, s) ? WC_DICT[s] : s;
+}
+
+// Current-language plain string.
+function L(zh, en) {
+  if (getLang() === "en") {
+    return en == null ? wcEn(zh) : String(en);
+  }
+  return String(zh ?? "");
+}
+
+// data-zh / data-en attribute pair for an existing element.
+function biAttrs(zh, en) {
+  const z = String(zh ?? "");
+  const e = en == null ? wcEn(z) : String(en);
+  return `data-zh="${escapeHtml(z)}" data-en="${escapeHtml(e)}"`;
+}
+
+// A self-contained <span> carrying both languages, content in active language.
+function bi(zh, en) {
+  const z = String(zh ?? "");
+  const e = en == null ? wcEn(z) : String(en);
+  return `<span data-zh="${escapeHtml(z)}" data-en="${escapeHtml(e)}">${escapeHtml(getLang() === "en" ? e : z)}</span>`;
+}
+
+// Auto-translate a single value that may be a known Chinese token.
+function biAuto(value) {
+  const z = String(value ?? "");
+  return bi(z, wcEn(z));
+}
+
+function teamPair(team, fallback) {
+  if (team) {
+    return { zh: team.nameZh, en: team.nameEn || team.nameZh };
+  }
+  const s = String(fallback ?? "").trim();
+  if (!s || s === "--" || s === "待补充") {
+    return { zh: "对阵待定", en: "Matchup TBD" };
+  }
+  return { zh: s, en: s };
+}
+
+function predictedValuePair(value) {
+  const s = String(value ?? "").trim();
+  if (!s) {
+    return { zh: "", en: "" };
+  }
+  if (s === "待预测") {
+    return { zh: "待预测", en: "Pending" };
+  }
+  const team = typeof findTeamByEnglishName === "function" ? findTeamByEnglishName(s) : null;
+  if (team) {
+    return { zh: team.nameZh, en: team.nameEn || team.nameZh };
+  }
+  const directTeam = worldCupTeams
+    ? Object.values(worldCupTeams).find((t) => t.nameZh === s || t.nameEn === s)
+    : null;
+  if (directTeam) {
+    return { zh: directTeam.nameZh, en: directTeam.nameEn || directTeam.nameZh };
+  }
+  return { zh: s, en: s };
+}
+
+function venuePair(value) {
+  const s = String(value ?? "").trim();
+  if (!s || s === "场馆待定" || s === "待补充" || s === "--") {
+    return { zh: "场馆待定", en: "Venue TBD" };
+  }
+  if (WC_VENUE_ZH[s]) {
+    return { zh: WC_VENUE_ZH[s], en: s };
+  }
+  const cityMatch = s.match(/^(.+?)\s+Stadium(?:,.*)?$/i);
+  if (cityMatch && WC_CITY_ZH[cityMatch[1]]) {
+    return { zh: `${WC_CITY_ZH[cityMatch[1]]}球场`, en: s };
+  }
+  return { zh: s, en: s };
+}
+
+function matchTimePair(value) {
+  const s = String(value ?? "").trim();
+  if (!s || s === "时间待定" || s === "待补充" || s === "--") {
+    return { zh: "时间待定", en: "Time TBD" };
+  }
+  const m = s.match(/(\d+)月(\d+)日\s+(\d{1,2}:\d{2})\s*(UTC[+\-\d:]*)?/);
+  if (!m) {
+    return { zh: s, en: wcEn(s) };
+  }
+  const month = WC_EN_MONTHS[Number(m[1]) - 1] || m[1];
+  const utc = m[4] ? ` ${m[4]}` : "";
+  return { zh: s, en: `${month} ${Number(m[2])}, ${m[3]}${utc}` };
+}
+
+function groupPair(group) {
+  const s = String(group ?? "").trim();
+  if (!s) {
+    return { zh: "", en: "" };
+  }
+  const m = s.match(/^([A-L])组$/);
+  if (m) {
+    return { zh: s, en: `Group ${m[1]}` };
+  }
+  return { zh: s, en: wcEn(s) };
+}
+
+function roundPair(round) {
+  const s = String(round ?? "").trim();
+  if (!s) {
+    return { zh: "", en: "" };
+  }
+  const en = s
+    .replace(/第(\d+)轮/g, "Round $1")
+    .replace(/胜者/g, " winner")
+    .replace(/(\d+)强/g, "Round of $1")
+    .replace(/小组赛/g, "Group Stage");
+  return { zh: s, en };
+}
+
+function matchStagePair(match) {
+  const stage = match?.stage ? { zh: match.stage, en: wcEn(match.stage) } : null;
+  const group = match?.group ? groupPair(match.group) : null;
+  const round = match?.round ? roundPair(match.round) : null;
+  const parts = [stage, group, round].filter(Boolean);
+  return {
+    zh: parts.map((p) => p.zh).filter(Boolean).join(" · "),
+    en: parts.map((p) => p.en).filter(Boolean).join(" · ")
+  };
+}
+
+function refPair(value) {
+  if (value && typeof value === "object") {
+    return { zh: value.zh || "", en: value.en || value.zh || "" };
+  }
+  const s = String(value ?? "");
+  return { zh: s, en: wcEn(s) };
+}
+
+function pairText(pair, lang) {
+  if (!pair) {
+    return "";
+  }
+  return (lang || getLang()) === "en" ? (pair.en || pair.zh || "") : (pair.zh || "");
+}
+
+if (historyData && predictionData && mapModal) {
+  initGaokaoMaps(historyData, predictionData);
 }
 
 if (worldCupMatches && worldCupTournamentPredictions) {
@@ -59,10 +308,10 @@ function initSharedNavigation() {
   }
 
   const navItems = [
-    { id: "home", label: "首页", href: "index.html" },
-    { id: "worldcup", label: "世界杯", href: "worldcup.html" },
-    { id: "gaokao", label: "高考", href: "gaokao.html" },
-    { id: "about", label: "About Us", href: "about.html" },
+    { id: "home", zh: "首页", en: "Home", href: "index.html" },
+    { id: "worldcup", zh: "世界杯", en: "World Cup", href: "worldcup.html" },
+    { id: "gaokao", zh: "高考", en: "Gaokao", href: "gaokao.html" },
+    { id: "about", zh: "关于我们", en: "About", href: "about.html" },
   ];
 
   const inferActivePage = () => {
@@ -87,18 +336,22 @@ function initSharedNavigation() {
     const activePage = mount.dataset.activePage || inferActivePage();
     const navVariant = mount.dataset.navVariant || (activePage === "home" ? "dark" : activePage);
     const links = navItems.map((item) => `
-      <a${item.id === activePage ? ' class="is-active"' : ""} href="${item.href}">${item.label}</a>
+      <a${item.id === activePage ? ' class="is-active"' : ""} href="${item.href}" data-zh="${item.zh}" data-en="${item.en}">${item.zh}</a>
     `).join("");
 
     mount.classList.add("site-header", "home-nav-shell");
     mount.classList.add(`site-header--${navVariant}`);
     mount.innerHTML = `
       <nav class="nav home-nav" aria-label="Primary navigation">
-        <a class="brand home-brand" href="index.html" aria-label="wowcai 首页">
+        <a class="brand home-brand" href="index.html" aria-label="wowcai">
           <img class="site-logo" src="Logo.png" alt="wowcai">
         </a>
         <div class="nav-links home-nav-links" aria-label="Main pages">
           ${links}
+        </div>
+        <div class="nav-lang-toggle" role="group" aria-label="Language / 语言">
+          <button type="button" class="lang-btn" data-lang-btn="zh">中文</button>
+          <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
         </div>
       </nav>
     `;
@@ -110,6 +363,81 @@ function initSharedNavigation() {
 
   updateNavState();
   window.addEventListener("scroll", updateNavState, { passive: true });
+}
+
+function initLanguage() {
+  const STORAGE_KEY = "wowcai-lang";
+
+  const readLang = () => {
+    const saved = window.localStorage ? window.localStorage.getItem(STORAGE_KEY) : null;
+    return saved === "en" ? "en" : "zh";
+  };
+
+  const applyLang = (lang) => {
+    const normalized = lang === "en" ? "en" : "zh";
+    document.documentElement.lang = normalized === "en" ? "en" : "zh-CN";
+    document.documentElement.dataset.lang = normalized;
+
+    document.querySelectorAll("[data-zh]").forEach((node) => {
+      const value = node.getAttribute(normalized === "en" ? "data-en" : "data-zh");
+
+      if (value === null) {
+        return;
+      }
+
+      if (node.hasAttribute("data-i18n-html")) {
+        node.innerHTML = value;
+      } else {
+        node.textContent = value;
+      }
+    });
+
+    document.querySelectorAll("[data-zh-aria]").forEach((node) => {
+      const value = node.getAttribute(normalized === "en" ? "data-en-aria" : "data-zh-aria");
+      if (value !== null) {
+        node.setAttribute("aria-label", value);
+      }
+    });
+
+    document.querySelectorAll("[data-zh-placeholder]").forEach((node) => {
+      const value = node.getAttribute(normalized === "en" ? "data-en-placeholder" : "data-zh-placeholder");
+      if (value !== null) {
+        node.setAttribute("placeholder", value);
+      }
+    });
+
+    const body = document.body;
+    const title = body
+      ? body.getAttribute(normalized === "en" ? "data-title-en" : "data-title-zh")
+      : null;
+    if (title) {
+      document.title = title;
+    }
+
+    document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
+      const isActive = btn.dataset.langBtn === normalized;
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+
+    if (window.localStorage) {
+      window.localStorage.setItem(STORAGE_KEY, normalized);
+    }
+
+    document.dispatchEvent(new CustomEvent("wowcai:langchange", { detail: { lang: normalized } }));
+  };
+
+  document.addEventListener("click", (event) => {
+    const btn = event.target.closest("[data-lang-btn]");
+    if (!btn) {
+      return;
+    }
+    event.preventDefault();
+    applyLang(btn.dataset.langBtn);
+  });
+
+  applyLang(readLang());
+  window.wowcaiApplyLanguage = applyLang;
 }
 
 function initHomeBrandPage() {
@@ -147,9 +475,9 @@ function initWorldCupBoards(matches, tournamentPredictions) {
     const predictedMatches = matches.filter((match) => match.predictionStatus === "predicted");
     const finishedMatches = matches.filter((match) => match.matchStatus === "finished");
     matchSummary.innerHTML = `
-      <div><strong>${matches.length}</strong><span>总赛程</span></div>
-      <div><strong>${predictedMatches.length}</strong><span>已预测</span></div>
-      <div><strong>${finishedMatches.length}</strong><span>已结束</span></div>
+      <div><strong>${matches.length}</strong>${bi("总赛程")}</div>
+      <div><strong>${predictedMatches.length}</strong>${bi("已预测")}</div>
+      <div><strong>${finishedMatches.length}</strong>${bi("已结束")}</div>
     `;
   }
 
@@ -191,10 +519,21 @@ async function loadWorldCupTournamentEvidence(predictionSpecs) {
   }
 
   try {
-    const markdownFiles = await discoverTournamentEvidenceFiles();
+    const markdownFiles = (await discoverTournamentEvidenceFiles()).filter((fileName) => !/_en\.md$/i.test(fileName));
     const versions = await Promise.all(markdownFiles.map(async (fileName) => {
       const markdown = await fetchTextFile(`${worldCupTournamentEvidenceDir}/${encodeURIComponent(fileName)}`);
-      return parseTournamentEvidenceMarkdown(markdown, fileName);
+      const base = parseTournamentEvidenceMarkdown(markdown, fileName);
+      let enParsed = null;
+
+      try {
+        const enFileName = toEnglishEvidenceFileName(fileName);
+        const enMarkdown = await fetchTextFile(`${worldCupTournamentEvidenceDir}/${encodeURIComponent(enFileName)}`);
+        enParsed = parseTournamentEvidenceMarkdown(enMarkdown, enFileName);
+      } catch (error) {
+        enParsed = null;
+      }
+
+      return mergeTournamentEvidenceLanguage(base, enParsed);
     }));
     const predictions = buildTournamentPredictionsFromEvidence(predictionSpecs, versions.filter(Boolean));
 
@@ -267,8 +606,29 @@ function parseTournamentEvidenceMarkdown(markdown, fileName) {
     fileName,
     time: extractTournamentEvidenceDate(fileName),
     label: formatTournamentEvidenceLabel(fileName),
+    labelEn: formatTournamentEvidenceLabelEn(fileName),
     sections
   };
+}
+
+function toEnglishEvidenceFileName(fileName) {
+  if (/_zh\.md$/i.test(fileName)) {
+    return fileName.replace(/_zh\.md$/i, "_en.md");
+  }
+  return String(fileName || "").replace(/\.md$/i, "_en.md");
+}
+
+function mergeTournamentEvidenceLanguage(base, enParsed) {
+  if (!base) {
+    return base;
+  }
+
+  base.sections = (base.sections || []).map((section, index) => ({
+    ...section,
+    evidenceEn: enParsed?.sections?.[index]?.evidence || []
+  }));
+
+  return base;
 }
 
 function buildTournamentPredictionsFromEvidence(specs, versions) {
@@ -282,9 +642,11 @@ function buildTournamentPredictionsFromEvidence(specs, versions) {
       return {
         time: version.time || version.fileName,
         label: version.label,
+        labelEn: version.labelEn,
         fileName: version.fileName,
         predictedValue: section?.predictedValue || "待预测",
         evidence: section?.evidence || [],
+        evidenceEn: section?.evidenceEn || [],
         isLatest: index === sortedVersions.length - 1
       };
     });
@@ -297,6 +659,7 @@ function buildTournamentPredictionsFromEvidence(specs, versions) {
       updatedAt: latestVersion?.time || "待更新",
       predictedValue: latestSection?.predictedValue || latestHistory?.predictedValue || "待预测",
       evidence: latestSection?.evidence || latestHistory?.evidence || [],
+      evidenceEn: latestSection?.evidenceEn || latestHistory?.evidenceEn || [],
       history
     };
   });
@@ -321,6 +684,11 @@ function formatTournamentEvidenceLabel(fileName) {
   return date ? `${date} 基线版` : fileName;
 }
 
+function formatTournamentEvidenceLabelEn(fileName) {
+  const date = extractTournamentEvidenceDate(fileName);
+  return date ? `${date} Baseline` : fileName;
+}
+
 function compareTournamentEvidenceFiles(a, b) {
   return String(a || "").localeCompare(String(b || ""), "zh-CN", { numeric: true });
 }
@@ -337,7 +705,7 @@ function updateGamePredictionRangeBadge(specs = []) {
     return;
   }
 
-  node.textContent = formatPredictionRangeLabel(getGamePredictionVersionLabels(specs));
+  setRangeBadge(node, formatPredictionRangeLabel(getGamePredictionVersionLabels(specs)));
 }
 
 function updateTournamentPredictionRangeBadge(files = []) {
@@ -347,7 +715,13 @@ function updateTournamentPredictionRangeBadge(files = []) {
     return;
   }
 
-  node.textContent = formatPredictionRangeLabel(getTournamentEvidenceTimeLabels(files));
+  setRangeBadge(node, formatPredictionRangeLabel(getTournamentEvidenceTimeLabels(files)));
+}
+
+function setRangeBadge(node, pair) {
+  node.setAttribute("data-zh", pair.zh);
+  node.setAttribute("data-en", pair.en);
+  node.textContent = pairText(pair);
 }
 
 function getGamePredictionVersionLabels(specs = []) {
@@ -373,13 +747,17 @@ function formatPredictionRangeLabel(labels) {
   const uniqueLabels = [...new Set(labels || [])].filter(Boolean);
 
   if (!uniqueLabels.length) {
-    return "时间待定";
+    return { zh: "时间待定", en: "Time TBD" };
   }
 
   const first = uniqueLabels[0];
   const last = uniqueLabels[uniqueLabels.length - 1];
 
-  return first === last ? first : `${first} 至 ${last}`;
+  if (first === last) {
+    return { zh: first, en: first };
+  }
+
+  return { zh: `${first} 至 ${last}`, en: `${first} – ${last}` };
 }
 
 function renderTournamentSummaryMount(summaryPanel, predictions) {
@@ -438,9 +816,9 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
       const predictedMatches = merged.filter((match) => match.predictionStatus === "predicted");
       const finishedMatches = merged.filter((match) => match.matchStatus === "finished");
       matchSummary.innerHTML = `
-        <div><strong>${merged.length}</strong><span>总赛程</span></div>
-        <div><strong>${predictedMatches.length}</strong><span>已预测</span></div>
-        <div><strong>${finishedMatches.length}</strong><span>已结束</span></div>
+        <div><strong>${merged.length}</strong>${bi("总赛程")}</div>
+        <div><strong>${predictedMatches.length}</strong>${bi("已预测")}</div>
+        <div><strong>${finishedMatches.length}</strong>${bi("已结束")}</div>
       `;
     }
     latestMatches.querySelectorAll("[data-open-match-modal]").forEach((button) => {
@@ -579,9 +957,9 @@ function mergeWorldCupMatchPrediction(loadedMatch) {
     const predictedMatches = currentWorldCupMatches.filter((item) => item.predictionStatus === "predicted");
     const finishedMatches = currentWorldCupMatches.filter((item) => item.matchStatus === "finished");
     matchSummary.innerHTML = `
-      <div><strong>${currentWorldCupMatches.length}</strong><span>总赛程</span></div>
-      <div><strong>${predictedMatches.length}</strong><span>已预测</span></div>
-      <div><strong>${finishedMatches.length}</strong><span>已结束</span></div>
+      <div><strong>${currentWorldCupMatches.length}</strong>${bi("总赛程")}</div>
+      <div><strong>${predictedMatches.length}</strong>${bi("已预测")}</div>
+      <div><strong>${finishedMatches.length}</strong>${bi("已结束")}</div>
     `;
   }
 }
@@ -658,7 +1036,7 @@ async function loadGamePredictionMatch(spec, baseMatches = worldCupMatches || []
   const homeTeam = findTeamByEnglishName(inferred.homeName) || getWorldCupTeam(baseMatch?.homeTeamId);
   const awayTeam = findTeamByEnglishName(inferred.awayName) || getWorldCupTeam(baseMatch?.awayTeamId);
   const id = baseMatch?.id || latest.brief?.match?.match_id || buildMatchPairKey(inferred.homeName, inferred.awayName);
-  const predictionSummary = buildGamePredictionSummary(latest, inferred.homeName, inferred.awayName);
+  const predictionSummary = buildGamePredictionSummary(latest, homeTeam, awayTeam);
   const topScore = latest.brief?.top_scores?.[0]?.score || "";
   const winReference = formatOutcomeReference(latest, homeTeam, awayTeam);
 
@@ -687,7 +1065,7 @@ async function loadGamePredictionMatch(spec, baseMatches = worldCupMatches || []
       isLatest: index === validVersions.length - 1,
       predictedScore: version.brief?.top_scores?.[0]?.score || "待预测",
       winReference: formatOutcomeReference(version, homeTeam, awayTeam),
-      summary: buildGamePredictionSummary(version, inferred.homeName, inferred.awayName)
+      summary: buildGamePredictionSummary(version, homeTeam, awayTeam)
     })),
     gamePredictionSource: {
       matchFolder: spec.matchFolder,
@@ -777,17 +1155,25 @@ function parseGamePredictionBriefMarkdown(markdown) {
 }
 
 function normalizeGamePredictionKeyFactors(briefJson, markdown) {
-  const markdownFactors = extractMarkdownSectionBullets(markdown, "关键因素");
+  // Prefer the structured JSON factors because they can carry an English
+  // translation (text_en); fall back to the Chinese-only markdown bullets.
+  const jsonFactors = (briefJson?.key_factors || [])
+    .map((item) => {
+      if (typeof item === "string") {
+        return { zh: item, en: item };
+      }
+      const zh = item.text_cn || item.text || "";
+      const en = item.text_en || item.text_cn || item.text || "";
+      return { zh, en };
+    })
+    .filter((factor) => factor.zh || factor.en);
 
-  if (markdownFactors.length) {
-    return markdownFactors;
+  if (jsonFactors.length) {
+    return jsonFactors;
   }
 
-  const jsonFactors = (briefJson?.key_factors || [])
-    .map((item) => typeof item === "string" ? item : item.text_cn)
-    .filter(Boolean);
-
-  return jsonFactors;
+  return extractMarkdownSectionBullets(markdown, "关键因素")
+    .map((text) => ({ zh: text, en: text }));
 }
 
 function mergeGamePredictionBrief(markdownBrief, jsonBrief) {
@@ -840,7 +1226,8 @@ function parseScoreMatrixCsv(csvText) {
       buckets: columns
     },
     matrix,
-    axis_note_cn: `纵轴为${axisTeams[0] || "主队"}进球数，横轴为${axisTeams[1] || "客队"}进球数；5+ 表示至少 5 球。`
+    axis_note_cn: `纵轴为${axisTeams[0] || "主队"}进球数，横轴为${axisTeams[1] || "客队"}进球数；5+ 表示至少 5 球。`,
+    axis_note_en: `Rows show ${axisTeams[0] || "home"} goals, columns show ${axisTeams[1] || "away"} goals; 5+ means at least 5.`
   };
 }
 
@@ -1047,26 +1434,44 @@ function compareGamePredictionMatchTime(a, b) {
   return String(a?.id || "").localeCompare(String(b?.id || ""), "zh-CN", { numeric: true });
 }
 
-function buildGamePredictionSummary(version, homeName, awayName) {
-  const outcome = version?.brief?.most_likely_outcome;
-  const topScore = version?.brief?.top_scores?.[0];
+function buildGamePredictionSummary(version, homeTeam, awayTeam) {
+  const probabilities = normalizeWinDrawLossProbabilities(version, homeTeam, awayTeam);
+  const top = probabilities.slice().sort((a, b) => b.value - a.value)[0];
+  const topScore = version?.brief?.top_scores?.[0]?.score;
 
-  if (outcome && topScore) {
-    return `最可能赛果为 ${outcome.label}，最高概率比分为 ${topScore.score}。`;
+  if (top && topScore) {
+    return {
+      zh: `最可能赛果为 ${top.labelZh}，最高概率比分为 ${topScore}。`,
+      en: `Most likely result: ${top.labelEn}, most likely score ${topScore}.`
+    };
   }
 
-  if (outcome) {
-    return `最可能赛果为 ${outcome.label}。`;
+  if (top) {
+    return {
+      zh: `最可能赛果为 ${top.labelZh}。`,
+      en: `Most likely result: ${top.labelEn}.`
+    };
   }
 
-  return `${homeName} vs ${awayName} 的预测数据已更新。`;
+  const home = teamPair(homeTeam, version?.brief?.match?.team_a);
+  const away = teamPair(awayTeam, version?.brief?.match?.team_b);
+
+  return {
+    zh: `${home.zh} vs ${away.zh} 的预测数据已更新。`,
+    en: `Prediction data for ${home.en} vs ${away.en} has been updated.`
+  };
 }
 
 function formatOutcomeReference(version, homeTeam, awayTeam) {
   const probabilities = normalizeWinDrawLossProbabilities(version, homeTeam, awayTeam);
   const top = probabilities.slice().sort((a, b) => b.value - a.value)[0];
 
-  return top ? `${top.label} ${formatProbabilityValue(top.value)}` : "待预测";
+  if (!top) {
+    return { zh: "待预测", en: "Pending" };
+  }
+
+  const value = formatProbabilityValue(top.value);
+  return { zh: `${top.labelZh} ${value}`, en: `${top.labelEn} ${value}` };
 }
 
 function getLatestWorldCupMatches(matches) {
@@ -1090,9 +1495,9 @@ function renderTournamentRouteMap(routeData, matches = worldCupMatches || []) {
       ${renderWorldCupFormatBar()}
       ${renderGroupStageSnapshot(worldCupGroups || [], matches)}
       <div class="route-stage-transition">
-        <span>小组赛</span>
-        <strong>小组前二 + 8 个最佳第三名晋级</strong>
-        <span>淘汰赛</span>
+        ${bi("小组赛", "Group Stage")}
+        ${bi("小组前二 + 8 个最佳第三名晋级", "Top 2 + 8 best third-placed teams advance")}
+        ${bi("淘汰赛", "Knockout Stage")}
       </div>
       <div class="bidirectional-route-map">
         ${renderBracketSidePanel(routeData.leftBracket, matches)}
@@ -1106,9 +1511,9 @@ function renderTournamentRouteMap(routeData, matches = worldCupMatches || []) {
 function renderWorldCupFormatBar() {
   return `
     <div class="route-format-bar">
-      <strong>赛制说明</strong>
-      <span>48 支球队 · 12 个小组 · 小组前二 + 8 个最佳第三名 → 32 强淘汰赛</span>
-      <small>小组赛阶段共 72 场，淘汰赛从 32 强开始，冠军球队最多进行 8 场比赛。</small>
+      <strong ${biAttrs("赛制说明", "Format")}>${L("赛制说明", "Format")}</strong>
+      ${bi("48 支球队 · 12 个小组 · 小组前二 + 8 个最佳第三名 → 32 强淘汰赛", "48 teams · 12 groups · Top 2 + 8 best third-placed → Round of 32")}
+      <small ${biAttrs("小组赛阶段共 72 场，淘汰赛从 32 强开始，冠军球队最多进行 8 场比赛。", "72 group-stage matches; the knockout phase begins at the Round of 32, and the champion plays up to 8 matches.")}>${escapeHtml(L("小组赛阶段共 72 场，淘汰赛从 32 强开始，冠军球队最多进行 8 场比赛。", "72 group-stage matches; the knockout phase begins at the Round of 32, and the champion plays up to 8 matches."))}</small>
     </div>
   `;
 }
@@ -1123,10 +1528,10 @@ function renderGroupStageSnapshot(groups, matches = worldCupMatches || []) {
       <div class="snapshot-head">
         <div>
           <span>GROUP STAGE SNAPSHOT</span>
-          <h3>小组赛概览</h3>
-          <p>展示 12 个小组的比赛队伍、时间与结果，用于说明 32 强席位来源；不代表淘汰赛晋级已经确定。</p>
+          <h3 ${biAttrs("小组赛概览", "Group stage overview")}>${L("小组赛概览", "Group stage overview")}</h3>
+          <p ${biAttrs("展示 12 个小组的比赛队伍、时间与结果，用于说明 32 强席位来源；不代表淘汰赛晋级已经确定。", "Teams, times and results for all 12 groups, showing where the 32 knockout berths come from, and it does not mean qualification is confirmed.")}>${escapeHtml(L("展示 12 个小组的比赛队伍、时间与结果，用于说明 32 强席位来源；不代表淘汰赛晋级已经确定。", "Teams, times and results for all 12 groups, showing where the 32 knockout berths come from, and it does not mean qualification is confirmed."))}</p>
         </div>
-        <p>未开赛比赛显示“未开赛”。</p>
+        <p ${biAttrs("未开赛比赛显示“未开赛”。", "Matches not yet played are marked “Upcoming”.")}>${escapeHtml(L("未开赛比赛显示“未开赛”。", "Matches not yet played are marked “Upcoming”."))}</p>
       </div>
       <div class="group-snapshot-grid">
         ${groups.map((group) => renderGroupSnapshotCard(group, matches)).join("")}
@@ -1141,17 +1546,17 @@ function renderGroupSnapshotCard(group, matches = worldCupMatches || []) {
   return `
     <article class="group-snapshot-card">
       <div class="group-card-head">
-        <strong>${group.nameZh || group.name}</strong>
+        <strong ${biAttrs(group.nameZh || group.name, group.name)}>${escapeHtml(getLang() === "en" ? group.name : (group.nameZh || group.name))}</strong>
         <span>${group.name}</span>
       </div>
       <ul class="group-team-list">
         ${(group.teams || []).map((teamId) => renderGroupTeamRow(teamId)).join("")}
       </ul>
       <div class="group-result-list">
-        <strong>赛程 / 状态</strong>
+        <strong ${biAttrs("赛程 / 状态", "Fixtures / status")}>${L("赛程 / 状态", "Fixtures / status")}</strong>
         ${groupMatches.length
           ? groupMatches.map((match) => renderGroupResultLine(match)).join("")
-          : `<span class="group-result-empty">暂无比赛数据</span>`}
+          : `<span class="group-result-empty" ${biAttrs("暂无比赛数据", "No match data yet")}>${L("暂无比赛数据", "No match data yet")}</span>`}
       </div>
     </article>
   `;
@@ -1159,11 +1564,12 @@ function renderGroupSnapshotCard(group, matches = worldCupMatches || []) {
 
 function renderGroupTeamRow(teamId) {
   const team = getWorldCupTeam(teamId);
+  const name = teamPair(team, teamId);
 
   return `
     <li>
       ${renderTeamFlag(team, "group-flag")}
-      <span>${team ? team.nameZh : teamId}</span>
+      <span ${biAttrs(name.zh, name.en)}>${escapeHtml(pairText(name))}</span>
     </li>
   `;
 }
@@ -1189,6 +1595,10 @@ function renderGroupResultLine(match) {
   const homeTeam = getWorldCupTeam(match.homeTeamId);
   const awayTeam = getWorldCupTeam(match.awayTeamId);
   const matchStatus = getMatchStatus(match);
+  const home = teamPair(homeTeam, match.homeTeam);
+  const away = teamPair(awayTeam, match.awayTeam);
+  const time = matchTimePair(match.matchTime);
+  const statusZh = getMatchStatusLabel(matchStatus);
 
   return `
     <button
@@ -1196,13 +1606,15 @@ function renderGroupResultLine(match) {
       type="button"
       data-open-group-prediction-modal
       data-match-id="${match.id}"
-      aria-label="查看 ${formatTeamName(homeTeam, match.homeTeam)} 对 ${formatTeamName(awayTeam, match.awayTeam)} 的预测历史"
+      data-zh-aria="查看 ${escapeHtml(home.zh)} 对 ${escapeHtml(away.zh)} 的预测历史"
+      data-en-aria="${escapeHtml(home.en)} vs ${escapeHtml(away.en)} prediction history"
+      aria-label="${escapeHtml(L(`查看 ${home.zh} 对 ${away.zh} 的预测历史`, `${home.en} vs ${away.en} prediction history`))}"
     >
       <em>${match.matchNo}</em>
-      <b>${formatTeamName(homeTeam, match.homeTeam)} vs ${formatTeamName(awayTeam, match.awayTeam)}</b>
+      <b ${biAttrs(`${home.zh} vs ${away.zh}`, `${home.en} vs ${away.en}`)}>${escapeHtml(L(`${home.zh} vs ${away.zh}`, `${home.en} vs ${away.en}`))}</b>
       <span class="group-result-meta">
-        <small>${formatMatchField(match.matchTime, "time")}</small>
-        <strong class="route-match-status ${matchStatus}">${getMatchStatusLabel(matchStatus)}</strong>
+        <small ${biAttrs(time.zh, time.en)}>${escapeHtml(pairText(time))}</small>
+        <strong class="route-match-status ${matchStatus}" ${biAttrs(statusZh)}>${L(statusZh)}</strong>
       </span>
     </button>
   `;
@@ -1215,7 +1627,7 @@ function renderLegacyTournamentRouteMap(rounds, matches = worldCupMatches || [])
         <section class="route-round-column" style="--round-index:${index}">
           <div class="route-round-head">
             <span>${round.labelEn || round.name}</span>
-            <h3>${round.label || round.nameZh || round.name}</h3>
+            <h3 ${biAttrs(round.label || round.nameZh || round.name, round.labelEn || round.name)}>${escapeHtml(getLang() === "en" ? (round.labelEn || round.name) : (round.label || round.nameZh || round.name))}</h3>
           </div>
           <div class="route-node-list">
             ${(round.nodes || []).map((node) => renderRouteNode(node, "", matches)).join("")}
@@ -1233,7 +1645,7 @@ function renderBracketSidePanel(sideData, matches = worldCupMatches || []) {
         <div class="bracket-round-column ${sideData.side}" style="--node-count:${round.nodes.length}">
           <div class="route-round-head">
             <span>${round.name}</span>
-            <h3>${round.nameZh}</h3>
+            <h3 ${biAttrs(round.nameZh, round.name)}>${escapeHtml(getLang() === "en" ? round.name : round.nameZh)}</h3>
           </div>
           <div class="route-node-list">
           ${(round.nodes || []).map((node) => renderRouteNode(node, sideData.side, matches)).join("")}
@@ -1250,7 +1662,7 @@ function renderFinalChampionPanel(finalData, championNode, matches = worldCupMat
       <div class="final-node-group">
         <div class="route-round-head final-head">
           <span>FINAL</span>
-          <h3>决赛</h3>
+          <h3 ${biAttrs("决赛", "Final")}>${L("决赛", "Final")}</h3>
         </div>
         <div class="final-team-list">
           ${(finalData.teams || []).map((node) => renderRouteNode({ ...node, matchNo: finalData.matchNo }, "center", matches)).join("")}
@@ -1260,7 +1672,7 @@ function renderFinalChampionPanel(finalData, championNode, matches = worldCupMat
       <div class="champion-node-wrap">
         <div class="route-round-head champion-head">
           <span>CHAMPION</span>
-          <h3>冠军</h3>
+          <h3 ${biAttrs("冠军", "Champion")}>${L("冠军", "Champion")}</h3>
         </div>
         ${renderRouteNode(championNode, "center", matches)}
       </div>
@@ -1268,10 +1680,24 @@ function renderFinalChampionPanel(finalData, championNode, matches = worldCupMat
   `;
 }
 
+function slotTextEn(value) {
+  return String(value ?? "")
+    .replace(/最佳第三名/g, "best 3rd-placed")
+    .replace(/胜者/g, " winner")
+    .replace(/([A-L])组第(\d+)/g, "Group $1 #$2")
+    .replace(/([A-L])组/g, "Group $1")
+    .replace(/(\d+)强/g, "Round of $1")
+    .replace(/小组赛/g, "Group Stage")
+    .replace(/三四名决赛/g, "Third place")
+    .replace(/半决赛/g, "Semifinal")
+    .replace(/决赛/g, "Final")
+    .replace(/待定/g, "TBD");
+}
+
 function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
   const team = getWorldCupTeam(node.teamId);
   const match = findWorldCupMatchByNo(node.matchNo || node.matchId, matches);
-  const nodeStatusText = {
+  const nodeStatusZh = {
     empty: "未确定",
     scheduled: "席位来源",
     live: "进行中",
@@ -1283,25 +1709,31 @@ function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
     champion: "冠军待定"
   }[node.status] || "待定";
   const isSourceSlot = !team && node.status === "scheduled";
-  const nodeLabel = team ? team.nameZh : (node.slotLabel || "待定");
-  const stateLabel = team ? nodeStatusText : (node.descriptionZh || node.sourceLabel || nodeStatusText);
+  const nodeLabel = team
+    ? { zh: team.nameZh, en: team.nameEn || team.nameZh }
+    : { zh: node.slotLabel || "待定", en: slotTextEn(node.slotLabel || "待定") };
+  const stateRawZh = team ? nodeStatusZh : (node.descriptionZh || node.sourceLabel || nodeStatusZh);
+  const stateLabel = team
+    ? { zh: nodeStatusZh, en: wcEn(nodeStatusZh) }
+    : { zh: stateRawZh, en: slotTextEn(stateRawZh) };
   const metaLabel = team
     ? (node.sourceLabel || node.matchNo || node.matchId || "")
     : (node.matchNo || node.matchId || "");
-  const teamsText = getRouteMatchTeamsText(match, node);
-  const timeText = match ? formatMatchField(match.matchTime, "time") : "时间待定";
+  const teams = getRouteMatchTeamsText(match, node);
+  const time = match ? matchTimePair(match.matchTime) : { zh: "时间待定", en: "Time TBD" };
   const matchStatus = getMatchStatus(match);
+  const statusZh = getMatchStatusLabel(matchStatus);
 
   return `
     <article class="team-route-card ${node.status} ${side}">
-      ${team ? renderTeamFlag(team, "route-flag") : `<span class="slot-type-badge">${isSourceSlot ? "席位来源" : "待定席位"}</span>`}
-      <strong>${nodeLabel}</strong>
-      <span>${stateLabel}</span>
-      ${metaLabel ? `<small class="route-match-badge">${metaLabel}</small>` : ""}
+      ${team ? renderTeamFlag(team, "route-flag") : `<span class="slot-type-badge" ${biAttrs(isSourceSlot ? "席位来源" : "待定席位")}>${L(isSourceSlot ? "席位来源" : "待定席位")}</span>`}
+      <strong ${biAttrs(nodeLabel.zh, nodeLabel.en)}>${escapeHtml(pairText(nodeLabel))}</strong>
+      <span ${biAttrs(stateLabel.zh, stateLabel.en)}>${escapeHtml(pairText(stateLabel))}</span>
+      ${metaLabel ? `<small class="route-match-badge">${escapeHtml(metaLabel)}</small>` : ""}
       <div class="route-match-info">
-        <span class="route-match-teams">${teamsText}</span>
-        <time>${timeText}</time>
-        <strong class="route-match-status ${matchStatus}">${getMatchStatusLabel(matchStatus)}</strong>
+        <span class="route-match-teams" ${biAttrs(teams.zh, teams.en)}>${escapeHtml(pairText(teams))}</span>
+        <time ${biAttrs(time.zh, time.en)}>${escapeHtml(pairText(time))}</time>
+        <strong class="route-match-status ${matchStatus}" ${biAttrs(statusZh)}>${L(statusZh)}</strong>
       </div>
     </article>
   `;
@@ -1317,17 +1749,16 @@ function findWorldCupMatchByNo(matchNo, matches = worldCupMatches || []) {
 
 function getRouteMatchTeamsText(match, node) {
   if (match) {
-    const homeTeam = getWorldCupTeam(match.homeTeamId);
-    const awayTeam = getWorldCupTeam(match.awayTeamId);
-    const homeName = formatTeamName(homeTeam, match.homeTeam);
-    const awayName = formatTeamName(awayTeam, match.awayTeam);
+    const home = teamPair(getWorldCupTeam(match.homeTeamId), match.homeTeam);
+    const away = teamPair(getWorldCupTeam(match.awayTeamId), match.awayTeam);
 
-    if (homeName !== "对阵待定" || awayName !== "对阵待定") {
-      return `${homeName} vs ${awayName}`;
+    if (home.zh !== "对阵待定" || away.zh !== "对阵待定") {
+      return { zh: `${home.zh} vs ${away.zh}`, en: `${home.en} vs ${away.en}` };
     }
   }
 
-  return node?.descriptionZh || node?.slotLabel || "对阵待定";
+  const zh = node?.descriptionZh || node?.slotLabel || "对阵待定";
+  return { zh, en: zh === "对阵待定" ? "Matchup TBD" : slotTextEn(zh) };
 }
 
 function getMatchStatus(match, now = new Date()) {
@@ -1393,17 +1824,24 @@ function renderLatestMatchPredictions(matches) {
   return matches.map((match) => {
     const homeTeam = getWorldCupTeam(match.homeTeamId);
     const awayTeam = getWorldCupTeam(match.awayTeamId);
-    const statusLabel = match.predictionStatus === "predicted" ? "已预测" : "待预测";
+    const statusZh = match.predictionStatus === "predicted" ? "已预测" : "待预测";
     const score = match.predictedScore || "待预测";
-    const reference = match.winReference || "待预测";
-    const stageText = [match.stage, match.group, match.round].filter(Boolean).join(" · ");
+    const reference = refPair(match.winReference);
+    const hasReference = reference.zh && reference.zh !== "待预测";
+    const stage = matchStagePair(match);
+    const time = matchTimePair(match.matchTime);
+    const venue = venuePair(match.venue);
+    const summary = refPair(match.predictionSummary);
+    const hasSummary = Boolean(summary.zh);
+    const homeName = teamPair(homeTeam, match.homeTeam);
+    const awayName = teamPair(awayTeam, match.awayTeam);
 
     return `
-      <button class="latest-match-card" type="button" data-open-match-modal data-match-id="${match.id}" aria-label="查看 ${formatTeamName(homeTeam, match.homeTeam)} 对 ${formatTeamName(awayTeam, match.awayTeam)} 的预测详情">
-        <span class="latest-match-status ${match.predictionStatus}">${statusLabel}</span>
+      <button class="latest-match-card" type="button" data-open-match-modal data-match-id="${match.id}" data-zh-aria="查看 ${escapeHtml(homeName.zh)} 对 ${escapeHtml(awayName.zh)} 的预测详情" data-en-aria="${escapeHtml(homeName.en)} vs ${escapeHtml(awayName.en)} prediction details" aria-label="${escapeHtml(L(`查看 ${homeName.zh} 对 ${awayName.zh} 的预测详情`, `${homeName.en} vs ${awayName.en} prediction details`))}">
+        <span class="latest-match-status ${match.predictionStatus}" ${biAttrs(statusZh)}>${L(statusZh)}</span>
         <div class="latest-match-meta">
-          <span>比赛阶段</span>
-          <strong>${stageText}</strong>
+          ${bi("比赛阶段", "Stage")}
+          <strong ${biAttrs(stage.zh, stage.en)}>${escapeHtml(pairText(stage))}</strong>
         </div>
         <div class="latest-teams">
           ${renderLatestTeam(homeTeam, match.homeTeam)}
@@ -1411,22 +1849,23 @@ function renderLatestMatchPredictions(matches) {
           ${renderLatestTeam(awayTeam, match.awayTeam)}
         </div>
         <div class="latest-match-details">
-          <div><span>比赛时间</span><strong>${formatMatchField(match.matchTime, "time")}</strong></div>
-          <div><span>比赛场馆</span><strong>${formatMatchField(match.venue, "venue")}</strong></div>
-          <div><span>预测比分</span><strong>${score}</strong></div>
-          <div><span>胜率参考</span><strong>${reference}</strong></div>
+          <div>${bi("比赛时间", "Kick-off")}<strong ${biAttrs(time.zh, time.en)}>${escapeHtml(pairText(time))}</strong></div>
+          <div>${bi("比赛场馆", "Venue")}<strong ${biAttrs(venue.zh, venue.en)}>${escapeHtml(pairText(venue))}</strong></div>
+          <div>${bi("预测比分", "Predicted score")}<strong>${biAuto(score)}</strong></div>
+          <div>${bi("胜率参考", "Win probability")}<strong>${hasReference ? bi(reference.zh, reference.en) : biAuto("待预测")}</strong></div>
         </div>
-        <p>${match.predictionSummary || "预测报告待补充。"}</p>
+        <p ${hasSummary ? biAttrs(summary.zh, summary.en) : biAttrs("预测报告待补充。", "Prediction report to be added.")}>${escapeHtml(hasSummary ? pairText(summary) : L("预测报告待补充。", "Prediction report to be added."))}</p>
       </button>
     `;
   }).join("");
 }
 
 function renderLatestTeam(team, fallbackName) {
+  const name = teamPair(team, fallbackName);
   return `
     <div class="latest-team">
       ${renderTeamFlag(team, "match-flag")}
-      <strong>${formatTeamName(team, fallbackName)}</strong>
+      <strong ${biAttrs(name.zh, name.en)}>${escapeHtml(pairText(name))}</strong>
     </div>
   `;
 }
@@ -1451,8 +1890,8 @@ function renderScheduleRecords(matches) {
       <section class="schedule-stage-block">
         <div class="stage-head">
           <div class="stage-title-row">
-            <h3>${stage}</h3>
-            <span>${stageMatches.length} 场比赛</span>
+            <h3 ${biAttrs(stage, wcEn(stage))}>${escapeHtml(L(stage))}</h3>
+            <span ${biAttrs(`${stageMatches.length} 场比赛`, `${stageMatches.length} matches`)}>${escapeHtml(L(`${stageMatches.length} 场比赛`, `${stageMatches.length} matches`))}</span>
           </div>
         </div>
         <div class="schedule-record-list">
@@ -1503,25 +1942,32 @@ function renderScheduleRecord(match) {
   const statusText = getMatchStatusText(match);
   const hitStatus = getMatchHitStatus(match);
   const predictionScore = match.predictedScore || "—";
+  const group = groupPair(match.group);
+  const round = roundPair(match.round);
+  const stageMeta = match.group
+    ? { zh: `${group.zh} · ${round.zh}`, en: `${group.en} · ${round.en}` }
+    : round;
+  const time = matchTimePair(match.matchTime);
+  const venue = venuePair(match.venue);
 
   return `
     <article class="schedule-record-card">
       <div class="schedule-match-no">
         <span>${match.matchNo || match.id}</span>
-        <strong>${match.group ? `${match.group} · ${match.round}` : match.round}</strong>
+        <strong ${biAttrs(stageMeta.zh, stageMeta.en)}>${escapeHtml(pairText(stageMeta))}</strong>
       </div>
       <div class="schedule-teams">
         ${renderTinyTeam(homeTeam, match.homeTeam)}
         <span>vs</span>
         ${renderTinyTeam(awayTeam, match.awayTeam)}
       </div>
-      <div class="schedule-detail"><span>时间</span><strong>${formatMatchField(match.matchTime, "time")}</strong></div>
-      <div class="schedule-detail"><span>球场</span><strong>${formatMatchField(match.venue, "venue")}</strong></div>
-      <div class="schedule-detail"><span>实际比分</span><strong>${formatMatchField(match.actualScore || match.actualResult, "actual")}</strong></div>
-      <div class="schedule-detail"><span>预测比分</span><strong>${predictionScore}</strong></div>
+      <div class="schedule-detail">${bi("时间", "Time")}<strong ${biAttrs(time.zh, time.en)}>${escapeHtml(pairText(time))}</strong></div>
+      <div class="schedule-detail">${bi("球场", "Venue")}<strong ${biAttrs(venue.zh, venue.en)}>${escapeHtml(pairText(venue))}</strong></div>
+      <div class="schedule-detail">${bi("实际比分", "Final score")}<strong>${biAuto(match.actualScore || match.actualResult || "待结算")}</strong></div>
+      <div class="schedule-detail">${bi("预测比分", "Predicted score")}<strong>${biAuto(predictionScore)}</strong></div>
       <div class="schedule-badges">
-        <span class="schedule-status ${match.matchStatus}">${statusText}</span>
-        <span class="schedule-hit ${getStatusClassName(hitStatus)}">${hitStatus}</span>
+        <span class="schedule-status ${match.matchStatus}" ${biAttrs(statusText)}>${L(statusText)}</span>
+        <span class="schedule-hit ${getStatusClassName(hitStatus)}" ${biAttrs(hitStatus)}>${L(hitStatus)}</span>
       </div>
     </article>
   `;
@@ -1554,10 +2000,11 @@ function getStatusClassName(value) {
 }
 
 function renderTinyTeam(team, fallbackName) {
+  const name = teamPair(team, fallbackName);
   return `
     <span class="tiny-team">
       ${renderTeamFlag(team, "tiny-flag")}
-      <strong>${formatTeamName(team, fallbackName)}</strong>
+      <strong ${biAttrs(name.zh, name.en)}>${escapeHtml(pairText(name))}</strong>
     </span>
   `;
 }
@@ -1568,29 +2015,40 @@ function renderWorldCupSummaryPanel(predictions) {
     .map((name) => predictions.find((item) => item.predictionName === name))
     .filter(Boolean);
 
-  return selected.map((item) => `
-    <button class="summary-card" type="button" data-open-tournament-modal data-prediction-id="${item.id}" aria-label="查看${item.predictionName}详情">
-      <span>${item.type}</span>
-      <h3>${item.predictionName}</h3>
-      <strong>${item.predictedValue}</strong>
-      <em>${item.updatedAt || "长期预测"}</em>
-      <p>${renderSummaryEvidencePreview(item.evidence)}</p>
+  return selected.map((item) => {
+    const name = awardPair(item, "name");
+    const type = awardPair(item, "type");
+    const updated = item.updatedAt ? { zh: item.updatedAt, en: item.updatedAt } : { zh: "长期预测", en: "Long-term" };
+    const evidence = renderSummaryEvidencePreview(item.evidence, item.evidenceEn);
+    const value = predictedValuePair(item.predictedValue);
+    return `
+    <button class="summary-card" type="button" data-open-tournament-modal data-prediction-id="${item.id}" data-zh-aria="查看${escapeHtml(name.zh)}详情" data-en-aria="View ${escapeHtml(name.en)} details" aria-label="${escapeHtml(L(`查看${name.zh}详情`, `View ${name.en} details`))}">
+      <span ${biAttrs(type.zh, type.en)}>${escapeHtml(pairText(type))}</span>
+      <h3 ${biAttrs(name.zh, name.en)}>${escapeHtml(pairText(name))}</h3>
+      <strong ${biAttrs(value.zh, value.en)}>${escapeHtml(pairText(value))}</strong>
+      <em ${biAttrs(updated.zh, updated.en)}>${escapeHtml(pairText(updated))}</em>
+      <p ${biAttrs(evidence.zh, evidence.en)}>${escapeHtml(pairText(evidence))}</p>
     </button>
-  `).join("");
+  `;
+  }).join("");
 }
 
 function renderWorldCupSummaryLoading() {
   return `
     <div class="summary-empty-state">
-      <strong>正在更新长期预测</strong>
-      <p>请稍候，系统正在整理最新预测结果。</p>
+      <strong ${biAttrs("正在更新长期预测", "Updating long-term predictions")}>${L("正在更新长期预测", "Updating long-term predictions")}</strong>
+      <p ${biAttrs("请稍候，系统正在整理最新预测结果。", "Please wait while we gather the latest prediction results.")}>${L("请稍候，系统正在整理最新预测结果。", "Please wait while we gather the latest prediction results.")}</p>
     </div>
   `;
 }
 
-function renderSummaryEvidencePreview(evidence) {
+function renderSummaryEvidencePreview(evidence, evidenceEn) {
   const firstEvidence = Array.isArray(evidence) ? evidence[0] : "";
-  return firstEvidence || "证据链条待补充。";
+  const firstEvidenceEn = Array.isArray(evidenceEn) ? evidenceEn[0] : "";
+  if (firstEvidence) {
+    return { zh: firstEvidence, en: firstEvidenceEn || firstEvidence };
+  }
+  return { zh: "证据链条待补充。", en: "Evidence chain to be added." };
 }
 
 function getWorldCupTeam(teamId) {
@@ -1598,7 +2056,8 @@ function getWorldCupTeam(teamId) {
 }
 
 function formatTeamName(team, fallbackName) {
-  return team ? team.nameZh : formatMatchField(fallbackName || "", "team");
+  const pair = teamPair(team, fallbackName);
+  return pairText(pair);
 }
 
 function renderTeamFlag(team, className) {
@@ -1610,7 +2069,8 @@ function renderTeamFlag(team, className) {
   const src = inlineFlags[team.nameZh];
 
   if (src) {
-    return `<img class="${className}" src="${src}" alt="${team.nameZh} 国旗">`;
+    const altText = getLang() === "en" ? `${team.nameEn || team.nameZh} flag` : `${team.nameZh} 国旗`;
+    return `<img class="${className}" src="${src}" alt="${escapeHtml(altText)}">`;
   }
 
   return `<span class="${className} flag-fallback" aria-hidden="true">${team.fallbackFlag || "🏳"}</span>`;
@@ -1661,13 +2121,16 @@ function openTournamentPredictionModal(predictionId) {
   const versions = getTournamentPredictionVersions(prediction);
   const latestVersion = versions.find((version) => version.isLatest) || versions[versions.length - 1];
 
+  const heroType = prediction.type ? awardPair(prediction, "type") : prediction.category ? awardPair(prediction, "category") : { zh: "长期预测", en: "Long-term" };
+  const heroName = awardPair(prediction, "name");
+
   header.innerHTML = `
     <div class="tournament-modal-titlebar">
       <span class="match-modal-kicker" id="tournament-modal-title">TOURNAMENT PREDICTION REPORT</span>
     </div>
     <div class="tournament-modal-hero">
-      <span>${prediction.type || prediction.category || "长期预测"}</span>
-      <h2>${prediction.predictionName}</h2>
+      <span ${biAttrs(heroType.zh, heroType.en)}>${escapeHtml(pairText(heroType))}</span>
+      <h2 ${biAttrs(heroName.zh, heroName.en)}>${escapeHtml(pairText(heroName))}</h2>
     </div>
   `;
 
@@ -1723,8 +2186,10 @@ function getTournamentPredictionVersions(prediction) {
     : [{
         time: prediction.updatedAt || "待更新",
         label: "当前版本",
+        labelEn: "Current version",
         predictedValue: prediction.predictedValue,
         evidence: prediction.evidence || [],
+        evidenceEn: prediction.evidenceEn || [],
         isLatest: true
       }];
 
@@ -1732,7 +2197,8 @@ function getTournamentPredictionVersions(prediction) {
     ...record,
     isLatest: Boolean(record.isLatest) || index === records.length - 1,
     predictedValue: record.predictedValue || prediction.predictedValue,
-    evidence: Array.isArray(record.evidence) ? record.evidence : []
+    evidence: Array.isArray(record.evidence) ? record.evidence : [],
+    evidenceEn: Array.isArray(record.evidenceEn) ? record.evidenceEn : []
   }));
 }
 
@@ -1745,19 +2211,27 @@ function renderTournamentPredictionHistory(versions) {
     <section class="prediction-history-card tournament-history-card">
       <div class="panel-section-head">
         <span>VERSION HISTORY</span>
-        <h3>历史预测记录</h3>
+        <h3 ${biAttrs("历史预测记录", "Version history")}>${L("历史预测记录", "Version history")}</h3>
       </div>
       <div class="history-timeline">
-        ${timelineVersions.map(({ record, index }) => `
-          <button class="history-item ${record.isLatest ? "is-current is-active" : ""}" type="button" data-tournament-version-index="${index}" aria-label="查看 ${record.time || "该时间"} 的长期预测版本">
-            <time>${record.time || "时间待补充"}</time>
+        ${timelineVersions.map(({ record, index }) => {
+          const label = record.label
+            ? { zh: record.label, en: record.labelEn || (record.label === "当前版本" ? "Current version" : record.label === "预测版本" ? "Prediction version" : record.label) }
+            : { zh: "预测版本", en: "Prediction version" };
+          const evidence = record.evidence?.[0] ? { zh: record.evidence[0], en: record.evidenceEn?.[0] || record.evidence[0] } : { zh: "证据链条待补充。", en: "Evidence chain to be added." };
+          const value = predictedValuePair(record.predictedValue);
+          const hasValue = Boolean(value.zh);
+          return `
+          <button class="history-item ${record.isLatest ? "is-current is-active" : ""}" type="button" data-tournament-version-index="${index}" data-zh-aria="查看 ${escapeHtml(record.time || "该时间")} 的长期预测版本" data-en-aria="View long-term prediction from ${escapeHtml(record.time || "this time")}" aria-label="${escapeHtml(L(`查看 ${record.time || "该时间"} 的长期预测版本`, `View long-term prediction from ${record.time || "this time"}`))}">
+            <time>${escapeHtml(record.time || L("时间待补充", "Time TBD"))}</time>
             <div>
-              <strong>${record.predictedValue || "待预测"}</strong>
-              <span>${record.label || "预测版本"}</span>
-              <p>${record.evidence?.[0] || "证据链条待补充。"}</p>
+              <strong ${hasValue ? biAttrs(value.zh, value.en) : biAttrs("待预测", "Pending")}>${escapeHtml(hasValue ? pairText(value) : L("待预测", "Pending"))}</strong>
+              <span ${biAttrs(label.zh, label.en)}>${escapeHtml(pairText(label))}</span>
+              <p ${biAttrs(evidence.zh, evidence.en)}>${escapeHtml(pairText(evidence))}</p>
             </div>
           </button>
-        `).join("")}
+        `;
+        }).join("")}
       </div>
     </section>
   `;
@@ -1765,24 +2239,30 @@ function renderTournamentPredictionHistory(versions) {
 
 function renderTournamentEvidenceReport(prediction, version) {
   const evidence = Array.isArray(version?.evidence) ? version.evidence : [];
+  const evidenceEn = Array.isArray(version?.evidenceEn) ? version.evidenceEn : [];
+  const resultLabel = prediction.type ? awardPair(prediction, "type") : { zh: "预测结果", en: "Predicted result" };
+  const value = predictedValuePair(version?.predictedValue || prediction.predictedValue);
 
   return `
     <div class="tournament-evidence-body">
       <section class="tournament-result-card">
-        <span>${prediction.type || "预测结果"}</span>
-        <strong>${version?.predictedValue || prediction.predictedValue}</strong>
+        <span ${biAttrs(resultLabel.zh, resultLabel.en)}>${escapeHtml(pairText(resultLabel))}</span>
+        <strong ${biAttrs(value.zh, value.en)}>${escapeHtml(pairText(value))}</strong>
       </section>
       <section class="tournament-evidence-card">
-        <h3>预测证据链条</h3>
+        <h3 ${biAttrs("预测证据链条", "Evidence chain")}>${L("预测证据链条", "Evidence chain")}</h3>
         <div class="evidence-chain-list">
           ${evidence.length
-            ? evidence.map((item, index) => `
+            ? evidence.map((item, index) => {
+              const en = evidenceEn[index] || item;
+              return `
               <article>
                 <span>${String(index + 1).padStart(2, "0")}</span>
-                <p>${escapeHtml(item)}</p>
+                <p ${biAttrs(item, en)}>${escapeHtml(getLang() === "en" ? en : item)}</p>
               </article>
-            `).join("")
-            : `<p class="empty-state">该版本证据链条待补充。</p>`}
+            `;
+            }).join("")
+            : `<p class="empty-state" ${biAttrs("该版本证据链条待补充。", "Evidence chain for this version to be added.")}>${L("该版本证据链条待补充。", "Evidence chain for this version to be added.")}</p>`}
         </div>
       </section>
     </div>
@@ -1822,8 +2302,8 @@ function openMatchPredictionModal(matchId) {
   const homeTeam = getWorldCupTeam(match.homeTeamId);
   const awayTeam = getWorldCupTeam(match.awayTeamId);
   const report = worldCupPredictionReports?.[match.id];
-  const statusLabel = match.predictionStatus === "predicted" ? "已预测" : "待预测";
   const updatedAt = match.updatedAt || "待更新";
+  const updatedAtText = updatedAt === "待更新" ? { zh: "待更新", en: "Pending" } : { zh: updatedAt, en: updatedAt };
   const versions = getPredictionVersions(match, report);
   const isGamePredictionReport = versions.some((version) => version?.brief || version?.scoreMatrix || version?.deviationSpace);
 
@@ -1831,7 +2311,7 @@ function openMatchPredictionModal(matchId) {
     <div class="match-modal-titlebar">
       <span class="match-modal-kicker" id="match-modal-title">MATCH PREDICTION REPORT</span>
       <div class="match-modal-actions">
-        <span class="modal-update-time">预测更新时间：${updatedAt}</span>
+        <span class="modal-update-time" ${biAttrs(`预测更新时间：${updatedAtText.zh}`, `Updated: ${updatedAtText.en}`)}>${escapeHtml(L(`预测更新时间：${updatedAtText.zh}`, `Updated: ${updatedAtText.en}`))}</span>
       </div>
     </div>
     <div class="match-modal-teams">
@@ -1890,36 +2370,43 @@ function closeMatchPredictionModal() {
 }
 
 function renderModalTeam(team, fallbackName) {
+  const name = teamPair(team, fallbackName);
   return `
     <div class="modal-team">
       ${renderTeamFlag(team, "modal-flag")}
-      <strong>${formatTeamName(team, fallbackName)}</strong>
+      <strong ${biAttrs(name.zh, name.en)}>${escapeHtml(pairText(name))}</strong>
     </div>
   `;
 }
 
 function renderCurrentPredictionPanel(match) {
+  const reference = refPair(match.winReference);
+  const hasReference = reference.zh && reference.zh !== "待预测";
+  const summary = refPair(match.predictionSummary);
+  const hasSummary = Boolean(summary.zh);
+  const statusZh = match.predictionStatus === "predicted" ? "已预测" : "待预测";
+
   return `
     <section class="prediction-current-card">
       <div class="panel-section-head">
         <span>CURRENT VERSION</span>
-        <h3>当前预测</h3>
+        <h3 ${biAttrs("当前预测", "Current prediction")}>${L("当前预测", "Current prediction")}</h3>
       </div>
       <div class="current-score-box">
-        <span>预测比分</span>
-        <strong>${match.predictedScore || "待预测"}</strong>
+        ${bi("预测比分", "Predicted score")}
+        <strong>${biAuto(match.predictedScore || "待预测")}</strong>
       </div>
       <div class="current-metric-list">
         <div>
-          <span>胜率参考</span>
-          <strong>${match.winReference || "待预测"}</strong>
+          ${bi("胜率参考", "Win probability")}
+          <strong>${hasReference ? bi(reference.zh, reference.en) : biAuto("待预测")}</strong>
         </div>
         <div>
-          <span>预测状态</span>
-          <strong>${match.predictionStatus === "predicted" ? "已预测" : "待预测"}</strong>
+          ${bi("预测状态", "Status")}
+          <strong>${biAuto(statusZh)}</strong>
         </div>
       </div>
-      <p>${match.predictionSummary || "当前预测摘要待补充。"}</p>
+      <p ${hasSummary ? biAttrs(summary.zh, summary.en) : biAttrs("当前预测摘要待补充。", "Prediction summary to be added.")}>${escapeHtml(hasSummary ? pairText(summary) : L("当前预测摘要待补充。", "Prediction summary to be added."))}</p>
     </section>
   `;
 }
@@ -1963,19 +2450,25 @@ function renderPredictionHistory(versions) {
     <section class="prediction-history-card">
       <div class="panel-section-head">
         <span>VERSION HISTORY</span>
-        <h3>历史预测记录</h3>
+        <h3 ${biAttrs("历史预测记录", "Version history")}>${L("历史预测记录", "Version history")}</h3>
       </div>
       <div class="history-timeline">
-        ${timelineVersions.map(({ record, index }) => `
-          <button class="history-item ${record.isLatest ? "is-current is-active" : ""}" type="button" data-version-index="${index}" aria-label="查看 ${record.time || "该时间"} 的预测版本">
-            <time>${record.time || "时间待补充"}</time>
+        ${timelineVersions.map(({ record, index }) => {
+          const reference = refPair(record.winReference);
+          const hasReference = Boolean(reference.zh);
+          const summary = refPair(record.summary);
+          const hasSummary = Boolean(summary.zh);
+          return `
+          <button class="history-item ${record.isLatest ? "is-current is-active" : ""}" type="button" data-version-index="${index}" data-zh-aria="查看 ${escapeHtml(record.time || "该时间")} 的预测版本" data-en-aria="View prediction version from ${escapeHtml(record.time || "this time")}" aria-label="${escapeHtml(L(`查看 ${record.time || "该时间"} 的预测版本`, `View prediction version from ${record.time || "this time"}`))}">
+            <time>${escapeHtml(record.time || L("时间待补充", "Time TBD"))}</time>
             <div>
-              <strong>${record.predictedScore || "待预测"}</strong>
-              <span>${record.winReference || "胜率待补充"}</span>
-              <p>${record.summary || "该版本说明待补充。"}</p>
+              <strong>${biAuto(record.predictedScore || "待预测")}</strong>
+              <span>${hasReference ? bi(reference.zh, reference.en) : biAuto("胜率待补充")}</span>
+              <p ${hasSummary ? biAttrs(summary.zh, summary.en) : biAttrs("该版本说明待补充。", "Notes for this version to be added.")}>${escapeHtml(hasSummary ? pairText(summary) : L("该版本说明待补充。", "Notes for this version to be added."))}</p>
             </div>
           </button>
-        `).join("")}
+        `;
+        }).join("")}
       </div>
     </section>
   `;
@@ -1987,26 +2480,33 @@ function renderPredictionVersionReport(version, match) {
   }
 
   const reportMeta = extractReportMetadata(version?.markdown || "");
-  const title = version?.isLatest ? "最新预测报告" : "历史预测报告";
+  const title = version?.isLatest
+    ? { zh: "最新预测报告", en: "Latest prediction report" }
+    : { zh: "历史预测报告", en: "Historical prediction report" };
   const description = version?.isLatest
-    ? "当前展示的是最新预测版本，可点击左侧历史时间点查看旧版预测。"
-    : "当前展示的是历史预测版本，用于对照预测变化。";
+    ? { zh: "当前展示的是最新预测版本，可点击左侧历史时间点查看旧版预测。", en: "Showing the latest prediction version. Click a timestamp on the left to view earlier versions." }
+    : { zh: "当前展示的是历史预测版本，用于对照预测变化。", en: "Showing a historical prediction version for comparison." };
   const versionLabel = reportMeta.versionLabel || (version?.isLatest ? "最新版本" : "历史版本");
+  const versionLabelPair = { zh: versionLabel, en: versionLabel === "最新版本" ? "Latest version" : versionLabel === "历史版本" ? "Historical version" : versionLabel };
   const updatedAt = reportMeta.updatedAt || version?.time || "时间待补充";
+  const updatedAtText = updatedAt === "时间待补充" ? { zh: updatedAt, en: "Time TBD" } : { zh: updatedAt, en: updatedAt };
+  const versionLabelText = version?.label
+    ? { zh: version.label, en: version.label === "比赛预测版本" ? "Match prediction version" : version.label }
+    : { zh: "预测版本", en: "Prediction version" };
 
   return `
     <div class="report-main-head">
-      <span>${version?.label || "预测版本"}</span>
+      <span ${biAttrs(versionLabelText.zh, versionLabelText.en)}>${escapeHtml(pairText(versionLabelText))}</span>
       <div class="report-version-title">
         <div>
-          <h3>${title}</h3>
-          <p>${description}</p>
+          <h3 ${biAttrs(title.zh, title.en)}>${escapeHtml(pairText(title))}</h3>
+          <p ${biAttrs(description.zh, description.en)}>${escapeHtml(pairText(description))}</p>
         </div>
-        <time>${updatedAt}</time>
+        <time>${escapeHtml(pairText(updatedAtText))}</time>
       </div>
       <div class="report-version-meta">
-        <span>报告版本：${versionLabel}</span>
-        <span>更新时间：${updatedAt}</span>
+        <span ${biAttrs(`报告版本：${versionLabelPair.zh}`, `Report version: ${versionLabelPair.en}`)}>${escapeHtml(L(`报告版本：${versionLabelPair.zh}`, `Report version: ${versionLabelPair.en}`))}</span>
+        <span ${biAttrs(`更新时间：${updatedAtText.zh}`, `Updated: ${updatedAtText.en}`)}>${escapeHtml(L(`更新时间：${updatedAtText.zh}`, `Updated: ${updatedAtText.en}`))}</span>
       </div>
     </div>
     ${renderWinDrawLossPie(version, match)}
@@ -2036,15 +2536,15 @@ function renderWinDrawLossPie(version, match) {
   });
 
   return `
-    <section class="probability-pie-panel" aria-label="胜平负概率扇形图">
+    <section class="probability-pie-panel" aria-label="${escapeHtml(L("胜平负概率扇形图", "Win / draw / loss probability chart"))}">
       <div class="probability-pie" style="background: conic-gradient(${gradientParts.join(", ")});">
-        <span>胜平负</span>
+        ${bi("胜平负", "W/D/L")}
       </div>
       <div class="probability-legend">
         ${probabilities.map((item) => `
           <span style="--legend-color:${item.color}">
             <i aria-hidden="true"></i>
-            <strong>${escapeHtml(item.label)}</strong>
+            <strong ${biAttrs(item.labelZh || item.label, item.labelEn || item.label)}>${escapeHtml(item.labelZh || item.label ? pairText({ zh: item.labelZh || item.label, en: item.labelEn || item.label }) : item.label)}</strong>
             <em>${formatProbabilityValue(item.value)}</em>
           </span>
         `).join("")}
@@ -2062,7 +2562,7 @@ function extractWinDrawLossProbabilities(version, match) {
 
   const currentForecastSources = version?.isLatest
     ? [
-        match?.winReference || "",
+        refPair(match?.winReference).zh,
         ...(Array.isArray(match?.forecastLines)
           ? match.forecastLines.flatMap((line) => [line.predictionResult, line.possibility])
           : [])
@@ -2070,28 +2570,33 @@ function extractWinDrawLossProbabilities(version, match) {
     : [];
   const rawText = [
     version?.markdown || "",
-    version?.winReference || "",
-    version?.summary || "",
+    refPair(version?.winReference).zh,
+    refPair(version?.summary).zh,
     ...currentForecastSources
   ].filter(Boolean).join("\n");
   const homeTeam = getWorldCupTeam(match?.homeTeamId);
   const awayTeam = getWorldCupTeam(match?.awayTeamId);
+  const home = teamPair(homeTeam, match?.homeTeam);
+  const away = teamPair(awayTeam, match?.awayTeam);
   const labels = [
     {
       key: "home",
-      label: `${formatTeamName(homeTeam, match?.homeTeam)}胜`,
+      labelZh: `${home.zh}胜`,
+      labelEn: `${home.en} win`,
       color: "#0d7a56",
       names: [homeTeam?.nameZh, homeTeam?.nameEn, match?.homeTeam].filter(Boolean)
     },
     {
       key: "draw",
-      label: "平局",
+      labelZh: "平局",
+      labelEn: "Draw",
       color: "#f6c453",
       names: ["平局", "draw", "Draw"]
     },
     {
       key: "away",
-      label: `${formatTeamName(awayTeam, match?.awayTeam)}胜`,
+      labelZh: `${away.zh}胜`,
+      labelEn: `${away.en} win`,
       color: "#3ab0ff",
       names: [awayTeam?.nameZh, awayTeam?.nameEn, match?.awayTeam].filter(Boolean)
     }
@@ -2100,6 +2605,7 @@ function extractWinDrawLossProbabilities(version, match) {
   return labels
     .map((item) => ({
       ...item,
+      label: pairText({ zh: item.labelZh, en: item.labelEn }),
       value: findProbabilityForNames(rawText, item.names)
     }))
     .filter((item) => Number.isFinite(item.value) && item.value > 0);
@@ -2107,30 +2613,35 @@ function extractWinDrawLossProbabilities(version, match) {
 
 function normalizeWinDrawLossProbabilities(version, homeTeam, awayTeam) {
   const values = version?.brief?.win_draw_loss || {};
-  const homeName = formatTeamName(homeTeam, version?.brief?.match?.team_a);
-  const awayName = formatTeamName(awayTeam, version?.brief?.match?.team_b);
+  const home = teamPair(homeTeam, version?.brief?.match?.team_a);
+  const away = teamPair(awayTeam, version?.brief?.match?.team_b);
   const items = [
     {
       key: "home",
-      label: `${homeName}胜`,
+      labelZh: `${home.zh}胜`,
+      labelEn: `${home.en} win`,
       color: "#0d7a56",
       value: normalizeProbabilityToPercent(values.team_a_win)
     },
     {
       key: "draw",
-      label: "平局",
+      labelZh: "平局",
+      labelEn: "Draw",
       color: "#f6c453",
       value: normalizeProbabilityToPercent(values.draw)
     },
     {
       key: "away",
-      label: `${awayName}胜`,
+      labelZh: `${away.zh}胜`,
+      labelEn: `${away.en} win`,
       color: "#3ab0ff",
       value: normalizeProbabilityToPercent(values.team_b_win)
     }
   ];
 
-  return items.filter((item) => Number.isFinite(item.value) && item.value > 0);
+  return items
+    .filter((item) => Number.isFinite(item.value) && item.value > 0)
+    .map((item) => ({ ...item, label: pairText({ zh: item.labelZh, en: item.labelEn }) }));
 }
 
 function normalizeProbabilityToPercent(value) {
@@ -2186,11 +2697,17 @@ function renderScoreMatrixChart(matrixData) {
   const matrix = matrixData?.matrix || [];
 
   if (!rows.length || !columns.length || !matrix.length) {
-    return renderGameChartEmpty("比分矩阵", "蒙特卡洛比分矩阵数据待补充。");
+    return renderGameChartEmpty({ zh: "比分矩阵", en: "Score matrix" }, { zh: "蒙特卡洛比分矩阵数据待补充。", en: "Monte Carlo score matrix data to be added." });
   }
 
   const values = matrix.flat().map(Number).filter(Number.isFinite);
   const maxValue = Math.max(...values, 0);
+  const rowTeam = matrixData?.row_axis?.team;
+  const colTeam = matrixData?.column_axis?.team;
+  const rowPair = rowTeam ? teamPair(findTeamByEnglishName(rowTeam), rowTeam) : { zh: "主队", en: "Home" };
+  const colPair = colTeam ? teamPair(findTeamByEnglishName(colTeam), colTeam) : { zh: "客队", en: "Away" };
+  const cornerZh = `${rowPair.zh} \\ ${colPair.zh}`;
+  const cornerEn = `${rowPair.en} \\ ${colPair.en}`;
 
   return `
     <section class="game-chart-card score-matrix-card">
@@ -2198,7 +2715,7 @@ function renderScoreMatrixChart(matrixData) {
         <span>SCORE MATRIX</span>
       </div>
       <div class="score-matrix-wrap" style="--matrix-cols:${columns.length + 1}">
-        <span class="matrix-axis-corner">${escapeHtml(matrixData?.row_axis?.team || "主队")} \\ ${escapeHtml(matrixData?.column_axis?.team || "客队")}</span>
+        <span class="matrix-axis-corner" ${biAttrs(cornerZh, cornerEn)}>${escapeHtml(L(cornerZh, cornerEn))}</span>
         ${columns.map((column) => `<span class="matrix-axis-label">${escapeHtml(column)}</span>`).join("")}
         ${rows.map((row, rowIndex) => `
           <span class="matrix-axis-label">${escapeHtml(row)}</span>
@@ -2214,7 +2731,7 @@ function renderScoreMatrixChart(matrixData) {
           }).join("")}
         `).join("")}
       </div>
-      ${matrixData?.axis_note_cn ? `<p>${escapeHtml(matrixData.axis_note_cn)}</p>` : ""}
+      ${matrixData?.axis_note_cn ? `<p ${biAttrs(matrixData.axis_note_cn, matrixData.axis_note_en || matrixData.axis_note_cn)}>${escapeHtml(pairText({ zh: matrixData.axis_note_cn, en: matrixData.axis_note_en || matrixData.axis_note_cn }))}</p>` : ""}
     </section>
   `;
 }
@@ -2223,7 +2740,7 @@ function renderScoreDeviationScatter(deviationData, focusScore = "1-0") {
   const points = Array.isArray(deviationData?.points) ? deviationData.points : [];
 
   if (!points.length) {
-    return renderGameChartEmpty("偏差空间", "比分偏差空间数据待补充。");
+    return renderGameChartEmpty({ zh: "偏差空间", en: "Deviation space" }, { zh: "比分偏差空间数据待补充。", en: "Score deviation space data to be added." });
   }
 
   const maxY = Math.max(...points.map((point) => Number(point.probability) || 0), 0);
@@ -2308,7 +2825,7 @@ function renderScoreDeviationScatter(deviationData, focusScore = "1-0") {
       <div class="game-chart-head">
         <span>DEVIATION SPACE</span>
       </div>
-      <div class="score-scatter-plot" aria-label="横坐标为 deviation，纵坐标为 probability">
+      <div class="score-scatter-plot" data-zh-aria="横坐标为 deviation，纵坐标为 probability" data-en-aria="X axis: deviation, Y axis: probability" aria-label="${escapeHtml(L("横坐标为 deviation，纵坐标为 probability", "X axis: deviation, Y axis: probability"))}">
         <span class="scatter-axis x-axis">deviation</span>
         <span class="scatter-axis y-axis">probability</span>
         ${xTicks.map((tick) => `
@@ -2338,7 +2855,12 @@ function renderScoreDeviationScatter(deviationData, focusScore = "1-0") {
           `;
         }).join("")}
       </div>
-      <p>${escapeHtml(focusPoint?.score || "1-0")}：deviation ${Number(focusPoint?.deviation || 0).toFixed(3)}，probability ${formatProbabilityValue(normalizeProbabilityToPercent(focusPoint?.probability) || 0)}</p>
+      ${(() => {
+        const fs = focusPoint?.score || "1-0";
+        const dev = Number(focusPoint?.deviation || 0).toFixed(3);
+        const prob = formatProbabilityValue(normalizeProbabilityToPercent(focusPoint?.probability) || 0);
+        return `<p ${biAttrs(`${fs}：deviation ${dev}，probability ${prob}`, `${fs}: deviation ${dev}, probability ${prob}`)}>${escapeHtml(L(`${fs}：deviation ${dev}，probability ${prob}`, `${fs}: deviation ${dev}, probability ${prob}`))}</p>`;
+      })()}
     </section>
   `;
 }
@@ -2362,36 +2884,47 @@ function renderGamePredictionKeyFactors(version) {
         <span>KEY FACTORS</span>
       </div>
       ${factors.length
-        ? `<ul>${factors.map((factor) => `<li>${escapeHtml(factor)}</li>`).join("")}</ul>`
-        : `<p class="empty-state">该版本关键因素待补充。</p>`}
+        ? `<ul>${factors.map((factor) => {
+            const pair = typeof factor === "string" ? { zh: factor, en: factor } : factor;
+            return `<li ${biAttrs(pair.zh, pair.en)}>${escapeHtml(pairText(pair))}</li>`;
+          }).join("")}</ul>`
+        : `<p class="empty-state" ${biAttrs("该版本关键因素待补充。", "Key factors for this version to be added.")}>${L("该版本关键因素待补充。", "Key factors for this version to be added.")}</p>`}
     </section>
   `;
 }
 
 function renderGameChartEmpty(title, message) {
+  const t = typeof title === "object" ? title : { zh: title, en: wcEn(title) };
+  const m = typeof message === "object" ? message : { zh: message, en: wcEn(message) };
   return `
     <section class="game-chart-card">
       <div class="game-chart-head">
         <span>DATA PENDING</span>
-        <h4>${escapeHtml(title)}</h4>
+        <h4 ${biAttrs(t.zh, t.en)}>${escapeHtml(pairText(t))}</h4>
       </div>
-      <p>${escapeHtml(message)}</p>
+      <p ${biAttrs(m.zh, m.en)}>${escapeHtml(pairText(m))}</p>
     </section>
   `;
 }
 
 function renderVersionSummaryReport(version, match) {
+  const reference = refPair(version?.winReference);
+  const hasReference = Boolean(reference.zh);
+  const summary = refPair(version?.fallbackSummary || version?.summary || match.predictionSummary);
+  const hasSummary = Boolean(summary.zh);
+  const titleTime = version?.time || "历史版本";
+
   return `
     <div class="report-section-grid">
       <section class="report-section is-lead">
-        <h3>${version?.time || "历史版本"} 预测摘要</h3>
+        <h3 ${biAttrs(`${titleTime} 预测摘要`, `${titleTime === "历史版本" ? "Historical version" : titleTime} prediction summary`)}>${escapeHtml(L(`${titleTime} 预测摘要`, `${titleTime === "历史版本" ? "Historical version" : titleTime} prediction summary`))}</h3>
         <div class="version-summary-grid">
-          <div><span>预测比分</span><strong>${version?.predictedScore || "待预测"}</strong></div>
-          <div><span>胜率参考</span><strong>${version?.winReference || "待补充"}</strong></div>
+          <div>${bi("预测比分", "Predicted score")}<strong>${biAuto(version?.predictedScore || "待预测")}</strong></div>
+          <div>${bi("胜率参考", "Win probability")}<strong>${hasReference ? bi(reference.zh, reference.en) : biAuto("待补充")}</strong></div>
         </div>
         <div class="report-content">
-          <p>${version?.fallbackSummary || version?.summary || match.predictionSummary || "该版本详细预测报告待补充。"}</p>
-          <p>该历史版本的详细报告待补充，当前先展示预测比分、胜率参考和版本摘要。</p>
+          <p ${hasSummary ? biAttrs(summary.zh, summary.en) : biAttrs("该版本详细预测报告待补充。", "Detailed report for this version to be added.")}>${escapeHtml(hasSummary ? pairText(summary) : L("该版本详细预测报告待补充。", "Detailed report for this version to be added."))}</p>
+          <p ${biAttrs("该历史版本的详细报告待补充，当前先展示预测比分、胜率参考和版本摘要。", "A detailed report for this historical version is pending; for now we show the predicted score, win probability and version summary.")}>${escapeHtml(L("该历史版本的详细报告待补充，当前先展示预测比分、胜率参考和版本摘要。", "A detailed report for this historical version is pending; for now we show the predicted score, win probability and version summary."))}</p>
         </div>
       </section>
     </div>
@@ -2399,10 +2932,12 @@ function renderVersionSummaryReport(version, match) {
 }
 
 function renderEmptyReport(match) {
+  const summary = refPair(match.predictionSummary);
+  const hasSummary = Boolean(summary.zh);
   return `
     <section class="report-section">
-      <h3>预测报告待补充</h3>
-      <p>${match.predictionSummary || "该场比赛的详细 markdown 报告尚未配置。"}</p>
+      <h3 ${biAttrs("预测报告待补充", "Prediction report pending")}>${L("预测报告待补充", "Prediction report pending")}</h3>
+      <p ${hasSummary ? biAttrs(summary.zh, summary.en) : biAttrs("该场比赛的详细 markdown 报告尚未配置。", "A detailed report for this match has not been configured yet.")}>${escapeHtml(hasSummary ? pairText(summary) : L("该场比赛的详细 markdown 报告尚未配置。", "A detailed report for this match has not been configured yet."))}</p>
     </section>
   `;
 }
@@ -2718,30 +3253,38 @@ function normalizeForecastLines(match) {
 function formatMatchField(value, type) {
   if (value === "--" || value === "待补充" || value === "") {
     if (type === "prediction" || type === "possibility") {
-      return "待预测";
+      return L("待预测");
     }
 
     if (type === "actual") {
-      return "待结算";
+      return L("待结算");
     }
 
     if (type === "time") {
-      return "时间待定";
+      return L("时间待定");
     }
 
     if (type === "venue") {
-      return "场馆待定";
+      return L("场馆待定");
     }
 
     if (type === "team") {
-      return "对阵待定";
+      return L("对阵待定");
     }
 
-    return "待定";
+    return L("待定");
   }
 
   if (value === "待赛果") {
-    return "待结算";
+    return L("待结算");
+  }
+
+  if (type === "time") {
+    return pairText(matchTimePair(value));
+  }
+
+  if (type === "venue") {
+    return pairText(venuePair(value));
   }
 
   return value;
@@ -2779,6 +3322,151 @@ function renderWorldCupTournamentBoard(predictions) {
   }).join("");
 }
 
+// ---------------------------------------------------------------------------
+// Gaokao dynamic-content i18n layer.
+// Dictionaries + helpers so the prediction page (selectors, map, score list and
+// the university detail modal) renders fully in the active language. The page
+// re-renders on the shared "wowcai:langchange" event dispatched by initLanguage.
+// ---------------------------------------------------------------------------
+const GK_PROVINCE_EN = {
+  "北京": "Beijing", "天津": "Tianjin", "河北": "Hebei", "山西": "Shanxi",
+  "内蒙古": "Inner Mongolia", "辽宁": "Liaoning", "吉林": "Jilin", "黑龙江": "Heilongjiang",
+  "上海": "Shanghai", "江苏": "Jiangsu", "浙江": "Zhejiang", "安徽": "Anhui",
+  "福建": "Fujian", "江西": "Jiangxi", "山东": "Shandong", "河南": "Henan",
+  "湖北": "Hubei", "湖南": "Hunan", "广东": "Guangdong", "广西": "Guangxi",
+  "海南": "Hainan", "重庆": "Chongqing", "四川": "Sichuan", "贵州": "Guizhou",
+  "云南": "Yunnan", "西藏": "Tibet", "陕西": "Shaanxi", "甘肃": "Gansu",
+  "青海": "Qinghai", "宁夏": "Ningxia", "新疆": "Xinjiang"
+};
+
+const GK_SUBJECT_EN = {
+  "物理类": "Physics track",
+  "历史类": "History track",
+  "理科": "Science",
+  "文科": "Liberal Arts",
+  "综合改革": "Comprehensive"
+};
+
+const GK_CITY_EN = {
+  "北京": "Beijing", "天津": "Tianjin", "大连": "Dalian", "沈阳": "Shenyang",
+  "长春": "Changchun", "哈尔滨": "Harbin", "上海": "Shanghai", "南京": "Nanjing",
+  "杭州": "Hangzhou", "合肥": "Hefei", "厦门": "Xiamen", "济南": "Jinan",
+  "青岛": "Qingdao", "武汉": "Wuhan", "长沙": "Changsha", "广州": "Guangzhou",
+  "成都": "Chengdu", "重庆": "Chongqing", "西安": "Xi'an", "杨凌": "Yangling",
+  "兰州": "Lanzhou"
+};
+
+const GK_UNIVERSITY_EN = {
+  pku: "Peking University", tsinghua: "Tsinghua University", ruc: "Renmin University of China",
+  buaa: "Beihang University", bit: "Beijing Institute of Technology", bnu: "Beijing Normal University",
+  cau: "China Agricultural University", muc: "Minzu University of China", nankai: "Nankai University",
+  tju: "Tianjin University", dlut: "Dalian University of Technology", neu: "Northeastern University",
+  jlu: "Jilin University", hit: "Harbin Institute of Technology", fudan: "Fudan University",
+  sjtu: "Shanghai Jiao Tong University", tongji: "Tongji University", ecnu: "East China Normal University",
+  nju: "Nanjing University", seu: "Southeast University", zju: "Zhejiang University",
+  ustc: "Univ. of Science and Technology of China", xmu: "Xiamen University", sdu: "Shandong University",
+  ouc: "Ocean University of China", whu: "Wuhan University", hust: "Huazhong Univ. of Science and Technology",
+  hnu: "Hunan University", csu: "Central South University", nudt: "National Univ. of Defense Technology",
+  sysu: "Sun Yat-sen University", scut: "South China University of Technology", scu: "Sichuan University",
+  uestc: "Univ. of Electronic Science and Technology", cqu: "Chongqing University", xjtu: "Xi'an Jiaotong University",
+  nwpu: "Northwestern Polytechnical University", nwafu: "Northwest A&F University", lzu: "Lanzhou University"
+};
+
+const GK_NOTE_EN = {
+  "示例数据，后续替换为官方和模型结果。": "Sample data, to be replaced with official and model results.",
+  "由旧版示例数据适配，缺失字段已按占位逻辑补齐。": "Adapted from legacy sample data; missing fields use placeholder logic.",
+  "示例/占位数据：用于展示页面结构和交互口径，后续应替换为各省官方投档线、最低位次、招生计划和模型预测结果。": "Sample / placeholder data, used to show the page structure and interaction. Replace with each province's official admission lines, minimum ranks, enrollment plans and model predictions."
+};
+
+function gkProvinceEn(zh) {
+  const s = String(zh ?? "");
+  return GK_PROVINCE_EN[s] || s;
+}
+
+function gkSubjectEn(zh) {
+  const s = String(zh ?? "");
+  return GK_SUBJECT_EN[s] || s;
+}
+
+function gkCityEn(zh) {
+  const s = String(zh ?? "");
+  return GK_CITY_EN[s] || s;
+}
+
+function gkProvinceText(zh) {
+  return L(String(zh ?? ""), gkProvinceEn(zh));
+}
+
+function gkSubjectText(zh) {
+  return L(String(zh ?? ""), gkSubjectEn(zh));
+}
+
+function gkUniversityName(entry) {
+  const en = entry ? GK_UNIVERSITY_EN[entry.universityId] : null;
+  const zh = entry ? entry.universityName : "";
+  return L(zh, en || zh);
+}
+
+function gkLocationText(entry) {
+  const raw = String(entry?.universityLocation ?? "");
+  if (getLang() !== "en") {
+    return raw;
+  }
+  const parts = raw.split(" · ");
+  const prov = gkProvinceEn(parts[0] || "");
+  const city = parts[1] ? gkCityEn(parts[1]) : "";
+  return city ? `${prov} · ${city}` : prov;
+}
+
+function gkMajorGroupText(zh) {
+  const s = String(zh ?? "");
+  if (getLang() !== "en") {
+    return s;
+  }
+  if (s === "本科普通批") {
+    return "Undergraduate batch";
+  }
+  if (s === "专业组待补充") {
+    return "Group TBD";
+  }
+  const m = s.match(/^专业组\s*(\d+)$/);
+  if (m) {
+    return `Group ${m[1]}`;
+  }
+  return s;
+}
+
+function gkNoteText(zh) {
+  const s = String(zh ?? "");
+  return L(s, GK_NOTE_EN[s] || s);
+}
+
+function gaokaoBadgePair(meta) {
+  return meta && meta.isSampleData
+    ? { zh: "示例/占位数据", en: "Sample / placeholder" }
+    : { zh: "正式数据", en: "Official data" };
+}
+
+function gkTbd() {
+  return getLang() === "en" ? "TBD" : "待补充";
+}
+
+// Localize a Chinese measurement unit suffix for the active language.
+function gkUnit(unitZh) {
+  if (getLang() !== "en") {
+    return unitZh;
+  }
+  const map = {
+    "分": " pts",
+    " 分": " pts",
+    "名": "",
+    " 名": "",
+    "人": " seats",
+    " 人": " seats"
+  };
+  return Object.prototype.hasOwnProperty.call(map, unitZh) ? map[unitZh] : unitZh;
+}
+
 function initGaokaoPredictionPage(context = {}) {
   const page = document.querySelector("[data-gaokao-prediction-page]");
 
@@ -2812,13 +3500,39 @@ function initGaokaoPredictionPage(context = {}) {
   };
 
   if (refs.dataBadge) {
-    refs.dataBadge.textContent = meta.isSampleData ? "示例/占位数据" : "正式数据";
+    refs.dataBadge.textContent = pairText(gaokaoBadgePair(meta));
   }
 
   renderProvinceSelector(provinceOrder, data, gaokaoPredictionState, refs);
   bindGaokaoPredictionEvents(data, meta, context.releaseData, gaokaoPredictionState, refs);
   updateGaokaoSubjectOptions(data, gaokaoPredictionState, refs);
   renderGaokaoPredictionWorkspace(data, meta, context.releaseData, gaokaoPredictionState, refs);
+
+  document.addEventListener("wowcai:langchange", () => {
+    if (refs.dataBadge) {
+      refs.dataBadge.textContent = pairText(gaokaoBadgePair(meta));
+    }
+
+    renderProvinceSelector(provinceOrder, data, gaokaoPredictionState, refs);
+    renderGaokaoPredictionWorkspace(data, meta, context.releaseData, gaokaoPredictionState, refs);
+
+    if (
+      refs.detailModal &&
+      refs.detailModal.classList.contains("is-open") &&
+      gaokaoPredictionState.selectedUniversityId &&
+      refs.detailBody
+    ) {
+      const entry = data.find((item) => (
+        item.universityId === gaokaoPredictionState.selectedUniversityId &&
+        item.province === gaokaoPredictionState.province &&
+        (!gaokaoPredictionState.subjectType || item.subjectType === gaokaoPredictionState.subjectType)
+      ));
+
+      if (entry) {
+        refs.detailBody.innerHTML = renderUniversityDetail(entry);
+      }
+    }
+  });
 }
 
 function bindGaokaoPredictionEvents(data, meta, releaseData, state, refs) {
@@ -3000,7 +3714,7 @@ function renderGaokaoHeroStats(data, meta, target) {
 function renderProvinceSelector(provinceOrder, data, state, refs) {
   if (refs.provinceSelect) {
     refs.provinceSelect.innerHTML = provinceOrder.map((province) => (
-      `<option value="${escapeHtml(province)}">${escapeHtml(province)}</option>`
+      `<option value="${escapeHtml(province)}">${escapeHtml(gkProvinceText(province))}</option>`
     )).join("");
     refs.provinceSelect.value = state.province;
   }
@@ -3016,7 +3730,7 @@ function renderProvinceQuickButtons(provinceOrder, state, refs) {
 
   const quick = ["广东", "北京", "河南", "四川", "江苏", "山东"].filter((province) => provinceOrder.includes(province));
   refs.quickList.innerHTML = quick.map((province) => `
-    <button class="${province === state.province ? "is-active" : ""}" type="button" data-gaokao-quick-province="${escapeHtml(province)}">${escapeHtml(province)}</button>
+    <button class="${province === state.province ? "is-active" : ""}" type="button" data-gaokao-quick-province="${escapeHtml(province)}">${escapeHtml(gkProvinceText(province))}</button>
   `).join("");
 }
 
@@ -3032,7 +3746,7 @@ function updateGaokaoSubjectOptions(data, state, refs) {
   }
 
   refs.subjectSelect.innerHTML = subjects.map((subject) => (
-    `<option value="${escapeHtml(subject)}">${escapeHtml(subject)}</option>`
+    `<option value="${escapeHtml(subject)}">${escapeHtml(gkSubjectText(subject))}</option>`
   )).join("");
   refs.subjectSelect.value = state.subjectType;
 }
@@ -3135,17 +3849,32 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
   const markerOffsets = getGaokaoMarkerOffsets(entries);
 
   if (refs.mapHeading) {
-    refs.mapHeading.textContent = `${state.province || "省份"} · ${state.subjectType || "科类"} 985 高校预测地图`;
+    const provText = state.province ? gkProvinceText(state.province) : L("省份", "Province");
+    const subjText = state.subjectType ? gkSubjectText(state.subjectType) : L("科类", "Track");
+    refs.mapHeading.textContent = getLang() === "en"
+      ? `${provText} · ${subjText} · 985 University Score Map`
+      : `${provText} · ${subjText} 985 高校预测地图`;
   }
 
   if (refs.mapSummary) {
-    refs.mapSummary.textContent = entries.length
-      ? `${entries.length} 所 985 高校预测分数线，预测范围 ${formatMinMax(scoreValues, "分")}。点击学校标记查看近五年趋势。`
-      : "当前省份和科类暂无可展示的高校预测数据。";
+    if (entries.length) {
+      const rangeStr = formatMinMax(scoreValues, "分");
+      refs.mapSummary.textContent = getLang() === "en"
+        ? `Predicted score lines for ${entries.length} of China's 985 universities, range ${rangeStr}. Tap a marker to see the five-year trend.`
+        : `${entries.length} 所 985 高校预测分数线，预测范围 ${rangeStr}。点击学校标记查看近五年趋势。`;
+    } else {
+      refs.mapSummary.textContent = L(
+        "当前省份和科类暂无可展示的高校预测数据。",
+        "No university predictions to display for this province and track yet."
+      );
+    }
   }
 
   if (!entries.length) {
-    refs.predictionMap.innerHTML = renderGaokaoEmptyState("当前选择暂无地图数据", "请切换省份或补充高校地图坐标与预测结果。");
+    refs.predictionMap.innerHTML = renderGaokaoEmptyState(
+      L("当前选择暂无地图数据", "No map data for this selection"),
+      L("请切换省份或补充高校地图坐标与预测结果。", "Switch province, or add university map coordinates and predictions.")
+    );
 
     if (refs.scoreList) {
       refs.scoreList.innerHTML = "";
@@ -3173,11 +3902,14 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
     button.style.setProperty("--marker-offset-y", `${markerOffset.y}px`);
     button.style.zIndex = `${Math.max(1, Math.round(Number(entry.prediction.predictedScore) || 1))}`;
     button.dataset.universityId = entry.universityId;
-    button.title = entry.universityName;
-    button.setAttribute("aria-label", `${entry.universityName}，${state.province}${state.subjectType}预测点位`);
+    const markerName = gkUniversityName(entry);
+    button.title = markerName;
+    button.setAttribute("aria-label", getLang() === "en"
+      ? `${markerName}, predicted point for ${gkProvinceText(state.province)} ${gkSubjectText(state.subjectType)}`
+      : `${entry.universityName}，${state.province}${state.subjectType}预测点位`);
     button.innerHTML = `
       <span class="gaokao-score-dot" aria-hidden="true"></span>
-      <span class="gaokao-score-tooltip">${escapeHtml(entry.universityName)}</span>
+      <span class="gaokao-score-tooltip">${escapeHtml(markerName)}</span>
     `;
     button.addEventListener("click", () => openGaokaoUniversityDetail(entry, state, refs));
     markerLayer.appendChild(button);
@@ -3186,8 +3918,8 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
   if (refs.scoreList) {
     refs.scoreList.innerHTML = entries.map((entry) => `
       <button type="button" data-open-gaokao-map-detail="${escapeHtml(entry.universityId)}">
-        <span><em>${escapeHtml(entry.universityName)}</em><small>${escapeHtml(entry.universityLocation)}</small></span>
-        <strong>${entry.prediction.predictedScore} 分</strong>
+        <span><em>${escapeHtml(gkUniversityName(entry))}</em><small>${escapeHtml(gkLocationText(entry))}</small></span>
+        <strong>${formatNullable(entry.prediction.predictedScore, "分")}</strong>
       </button>
     `).join("");
 
@@ -3449,43 +4181,50 @@ function renderUniversityDetail(entry) {
   const rankValues = entry.history.map((row) => row.minRank);
   const years = entry.history.map((row) => row.year);
 
+  const admissionText = getLang() === "en"
+    ? `${gkProvinceEn(entry.province)} admission`
+    : `${entry.province}招生`;
+  const latestText = getLang() === "en"
+    ? `Latest history ${formatNullable(latest?.minScore, "分")}`
+    : `最新历史分 ${formatNullable(latest?.minScore, "分")}`;
+
   return `
     <div class="gaokao-detail-header">
       <div>
         <p class="kicker">UNIVERSITY DETAIL</p>
-        <h2 id="gaokao-detail-title">${escapeHtml(entry.universityName)}</h2>
-        <p>${escapeHtml(entry.universityLocation)} · ${escapeHtml(entry.province)}招生 · ${escapeHtml(entry.subjectType)} · ${escapeHtml(entry.majorGroup)}</p>
+        <h2 id="gaokao-detail-title">${escapeHtml(gkUniversityName(entry))}</h2>
+        <p>${escapeHtml(gkLocationText(entry))} · ${escapeHtml(admissionText)} · ${escapeHtml(gkSubjectText(entry.subjectType))} · ${escapeHtml(gkMajorGroupText(entry.majorGroup))}</p>
       </div>
       <span class="gaokao-detail-score-chip">${formatNullable(entry.prediction.predictedScore, "分")}</span>
     </div>
 
     <div class="gaokao-detail-kpis">
-      <div><span>预测分数线</span><strong>${formatNullable(entry.prediction.predictedScore, "分")}</strong><p>${formatRange(entry.prediction.scoreRange, "分")}</p></div>
-      <div><span>预测位次</span><strong>${formatRank(entry.prediction.predictedRank)}</strong><p>${formatRankRange(entry.prediction.rankRange)}</p></div>
-      <div><span>较上一年变化</span><strong>${formatSigned(entry.prediction.changeFromLastYear)} 分</strong><p>最新历史分 ${formatNullable(latest?.minScore, "分")}</p></div>
-      <div><span>置信度</span><strong>${formatConfidence(entry.prediction.confidence)}</strong><p>${escapeHtml(entry.sourceNote)}</p></div>
+      <div><span>${escapeHtml(L("预测分数线", "Predicted score"))}</span><strong>${formatNullable(entry.prediction.predictedScore, "分")}</strong><p>${formatRange(entry.prediction.scoreRange, "分")}</p></div>
+      <div><span>${escapeHtml(L("预测位次", "Predicted rank"))}</span><strong>${formatRank(entry.prediction.predictedRank)}</strong><p>${formatRankRange(entry.prediction.rankRange)}</p></div>
+      <div><span>${escapeHtml(L("较上一年变化", "Change vs last year"))}</span><strong>${formatSigned(entry.prediction.changeFromLastYear)}${gkUnit(" 分")}</strong><p>${escapeHtml(latestText)}</p></div>
+      <div><span>${escapeHtml(L("置信度", "Confidence"))}</span><strong>${formatConfidence(entry.prediction.confidence)}</strong><p>${escapeHtml(gkNoteText(entry.sourceNote))}</p></div>
     </div>
 
     <div class="gaokao-detail-chart-grid">
       <div>
-        <h3>近五年最低分</h3>
+        <h3>${escapeHtml(L("近五年最低分", "Five-year minimum score"))}</h3>
         ${renderDetailLineChart(scoreValues, years, "score")}
       </div>
       <div>
-        <h3>近五年最低位次</h3>
+        <h3>${escapeHtml(L("近五年最低位次", "Five-year minimum rank"))}</h3>
         ${renderDetailLineChart(rankValues, years, "rank")}
       </div>
     </div>
 
     <div class="gaokao-detail-judgement">
-      <strong>趋势判断</strong>
+      <strong>${escapeHtml(L("趋势判断", "Trend read"))}</strong>
       <p>${escapeHtml(makeGaokaoTrendJudgement(entry))}</p>
     </div>
 
     <div class="modal-table-wrap">
       <table class="modal-data-table gaokao-detail-table">
         <thead>
-          <tr><th>年份</th><th>最低分</th><th>最低位次</th><th>招生计划</th></tr>
+          <tr><th>${escapeHtml(L("年份", "Year"))}</th><th>${escapeHtml(L("最低分", "Min score"))}</th><th>${escapeHtml(L("最低位次", "Min rank"))}</th><th>${escapeHtml(L("招生计划", "Plan"))}</th></tr>
         </thead>
         <tbody>
           ${entry.history.map((row) => `
@@ -3493,7 +4232,7 @@ function renderUniversityDetail(entry) {
               <td>${row.year}</td>
               <td>${formatNullable(row.minScore, "分")}</td>
               <td>${formatRank(row.minRank)}</td>
-              <td>${row.planCount == null ? "待补充" : `${row.planCount} 人`}</td>
+              <td>${row.planCount == null ? gkTbd() : `${row.planCount}${gkUnit(" 人")}`}</td>
             </tr>
           `).join("")}
         </tbody>
@@ -3510,14 +4249,23 @@ function makeGaokaoTrendJudgement(entry) {
   const change = entry.prediction.changeFromLastYear;
 
   if (rankUp && change > 0) {
-    return "该校近三年录取位次整体上移，预测分数线可能小幅上涨，建议结合位次和专业组热度判断。";
+    return L(
+      "该校近三年录取位次整体上移，预测分数线可能小幅上涨，建议结合位次和专业组热度判断。",
+      "Admission ranks have risen over the past three years, so the predicted score line may edge up. Weigh the rank trend and how competitive each major group is."
+    );
   }
 
   if (rankDown && change < 0) {
-    return "该校近三年录取位次有所下移，预测门槛可能小幅回落，但仍需核对当年招生计划变化。";
+    return L(
+      "该校近三年录取位次有所下移，预测门槛可能小幅回落，但仍需核对当年招生计划变化。",
+      "Admission ranks have eased over the past three years, so the predicted threshold may dip slightly, but still check this year's enrollment-plan changes."
+    );
   }
 
-  return "该校近年最低分和最低位次存在波动，建议优先看位次区间，并结合专业组、招生计划和院校热度综合判断。";
+  return L(
+    "该校近年最低分和最低位次存在波动，建议优先看位次区间，并结合专业组、招生计划和院校热度综合判断。",
+    "Minimum scores and ranks have fluctuated in recent years. Prioritize the rank range, and weigh major groups, enrollment plans and overall demand together."
+  );
 }
 
 function renderScoreReleaseModule(releaseData, state, refs) {
@@ -3557,7 +4305,7 @@ function renderSparkline(values, type) {
   const cleaned = values.filter(Number.isFinite);
 
   if (cleaned.length < 2) {
-    return `<div class="gaokao-sparkline-empty">数据待补充</div>`;
+    return `<div class="gaokao-sparkline-empty">${escapeHtml(L("数据待补充", "Data TBD"))}</div>`;
   }
 
   const width = 148;
@@ -3588,7 +4336,7 @@ function renderDetailLineChart(values, labels, type) {
   const cleaned = values.filter(Number.isFinite);
 
   if (cleaned.length < 2) {
-    return `<div class="gaokao-chart-empty">趋势数据待补充</div>`;
+    return `<div class="gaokao-chart-empty">${escapeHtml(L("趋势数据待补充", "Trend data TBD"))}</div>`;
   }
 
   const width = 560;
@@ -3606,12 +4354,12 @@ function renderDetailLineChart(values, labels, type) {
   const ticks = [min, Math.round((min + max) / 2), max];
 
   return `
-    <svg class="gaokao-detail-chart ${type}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${type === "rank" ? "最低位次趋势" : "最低分趋势"}">
+    <svg class="gaokao-detail-chart ${type}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${type === "rank" ? L("最低位次趋势", "Minimum rank trend") : L("最低分趋势", "Minimum score trend")}">
       <g class="chart-grid">
         ${ticks.map((tick) => `<line x1="${pad.left}" x2="${width - pad.right}" y1="${yFor(tick)}" y2="${yFor(tick)}"></line><text x="12" y="${yFor(tick) + 4}">${type === "rank" ? formatNumber(tick) : tick}</text>`).join("")}
       </g>
       <polyline points="${points}"></polyline>
-      ${cleaned.map((value, index) => `<circle cx="${xFor(index)}" cy="${yFor(value)}" r="4"><title>${labels[index]}：${type === "rank" ? formatRank(value) : `${value} 分`}</title></circle>`).join("")}
+      ${cleaned.map((value, index) => `<circle cx="${xFor(index)}" cy="${yFor(value)}" r="4"><title>${labels[index]}${getLang() === "en" ? ": " : "："}${type === "rank" ? formatRank(value) : formatNullable(value, "分")}</title></circle>`).join("")}
       <g class="chart-axis">
         ${labels.map((label, index) => `<text x="${xFor(index)}" y="${height - 12}">${label}</text>`).join("")}
       </g>
@@ -3639,33 +4387,34 @@ function parseGaokaoInputNumber(value) {
 
 function formatNumber(value) {
   if (!Number.isFinite(Number(value))) {
-    return "待补充";
+    return gkTbd();
   }
 
-  return new Intl.NumberFormat("zh-CN").format(Math.round(Number(value)));
+  const locale = getLang() === "en" ? "en-US" : "zh-CN";
+  return new Intl.NumberFormat(locale).format(Math.round(Number(value)));
 }
 
 function formatRank(value) {
   if (!Number.isFinite(Number(value))) {
-    return "待补充";
+    return gkTbd();
   }
 
-  return `${formatNumber(value)} 名`;
+  return `${formatNumber(value)}${gkUnit(" 名")}`;
 }
 
 function formatNullable(value, unit = "") {
   if (!Number.isFinite(Number(value))) {
-    return "待补充";
+    return gkTbd();
   }
 
-  return `${Math.round(Number(value))}${unit}`;
+  return `${Math.round(Number(value))}${gkUnit(unit)}`;
 }
 
 function formatSigned(value, digits = 0) {
   const number = Number(value);
 
   if (!Number.isFinite(number)) {
-    return "待补充";
+    return gkTbd();
   }
 
   const fixed = digits > 0 ? number.toFixed(digits) : Math.round(number);
@@ -3674,45 +4423,43 @@ function formatSigned(value, digits = 0) {
 
 function formatRange(range, unit = "") {
   if (!Array.isArray(range) || range.length < 2) {
-    return "待补充";
+    return gkTbd();
   }
 
-  return `${Math.round(range[0])}-${Math.round(range[1])}${unit}`;
+  return `${Math.round(range[0])}-${Math.round(range[1])}${gkUnit(unit)}`;
 }
 
 function formatRankRange(range) {
   if (!Array.isArray(range) || range.length < 2) {
-    return "待补充";
+    return gkTbd();
   }
 
-  return `${formatNumber(range[0])}-${formatNumber(range[1])} 名`;
+  return `${formatNumber(range[0])}-${formatNumber(range[1])}${gkUnit(" 名")}`;
 }
 
 function formatMinMax(values, unit = "", rankMode = false) {
   const cleaned = values.filter((value) => Number.isFinite(Number(value)));
 
   if (!cleaned.length) {
-    return "待补充";
+    return gkTbd();
   }
 
   const min = Math.min(...cleaned);
   const max = Math.max(...cleaned);
 
   if (rankMode) {
-    return `${formatNumber(min)}-${formatNumber(max)}${unit}`;
+    return `${formatNumber(min)}-${formatNumber(max)}${gkUnit(unit)}`;
   }
 
-  return `${Math.round(min)}-${Math.round(max)}${unit}`;
+  return `${Math.round(min)}-${Math.round(max)}${gkUnit(unit)}`;
 }
 
 function formatConfidence(confidence) {
-  const map = {
-    high: "高",
-    medium: "中",
-    low: "低"
-  };
+  const map = getLang() === "en"
+    ? { high: "High", medium: "Medium", low: "Low" }
+    : { high: "高", medium: "中", low: "低" };
 
-  return map[String(confidence).toLowerCase()] || "待判断";
+  return map[String(confidence).toLowerCase()] || (getLang() === "en" ? "TBD" : "待判断");
 }
 
 function initGaokaoMaps(history, prediction) {
@@ -3961,4 +4708,16 @@ function renderPredictionTable(targetYear, predictions) {
       <tbody>${rows}</tbody>
     </table>
   `;
+}
+
+// Initialized after the Gaokao i18n dictionaries above are evaluated, so the
+// prediction page renders in the active language on first paint.
+if (document.querySelector("[data-gaokao-prediction-page]")) {
+  initGaokaoPredictionPage({
+    admissionData: admissionPredictionData,
+    meta: admissionPredictionMeta,
+    releaseData: scoreReleaseData,
+    historyData,
+    predictionData
+  });
 }
