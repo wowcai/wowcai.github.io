@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-18T07:38:50.865363Z",
+  "prediction_generated_at_local": "2026-06-18T15:38:50.865363+08:00",
+  "match": {
+    "match_id": "SUI_BIH",
+    "team_a": "Switzerland",
+    "team_b": "Bosnia and Herzegovina",
+    "kickoff_utc": "2026-06-18T19:00:00Z",
+    "venue": "Los Angeles Stadium",
+    "stage": "group",
+    "group": "B",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.375,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 72,
+    "rollout_total_action_count": 288,
+    "rollout_fallback_ratio": 0.25,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率37.5%）。",
+      "Rollout有72/288个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5,
+    "draw": 0.29777777777777775,
+    "team_b_win": 0.20222222222222222
+  },
+  "most_likely_outcome": {
+    "label": "Switzerland胜",
+    "probability": 0.5
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.16037037037037036
+    },
+    {
+      "score": "1-1",
+      "probability": 0.13333333333333333
+    },
+    {
+      "score": "0-0",
+      "probability": 0.11814814814814815
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "瑞士组织重心在Granit Xhaka调度，波黑中场屏障是本场关键对位。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_48ae376b8eed",
+        "E_30a0341f82c9"
+      ],
+      "source_names": [
+        "Switzerland 2026 World Cup preview: Squad breakdown, key player ...",
+        "Switzerland vs Bosnia & Herzegovina World Cup 2026 Predictions"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "波黑主帅Barbarez偏好4-4-2或4-2-3-1纪律型防守结构。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_dc6552f89d9c"
+      ],
+      "source_names": [
+        "Rotowire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "瑞士以欧预赛B组头名直通世界杯，Elo评分记录为1865。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_064cb580ff1d",
+        "E_09c0d6ff8617"
+      ],
+      "source_names": [
+        "MLS Soccer",
+        "2026 World Cup - World Football Elo Ratings"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "瑞士预测锋线含Vargas、Ndoye和Embolo，Kolasinac赛前需体能测试。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_53fbe38c47c6",
+        "E_5f11ce8e1e38",
+        "E_c16ccd8c1d5a"
+      ],
+      "source_names": [
+        "RotoWire",
+        "Switzerland vs Bosnia & Herzegovina Picks, Predictions & Betting ...",
+        "Switzerland vs. Bosnia & Herzegovina—World Cup - Sports Illustrated"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "Dzeko已恢复随波黑合练，但Ivan Sunjic因肌肉伤无法参加训练。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_e1c4f4ce538b",
+        "E_fade3867df43"
+      ],
+      "source_names": [
+        "RotoWire",
+        "Ivan Sunjic - Muscle injury disrupts WC prep - RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在SoFi Stadium进行，预报多云68°F、湿度72%。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_807a7dbfbe73",
+        "E_F_0f63cf05d641"
+      ],
+      "source_names": [
+        "Discover Los Angeles",
+        "7-Day Forecast 33.94N 118.42W - National Weather Service"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}

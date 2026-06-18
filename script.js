@@ -21,6 +21,7 @@ const worldCupTournamentEvidenceFiles = window.WORLD_CUP_TOURNAMENT_EVIDENCE_FIL
 const worldCupTournamentPredictionSpecs = window.WORLD_CUP_TOURNAMENT_PREDICTION_SPECS || worldCupTournamentPredictions || [];
 const worldCupGamePredictionDir = window.WORLD_CUP_GAME_PREDICTION_DIR || "game_prediction";
 const worldCupGamePredictionManifest = window.WORLD_CUP_GAME_PREDICTION_MANIFEST || [];
+const worldCupLatestGamePredictions = window.WORLD_CUP_LATEST_GAME_PREDICTIONS || [];
 const worldCupTeams = window.WORLD_CUP_TEAMS;
 const worldCupGroups = window.WORLD_CUP_GROUPS;
 const worldCupRouteData = window.WORLD_CUP_ROUTE_DATA;
@@ -807,7 +808,7 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
 
     currentWorldCupMatches = merged;
     window.WORLD_CUP_MATCH_PREDICTIONS = merged;
-    const sortedMatches = [...loadedMatches].sort((a, b) => compareGamePredictionMatchTime(a, b));
+    const sortedMatches = getLatestLoadedGamePredictionMatches(loadedMatches);
     latestMatches.innerHTML = renderLatestMatchPredictions(sortedMatches.slice(0, 4));
     if (routeMap && (worldCupRouteData || worldCupRouteRounds) && worldCupTeams) {
       routeMap.innerHTML = renderTournamentRouteMap(worldCupRouteData || worldCupRouteRounds, merged);
@@ -824,7 +825,7 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
     latestMatches.querySelectorAll("[data-open-match-modal]").forEach((button) => {
       button.addEventListener("click", () => openMatchPredictionModal(button.dataset.matchId));
     });
-    updateGamePredictionRangeBadge(normalizeGamePredictionManifest(worldCupGamePredictionManifest));
+    updateGamePredictionRangeBadge(getLatestGamePredictionSpecs(specs));
   } catch (error) {
     console.warn("Failed to load game prediction folders.", error);
   }
@@ -857,7 +858,7 @@ async function openGroupPredictionModal(matchId) {
 }
 
 async function loadGroupPredictionMatch(match) {
-  const matchFolder = buildGamePredictionFolderName(match);
+  const matchFolder = findConfiguredGamePredictionFolder(match) || buildGamePredictionFolderName(match);
   const cacheKey = matchFolder || match?.id;
 
   if (!matchFolder) {
@@ -911,16 +912,50 @@ function buildGamePredictionFolderName(match) {
   const awayTeam = getWorldCupTeam(match?.awayTeamId);
   const home = normalizeGamePredictionFolderSegment(homeTeam?.nameEn || match?.homeTeam || "");
   const away = normalizeGamePredictionFolderSegment(awayTeam?.nameEn || match?.awayTeam || "");
+  const matchNo = String(match?.matchNo || match?.id || "").match(/^M\d+$/)?.[0] || "";
 
   if (!home || !away) {
     return "";
   }
 
-  return `${home}_vs_${away}`;
+  return `${home}_vs_${away}${matchNo ? `_${matchNo}` : ""}`;
+}
+
+function findConfiguredGamePredictionFolder(match) {
+  const matchNo = String(match?.matchNo || match?.id || "");
+  const allSpecs = [
+    ...normalizeGamePredictionManifest(worldCupLatestGamePredictions, { limit: null }),
+    ...normalizeGamePredictionManifest(worldCupGamePredictionManifest, { limit: null })
+  ];
+
+  if (matchNo) {
+    const byNo = allSpecs.find((spec) => String(spec.matchNo || "") === matchNo);
+
+    if (byNo?.matchFolder) {
+      return byNo.matchFolder;
+    }
+  }
+
+  const pairKey = buildMatchPairKey(
+    getWorldCupTeam(match?.homeTeamId)?.nameEn || match?.homeTeam,
+    getWorldCupTeam(match?.awayTeamId)?.nameEn || match?.awayTeam
+  );
+  const byPair = allSpecs.find((spec) => {
+    const inferred = inferGamePredictionTeams(spec.matchFolder);
+    return buildMatchPairKey(inferred.homeName, inferred.awayName) === pairKey;
+  });
+
+  return byPair?.matchFolder || "";
 }
 
 function normalizeGamePredictionFolderSegment(value) {
-  return String(value || "")
+  const alias = {
+    "Korea Republic": "South Korea",
+    "Republic of Korea": "South Korea",
+    "Bosnia & Herzegovina": "Bosnia and Herzegovina"
+  }[String(value || "")] || value;
+
+  return String(alias || "")
     .replace(/&/g, "and")
     .replace(/\s+/g, "_")
     .replace(/[^A-Za-z0-9_]+/g, "_")
@@ -965,21 +1000,26 @@ function mergeWorldCupMatchPrediction(loadedMatch) {
 }
 
 async function discoverGamePredictionSpecs() {
+  const latestSpecs = normalizeGamePredictionManifest(worldCupLatestGamePredictions, { limit: 4 });
+
+  if (latestSpecs.length) {
+    return latestSpecs;
+  }
+
   const discovered = await discoverGamePredictionFolders();
 
   if (discovered.length) {
-    return discovered;
+    return sortGamePredictionSpecs(discovered);
   }
 
-  return normalizeGamePredictionManifest(worldCupGamePredictionManifest);
+  return normalizeGamePredictionManifest(worldCupGamePredictionManifest, { limit: null });
 }
 
 async function discoverGamePredictionFolders() {
   try {
     const indexHtml = await fetchTextFile(`${worldCupGamePredictionDir}/`);
     const folders = extractDirectoryLinks(indexHtml)
-      .filter((folder) => folder && !folder.startsWith("."))
-      .slice(0, 4);
+      .filter((folder) => folder && !folder.startsWith("."));
     const specs = [];
 
     for (const matchFolder of folders) {
@@ -991,7 +1031,7 @@ async function discoverGamePredictionFolders() {
       specs.push({ matchFolder, versions });
     }
 
-    return specs.filter((spec) => spec.versions.length);
+    return sortGamePredictionSpecs(specs.filter((spec) => spec.versions.length));
   } catch (error) {
     console.warn("Directory listing for game predictions is unavailable; using configured fallback list.", error);
     return [];
@@ -1004,20 +1044,86 @@ function extractDirectoryLinks(indexHtml) {
     .filter((folder) => folder && folder !== "." && folder !== "..");
 }
 
-function normalizeGamePredictionManifest(manifest) {
-  return (manifest || [])
+function normalizeGamePredictionManifest(manifest, options = {}) {
+  const limit = options.limit === null ? null : Number(options.limit || 4);
+  const specs = (manifest || [])
     .map((entry) => {
       if (typeof entry === "string") {
         return { matchFolder: entry, versions: [] };
       }
 
       return {
+        matchNo: entry.matchNo || entry.matchId || "",
         matchFolder: entry.matchFolder || entry.folder || "",
         versions: Array.isArray(entry.versions) ? entry.versions : []
       };
     })
-    .filter((entry) => entry.matchFolder && entry.versions.length)
+    .filter((entry) => entry.matchFolder && entry.versions.length);
+
+  const sorted = sortGamePredictionSpecs(specs);
+  return limit ? sorted.slice(0, limit) : sorted;
+}
+
+function sortGamePredictionSpecs(specs = []) {
+  return [...(specs || [])]
+    .map((spec) => ({
+      ...spec,
+      versions: [...(spec.versions || [])].sort((a, b) => compareGamePredictionVersions(
+        normalizeGamePredictionVersionId(a),
+        normalizeGamePredictionVersionId(b)
+      ))
+    }))
+    .sort((a, b) => {
+      const versionCompare = compareGamePredictionVersions(getLatestGamePredictionSpecVersion(b), getLatestGamePredictionSpecVersion(a));
+
+      if (versionCompare) {
+        return versionCompare;
+      }
+
+      return String(a.matchFolder || "").localeCompare(String(b.matchFolder || ""), "zh-CN", { numeric: true });
+    });
+}
+
+function getLatestGamePredictionSpecVersion(spec) {
+  return normalizeGamePredictionVersionId(spec?.versions?.[spec.versions.length - 1]);
+}
+
+function normalizeGamePredictionVersionId(version) {
+  if (!version) {
+    return "";
+  }
+
+  if (typeof version === "string") {
+    return version;
+  }
+
+  return version.versionFolder || version.folder || version.version || version.time || "";
+}
+
+function getLatestGamePredictionSpecs(specs = []) {
+  const sortedSpecs = sortGamePredictionSpecs(specs);
+  const latestVersion = getLatestGamePredictionSpecVersion(sortedSpecs[0]);
+
+  if (!latestVersion) {
+    return [];
+  }
+
+  return sortedSpecs
+    .filter((spec) => getLatestGamePredictionSpecVersion(spec) === latestVersion)
     .slice(0, 4);
+}
+
+function getLatestLoadedGamePredictionMatches(matches = []) {
+  const latestVersion = [...matches]
+    .map((match) => getLatestGamePredictionSpecVersion(match.gamePredictionSource || {}))
+    .filter(Boolean)
+    .sort(compareGamePredictionVersions)
+    .pop();
+  const candidates = latestVersion
+    ? matches.filter((match) => getLatestGamePredictionSpecVersion(match.gamePredictionSource || {}) === latestVersion)
+    : matches;
+
+  return [...candidates].sort((a, b) => compareGamePredictionMatchTime(a, b));
 }
 
 async function loadGamePredictionMatch(spec, baseMatches = worldCupMatches || []) {
@@ -1341,7 +1447,8 @@ function extractMarkdownSectionBullets(markdown, sectionTitle) {
 
 function inferGamePredictionTeams(matchFolder, brief) {
   const fromBrief = brief?.match || {};
-  const folderNames = String(matchFolder || "").split("_vs_");
+  const folderName = String(matchFolder || "").replace(/_M\d+$/i, "");
+  const folderNames = folderName.split("_vs_");
 
   return {
     homeName: fromBrief.team_a || folderNames[0] || "",
@@ -1373,7 +1480,14 @@ function buildMatchPairKey(homeName, awayName) {
 }
 
 function normalizeTeamLookupName(value) {
-  return String(value || "").toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, "");
+  const normalized = String(value || "").toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, "");
+  const aliases = {
+    bosniaandherzegovina: "bosniaherzegovina",
+    korearepublic: "southkorea",
+    republicofkorea: "southkorea"
+  };
+
+  return aliases[normalized] || normalized;
 }
 
 function formatGamePredictionStage(stage, fallbackStage) {
@@ -2706,32 +2820,37 @@ function renderScoreMatrixChart(matrixData) {
   const colTeam = matrixData?.column_axis?.team;
   const rowPair = rowTeam ? teamPair(findTeamByEnglishName(rowTeam), rowTeam) : { zh: "主队", en: "Home" };
   const colPair = colTeam ? teamPair(findTeamByEnglishName(colTeam), colTeam) : { zh: "客队", en: "Away" };
-  const cornerZh = `${rowPair.zh} \\ ${colPair.zh}`;
-  const cornerEn = `${rowPair.en} \\ ${colPair.en}`;
+  const rowAxisZh = `${rowPair.zh}进球`;
+  const rowAxisEn = `${rowPair.en} goals`;
+  const colAxisZh = `${colPair.zh}进球`;
+  const colAxisEn = `${colPair.en} goals`;
 
   return `
     <section class="game-chart-card score-matrix-card">
       <div class="game-chart-head">
-        <span>SCORE MATRIX</span>
+        <span ${biAttrs("比分矩阵", "Score matrix")}>${escapeHtml(L("比分矩阵", "Score matrix"))}</span>
+      </div>
+      <div class="matrix-axis-summary" aria-label="${escapeHtml(L(`${rowAxisZh}，${colAxisZh}`, `${rowAxisEn}, ${colAxisEn}`))}">
+        <span class="matrix-row-axis" ${biAttrs(rowAxisZh, rowAxisEn)}>${escapeHtml(L(rowAxisZh, rowAxisEn))}</span>
+        <span class="matrix-col-axis" ${biAttrs(colAxisZh, colAxisEn)}>${escapeHtml(L(colAxisZh, colAxisEn))}</span>
       </div>
       <div class="score-matrix-wrap" style="--matrix-cols:${columns.length + 1}">
-        <span class="matrix-axis-corner" ${biAttrs(cornerZh, cornerEn)}>${escapeHtml(L(cornerZh, cornerEn))}</span>
-        ${columns.map((column) => `<span class="matrix-axis-label">${escapeHtml(column)}</span>`).join("")}
+        <span class="matrix-axis-corner" aria-hidden="true"></span>
+        ${columns.map((column) => `<span class="matrix-axis-label matrix-col-label" title="${escapeHtml(L(`${colPair.zh} ${column}球`, `${colPair.en} ${column} goals`))}">${escapeHtml(column)}</span>`).join("")}
         ${rows.map((row, rowIndex) => `
-          <span class="matrix-axis-label">${escapeHtml(row)}</span>
+          <span class="matrix-axis-label matrix-row-label" title="${escapeHtml(L(`${rowPair.zh} ${row}球`, `${rowPair.en} ${row} goals`))}">${escapeHtml(row)}</span>
           ${columns.map((column, columnIndex) => {
             const value = Number(matrix[rowIndex]?.[columnIndex] || 0);
             const intensity = maxValue ? Math.max(0.08, value / maxValue) : 0;
 
             return `
-              <span class="matrix-cell" style="--cell-alpha:${intensity.toFixed(3)}" title="${escapeHtml(row)}-${escapeHtml(column)} ${formatProbabilityValue(normalizeProbabilityToPercent(value) || 0)}">
+              <span class="matrix-cell" style="--cell-alpha:${intensity.toFixed(3)}" title="${escapeHtml(L(`${rowPair.zh} ${row} - ${colPair.zh} ${column}：${formatProbabilityValue(normalizeProbabilityToPercent(value) || 0)}`, `${rowPair.en} ${row} - ${colPair.en} ${column}: ${formatProbabilityValue(normalizeProbabilityToPercent(value) || 0)}`))}">
                 <strong>${formatProbabilityValue(normalizeProbabilityToPercent(value) || 0)}</strong>
               </span>
             `;
           }).join("")}
         `).join("")}
       </div>
-      ${matrixData?.axis_note_cn ? `<p ${biAttrs(matrixData.axis_note_cn, matrixData.axis_note_en || matrixData.axis_note_cn)}>${escapeHtml(pairText({ zh: matrixData.axis_note_cn, en: matrixData.axis_note_en || matrixData.axis_note_cn }))}</p>` : ""}
     </section>
   `;
 }
@@ -2823,11 +2942,11 @@ function renderScoreDeviationScatter(deviationData, focusScore = "1-0") {
   return `
     <section class="game-chart-card score-scatter-card">
       <div class="game-chart-head">
-        <span>DEVIATION SPACE</span>
+        <span ${biAttrs("比分偏差空间", "Deviation space")}>${escapeHtml(L("比分偏差空间", "Deviation space"))}</span>
       </div>
-      <div class="score-scatter-plot" data-zh-aria="横坐标为 deviation，纵坐标为 probability" data-en-aria="X axis: deviation, Y axis: probability" aria-label="${escapeHtml(L("横坐标为 deviation，纵坐标为 probability", "X axis: deviation, Y axis: probability"))}">
-        <span class="scatter-axis x-axis">deviation</span>
-        <span class="scatter-axis y-axis">probability</span>
+      <div class="score-scatter-plot" data-zh-aria="横坐标为比分偏差，纵坐标为概率" data-en-aria="X axis: deviation, Y axis: probability" aria-label="${escapeHtml(L("横坐标为比分偏差，纵坐标为概率", "X axis: deviation, Y axis: probability"))}">
+        <span class="scatter-axis x-axis" ${biAttrs("比分偏差", "deviation")}>${escapeHtml(L("比分偏差", "deviation"))}</span>
+        <span class="scatter-axis y-axis" ${biAttrs("概率", "probability")}>${escapeHtml(L("概率", "probability"))}</span>
         ${xTicks.map((tick) => `
           <span class="scatter-gridline vertical" style="left:${mapX(tick).toFixed(2)}%"></span>
           <span class="scatter-tick x-tick" style="left:${mapX(tick).toFixed(2)}%">${tick.toFixed(1)}</span>
@@ -2859,7 +2978,7 @@ function renderScoreDeviationScatter(deviationData, focusScore = "1-0") {
         const fs = focusPoint?.score || "1-0";
         const dev = Number(focusPoint?.deviation || 0).toFixed(3);
         const prob = formatProbabilityValue(normalizeProbabilityToPercent(focusPoint?.probability) || 0);
-        return `<p ${biAttrs(`${fs}：deviation ${dev}，probability ${prob}`, `${fs}: deviation ${dev}, probability ${prob}`)}>${escapeHtml(L(`${fs}：deviation ${dev}，probability ${prob}`, `${fs}: deviation ${dev}, probability ${prob}`))}</p>`;
+        return `<p ${biAttrs(`${fs}：偏差 ${dev}，概率 ${prob}`, `${fs}: deviation ${dev}, probability ${prob}`)}>${escapeHtml(L(`${fs}：偏差 ${dev}，概率 ${prob}`, `${fs}: deviation ${dev}, probability ${prob}`))}</p>`;
       })()}
     </section>
   `;
@@ -2881,7 +3000,7 @@ function renderGamePredictionKeyFactors(version) {
   return `
     <section class="game-factor-card">
       <div class="game-chart-head">
-        <span>KEY FACTORS</span>
+        <span ${biAttrs("关键因素", "Key factors")}>${escapeHtml(L("关键因素", "Key factors"))}</span>
       </div>
       ${factors.length
         ? `<ul>${factors.map((factor) => {
@@ -3344,7 +3463,8 @@ const GK_SUBJECT_EN = {
   "历史类": "History track",
   "理科": "Science",
   "文科": "Liberal Arts",
-  "综合改革": "Comprehensive"
+  "综合改革": "Comprehensive reform",
+  "综合": "Comprehensive"
 };
 
 const GK_CITY_EN = {
@@ -3375,7 +3495,8 @@ const GK_UNIVERSITY_EN = {
 const GK_NOTE_EN = {
   "示例数据，后续替换为官方和模型结果。": "Sample data, to be replaced with official and model results.",
   "由旧版示例数据适配，缺失字段已按占位逻辑补齐。": "Adapted from legacy sample data; missing fields use placeholder logic.",
-  "示例/占位数据：用于展示页面结构和交互口径，后续应替换为各省官方投档线、最低位次、招生计划和模型预测结果。": "Sample / placeholder data, used to show the page structure and interaction. Replace with each province's official admission lines, minimum ranks, enrollment plans and model predictions."
+  "示例/占位数据：用于展示页面结构和交互口径，后续应替换为各省官方投档线、最低位次、招生计划和模型预测结果。": "Sample / placeholder data, used to show the page structure and interaction. Replace with each province's official admission lines, minimum ranks, enrollment plans and model predictions.",
+  "来自 gaokao_predict_整理 的浙江综合类预测数据，最终以浙江省教育考试院和高校官方信息为准。": "Zhejiang comprehensive-track prediction data from gaokao_predict_整理; final decisions should follow official Zhejiang examination authority and university information."
 };
 
 function gkProvinceEn(zh) {
@@ -3442,6 +3563,13 @@ function gkNoteText(zh) {
 }
 
 function gaokaoBadgePair(meta) {
+  if (meta?.badgeZh || meta?.badgeEn) {
+    return {
+      zh: meta.badgeZh || meta.badgeEn,
+      en: meta.badgeEn || meta.badgeZh
+    };
+  }
+
   return meta && meta.isSampleData
     ? { zh: "示例/占位数据", en: "Sample / placeholder" }
     : { zh: "正式数据", en: "Official data" };
@@ -3477,7 +3605,7 @@ function initGaokaoPredictionPage(context = {}) {
   const data = normalizeGaokaoPredictionData(context.admissionData, context.historyData, context.predictionData);
   const meta = context.meta || {};
   const provinceOrder = getGaokaoProvinceOrder(data, context.releaseData);
-  const defaultProvince = provinceOrder.includes("广东") ? "广东" : provinceOrder[0] || "";
+  const defaultProvince = provinceOrder.includes("浙江") ? "浙江" : provinceOrder[0] || "";
   const gaokaoPredictionState = {
     province: defaultProvince,
     subjectType: "",
@@ -3639,14 +3767,16 @@ function normalizeAdmissionPredictionItem(item) {
   const baseSchool = (window.GAOKAO_UNIVERSITY_BASE || []).find((school) => school.id === item.universityId);
   const history = (item.history || []).map((row) => ({
     year: Number(row.year),
-    minScore: Number(row.minScore),
-    minRank: Number(row.minRank),
+    minScore: nullableNumber(row.minScore),
+    minRank: nullableNumber(row.minRank),
     planCount: row.planCount == null ? null : Number(row.planCount)
-  })).filter((row) => Number.isFinite(row.year) && Number.isFinite(row.minScore));
-  const latest = history[history.length - 1] || {};
+  })).filter((row) => Number.isFinite(row.year));
+  const latest = [...history].reverse().find((row) => Number.isFinite(row.minScore)) || {};
   const prediction = item.prediction || {};
-  const predictedScore = Number(prediction.predictedScore ?? prediction.score ?? latest.minScore ?? 0);
-  const predictedRank = Number(prediction.predictedRank ?? latest.minRank ?? estimateFallbackRank(predictedScore, history.length + 1));
+  const predictedScore = nullableNumber(prediction.predictedScore ?? prediction.score ?? latest.minScore);
+  const predictedRank = nullableNumber(prediction.predictedRank ?? latest.minRank) ?? estimateFallbackRank(predictedScore, history.length + 1);
+  const changeFromLastYear = nullableNumber(prediction.changeFromLastYear)
+    ?? (Number.isFinite(latest.minScore) && Number.isFinite(predictedScore) ? predictedScore - latest.minScore : null);
 
   return {
     province: String(item.province),
@@ -3663,16 +3793,35 @@ function normalizeAdmissionPredictionItem(item) {
       predictedRank,
       scoreRange: normalizeRange(prediction.scoreRange, predictedScore, 5),
       rankRange: normalizeRange(prediction.rankRange, predictedRank, 220, 1),
-      changeFromLastYear: Number(prediction.changeFromLastYear ?? (latest.minScore ? predictedScore - latest.minScore : 0)),
+      changeFromLastYear,
       confidence: String(prediction.confidence || "medium").toLowerCase()
     },
+    predictionReason: String(item.predictionReason || item.prediction_reason || ""),
     sourceNote: String(item.sourceNote || "示例数据，后续替换为官方和模型结果。")
   };
 }
 
+function nullableNumber(value) {
+  if (value === null || value === undefined || value === "") {
+    return null;
+  }
+
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
 function normalizeRange(range, center, spread, minValue = -Infinity) {
   if (Array.isArray(range) && range.length >= 2) {
-    return [Math.max(minValue, Number(range[0])), Math.max(minValue, Number(range[1]))];
+    const low = nullableNumber(range[0]);
+    const high = nullableNumber(range[1]);
+
+    if (low !== null && high !== null) {
+      return [Math.max(minValue, low), Math.max(minValue, high)];
+    }
+  }
+
+  if (!Number.isFinite(Number(center))) {
+    return [];
   }
 
   return [Math.max(minValue, Number(center) - spread), Math.max(minValue, Number(center) + spread)];
@@ -3684,13 +3833,12 @@ function estimateFallbackRank(score, index) {
 }
 
 function getGaokaoProvinceOrder(data, releaseData) {
-  const preferred = ["北京", "天津", "河北", "山西", "内蒙古", "辽宁", "吉林", "黑龙江", "上海", "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南", "湖北", "湖南", "广东", "广西", "海南", "重庆", "四川", "贵州", "云南", "西藏", "陕西", "甘肃", "青海", "宁夏", "新疆"];
   const provinceSet = new Set(data.map((item) => item.province));
-  (releaseData?.provinces || []).forEach((item) => provinceSet.add(item.province));
-  const ordered = preferred.filter((province) => provinceSet.has(province));
-  const rest = [...provinceSet].filter((province) => !preferred.includes(province)).sort((a, b) => a.localeCompare(b, "zh-CN"));
+  if (provinceSet.has("浙江")) {
+    return ["浙江"];
+  }
 
-  return [...ordered, ...rest];
+  return [...provinceSet].sort((a, b) => a.localeCompare(b, "zh-CN"));
 }
 
 function renderGaokaoHeroStats(data, meta, target) {
@@ -3704,7 +3852,7 @@ function renderGaokaoHeroStats(data, meta, target) {
   const yearRange = years.length ? `${years[0]}-${years[years.length - 1]}` : "待补充";
 
   target.innerHTML = `
-    <div><span>覆盖高校</span><strong>${universities.size || meta.universityCount || 0}</strong><em>所 985 高校</em></div>
+    <div><span>覆盖高校</span><strong>${universities.size || meta.universityCount || 0}</strong><em>所重点高校</em></div>
     <div><span>覆盖省份</span><strong>${provinces.size || meta.provinceCount || 0}</strong><em>个省级入口</em></div>
     <div><span>历史范围</span><strong>${escapeHtml(yearRange)}</strong><em>最低分 / 位次</em></div>
     <div><span>预测年份</span><strong>${meta.targetYear || 2026}</strong><em>更新时间 ${escapeHtml(meta.updatedAt || "待补充")}</em></div>
@@ -3717,6 +3865,7 @@ function renderProvinceSelector(provinceOrder, data, state, refs) {
       `<option value="${escapeHtml(province)}">${escapeHtml(gkProvinceText(province))}</option>`
     )).join("");
     refs.provinceSelect.value = state.province;
+    refs.provinceSelect.disabled = provinceOrder.length <= 1;
   }
 
   renderProvinceQuickButtons(provinceOrder, state, refs);
@@ -3728,7 +3877,7 @@ function renderProvinceQuickButtons(provinceOrder, state, refs) {
     return;
   }
 
-  const quick = ["广东", "北京", "河南", "四川", "江苏", "山东"].filter((province) => provinceOrder.includes(province));
+  const quick = ["浙江"].filter((province) => provinceOrder.includes(province));
   refs.quickList.innerHTML = quick.map((province) => `
     <button class="${province === state.province ? "is-active" : ""}" type="button" data-gaokao-quick-province="${escapeHtml(province)}">${escapeHtml(gkProvinceText(province))}</button>
   `).join("");
@@ -3777,7 +3926,7 @@ function renderProvinceStatusCard(data, meta, state, refs) {
     <div>
       <span>当前查看</span>
       <strong>${escapeHtml(state.province || "请选择省份")}</strong>
-      <p>${escapeHtml(state.subjectType || "科类待补充")} · ${entries.length} 所 985 高校样本</p>
+      <p>${escapeHtml(state.subjectType || "科类待补充")} · ${entries.length} 所重点高校样本</p>
     </div>
     <div>
       <span>个人定位</span>
@@ -3852,16 +4001,16 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
     const provText = state.province ? gkProvinceText(state.province) : L("省份", "Province");
     const subjText = state.subjectType ? gkSubjectText(state.subjectType) : L("科类", "Track");
     refs.mapHeading.textContent = getLang() === "en"
-      ? `${provText} · ${subjText} · 985 University Score Map`
-      : `${provText} · ${subjText} 985 高校预测地图`;
+      ? `${provText} · ${subjText} · University Score Map`
+      : `${provText} · ${subjText} 高校预测地图`;
   }
 
   if (refs.mapSummary) {
     if (entries.length) {
       const rangeStr = formatMinMax(scoreValues, "分");
       refs.mapSummary.textContent = getLang() === "en"
-        ? `Predicted score lines for ${entries.length} of China's 985 universities, range ${rangeStr}. Tap a marker to see the five-year trend.`
-        : `${entries.length} 所 985 高校预测分数线，预测范围 ${rangeStr}。点击学校标记查看近五年趋势。`;
+        ? `Predicted score lines for ${entries.length} universities, range ${rangeStr}. Tap a marker to see the 2021-2026 trend.`
+        : `${entries.length} 所高校预测分数线，预测范围 ${rangeStr}。点击学校标记查看 2021-2026 年趋势。`;
     } else {
       refs.mapSummary.textContent = L(
         "当前省份和科类暂无可展示的高校预测数据。",
@@ -4130,7 +4279,7 @@ function renderUniversityPredictionCard(entry) {
         <div>
           <span>近五年最低分趋势</span>
           ${renderSparkline(scoreValues, "score")}
-          <em>${scoreValues.map((value) => `${value}`).join(" / ")}</em>
+          <em>${scoreValues.map((value) => formatNullable(value)).join(" / ")}</em>
         </div>
         <div>
           <span>近五年最低位次趋势</span>
@@ -4180,6 +4329,7 @@ function renderUniversityDetail(entry) {
   const scoreValues = entry.history.map((row) => row.minScore);
   const rankValues = entry.history.map((row) => row.minRank);
   const years = entry.history.map((row) => row.year);
+  const predictionYear = entry.prediction?.year || 2026;
 
   const admissionText = getLang() === "en"
     ? `${gkProvinceEn(entry.province)} admission`
@@ -4207,12 +4357,18 @@ function renderUniversityDetail(entry) {
 
     <div class="gaokao-detail-chart-grid">
       <div>
-        <h3>${escapeHtml(L("近五年最低分", "Five-year minimum score"))}</h3>
-        ${renderDetailLineChart(scoreValues, years, "score")}
+        <h3>${escapeHtml(L("2021-2026 最低分趋势", "2021-2026 minimum score trend"))}</h3>
+        ${renderDetailLineChart(scoreValues, years, "score", {
+          year: predictionYear,
+          value: entry.prediction.predictedScore
+        })}
       </div>
       <div>
-        <h3>${escapeHtml(L("近五年最低位次", "Five-year minimum rank"))}</h3>
-        ${renderDetailLineChart(rankValues, years, "rank")}
+        <h3>${escapeHtml(L("2021-2026 最低位次趋势", "2021-2026 minimum rank trend"))}</h3>
+        ${renderDetailLineChart(rankValues, years, "rank", {
+          year: predictionYear,
+          value: entry.prediction.predictedRank
+        })}
       </div>
     </div>
 
@@ -4220,6 +4376,13 @@ function renderUniversityDetail(entry) {
       <strong>${escapeHtml(L("趋势判断", "Trend read"))}</strong>
       <p>${escapeHtml(makeGaokaoTrendJudgement(entry))}</p>
     </div>
+
+    ${entry.predictionReason ? `
+      <div class="gaokao-detail-judgement gaokao-detail-reason">
+        <strong>${escapeHtml(L(`${predictionYear} 预测依据`, `${predictionYear} forecast basis`))}</strong>
+        <p>${escapeHtml(entry.predictionReason)}</p>
+      </div>
+    ` : ""}
 
     <div class="modal-table-wrap">
       <table class="modal-data-table gaokao-detail-table">
@@ -4242,7 +4405,7 @@ function renderUniversityDetail(entry) {
 }
 
 function makeGaokaoTrendJudgement(entry) {
-  const lastThree = entry.history.slice(-3);
+  const lastThree = entry.history.filter((row) => Number.isFinite(row.minRank)).slice(-3);
   const ranks = lastThree.map((row) => row.minRank);
   const rankUp = ranks.length === 3 && ranks[2] < ranks[1] && ranks[1] < ranks[0];
   const rankDown = ranks.length === 3 && ranks[2] > ranks[1] && ranks[1] > ranks[0];
@@ -4332,38 +4495,63 @@ function renderSparkline(values, type) {
   `;
 }
 
-function renderDetailLineChart(values, labels, type) {
-  const cleaned = values.filter(Number.isFinite);
+function renderDetailLineChart(values, labels, type, forecast = null) {
+  const yearLabels = labels.map((label) => Number(label));
+  const historicalPoints = values.map((value, index) => ({
+    value: nullableNumber(value),
+    label: labels[index],
+    index
+  })).filter((point) => Number.isFinite(point.value));
+  const forecastValue = nullableNumber(forecast?.value);
+  const hasForecast = Number.isFinite(forecastValue);
+  const allValues = [
+    ...historicalPoints.map((point) => point.value),
+    ...(hasForecast ? [forecastValue] : [])
+  ];
 
-  if (cleaned.length < 2) {
+  if (!allValues.length) {
     return `<div class="gaokao-chart-empty">${escapeHtml(L("趋势数据待补充", "Trend data TBD"))}</div>`;
   }
 
   const width = 560;
   const height = 230;
   const pad = { left: 56, right: 18, top: 24, bottom: 40 };
-  const min = Math.min(...cleaned);
-  const max = Math.max(...cleaned);
+  const min = Math.min(...allValues);
+  const max = Math.max(...allValues);
   const range = max - min || 1;
-  const xFor = (index) => pad.left + (index * (width - pad.left - pad.right)) / (cleaned.length - 1);
+  const chartLabels = hasForecast ? [...labels, forecast.year || 2026] : labels;
+  const forecastIndex = chartLabels.length - 1;
+  const denominator = Math.max(1, chartLabels.length - 1);
+  const xFor = (index) => pad.left + (index * (width - pad.left - pad.right)) / denominator;
   const yFor = (value) => {
     const normalized = type === "rank" ? (max - value) / range : (value - min) / range;
     return height - pad.bottom - normalized * (height - pad.top - pad.bottom);
   };
-  const points = cleaned.map((value, index) => `${xFor(index)},${yFor(value)}`).join(" ");
+  const points = historicalPoints.map((point) => `${xFor(point.index)},${yFor(point.value)}`).join(" ");
+  const latestHistoricalPoint = historicalPoints[historicalPoints.length - 1] || null;
+  const forecastBridge = latestHistoricalPoint && hasForecast
+    ? `${xFor(latestHistoricalPoint.index)},${yFor(latestHistoricalPoint.value)} ${xFor(forecastIndex)},${yFor(forecastValue)}`
+    : "";
   const ticks = [min, Math.round((min + max) / 2), max];
+  const titleSeparator = getLang() === "en" ? ": " : "：";
 
   return `
     <svg class="gaokao-detail-chart ${type}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${type === "rank" ? L("最低位次趋势", "Minimum rank trend") : L("最低分趋势", "Minimum score trend")}">
       <g class="chart-grid">
         ${ticks.map((tick) => `<line x1="${pad.left}" x2="${width - pad.right}" y1="${yFor(tick)}" y2="${yFor(tick)}"></line><text x="12" y="${yFor(tick) + 4}">${type === "rank" ? formatNumber(tick) : tick}</text>`).join("")}
       </g>
-      <polyline points="${points}"></polyline>
-      ${cleaned.map((value, index) => `<circle cx="${xFor(index)}" cy="${yFor(value)}" r="4"><title>${labels[index]}${getLang() === "en" ? ": " : "："}${type === "rank" ? formatRank(value) : formatNullable(value, "分")}</title></circle>`).join("")}
+      ${historicalPoints.length >= 2 ? `<polyline points="${points}"></polyline>` : ""}
+      ${forecastBridge ? `<polyline class="forecast-bridge" points="${forecastBridge}"></polyline>` : ""}
+      ${historicalPoints.map((point) => `<circle cx="${xFor(point.index)}" cy="${yFor(point.value)}" r="4"><title>${point.label}${titleSeparator}${type === "rank" ? formatRank(point.value) : formatNullable(point.value, "分")}</title></circle>`).join("")}
+      ${hasForecast ? `<circle class="forecast-point" cx="${xFor(forecastIndex)}" cy="${yFor(forecastValue)}" r="5"><title>${forecast.year || 2026}${titleSeparator}${type === "rank" ? formatRank(forecastValue) : formatNullable(forecastValue, "分")}</title></circle>` : ""}
       <g class="chart-axis">
-        ${labels.map((label, index) => `<text x="${xFor(index)}" y="${height - 12}">${label}</text>`).join("")}
+        ${chartLabels.map((label, index) => `<text class="${index === forecastIndex && hasForecast ? "forecast-label" : ""}" x="${xFor(index)}" y="${height - 12}">${label}</text>`).join("")}
       </g>
     </svg>
+    <div class="gaokao-chart-legend">
+      <span class="history">${escapeHtml(L("2021-2025 往年", "2021-2025 historical"))}</span>
+      <span class="forecast">${escapeHtml(L("2026 预测", "2026 forecast"))}</span>
+    </div>
   `;
 }
 
@@ -4377,7 +4565,7 @@ function renderGaokaoEmptyState(title, text) {
 }
 
 function getLatestHistory(entry) {
-  return entry.history[entry.history.length - 1] || null;
+  return [...entry.history].reverse().find((row) => Number.isFinite(row.minScore) || Number.isFinite(row.minRank)) || null;
 }
 
 function parseGaokaoInputNumber(value) {
@@ -4386,12 +4574,14 @@ function parseGaokaoInputNumber(value) {
 }
 
 function formatNumber(value) {
-  if (!Number.isFinite(Number(value))) {
+  const number = nullableNumber(value);
+
+  if (!Number.isFinite(number)) {
     return gkTbd();
   }
 
   const locale = getLang() === "en" ? "en-US" : "zh-CN";
-  return new Intl.NumberFormat(locale).format(Math.round(Number(value)));
+  return new Intl.NumberFormat(locale).format(Math.round(number));
 }
 
 function formatRank(value) {
@@ -4403,15 +4593,17 @@ function formatRank(value) {
 }
 
 function formatNullable(value, unit = "") {
-  if (!Number.isFinite(Number(value))) {
+  const number = nullableNumber(value);
+
+  if (!Number.isFinite(number)) {
     return gkTbd();
   }
 
-  return `${Math.round(Number(value))}${gkUnit(unit)}`;
+  return `${Math.round(number)}${gkUnit(unit)}`;
 }
 
 function formatSigned(value, digits = 0) {
-  const number = Number(value);
+  const number = nullableNumber(value);
 
   if (!Number.isFinite(number)) {
     return gkTbd();
@@ -4426,7 +4618,14 @@ function formatRange(range, unit = "") {
     return gkTbd();
   }
 
-  return `${Math.round(range[0])}-${Math.round(range[1])}${gkUnit(unit)}`;
+  const low = nullableNumber(range[0]);
+  const high = nullableNumber(range[1]);
+
+  if (!Number.isFinite(low) || !Number.isFinite(high)) {
+    return gkTbd();
+  }
+
+  return `${Math.round(low)}-${Math.round(high)}${gkUnit(unit)}`;
 }
 
 function formatRankRange(range) {
@@ -4434,11 +4633,18 @@ function formatRankRange(range) {
     return gkTbd();
   }
 
-  return `${formatNumber(range[0])}-${formatNumber(range[1])}${gkUnit(" 名")}`;
+  const low = nullableNumber(range[0]);
+  const high = nullableNumber(range[1]);
+
+  if (!Number.isFinite(low) || !Number.isFinite(high)) {
+    return gkTbd();
+  }
+
+  return `${formatNumber(low)}-${formatNumber(high)}${gkUnit(" 名")}`;
 }
 
 function formatMinMax(values, unit = "", rankMode = false) {
-  const cleaned = values.filter((value) => Number.isFinite(Number(value)));
+  const cleaned = values.map((value) => nullableNumber(value)).filter((value) => Number.isFinite(value));
 
   if (!cleaned.length) {
     return gkTbd();

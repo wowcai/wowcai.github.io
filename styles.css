@@ -4303,6 +4303,10 @@ button.group-result-line:hover {
   font-weight: 900;
 }
 
+.match-prediction-modal.is-game-prediction .matrix-axis-summary {
+  margin-bottom: 5px;
+}
+
 .match-prediction-modal.is-game-prediction .score-matrix-wrap {
   grid-template-columns: repeat(var(--matrix-cols), minmax(0, 1fr));
   gap: 4px;
@@ -4414,6 +4418,35 @@ button.group-result-line:hover {
   padding-bottom: 2px;
 }
 
+.matrix-axis-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin: -4px 0 8px;
+}
+
+.matrix-axis-summary span {
+  min-width: 0;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.matrix-row-axis {
+  border: 1px solid rgba(13, 122, 86, 0.18);
+  background: rgba(13, 122, 86, 0.1);
+  color: #07553c;
+}
+
+.matrix-col-axis {
+  border: 1px solid rgba(32, 124, 189, 0.18);
+  background: rgba(32, 124, 189, 0.1);
+  color: #145887;
+}
+
 .matrix-axis-corner,
 .matrix-axis-label,
 .matrix-cell {
@@ -4430,6 +4463,23 @@ button.group-result-line:hover {
 .matrix-axis-label {
   background: rgba(6, 63, 44, 0.06);
   color: #52615b;
+}
+
+.matrix-axis-corner {
+  color: #082f22;
+  background: linear-gradient(135deg, rgba(13, 122, 86, 0.12), rgba(32, 124, 189, 0.12));
+}
+
+.matrix-row-label {
+  border: 1px solid rgba(13, 122, 86, 0.14);
+  background: rgba(13, 122, 86, 0.1);
+  color: #07553c;
+}
+
+.matrix-col-label {
+  border: 1px solid rgba(32, 124, 189, 0.14);
+  background: rgba(32, 124, 189, 0.1);
+  color: #145887;
 }
 
 .matrix-cell {
@@ -5781,6 +5831,14 @@ body.modal-open {
   box-shadow: 0 0 0 3px rgba(246, 214, 143, 0.12);
 }
 
+.gaokao-field select:disabled {
+  border-color: rgba(255, 207, 130, 0.24);
+  background: rgba(255, 207, 130, 0.1);
+  color: rgba(255, 255, 255, 0.88);
+  cursor: default;
+  opacity: 1;
+}
+
 .gaokao-field input::placeholder {
   color: rgba(226, 238, 255, 0.42);
 }
@@ -6321,9 +6379,20 @@ body.modal-open {
   stroke: #7dd3fc;
 }
 
+.gaokao-detail-chart .forecast-bridge {
+  stroke: #f97316;
+  stroke-dasharray: 9 7;
+}
+
 .gaokao-detail-chart circle {
   fill: #071426;
   stroke: #ffffff;
+  stroke-width: 3;
+}
+
+.gaokao-detail-chart .forecast-point {
+  fill: #f97316;
+  stroke: #ffedd5;
   stroke-width: 3;
 }
 
@@ -6340,6 +6409,42 @@ body.modal-open {
 
 .gaokao-detail-chart .chart-axis text {
   text-anchor: middle;
+}
+
+.gaokao-detail-chart .forecast-label {
+  fill: #fed7aa;
+}
+
+.gaokao-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+  color: rgba(226, 238, 255, 0.72);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.gaokao-chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gaokao-chart-legend span::before {
+  content: "";
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+  background: #f6d68f;
+}
+
+.gaokao-chart-legend .forecast::before {
+  background: #f97316;
+}
+
+.gaokao-detail-chart.rank + .gaokao-chart-legend .history::before {
+  background: #7dd3fc;
 }
 
 .gaokao-detail-judgement {

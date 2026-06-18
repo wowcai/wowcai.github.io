@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-18T08:12:39.456198Z",
+  "prediction_generated_at_local": "2026-06-18T16:12:39.456198+08:00",
+  "match": {
+    "match_id": "MEX_KOR",
+    "team_a": "Mexico",
+    "team_b": "Korea Republic",
+    "kickoff_utc": "2026-06-19T01:00:00Z",
+    "venue": "Guadalajara Stadium",
+    "stage": "group",
+    "group": "A",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.75,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 72,
+    "rollout_total_action_count": 288,
+    "rollout_fallback_ratio": 0.25,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率75.0%）。",
+      "Rollout有72/288个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.4025925925925926,
+    "draw": 0.2877777777777778,
+    "team_b_win": 0.30962962962962964
+  },
+  "most_likely_outcome": {
+    "label": "Mexico胜",
+    "probability": 0.4025925925925926
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.13148148148148148
+    },
+    {
+      "score": "1-0",
+      "probability": 0.12037037037037036
+    },
+    {
+      "score": "0-1",
+      "probability": 0.10740740740740741
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "蒙特斯因对南非染红停赛，墨西哥中卫组合预计改由阿尔瓦雷斯、巴斯克斯承担。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_4ff6cd669851",
+        "E_8585ae69a373",
+        "E_675037f41981",
+        "E_24a46cbcaf37"
+      ],
+      "source_names": [
+        "ESPN",
+        "Reuters",
+        "Mexico vs. South Korea—World Cup: Preview, Predictions and ..."
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "韩国转换进攻威胁集中在孙兴慜、李刚仁，被放入开阔空间时尤其危险。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_c634a479c98b"
+      ],
+      "source_names": [
+        "World Cup Group A tactical guide: Mexico's home ..."
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "阿吉雷的墨西哥被描述为重视防守重组和战术纪律，并可能使用宽区轮转与反抢。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_e03fb864d2f4",
+        "E_561b6df53699"
+      ],
+      "source_names": [
+        "Mexico vs South Korea FIFA World Cup 2026 Preview - Goal.com",
+        "Mexico vs South Korea Prediction | Speed vs Pressure"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "韩国核心也有状态疑问：孙兴慜、黄仁范和李刚仁被提到存在健康或比赛锐度问题。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_f03f3b02d40b"
+      ],
+      "source_names": [
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在瓜达拉哈拉体育场进行；场馆有顶棚但侧面开放，赛时约20℃且降雨概率80%。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_542e13e6548a",
+        "E_e050edf0bcfc",
+        "E_9503305f338a"
+      ],
+      "source_names": [
+        "FIFA",
+        "PBS NewsHour",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "韩国上一场世界杯2比1击败捷克，替补吴贤揆打入制胜球。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_F_a7bab35e2214",
+        "E_F_23ee19a616f2"
+      ],
+      "source_names": [
+        "ESPN",
+        "South Korea can be Asia's strongest side - The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-18T07:52:13.754105Z",
+  "prediction_generated_at_local": "2026-06-18T15:52:13.754105+08:00",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.875,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 72,
+    "rollout_total_action_count": 288,
+    "rollout_fallback_ratio": 0.25,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "Rollout有72/288个动作使用确定性回退。"
+    ]
+  },
+  "purpose_cn": "网页最小预测输出：文本结论、比分偏离空间和蒙特卡洛比分矩阵。",
+  "files": {
+    "brief_markdown": "web_export/prediction_brief.md",
+    "brief_json": "web_export/prediction_brief.json",
+    "score_deviation_json": "web_export/score_deviation_space.json",
+    "score_deviation_csv": "web_export/score_deviation_space.csv",
+    "score_matrix_json": "web_export/monte_carlo_score_matrix.json",
+    "score_matrix_csv": "web_export/monte_carlo_score_matrix.csv",
+    "manifest": "web_export/manifest.json"
+  },
+  "notes_cn": [
+    "偏离度越大，表示该比分相对主流比赛路径越激进。",
+    "比分矩阵纵轴为Canada，横轴为Qatar。",
+    "所有概率字段均使用0到1的小数；probability_percent仅用于直接显示。"
+  ]
+}

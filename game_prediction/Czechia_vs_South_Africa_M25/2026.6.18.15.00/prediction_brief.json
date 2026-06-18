@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-18T07:18:38.933165Z",
+  "prediction_generated_at_local": "2026-06-18T15:18:38.933165+08:00",
+  "match": {
+    "match_id": "CZE_RSA",
+    "team_a": "Czechia",
+    "team_b": "South Africa",
+    "kickoff_utc": "2026-06-18T16:00:00Z",
+    "venue": "Atlanta Stadium",
+    "stage": "group",
+    "group": "A",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.75,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 63,
+    "rollout_total_action_count": 252,
+    "rollout_fallback_ratio": 0.25,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率75.0%）。",
+      "Rollout有63/252个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5196296296296297,
+    "draw": 0.2885185185185185,
+    "team_b_win": 0.19185185185185186
+  },
+  "most_likely_outcome": {
+    "label": "Czechia胜",
+    "probability": 0.5196296296296297
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.14629629629629629
+    },
+    {
+      "score": "1-1",
+      "probability": 0.12962962962962962
+    },
+    {
+      "score": "0-0",
+      "probability": 0.11074074074074074
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "捷克欧预赛定位球含点球进11球，Schick、Souček、Chorý高点突出。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_a50f50779818",
+        "E_4d178a9460e2"
+      ],
+      "source_names": [
+        "Hard Running, Set-Pieces and Togetherness: How Czechia Hope to ...",
+        "Sports Illustrated"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "南非Sithole和Zwane红牌停赛，VSiN称Mbatha预计与Mokoena搭档中场。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_933f1c7cb166",
+        "E_6941cdea86bf",
+        "E_6a0cb9e3ef8d"
+      ],
+      "source_names": [
+        "ESPN",
+        "Reuters",
+        "VSiN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "捷克主帅称将重视控球并制造危险，Souček被指会承担中场控制任务。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_e49b28ea43e8",
+        "E_9edf663da9db"
+      ],
+      "source_names": [
+        "MK Korea",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "南非预测首发为4-3-3，Appolis、Foster、Mofokeng组成前场。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_F_06fc31718c12"
+      ],
+      "source_names": [
+        "Czechia vs. South Africa—World Cup: Preview, Predictions ..."
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在亚特兰大Mercedes-Benz Stadium进行，报道称屋顶将全程关闭。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_6f72b8b67fd9",
+        "E_c38ec67c0ba1"
+      ],
+      "source_names": [
+        "ESPN",
+        "11Alive"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}

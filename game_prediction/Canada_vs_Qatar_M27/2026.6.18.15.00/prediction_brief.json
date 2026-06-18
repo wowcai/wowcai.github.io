@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-18T07:52:13.754105Z",
+  "prediction_generated_at_local": "2026-06-18T15:52:13.754105+08:00",
+  "match": {
+    "match_id": "CAN_QAT",
+    "team_a": "Canada",
+    "team_b": "Qatar",
+    "kickoff_utc": "2026-06-18T22:00:00Z",
+    "venue": "BC Place Vancouver",
+    "stage": "group",
+    "group": "B",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.875,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 72,
+    "rollout_total_action_count": 288,
+    "rollout_fallback_ratio": 0.25,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "Rollout有72/288个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5474074074074075,
+    "draw": 0.2633333333333333,
+    "team_b_win": 0.18925925925925927
+  },
+  "most_likely_outcome": {
+    "label": "Canada胜",
+    "probability": 0.5474074074074075
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.14037037037037037
+    },
+    {
+      "score": "1-1",
+      "probability": 0.11777777777777777
+    },
+    {
+      "score": "2-0",
+      "probability": 0.10555555555555556
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "加拿大被预期掌握球权和场地，近期10场3胜6平1负。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_a85461a418ec",
+        "E_a6d06e70a138"
+      ],
+      "source_names": [
+        "RotoWire",
+        "FootyStats"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "卡塔尔近况为1胜4平5负，近5场有3场未能进球。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_2dcd0a94b60b",
+        "E_0abd87ff98d5"
+      ],
+      "source_names": [
+        "FootyStats",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "加拿大Elo为1784；卡塔尔Elo为1447，且全球排名第90。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_dd5a2dca3aaa",
+        "E_12469a12e0d8"
+      ],
+      "source_names": [
+        "International-football.net",
+        "World Football Elo Ratings"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "阿克拉姆·阿菲夫冲击加拿大右侧防区，被列为关键战术对位。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_8f55250bf645",
+        "E_11489a9781f7"
+      ],
+      "source_names": [
+        "Total Football Analysis",
+        "SheKicks"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "阿方索·戴维斯腿筋伤后恢复：训练受限，但有消息称可战卡塔尔。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_0125fa18b081",
+        "E_26ad84538836"
+      ],
+      "source_names": [
+        "ESPN",
+        "Global News"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛安排在温哥华BC Place，FIFA和加拿大足协均列明赛程。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_675aedbe7e60",
+        "E_29fa7f09eb33",
+        "E_91792b25e13f"
+      ],
+      "source_names": [
+        "Canada Soccer",
+        "FIFA",
+        "BC Place – A venue like no other."
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}
