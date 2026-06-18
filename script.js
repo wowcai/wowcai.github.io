@@ -858,7 +858,8 @@ async function openGroupPredictionModal(matchId) {
 }
 
 async function loadGroupPredictionMatch(match) {
-  const matchFolder = findConfiguredGamePredictionFolder(match) || buildGamePredictionFolderName(match);
+  const configuredSpec = findConfiguredGamePredictionSpec(match);
+  const matchFolder = configuredSpec?.matchFolder || buildGamePredictionFolderName(match);
   const cacheKey = matchFolder || match?.id;
 
   if (!matchFolder) {
@@ -870,7 +871,9 @@ async function loadGroupPredictionMatch(match) {
   }
 
   const loadPromise = (async () => {
-    const versionFolders = await discoverGamePredictionVersionFolders(matchFolder);
+    const versionFolders = configuredSpec?.versions?.length
+      ? configuredSpec.versions
+      : await discoverGamePredictionVersionFolders(matchFolder);
 
     if (!versionFolders.length) {
       return null;
@@ -896,6 +899,13 @@ async function loadGroupPredictionMatch(match) {
 }
 
 async function discoverGamePredictionVersionFolders(matchFolder) {
+  const configuredSpec = getConfiguredGamePredictionSpecs()
+    .find((spec) => spec.matchFolder === matchFolder);
+
+  if (configuredSpec?.versions?.length) {
+    return configuredSpec.versions;
+  }
+
   try {
     const versionHtml = await fetchTextFile(`${worldCupGamePredictionDir}/${encodeURIComponent(matchFolder)}/`);
     return extractDirectoryLinks(versionHtml)
@@ -922,17 +932,18 @@ function buildGamePredictionFolderName(match) {
 }
 
 function findConfiguredGamePredictionFolder(match) {
+  return findConfiguredGamePredictionSpec(match)?.matchFolder || "";
+}
+
+function findConfiguredGamePredictionSpec(match) {
   const matchNo = String(match?.matchNo || match?.id || "");
-  const allSpecs = [
-    ...normalizeGamePredictionManifest(worldCupLatestGamePredictions, { limit: null }),
-    ...normalizeGamePredictionManifest(worldCupGamePredictionManifest, { limit: null })
-  ];
+  const allSpecs = getConfiguredGamePredictionSpecs();
 
   if (matchNo) {
     const byNo = allSpecs.find((spec) => String(spec.matchNo || "") === matchNo);
 
-    if (byNo?.matchFolder) {
-      return byNo.matchFolder;
+    if (byNo) {
+      return byNo;
     }
   }
 
@@ -945,7 +956,14 @@ function findConfiguredGamePredictionFolder(match) {
     return buildMatchPairKey(inferred.homeName, inferred.awayName) === pairKey;
   });
 
-  return byPair?.matchFolder || "";
+  return byPair || null;
+}
+
+function getConfiguredGamePredictionSpecs() {
+  return [
+    ...normalizeGamePredictionManifest(worldCupLatestGamePredictions, { limit: null }),
+    ...normalizeGamePredictionManifest(worldCupGamePredictionManifest, { limit: null })
+  ];
 }
 
 function normalizeGamePredictionFolderSegment(value) {
@@ -973,16 +991,8 @@ function mergeWorldCupMatchPrediction(loadedMatch) {
   currentWorldCupMatches = exists ? next : [...next, loadedMatch];
   window.WORLD_CUP_MATCH_PREDICTIONS = currentWorldCupMatches;
 
-  const latestMatches = document.querySelector("[data-worldcup-latest-matches]");
   const routeMap = document.querySelector("[data-worldcup-route-map]");
   const matchSummary = document.querySelector("[data-worldcup-match-summary]");
-
-  if (latestMatches) {
-    latestMatches.innerHTML = renderLatestMatchPredictions(getLatestWorldCupMatches(currentWorldCupMatches));
-    latestMatches.querySelectorAll("[data-open-match-modal]").forEach((button) => {
-      button.addEventListener("click", () => openMatchPredictionModal(button.dataset.matchId));
-    });
-  }
 
   if (routeMap && (worldCupRouteData || worldCupRouteRounds) && worldCupTeams) {
     routeMap.innerHTML = renderTournamentRouteMap(worldCupRouteData || worldCupRouteRounds, currentWorldCupMatches);
@@ -3539,6 +3549,72 @@ function gkLocationText(entry) {
   return city ? `${prov} · ${city}` : prov;
 }
 
+const GK_MAP_CITY_PIXELS = {
+  "安徽 · 合肥": [656.6, 415.7],
+  "安徽 · 宣城": [674.0, 437.0],
+  "北京 · 北京": [635.0, 277.0],
+  "重庆 · 重庆": [495.4, 461.3],
+  "福建 · 福州": [696.8, 513.4],
+  "福建 · 厦门": [690.0, 552.0],
+  "甘肃 · 兰州": [463.7, 346.3],
+  "广东 · 广州": [602.8, 572.6],
+  "广东 · 深圳": [622.0, 593.0],
+  "广西 · 南宁": [523.7, 576.6],
+  "贵州 · 贵阳": [498.7, 512.2],
+  "海南 · 海口": [555.8, 629.3],
+  "河北 · 保定": [620.0, 299.0],
+  "河北 · 秦皇岛": [670.0, 267.0],
+  "河南 · 郑州": [602.3, 370.0],
+  "黑龙江 · 哈尔滨": [754.4, 157.9],
+  "湖北 · 武汉": [609.5, 444.9],
+  "湖南 · 长沙": [598.5, 484.8],
+  "吉林 · 延吉": [786.0, 205.0],
+  "吉林 · 长春": [741.0, 193.0],
+  "江苏 · 南京": [682.2, 412.1],
+  "江苏 · 苏州": [709.0, 427.0],
+  "江苏 · 无锡": [697.0, 423.0],
+  "江苏 · 徐州": [655.0, 382.0],
+  "江西 · 南昌": [642.8, 474.9],
+  "辽宁 · 大连": [699.0, 288.0],
+  "辽宁 · 盘锦": [701.0, 251.0],
+  "辽宁 · 沈阳": [722.0, 230.0],
+  "内蒙古 · 呼和浩特": [570.7, 260.9],
+  "宁夏 · 银川": [499.3, 302.7],
+  "青海 · 西宁": [435.9, 332.3],
+  "山东 · 济南": [649.0, 334.1],
+  "山东 · 青岛": [686.0, 340.0],
+  "山东 · 威海": [709.0, 322.0],
+  "山西 · 太原": [588.9, 312.3],
+  "陕西 · 西安": [535.3, 378.9],
+  "陕西 · 杨凌": [523.0, 386.0],
+  "上海 · 上海": [718.3, 422.3],
+  "四川 · 成都": [462.4, 438.9],
+  "四川 · 雅安": [453.0, 456.0],
+  "天津 · 天津": [647.2, 287.0],
+  "西藏 · 拉萨": [268.0, 432.6],
+  "新疆 · 克拉玛依": [246.0, 151.0],
+  "新疆 · 石河子": [255.0, 178.0],
+  "新疆 · 乌鲁木齐": [271.3, 178.3],
+  "云南 · 昆明": [434.9, 533.9],
+  "浙江 · 杭州": [700.5, 442.4]
+};
+
+function resolveGaokaoMapPoint(entry) {
+  const locationKey = String(entry?.universityLocation || (
+    entry?.province && entry?.city ? `${entry.province} · ${entry.city}` : ""
+  ));
+  const cityPoint = GK_MAP_CITY_PIXELS[locationKey];
+
+  if (cityPoint) {
+    return {
+      x: Number((cityPoint[0] / 10).toFixed(2)),
+      y: Number((cityPoint[1] / 9.8).toFixed(2))
+    };
+  }
+
+  return entry?.map || null;
+}
+
 function gkMajorGroupText(zh) {
   const s = String(zh ?? "");
   if (getLang() !== "en") {
@@ -3989,13 +4065,16 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
   }
 
   const entries = getCurrentGaokaoEntries(data, state)
-    .filter((entry) => entry.map && Number.isFinite(Number(entry.map.x)) && Number.isFinite(Number(entry.map.y)))
+    .filter((entry) => {
+      const point = resolveGaokaoMapPoint(entry);
+      return point && Number.isFinite(Number(point.x)) && Number.isFinite(Number(point.y));
+    })
     .sort((a, b) => b.prediction.predictedScore - a.prediction.predictedScore);
+  const scoreValues = entries.map((entry) => entry.prediction.predictedScore).filter(Number.isFinite);
+  const markerOffsets = getGaokaoMarkerOffsets(entries);
   const sourceHeight = Number(refs.predictionMap.dataset.mapSourceHeight) || 0;
   const cropHeight = Number(refs.predictionMap.dataset.mapCropHeight) || 0;
   const yScale = sourceHeight > 0 && cropHeight > 0 ? sourceHeight / cropHeight : 1;
-  const scoreValues = entries.map((entry) => entry.prediction.predictedScore).filter(Number.isFinite);
-  const markerOffsets = getGaokaoMarkerOffsets(entries);
 
   if (refs.mapHeading) {
     const provText = state.province ? gkProvinceText(state.province) : L("省份", "Province");
@@ -4040,12 +4119,13 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
   const markerLayer = refs.predictionMap.querySelector("[data-gaokao-map-coordinate-layer]") || refs.predictionMap;
 
   entries.forEach((entry) => {
-    const markerY = Math.max(0, Math.min(100, Number(entry.map.y) * yScale));
+    const mapPoint = resolveGaokaoMapPoint(entry);
+    const markerY = Math.max(0, Math.min(100, Number(mapPoint.y) * yScale));
     const markerOffset = markerOffsets.get(entry.universityId) || { x: 0, y: 0 };
     const button = document.createElement("button");
     button.type = "button";
     button.className = "gaokao-score-marker";
-    button.style.left = `${entry.map.x}%`;
+    button.style.left = `${mapPoint.x}%`;
     button.style.top = `${markerY}%`;
     button.style.setProperty("--marker-offset-x", `${markerOffset.x}px`);
     button.style.setProperty("--marker-offset-y", `${markerOffset.y}px`);
@@ -4084,18 +4164,19 @@ function getGaokaoMarkerOffsets(entries) {
   const offsets = new Map();
   const pattern = [
     [0, 0],
-    [7, -5],
-    [-7, 5],
-    [9, 6],
-    [-9, -6],
-    [0, 10],
-    [0, -10],
-    [12, 0],
-    [-12, 0]
+    [4, -3],
+    [-4, 3],
+    [5, 4],
+    [-5, -4],
+    [0, 6],
+    [0, -6],
+    [7, 0],
+    [-7, 0]
   ];
 
   entries.forEach((entry) => {
-    const bucketKey = `${Math.round(Number(entry.map.x) / 3)}:${Math.round(Number(entry.map.y) / 3)}`;
+    const mapPoint = resolveGaokaoMapPoint(entry);
+    const bucketKey = `${Number(mapPoint.x).toFixed(1)}:${Number(mapPoint.y).toFixed(1)}`;
     const bucket = buckets.get(bucketKey) || [];
     bucket.push(entry);
     buckets.set(bucketKey, bucket);
@@ -4352,7 +4433,6 @@ function renderUniversityDetail(entry) {
       <div><span>${escapeHtml(L("预测分数线", "Predicted score"))}</span><strong>${formatNullable(entry.prediction.predictedScore, "分")}</strong><p>${formatRange(entry.prediction.scoreRange, "分")}</p></div>
       <div><span>${escapeHtml(L("预测位次", "Predicted rank"))}</span><strong>${formatRank(entry.prediction.predictedRank)}</strong><p>${formatRankRange(entry.prediction.rankRange)}</p></div>
       <div><span>${escapeHtml(L("较上一年变化", "Change vs last year"))}</span><strong>${formatSigned(entry.prediction.changeFromLastYear)}${gkUnit(" 分")}</strong><p>${escapeHtml(latestText)}</p></div>
-      <div><span>${escapeHtml(L("置信度", "Confidence"))}</span><strong>${formatConfidence(entry.prediction.confidence)}</strong><p>${escapeHtml(gkNoteText(entry.sourceNote))}</p></div>
     </div>
 
     <div class="gaokao-detail-chart-grid">
@@ -4756,12 +4836,18 @@ function renderChinaMap(target, universities, type) {
     <img class="china-map-bg standard-map-image" src="china-standard-map.svg" alt="中华人民共和国标准地图（含台湾省）">
   `;
 
-  universities.forEach((school) => {
-    const markerY = Math.max(0, Math.min(100, school.map.y * yScale));
+  universities
+    .filter((school) => {
+      const point = resolveGaokaoMapPoint(school);
+      return point && Number.isFinite(Number(point.x)) && Number.isFinite(Number(point.y));
+    })
+    .forEach((school) => {
+    const mapPoint = resolveGaokaoMapPoint(school);
+    const markerY = Math.max(0, Math.min(100, Number(mapPoint.y) * yScale));
     const button = document.createElement("button");
     button.type = "button";
     button.className = `university-marker ${type}`;
-    button.style.left = `${school.map.x}%`;
+    button.style.left = `${mapPoint.x}%`;
     button.style.top = `${markerY}%`;
     button.dataset.schoolId = school.id;
     button.dataset.type = type;

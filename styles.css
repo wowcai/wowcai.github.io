@@ -6090,6 +6090,10 @@ body.modal-open {
   gap: 8px;
 }
 
+.gaokao-detail-kpis {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .gaokao-card-metrics div,
 .gaokao-detail-kpis div,
 .gaokao-trend-blocks div,
@@ -6594,7 +6598,7 @@ body.modal-open {
   position: relative;
   width: 100%;
   min-height: 0;
-  aspect-ratio: 10 / 6.1;
+  aspect-ratio: 10 / 7;
   border-radius: 16px;
   overflow: hidden;
   background:
@@ -6608,12 +6612,11 @@ body.modal-open {
 .gaokao-map-coordinate-layer {
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 87.142857%;
+  left: 0;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: inherit;
-  transform: translateX(-50%);
 }
 
 .gaokao-prediction-map::after {
@@ -6769,7 +6772,7 @@ body.modal-open {
 
   .gaokao-prediction-map {
     min-height: 0;
-    aspect-ratio: 10 / 6.1;
+    aspect-ratio: 10 / 7;
   }
 
 }
@@ -8946,6 +8949,6 @@ body.about-brand-page {
 
   .gaokao-prediction-page .gaokao-prediction-map {
     min-height: 0;
-    aspect-ratio: 10 / 6.1;
+    aspect-ratio: 10 / 7;
   }
 }
