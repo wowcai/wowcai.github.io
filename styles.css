@@ -1932,8 +1932,8 @@ output {
   background:
     radial-gradient(circle at 18% 3%, rgba(246, 196, 83, 0.14), transparent 18rem),
     radial-gradient(circle at 82% 6%, rgba(58, 176, 255, 0.12), transparent 20rem),
-    linear-gradient(180deg, rgba(1, 10, 7, 0.64) 0%, rgba(2, 20, 15, 0.68) 34%, rgba(2, 10, 8, 0.9) 100%),
-    url("Worldcup_head.png") center top / cover no-repeat,
+    linear-gradient(180deg, rgba(2, 12, 8, 0.46) 0%, rgba(2, 16, 12, 0.5) 45%, rgba(2, 10, 8, 0.82) 100%) fixed,
+    url("bg-worldcup-page.png") center center / cover no-repeat fixed,
     linear-gradient(180deg, #03110d 0%, #041712 46%, #020806 100%);
   color: #f8fafc;
 }
@@ -1963,11 +1963,11 @@ output {
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  min-height: clamp(126px, 12vw, 168px);
+  min-height: clamp(180px, 16vw, 240px);
   display: flex;
   align-items: center;
   padding: clamp(16px, 2vw, 24px) 0 clamp(16px, 2vw, 22px);
-  background: linear-gradient(180deg, rgba(2, 10, 7, 0.5), rgba(2, 10, 7, 0.18));
+  background: linear-gradient(180deg, rgba(2, 10, 7, 0.34), rgba(2, 10, 7, 0.06));
 }
 
 .worldcup-hero::before {
@@ -5630,8 +5630,10 @@ body.modal-open {
   background:
     linear-gradient(90deg, rgba(255, 207, 130, 0.045) 1px, transparent 1px),
     linear-gradient(rgba(255, 207, 130, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(6, 15, 28, 0.5) 0%, rgba(5, 13, 24, 0.56) 45%, rgba(3, 9, 20, 0.82) 100%) fixed,
+    url("bg-gaokao-page.png") center center no-repeat fixed,
     linear-gradient(180deg, #071426 0%, #06111f 44%, #030914 100%);
-  background-size: 48px 48px, 48px 48px, auto;
+  background-size: 48px 48px, 48px 48px, auto, cover, auto;
   overflow-x: hidden;
 }
 
@@ -6497,13 +6499,12 @@ body.modal-open {
 }
 
 .gaokao-hero {
-  min-height: clamp(190px, 18vw, 250px);
+  min-height: clamp(180px, 16vw, 240px);
   align-items: center;
-  padding: clamp(18px, 2.5vw, 32px) 0 clamp(18px, 2.2vw, 30px);
+  padding: clamp(16px, 2vw, 24px) 0 clamp(16px, 2vw, 22px);
   border-bottom: 1px solid rgba(255, 207, 130, 0.18);
   background:
-    url("bg-gaokao.png") center 42% / cover no-repeat,
-    linear-gradient(135deg, rgba(3, 10, 23, 0.96), rgba(12, 35, 58, 0.92));
+    linear-gradient(115deg, rgba(3, 10, 23, 0.66) 0%, rgba(6, 18, 31, 0.32) 52%, rgba(8, 24, 40, 0.1) 100%);
 }
 
 .gaokao-hero::before {
@@ -6525,7 +6526,7 @@ body.modal-open {
 
 .gaokao-hero-copy h1 {
   max-width: 860px;
-  font-size: clamp(2.1rem, 3.8vw, 3.75rem);
+  font-size: clamp(1.9rem, 3vw, 3.1rem);
   line-height: 1.02;
 }
 
@@ -6754,7 +6755,7 @@ body.modal-open {
   }
 
   .gaokao-hero-copy h1 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(1.7rem, 10vw, 3rem);
   }
 
   .gaokao-panel-head,
@@ -6808,6 +6809,74 @@ body.modal-open {
 .footer-links a {
   color: var(--teal-dark);
   font-weight: 900;
+}
+
+/* Unified site footer — consistent design across all four pages */
+.wowcai-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(4, 8, 16, 0.86);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
+  color: rgba(248, 250, 252, 0.66);
+}
+
+.wowcai-footer .footer-inner {
+  align-items: center;
+  gap: 24px;
+  padding: 34px 0;
+  color: rgba(248, 250, 252, 0.66);
+}
+
+.wowcai-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 560px;
+}
+
+.wowcai-footer-brand strong {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wowcai-footer-brand p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(248, 250, 252, 0.58);
+}
+
+.wowcai-footer-contact {
+  align-self: flex-start;
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #f4c85d;
+  text-decoration: none;
+}
+
+.wowcai-footer-contact:hover {
+  color: #ffd98a;
+  text-decoration: underline;
+}
+
+.wowcai-footer-links {
+  gap: 18px;
+}
+
+.wowcai-footer-links a {
+  color: rgba(248, 250, 252, 0.82);
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.wowcai-footer-links a:hover {
+  color: #ffffff;
 }
 
 .home-brand-page {
@@ -8940,7 +9009,7 @@ body.about-brand-page {
   }
 
   .gaokao-prediction-page .gaokao-hero-copy h1 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(1.7rem, 10vw, 3rem);
   }
 
   .gaokao-prediction-page .gaokao-control-panel--simple .gaokao-control-grid {

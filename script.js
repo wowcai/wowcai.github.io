@@ -3506,7 +3506,7 @@ const GK_NOTE_EN = {
   "示例数据，后续替换为官方和模型结果。": "Sample data, to be replaced with official and model results.",
   "由旧版示例数据适配，缺失字段已按占位逻辑补齐。": "Adapted from legacy sample data; missing fields use placeholder logic.",
   "示例/占位数据：用于展示页面结构和交互口径，后续应替换为各省官方投档线、最低位次、招生计划和模型预测结果。": "Sample / placeholder data, used to show the page structure and interaction. Replace with each province's official admission lines, minimum ranks, enrollment plans and model predictions.",
-  "来自 gaokao_predict_整理 的浙江综合类预测数据，最终以浙江省教育考试院和高校官方信息为准。": "Zhejiang comprehensive-track prediction data from gaokao_predict_整理; final decisions should follow official Zhejiang examination authority and university information."
+  "浙江综合类预测数据，最终以浙江省教育考试院和高校官方信息为准。": "Zhejiang comprehensive-track prediction data; final decisions follow the official Zhejiang examination authority and university information."
 };
 
 function gkProvinceEn(zh) {
