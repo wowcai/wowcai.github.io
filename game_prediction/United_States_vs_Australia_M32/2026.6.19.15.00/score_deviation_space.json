@@ -1,0 +1,593 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-19T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-19T15:00:00+08:00",
+  "quality_label": "ready",
+  "match_id": "M32",
+  "team_a": "United States",
+  "team_b": "Australia",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.14185185185185184,
+      "probability_percent": 14.1852,
+      "outcome": "draw",
+      "sample_count": 383,
+      "path_deviation": 0.6143398918163372,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9973890339425587,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9973890339425587,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.183364506489895,
+      "probability": 0.11370370370370371,
+      "probability_percent": 11.3704,
+      "outcome": "team_b",
+      "sample_count": 307,
+      "path_deviation": 0.6123455862314301,
+      "result_surprise": 0.19843342036553513,
+      "reason_cn": "Australia通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.2813007239289649,
+      "probability": 0.0974074074074074,
+      "probability_percent": 9.7407,
+      "outcome": "draw",
+      "sample_count": 263,
+      "path_deviation": 0.6064892476424774,
+      "result_surprise": 0.3133159268929504,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.31947397266385,
+      "probability": 0.09666666666666666,
+      "probability_percent": 9.6667,
+      "outcome": "team_a",
+      "sample_count": 261,
+      "path_deviation": 0.6255062828369707,
+      "result_surprise": 0.3185378590078328,
+      "reason_cn": "紧凑防守对进攻空间的压缩；United States在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE"
+      ]
+    },
+    {
+      "score": "3-6",
+      "deviation": 0.36933071811444557,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.28988683053951037,
+      "result_surprise": 0.9947780678851175,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "6-4",
+      "deviation": 0.37811770184254656,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.2935056409619759,
+      "result_surprise": 0.9973890339425587,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.3920147804371383,
+      "probability": 0.07888888888888888,
+      "probability_percent": 7.8889,
+      "outcome": "team_a",
+      "sample_count": 213,
+      "path_deviation": 0.5995043109545982,
+      "result_surprise": 0.44386422976501305,
+      "reason_cn": "United States在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.4190061563578652,
+      "probability": 0.07592592592592592,
+      "probability_percent": 7.5926,
+      "outcome": "team_b",
+      "sample_count": 205,
+      "path_deviation": 0.6036917178952381,
+      "result_surprise": 0.46475195822454307,
+      "reason_cn": "Australia通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.5471700962670991,
+      "probability": 0.05555555555555555,
+      "probability_percent": 5.5556,
+      "outcome": "team_b",
+      "sample_count": 150,
+      "path_deviation": 0.5996557318995221,
+      "result_surprise": 0.608355091383812,
+      "reason_cn": "抢断后的快速转换；Australia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.5661468008152145,
+      "probability": 0.05333333333333334,
+      "probability_percent": 5.3333,
+      "outcome": "draw",
+      "sample_count": 144,
+      "path_deviation": 0.6020718693662024,
+      "result_surprise": 0.6240208877284594,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.6076406859251506,
+      "probability": 0.054814814814814816,
+      "probability_percent": 5.4815,
+      "outcome": "team_a",
+      "sample_count": 148,
+      "path_deviation": 0.6314231933867633,
+      "result_surprise": 0.6135770234986945,
+      "reason_cn": "United States打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6653471099209494,
+      "probability": 0.02962962962962963,
+      "probability_percent": 2.963,
+      "outcome": "team_b",
+      "sample_count": 80,
+      "path_deviation": 0.5688202881258606,
+      "result_surprise": 0.7911227154046997,
+      "reason_cn": "Australia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.722947330224702,
+      "probability": 0.027407407407407408,
+      "probability_percent": 2.7407,
+      "outcome": "team_a",
+      "sample_count": 74,
+      "path_deviation": 0.5933227493611912,
+      "result_surprise": 0.8067885117493472,
+      "reason_cn": "United States打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.7328370042707979,
+      "probability": 0.007037037037037037,
+      "probability_percent": 0.7037,
+      "outcome": "team_a",
+      "sample_count": 19,
+      "path_deviation": 0.5216532587958808,
+      "result_surprise": 0.9503916449086162,
+      "reason_cn": "紧凑防守对进攻空间的压缩；United States打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.7581876406332854,
+      "probability": 0.024074074074074074,
+      "probability_percent": 2.4074,
+      "outcome": "team_a",
+      "sample_count": 65,
+      "path_deviation": 0.6008212907012569,
+      "result_surprise": 0.8302872062663185,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.7737847348932507,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.5225741759165566,
+      "result_surprise": 0.9921671018276762,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.7741766976043641,
+      "probability": 0.023333333333333334,
+      "probability_percent": 2.3333,
+      "outcome": "team_b",
+      "sample_count": 63,
+      "path_deviation": 0.6071526023862394,
+      "result_surprise": 0.835509138381201,
+      "reason_cn": "Australia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.7812696759257957,
+      "probability": 0.02962962962962963,
+      "probability_percent": 2.963,
+      "outcome": "team_a",
+      "sample_count": 80,
+      "path_deviation": 0.6351090056282824,
+      "result_surprise": 0.7911227154046997,
+      "reason_cn": "紧凑防守对进攻空间的压缩；United States打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.7827486289058992,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.5319177692412618,
+      "result_surprise": 0.9843342036553525,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_CREATION_LOW_BLOCK_PULISIC",
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.8085330444137552,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_a",
+      "sample_count": 22,
+      "path_deviation": 0.5691567077519513,
+      "result_surprise": 0.9425587467362925,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.8103975509995165,
+      "probability": 0.01,
+      "probability_percent": 1.0,
+      "outcome": "team_b",
+      "sample_count": 27,
+      "path_deviation": 0.5772524240792752,
+      "result_surprise": 0.9295039164490861,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.8339997033312831,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.5570072735417343,
+      "result_surprise": 0.9921671018276762,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.8394349252893453,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_b",
+      "sample_count": 22,
+      "path_deviation": 0.5868275213152901,
+      "result_surprise": 0.9425587467362925,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；Australia充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE",
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.8729367377334986,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.5778669738159353,
+      "result_surprise": 0.9947780678851175,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.8812425521239626,
+      "probability": 0.01037037037037037,
+      "probability_percent": 1.037,
+      "outcome": "draw",
+      "sample_count": 28,
+      "path_deviation": 0.6191700638060146,
+      "result_surprise": 0.9268929503916449,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.900201209850131,
+      "probability": 0.018518518518518517,
+      "probability_percent": 1.8519,
+      "outcome": "team_b",
+      "sample_count": 50,
+      "path_deviation": 0.660941215851442,
+      "result_surprise": 0.8694516971279374,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.9115136426196422,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.6027384534032759,
+      "result_surprise": 0.9895561357702349,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.9384324986482585,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.6167257244468479,
+      "result_surprise": 0.9921671018276762,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.9384324986482585,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.6167257244468479,
+      "result_surprise": 0.9921671018276762,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.957500878189525,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "team_b",
+      "sample_count": 20,
+      "path_deviation": 0.651530095395253,
+      "result_surprise": 0.9477806788511749,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.9759854969587193,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_a",
+      "sample_count": 22,
+      "path_deviation": 0.6649120788103935,
+      "result_surprise": 0.9425587467362925,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-3",
+      "deviation": 1.0,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_a",
+      "sample_count": 9,
+      "path_deviation": 0.6603676781298177,
+      "result_surprise": 0.9765013054830287,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 1.0,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.730260539059309,
+      "result_surprise": 0.9869451697127938,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.7824623687482714,
+      "result_surprise": 0.9921671018276762,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "draw",
+      "sample_count": 2,
+      "path_deviation": 0.7545572615341243,
+      "result_surprise": 0.9947780678851175,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_CREATION_LOW_BLOCK_PULISIC",
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6887580898316135,
+      "result_surprise": 0.9947780678851175,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE",
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.8472216128543366,
+      "result_surprise": 0.9947780678851175,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_AUS_SET_PIECE_AERIAL_LEVERAGE"
+      ]
+    },
+    {
+      "score": "0-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9973890339425587,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_FULLBACK_RESTRAINT_AUS_COUNTERS"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.8264719402680705,
+      "result_surprise": 0.9973890339425587,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_USA_CREATION_LOW_BLOCK_PULISIC"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

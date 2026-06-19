@@ -808,7 +808,7 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
 
     currentWorldCupMatches = merged;
     window.WORLD_CUP_MATCH_PREDICTIONS = merged;
-    const sortedMatches = getLatestLoadedGamePredictionMatches(loadedMatches);
+    const sortedMatches = getLatestLoadedGamePredictionMatches(loadedMatches, specs);
     latestMatches.innerHTML = renderLatestMatchPredictions(sortedMatches.slice(0, 4));
     if (routeMap && (worldCupRouteData || worldCupRouteRounds) && worldCupTeams) {
       routeMap.innerHTML = renderTournamentRouteMap(worldCupRouteData || worldCupRouteRounds, merged);
@@ -1123,7 +1123,21 @@ function getLatestGamePredictionSpecs(specs = []) {
     .slice(0, 4);
 }
 
-function getLatestLoadedGamePredictionMatches(matches = []) {
+function getLatestLoadedGamePredictionMatches(matches = [], specs = []) {
+  if ((worldCupLatestGamePredictions || []).length) {
+    const explicitOrder = new Map((specs || []).map((spec, index) => [spec.matchFolder, index]));
+
+    return [...matches].sort((a, b) => {
+      const timeCompare = compareGamePredictionMatchTime(a, b);
+
+      if (timeCompare) {
+        return timeCompare;
+      }
+
+      return (explicitOrder.get(a.gamePredictionSource?.matchFolder) ?? 0) - (explicitOrder.get(b.gamePredictionSource?.matchFolder) ?? 0);
+    });
+  }
+
   const latestVersion = [...matches]
     .map((match) => getLatestGamePredictionSpecVersion(match.gamePredictionSource || {}))
     .filter(Boolean)

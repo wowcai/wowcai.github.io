@@ -1,0 +1,630 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-19T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-19T15:00:00+08:00",
+  "quality_label": "usable",
+  "match_id": "M31",
+  "team_a": "Turkey",
+  "team_b": "Paraguay",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.1322222222222222,
+      "probability_percent": 13.2222,
+      "outcome": "draw",
+      "sample_count": 357,
+      "path_deviation": 0.49932864093747253,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-5",
+      "deviation": 0.06331226148664056,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9971988795518207,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.10333884775399099,
+      "probability": 0.11,
+      "probability_percent": 11.0,
+      "outcome": "team_b",
+      "sample_count": 297,
+      "path_deviation": 0.47024212004034316,
+      "result_surprise": 0.16806722689075626,
+      "reason_cn": "Paraguay通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.15237115466380405,
+      "probability": 0.11037037037037037,
+      "probability_percent": 11.037,
+      "outcome": "team_a",
+      "sample_count": 298,
+      "path_deviation": 0.5008888634852376,
+      "result_surprise": 0.165266106442577,
+      "reason_cn": "Turkey在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.2879626668277192,
+      "probability": 0.08777777777777777,
+      "probability_percent": 8.7778,
+      "outcome": "draw",
+      "sample_count": 237,
+      "path_deviation": 0.4894608502019015,
+      "result_surprise": 0.33613445378151263,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.3290629480639284,
+      "probability": 0.08259259259259259,
+      "probability_percent": 8.2593,
+      "outcome": "team_a",
+      "sample_count": 223,
+      "path_deviation": 0.4927693913206503,
+      "result_surprise": 0.3753501400560224,
+      "reason_cn": "Turkey在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-5",
+      "deviation": 0.37971897049015185,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 0.18803113622255319,
+      "result_surprise": 0.9971988795518207,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.38844858493217593,
+      "probability": 0.06925925925925926,
+      "probability_percent": 6.9259,
+      "outcome": "team_b",
+      "sample_count": 187,
+      "path_deviation": 0.47376187396798347,
+      "result_surprise": 0.47619047619047616,
+      "reason_cn": "Paraguay通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.49058846048742377,
+      "probability": 0.052222222222222225,
+      "probability_percent": 5.2222,
+      "outcome": "team_b",
+      "sample_count": 141,
+      "path_deviation": 0.4650789781659978,
+      "result_surprise": 0.6050420168067226,
+      "reason_cn": "Paraguay充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.49451951817907425,
+      "probability": 0.05592592592592593,
+      "probability_percent": 5.5926,
+      "outcome": "draw",
+      "sample_count": 151,
+      "path_deviation": 0.4824980455864217,
+      "result_surprise": 0.5770308123249299,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.5123246464439896,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.26834305771877753,
+      "result_surprise": 0.9943977591036415,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.525526245302844,
+      "probability": 0.05444444444444444,
+      "probability_percent": 5.4444,
+      "outcome": "team_a",
+      "sample_count": 147,
+      "path_deviation": 0.49489124269383805,
+      "result_surprise": 0.5882352941176471,
+      "reason_cn": "Turkey打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.5366633669527076,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.2828068384833208,
+      "result_surprise": 0.9943977591036415,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.5738295393515734,
+      "probability": 0.038148148148148146,
+      "probability_percent": 3.8148,
+      "outcome": "team_a",
+      "sample_count": 103,
+      "path_deviation": 0.45723145221896094,
+      "result_surprise": 0.7114845938375349,
+      "reason_cn": "Turkey打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.5832685711610233,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.3120112266756081,
+      "result_surprise": 0.9915966386554622,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6316021101185754,
+      "probability": 0.02666666666666667,
+      "probability_percent": 2.6667,
+      "outcome": "team_a",
+      "sample_count": 72,
+      "path_deviation": 0.44480681558581203,
+      "result_surprise": 0.7983193277310924,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.6362645503575273,
+      "probability": 0.004814814814814815,
+      "probability_percent": 0.4815,
+      "outcome": "team_b",
+      "sample_count": 13,
+      "path_deviation": 0.3585881238028782,
+      "result_surprise": 0.9635854341736695,
+      "reason_cn": "零分压力下土耳其定位球放大后段波动、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SETPIECE_PRESSURE_003",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.6400215213242224,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.3457378241196902,
+      "result_surprise": 0.9915966386554622,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.6453306754758853,
+      "probability": 0.007037037037037037,
+      "probability_percent": 0.7037,
+      "outcome": "team_b",
+      "sample_count": 19,
+      "path_deviation": 0.373025627207218,
+      "result_surprise": 0.9467787114845938,
+      "reason_cn": "抢断后的快速转换；Paraguay充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.6500064482437513,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.3486549792150018,
+      "result_surprise": 0.9971988795518207,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.6500064482437513,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.3486549792150018,
+      "result_surprise": 0.9971988795518207,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.673275590543895,
+      "probability": 0.02666666666666667,
+      "probability_percent": 2.6667,
+      "outcome": "team_b",
+      "sample_count": 72,
+      "path_deviation": 0.4695721307695498,
+      "result_surprise": 0.7983193277310924,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫；Paraguay充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001"
+      ]
+    },
+    {
+      "score": "1-7",
+      "deviation": 0.6986838892611876,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.3775825407440883,
+      "result_surprise": 0.9971988795518207,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.7036850758092512,
+      "probability": 0.012592592592592593,
+      "probability_percent": 1.2593,
+      "outcome": "draw",
+      "sample_count": 34,
+      "path_deviation": 0.4303283534468221,
+      "result_surprise": 0.9047619047619048,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.7104901566276071,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "team_b",
+      "sample_count": 20,
+      "path_deviation": 0.4132562726695995,
+      "result_surprise": 0.9439775910364145,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.7236764655400855,
+      "probability": 0.01925925925925926,
+      "probability_percent": 1.9259,
+      "outcome": "team_b",
+      "sample_count": 52,
+      "path_deviation": 0.4693579655508438,
+      "result_surprise": 0.8543417366946778,
+      "reason_cn": "抢断后的快速转换；Paraguay充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.7288685552408374,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "draw",
+      "sample_count": 4,
+      "path_deviation": 0.40004528064193196,
+      "result_surprise": 0.988795518207283,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.7398333289412802,
+      "probability": 0.024444444444444446,
+      "probability_percent": 2.4444,
+      "outcome": "team_a",
+      "sample_count": 66,
+      "path_deviation": 0.5000756497195956,
+      "result_surprise": 0.8151260504201681,
+      "reason_cn": "Turkey打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.7481525237278845,
+      "probability": 0.016666666666666666,
+      "probability_percent": 1.6667,
+      "outcome": "team_b",
+      "sample_count": 45,
+      "path_deviation": 0.4733452926489705,
+      "result_surprise": 0.8739495798319328,
+      "reason_cn": "零分压力下土耳其定位球放大后段波动、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SETPIECE_PRESSURE_003",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.7725319443071089,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_b",
+      "sample_count": 10,
+      "path_deviation": 0.4350429133520179,
+      "result_surprise": 0.9719887955182073,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.7730403067128596,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_a",
+      "sample_count": 9,
+      "path_deviation": 0.4338367224477709,
+      "result_surprise": 0.9747899159663865,
+      "reason_cn": "抢断后的快速转换、土耳其中轴控球对巴拉圭半场触发式压迫；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENCISO_002",
+        "H_CTRL_PRESS_001"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.7742297559364462,
+      "probability": 0.01074074074074074,
+      "probability_percent": 1.0741,
+      "outcome": "team_a",
+      "sample_count": 29,
+      "path_deviation": 0.46470948941258233,
+      "result_surprise": 0.9187675070028011,
+      "reason_cn": "抢断后的快速转换、土耳其中轴控球对巴拉圭半场触发式压迫；Turkey打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_ENCISO_002",
+        "H_CTRL_PRESS_001"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.843150784371206,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.46795982474596015,
+      "result_surprise": 0.988795518207283,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "2-7",
+      "deviation": 0.848322851844139,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.46801684001341215,
+      "result_surprise": 0.9943977591036415,
+      "reason_cn": "土耳其中轴控球对巴拉圭半场触发式压迫、零分压力下土耳其定位球放大后段波动；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CTRL_PRESS_001",
+        "H_SETPIECE_PRESSURE_003"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.8543520188361383,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.47159979539242886,
+      "result_surprise": 0.9943977591036415,
+      "reason_cn": "零分压力下土耳其定位球放大后段波动、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SETPIECE_PRESSURE_003",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.922031232552548,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_b",
+      "sample_count": 10,
+      "path_deviation": 0.5238859126733152,
+      "result_surprise": 0.9719887955182073,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.9507835047638266,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.5349393539958645,
+      "result_surprise": 0.9831932773109243,
+      "reason_cn": "零分压力下土耳其定位球放大后段波动、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SETPIECE_PRESSURE_003",
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.9596171893956723,
+      "probability": 0.011851851851851851,
+      "probability_percent": 1.1852,
+      "outcome": "team_a",
+      "sample_count": 32,
+      "path_deviation": 0.5794046374220555,
+      "result_surprise": 0.9103641456582633,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.9902685989726415,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_a",
+      "sample_count": 14,
+      "path_deviation": 0.5704705410715613,
+      "result_surprise": 0.9607843137254902,
+      "reason_cn": "零分压力下土耳其定位球放大后段波动、土耳其中轴控球对巴拉圭半场触发式压迫；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SETPIECE_PRESSURE_003",
+        "H_CTRL_PRESS_001"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 1.0,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome": "team_a",
+      "sample_count": 21,
+      "path_deviation": 0.5868116938712529,
+      "result_surprise": 0.9411764705882353,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.5631623791247011,
+      "result_surprise": 0.988795518207283,
+      "reason_cn": "零分压力下土耳其定位球放大后段波动；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SETPIECE_PRESSURE_003"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.6743274896075009,
+      "result_surprise": 0.9943977591036415,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9971988795518207,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENCISO_002"
+      ]
+    },
+    {
+      "score": "7-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9971988795518207,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENCISO_002"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

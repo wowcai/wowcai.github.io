@@ -1,0 +1,581 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-19T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-19T15:00:00+08:00",
+  "quality_label": "ready",
+  "match_id": "M30",
+  "team_a": "Scotland",
+  "team_b": "Morocco",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.1437037037037037,
+      "probability_percent": 14.3704,
+      "outcome": "draw",
+      "sample_count": 388,
+      "path_deviation": 0.7624466083698311,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9974226804123711,
+      "reason_cn": "紧凑防守对进攻空间的压缩、小组积分激励推高摩洛哥后段进攻投入；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H3"
+      ]
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.19278781034950218,
+      "probability": 0.11259259259259259,
+      "probability_percent": 11.2593,
+      "outcome": "team_b",
+      "sample_count": 304,
+      "path_deviation": 0.7625257565108364,
+      "result_surprise": 0.21649484536082475,
+      "reason_cn": "Morocco通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-6",
+      "deviation": 0.19353251298402024,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.3438645499801997,
+      "result_surprise": 0.9948453608247423,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.23597183085234213,
+      "probability": 0.09888888888888889,
+      "probability_percent": 9.8889,
+      "outcome": "team_a",
+      "sample_count": 267,
+      "path_deviation": 0.73730768664201,
+      "result_surprise": 0.3118556701030928,
+      "reason_cn": "Scotland在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.2901014427212334,
+      "probability": 0.09703703703703703,
+      "probability_percent": 9.7037,
+      "outcome": "draw",
+      "sample_count": 262,
+      "path_deviation": 0.763121845064416,
+      "result_surprise": 0.32474226804123707,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.4068659294309733,
+      "probability": 0.07111111111111111,
+      "probability_percent": 7.1111,
+      "outcome": "team_a",
+      "sample_count": 192,
+      "path_deviation": 0.7366293332425135,
+      "result_surprise": 0.5051546391752577,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Scotland在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.43766549455558285,
+      "probability": 0.07555555555555556,
+      "probability_percent": 7.5556,
+      "outcome": "team_b",
+      "sample_count": 204,
+      "path_deviation": 0.7719191830275666,
+      "result_surprise": 0.4742268041237113,
+      "reason_cn": "Morocco通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.48396424517701275,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.5209886490885985,
+      "result_surprise": 0.9922680412371134,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1",
+        "H2"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.4903645418521008,
+      "probability": 0.06333333333333334,
+      "probability_percent": 6.3333,
+      "outcome": "team_b",
+      "sample_count": 171,
+      "path_deviation": 0.7580096770152953,
+      "result_surprise": 0.5592783505154639,
+      "reason_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.5523581341612331,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.5637606534208396,
+      "result_surprise": 0.9896907216494846,
+      "reason_cn": "紧凑防守对进攻空间的压缩、小组积分激励推高摩洛哥后段进攻投入；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H3"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.5588316358907526,
+      "probability": 0.032962962962962965,
+      "probability_percent": 3.2963,
+      "outcome": "team_a",
+      "sample_count": 89,
+      "path_deviation": 0.6856396167037953,
+      "result_surprise": 0.7706185567010309,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Scotland打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.5617564569383409,
+      "probability": 0.054814814814814816,
+      "probability_percent": 5.4815,
+      "outcome": "team_a",
+      "sample_count": 148,
+      "path_deviation": 0.769288847092599,
+      "result_surprise": 0.6185567010309279,
+      "reason_cn": "Scotland打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.5730196919146253,
+      "probability": 0.05444444444444444,
+      "probability_percent": 5.4444,
+      "outcome": "draw",
+      "sample_count": 147,
+      "path_deviation": 0.7747162907160617,
+      "result_surprise": 0.6211340206185567,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.6440853094410043,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_a",
+      "sample_count": 8,
+      "path_deviation": 0.6248146760043096,
+      "result_surprise": 0.979381443298969,
+      "reason_cn": "紧凑防守对进攻空间的压缩、小组积分激励推高摩洛哥后段进攻投入；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H3"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6511965045044004,
+      "probability": 0.03148148148148148,
+      "probability_percent": 3.1481,
+      "outcome": "team_b",
+      "sample_count": 85,
+      "path_deviation": 0.7359771991335742,
+      "result_surprise": 0.7809278350515464,
+      "reason_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.6886355672365453,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "draw",
+      "sample_count": 4,
+      "path_deviation": 0.6462202843548808,
+      "result_surprise": 0.9896907216494846,
+      "reason_cn": "紧凑防守对进攻空间的压缩、小组积分激励推高摩洛哥后段进攻投入；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H3"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.6973584197007641,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.6473350019508863,
+      "result_surprise": 0.9974226804123711,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7095173968739983,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_a",
+      "sample_count": 23,
+      "path_deviation": 0.6852235588744413,
+      "result_surprise": 0.9407216494845361,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7099976318862011,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome": "team_b",
+      "sample_count": 21,
+      "path_deviation": 0.6827385676422711,
+      "result_surprise": 0.9458762886597938,
+      "reason_cn": "小组积分激励推高摩洛哥后段进攻投入、紧凑防守对进攻空间的压缩；Morocco充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.7113196540284866,
+      "probability": 0.005555555555555556,
+      "probability_percent": 0.5556,
+      "outcome": "team_a",
+      "sample_count": 15,
+      "path_deviation": 0.6752117805321725,
+      "result_surprise": 0.961340206185567,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.727371544898339,
+      "probability": 0.02148148148148148,
+      "probability_percent": 2.1481,
+      "outcome": "team_b",
+      "sample_count": 58,
+      "path_deviation": 0.7445994237383197,
+      "result_surprise": 0.8505154639175257,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.7521837435779223,
+      "probability": 0.026296296296296297,
+      "probability_percent": 2.6296,
+      "outcome": "team_b",
+      "sample_count": 71,
+      "path_deviation": 0.7776541865662092,
+      "result_surprise": 0.8170103092783505,
+      "reason_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.7718561683370811,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "team_b",
+      "sample_count": 18,
+      "path_deviation": 0.7160049686981971,
+      "result_surprise": 0.9536082474226804,
+      "reason_cn": "小组积分激励推高摩洛哥后段进攻投入、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.7761300233329921,
+      "probability": 0.023333333333333334,
+      "probability_percent": 2.3333,
+      "outcome": "team_a",
+      "sample_count": 63,
+      "path_deviation": 0.781041456693175,
+      "result_surprise": 0.8376288659793815,
+      "reason_cn": "Scotland打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.8201410365393014,
+      "probability": 0.02074074074074074,
+      "probability_percent": 2.0741,
+      "outcome": "team_a",
+      "sample_count": 56,
+      "path_deviation": 0.7979574130279419,
+      "result_surprise": 0.8556701030927835,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.8202416859426294,
+      "probability": 0.01074074074074074,
+      "probability_percent": 1.0741,
+      "outcome": "draw",
+      "sample_count": 29,
+      "path_deviation": 0.7605480529230534,
+      "result_surprise": 0.9252577319587629,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.8351106637852282,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_b",
+      "sample_count": 7,
+      "path_deviation": 0.7390137458940925,
+      "result_surprise": 0.9819587628865979,
+      "reason_cn": "小组积分激励推高摩洛哥后段进攻投入；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.8907430988471057,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_b",
+      "sample_count": 14,
+      "path_deviation": 0.7823906919406695,
+      "result_surprise": 0.9639175257731959,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1",
+        "H2"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.9529931807737885,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.8047917121043399,
+      "result_surprise": 0.9922680412371134,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.9884588111726387,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_b",
+      "sample_count": 7,
+      "path_deviation": 0.8318026350933534,
+      "result_surprise": 0.9819587628865979,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.9988107552460627,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.83806645639143,
+      "result_surprise": 0.9819587628865979,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 1.0,
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296,
+      "outcome": "team_a",
+      "sample_count": 17,
+      "path_deviation": 0.8526639270042937,
+      "result_surprise": 0.9561855670103093,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Scotland打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 1.0,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.8431355083424201,
+      "result_surprise": 0.9871134020618557,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "0-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9974226804123711,
+      "reason_cn": "小组积分激励推高摩洛哥后段进攻投入、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.9156309453149092,
+      "result_surprise": 0.9974226804123711,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.9156309453149092,
+      "result_surprise": 0.9974226804123711,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8514091890472242,
+      "result_surprise": 0.9974226804123711,
+      "reason_cn": "小组积分激励推高摩洛哥后段进攻投入、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.8689768127437886,
+      "result_surprise": 0.9974226804123711,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.8689768127437886,
+      "result_surprise": 0.9974226804123711,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

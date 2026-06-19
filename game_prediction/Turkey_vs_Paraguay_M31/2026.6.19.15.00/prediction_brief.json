@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-19T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-19T15:00:00+08:00",
+  "match": {
+    "match_id": "M31",
+    "team_a": "Turkey",
+    "team_b": "Paraguay",
+    "kickoff_utc": "2026-06-20T03:00:00Z",
+    "venue": "San Francisco Bay Area Stadium",
+    "stage": "group",
+    "group": "D",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.875,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率87.5%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.38185185185185183,
+    "draw": 0.2903703703703704,
+    "team_b_win": 0.3277777777777778
+  },
+  "most_likely_outcome": {
+    "label": "Turkey胜",
+    "probability": 0.38185185185185183
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.1322222222222222
+    },
+    {
+      "score": "1-0",
+      "probability": 0.11037037037037037
+    },
+    {
+      "score": "0-1",
+      "probability": 0.11
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "恩西索在4-0胜尼加拉瓜的友谊赛中受伤，BBC称其世界杯状态存疑。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_865a8eccad5e",
+        "E_38b66413973e"
+      ],
+      "source_names": [
+        "BBC",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "路透称土耳其由恰尔汗奥卢领衔，并受21岁皇马攻击手居莱尔带动。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_37bd967fddad"
+      ],
+      "source_names": [
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "土耳其控球率被列为70.7%、排名第2，巴拉圭则会在过半场后积极压迫。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_5fce84e8b038",
+        "E_40939f97bd84"
+      ],
+      "source_names": [
+        "The Athletic / New York Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "巴拉圭被多源描述为重视防守强度和集体性，阿尔米隆承担进攻推进角色。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_c6110152a7fe",
+        "E_5708ae7788b5"
+      ],
+      "source_names": [
+        "The Guardian",
+        "FOX Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "巴拉圭上场友谊赛4-0击败尼加拉瓜，阿尔米隆、恩西索和桑纳夫里亚是前场重点。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_a9748c526933",
+        "E_e75485a54091"
+      ],
+      "source_names": [
+        "Sofascore",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在圣克拉拉Levi's Stadium进行，世界杯期间球场使用约95%天然草的混合草皮。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_81a0e50a8b51",
+        "E_0d357a22a6ad"
+      ],
+      "source_names": [
+        "Sky Sports",
+        "Knox News"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}

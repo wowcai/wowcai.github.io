@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-19T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-19T15:00:00+08:00",
+  "match": {
+    "match_id": "M29",
+    "team_a": "Brazil",
+    "team_b": "Haiti",
+    "kickoff_utc": "2026-06-20T00:30:00Z",
+    "venue": "Philadelphia Stadium",
+    "stage": "group",
+    "group": "C",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 189,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.812962962962963,
+    "draw": 0.15888888888888889,
+    "team_b_win": 0.028148148148148148
+  },
+  "most_likely_outcome": {
+    "label": "Brazil胜",
+    "probability": 0.812962962962963
+  },
+  "top_scores": [
+    {
+      "score": "2-0",
+      "probability": 0.21518518518518517
+    },
+    {
+      "score": "1-0",
+      "probability": 0.21407407407407408
+    },
+    {
+      "score": "3-0",
+      "probability": 0.14037037037037037
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "路透称内马尔因小腿伤不会随队出战海地，Goal称巴西进攻核心转向Vinicius Junior。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_120c38b94262",
+        "E_3dcfd4841d68"
+      ],
+      "source_names": [
+        "Reuters",
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "The Athletic称巴西控球可呈动态3-2-4-1，右后卫前压增加前场人数。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_2d1c5ca72075"
+      ],
+      "source_names": [
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "Yahoo Sports判断海地几乎肯定摆低位防线，重点保护边锋身后空间。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_d3fe8b3ac554"
+      ],
+      "source_names": [
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "ESPN称巴西此前推进偏慢、中场有孔隙且边路偏弱，可能影响破密集效率。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_41aaa3e22bb0"
+      ],
+      "source_names": [
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "ESPN称巴西Elo第七且阵容身价第四；海地Elo排名第73，实力差距清晰。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_952fc13f0b99",
+        "E_e6f0a84cafac"
+      ],
+      "source_names": [
+        "ESPN",
+        "International-football.net"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在费城露天球场进行，FOX 29称开球为美东晚9点。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_60b254d20fb2",
+        "E_f385f7e7c3ce"
+      ],
+      "source_names": [
+        "FOX 29 Philadelphia",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ]
+}
