@@ -6300,6 +6300,138 @@ body.modal-open {
   display: flex;
 }
 
+.gaokao-province-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 105;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gaokao-province-modal.is-open {
+  display: flex;
+}
+
+.gaokao-province-card {
+  width: min(560px, 100%);
+}
+
+.gaokao-province-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-right: 46px;
+}
+
+.gaokao-province-head .kicker {
+  margin: 0;
+}
+
+.gaokao-province-head h2 {
+  margin: 6px 0 8px;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+}
+
+.gaokao-province-head p:last-child {
+  margin: 0;
+  color: rgba(226, 238, 255, 0.72);
+  font-size: 13px;
+}
+
+.gaokao-province-count {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 46px;
+  padding: 0 12px;
+  border: 1px solid rgba(246, 214, 143, 0.5);
+  border-radius: 14px;
+  background: rgba(246, 214, 143, 0.14);
+  color: #f6d68f;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.gaokao-province-tip {
+  margin: 16px 0 12px;
+  color: rgba(226, 238, 255, 0.66);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.gaokao-province-school-list {
+  display: grid;
+  gap: 10px;
+}
+
+.gaokao-province-school {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  border: 1px solid var(--gaokao-border);
+  border-radius: 14px;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #eef6ff;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.gaokao-province-school:hover,
+.gaokao-province-school:focus-visible {
+  transform: translateY(-1px);
+  border-color: var(--gaokao-border-strong);
+  background: rgba(246, 214, 143, 0.1);
+  outline: none;
+}
+
+.gaokao-province-school-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.gaokao-province-school-main em {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.gaokao-province-school-main small {
+  color: rgba(226, 238, 255, 0.62);
+  font-size: 12px;
+}
+
+.gaokao-province-school-score {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.gaokao-province-school-score strong {
+  color: #f6d68f;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.gaokao-province-school-score small {
+  color: rgba(226, 238, 255, 0.6);
+  font-size: 11px;
+}
+
 .gaokao-detail-backdrop {
   position: absolute;
   inset: 0;
@@ -6714,6 +6846,101 @@ body.modal-open {
 .gaokao-score-marker:focus-visible .gaokao-score-tooltip {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+.gaokao-province-marker {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.gaokao-province-marker:hover,
+.gaokao-province-marker:focus-visible {
+  z-index: 999 !important;
+  outline: none;
+}
+
+.gaokao-province-marker-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 27px;
+  height: 27px;
+  padding: 0 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(246, 200, 93, 0.97), rgba(226, 158, 52, 0.97));
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.36);
+  color: #20160a;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.gaokao-province-marker.is-dense .gaokao-province-marker-dot {
+  min-width: 33px;
+  height: 33px;
+  font-size: 13px;
+  border-color: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 138, 101, 0.98), rgba(226, 80, 52, 0.98));
+  color: #ffffff;
+}
+
+.gaokao-province-marker-name {
+  padding: 1px 7px;
+  border: 1px solid var(--gaokao-border-strong);
+  border-radius: 7px;
+  background: rgba(6, 14, 26, 0.82);
+  color: #eef6ff;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.35;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gaokao-province-marker:hover .gaokao-province-marker-dot,
+.gaokao-province-marker:focus-visible .gaokao-province-marker-dot {
+  transform: scale(1.14);
+  box-shadow: 0 9px 22px rgba(0, 0, 0, 0.42);
+}
+
+.gaokao-province-marker:hover .gaokao-province-marker-name,
+.gaokao-province-marker:focus-visible .gaokao-province-marker-name {
+  border-color: var(--map-point-fill, #f6d68f);
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .gaokao-province-marker-dot {
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+    border-width: 1.25px;
+    font-size: 11px;
+  }
+
+  .gaokao-province-marker.is-dense .gaokao-province-marker-dot {
+    min-width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+
+  .gaokao-province-marker-name {
+    display: none;
+  }
 }
 
 .gaokao-map-note {
@@ -8985,7 +9212,8 @@ body.about-brand-page {
     grid-template-columns: 1fr;
   }
 
-  .gaokao-detail-modal {
+  .gaokao-detail-modal,
+  .gaokao-province-modal {
     padding: 10px;
   }
 

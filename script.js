@@ -3497,7 +3497,13 @@ const GK_CITY_EN = {
   "杭州": "Hangzhou", "合肥": "Hefei", "厦门": "Xiamen", "济南": "Jinan",
   "青岛": "Qingdao", "武汉": "Wuhan", "长沙": "Changsha", "广州": "Guangzhou",
   "成都": "Chengdu", "重庆": "Chongqing", "西安": "Xi'an", "杨凌": "Yangling",
-  "兰州": "Lanzhou"
+  "兰州": "Lanzhou", "宣城": "Xuancheng", "福州": "Fuzhou", "深圳": "Shenzhen",
+  "南宁": "Nanning", "贵阳": "Guiyang", "海口": "Haikou", "保定": "Baoding",
+  "秦皇岛": "Qinhuangdao", "郑州": "Zhengzhou", "延吉": "Yanji", "苏州": "Suzhou",
+  "无锡": "Wuxi", "徐州": "Xuzhou", "南昌": "Nanchang", "盘锦": "Panjin",
+  "呼和浩特": "Hohhot", "银川": "Yinchuan", "西宁": "Xining", "威海": "Weihai",
+  "太原": "Taiyuan", "雅安": "Ya'an", "拉萨": "Lhasa", "克拉玛依": "Karamay",
+  "石河子": "Shihezi", "乌鲁木齐": "Urumqi", "昆明": "Kunming"
 };
 
 const GK_UNIVERSITY_EN = {
@@ -3547,9 +3553,12 @@ function gkSubjectText(zh) {
 }
 
 function gkUniversityName(entry) {
-  const en = entry ? GK_UNIVERSITY_EN[entry.universityId] : null;
-  const zh = entry ? entry.universityName : "";
-  return L(zh, en || zh);
+  if (!entry) {
+    return "";
+  }
+  const zh = entry.universityName || "";
+  const en = entry.universityNameEn || GK_UNIVERSITY_EN[entry.universityId] || zh;
+  return L(zh, en);
 }
 
 function gkLocationText(entry) {
@@ -3640,6 +3649,11 @@ function gkMajorGroupText(zh) {
   if (s === "专业组待补充") {
     return "Group TBD";
   }
+  const seg = s.match(/^普通类(.+)段$/);
+  if (seg) {
+    const segMap = { "一": "1", "二": "2", "三": "3", "四": "4", "五": "5" };
+    return `General track · Segment ${segMap[seg[1]] || seg[1]}`;
+  }
   const m = s.match(/^专业组\s*(\d+)$/);
   if (m) {
     return `Group ${m[1]}`;
@@ -3699,7 +3713,8 @@ function initGaokaoPredictionPage(context = {}) {
   const gaokaoPredictionState = {
     province: defaultProvince,
     subjectType: "",
-    selectedUniversityId: null
+    selectedUniversityId: null,
+    selectedLocationProvince: null
   };
 
   window.gaokaoPredictionState = gaokaoPredictionState;
@@ -3714,7 +3729,9 @@ function initGaokaoPredictionPage(context = {}) {
     predictionMap: page.querySelector("[data-gaokao-prediction-map]"),
     scoreList: page.querySelector("[data-gaokao-map-score-list]"),
     detailModal: document.querySelector("[data-gaokao-detail-modal]"),
-    detailBody: document.querySelector("[data-gaokao-detail-body]")
+    detailBody: document.querySelector("[data-gaokao-detail-body]"),
+    provinceModal: document.querySelector("[data-gaokao-province-modal]"),
+    provinceBody: document.querySelector("[data-gaokao-province-body]")
   };
 
   if (refs.dataBadge) {
@@ -3725,6 +3742,20 @@ function initGaokaoPredictionPage(context = {}) {
   bindGaokaoPredictionEvents(data, meta, context.releaseData, gaokaoPredictionState, refs);
   updateGaokaoSubjectOptions(data, gaokaoPredictionState, refs);
   renderGaokaoPredictionWorkspace(data, meta, context.releaseData, gaokaoPredictionState, refs);
+
+  let mapResizeTimer = null;
+  let lastMapWidth = refs.predictionMap ? refs.predictionMap.clientWidth : 0;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(mapResizeTimer);
+    mapResizeTimer = window.setTimeout(() => {
+      const width = refs.predictionMap ? refs.predictionMap.clientWidth : 0;
+
+      if (width && Math.abs(width - lastMapWidth) > 24) {
+        lastMapWidth = width;
+        renderUniversityPredictionMap(data, meta, gaokaoPredictionState, refs);
+      }
+    }, 220);
+  });
 
   document.addEventListener("wowcai:langchange", () => {
     if (refs.dataBadge) {
@@ -3749,6 +3780,14 @@ function initGaokaoPredictionPage(context = {}) {
       if (entry) {
         refs.detailBody.innerHTML = renderUniversityDetail(entry);
       }
+    }
+
+    if (
+      refs.provinceModal &&
+      refs.provinceModal.classList.contains("is-open") &&
+      gaokaoPredictionState.selectedLocationProvince
+    ) {
+      populateGaokaoProvincePanel(gaokaoPredictionState.selectedLocationProvince, data, gaokaoPredictionState, refs);
     }
   });
 }
@@ -3795,9 +3834,21 @@ function bindGaokaoPredictionEvents(data, meta, releaseData, state, refs) {
     node.addEventListener("click", closeGaokaoUniversityDetail);
   });
 
+  document.querySelectorAll("[data-close-gaokao-province]").forEach((node) => {
+    node.addEventListener("click", closeGaokaoProvinceModal);
+  });
+
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+    if (event.key !== "Escape") {
+      return;
+    }
+
+    const detailModal = document.querySelector("[data-gaokao-detail-modal]");
+
+    if (detailModal && detailModal.classList.contains("is-open")) {
       closeGaokaoUniversityDetail();
+    } else {
+      closeGaokaoProvinceModal();
     }
   });
 }
@@ -3873,6 +3924,7 @@ function normalizeAdmissionPredictionItem(item) {
     subjectType: String(item.subjectType || "科类待补充"),
     universityId: String(item.universityId),
     universityName: String(item.universityName || item.name || "高校名称待补充"),
+    universityNameEn: item.universityNameEn ? String(item.universityNameEn) : "",
     universityLocation: String(item.universityLocation || item.location || "所在地待补充"),
     map: item.map || baseSchool?.map || null,
     majorGroup: String(item.majorGroup || item.batch || "专业组待补充"),
@@ -3887,6 +3939,7 @@ function normalizeAdmissionPredictionItem(item) {
       confidence: String(prediction.confidence || "medium").toLowerCase()
     },
     predictionReason: String(item.predictionReason || item.prediction_reason || ""),
+    predictionReasonEn: item.predictionReasonEn ? String(item.predictionReasonEn) : "",
     sourceNote: String(item.sourceNote || "示例数据，后续替换为官方和模型结果。")
   };
 }
@@ -4085,7 +4138,7 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
     })
     .sort((a, b) => b.prediction.predictedScore - a.prediction.predictedScore);
   const scoreValues = entries.map((entry) => entry.prediction.predictedScore).filter(Number.isFinite);
-  const markerOffsets = getGaokaoMarkerOffsets(entries);
+  const provinceGroups = getGaokaoProvinceGroups(entries);
   const sourceHeight = Number(refs.predictionMap.dataset.mapSourceHeight) || 0;
   const cropHeight = Number(refs.predictionMap.dataset.mapCropHeight) || 0;
   const yScale = sourceHeight > 0 && cropHeight > 0 ? sourceHeight / cropHeight : 1;
@@ -4102,8 +4155,8 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
     if (entries.length) {
       const rangeStr = formatMinMax(scoreValues, "分");
       refs.mapSummary.textContent = getLang() === "en"
-        ? `Predicted score lines for ${entries.length} universities, range ${rangeStr}. Tap a marker to see the 2021-2026 trend.`
-        : `${entries.length} 所高校预测分数线，预测范围 ${rangeStr}。点击学校标记查看 2021-2026 年趋势。`;
+        ? `${provinceGroups.length} regions · ${entries.length} universities, predicted range ${rangeStr}. Tap a region first, then pick a university.`
+        : `${provinceGroups.length} 个高校所在省份 · ${entries.length} 所高校，预测范围 ${rangeStr}。先点击地图上的省份，再选择高校查看趋势。`;
     } else {
       refs.mapSummary.textContent = L(
         "当前省份和科类暂无可展示的高校预测数据。",
@@ -4132,82 +4185,142 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
   `;
   const markerLayer = refs.predictionMap.querySelector("[data-gaokao-map-coordinate-layer]") || refs.predictionMap;
 
-  entries.forEach((entry) => {
-    const mapPoint = resolveGaokaoMapPoint(entry);
-    const markerY = Math.max(0, Math.min(100, Number(mapPoint.y) * yScale));
-    const markerOffset = markerOffsets.get(entry.universityId) || { x: 0, y: 0 };
+  const maxCount = provinceGroups.reduce((max, group) => Math.max(max, group.count), 0);
+  const denseThreshold = Math.max(6, maxCount * 0.6);
+  const mapWidth = refs.predictionMap.clientWidth || 1000;
+  const mapHeight = refs.predictionMap.clientHeight || mapWidth * 0.7;
+  const placedMarkers = spreadGaokaoProvinceMarkers(provinceGroups, yScale, mapWidth, mapHeight);
+
+  placedMarkers.forEach(({ group, x, y }) => {
+    const provinceName = gkProvinceText(group.province);
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "gaokao-score-marker";
-    button.style.left = `${mapPoint.x}%`;
-    button.style.top = `${markerY}%`;
-    button.style.setProperty("--marker-offset-x", `${markerOffset.x}px`);
-    button.style.setProperty("--marker-offset-y", `${markerOffset.y}px`);
-    button.style.zIndex = `${Math.max(1, Math.round(Number(entry.prediction.predictedScore) || 1))}`;
-    button.dataset.universityId = entry.universityId;
-    const markerName = gkUniversityName(entry);
-    button.title = markerName;
+    button.className = "gaokao-province-marker";
+
+    if (group.count >= denseThreshold) {
+      button.classList.add("is-dense");
+    }
+
+    button.style.left = `${x}%`;
+    button.style.top = `${y}%`;
+    button.style.zIndex = `${100 + group.count}`;
+    button.dataset.locationProvince = group.province;
+    button.title = getLang() === "en"
+      ? `${provinceName} · ${group.count} universities`
+      : `${provinceName} · ${group.count} 所高校`;
     button.setAttribute("aria-label", getLang() === "en"
-      ? `${markerName}, predicted point for ${gkProvinceText(state.province)} ${gkSubjectText(state.subjectType)}`
-      : `${entry.universityName}，${state.province}${state.subjectType}预测点位`);
+      ? `${provinceName}, ${group.count} universities, open list`
+      : `${provinceName}，${group.count} 所高校，点击查看高校列表`);
     button.innerHTML = `
-      <span class="gaokao-score-dot" aria-hidden="true"></span>
-      <span class="gaokao-score-tooltip">${escapeHtml(markerName)}</span>
+      <span class="gaokao-province-marker-dot" aria-hidden="true">${group.count}</span>
+      <span class="gaokao-province-marker-name">${escapeHtml(provinceName)}</span>
     `;
-    button.addEventListener("click", () => openGaokaoUniversityDetail(entry, state, refs));
+    button.addEventListener("click", () => openGaokaoProvinceModal(group.province, data, state, refs));
     markerLayer.appendChild(button);
   });
 
   if (refs.scoreList) {
-    refs.scoreList.innerHTML = entries.map((entry) => `
-      <button type="button" data-open-gaokao-map-detail="${escapeHtml(entry.universityId)}">
-        <span><em>${escapeHtml(gkUniversityName(entry))}</em><small>${escapeHtml(gkLocationText(entry))}</small></span>
-        <strong>${formatNullable(entry.prediction.predictedScore, "分")}</strong>
-      </button>
-    `).join("");
-
-    refs.scoreList.querySelectorAll("[data-open-gaokao-map-detail]").forEach((button) => {
-      const entry = entries.find((item) => item.universityId === button.dataset.openGaokaoMapDetail);
-      button.addEventListener("click", () => openGaokaoUniversityDetail(entry, state, refs));
-    });
+    refs.scoreList.innerHTML = "";
   }
 }
 
-function getGaokaoMarkerOffsets(entries) {
-  const buckets = new Map();
-  const offsets = new Map();
-  const pattern = [
-    [0, 0],
-    [4, -3],
-    [-4, 3],
-    [5, 4],
-    [-5, -4],
-    [0, 6],
-    [0, -6],
-    [7, 0],
-    [-7, 0]
-  ];
+function getGaokaoLocationProvince(entry) {
+  const raw = String(entry?.universityLocation ?? "");
+  return (raw.split(" · ")[0] || "").trim();
+}
+
+function getGaokaoProvinceGroups(entries) {
+  const groups = new Map();
 
   entries.forEach((entry) => {
-    const mapPoint = resolveGaokaoMapPoint(entry);
-    const bucketKey = `${Number(mapPoint.x).toFixed(1)}:${Number(mapPoint.y).toFixed(1)}`;
-    const bucket = buckets.get(bucketKey) || [];
-    bucket.push(entry);
-    buckets.set(bucketKey, bucket);
+    const point = resolveGaokaoMapPoint(entry);
+
+    if (!point || !Number.isFinite(Number(point.x)) || !Number.isFinite(Number(point.y))) {
+      return;
+    }
+
+    const province = getGaokaoLocationProvince(entry) || "其他";
+    const group = groups.get(province) || { province, entries: [], sumX: 0, sumY: 0 };
+    group.entries.push(entry);
+    group.sumX += Number(point.x);
+    group.sumY += Number(point.y);
+    groups.set(province, group);
   });
 
-  buckets.forEach((bucket) => {
-    bucket.forEach((entry, index) => {
-      const base = pattern[index % pattern.length];
-      const round = Math.floor(index / pattern.length) + 1;
-      offsets.set(entry.universityId, {
-        x: base[0] * round,
-        y: base[1] * round
-      });
+  return [...groups.values()]
+    .map((group) => ({
+      province: group.province,
+      entries: group.entries.slice().sort(
+        (a, b) => (b.prediction?.predictedScore || 0) - (a.prediction?.predictedScore || 0)
+      ),
+      count: group.entries.length,
+      point: {
+        x: group.sumX / group.entries.length,
+        y: group.sumY / group.entries.length
+      }
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
+function spreadGaokaoProvinceMarkers(groups, yScale, mapWidth = 1000, mapHeight = 700) {
+  const width = mapWidth || 1000;
+  const height = mapHeight || width * 0.7;
+  const isCompact = width < 520;
+  const markerWidthPx = isCompact ? 26 : 64;
+  const markerHeightPx = isCompact ? 26 : 46;
+  const minDistX = Math.min(15, (markerWidthPx / width) * 100 + 1.2);
+  const minDistY = Math.min(13, (markerHeightPx / height) * 100 + 1.2);
+  // Keep each marker close to its true geographic position so the map stays meaningful.
+  const maxOffsetX = isCompact ? 5.5 : 11;
+  const maxOffsetY = isCompact ? 5 : 10;
+
+  const nodes = groups.map((group) => {
+    const ox = Math.max(4, Math.min(96, Number(group.point.x)));
+    const oy = Math.max(5, Math.min(95, Number(group.point.y) * yScale));
+    return { group, ox, oy, x: ox, y: oy };
+  });
+
+  for (let iteration = 0; iteration < 120; iteration += 1) {
+    let moved = false;
+
+    for (let i = 0; i < nodes.length; i += 1) {
+      for (let j = i + 1; j < nodes.length; j += 1) {
+        const a = nodes[i];
+        const b = nodes[j];
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const overlapX = minDistX - Math.abs(dx);
+        const overlapY = minDistY - Math.abs(dy);
+
+        if (overlapX > 0 && overlapY > 0) {
+          if (overlapX / minDistX < overlapY / minDistY) {
+            const push = (overlapX / 2 + 0.2) * (dx >= 0 ? 1 : -1);
+            a.x -= push;
+            b.x += push;
+          } else {
+            const push = (overlapY / 2 + 0.2) * (dy >= 0 ? 1 : -1);
+            a.y -= push;
+            b.y += push;
+          }
+
+          moved = true;
+        }
+      }
+    }
+
+    nodes.forEach((node) => {
+      node.x = Math.max(node.ox - maxOffsetX, Math.min(node.ox + maxOffsetX, node.x));
+      node.y = Math.max(node.oy - maxOffsetY, Math.min(node.oy + maxOffsetY, node.y));
+      node.x = Math.max(4, Math.min(96, node.x));
+      node.y = Math.max(5, Math.min(95, node.y));
     });
-  });
 
-  return offsets;
+    if (!moved) {
+      break;
+    }
+  }
+
+  return nodes;
 }
 
 function renderUniversityPredictionList(data, state, refs) {
@@ -4395,6 +4508,115 @@ function renderUniversityPredictionCard(entry) {
   `;
 }
 
+function syncGaokaoModalScrollLock() {
+  const detailOpen = document.querySelector("[data-gaokao-detail-modal]")?.classList.contains("is-open");
+  const provinceOpen = document.querySelector("[data-gaokao-province-modal]")?.classList.contains("is-open");
+  document.body.classList.toggle("modal-open", Boolean(detailOpen || provinceOpen));
+}
+
+function populateGaokaoProvincePanel(locationProvince, data, state, refs) {
+  if (!refs.provinceBody) {
+    return false;
+  }
+
+  const entries = getCurrentGaokaoEntries(data, state).filter(
+    (entry) => getGaokaoLocationProvince(entry) === locationProvince
+  );
+
+  if (!entries.length) {
+    return false;
+  }
+
+  refs.provinceBody.innerHTML = renderGaokaoProvincePanel(locationProvince, entries, state);
+  refs.provinceBody.querySelectorAll("[data-open-gaokao-detail-from-province]").forEach((button) => {
+    const entry = entries.find((item) => item.universityId === button.dataset.openGaokaoDetailFromProvince);
+
+    if (entry) {
+      button.addEventListener("click", () => openGaokaoUniversityDetail(entry, state, refs));
+    }
+  });
+
+  return true;
+}
+
+function openGaokaoProvinceModal(locationProvince, data, state, refs) {
+  if (!refs.provinceModal || !populateGaokaoProvincePanel(locationProvince, data, state, refs)) {
+    return;
+  }
+
+  state.selectedLocationProvince = locationProvince;
+  refs.provinceModal.classList.add("is-open");
+  refs.provinceModal.setAttribute("aria-hidden", "false");
+  refs.provinceModal.scrollTop = 0;
+  const card = refs.provinceModal.querySelector(".gaokao-province-card");
+
+  if (card) {
+    card.scrollTop = 0;
+  }
+
+  document.body.classList.add("modal-open");
+}
+
+function closeGaokaoProvinceModal() {
+  const modal = document.querySelector("[data-gaokao-province-modal]");
+
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+
+  if (window.gaokaoPredictionState) {
+    window.gaokaoPredictionState.selectedLocationProvince = null;
+  }
+
+  syncGaokaoModalScrollLock();
+}
+
+function renderGaokaoProvincePanel(locationProvince, entries, state) {
+  const sorted = entries.slice().sort(
+    (a, b) => (b.prediction?.predictedScore || 0) - (a.prediction?.predictedScore || 0)
+  );
+  const provinceName = gkProvinceText(locationProvince);
+  const scoreValues = sorted.map((entry) => entry.prediction?.predictedScore).filter(Number.isFinite);
+  const rangeStr = formatMinMax(scoreValues, "分");
+  const sourceProvinceText = state.province ? gkProvinceText(state.province) : "";
+  const subjText = state.subjectType ? gkSubjectText(state.subjectType) : "";
+  const contextText = getLang() === "en"
+    ? `${sourceProvinceText} ${subjText}`.trim()
+    : `${sourceProvinceText}${subjText}`;
+  const metaText = getLang() === "en"
+    ? `${contextText} · ${sorted.length} universities · range ${rangeStr}`
+    : `${contextText}招生 · ${sorted.length} 所高校 · 预测范围 ${rangeStr}`;
+
+  const items = sorted.map((entry) => `
+    <button type="button" class="gaokao-province-school" data-open-gaokao-detail-from-province="${escapeHtml(entry.universityId)}">
+      <span class="gaokao-province-school-main">
+        <em>${escapeHtml(gkUniversityName(entry))}</em>
+        <small>${escapeHtml(gkLocationText(entry))} · ${escapeHtml(gkMajorGroupText(entry.majorGroup))}</small>
+      </span>
+      <span class="gaokao-province-school-score">
+        <strong>${formatNullable(entry.prediction.predictedScore, "分")}</strong>
+        <small>${escapeHtml(L("位次", "Rank"))} ${formatRank(entry.prediction.predictedRank)}</small>
+      </span>
+    </button>
+  `).join("");
+
+  return `
+    <div class="gaokao-province-head">
+      <div>
+        <p class="kicker">${escapeHtml(L("高校所在省份", "University region"))}</p>
+        <h2 id="gaokao-province-title">${escapeHtml(provinceName)}</h2>
+        <p>${escapeHtml(metaText)}</p>
+      </div>
+      <span class="gaokao-province-count">${sorted.length}</span>
+    </div>
+    <p class="gaokao-province-tip">${escapeHtml(L("点击任意高校，查看 2021-2026 年分数 / 位次趋势与预测依据。", "Tap any university to view its 2021-2026 score / rank trend and forecast basis."))}</p>
+    <div class="gaokao-province-school-list">${items}</div>
+  `;
+}
+
 function openGaokaoUniversityDetail(entry, state, refs) {
   if (!entry || !refs.detailModal || !refs.detailBody) {
     return;
@@ -4416,7 +4638,7 @@ function closeGaokaoUniversityDetail() {
 
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-open");
+  syncGaokaoModalScrollLock();
 }
 
 function renderUniversityDetail(entry) {
@@ -4474,7 +4696,7 @@ function renderUniversityDetail(entry) {
     ${entry.predictionReason ? `
       <div class="gaokao-detail-judgement gaokao-detail-reason">
         <strong>${escapeHtml(L(`${predictionYear} 预测依据`, `${predictionYear} forecast basis`))}</strong>
-        <p>${escapeHtml(entry.predictionReason)}</p>
+        <p>${escapeHtml(getLang() === "en" && entry.predictionReasonEn ? entry.predictionReasonEn : entry.predictionReason)}</p>
       </div>
     ` : ""}
 
