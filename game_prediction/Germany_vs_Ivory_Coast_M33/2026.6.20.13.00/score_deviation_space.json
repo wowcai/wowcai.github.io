@@ -1,0 +1,644 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T05:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T13:00:00+08:00",
+  "quality_label": "usable",
+  "match_id": "M33",
+  "team_a": "Germany",
+  "team_b": "Ivory Coast",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概。"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.12777777777777777,
+      "probability_percent": 12.7778,
+      "outcome": "draw",
+      "sample_count": 345,
+      "path_deviation": 0.7138550300685893,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "7-3",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9971014492753624,
+      "reason_cn": "天气与场地条件、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management",
+        "H_midspace_ndicka_germany"
+      ]
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.14451896684904672,
+      "probability": 0.10407407407407407,
+      "probability_percent": 10.4074,
+      "outcome": "team_a",
+      "sample_count": 281,
+      "path_deviation": 0.7026415833085204,
+      "result_surprise": 0.1855072463768116,
+      "reason_cn": "边路突破与肋部防守对位；Germany在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_germany_541_risk_control"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.14483224051790491,
+      "probability": 0.10407407407407407,
+      "probability_percent": 10.4074,
+      "outcome": "team_a",
+      "sample_count": 281,
+      "path_deviation": 0.702833804200239,
+      "result_surprise": 0.1855072463768116,
+      "reason_cn": "Germany在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "7-0",
+      "deviation": 0.2624193155672812,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.3395322902854195,
+      "result_surprise": 0.9942028985507246,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.33325034337154696,
+      "probability": 0.08074074074074074,
+      "probability_percent": 8.0741,
+      "outcome": "team_a",
+      "sample_count": 218,
+      "path_deviation": 0.7201170884668262,
+      "result_surprise": 0.36811594202898545,
+      "reason_cn": "Germany打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.3963144654363637,
+      "probability": 0.07333333333333333,
+      "probability_percent": 7.3333,
+      "outcome": "team_b",
+      "sample_count": 198,
+      "path_deviation": 0.7275973008102837,
+      "result_surprise": 0.4260869565217391,
+      "reason_cn": "Ivory Coast通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.41214380627290503,
+      "probability": 0.06555555555555556,
+      "probability_percent": 6.5556,
+      "outcome": "draw",
+      "sample_count": 177,
+      "path_deviation": 0.7045340710144351,
+      "result_surprise": 0.4869565217391304,
+      "reason_cn": "天气与场地条件；双方防守结构有效，机会转化不足。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.4380533420853866,
+      "probability": 0.055185185185185184,
+      "probability_percent": 5.5185,
+      "outcome": "team_a",
+      "sample_count": 149,
+      "path_deviation": 0.676730618992546,
+      "result_surprise": 0.5681159420289854,
+      "reason_cn": "Germany打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.4959078257118397,
+      "probability": 0.05407407407407407,
+      "probability_percent": 5.4074,
+      "outcome": "team_b",
+      "sample_count": 146,
+      "path_deviation": 0.7075471483091449,
+      "result_surprise": 0.5768115942028985,
+      "reason_cn": "Ivory Coast通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.49979277077152867,
+      "probability": 0.06222222222222222,
+      "probability_percent": 6.2222,
+      "outcome": "draw",
+      "sample_count": 168,
+      "path_deviation": 0.7442675808978988,
+      "result_surprise": 0.5130434782608695,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.5090568777931622,
+      "probability": 0.03888888888888889,
+      "probability_percent": 3.8889,
+      "outcome": "team_a",
+      "sample_count": 105,
+      "path_deviation": 0.6516241644644137,
+      "result_surprise": 0.6956521739130435,
+      "reason_cn": "边路突破与肋部防守对位；Germany打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.519913124082476,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.5022096161605253,
+      "result_surprise": 0.9855072463768116,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6140404688450625,
+      "probability": 0.03481481481481481,
+      "probability_percent": 3.4815,
+      "outcome": "team_a",
+      "sample_count": 94,
+      "path_deviation": 0.6988724730248718,
+      "result_surprise": 0.7275362318840579,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.6375985884935982,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.5744199777714444,
+      "result_surprise": 0.9855072463768116,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.6497523647388327,
+      "probability": 0.028148148148148148,
+      "probability_percent": 2.8148,
+      "outcome": "team_b",
+      "sample_count": 76,
+      "path_deviation": 0.6926912100860959,
+      "result_surprise": 0.7797101449275362,
+      "reason_cn": "边路突破与肋部防守对位；Ivory Coast充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.6676390413184493,
+      "probability": 0.02,
+      "probability_percent": 2.0,
+      "outcome": "team_b",
+      "sample_count": 54,
+      "path_deviation": 0.6693295782574616,
+      "result_surprise": 0.8434782608695652,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6833844322428275,
+      "probability": 0.01962962962962963,
+      "probability_percent": 1.963,
+      "outcome": "team_a",
+      "sample_count": 53,
+      "path_deviation": 0.6774299994722031,
+      "result_surprise": 0.8463768115942029,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.7083073370795772,
+      "probability": 0.01037037037037037,
+      "probability_percent": 1.037,
+      "outcome": "team_b",
+      "sample_count": 28,
+      "path_deviation": 0.6537034369980841,
+      "result_surprise": 0.9188405797101449,
+      "reason_cn": "边路突破与肋部防守对位；Ivory Coast充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "6-4",
+      "deviation": 0.7382995797658704,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.6315266001454252,
+      "result_surprise": 0.9942028985507246,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 0.7400917417870552,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.637308523090083,
+      "result_surprise": 0.9855072463768116,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.7551191155263128,
+      "probability": 0.017037037037037038,
+      "probability_percent": 1.7037,
+      "outcome": "team_b",
+      "sample_count": 46,
+      "path_deviation": 0.7105202172066246,
+      "result_surprise": 0.8666666666666667,
+      "reason_cn": "Ivory Coast充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.7588985264239961,
+      "probability": 0.01962962962962963,
+      "probability_percent": 1.963,
+      "outcome": "team_a",
+      "sample_count": 53,
+      "path_deviation": 0.7237645240868492,
+      "result_surprise": 0.8463768115942029,
+      "reason_cn": "天气与场地条件、边路突破与肋部防守对位；Germany打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management",
+        "H_germany_541_risk_control"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 0.7607349894738673,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.6437319350635385,
+      "result_surprise": 0.9971014492753624,
+      "reason_cn": "天气与场地条件、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management",
+        "H_germany_541_risk_control"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.7682092010345071,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.6530002941113152,
+      "result_surprise": 0.9884057971014493,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ivory_coast_wide_transition_vs_germany_push",
+        "H_germany_541_risk_control"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.7946861631396689,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "team_a",
+      "sample_count": 20,
+      "path_deviation": 0.6942183635525865,
+      "result_surprise": 0.9420289855072463,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.8065066899926528,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.6796206811036956,
+      "result_surprise": 0.9826086956521739,
+      "reason_cn": "关键球员状态与角色变化；Ivory Coast充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.8082934585007457,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6744739880772053,
+      "result_surprise": 0.9942028985507246,
+      "reason_cn": "天气与场地条件、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management",
+        "H_germany_541_risk_control"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.8133189545270832,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "draw",
+      "sample_count": 30,
+      "path_deviation": 0.7212587972845729,
+      "result_surprise": 0.9130434782608695,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.846101159440101,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.7007938471316069,
+      "result_surprise": 0.9884057971014493,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_germany_541_risk_control",
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.8550829811500542,
+      "probability": 0.015185185185185185,
+      "probability_percent": 1.5185,
+      "outcome": "team_a",
+      "sample_count": 41,
+      "path_deviation": 0.7640530321330856,
+      "result_surprise": 0.881159420289855,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-7",
+      "deviation": 0.8609392456264253,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7052160410908719,
+      "result_surprise": 0.9971014492753624,
+      "reason_cn": "天气与场地条件、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management",
+        "H_midspace_ndicka_germany"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.87077646430202,
+      "probability": 0.004814814814814815,
+      "probability_percent": 0.4815,
+      "outcome": "team_a",
+      "sample_count": 13,
+      "path_deviation": 0.7299811351461079,
+      "result_surprise": 0.9623188405797102,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_germany_541_risk_control",
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.8876599701931657,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "draw",
+      "sample_count": 6,
+      "path_deviation": 0.7294153412897625,
+      "result_surprise": 0.9826086956521739,
+      "reason_cn": "边路突破与肋部防守对位、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_germany_541_risk_control",
+        "H_midspace_ndicka_germany"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.8992889064489741,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_a",
+      "sample_count": 9,
+      "path_deviation": 0.7412329885961455,
+      "result_surprise": 0.9739130434782609,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.9161626246383975,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "team_a",
+      "sample_count": 20,
+      "path_deviation": 0.7687548346106817,
+      "result_surprise": 0.9420289855072463,
+      "reason_cn": "边路突破与肋部防守对位、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_germany_541_risk_control",
+        "H_midspace_ndicka_germany"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.9224551010640716,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_b",
+      "sample_count": 14,
+      "path_deviation": 0.7632512726903766,
+      "result_surprise": 0.9594202898550724,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_ivory_coast_wide_transition_vs_germany_push"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.9630023008265169,
+      "probability": 0.0044444444444444444,
+      "probability_percent": 0.4444,
+      "outcome": "team_b",
+      "sample_count": 12,
+      "path_deviation": 0.7850090223872046,
+      "result_surprise": 0.9652173913043478,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 1.0,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_a",
+      "sample_count": 16,
+      "path_deviation": 0.8139533904297858,
+      "result_surprise": 0.9536231884057971,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_germany_541_risk_control"
+      ]
+    },
+    {
+      "score": "7-1",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.8423786383033617,
+      "result_surprise": 0.991304347826087,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_germany_541_risk_control"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.8933291648030368,
+      "result_surprise": 0.9942028985507246,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_context_weather_tempo_management"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.8395322902854194,
+      "result_surprise": 0.9942028985507246,
+      "reason_cn": "边路突破与肋部防守对位、天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ivory_coast_wide_transition_vs_germany_push",
+        "H_context_weather_tempo_management"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8702387926520055,
+      "result_surprise": 0.9971014492753624,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_germany_541_risk_control"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8702387926520055,
+      "result_surprise": 0.9971014492753624,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midspace_ndicka_germany",
+        "H_germany_541_risk_control"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

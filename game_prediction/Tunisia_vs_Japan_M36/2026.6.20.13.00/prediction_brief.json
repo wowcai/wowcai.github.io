@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T05:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T13:00:00+08:00",
+  "match": {
+    "match_id": "M36",
+    "team_a": "Tunisia",
+    "team_b": "Japan",
+    "kickoff_utc": "2026-06-21T04:00:00Z",
+    "venue": "Monterrey Stadium",
+    "stage": "group",
+    "group": "F",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使。",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 162,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.19111111111111112,
+    "draw": 0.2877777777777778,
+    "team_b_win": 0.5211111111111111
+  },
+  "most_likely_outcome": {
+    "label": "Japan。",
+    "probability": 0.5211111111111111
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.17407407407407408
+    },
+    {
+      "score": "1-1",
+      "probability": 0.1274074074074074
+    },
+    {
+      "score": "0-0",
+      "probability": 0.12481481481481481
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "久保建英膝伤缺席、远藤航因脚伤落选，削弱日本创造与中路衔接。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_4bb5b427178b",
+        "E_59e43d2ea53e"
+      ],
+      "source_names": [
+        "Mainichi / Kyodo",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "突尼斯被多源描述为组织严密，进攻更依赖定位球和低位后的快速反击。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_85a4caad89fd",
+        "E_07e3f9139c6f"
+      ],
+      "source_names": [
+        "Goal.com",
+        "Rotowire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "突尼斯资格赛长期零封，但世界杯曾1。负瑞典，防守稳定性有疑问。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_9b0a2a5c57ca",
+        "E_468cff075ae3"
+      ],
+      "source_names": [
+        "Daily Maverick",
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "日本可退。-4-1低位，并。-4-2-1预期体系，阵型弹性较明确。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_bdf12f2fa292",
+        "E_43146d115e74"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times",
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在蒙特雷进行，天气预报称比赛时段气温升至80多华氏度。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_64691bbdf998",
+        "E_de8676311911"
+      ],
+      "source_names": [
+        "FIFA",
+        "AccuWeather"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "FIFA赛前页面未显示官方首发，Goal也称当时尚无确认预测十一人。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_286a6859703f",
+        "E_e7ef61cd6113"
+      ],
+      "source_names": [
+        "FIFA",
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-20T05:00:00Z",
+    "source_state_sha256": "f476b950b98b22928ce41ecd7c8c2e55296de8b293c240397c0b6cd02ca18fce",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "主预测明显偏向日本不败与中低比分(team_b_win 0.52,xG 0.73/1.39,代表比分多为0-0/1-1),三类高偏离情景作为尾部候选筛选合。均未触碰冻结概率。提案对证据和机制的引用基本真实可核,机制链能支撑大多数比分。主要问题集中在upset。3-2要求突尼斯打。。与其攻击。attack 0.48、finishing 0.42、xG 0.73)及定位球/反击为主的进攻模式严重不。属于为追求尾部极端而过度拉伸。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比。",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.16592592592592592,
+        "attention_level": "medium",
+        "attention_label_cn": "。",
+        "evidence_strength": 0.46,
+        "summary_cn": "开放大比分值得中等关注:日本具备高压、边路推进和转换能力,突尼斯首战大比分失利及追分压力可能在后段制造空。但久保与远藤缺席、突尼斯低位组织、日本可退。-4-1都限制了持续对攻的确定。因此该情景更依赖早球、转换失误或体能下降触发,而非盘面自然走向。",
+        "caution_cn": "该情景与日本大胜、突尼斯爆冷中的部分比分存在结构重叠,不能与其他情景概率相。若前30分钟无进球且日本主动降节。开放大比分吸引力明显下降。-2。-3均要求突尼斯打入2。其上限有。已通过较低support_grade约束。",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.03111111111111111,
+            "tail_focus_conditional_probability": 0.21229991575400167,
+            "support_grade": 1,
+            "script_cn": "日本通过边路和转换先取得优势,突尼斯落后后依靠定位球或反击追回一。但继续前压留下空。日本后段再进球锁定两球胜。"
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.03111111111111111,
+            "tail_focus_conditional_probability": 0.17691659646166807,
+            "support_grade": 0,
+            "script_cn": "日本阶段性压迫和边路单挑制造进。突尼斯通过低位反击、定位球和后段体能空间两度回。比赛进入高波动拉锯。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.10074074074074074,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.57,
+        "summary_cn": "一边倒崩盘是三类高偏离中最值得关注的分支。日本整体强。Elo 1906。633)、阵型弹性和转换能力明显占优;突尼斯近。-5重败,若因小组压力前压或早早落。防线可能被日本边路与反击连续击穿。但久保、远藤缺席和高温会削弱日本持续高压与中路创。限制极端比分上限。",
+        "caution_cn": "崩盘剧本高度依赖首球时间、突尼斯是否被迫前压及日本替代攻击组合效。若突尼斯五后卫低位成。0-3以上比分会显著受抑。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.044444444444444446,
+            "tail_focus_conditional_probability": 0.5194029850746269,
+            "support_grade": 2,
+            "script_cn": "日本早中段通过高压和边路推进建立领。突尼斯进攻停留在零散定位球和反击,落后后出球质量下。日本利用转换再下一城。"
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.016666666666666666,
+            "tail_focus_conditional_probability": 0.16119402985074627,
+            "support_grade": 1,
+            "script_cn": "日本在前60分钟连续压迫得手,突尼斯追分后防线进一步拉开,末段因体能和空间问题再被日本打穿。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.19111111111111112,
+        "attention_level": "medium",
+        "attention_label_cn": "。",
+        "evidence_strength": 0.4,
+        "summary_cn": "爆冷适用但不应过度放大。支持点在于久保与远藤缺席削弱日本中路创造、衔接与防守锚点,突尼斯具备低位组织、定位球和快速反击的清晰路径,蒙特雷高温可能压低日本高压续航。反向因素是日本整体实力、防守弹性和边路深度仍优于突尼斯,且突尼斯近期防守出现重大失稳。突尼斯获胜更可能以小比分实现。",
+        "caution_cn": "爆冷分支需要突尼斯中后场核心实际首发并长期维持低位纪律,同时日本替代攻击手未能迅速解决终三区创造问。即便如此,突尼斯打入多球的概率很低,应聚焦小比分胜。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.08518518518518518,
+            "tail_focus_conditional_probability": 0.4697072838665759,
+            "support_grade": 1,
+            "script_cn": "突尼斯长时间保持低位紧凑,限制日本中路渗。比赛由一次定位球或快速反击决。领先后继续收缩守住小胜。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.047407407407407405,
+            "tail_focus_conditional_probability": 0.2614023144996596,
+            "support_grade": 1,
+            "script_cn": "突尼斯先通过定位球或反击得分,日本依靠边路攻势追近,但远藤缺席后的中场保护不足让突尼斯再抓一次转换机会。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

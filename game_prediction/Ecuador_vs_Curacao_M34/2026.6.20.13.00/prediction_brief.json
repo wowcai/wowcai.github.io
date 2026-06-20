@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T05:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T13:00:00+08:00",
+  "match": {
+    "match_id": "M34",
+    "team_a": "Ecuador",
+    "team_b": "Curacao",
+    "kickoff_utc": "2026-06-21T00:00:00Z",
+    "venue": "Kansas City Stadium",
+    "stage": "group",
+    "group": "E",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.875,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率87.5%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.772962962962963,
+    "draw": 0.1862962962962963,
+    "team_b_win": 0.040740740740740744
+  },
+  "most_likely_outcome": {
+    "label": "Ecuador。",
+    "probability": 0.772962962962963
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.20777777777777778
+    },
+    {
+      "score": "2-0",
+      "probability": 0.18851851851851853
+    },
+    {
+      "score": "3-0",
+      "probability": 0.11925925925925926
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "The Athletic称厄瓜多。-4-2压迫、快速复位并善于反压迫。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_09fe8b9a8286"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "Reuters称库拉索常用紧凑防守块，保持组织后寻找反击机会。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_ae38f5bc441b"
+      ],
+      "source_names": [
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "The Athletic称库拉索对澳大利亚曾用五后卫，赛事中可能延续。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_533b7078c961"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "库拉索上。-7负德国，FBref也列其最近一战为1-7失利。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_97c95a627f3b",
+        "E_f01a7761b3c0"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "FBref.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "FIFA称厄瓜多尔南美区预选赛第二，The Analyst称其升至。4位。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_05bb4747aaa6",
+        "E_d67ef9b03969"
+      ],
+      "source_names": [
+        "FIFA",
+        "The Analyst"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "堪萨斯城球场为FIFA要求拓宽场地，并铺设维护天然草。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_bfbfc8a0d6d4"
+      ],
+      "source_names": [
+        "KMBC"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-20T05:00:00Z",
+    "source_state_sha256": "af4b7b8c8cbda3c3780ea3b5bbb07c0985211e7ac918d979d89012f70d4a31d9",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "主线判断与候选筛选总体可靠：三个高偏离情景的方向与主预测一致，厄瓜多尔控球、压迫、防守稳固的证据被真实引用，库拉索上。-7和低位反击身份也被对称地用于支撑与反驳。高偏离比分严重集中于厄瓜多尔大胜路径，blowout(3-0为主)证据最强、最值得关注，high_scoring次之，upset证据明显薄弱、分级以负向为主，符合实际。主要问题集中在upset情景的机制引用：H_press_restdef_001方向为team_a上行、te。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比。",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.20629629629629628,
+        "attention_level": "medium",
+        "attention_label_cn": "。",
+        "evidence_strength": 0.46,
+        "summary_cn": "总进球至。球的主要驱动是厄瓜多尔实力、压迫与连续进攻优势,加上库拉索上轮大比分失利暴露的防线承。但库拉索预期低位、五后卫、收窄保护禁区会压低节奏与机会质。使开放大比分非核心情。而依赖厄瓜多尔早进球或中段连续破局。候选集中于厄瓜多尔大胜带一球或不带。未纳。-2。-2等对攻型比分,与厄瓜多尔防守评价一。判断合理。",
+        "caution_cn": "大比分与一边倒高度重。不能相加;若库拉索低位维持纪律、厄瓜多尔边路处理一。比赛可能停在1-0。-0。-0附近。天气与最终首发仍有不确定性。",
+        "top_scores": [
+          {
+            "score": "4-0",
+            "base_probability": 0.0637037037037037,
+            "tail_focus_conditional_probability": 0.34900236726411904,
+            "support_grade": 1,
+            "script_cn": "厄瓜多尔持续高压,切断库拉索反击第一。依靠二次进攻和边路转移逐步打穿低位防线;库拉索长时间被压在本方半。反击质量不足,后段再失球。"
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.046296296296296294,
+            "tail_focus_conditional_probability": 0.2113628677713899,
+            "support_grade": 0,
+            "script_cn": "厄瓜多尔控球和压迫占。取得多次禁区机会;库拉索低位防守后通过一次反击、二点球或转换机会追回一。但整体仍被压制。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.25592592592592595,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.62,
+        "summary_cn": "一边倒崩盘是三个高偏离情景中证据最强、最值得关注的分支。厄瓜多尔整体基准、南美区预选赛表现、压迫与防守结构均明显优于库拉索;库拉索上。-7负德国提供了防线在高强度压迫和持续领地压力下被打开的现实参照。低位五后卫会提供抵。但若早丢球或二点球持续失。净。球以上路径清晰。-0作为池内主导比分给予最高支。。条推演中3-0/2-0高频出现一致。",
+        "caution_cn": "崩盘需要厄瓜多尔把领地与压迫优势转化为较高终结效率。若库拉索五后卫低位保护成功,或厄瓜多尔领先后主动降。比分可能停在2-0。-0附近。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.11925925925925926,
+            "tail_focus_conditional_probability": 0.5364816729863267,
+            "support_grade": 2,
+            "script_cn": "厄瓜多尔。0分钟持续压制但不必完全放大节。通过压迫回收、禁区二次进攻和前场核心终结取得稳定领先;库拉索反击被中场屏障和中卫休息防守消化。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.0637037037037037,
+            "tail_focus_conditional_probability": 0.2371596001378835,
+            "support_grade": 1,
+            "script_cn": "厄瓜多尔在高位压迫下不断制造二次进。库拉索低位长期横移和解围后无法建立反。后段因体能和空间管理下降再被打入一球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.04074074074074074,
+        "attention_level": "low",
+        "attention_label_cn": "。",
+        "evidence_strength": 0.24,
+        "summary_cn": "爆冷路径存在但极。库拉索需依靠五后卫低位、紧凑防守、反击第一脚和少量机会的高效率,同时限制厄瓜多尔压迫后的二次进攻。现有证据更多支持厄瓜多尔整体优势、防守稳固与压迫控制,故爆冷只能低关注,分级以中性至负向为主,方向合理。-1作为池内主导且最不依赖持续创造机会的路径保留中。1-2。-2按偏离程度降。符合实际。",
+        "caution_cn": "爆冷候选不能与平局或小比分守局混同:库拉索低位守住一段时间不等于能赢球。该情景需要厄瓜多尔进攻效率偏低且库拉索反击或定位球转化率偏高,目前无机制主动支持库拉索获胜。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.02259259259259259,
+            "tail_focus_conditional_probability": 0.6039603960396039,
+            "support_grade": 0,
+            "script_cn": "库拉索长时间五后卫低位守住禁。中路收窄并压低节。厄瓜多尔控球占优但机会质量不。库拉索通过一次反击、二点球推进或前场支点配合取得唯一进球。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.011111111111111112,
+            "tail_focus_conditional_probability": 0.25247524752475253,
+            "support_grade": -1,
+            "script_cn": "厄瓜多尔通过压迫和控球取得进。但库拉索在被动局面下把少数反击机会转化为两个进球,比赛后段依靠低位防线守住优势。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T05:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T13:00:00+08:00",
+  "quality_label": "ready",
+  "match_id": "M36",
+  "team_a": "Tunisia",
+  "team_b": "Japan",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概。"
+  },
+  "points": [
+    {
+      "score": "0-1",
+      "deviation": 0.0,
+      "probability": 0.17407407407407408,
+      "probability_percent": 17.4074,
+      "outcome": "team_b",
+      "sample_count": 470,
+      "path_deviation": 0.6686418081774897,
+      "result_surprise": 0.0,
+      "reason_cn": "抢断后的快速转换；Japan通过压迫或转换取得一球优势。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.997872340425532,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.19900559417859756,
+      "probability": 0.1274074074074074,
+      "probability_percent": 12.7407,
+      "outcome": "draw",
+      "sample_count": 344,
+      "path_deviation": 0.6514774162129473,
+      "result_surprise": 0.26808510638297867,
+      "reason_cn": "抢断后的快速转换；双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": [
+        "H4"
+      ]
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.2211219277988765,
+      "probability": 0.12481481481481481,
+      "probability_percent": 12.4815,
+      "outcome": "draw",
+      "sample_count": 337,
+      "path_deviation": 0.6575928420490688,
+      "result_surprise": 0.28297872340425534,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.3015402131096104,
+      "probability": 0.11481481481481481,
+      "probability_percent": 11.4815,
+      "outcome": "team_b",
+      "sample_count": 310,
+      "path_deviation": 0.6780571510223696,
+      "result_surprise": 0.34042553191489366,
+      "reason_cn": "Japan充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.41401630947405055,
+      "probability": 0.08518518518518518,
+      "probability_percent": 8.5185,
+      "outcome": "team_a",
+      "sample_count": 230,
+      "path_deviation": 0.6582902254362609,
+      "result_surprise": 0.5106382978723405,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Tunisia在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.4670760986572253,
+      "probability": 0.08296296296296296,
+      "probability_percent": 8.2963,
+      "outcome": "team_b",
+      "sample_count": 224,
+      "path_deviation": 0.6853279998521978,
+      "result_surprise": 0.5234042553191489,
+      "reason_cn": "Japan通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.5750755145139573,
+      "probability": 0.047407407407407405,
+      "probability_percent": 4.7407,
+      "outcome": "team_a",
+      "sample_count": 128,
+      "path_deviation": 0.6443693175496676,
+      "result_surprise": 0.7276595744680852,
+      "reason_cn": "抢断后的快速转换；Tunisia在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H4"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.5791548204209405,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5014773156363681,
+      "result_surprise": 0.997872340425532,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1",
+        "H4"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.6139772068356619,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5237331167431087,
+      "result_surprise": 0.997872340425532,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.6163792308287891,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "draw",
+      "sample_count": 10,
+      "path_deviation": 0.5355792720528731,
+      "result_surprise": 0.9787234042553191,
+      "reason_cn": "抢断后的快速转换、久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1",
+        "H2"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.6652691906506398,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.5588063482093326,
+      "result_surprise": 0.9936170212765958,
+      "reason_cn": "久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H3"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.686594864638918,
+      "probability": 0.044444444444444446,
+      "probability_percent": 4.4444,
+      "outcome": "team_b",
+      "sample_count": 120,
+      "path_deviation": 0.7064786381195454,
+      "result_surprise": 0.7446808510638299,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Japan充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6956634622530755,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.5782320376354338,
+      "result_surprise": 0.9936170212765958,
+      "reason_cn": "久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H3"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.7122931792351618,
+      "probability": 0.03111111111111111,
+      "probability_percent": 3.1111,
+      "outcome": "draw",
+      "sample_count": 84,
+      "path_deviation": 0.6816591691377983,
+      "result_surprise": 0.8212765957446808,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.7137963030170212,
+      "probability": 0.03111111111111111,
+      "probability_percent": 3.1111,
+      "outcome": "team_b",
+      "sample_count": 84,
+      "path_deviation": 0.682619850681259,
+      "result_surprise": 0.8212765957446808,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Japan充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.7152386727742683,
+      "probability": 0.026296296296296297,
+      "probability_percent": 2.6296,
+      "outcome": "team_a",
+      "sample_count": 71,
+      "path_deviation": 0.66864808588623,
+      "result_surprise": 0.848936170212766,
+      "reason_cn": "Tunisia打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.7232541151386105,
+      "probability": 0.018518518518518517,
+      "probability_percent": 1.8519,
+      "outcome": "team_b",
+      "sample_count": 50,
+      "path_deviation": 0.6497120226530778,
+      "result_surprise": 0.8936170212765957,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.7400916969813331,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6054814980815963,
+      "result_surprise": 0.9957446808510638,
+      "reason_cn": "久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7690429617579682,
+      "probability": 0.016666666666666666,
+      "probability_percent": 1.6667,
+      "outcome": "team_b",
+      "sample_count": 45,
+      "path_deviation": 0.673248430571038,
+      "result_surprise": 0.9042553191489362,
+      "reason_cn": "抢断后的快速转换；Japan充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H1",
+        "H4"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.7701669543833837,
+      "probability": 0.009259259259259259,
+      "probability_percent": 0.9259,
+      "outcome": "team_a",
+      "sample_count": 25,
+      "path_deviation": 0.6510535435746776,
+      "result_surprise": 0.9468085106382979,
+      "reason_cn": "Tunisia打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.7762215027814053,
+      "probability": 0.01037037037037037,
+      "probability_percent": 1.037,
+      "outcome": "team_a",
+      "sample_count": 28,
+      "path_deviation": 0.6583601355200879,
+      "result_surprise": 0.9404255319148936,
+      "reason_cn": "紧凑防守对进攻空间的压缩、久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.7790594053774289,
+      "probability": 0.014444444444444444,
+      "probability_percent": 1.4444,
+      "outcome": "team_b",
+      "sample_count": 39,
+      "path_deviation": 0.6727761967289038,
+      "result_surprise": 0.9170212765957447,
+      "reason_cn": "紧凑防守对进攻空间的压缩、久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.8291431654841026,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "team_a",
+      "sample_count": 18,
+      "path_deviation": 0.6807269786825787,
+      "result_surprise": 0.9617021276595745,
+      "reason_cn": "久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；Tunisia打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.8917267336420676,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "team_b",
+      "sample_count": 18,
+      "path_deviation": 0.7207255999397647,
+      "result_surprise": 0.9617021276595745,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H4",
+        "H1"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.905864419870193,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_b",
+      "sample_count": 11,
+      "path_deviation": 0.7217416857322206,
+      "result_surprise": 0.9765957446808511,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.9200911399534573,
+      "probability": 0.005555555555555556,
+      "probability_percent": 0.5556,
+      "outcome": "team_b",
+      "sample_count": 15,
+      "path_deviation": 0.7354169664682959,
+      "result_surprise": 0.9680851063829787,
+      "reason_cn": "紧凑防守对进攻空间的压缩、久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.9889888997908031,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.7714314952830846,
+      "result_surprise": 0.9829787234042553,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H4",
+        "H1"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.989334546310288,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.7659240918139821,
+      "result_surprise": 0.9936170212765958,
+      "reason_cn": "久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移、紧凑防守对进攻空间的压缩；Tunisia打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H2",
+        "H3"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 1.0,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.7761776211080197,
+      "result_surprise": 0.9872340425531915,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.8854204429031207,
+      "result_surprise": 0.9936170212765958,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H4",
+        "H1"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.8664287279575776,
+      "result_surprise": 0.9936170212765958,
+      "reason_cn": "久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "0-7",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.8327097278351934,
+      "result_surprise": 0.9957446808510638,
+      "reason_cn": "紧凑防守对进攻空间的压缩、久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "draw",
+      "sample_count": 2,
+      "path_deviation": 0.8360569580059012,
+      "result_surprise": 0.9957446808510638,
+      "reason_cn": "久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "1-7",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.997872340425532,
+      "reason_cn": "紧凑防守对进攻空间的压缩、久保与远藤缺席削弱日本中路创造和攻守衔接，进攻更外移；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

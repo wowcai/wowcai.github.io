@@ -1,0 +1,804 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-20T05:00:00Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.21比赛预测_V740\\reports_Ecuador_vs_Curacao_M34\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "af4b7b8c8cbda3c3780ea3b5bbb07c0985211e7ac918d979d89012f70d4a31d9",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-20T05:00:00+00:00"
+  },
+  "match": {
+    "match_id": "M34",
+    "team_a": "Ecuador",
+    "team_b": "Curacao",
+    "kickoff_utc": "2026-06-21T00:00:00Z",
+    "venue": "Kansas City Stadium",
+    "stage": "group",
+    "group": "E",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.772962962962963,
+    "draw": 0.1862962962962963,
+    "team_b_win": 0.040740740740740744,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.20777777777777778
+      },
+      {
+        "score": "2-0",
+        "probability": 0.18851851851851853
+      },
+      {
+        "score": "3-0",
+        "probability": 0.11925925925925926
+      },
+      {
+        "score": "0-0",
+        "probability": 0.1025925925925926
+      },
+      {
+        "score": "1-1",
+        "probability": 0.07407407407407407
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Ecuador",
+    "underdog_side": "team_b",
+    "underdog_team": "Curacao",
+    "team_a_win": 0.772962962962963,
+    "draw": 0.1862962962962963,
+    "team_b_win": 0.040740740740740744,
+    "win_probability_gap": 0.7322222222222222,
+    "underdog_win_probability": 0.040740740740740744,
+    "favorite_fail_to_win_probability": 0.22703703703703704,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "主线判断与候选筛选总体可靠：三个高偏离情景的方向与主预测一致，厄瓜多尔控球、压迫、防守稳固的证据被真实引用，库拉索上。-7和低位反击身份也被对称地用于支撑与反驳。高偏离比分严重集中于厄瓜多尔大胜路径，blowout(3-0为主)证据最强、最值得关注，high_scoring次之，upset证据明显薄弱、分级以负向为主，符合实际。主要问题集中在upset情景的机制引用：H_press_restdef_001方向为team_a上行、team_b下行,本质上反对库拉索得分/获胜,被列为支撑爆冷比分属机制错配,已在审计中剔除并改用支持低节奏拥堵局面的H_lowblock_width_002。所有引用的Evidence ID均存在于输入,未发现新事实。未改变任何情景总概。仅做机制对齐与确认。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比。",
+      "definition_cn": "总进球至。球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.20629629629629628,
+      "attention_level": "medium",
+      "evidence_strength": 0.46,
+      "rationale_cn": "总进球至。球的主要驱动是厄瓜多尔实力、压迫与连续进攻优势,加上库拉索上轮大比分失利暴露的防线承。但库拉索预期低位、五后卫、收窄保护禁区会压低节奏与机会质。使开放大比分非核心情。而依赖厄瓜多尔早进球或中段连续破局。候选集中于厄瓜多尔大胜带一球或不带。未纳。-2。-2等对攻型比分,与厄瓜多尔防守评价一。判断合理。",
+      "supporting_evidence_ids": [
+        "E_09fe8b9a8286",
+        "E_97c95a627f3b",
+        "E_f01a7761b3c0",
+        "E_dea54792a46d",
+        "E_332843f1ef01",
+        "E_6281509ddc24"
+      ],
+      "counter_evidence_ids": [
+        "E_ae38f5bc441b",
+        "E_533b7078c961",
+        "E_32c3fd50d4c1"
+      ],
+      "caution_cn": "大比分与一边倒高度重。不能相加;若库拉索低位维持纪律、厄瓜多尔边路处理一。比赛可能停在1-0。-0。-0附近。天气与最终首发仍有不确定性。",
+      "audit_note_cn": "未作修改。四个候选均来自high_scoring。分级层次(4-0为正、其余中。与基础概率排序及机制支撑一。证据引用全部存在,予以保留。",
+      "candidate_pool": [
+        {
+          "score": "4-0",
+          "base_probability": 0.0637037037037037,
+          "base_conditional_probability": 0.30879712746858173,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.046296296296296294,
+          "base_conditional_probability": 0.2244165170556553,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.10951526032315978,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.08617594254937164,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.05206463195691203,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.05026929982046679,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.04488330341113106,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.03231597845601437,
+          "total_goals": 5,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0637037037037037,
+          "base_conditional_probability": 0.30879712746858173,
+          "tail_focus_conditional_probability": 0.34900236726411904,
+          "tail_focus_implied_overall_probability": 0.07199789576522751,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "厄瓜多尔持续高压,切断库拉索反击第一。依靠二次进攻和边路转移逐步打穿低位防线;库拉索长时间被压在本方半。反击质量不足,后段再失球。",
+          "rationale_cn": "在开放大比分池中,4-0同时符合厄瓜多尔强势、库拉索防线承压与厄瓜多尔防守稳固三条线。且为池内基础概率最高项,比对攻型比分更贴近现有机制。",
+          "evidence_ids": [
+            "E_09fe8b9a8286",
+            "E_97c95a627f3b",
+            "E_f01a7761b3c0",
+            "E_32c3fd50d4c1"
+          ],
+          "mechanism_ids": [
+            "H_press_restdef_001",
+            "H_lowblock_width_002"
+          ]
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.046296296296296294,
+          "base_conditional_probability": 0.2244165170556553,
+          "tail_focus_conditional_probability": 0.2113628677713899,
+          "tail_focus_implied_overall_probability": 0.04360337679580154,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "厄瓜多尔控球和压迫占。取得多次禁区机会;库拉索低位防守后通过一次反击、二点球或转换机会追回一。但整体仍被压制。",
+          "rationale_cn": "库拉索具备紧凑防守后反击的基本剧。且上轮对德国曾进。3-1可作为开放但非完全崩盘的分支;厄瓜多尔防守评价较强,故支持力度有限。",
+          "evidence_ids": [
+            "E_09fe8b9a8286",
+            "E_ae38f5bc441b",
+            "E_cb0451c51bf8",
+            "E_32c3fd50d4c1"
+          ],
+          "mechanism_ids": [
+            "H_press_restdef_001"
+          ]
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.10951526032315978,
+          "tail_focus_conditional_probability": 0.10314507947243828,
+          "tail_focus_implied_overall_probability": 0.021278447876351157,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "厄瓜多尔先通过高压和控球建立领。随后库拉索防线体能和横向移动质量下降,厄瓜多尔替补创造力或边路持续冲击带来后段追加进球。",
+          "rationale_cn": "5-0与库拉索上轮1-7失利和厄瓜多尔实力优势相。但需要低位防线明显失。偏离主线较大,仅作尾部候选。",
+          "evidence_ids": [
+            "E_97c95a627f3b",
+            "E_f01a7761b3c0",
+            "E_6281509ddc24",
+            "E_05bb4747aaa6",
+            "E_d67ef9b03969"
+          ],
+          "mechanism_ids": [
+            "H_press_restdef_001",
+            "H_lowblock_width_002"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.08617594254937164,
+          "tail_focus_conditional_probability": 0.08116334122421373,
+          "tail_focus_implied_overall_probability": 0.016743696689587795,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "厄瓜多尔早段或中段打开局面后,库拉索被迫增加向前投。空间变大;厄瓜多尔利用压迫后的连续进攻扩大优势,库拉索靠一次反击或支点配合取得安慰球。",
+          "rationale_cn": "该比分结合厄瓜多尔压制与库拉索反击进球两种路。但需要节奏比主线更开。只能给中性支持。",
+          "evidence_ids": [
+            "E_09fe8b9a8286",
+            "E_dea54792a46d",
+            "E_ae38f5bc441b",
+            "E_cb0451c51bf8"
+          ],
+          "mechanism_ids": [
+            "H_press_restdef_001",
+            "H_lowblock_width_002"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0637037037037037,
+          "base_conditional_probability": 0.30879712746858173,
+          "tail_focus_conditional_probability": 0.34900236726411904,
+          "tail_focus_implied_overall_probability": 0.07199789576522751,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.046296296296296294,
+          "base_conditional_probability": 0.2244165170556553,
+          "tail_focus_conditional_probability": 0.2113628677713899,
+          "tail_focus_implied_overall_probability": 0.04360337679580154,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.10951526032315978,
+          "tail_focus_conditional_probability": 0.10314507947243828,
+          "tail_focus_implied_overall_probability": 0.021278447876351157,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.08617594254937164,
+          "tail_focus_conditional_probability": 0.08116334122421373,
+          "tail_focus_implied_overall_probability": 0.016743696689587795,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.05206463195691203,
+          "tail_focus_conditional_probability": 0.04903618532296246,
+          "tail_focus_implied_overall_probability": 0.010115983416625958,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.05026929982046679,
+          "tail_focus_conditional_probability": 0.047345282380791345,
+          "tail_focus_implied_overall_probability": 0.009767156402259548,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.04488330341113106,
+          "tail_focus_conditional_probability": 0.042272573554277985,
+          "tail_focus_implied_overall_probability": 0.00872067535916031,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.03231597845601437,
+          "tail_focus_conditional_probability": 0.030436252959080153,
+          "tail_focus_implied_overall_probability": 0.006278886258595424,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.0044444444444444444,
+          "base_conditional_probability": 0.02154398563734291,
+          "tail_focus_conditional_probability": 0.020290835306053433,
+          "tail_focus_implied_overall_probability": 0.004185924172396949,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.017953321364452424,
+          "tail_focus_conditional_probability": 0.016909029421711196,
+          "tail_focus_implied_overall_probability": 0.0034882701436641243,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至。球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.25592592592592595,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.62,
+      "rationale_cn": "一边倒崩盘是三个高偏离情景中证据最强、最值得关注的分支。厄瓜多尔整体基准、南美区预选赛表现、压迫与防守结构均明显优于库拉索;库拉索上。-7负德国提供了防线在高强度压迫和持续领地压力下被打开的现实参照。低位五后卫会提供抵。但若早丢球或二点球持续失。净。球以上路径清晰。-0作为池内主导比分给予最高支。。条推演中3-0/2-0高频出现一致。",
+      "supporting_evidence_ids": [
+        "E_05bb4747aaa6",
+        "E_d67ef9b03969",
+        "E_09fe8b9a8286",
+        "E_97c95a627f3b",
+        "E_f01a7761b3c0",
+        "E_dea54792a46d",
+        "E_332843f1ef01"
+      ],
+      "counter_evidence_ids": [
+        "E_ae38f5bc441b",
+        "E_533b7078c961",
+        "E_32c3fd50d4c1",
+        "E_253823477923"
+      ],
+      "caution_cn": "崩盘需要厄瓜多尔把领地与压迫优势转化为较高终结效率。若库拉索五后卫低位保护成功,或厄瓜多尔领先后主动降。比分可能停在2-0。-0附近。",
+      "audit_note_cn": "未作修改。-0。。-0。。-1。-0。的层次与池内条件概率及推演主线吻。机制引用方向正确(3-0仅用压迫机制,干净对齐),证据全部存在,予以保留。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.11925925925925926,
+          "base_conditional_probability": 0.4659913169319826,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.0637037037037037,
+          "base_conditional_probability": 0.24891461649782923,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.0882778581765557,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06946454413892908,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.04196816208393632,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.04052098408104196,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "6-1",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.01447178002894356,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "7-0",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.01013024602026049,
+          "total_goals": 7,
+          "winning_margin": 7
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.11925925925925926,
+          "base_conditional_probability": 0.4659913169319826,
+          "tail_focus_conditional_probability": 0.5364816729863267,
+          "tail_focus_implied_overall_probability": 0.13729956890131545,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "厄瓜多尔。0分钟持续压制但不必完全放大节。通过压迫回收、禁区二次进攻和前场核心终结取得稳定领先;库拉索反击被中场屏障和中卫休息防守消化。",
+          "rationale_cn": "3-0是崩盘池中最贴近证据与推演主线的比分:既体现实力差距和库拉索防线压。又不要求极端开放或异常终结效率,且为池内条件概率最高项。",
+          "evidence_ids": [
+            "E_09fe8b9a8286",
+            "E_05bb4747aaa6",
+            "E_d67ef9b03969",
+            "E_97c95a627f3b",
+            "E_32c3fd50d4c1"
+          ],
+          "mechanism_ids": [
+            "H_press_restdef_001"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0637037037037037,
+          "base_conditional_probability": 0.24891461649782923,
+          "tail_focus_conditional_probability": 0.2371596001378835,
+          "tail_focus_implied_overall_probability": 0.06069529025751019,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "厄瓜多尔在高位压迫下不断制造二次进。库拉索低位长期横移和解围后无法建立反。后段因体能和空间管理下降再被打入一球。",
+          "rationale_cn": "4-0。-0更依赖库拉索防线后段松动,但仍符合厄瓜多尔压迫、控球与库拉索近期防守承压的组合证据。",
+          "evidence_ids": [
+            "E_09fe8b9a8286",
+            "E_97c95a627f3b",
+            "E_f01a7761b3c0",
+            "E_dea54792a46d"
+          ],
+          "mechanism_ids": [
+            "H_press_restdef_001",
+            "H_lowblock_width_002"
+          ]
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.0882778581765557,
+          "tail_focus_conditional_probability": 0.07009077329656441,
+          "tail_focus_implied_overall_probability": 0.01793804605478741,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "厄瓜多尔早早领先后没有明显降。库拉索低位结构被连续横向调动,后场出球和二点球回收持续失败,比赛末段转为单边攻防。",
+          "rationale_cn": "5-0需要比主线更强的终结效率和库拉索更明显的心理或体能下滑;候选价值来自双方基准差距和库拉索上轮惨。但证据不足以给正向强支持。",
+          "evidence_ids": [
+            "E_05bb4747aaa6",
+            "E_d67ef9b03969",
+            "E_97c95a627f3b",
+            "E_f01a7761b3c0"
+          ],
+          "mechanism_ids": [
+            "H_press_restdef_001",
+            "H_lowblock_width_002"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06946454413892908,
+          "tail_focus_conditional_probability": 0.05515339538090314,
+          "tail_focus_implied_overall_probability": 0.014115183780816325,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "厄瓜多尔建立多球优势。库拉索通过紧凑防守后的快速反击或前场支点配合取得一。但整体防线仍无法承受厄瓜多尔持续压迫和边路转移。",
+          "rationale_cn": "4-1保留库拉索反击得分的可能,符合其战术身份和上轮曾进球的事实;但厄瓜多尔防守评价较。对崩盘剧本支持有限。",
+          "evidence_ids": [
+            "E_09fe8b9a8286",
+            "E_ae38f5bc441b",
+            "E_cb0451c51bf8",
+            "E_32c3fd50d4c1"
+          ],
+          "mechanism_ids": [
+            "H_press_restdef_001",
+            "H_lowblock_width_002"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.11925925925925926,
+          "base_conditional_probability": 0.4659913169319826,
+          "tail_focus_conditional_probability": 0.5364816729863267,
+          "tail_focus_implied_overall_probability": 0.13729956890131545,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0637037037037037,
+          "base_conditional_probability": 0.24891461649782923,
+          "tail_focus_conditional_probability": 0.2371596001378835,
+          "tail_focus_implied_overall_probability": 0.06069529025751019,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.0882778581765557,
+          "tail_focus_conditional_probability": 0.07009077329656441,
+          "tail_focus_implied_overall_probability": 0.01793804605478741,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06946454413892908,
+          "tail_focus_conditional_probability": 0.05515339538090314,
+          "tail_focus_implied_overall_probability": 0.014115183780816325,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.04196816208393632,
+          "tail_focus_conditional_probability": 0.03332184304262898,
+          "tail_focus_implied_overall_probability": 0.008527923534243195,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.04052098408104196,
+          "tail_focus_conditional_probability": 0.0321728139721935,
+          "tail_focus_implied_overall_probability": 0.008233857205476189,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.01447178002894356,
+          "tail_focus_conditional_probability": 0.011490290704354821,
+          "tail_focus_implied_overall_probability": 0.0029406632876700675,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "7-0",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.01013024602026049,
+          "tail_focus_conditional_probability": 0.008043203493048375,
+          "tail_focus_implied_overall_probability": 0.002058464301369047,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.005788712011577424,
+          "tail_focus_conditional_probability": 0.004596116281741928,
+          "tail_focus_implied_overall_probability": 0.001176265315068027,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "8-0",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.0043415340086830675,
+          "tail_focus_conditional_probability": 0.0034470872113064465,
+          "tail_focus_implied_overall_probability": 0.0008821989863010203,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000002
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Curacao 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.04074074074074074,
+      "attention_level": "low",
+      "evidence_strength": 0.24,
+      "rationale_cn": "爆冷路径存在但极。库拉索需依靠五后卫低位、紧凑防守、反击第一脚和少量机会的高效率,同时限制厄瓜多尔压迫后的二次进攻。现有证据更多支持厄瓜多尔整体优势、防守稳固与压迫控制,故爆冷只能低关注,分级以中性至负向为主,方向合理。-1作为池内主导且最不依赖持续创造机会的路径保留中。1-2。-2按偏离程度降。符合实际。",
+      "supporting_evidence_ids": [
+        "E_ae38f5bc441b",
+        "E_533b7078c961",
+        "E_1f156379633d",
+        "E_cb0451c51bf8",
+        "E_062e767a6f32"
+      ],
+      "counter_evidence_ids": [
+        "E_05bb4747aaa6",
+        "E_d67ef9b03969",
+        "E_09fe8b9a8286",
+        "E_32c3fd50d4c1",
+        "E_97c95a627f3b",
+        "E_f01a7761b3c0"
+      ],
+      "caution_cn": "爆冷候选不能与平局或小比分守局混同:库拉索低位守住一段时间不等于能赢球。该情景需要厄瓜多尔进攻效率偏低且库拉索反击或定位球转化率偏高,目前无机制主动支持库拉索获胜。",
+      "audit_note_cn": "机制对齐修订:原提案在0-1。-2。-2中引用了H_press_restdef_001,但该机制方向为team_a上行、team_b下行,本质上反对库拉索得分/获胜,属机制错。已从全部爆冷候选中剔除,统一改为H_lowblock_width_002(支持低节奏、拥堵、低总进球的局。是窄幅爆冷唯一可借助的机。。比分、support_grade、剧本与证据引用均保留不。情景总概率未改变。-2作为与厄瓜多尔实力及上轮防守表现明显相悖的极端尾。。2明确标注后保留。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.5545454545454546,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.27272727272727276,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.13636363636363638,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.027272727272727275,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.00909090909090909,
+          "total_goals": 4,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.5545454545454546,
+          "tail_focus_conditional_probability": 0.6039603960396039,
+          "tail_focus_implied_overall_probability": 0.0246057939127246,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "库拉索长时间五后卫低位守住禁。中路收窄并压低节。厄瓜多尔控球占优但机会质量不。库拉索通过一次反击、二点球推进或前场支点配合取得唯一进球。",
+          "rationale_cn": "若发生爆。0-1是最符合证据的低比分路径:不要求库拉索持续创造机。只要求防守结构与一次转换效率同时兑。且为爆冷池内条件概率最高项。",
+          "evidence_ids": [
+            "E_ae38f5bc441b",
+            "E_533b7078c961",
+            "E_1f156379633d",
+            "E_cb0451c51bf8"
+          ],
+          "mechanism_ids": [
+            "H_lowblock_width_002"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.27272727272727276,
+          "tail_focus_conditional_probability": 0.25247524752475253,
+          "tail_focus_implied_overall_probability": 0.010286028602860287,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "厄瓜多尔通过压迫和控球取得进。但库拉索在被动局面下把少数反击机会转化为两个进球,比赛后段依靠低位防线守住优势。",
+          "rationale_cn": "该比分需要库拉索进攻端明显超过现有基。并两次突破被多源评价为稳固的厄瓜多尔防线;虽有反击身份支撑,但总体证据偏逆向。",
+          "evidence_ids": [
+            "E_ae38f5bc441b",
+            "E_cb0451c51bf8",
+            "E_062e767a6f32",
+            "E_32c3fd50d4c1"
+          ],
+          "mechanism_ids": [
+            "H_lowblock_width_002"
+          ]
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.13636363636363638,
+          "tail_focus_conditional_probability": 0.10396039603960397,
+          "tail_focus_implied_overall_probability": 0.004235423542354236,
+          "support_grade": -2,
+          "multiplier": 0.7,
+          "script_cn": "库拉索先通过低位反击取得领先,随后厄瓜多尔压上追分时身后空间被再次利用,库拉索以极高效率扩大优势并完成零封。",
+          "rationale_cn": "0-2要求库拉索既两次有效惩罚厄瓜多尔,又让厄瓜多尔完全无法进球;与厄瓜多尔实力、压迫和库拉索上轮防守表现明显相。仅作极端尾部剧本保留。",
+          "evidence_ids": [
+            "E_ae38f5bc441b",
+            "E_533b7078c961",
+            "E_05bb4747aaa6",
+            "E_09fe8b9a8286",
+            "E_97c95a627f3b"
+          ],
+          "mechanism_ids": [
+            "H_lowblock_width_002"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.5545454545454546,
+          "tail_focus_conditional_probability": 0.6039603960396039,
+          "tail_focus_implied_overall_probability": 0.0246057939127246,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.27272727272727276,
+          "tail_focus_conditional_probability": 0.25247524752475253,
+          "tail_focus_implied_overall_probability": 0.010286028602860287,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.13636363636363638,
+          "tail_focus_conditional_probability": 0.10396039603960397,
+          "tail_focus_implied_overall_probability": 0.004235423542354236,
+          "support_grade": -2,
+          "multiplier": 0.7
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.027272727272727275,
+          "tail_focus_conditional_probability": 0.029702970297029705,
+          "tail_focus_implied_overall_probability": 0.00121012101210121,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.00909090909090909,
+          "tail_focus_conditional_probability": 0.009900990099009901,
+          "tail_focus_implied_overall_probability": 0.00040337367070040337,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_output_files_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "af4b7b8c8cbda3c3780ea3b5bbb07c0985211e7ac918d979d89012f70d4a31d9"
+  }
+}

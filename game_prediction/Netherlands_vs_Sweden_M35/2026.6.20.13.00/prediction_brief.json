@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T05:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T13:00:00+08:00",
+  "match": {
+    "match_id": "M35",
+    "team_a": "Netherlands",
+    "team_b": "Sweden",
+    "kickoff_utc": "2026-06-20T17:00:00Z",
+    "venue": "Houston Stadium",
+    "stage": "group",
+    "group": "F",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.75,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率75.0%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.412962962962963,
+    "draw": 0.277037037037037,
+    "team_b_win": 0.31
+  },
+  "most_likely_outcome": {
+    "label": "Netherlands。",
+    "probability": 0.412962962962963
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.11777777777777777
+    },
+    {
+      "score": "2-1",
+      "probability": 0.09666666666666666
+    },
+    {
+      "score": "1-0",
+      "probability": 0.08222222222222222
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "瑞典首战5-1击败突尼斯，预览还强调其锋线与空中冲击威胁。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_49b24bb5b42a",
+        "E_f0e4b5a19cab"
+      ],
+      "source_names": [
+        "UEFA.com",
+        "SuperSport"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "荷兰昆滕·廷伯因脑震荡缺席，尤里恩·廷伯也因腹股沟伤无缘赛事。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_c5538012c471",
+        "E_595d3c9f316f"
+      ],
+      "source_names": [
+        "Reuters",
+        "Sports Illustrated"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "荷兰被描述为技术型短传球队，德容、加克波和邓弗里斯是关键威胁点。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_c1527e74174e",
+        "E_6d4838b226d0",
+        "E_94c18a83c45b"
+      ],
+      "source_names": [
+        "The Athletic",
+        "ESPN",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "路透称科曼上场末段改用防守阵式。9分钟失球，领先管理仍受关注。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_7394f99c3542",
+        "E_F_e38343bdc1b8"
+      ],
+      "source_names": [
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "FIFA赛前未列官方首发，ESPN和标准晚报目前仅给出荷兰预测阵容。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_ce2731046ef6",
+        "E_59a9a9a85e6c",
+        "E_b3745d206a31"
+      ],
+      "source_names": [
+        "FIFA",
+        "ESPN",
+        "The Standard"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在休斯敦NRG体育场进行，报道称世界杯期间该场馆屋顶将关闭。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_aaf615bd55c0",
+        "E_854177c37626",
+        "E_eeb19c2c4bc8"
+      ],
+      "source_names": [
+        "ESPN",
+        "NRG Park",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-20T05:00:00Z",
+    "source_state_sha256": "7f0fad93c5592570a3a54bb153a381c2503be7bab12d99c4fd1c5261aebc2226",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案整体证据引用真实、机制链与比分方向基本对应，未引入输入之外的新事实，三个情景的候选也都来自对应候选池，概率结构未被改动。主要问题是选择偏差：在 high_scoring 。upset 两个池中，提案都跳过。1-3 这一概率更高、且与‘瑞典锋线禁区冲击’机制（8/9 rollout 激活）和荷兰廷伯系伤缺直接吻合的瑞典胜比分，转而纳入概率更低的 2-3 交叉比分，偏向荷兰得分的剧本被略微高估。审计据此在两个池中。1-3 替换。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比。",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.3559259259259259,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.6,
+        "summary_cn": "总进球至。球的开放剧本值得关注：荷兰具备德容、加克波、邓弗里斯等控球与边路推进点，瑞典首。-1且锋线与空中冲击被多方预览强调，稳定室内环境也利于技术执行与转换。但官方首发缺失、范戴克坐镇、以及瑞典三中卫低位消化传中限制了大比分的确定性。审计认为原提案在该池纳入两个荷兰得分占优的高比分（3-2。-1）却遗漏概率更高、与瑞典强进攻信号更契合。1-3，存。",
+        "caution_cn": "大比分路径不应与爆冷或崩盘路径重复加总，仅表示比赛被打开后的比分形态。若瑞典被长期压低、荷兰控球转为横向循环，或双方射门质量不足，总进球上沿会明显受限。",
+        "top_scores": [
+          {
+            "score": "2-2",
+            "base_probability": 0.07666666666666666,
+            "tail_focus_conditional_probability": 0.27105251275567793,
+            "support_grade": 2,
+            "script_cn": "荷兰通过中场控球和边路推进先制造持续压力，瑞典依靠双前锋、定位球或二点球回应；双方都能在禁区内获得足够机会，比赛在领先与追平之间反复摆动。"
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.04296296296296296,
+            "tail_focus_conditional_probability": 0.12570551316205353,
+            "support_grade": 1,
+            "script_cn": "荷兰较早建立控球优势，把瑞典翼卫压低并通过二次进攻累积机会；瑞典依靠锋线或定位球追回一球，但在需要前压时被荷兰再度打穿。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.11851851851851852,
+        "attention_level": "medium",
+        "attention_label_cn": "。",
+        "evidence_strength": 0.38,
+        "summary_cn": "一边倒崩盘存在候选路径但证据偏弱并高度条件化。荷兰方向崩盘依赖其控球与关键进攻点早早兑现并持续压低瑞典三中卫；瑞典方向崩盘依赖首战火热状态、双前锋冲击与荷兰后防受损同时放大。输入无红牌、门将伤病或官方首发异常等强触发证据，因此不宜高估净。球以上，仅作尾部筛选。",
+        "caution_cn": "崩盘比分需要早球、连续转换失位或体能心理连锁，但输入未提供红牌、内部冲突、门将伤病或官方首发异常，应仅作为尾部情景，不与开放大比分重复累加。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.026296296296296297,
+            "tail_focus_conditional_probability": 0.24897720631209816,
+            "support_grade": 1,
+            "script_cn": "荷兰早段通过控球和边中结合取得领先，随后瑞典被迫前压但中场出球受限；荷兰利用二次进攻和转换再进两球，范戴克领衔防线压制瑞典禁区冲击。"
+          },
+          {
+            "score": "4-1",
+            "base_probability": 0.02074074074074074,
+            "tail_focus_conditional_probability": 0.1636469900642899,
+            "support_grade": 0,
+            "script_cn": "荷兰的控球压制持续有效，瑞典三中卫被迫长时间守禁区；瑞典依靠锋线或定位球取得一球，但在追分阶段边翼卫身后空间被荷兰反复利用。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.31,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.61,
+        "summary_cn": "瑞典获胜作为爆冷情景值得认真关注：首。-1提供强近期状态信号，预览强调锋线与空中冲击，荷兰存在廷伯系伤缺与上场末段防守调整后失球的波动线索。但荷兰整体实力、控球框架与德容/加克。邓弗里斯等关键点是明显反向约束，爆冷更像条件成立后的高偏离结果。审计发现原提案在此池同样遗漏了概率更高。1-3 而纳入概率更低的 2-3，故。1-3 替换 2-3。",
+        "caution_cn": "爆冷只表示非热门方瑞典获胜，不应与开放大比分或崩盘情景重复相加。若荷兰中场能稳定压低瑞典翼卫并切断双前锋供给，瑞典胜路径会显著变窄。",
+        "top_scores": [
+          {
+            "score": "1-2",
+            "base_probability": 0.07740740740740741,
+            "tail_focus_conditional_probability": 0.29973789624647645,
+            "support_grade": 2,
+            "script_cn": "荷兰控球占优并创造进球，但瑞典利用双前锋的禁区冲击、定位球或转换两次得手；比赛后段荷兰压上追平未果，瑞典通过紧凑阵型守住优势。"
+          },
+          {
+            "score": "0-1",
+            "base_probability": 0.07185185185185185,
+            "tail_focus_conditional_probability": 0.23025567479353146,
+            "support_grade": 1,
+            "script_cn": "荷兰控球时间更长，但瑞典三中卫和中路保护有效限制高质量射门；瑞典通过一次定位球、长传二点或锋线个人效率打入决定性进球。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

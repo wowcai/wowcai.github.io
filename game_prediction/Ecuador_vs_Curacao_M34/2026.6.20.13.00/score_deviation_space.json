@@ -1,0 +1,416 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T05:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T13:00:00+08:00",
+  "quality_label": "usable",
+  "match_id": "M34",
+  "team_a": "Ecuador",
+  "team_b": "Curacao",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概。"
+  },
+  "points": [
+    {
+      "score": "1-0",
+      "deviation": 0.0,
+      "probability": 0.20777777777777778,
+      "probability_percent": 20.7778,
+      "outcome": "team_a",
+      "sample_count": 561,
+      "path_deviation": 0.6718102597090367,
+      "result_surprise": 0.0,
+      "reason_cn": "Ecuador在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.05056642308175305,
+      "probability": 0.18851851851851853,
+      "probability_percent": 18.8519,
+      "outcome": "team_a",
+      "sample_count": 509,
+      "path_deviation": 0.6583177597975645,
+      "result_surprise": 0.09269162210338677,
+      "reason_cn": "Ecuador打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "7-2",
+      "deviation": 0.17218211220320498,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.25927541076863164,
+      "result_surprise": 0.9964349376114082,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "7-1",
+      "deviation": 0.23890617175377546,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.3073306532789188,
+      "result_surprise": 0.9964349376114082,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.2622033583442184,
+      "probability": 0.11925925925925926,
+      "probability_percent": 11.9259,
+      "outcome": "team_a",
+      "sample_count": 322,
+      "path_deviation": 0.6312533243201921,
+      "result_surprise": 0.42602495543672014,
+      "reason_cn": "Ecuador打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.37438106902172263,
+      "probability": 0.1025925925925926,
+      "probability_percent": 10.2593,
+      "outcome": "draw",
+      "sample_count": 277,
+      "path_deviation": 0.6688525759357146,
+      "result_surprise": 0.5062388591800356,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.4569441352454999,
+      "probability": 0.07407407407407407,
+      "probability_percent": 7.4074,
+      "outcome": "draw",
+      "sample_count": 200,
+      "path_deviation": 0.6544087218325179,
+      "result_surprise": 0.64349376114082,
+      "reason_cn": "紧凑防守对进攻空间的压缩；双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": [
+        "H_lowblock_width_002"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.5079828518462078,
+      "probability": 0.06222222222222222,
+      "probability_percent": 6.2222,
+      "outcome": "team_a",
+      "sample_count": 168,
+      "path_deviation": 0.6604528615668893,
+      "result_surprise": 0.7005347593582888,
+      "reason_cn": "Ecuador在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.5215393320162859,
+      "probability": 0.0637037037037037,
+      "probability_percent": 6.3704,
+      "outcome": "team_a",
+      "sample_count": 172,
+      "path_deviation": 0.6740556533302217,
+      "result_surprise": 0.6934046345811051,
+      "reason_cn": "Ecuador打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.5230775973873268,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.513913011110777,
+      "result_surprise": 0.9928698752228164,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.5332311714750686,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_a",
+      "sample_count": 10,
+      "path_deviation": 0.5269846495763433,
+      "result_surprise": 0.982174688057041,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "9-0",
+      "deviation": 0.5335152452278811,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5185508215372633,
+      "result_surprise": 0.9982174688057041,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.539539879688297,
+      "probability": 0.046296296296296294,
+      "probability_percent": 4.6296,
+      "outcome": "team_a",
+      "sample_count": 125,
+      "path_deviation": 0.6419080518426518,
+      "result_surprise": 0.7771836007130125,
+      "reason_cn": "Ecuador打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.567479969392108,
+      "probability": 0.017777777777777778,
+      "probability_percent": 1.7778,
+      "outcome": "team_a",
+      "sample_count": 48,
+      "path_deviation": 0.5881242594775863,
+      "result_surprise": 0.9144385026737968,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.5857206488784379,
+      "probability": 0.02259259259259259,
+      "probability_percent": 2.2593,
+      "outcome": "team_a",
+      "sample_count": 61,
+      "path_deviation": 0.6137390723455788,
+      "result_surprise": 0.8912655971479501,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.6039645879911615,
+      "probability": 0.005555555555555556,
+      "probability_percent": 0.5556,
+      "outcome": "team_b",
+      "sample_count": 15,
+      "path_deviation": 0.5827265879596424,
+      "result_surprise": 0.9732620320855615,
+      "reason_cn": "Curacao充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.6489724811610201,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.6017041175103497,
+      "result_surprise": 0.9982174688057041,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_lowblock_width_002"
+      ]
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.6584273773699062,
+      "probability": 0.02259259259259259,
+      "probability_percent": 2.2593,
+      "outcome": "team_b",
+      "sample_count": 61,
+      "path_deviation": 0.666103084567273,
+      "result_surprise": 0.8912655971479501,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Curacao通过压迫或转换取得一球优势。",
+      "mechanism_ids": [
+        "H_lowblock_width_002"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.6627525009101104,
+      "probability": 0.01074074074074074,
+      "probability_percent": 1.0741,
+      "outcome": "team_a",
+      "sample_count": 29,
+      "path_deviation": 0.6385036921459307,
+      "result_surprise": 0.948306595365419,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "8-1",
+      "deviation": 0.666963364329022,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.6146613065578376,
+      "result_surprise": 0.9982174688057041,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.674566217572592,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "team_b",
+      "sample_count": 30,
+      "path_deviation": 0.6479718571496274,
+      "result_surprise": 0.946524064171123,
+      "reason_cn": "Curacao通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "8-0",
+      "deviation": 0.7021566186672481,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.641927440497524,
+      "result_surprise": 0.9946524064171123,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.709609400090068,
+      "probability": 0.01037037037037037,
+      "probability_percent": 1.037,
+      "outcome": "team_a",
+      "sample_count": 28,
+      "path_deviation": 0.6712906101142088,
+      "result_surprise": 0.9500891265597148,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_lowblock_width_002"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.7110510500689597,
+      "probability": 0.009259259259259259,
+      "probability_percent": 0.9259,
+      "outcome": "draw",
+      "sample_count": 25,
+      "path_deviation": 0.6694494253809867,
+      "result_surprise": 0.9554367201426025,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_lowblock_width_002"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.7536784135458083,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.6790338810248423,
+      "result_surprise": 0.9946524064171123,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.791039988370203,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "team_a",
+      "sample_count": 18,
+      "path_deviation": 0.7203393764186309,
+      "result_surprise": 0.9679144385026738,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.8329332620896086,
+      "probability": 0.0044444444444444444,
+      "probability_percent": 0.4444,
+      "outcome": "team_a",
+      "sample_count": 12,
+      "path_deviation": 0.7447523261228365,
+      "result_surprise": 0.9786096256684492,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_lowblock_width_002"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.8472857324059837,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7445310295083739,
+      "result_surprise": 0.9982174688057041,
+      "reason_cn": "Curacao充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.8530597312894905,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 0.7486895132467735,
+      "result_surprise": 0.9982174688057041,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.933246902418619,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.8083606536779454,
+      "result_surprise": 0.9946524064171123,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "7-0",
+      "deviation": 1.0,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.8602761075851274,
+      "result_surprise": 0.9875222816399287,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_lowblock_width_002"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T05:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T13:00:00+08:00",
+  "match": {
+    "match_id": "M33",
+    "team_a": "Germany",
+    "team_b": "Ivory Coast",
+    "kickoff_utc": "2026-06-20T20:00:00Z",
+    "venue": "Toronto Stadium",
+    "stage": "group",
+    "group": "E",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.875,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率87.5%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5107407407407407,
+    "draw": 0.2688888888888889,
+    "team_b_win": 0.22037037037037038
+  },
+  "most_likely_outcome": {
+    "label": "Germany。",
+    "probability": 0.5107407407407407
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.12777777777777777
+    },
+    {
+      "score": "1-0",
+      "probability": 0.10407407407407407
+    },
+    {
+      "score": "2-1",
+      "probability": 0.10407407407407407
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "德国预测仍以4-2-3-1为主，穆西亚拉、萨内、维尔茨、哈弗茨被列为前场组合。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_e2e889748b24",
+        "E_5c3b556a5a00",
+        "E_28ecf68a9175"
+      ],
+      "source_names": [
+        "Al Jazeera",
+        "Standard",
+        "AOL"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "德国训练演练更深5-4-1，萨内回到右侧后线，被报道为应对科特迪瓦速度的备选。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_6141f8a936f6",
+        "E_999e02828413"
+      ],
+      "source_names": [
+        "OneFootball",
+        "Yahoo Sports Canada"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "科特迪瓦边锋Yan Diomande被称为德国重点关注对象，球队此前4-2-3-1强调运动能力和纵向推进。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_665f11535da1",
+        "E_03f3c582986e"
+      ],
+      "source_names": [
+        "Reuters",
+        "Mozzart Sport"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "科特迪瓦近期2-1击败法国，进球者包括Guela Doue和Amad，预示其边路与中前场威胁。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_87b2aa58b71e",
+        "E_0310f7edb269"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "科特迪瓦后卫Evan Ndicka因腿筋伤仍存疑，且此前已缺席对厄瓜多尔的首战。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_950262ed731c",
+        "E_ff1238aa4a5c"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "TNT Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在加拿大多伦多Toronto Stadium进行，赛日预。8°F、晴朗偏暖，属E组榜首战。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_0be5c069d01d",
+        "E_a47037e40f14",
+        "E_3cffe37a05ab"
+      ],
+      "source_names": [
+        "FIFA",
+        "Yahoo Sports",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-20T05:00:00Z",
+    "source_state_sha256": "15fa2bf675c894f81731db6609497c10a694ff416963d01dcc2f569c228cda7a",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案整体引用的证据ID和机制ID均存在于冻结输入中，未发现凭空捏造的新事实，三个高偏离池的适用性判断与base_event_probability一致，候选比分也全部来自各自候选池，没有越池或改动情景总概率的问题。主要问题是support_grade在两处出现倒挂式抬。high_scoring与upset都把2-3(双方多球且科特迪瓦取胜的双重极端剧本)给到grade 1,但其条件概率明显低于同池其它已给grade 1的候。属于为。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比。",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.31296296296296294,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.56,
+        "summary_cn": "总进球至。球的关注度合。德国线间创造力(穆西亚拉、维尔茨、萨内、哈弗茨)叠加科特迪瓦中卫恩迪卡伤。与科特迪瓦边路速度反击,确实构成双向放大进球的机制基础,且base_event_probability。.313,在高偏离池中属偏高。大比分不必单向碾压,更可能来自控球压制与快速反击互相放大。",
+        "caution_cn": "大比分依赖早球、转换质量或防线伤缺被实际放。若德国正式比赛改。-4-1风险控制,或双方因榜首战与偏暖天气阶段性降。开放度会下降。",
+        "top_scores": [
+          {
+            "score": "2-2",
+            "base_probability": 0.06222222222222222,
+            "tail_focus_conditional_probability": 0.2174288179465056,
+            "support_grade": 1,
+            "script_cn": "德国通过中路和半空间持续压迫,科特迪瓦在边路转换中找到回应,双方都能制造高质量机会,但德国未能完全限制对方速度,最终形成互有领先或互相追平的开放平局。"
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.055185185185185184,
+            "tail_focus_conditional_probability": 0.1928386540120794,
+            "support_grade": 1,
+            "script_cn": "德国控球占优,维尔茨、穆西亚拉和哈弗茨在禁区前沿持续压迫科特迪瓦防线;科特迪瓦依靠一次边路转换或定位式进攻取得进。但德国整体机会数量和控制力更强。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.1259259259259259,
+        "attention_level": "medium",
+        "attention_label_cn": "。",
+        "evidence_strength": 0.43,
+        "summary_cn": "一边倒情景基础关注度低于开放大比分但适用。德国端崩盘路径来自整体实力、前场创造力、首。-1及恩迪卡伤疑;科特迪瓦端极端路径来自德国压上后被边路速度连续惩罚,且推演中0-3代表比分多次出现。双方都有防守与节奏管理证据,崩盘需早球、连续转换成功或防线应对失败,不应与普通优势胜混同。",
+        "caution_cn": "崩盘比分对比赛早段状态高度敏。现有证据无红牌、内讧或门将灾难等额外触发器,科特迪瓦世预赛零失球纪录与德国更深防守预案均为强反证。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.03888888888888889,
+            "tail_focus_conditional_probability": 0.3490304709141274,
+            "support_grade": 1,
+            "script_cn": "德国早段取得领先后保持控。科特迪瓦被迫前压,德国利用维尔茨、穆西亚拉的线间接应和哈弗茨的禁区占位继续扩大优。下半场通过风险控制限制反击,形成零封大胜。"
+          },
+          {
+            "score": "4-1",
+            "base_probability": 0.01962962962962963,
+            "tail_focus_conditional_probability": 0.14681440443213295,
+            "support_grade": 0,
+            "script_cn": "德国进攻端持续打穿科特迪瓦中卫与边后卫之间的连接,科特迪瓦落后后依靠边路转换抢回一。但防守间距被反复利用,比分被拉开。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.22037037037037038,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.53,
+        "summary_cn": "爆冷非主线但适用且机制清。科特迪瓦边路速度、纵向推进、近。-1击败法国与世预赛强势纪录,可解释其在德国压上时获得高价值转换机。德国专门演练更深5-4-1也侧面说明对方速度被认真对待。德国整体评级、预测首发攻击线与中卫稳定性仍是主要反证。",
+        "caution_cn": "爆冷候选不等于上调科特迪瓦胜率,仅是对冻结候选池内胜利路径排。若德国减少边后卫冒进、用五后卫保护或早段领先,爆冷路径明显收窄。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.07333333333333333,
+            "tail_focus_conditional_probability": 0.35793913829466706,
+            "support_grade": 1,
+            "script_cn": "科特迪瓦保持紧凑中低。德国控球但未能把线间优势转化为进。科特迪瓦通过一次边路转换、二点球或快速推进取得领。随后以身体对抗和低位保护守住优势。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.05407407407407407,
+            "tail_focus_conditional_probability": 0.2639349201566737,
+            "support_grade": 1,
+            "script_cn": "德国凭控球和前场组合取得进球,但科特迪瓦持续冲击德国边后卫身后,利用阿马德、迪奥曼德或类似速度出口完成反击与二次进。最终小比分逆转或守住领先。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

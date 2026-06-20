@@ -1,0 +1,909 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-20T05:00:00Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.21比赛预测_V740\\reports_Netherlands_vs_Sweden_M35\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "7f0fad93c5592570a3a54bb153a381c2503be7bab12d99c4fd1c5261aebc2226",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-20T05:00:00+00:00"
+  },
+  "match": {
+    "match_id": "M35",
+    "team_a": "Netherlands",
+    "team_b": "Sweden",
+    "kickoff_utc": "2026-06-20T17:00:00Z",
+    "venue": "Houston Stadium",
+    "stage": "group",
+    "group": "F",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.412962962962963,
+    "draw": 0.277037037037037,
+    "team_b_win": 0.31,
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.11777777777777777
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09666666666666666
+      },
+      {
+        "score": "1-0",
+        "probability": 0.08222222222222222
+      },
+      {
+        "score": "1-2",
+        "probability": 0.07740740740740741
+      },
+      {
+        "score": "2-2",
+        "probability": 0.07666666666666666
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Netherlands",
+    "underdog_side": "team_b",
+    "underdog_team": "Sweden",
+    "team_a_win": 0.412962962962963,
+    "draw": 0.277037037037037,
+    "team_b_win": 0.31,
+    "win_probability_gap": 0.10296296296296298,
+    "underdog_win_probability": 0.31,
+    "favorite_fail_to_win_probability": 0.587037037037037,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "提案整体证据引用真实、机制链与比分方向基本对应，未引入输入之外的新事实，三个情景的候选也都来自对应候选池，概率结构未被改动。主要问题是选择偏差：在 high_scoring 。upset 两个池中，提案都跳过。1-3 这一概率更高、且与‘瑞典锋线禁区冲击’机制（8/9 rollout 激活）和荷兰廷伯系伤缺直接吻合的瑞典胜比分，转而纳入概率更低的 2-3 交叉比分，偏向荷兰得分的剧本被略微高估。审计据此在两个池中。1-3 替换 2-3/3-2，使候选与基础条件概率和被激活机制更一致。blowout 选取的是池内概率前四的比分且评级克制，作为尾部情景予以保留。所有总情景概率保持不变。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比。",
+      "definition_cn": "总进球至。球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.3559259259259259,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.6,
+      "rationale_cn": "总进球至。球的开放剧本值得关注：荷兰具备德容、加克波、邓弗里斯等控球与边路推进点，瑞典首。-1且锋线与空中冲击被多方预览强调，稳定室内环境也利于技术执行与转换。但官方首发缺失、范戴克坐镇、以及瑞典三中卫低位消化传中限制了大比分的确定性。审计认为原提案在该池纳入两个荷兰得分占优的高比分（3-2。-1）却遗漏概率更高、与瑞典强进攻信号更契合。1-3，存在方向偏差，故以 1-3 替换 3-2。",
+      "supporting_evidence_ids": [
+        "E_49b24bb5b42a",
+        "E_f0e4b5a19cab",
+        "E_94c18a83c45b",
+        "E_6d4838b226d0",
+        "E_c1527e74174e",
+        "E_854177c37626",
+        "E_eeb19c2c4bc8",
+        "E_962c734b5dbc"
+      ],
+      "counter_evidence_ids": [
+        "E_5cc927e58f69",
+        "E_8b08c9a4c58b",
+        "E_59a9a9a85e6c",
+        "E_ce2731046ef6"
+      ],
+      "caution_cn": "大比分路径不应与爆冷或崩盘路径重复加总，仅表示比赛被打开后的比分形态。若瑞典被长期压低、荷兰控球转为横向循环，或双方射门质量不足，总进球上沿会明显受限。",
+      "audit_note_cn": "保留 2-2（grade 2）。-1。-3；以 1-3 替换 3-2。原因：1-3 的基础条件概率。.093）高。3-2。.088）与 2-3。.063），且与首战5-1、危险锋线、荷兰后防伤缺及高频激活的瑞典禁区冲击机制一致，原提案纳入概率更低的荷兰得分剧本而遗。1-3 属选择偏差。",
+      "candidate_pool": [
+        {
+          "score": "2-2",
+          "base_probability": 0.07666666666666666,
+          "base_conditional_probability": 0.21540062434963578,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.04296296296296296,
+          "base_conditional_probability": 0.12070759625390218,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.032962962962962965,
+          "base_conditional_probability": 0.09261186264308013,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.03148148148148148,
+          "base_conditional_probability": 0.08844953173777315,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.06347554630593132,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.05827263267429761,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "3-3",
+          "base_probability": 0.01962962962962963,
+          "base_conditional_probability": 0.055150884495317375,
+          "total_goals": 6,
+          "winning_margin": 0
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.043704474505723206,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.07666666666666666,
+          "base_conditional_probability": 0.21540062434963578,
+          "tail_focus_conditional_probability": 0.27105251275567793,
+          "tail_focus_implied_overall_probability": 0.09647461657711351,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "荷兰通过中场控球和边路推进先制造持续压力，瑞典依靠双前锋、定位球或二点球回应；双方都能在禁区内获得足够机会，比赛在领先与追平之间反复摆动。",
+          "rationale_cn": "在开放大比分池中。-2 条件概率最高（0.215），最符合双方进攻证据同时成立但无一方彻底压垮的结构。瑞典攻击信号与荷兰控球威胁都能解释，荷兰上场末段被扳平的线索也支持末段波动。",
+          "evidence_ids": [
+            "E_49b24bb5b42a",
+            "E_f0e4b5a19cab",
+            "E_94c18a83c45b",
+            "E_6d4838b226d0",
+            "E_7394f99c3542"
+          ],
+          "mechanism_ids": [
+            "H_sweden_aerial_box_pressure_vs_dutch_depth",
+            "H_possession_midfield_vs_swedish_block",
+            "H_stable_indoor_conditions_reduce_weather_noise"
+          ]
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.04296296296296296,
+          "base_conditional_probability": 0.12070759625390218,
+          "tail_focus_conditional_probability": 0.12570551316205353,
+          "tail_focus_implied_overall_probability": 0.04474185116619757,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "荷兰较早建立控球优势，把瑞典翼卫压低并通过二次进攻累积机会；瑞典依靠锋线或定位球追回一球，但在需要前压时被荷兰再度打穿。",
+          "rationale_cn": "该比分适合荷兰中场控制机制强于瑞典防守消化机制的情形，是高比分池中概率次高的形态（0.121），且能容纳瑞典锋线至少一次兑现威胁，。4-1 更保守。",
+          "evidence_ids": [
+            "E_c1527e74174e",
+            "E_6d4838b226d0",
+            "E_94c18a83c45b",
+            "E_59a9a9a85e6c",
+            "E_f0e4b5a19cab"
+          ],
+          "mechanism_ids": [
+            "H_possession_midfield_vs_swedish_block",
+            "H_stable_indoor_conditions_reduce_weather_noise",
+            "H_sweden_aerial_box_pressure_vs_dutch_depth"
+          ]
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.032962962962962965,
+          "base_conditional_probability": 0.09261186264308013,
+          "tail_focus_conditional_probability": 0.09644647130536868,
+          "tail_focus_implied_overall_probability": 0.034327799601651596,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "荷兰能通过控球与个人质量打入一球，但瑞典双前锋的禁区冲击、长传落点和定位球更高效，多次惩罚荷兰受削弱的后防轮换，最终在四球开放局中占上风。",
+          "rationale_cn": "1-3 在高比分池内条件概率。.093）高。3-2 。2-3，并与瑞典首。-1、危险锋线、荷兰廷伯系伤缺以及被高频激活的瑞典禁区冲击机制直接吻合，是开放大比分中向瑞典倾斜的合理形态。",
+          "evidence_ids": [
+            "E_49b24bb5b42a",
+            "E_f0e4b5a19cab",
+            "E_c5538012c471",
+            "E_595d3c9f316f",
+            "E_94c18a83c45b"
+          ],
+          "mechanism_ids": [
+            "H_sweden_aerial_box_pressure_vs_dutch_depth",
+            "H_possession_midfield_vs_swedish_block"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.06347554630593132,
+          "tail_focus_conditional_probability": 0.06610376123176954,
+          "tail_focus_implied_overall_probability": 0.0235280424236039,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "荷兰仍能通过控球和前场压迫取得进球，但瑞典的双前锋、空中对抗和转换效率更高；比赛后段荷兰追分时留下空间，瑞典再度利用禁区冲击或反击完成反超。",
+          "rationale_cn": "该比分与瑞典首战5-1、锋线危险和荷兰后防冗余受损的证据相吻合，同时保留荷兰进攻端至少两球的合理性，是开放大比分与爆冷交叉处的尾部形态，但不能与爆冷概率相加。",
+          "evidence_ids": [
+            "E_49b24bb5b42a",
+            "E_f0e4b5a19cab",
+            "E_c5538012c471",
+            "E_595d3c9f316f",
+            "E_94c18a83c45b"
+          ],
+          "mechanism_ids": [
+            "H_sweden_aerial_box_pressure_vs_dutch_depth",
+            "H_possession_midfield_vs_swedish_block"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.07666666666666666,
+          "base_conditional_probability": 0.21540062434963578,
+          "tail_focus_conditional_probability": 0.27105251275567793,
+          "tail_focus_implied_overall_probability": 0.09647461657711351,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.04296296296296296,
+          "base_conditional_probability": 0.12070759625390218,
+          "tail_focus_conditional_probability": 0.12570551316205353,
+          "tail_focus_implied_overall_probability": 0.04474185116619757,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.032962962962962965,
+          "base_conditional_probability": 0.09261186264308013,
+          "tail_focus_conditional_probability": 0.09644647130536868,
+          "tail_focus_implied_overall_probability": 0.034327799601651596,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.03148148148148148,
+          "base_conditional_probability": 0.08844953173777315,
+          "tail_focus_conditional_probability": 0.07675983203142638,
+          "tail_focus_implied_overall_probability": 0.02732081428970398,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.06347554630593132,
+          "tail_focus_conditional_probability": 0.06610376123176954,
+          "tail_focus_implied_overall_probability": 0.0235280424236039,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.05827263267429761,
+          "tail_focus_conditional_probability": 0.05057118345599856,
+          "tail_focus_implied_overall_probability": 0.017999595296746152,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.01962962962962963,
+          "base_conditional_probability": 0.055150884495317375,
+          "tail_focus_conditional_probability": 0.04786201291371292,
+          "tail_focus_implied_overall_probability": 0.017035331262991896,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.043704474505723206,
+          "tail_focus_conditional_probability": 0.037928387591998916,
+          "tail_focus_implied_overall_probability": 0.013499696472559615,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.03850156087408949,
+          "tail_focus_conditional_probability": 0.03341310335485619,
+          "tail_focus_implied_overall_probability": 0.011892589749635852,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.03746097814776275,
+          "tail_focus_conditional_probability": 0.03251004650742764,
+          "tail_focus_implied_overall_probability": 0.011571168405051098,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至。球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.11851851851851852,
+      "attention_level": "medium",
+      "evidence_strength": 0.38,
+      "rationale_cn": "一边倒崩盘存在候选路径但证据偏弱并高度条件化。荷兰方向崩盘依赖其控球与关键进攻点早早兑现并持续压低瑞典三中卫；瑞典方向崩盘依赖首战火热状态、双前锋冲击与荷兰后防受损同时放大。输入无红牌、门将伤病或官方首发异常等强触发证据，因此不宜高估净。球以上，仅作尾部筛选。",
+      "supporting_evidence_ids": [
+        "E_c1527e74174e",
+        "E_6d4838b226d0",
+        "E_94c18a83c45b",
+        "E_49b24bb5b42a",
+        "E_f0e4b5a19cab",
+        "E_c5538012c471",
+        "E_595d3c9f316f"
+      ],
+      "counter_evidence_ids": [
+        "E_ce2731046ef6",
+        "E_5cc927e58f69",
+        "E_8b08c9a4c58b",
+        "E_59a9a9a85e6c"
+      ],
+      "caution_cn": "崩盘比分需要早球、连续转换失位或体能心理连锁，但输入未提供红牌、内部冲突、门将伤病或官方首发异常，应仅作为尾部情景，不与开放大比分重复累加。",
+      "audit_note_cn": "未作修改。提案选取。3-0。-1。-3。-4 恰为崩盘池内条件概率前四且双向均衡，评级。/0/1/0）克制不激进，与弱条件化证据相符；3-0 。rollout_6。-4 。rollout_9 中作为代表比分出现，提供有限但真实的尾部支撑，予以保留。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.026296296296296297,
+          "base_conditional_probability": 0.221875,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.175,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.014814814814814815,
+          "base_conditional_probability": 0.125,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.11562499999999999,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.1125,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-2",
+          "base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.046875,
+          "total_goals": 7,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.040625,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.040625,
+          "total_goals": 6,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.026296296296296297,
+          "base_conditional_probability": 0.221875,
+          "tail_focus_conditional_probability": 0.24897720631209816,
+          "tail_focus_implied_overall_probability": 0.029508409636989412,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "荷兰早段通过控球和边中结合取得领先，随后瑞典被迫前压但中场出球受限；荷兰利用二次进攻和转换再进两球，范戴克领衔防线压制瑞典禁区冲击。",
+          "rationale_cn": "在荷兰方向净。球候选中。-0（条件概。.222，池内最高）。4-0/5-2 更少依赖极端射门转化，荷兰中场控制与关键攻击点证据可支持，但瑞典锋线威胁使零封仍有难度。",
+          "evidence_ids": [
+            "E_c1527e74174e",
+            "E_6d4838b226d0",
+            "E_94c18a83c45b",
+            "E_59a9a9a85e6c"
+          ],
+          "mechanism_ids": [
+            "H_possession_midfield_vs_swedish_block",
+            "H_stable_indoor_conditions_reduce_weather_noise"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.175,
+          "tail_focus_conditional_probability": 0.1636469900642899,
+          "tail_focus_implied_overall_probability": 0.01939519882243436,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "荷兰的控球压制持续有效，瑞典三中卫被迫长时间守禁区；瑞典依靠锋线或定位球取得一球，但在追分阶段边翼卫身后空间被荷兰反复利用。",
+          "rationale_cn": "该比分解释荷兰进攻端全面打开、同时承认瑞典进攻并非无威胁，属大比分与崩盘重叠区，但缺少瑞典防线系统性崩溃的直接证据，故给中性评级。",
+          "evidence_ids": [
+            "E_94c18a83c45b",
+            "E_6d4838b226d0",
+            "E_c1527e74174e",
+            "E_f0e4b5a19cab"
+          ],
+          "mechanism_ids": [
+            "H_possession_midfield_vs_swedish_block",
+            "H_stable_indoor_conditions_reduce_weather_noise",
+            "H_sweden_aerial_box_pressure_vs_dutch_depth"
+          ]
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.014814814814814815,
+          "base_conditional_probability": 0.125,
+          "tail_focus_conditional_probability": 0.1402688486265342,
+          "tail_focus_implied_overall_probability": 0.016624456133515163,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "瑞典通过前场压迫、长传落点和双前锋禁区冲击先打破平衡；荷兰在控球落后后加快节奏，后场保护下降，瑞典利用转换和定位球扩大比分。",
+          "rationale_cn": "瑞典方向3球胜更依赖其首战进攻状态与荷兰防线冗余受损机制。-3 。1-4 更偏向瑞典高效且荷兰进攻被三中卫消化的剧本，证据支持有限但路径清晰，rollout_9 。0-4 提供同向参照。",
+          "evidence_ids": [
+            "E_49b24bb5b42a",
+            "E_f0e4b5a19cab",
+            "E_c5538012c471",
+            "E_595d3c9f316f",
+            "E_5cc927e58f69"
+          ],
+          "mechanism_ids": [
+            "H_sweden_aerial_box_pressure_vs_dutch_depth",
+            "H_dutch_wide_crosses_into_swedish_back_three"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.11562499999999999,
+          "tail_focus_conditional_probability": 0.10812390414962011,
+          "tail_focus_implied_overall_probability": 0.012814684936251272,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "荷兰能够通过个人质量或控球阶段打入一球，但瑞典在开放空间中效率极高，连续利用双前锋、二点球和转换攻击惩罚荷兰前压后的身后区域。",
+          "rationale_cn": "该比分只适合比赛被瑞典完全带入高转换节奏且荷兰防守调整失败的极端分支，瑞典近期进攻证据给到一些支撑，但缺乏荷兰整体崩盘的强证据，故给中性评级。",
+          "evidence_ids": [
+            "E_49b24bb5b42a",
+            "E_f0e4b5a19cab",
+            "E_c5538012c471",
+            "E_595d3c9f316f",
+            "E_7394f99c3542"
+          ],
+          "mechanism_ids": [
+            "H_sweden_aerial_box_pressure_vs_dutch_depth",
+            "H_stable_indoor_conditions_reduce_weather_noise"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.026296296296296297,
+          "base_conditional_probability": 0.221875,
+          "tail_focus_conditional_probability": 0.24897720631209816,
+          "tail_focus_implied_overall_probability": 0.029508409636989412,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.175,
+          "tail_focus_conditional_probability": 0.1636469900642899,
+          "tail_focus_implied_overall_probability": 0.01939519882243436,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.014814814814814815,
+          "base_conditional_probability": 0.125,
+          "tail_focus_conditional_probability": 0.1402688486265342,
+          "tail_focus_implied_overall_probability": 0.016624456133515163,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.11562499999999999,
+          "tail_focus_conditional_probability": 0.10812390414962011,
+          "tail_focus_implied_overall_probability": 0.012814684936251272,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.1125,
+          "tail_focus_conditional_probability": 0.10520163646990065,
+          "tail_focus_implied_overall_probability": 0.012468342100136373,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.046875,
+          "tail_focus_conditional_probability": 0.043834015195791935,
+          "tail_focus_implied_overall_probability": 0.005195142541723489,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.040625,
+          "tail_focus_conditional_probability": 0.037989479836353014,
+          "tail_focus_implied_overall_probability": 0.004502456869493691,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.040625,
+          "tail_focus_conditional_probability": 0.037989479836353014,
+          "tail_focus_implied_overall_probability": 0.004502456869493691,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.03125,
+          "tail_focus_conditional_probability": 0.029222676797194626,
+          "tail_focus_implied_overall_probability": 0.003463428361148993,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.024999999999999998,
+          "tail_focus_conditional_probability": 0.023378141437755698,
+          "tail_focus_implied_overall_probability": 0.002770742688919194,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Sweden 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.31,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.61,
+      "rationale_cn": "瑞典获胜作为爆冷情景值得认真关注：首。-1提供强近期状态信号，预览强调锋线与空中冲击，荷兰存在廷伯系伤缺与上场末段防守调整后失球的波动线索。但荷兰整体实力、控球框架与德容/加克。邓弗里斯等关键点是明显反向约束，爆冷更像条件成立后的高偏离结果。审计发现原提案在此池同样遗漏了概率更高。1-3 而纳入概率更低的 2-3，故。1-3 替换 2-3。",
+      "supporting_evidence_ids": [
+        "E_49b24bb5b42a",
+        "E_f0e4b5a19cab",
+        "E_0d980257e5d2",
+        "E_c5538012c471",
+        "E_595d3c9f316f",
+        "E_7394f99c3542"
+      ],
+      "counter_evidence_ids": [
+        "E_c1527e74174e",
+        "E_6d4838b226d0",
+        "E_94c18a83c45b",
+        "E_59a9a9a85e6c"
+      ],
+      "caution_cn": "爆冷只表示非热门方瑞典获胜，不应与开放大比分或崩盘情景重复相加。若荷兰中场能稳定压低瑞典翼卫并切断双前锋供给，瑞典胜路径会显著变窄。",
+      "audit_note_cn": "保留 1-2（grade 2）。-1。-2；以 1-3 替换 2-3。原因：1-3 在爆冷池条件概率。.106）高。2-3。.073），是瑞典净胜两球且与首战大胜、危险锋线、荷兰后防伤缺及高频激活的瑞典禁区冲击机制最契合的形态；2-3 依赖比赛节奏明显失控，对极端条件依赖更高，置。high_scoring 池更恰当。",
+      "candidate_pool": [
+        {
+          "score": "1-2",
+          "base_probability": 0.07740740740740741,
+          "base_conditional_probability": 0.24970131421744327,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-1",
+          "base_probability": 0.07185185185185185,
+          "base_conditional_probability": 0.23178016726403822,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.043333333333333335,
+          "base_conditional_probability": 0.13978494623655915,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.032962962962962965,
+          "base_conditional_probability": 0.10633213859020312,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.07287933094384706,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.014814814814814815,
+          "base_conditional_probability": 0.04778972520908005,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.04420549581839905,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.01,
+          "base_conditional_probability": 0.03225806451612903,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-2",
+          "main_base_probability": 0.07740740740740741,
+          "base_conditional_probability": 0.24970131421744327,
+          "tail_focus_conditional_probability": 0.29973789624647645,
+          "tail_focus_implied_overall_probability": 0.0929187478364077,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "荷兰控球占优并创造进球，但瑞典利用双前锋的禁区冲击、定位球或转换两次得手；比赛后段荷兰压上追平未果，瑞典通过紧凑阵型守住优势。",
+          "rationale_cn": "1-2 是瑞典爆冷中条件概率最高（0.250）且最均衡的形态，既承认荷兰主场面能力和进攻质量，也体现瑞典锋线效率与荷兰后防波动，对极端条件依赖更低。",
+          "evidence_ids": [
+            "E_49b24bb5b42a",
+            "E_f0e4b5a19cab",
+            "E_0d980257e5d2",
+            "E_c5538012c471",
+            "E_595d3c9f316f",
+            "E_94c18a83c45b"
+          ],
+          "mechanism_ids": [
+            "H_sweden_aerial_box_pressure_vs_dutch_depth",
+            "H_possession_midfield_vs_swedish_block"
+          ]
+        },
+        {
+          "score": "0-1",
+          "main_base_probability": 0.07185185185185185,
+          "base_conditional_probability": 0.23178016726403822,
+          "tail_focus_conditional_probability": 0.23025567479353146,
+          "tail_focus_implied_overall_probability": 0.07137925918599475,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "荷兰控球时间更长，但瑞典三中卫和中路保护有效限制高质量射门；瑞典通过一次定位球、长传二点或锋线个人效率打入决定性进球。",
+          "rationale_cn": "该比分（条件概率0.232）适合瑞典防守结构成功消化荷兰传中和中路渗透的剧本，不像开放爆冷那样依赖多次高质量转换，但要求瑞典防线纪律和门前效率同时在线。",
+          "evidence_ids": [
+            "E_5cc927e58f69",
+            "E_8b08c9a4c58b",
+            "E_f0e4b5a19cab",
+            "E_49b24bb5b42a"
+          ],
+          "mechanism_ids": [
+            "H_dutch_wide_crosses_into_swedish_back_three",
+            "H_sweden_aerial_box_pressure_vs_dutch_depth"
+          ]
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.043333333333333335,
+          "base_conditional_probability": 0.13978494623655915,
+          "tail_focus_conditional_probability": 0.13886553582908856,
+          "tail_focus_implied_overall_probability": 0.043048316107017454,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "瑞典先利用锋线或空中球取得领先，随后荷兰前压但中路推进受阻，边路传中被瑞典三中卫多次化解；瑞典在反击或定位球中再下一城。",
+          "rationale_cn": "该比分比 0-1 更强调瑞典防守反击完整兑现，也和瑞典首战强势进攻信号相容；反向风险是荷兰进攻端威胁点较多，完全零封并不容易。",
+          "evidence_ids": [
+            "E_49b24bb5b42a",
+            "E_f0e4b5a19cab",
+            "E_5cc927e58f69",
+            "E_8b08c9a4c58b",
+            "E_c5538012c471"
+          ],
+          "mechanism_ids": [
+            "H_sweden_aerial_box_pressure_vs_dutch_depth",
+            "H_dutch_wide_crosses_into_swedish_back_three"
+          ]
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.032962962962962965,
+          "base_conditional_probability": 0.10633213859020312,
+          "tail_focus_conditional_probability": 0.10563275802383662,
+          "tail_focus_implied_overall_probability": 0.03274615498738935,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "荷兰能通过控球与边路威胁打入一球，但瑞典双前锋的禁区冲击、长传落点与转换效率三次得手，连续惩罚荷兰受削弱的后防轮换与前压后的身后空间，最终以两球净胜爆冷。",
+          "rationale_cn": "1-3 在爆冷池条件概率。.106）高。2-3，是瑞典净胜两球中与首。-1、危险锋线及荷兰廷伯系伤缺最契合的形态，且对应高频激活的瑞典禁区冲击机制，比依赖节奏完全失控。2-3 更稳健。",
+          "evidence_ids": [
+            "E_49b24bb5b42a",
+            "E_f0e4b5a19cab",
+            "E_c5538012c471",
+            "E_595d3c9f316f",
+            "E_94c18a83c45b",
+            "E_0d980257e5d2"
+          ],
+          "mechanism_ids": [
+            "H_sweden_aerial_box_pressure_vs_dutch_depth",
+            "H_possession_midfield_vs_swedish_block"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-2",
+          "main_base_probability": 0.07740740740740741,
+          "base_conditional_probability": 0.24970131421744327,
+          "tail_focus_conditional_probability": 0.29973789624647645,
+          "tail_focus_implied_overall_probability": 0.0929187478364077,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "0-1",
+          "main_base_probability": 0.07185185185185185,
+          "base_conditional_probability": 0.23178016726403822,
+          "tail_focus_conditional_probability": 0.23025567479353146,
+          "tail_focus_implied_overall_probability": 0.07137925918599475,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.043333333333333335,
+          "base_conditional_probability": 0.13978494623655915,
+          "tail_focus_conditional_probability": 0.13886553582908856,
+          "tail_focus_implied_overall_probability": 0.043048316107017454,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.032962962962962965,
+          "base_conditional_probability": 0.10633213859020312,
+          "tail_focus_conditional_probability": 0.10563275802383662,
+          "tail_focus_implied_overall_probability": 0.03274615498738935,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.07287933094384706,
+          "tail_focus_conditional_probability": 0.06033331684882053,
+          "tail_focus_implied_overall_probability": 0.018703328223134363,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.014814814814814815,
+          "base_conditional_probability": 0.04778972520908005,
+          "tail_focus_conditional_probability": 0.03956283072053806,
+          "tail_focus_implied_overall_probability": 0.012264477523366799,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.04420549581839905,
+          "tail_focus_conditional_probability": 0.0365956184164977,
+          "tail_focus_implied_overall_probability": 0.011344641709114287,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.03225806451612903,
+          "tail_focus_conditional_probability": 0.026704910736363188,
+          "tail_focus_implied_overall_probability": 0.008278522328272588,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-4",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.020310633213859022,
+          "tail_focus_conditional_probability": 0.016814203056228674,
+          "tail_focus_implied_overall_probability": 0.005212402947430889,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.015531660692951017,
+          "tail_focus_conditional_probability": 0.012857919984174869,
+          "tail_focus_implied_overall_probability": 0.003985955195094209,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_output_files_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "7f0fad93c5592570a3a54bb153a381c2503be7bab12d99c4fd1c5261aebc2226"
+  }
+}
