@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T15:00:00+08:00",
+  "quality_label": "usable",
+  "match_id": "M40",
+  "team_a": "Uruguay",
+  "team_b": "Cape Verde",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-0",
+      "deviation": 0.0,
+      "probability": 0.16777777777777778,
+      "probability_percent": 16.7778,
+      "outcome": "team_a",
+      "sample_count": 453,
+      "path_deviation": 0.6470874144992904,
+      "result_surprise": 0.0,
+      "reason_cn": "Uruguay在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.1199768359806943,
+      "probability": 0.14407407407407408,
+      "probability_percent": 14.4074,
+      "outcome": "draw",
+      "sample_count": 389,
+      "path_deviation": 0.6433673500724755,
+      "result_surprise": 0.14128035320088295,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.16962060449156116,
+      "probability": 0.14333333333333334,
+      "probability_percent": 14.3333,
+      "outcome": "draw",
+      "sample_count": 387,
+      "path_deviation": 0.6709285141695782,
+      "result_surprise": 0.14569536423841056,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.39868296678007786,
+      "probability": 0.09703703703703703,
+      "probability_percent": 9.7037,
+      "outcome": "team_a",
+      "sample_count": 262,
+      "path_deviation": 0.6604861752725275,
+      "result_surprise": 0.42163355408388525,
+      "reason_cn": "Uruguay打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.4486559038538562,
+      "probability": 0.09518518518518519,
+      "probability_percent": 9.5185,
+      "outcome": "team_b",
+      "sample_count": 257,
+      "path_deviation": 0.6846798793433644,
+      "result_surprise": 0.4326710816777042,
+      "reason_cn": "Cape Verde通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.5102288323922434,
+      "probability": 0.08222222222222222,
+      "probability_percent": 8.2222,
+      "outcome": "team_a",
+      "sample_count": 222,
+      "path_deviation": 0.6802094413966274,
+      "result_surprise": 0.509933774834437,
+      "reason_cn": "Uruguay在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.6752870516743241,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5170573140981362,
+      "result_surprise": 0.9977924944812362,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.6984497923237815,
+      "probability": 0.03,
+      "probability_percent": 3.0,
+      "outcome": "team_b",
+      "sample_count": 81,
+      "path_deviation": 0.6261185249951017,
+      "result_surprise": 0.8211920529801324,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力；Cape Verde充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.7139403340151146,
+      "probability": 0.03851851851851852,
+      "probability_percent": 3.8519,
+      "outcome": "team_a",
+      "sample_count": 104,
+      "path_deviation": 0.6627994535758918,
+      "result_surprise": 0.7704194260485651,
+      "reason_cn": "Uruguay打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.7246707958735487,
+      "probability": 0.047407407407407405,
+      "probability_percent": 4.7407,
+      "outcome": "team_b",
+      "sample_count": 128,
+      "path_deviation": 0.6977983958231242,
+      "result_surprise": 0.717439293598234,
+      "reason_cn": "Cape Verde通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.7502197591294343,
+      "probability": 0.03481481481481481,
+      "probability_percent": 3.4815,
+      "outcome": "team_a",
+      "sample_count": 94,
+      "path_deviation": 0.6727917796382494,
+      "result_surprise": 0.7924944812362031,
+      "reason_cn": "Uruguay打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.7586525664184224,
+      "probability": 0.02925925925925926,
+      "probability_percent": 2.9259,
+      "outcome": "draw",
+      "sample_count": 79,
+      "path_deviation": 0.6600474682320983,
+      "result_surprise": 0.82560706401766,
+      "reason_cn": "抢断后的快速转换；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_uruguay_midfield_counterpress_second_balls"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.7599370142877873,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.5728614707824997,
+      "result_surprise": 0.988962472406181,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_uruguay_midfield_counterpress_second_balls"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.791577037621755,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_b",
+      "sample_count": 22,
+      "path_deviation": 0.6121496646258996,
+      "result_surprise": 0.9514348785871964,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_uruguay_midfield_counterpress_second_balls"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.7956305506912779,
+      "probability": 0.011851851851851851,
+      "probability_percent": 1.1852,
+      "outcome": "team_a",
+      "sample_count": 32,
+      "path_deviation": 0.6264807694377874,
+      "result_surprise": 0.9293598233995585,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力；Uruguay打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.801626861463188,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5932485803048667,
+      "result_surprise": 0.9977924944812362,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_low_block_vozinha_uruguay_creation"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.801626861463188,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5932485803048667,
+      "result_surprise": 0.9977924944812362,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_low_block_vozinha_uruguay_creation"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.8097938587014809,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "draw",
+      "sample_count": 14,
+      "path_deviation": 0.6136263587456787,
+      "result_surprise": 0.9690949227373068,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_low_block_vozinha_uruguay_creation",
+        "H_uruguay_midfield_counterpress_second_balls"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.857044200641863,
+      "probability": 0.005555555555555556,
+      "probability_percent": 0.5556,
+      "outcome": "team_b",
+      "sample_count": 15,
+      "path_deviation": 0.6433100986822083,
+      "result_surprise": 0.9668874172185431,
+      "reason_cn": "抢断后的快速转换；Cape Verde充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_uruguay_midfield_counterpress_second_balls"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.858785270250132,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.6277188834271927,
+      "result_surprise": 0.9977924944812362,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力、紧凑防守对进攻空间的压缩；Cape Verde充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters",
+        "H_low_block_vozinha_uruguay_creation"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.8776832635604672,
+      "probability": 0.012592592592592593,
+      "probability_percent": 1.2593,
+      "outcome": "team_b",
+      "sample_count": 34,
+      "path_deviation": 0.6783412990102126,
+      "result_surprise": 0.9249448123620309,
+      "reason_cn": "Cape Verde充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.8804057045962874,
+      "probability": 0.011481481481481481,
+      "probability_percent": 1.1481,
+      "outcome": "team_a",
+      "sample_count": 31,
+      "path_deviation": 0.6764171406668712,
+      "result_surprise": 0.9315673289183223,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.9008039757948816,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_a",
+      "sample_count": 11,
+      "path_deviation": 0.6649455117585777,
+      "result_surprise": 0.9757174392935982,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.9245665508559957,
+      "probability": 0.014074074074074074,
+      "probability_percent": 1.4074,
+      "outcome": "team_a",
+      "sample_count": 38,
+      "path_deviation": 0.7113696511583755,
+      "result_surprise": 0.9161147902869757,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters",
+        "H_uruguay_midfield_counterpress_second_balls"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.9770630786571066,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_a",
+      "sample_count": 16,
+      "path_deviation": 0.7168780815412135,
+      "result_surprise": 0.9646799116997793,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.981162342189862,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.7027090132829987,
+      "result_surprise": 0.9955849889624724,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters",
+        "H_uruguay_midfield_counterpress_second_balls"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 1.0,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_a",
+      "sample_count": 9,
+      "path_deviation": 0.7223899653038295,
+      "result_surprise": 0.9801324503311258,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_uruguay_midfield_counterpress_second_balls"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.8411625028135378,
+      "result_surprise": 0.9911699779249448,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.803899127329289,
+      "result_surprise": 0.9911699779249448,
+      "reason_cn": "抢断后的快速转换、raujo缺阵叠加乌拉圭高位压迫与对手破压能力；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_uruguay_midfield_counterpress_second_balls",
+        "H_araujo_absent_highline_capeverde_counters"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9977924944812362,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters",
+        "H_low_block_vozinha_uruguay_creation"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9977924944812362,
+      "reason_cn": "raujo缺阵叠加乌拉圭高位压迫与对手破压能力、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_araujo_absent_highline_capeverde_counters",
+        "H_low_block_vozinha_uruguay_creation"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7776991431388048,
+      "result_surprise": 0.9977924944812362,
+      "reason_cn": "抢断后的快速转换、raujo缺阵叠加乌拉圭高位压迫与对手破压能力；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_uruguay_midfield_counterpress_second_balls",
+        "H_araujo_absent_highline_capeverde_counters"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

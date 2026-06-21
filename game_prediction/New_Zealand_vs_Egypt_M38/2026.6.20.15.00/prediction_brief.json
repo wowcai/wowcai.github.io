@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T15:00:00+08:00",
+  "match": {
+    "match_id": "M38",
+    "team_a": "New Zealand",
+    "team_b": "Egypt",
+    "kickoff_utc": "2026-06-22T01:00:00Z",
+    "venue": "BC Place Vancouver",
+    "stage": "group",
+    "group": "G",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 1,
+    "world_state_fallback_ratio": 0.02702702702702703,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 135,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "World State有1个字段使用局部回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.18444444444444444,
+    "draw": 0.2562962962962963,
+    "team_b_win": 0.5592592592592592
+  },
+  "most_likely_outcome": {
+    "label": "Egypt胜",
+    "probability": 0.5592592592592592
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.14888888888888888
+    },
+    {
+      "score": "1-1",
+      "probability": 0.12814814814814815
+    },
+    {
+      "score": "0-2",
+      "probability": 0.11555555555555555
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "萨拉赫预选赛为埃及打进9球，多家赛前报道称其仍是进攻核心。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_d0ed06adcb4e",
+        "E_e95ec94092a2"
+      ],
+      "source_names": [
+        "Channel NewsAsia",
+        "RNZ"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "预览将萨拉赫冲击新西兰左路防守列为关键对位，并强调其116场67球。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_96718e9617b9"
+      ],
+      "source_names": [
+        "JuveFC"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "新西兰预计以4-2-3-1或4-4-2紧凑防守，直接找Chris Wood。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_8a0f7340f0e7",
+        "E_e8cc584e6d2f"
+      ],
+      "source_names": [
+        "RotoWire",
+        "BettingExpert"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "卫报列新西兰FIFA排名第85、埃及第29，排名差距是明确背景。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_0a9b3d76c017",
+        "E_3027cdcf90a9"
+      ],
+      "source_names": [
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "赛前资料称双方均无确认重大伤停，新西兰也无伤停或停赛疑问。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_fd0c2a0d2ab3",
+        "E_7f75b8feaaf0"
+      ],
+      "source_names": [
+        "Sports Mole",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在温哥华BC Place进行，FIFA称该场馆赛事屋顶将保持关闭。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_ff19f2f5933f",
+        "E_42add1c7d42d"
+      ],
+      "source_names": [
+        "FIFA",
+        "FIFA Facebook"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-20T07:00:00Z",
+    "source_state_sha256": "1a3f5a1a3f959efeac52cf7b4b7242dd4ccd4c95e93834721d777ebea18698d6",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案整体引用真实、结构合理：埃及方向的崩盘与大比分关注合理，爆冷集中于低比分小胜也符合冻结矩阵与机制证据。审计做了三处收敛：(1) high_scoring 中三条机制的 total_goals 方向均为 neutral 或 down，没有任何机制支撑总进球抬高，且9条推演中仅 2-2 触及四球，故下调其证据强度，并删除与崩盘高度重叠的 1-4，使该池聚焦于真正的开放型小净胜比分；(2) blowout 维持，0-3 作为池内主导且有…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.22,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.4,
+        "summary_cn": "开放大比分有一定背景支撑：新西兰首轮2-2、埃及萨拉赫与Marmoush的边路/转换威胁、以及Wood高点定位球的低控球得分通道。但关键弱点在于三条机制中两条对总进球为neutral、受控节奏机制为down，没有任何机制把总进球方向推高，且推演样本里仅2-2触及四球，因此该情景更像局部失衡后的偶发大比分，而非天然开放对攻。",
+        "caution_cn": "该情景与崩盘存在比分重叠，不能叠加理解；高进球需早球、效率偏高或被迫拉开节奏，若前30分钟维持无球，开放性会明显下降。",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.04703703703703704,
+            "tail_focus_conditional_probability": 0.24604455925088795,
+            "support_grade": 1,
+            "script_cn": "新西兰低位开局，埃及通过萨拉赫右路牵制和转换逐步制造优势；新西兰依靠Wood争顶、定位球或二点球拿到一球，但后段因追分暴露空间，被埃及再扩大到两球差。"
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.034074074074074076,
+            "tail_focus_conditional_probability": 0.14853083629318695,
+            "support_grade": 0,
+            "script_cn": "比赛前段较谨慎，但双方核心通道都兑现：埃及靠边路单点和转换进球，新西兰靠Wood支点、定位球或反击回合回应，最终形成拉锯平局。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.13037037037037036,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.58,
+        "summary_cn": "一边倒崩盘主要集中在埃及方向。埃及排名、整体实力和萨拉赫/Marmoush攻击集中度均优于新西兰；若萨拉赫右路牵制迫使新西兰左侧与后腰连续补位，且新西兰落后后被迫提高站位，0-3或更大差距具备机制基础。新西兰低位防守、Wood定位球通道和受控节奏会抑制崩盘幅度。",
+        "caution_cn": "崩盘不是埃及胜率的重复表达，而是极端比分分支；需早球、连续转换兑现或新西兰追分后结构断裂。若新西兰低位完整并控制定位球防守，崩盘会显著降温。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.05185185185185185,
+            "tail_focus_conditional_probability": 0.4774223894637817,
+            "support_grade": 2,
+            "script_cn": "埃及通过萨拉赫右路和Marmoush的速度持续压迫新西兰防线，先取得领先；新西兰为追分提高中前场投入，后续被埃及转换再打入两球，且自身定位球未能兑现。"
+          },
+          {
+            "score": "1-4",
+            "base_probability": 0.01888888888888889,
+            "tail_focus_conditional_probability": 0.14393226716839133,
+            "support_grade": 1,
+            "script_cn": "新西兰在低位中仍通过Wood高点或定位球取得一球，但埃及在边路牵制、弱侧转移和追分阶段的反击中连续得手，比赛后段被拉成三球差。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.18444444444444444,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.42,
+        "summary_cn": "爆冷适用但证据强度有限。新西兰的合理爆冷路径不是控球压制，而是低位守住节奏、依靠Chris Wood支点、定位球或少量转换取得领先并守住。反向证据很强：埃及排名、整体实力、萨拉赫核心作用和Marmoush攻击点都指向埃及更可能获胜。",
+        "caution_cn": "爆冷分支不应被理解为新西兰整体占优；其成立通常需要埃及边路转化率下降、新西兰定位球兑现、且比赛长期处于低事件状态。若埃及先入球，爆冷路径会快速变窄。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.08148148148148149,
+            "tail_focus_conditional_probability": 0.4870848708487085,
+            "support_grade": 1,
+            "script_cn": "新西兰长期低位防守，限制埃及中路渗透，并用犯规控制、人数保护和禁区站位降低萨拉赫威胁；中段或后段通过Wood争顶、定位球二点或一次转换打入唯一进球。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.04703703703703704,
+            "tail_focus_conditional_probability": 0.23431734317343172,
+            "support_grade": 0,
+            "script_cn": "埃及凭个人能力制造进球，但新西兰通过定位球、长传二点和反击各兑现一次；比赛后段新西兰回收防线，用低位密集防守守住一球优势。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

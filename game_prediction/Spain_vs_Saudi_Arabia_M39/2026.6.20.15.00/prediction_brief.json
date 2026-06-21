@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T15:00:00+08:00",
+  "match": {
+    "match_id": "M39",
+    "team_a": "Spain",
+    "team_b": "Saudi Arabia",
+    "kickoff_utc": "2026-06-21T16:00:00Z",
+    "venue": "Atlanta Stadium",
+    "stage": "group",
+    "group": "H",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 207,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.7911111111111111,
+    "draw": 0.17148148148148148,
+    "team_b_win": 0.03740740740740741
+  },
+  "most_likely_outcome": {
+    "label": "Spain胜",
+    "probability": 0.7911111111111111
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.1874074074074074
+    },
+    {
+      "score": "2-0",
+      "probability": 0.18296296296296297
+    },
+    {
+      "score": "3-0",
+      "probability": 0.12296296296296297
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "西班牙预计由Rodri、Pedri、Fabian Ruiz控节奏，再分边找Yamal和Nico Williams。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_4ebb24f94c5a",
+        "E_63164c70dd5f"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "JuveFC"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "沙特防守被预期可能排出4-4-2低位，也有3-4-2-1首发预测。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_0a1473e8a658",
+        "E_f6d630599a39"
+      ],
+      "source_names": [
+        "Sports Yahoo",
+        "SportsGambler"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "Lamine Yamal称可出战但不适合踢满全场，多家报道认为他可能不会首发。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_29d43cb74635",
+        "E_4bbd2c5237fb",
+        "E_9e07a8245206",
+        "E_5928930499b6"
+      ],
+      "source_names": [
+        "ESPN",
+        "Sportsnet",
+        "Fox Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "Elo资料列西班牙第1、2165分；沙特第71、1568分，评分差距明显。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_36659eb8b82e",
+        "E_67579d57301a"
+      ],
+      "source_names": [
+        "International-football.net"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "两队首轮均未取胜：西班牙0-0佛得角，沙特1-1乌拉圭。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_5f83bb6b7608",
+        "E_6635f56baa5a"
+      ],
+      "source_names": [
+        "Sofascore"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛官方场地为亚特兰大Mercedes-Benz Stadium，世界杯前已更换天然草皮。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_8c400e39416f",
+        "E_d702bc617f6e",
+        "E_0e882e27df5f"
+      ],
+      "source_names": [
+        "Mercedes-Benz Stadium",
+        "Sports Illustrated",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-20T07:00:00Z",
+    "source_state_sha256": "fe65f2df91290836a2acc793e787ae9f407d0316bf475ab30ae18046d5d3d962",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案整体结构合理：正确识别出在高偏离筛选中“一边倒胜出”(blowout)比真正开放对攻(high_scoring)更有机制支撑，且明确提示两池在概率上不可累加。三个情景的候选基本来自各自池中条件概率最高的几个比分，证据与机制引用真实、未引入池外事实。主要问题集中在upset情景：在主预测team_b_win仅0.037、expected_goals_a高达2.14的背景下，0-1被赋予中性支持(0)偏高——西班牙零封本身缺乏任何正向…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.24444444444444444,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.53,
+        "summary_cn": "总进球≥4的现实路径主要是西班牙控球压制后单边累积产出，而非双方对攻。4-0、3-1为池内条件概率最高的两个候选，符合实力差与沙特进攻产量有限的组合；5-0为可解释的极端单边形态；3-2作为真正开放对攻的高波动尾部保留。该情景与blowout高度重叠，概率不可相加这一点提案已正确标注。",
+        "caution_cn": "若沙特低位防守保持完整或西班牙延续首战0-0的终结问题，本情景会退化为3-0及以下的控制型胜利，落入blowout而非开放大比分。",
+        "top_scores": [
+          {
+            "score": "4-0",
+            "base_probability": 0.0674074074074074,
+            "tail_focus_conditional_probability": 0.30396659707724427,
+            "support_grade": 1,
+            "script_cn": "西班牙长时间压制沙特低位，前60分钟通过中场转移和边路突破打开局面；领先后沙特体能与阵型间距下降，西班牙继续通过倒三角、二线插上或替补边路冲击扩大比分，沙特转换被Rodri区域反抢压制。"
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.04925925925925926,
+            "tail_focus_conditional_probability": 0.22212943632567853,
+            "support_grade": 1,
+            "script_cn": "西班牙控球主导但前段未完全杀死比赛，沙特依靠低位断球后的Al-Dawsari或边路转换制造一次有效进攻；随后西班牙在下半场加快节奏，利用边路一对一和中场二次进攻拉开到两球差。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.2866666666666667,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.68,
+        "summary_cn": "一边倒比开放对攻更有机制支撑：西班牙整体强度、中场控制与边路破局能力显著优于沙特，沙特更可能长时间防守。3-0为池内压倒性最高条件概率(约0.43)的核心形态，与expected_goals_a≈2.14一致；4-0、5-0、4-1构成递进的扩大化与单次失球尾部。四个候选即池内条件概率前四，未忽略更合理候选。",
+        "caution_cn": "崩盘依赖首球较早或终结在线；若沙特守住前60分钟或西班牙延续高控球低转化，净胜三球以上会明显受限。本情景与4-0、5-0等高比分重叠，不可重复累加。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.12296296296296297,
+            "tail_focus_conditional_probability": 0.5015628255886643,
+            "support_grade": 2,
+            "script_cn": "西班牙通过Rodri、Pedri和Fabian Ruiz稳定控场，把沙特压在中低位；一旦边路或二线进攻取得首球，沙特难以持续向前，西班牙在下半场通过耐心传导与边路换人再进两球。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.0674074074074074,
+            "tail_focus_conditional_probability": 0.22754740570952284,
+            "support_grade": 1,
+            "script_cn": "西班牙早段或中段破门后持续占据前场，沙特边路协防负荷增加；Yamal若后段登场，面对体能下降的防线制造额外威胁，西班牙把优势扩大到四球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.0374074074074074,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.22,
+        "summary_cn": "爆冷仅存在低位防守、门将高压扑救与Al-Dawsari转换出口的窄路径。主线证据明显偏向西班牙控球压制，沙特整体进攻指标与持续推进能力不足。候选0-1、1-2、0-2为池内条件概率前三，引用真实，但需注意所有路径均要求西班牙至少部分零封，这与expected_goals_a≈2.14相冲突。",
+        "caution_cn": "爆冷筛选不提高沙特总体胜率，仅在既有池内识别相对更可解释的冷门。若西班牙先进球，所有爆冷路径迅速收窄。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.018518518518518517,
+            "tail_focus_conditional_probability": 0.5002942907592702,
+            "support_grade": -1,
+            "script_cn": "沙特长时间低位防守，Al Owais和三中卫/四后卫结构承受高射门压力；西班牙延续高控球低转化问题，沙特通过一次Al-Dawsari牵引的转换或少数定位球后的二次进攻取得领先，并在末段收缩守住。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.01074074074074074,
+            "tail_focus_conditional_probability": 0.2901706886403767,
+            "support_grade": -1,
+            "script_cn": "西班牙控球并取得或扳回一球，但压上过程中给出身后空间；沙特两次高质量转换由Al-Dawsari或其牵制创造射门，随后低位守住最后阶段。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

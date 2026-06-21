@@ -1,0 +1,545 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T15:00:00+08:00",
+  "quality_label": "usable",
+  "match_id": "M37",
+  "team_a": "Belgium",
+  "team_b": "Iran",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.14962962962962964,
+      "probability_percent": 14.963,
+      "outcome": "draw",
+      "sample_count": 404,
+      "path_deviation": 0.660781901727529,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.08255171616796966,
+      "probability": 0.13111111111111112,
+      "probability_percent": 13.1111,
+      "outcome": "team_a",
+      "sample_count": 354,
+      "path_deviation": 0.6501815282800009,
+      "result_surprise": 0.12376237623762376,
+      "reason_cn": "Belgium在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.17857984270335112,
+      "probability": 0.11777777777777777,
+      "probability_percent": 11.7778,
+      "outcome": "draw",
+      "sample_count": 318,
+      "path_deviation": 0.6673892842287507,
+      "result_surprise": 0.21287128712871295,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.24432665272162357,
+      "probability": 0.10481481481481482,
+      "probability_percent": 10.4815,
+      "outcome": "team_b",
+      "sample_count": 283,
+      "path_deviation": 0.6653731469830314,
+      "result_surprise": 0.29950495049504955,
+      "reason_cn": "Iran通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.3422854942878084,
+      "probability": 0.07888888888888888,
+      "probability_percent": 7.8889,
+      "outcome": "team_a",
+      "sample_count": 213,
+      "path_deviation": 0.6385755145147168,
+      "result_surprise": 0.47277227722772286,
+      "reason_cn": "Belgium在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.4078433976416017,
+      "probability": 0.07296296296296297,
+      "probability_percent": 7.2963,
+      "outcome": "team_a",
+      "sample_count": 197,
+      "path_deviation": 0.6617548226532904,
+      "result_surprise": 0.5123762376237624,
+      "reason_cn": "Belgium打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.49059141972227577,
+      "probability": 0.06703703703703703,
+      "probability_percent": 6.7037,
+      "outcome": "team_b",
+      "sample_count": 181,
+      "path_deviation": 0.6966037831448186,
+      "result_surprise": 0.551980198019802,
+      "reason_cn": "Iran通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.5327930626178874,
+      "probability": 0.044444444444444446,
+      "probability_percent": 4.4444,
+      "outcome": "draw",
+      "sample_count": 120,
+      "path_deviation": 0.6439503517449133,
+      "result_surprise": 0.7029702970297029,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.5656172392063779,
+      "probability": 0.04888888888888889,
+      "probability_percent": 4.8889,
+      "outcome": "team_b",
+      "sample_count": 132,
+      "path_deviation": 0.682227218919455,
+      "result_surprise": 0.6732673267326732,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Iran充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.5791898849765684,
+      "probability": 0.03037037037037037,
+      "probability_percent": 3.037,
+      "outcome": "team_a",
+      "sample_count": 82,
+      "path_deviation": 0.6247998407280146,
+      "result_surprise": 0.7970297029702971,
+      "reason_cn": "Belgium打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.6146062864218318,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.540883681003321,
+      "result_surprise": 0.9975247524752475,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "7-3",
+      "deviation": 0.6146062864218318,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.540883681003321,
+      "result_surprise": 0.9975247524752475,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.6150442393068305,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.5451794656633402,
+      "result_surprise": 0.9900990099009901,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.6516433491200422,
+      "probability": 0.012222222222222223,
+      "probability_percent": 1.2222,
+      "outcome": "team_b",
+      "sample_count": 33,
+      "path_deviation": 0.6086770120916635,
+      "result_surprise": 0.9183168316831684,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6631329883918936,
+      "probability": 0.02,
+      "probability_percent": 2.0,
+      "outcome": "team_b",
+      "sample_count": 54,
+      "path_deviation": 0.6444661848512953,
+      "result_surprise": 0.8663366336633663,
+      "reason_cn": "Iran充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.6755964103321027,
+      "probability": 0.02925925925925926,
+      "probability_percent": 2.9259,
+      "outcome": "team_a",
+      "sample_count": 79,
+      "path_deviation": 0.6862477202814978,
+      "result_surprise": 0.8044554455445545,
+      "reason_cn": "中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人、紧凑防守对进攻空间的压缩；Belgium打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6958790218891505,
+      "probability": 0.016296296296296295,
+      "probability_percent": 1.6296,
+      "outcome": "team_a",
+      "sample_count": 44,
+      "path_deviation": 0.6533678409652494,
+      "result_surprise": 0.8910891089108911,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.7114021757990221,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "draw",
+      "sample_count": 2,
+      "path_deviation": 0.6079271858607552,
+      "result_surprise": 0.995049504950495,
+      "reason_cn": "中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.7244485403889973,
+      "probability": 0.01925925925925926,
+      "probability_percent": 1.9259,
+      "outcome": "team_b",
+      "sample_count": 52,
+      "path_deviation": 0.683425096421299,
+      "result_surprise": 0.8712871287128713,
+      "reason_cn": "紧凑防守对进攻空间的压缩、中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人；Iran充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_02",
+        "H_03"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.7327805662090037,
+      "probability": 0.01074074074074074,
+      "probability_percent": 1.0741,
+      "outcome": "team_a",
+      "sample_count": 29,
+      "path_deviation": 0.6584263715549289,
+      "result_surprise": 0.9282178217821783,
+      "reason_cn": "中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7368195069925647,
+      "probability": 0.00962962962962963,
+      "probability_percent": 0.963,
+      "outcome": "team_a",
+      "sample_count": 26,
+      "path_deviation": 0.657169762689056,
+      "result_surprise": 0.9356435643564356,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.7528817973222368,
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296,
+      "outcome": "draw",
+      "sample_count": 17,
+      "path_deviation": 0.6560783492202839,
+      "result_surprise": 0.9579207920792079,
+      "reason_cn": "中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.7638382421051136,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.6421910117114096,
+      "result_surprise": 0.9975247524752475,
+      "reason_cn": "中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.7648279522154998,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.6428628844949497,
+      "result_surprise": 0.9975247524752475,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7657360202139256,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.6528091129964215,
+      "result_surprise": 0.9801980198019802,
+      "reason_cn": "中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人、紧凑防守对进攻空间的压缩；Iran充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.8154618279228366,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.679901755324212,
+      "result_surprise": 0.9925742574257426,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.8271117615638701,
+      "probability": 0.007037037037037037,
+      "probability_percent": 0.7037,
+      "outcome": "team_a",
+      "sample_count": 19,
+      "path_deviation": 0.7091356172729576,
+      "result_surprise": 0.9529702970297029,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Belgium打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.8595839937585213,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.715185749958174,
+      "result_surprise": 0.9826732673267327,
+      "reason_cn": "中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.8740847995662604,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7170327867521954,
+      "result_surprise": 0.9975247524752475,
+      "reason_cn": "中午炎热与小组压力压低前段节奏，后段波动取决于体能和换人；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.8831424581189875,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.724514477752946,
+      "result_surprise": 0.995049504950495,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.8850079762361753,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.7337778534891813,
+      "result_surprise": 0.9801980198019802,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.9130604369821009,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.7474901929872602,
+      "result_surprise": 0.9900990099009901,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.981811786301435,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.7914969562385774,
+      "result_surprise": 0.995049504950495,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 1.0,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.8118411270480846,
+      "result_surprise": 0.9801980198019802,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.9471018326167453,
+      "result_surprise": 0.9900990099009901,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.9294691101556604,
+      "result_surprise": 0.9925742574257426,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "0-7",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.940131027982205,
+      "result_surprise": 0.9975247524752475,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.908145274502571,
+      "result_surprise": 0.9975247524752475,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.940131027982205,
+      "result_surprise": 0.9975247524752475,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

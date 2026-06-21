@@ -1,0 +1,855 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-20T07:00:00Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_New_Zealand_vs_Egypt_M38\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "1a3f5a1a3f959efeac52cf7b4b7242dd4ccd4c95e93834721d777ebea18698d6",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-20T07:00:00+00:00"
+  },
+  "match": {
+    "match_id": "M38",
+    "team_a": "New Zealand",
+    "team_b": "Egypt",
+    "kickoff_utc": "2026-06-22T01:00:00Z",
+    "venue": "BC Place Vancouver",
+    "stage": "group",
+    "group": "G",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.18444444444444444,
+    "draw": 0.2562962962962963,
+    "team_b_win": 0.5592592592592592,
+    "top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.14888888888888888
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12814814814814815
+      },
+      {
+        "score": "0-2",
+        "probability": 0.11555555555555555
+      },
+      {
+        "score": "1-2",
+        "probability": 0.09222222222222222
+      },
+      {
+        "score": "0-0",
+        "probability": 0.08703703703703704
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_b",
+    "favorite_team": "Egypt",
+    "underdog_side": "team_a",
+    "underdog_team": "New Zealand",
+    "team_a_win": 0.18444444444444444,
+    "draw": 0.2562962962962963,
+    "team_b_win": 0.5592592592592592,
+    "win_probability_gap": 0.3748148148148148,
+    "underdog_win_probability": 0.18444444444444444,
+    "favorite_fail_to_win_probability": 0.44074074074074077,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "提案整体引用真实、结构合理：埃及方向的崩盘与大比分关注合理，爆冷集中于低比分小胜也符合冻结矩阵与机制证据。审计做了三处收敛：(1) high_scoring 中三条机制的 total_goals 方向均为 neutral 或 down，没有任何机制支撑总进球抬高，且9条推演中仅 2-2 触及四球，故下调其证据强度，并删除与崩盘高度重叠的 1-4，使该池聚焦于真正的开放型小净胜比分；(2) blowout 维持，0-3 作为池内主导且有 claude 推演代表路径支撑，保留 grade2；(3) upset 中 3-1 是四球级爆冷，与提案自述的‘爆冷集中在低比分小胜’自相矛盾，且条件概率断崖式下降，予以删除，使爆冷回到 1-0/2-1/2-0 的低事件叙事。所有保留比分均来自原候选池，未改变任何情景总概率。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.22,
+      "attention_level": "medium",
+      "evidence_strength": 0.4,
+      "rationale_cn": "开放大比分有一定背景支撑：新西兰首轮2-2、埃及萨拉赫与Marmoush的边路/转换威胁、以及Wood高点定位球的低控球得分通道。但关键弱点在于三条机制中两条对总进球为neutral、受控节奏机制为down，没有任何机制把总进球方向推高，且推演样本里仅2-2触及四球，因此该情景更像局部失衡后的偶发大比分，而非天然开放对攻。",
+      "supporting_evidence_ids": [
+        "E_4df0aa3556c1",
+        "E_d0ed06adcb4e",
+        "E_e95ec94092a2",
+        "E_35d3bfe75a39",
+        "E_8a0f7340f0e7",
+        "E_adcae13dc1e1"
+      ],
+      "counter_evidence_ids": [
+        "E_65abc6389ec1",
+        "E_42add1c7d42d",
+        "E_91b9e8e93fa5"
+      ],
+      "caution_cn": "该情景与崩盘存在比分重叠，不能叠加理解；高进球需早球、效率偏高或被迫拉开节奏，若前30分钟维持无球，开放性会明显下降。",
+      "audit_note_cn": "将证据强度从0.46下调到0.40以反映无机制支撑总进球抬高的事实；删除1-4(margin3,5球)，因其更属崩盘分支并与blowout池重复计入，使high_scoring聚焦于净胜≤2的开放型比分。保留1-3、2-2、2-3并维持原support_grade。",
+      "candidate_pool": [
+        {
+          "score": "1-3",
+          "base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.2138047138047138,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.034074074074074076,
+          "base_conditional_probability": 0.1548821548821549,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.024074074074074074,
+          "base_conditional_probability": 0.10942760942760943,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.08585858585858586,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.07744107744107745,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.04713804713804714,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.01,
+          "base_conditional_probability": 0.045454545454545456,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.04208754208754208,
+          "total_goals": 5,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.2138047138047138,
+          "tail_focus_conditional_probability": 0.24604455925088795,
+          "tail_focus_implied_overall_probability": 0.05412980303519535,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "新西兰低位开局，埃及通过萨拉赫右路牵制和转换逐步制造优势；新西兰依靠Wood争顶、定位球或二点球拿到一球，但后段因追分暴露空间，被埃及再扩大到两球差。",
+          "rationale_cn": "开放候选中条件概率最高，兼容主预测的埃及优势，同时保留新西兰直接进攻得一球的路径，证据需求低于0-4/0-5等极端比分。",
+          "evidence_ids": [
+            "E_d0ed06adcb4e",
+            "E_e95ec94092a2",
+            "E_96718e9617b9",
+            "E_35d3bfe75a39",
+            "E_8a0f7340f0e7",
+            "E_adcae13dc1e1"
+          ],
+          "mechanism_ids": [
+            "H_SALAH_RIGHT_FLANK_PRESSURE",
+            "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+          ]
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.034074074074074076,
+          "base_conditional_probability": 0.1548821548821549,
+          "tail_focus_conditional_probability": 0.14853083629318695,
+          "tail_focus_implied_overall_probability": 0.03267678398450113,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "比赛前段较谨慎，但双方核心通道都兑现：埃及靠边路单点和转换进球，新西兰靠Wood支点、定位球或反击回合回应，最终形成拉锯平局。",
+          "rationale_cn": "有新西兰首轮2-2背景和Wood通道支撑，也被推演样本覆盖；但需要新西兰两次破开埃及防线，与防守纪律和实力差距存在冲突，故仅中性支持。",
+          "evidence_ids": [
+            "E_4df0aa3556c1",
+            "E_b806a34bd15b",
+            "E_8a0f7340f0e7",
+            "E_adcae13dc1e1",
+            "E_65abc6389ec1"
+          ],
+          "mechanism_ids": [
+            "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+            "H_SALAH_RIGHT_FLANK_PRESSURE",
+            "H_CONTROLLED_TEMPO_LOW_EVENT"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.024074074074074074,
+          "base_conditional_probability": 0.10942760942760943,
+          "tail_focus_conditional_probability": 0.10494026477236035,
+          "tail_focus_implied_overall_probability": 0.023086858249919278,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "埃及在优势局面中多次通过右路和转换取得领先，新西兰落后后增加直接球和前场定位球投入，比赛进入较开放后段追分，最终埃及险胜。",
+          "rationale_cn": "保留埃及纸面优势并解释新西兰两球来源；但五球总量对终结效率和开放程度要求偏高，低节奏反证压低支持。",
+          "evidence_ids": [
+            "E_d0ed06adcb4e",
+            "E_e95ec94092a2",
+            "E_35d3bfe75a39",
+            "E_8a0f7340f0e7",
+            "E_adcae13dc1e1",
+            "E_65abc6389ec1"
+          ],
+          "mechanism_ids": [
+            "H_SALAH_RIGHT_FLANK_PRESSURE",
+            "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.2138047138047138,
+          "tail_focus_conditional_probability": 0.24604455925088795,
+          "tail_focus_implied_overall_probability": 0.05412980303519535,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.034074074074074076,
+          "base_conditional_probability": 0.1548821548821549,
+          "tail_focus_conditional_probability": 0.14853083629318695,
+          "tail_focus_implied_overall_probability": 0.03267678398450113,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.024074074074074074,
+          "base_conditional_probability": 0.10942760942760943,
+          "tail_focus_conditional_probability": 0.10494026477236035,
+          "tail_focus_implied_overall_probability": 0.023086858249919278,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.08585858585858586,
+          "tail_focus_conditional_probability": 0.08233774620600581,
+          "tail_focus_implied_overall_probability": 0.01811430416532128,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.07744107744107745,
+          "tail_focus_conditional_probability": 0.07426541814659347,
+          "tail_focus_implied_overall_probability": 0.016338391992250564,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.04713804713804714,
+          "tail_focus_conditional_probability": 0.04520503713270907,
+          "tail_focus_implied_overall_probability": 0.009945108169195995,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.045454545454545456,
+          "tail_focus_conditional_probability": 0.043590571520826606,
+          "tail_focus_implied_overall_probability": 0.009589925734581853,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.04208754208754208,
+          "tail_focus_conditional_probability": 0.04036164029706167,
+          "tail_focus_implied_overall_probability": 0.008879560865353568,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.038720538720538725,
+          "tail_focus_conditional_probability": 0.03713270907329674,
+          "tail_focus_implied_overall_probability": 0.008169195996125282,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.03367003367003367,
+          "tail_focus_conditional_probability": 0.03228931223764934,
+          "tail_focus_implied_overall_probability": 0.007103648692282854,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.13037037037037036,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.58,
+      "rationale_cn": "一边倒崩盘主要集中在埃及方向。埃及排名、整体实力和萨拉赫/Marmoush攻击集中度均优于新西兰；若萨拉赫右路牵制迫使新西兰左侧与后腰连续补位，且新西兰落后后被迫提高站位，0-3或更大差距具备机制基础。新西兰低位防守、Wood定位球通道和受控节奏会抑制崩盘幅度。",
+      "supporting_evidence_ids": [
+        "E_0a9b3d76c017",
+        "E_3027cdcf90a9",
+        "E_d0ed06adcb4e",
+        "E_e95ec94092a2",
+        "E_96718e9617b9",
+        "E_35d3bfe75a39"
+      ],
+      "counter_evidence_ids": [
+        "E_8a0f7340f0e7",
+        "E_adcae13dc1e1",
+        "E_65abc6389ec1",
+        "E_fd0c2a0d2ab3"
+      ],
+      "caution_cn": "崩盘不是埃及胜率的重复表达，而是极端比分分支；需早球、连续转换兑现或新西兰追分后结构断裂。若新西兰低位完整并控制定位球防守，崩盘会显著降温。",
+      "audit_note_cn": "维持原提案。0-3为崩盘池内条件概率主导项(0.398)且有claude推演代表路径(rollout_6)支撑，grade2予以保留；1-4、0-4按其对进球效率的不同要求维持grade1与grade0,梯度合理。",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.05185185185185185,
+          "base_conditional_probability": 0.39772727272727276,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.14488636363636365,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.1306818181818182,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.01,
+          "base_conditional_probability": 0.07670454545454547,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.0653409090909091,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.03977272727272727,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-5",
+          "base_probability": 0.0044444444444444444,
+          "base_conditional_probability": 0.034090909090909095,
+          "total_goals": 7,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.02840909090909091,
+          "total_goals": 5,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.05185185185185185,
+          "base_conditional_probability": 0.39772727272727276,
+          "tail_focus_conditional_probability": 0.4774223894637817,
+          "tail_focus_implied_overall_probability": 0.06224173373750042,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "埃及通过萨拉赫右路和Marmoush的速度持续压迫新西兰防线，先取得领先；新西兰为追分提高中前场投入，后续被埃及转换再打入两球，且自身定位球未能兑现。",
+          "rationale_cn": "崩盘池中最符合冻结矩阵与机制的比分，既体现埃及明显优势，又不要求离谱的进球效率，推演中也出现0-3代表路径。",
+          "evidence_ids": [
+            "E_0a9b3d76c017",
+            "E_3027cdcf90a9",
+            "E_d0ed06adcb4e",
+            "E_e95ec94092a2",
+            "E_96718e9617b9",
+            "E_35d3bfe75a39"
+          ],
+          "mechanism_ids": [
+            "H_SALAH_RIGHT_FLANK_PRESSURE"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.14488636363636365,
+          "tail_focus_conditional_probability": 0.14393226716839133,
+          "tail_focus_implied_overall_probability": 0.018764502978990277,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "新西兰在低位中仍通过Wood高点或定位球取得一球，但埃及在边路牵制、弱侧转移和追分阶段的反击中连续得手，比赛后段被拉成三球差。",
+          "rationale_cn": "相比0-4更承认新西兰有明确的直接球和定位球得分通道；相比0-3需要更高总进球效率，故支持低一档。",
+          "evidence_ids": [
+            "E_d0ed06adcb4e",
+            "E_e95ec94092a2",
+            "E_96718e9617b9",
+            "E_8a0f7340f0e7",
+            "E_adcae13dc1e1"
+          ],
+          "mechanism_ids": [
+            "H_SALAH_RIGHT_FLANK_PRESSURE",
+            "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.1306818181818182,
+          "tail_focus_conditional_probability": 0.10818438381937913,
+          "tail_focus_implied_overall_probability": 0.01410403818682276,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "埃及早早打开局面，新西兰低位计划被迫失效，后续在推进和二点球保护上连续失误；埃及通过右路单点、转换和禁区二次进攻扩大比分，新西兰未能形成有效定位球威胁。",
+          "rationale_cn": "埃及方向有实力与核心球员证据支撑，但零封加四球需要新西兰Wood通道完全失灵且埃及效率明显高于常态，故只属边缘关注。",
+          "evidence_ids": [
+            "E_0a9b3d76c017",
+            "E_3027cdcf90a9",
+            "E_d0ed06adcb4e",
+            "E_96718e9617b9",
+            "E_65abc6389ec1"
+          ],
+          "mechanism_ids": [
+            "H_SALAH_RIGHT_FLANK_PRESSURE"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.05185185185185185,
+          "base_conditional_probability": 0.39772727272727276,
+          "tail_focus_conditional_probability": 0.4774223894637817,
+          "tail_focus_implied_overall_probability": 0.06224173373750042,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.14488636363636365,
+          "tail_focus_conditional_probability": 0.14393226716839133,
+          "tail_focus_implied_overall_probability": 0.018764502978990277,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.1306818181818182,
+          "tail_focus_conditional_probability": 0.10818438381937913,
+          "tail_focus_implied_overall_probability": 0.01410403818682276,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.07670454545454547,
+          "tail_focus_conditional_probability": 0.06349952963311384,
+          "tail_focus_implied_overall_probability": 0.008278457196613359,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.0653409090909091,
+          "tail_focus_conditional_probability": 0.054092191909689565,
+          "tail_focus_implied_overall_probability": 0.00705201909341138,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.03977272727272727,
+          "tail_focus_conditional_probability": 0.03292568203198495,
+          "tail_focus_implied_overall_probability": 0.004292533361206926,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.0044444444444444444,
+          "base_conditional_probability": 0.034090909090909095,
+          "tail_focus_conditional_probability": 0.028222013170272814,
+          "tail_focus_implied_overall_probability": 0.0036793143096059367,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.02840909090909091,
+          "tail_focus_conditional_probability": 0.02351834430856068,
+          "tail_focus_implied_overall_probability": 0.0030660952580049477,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.025568181818181823,
+          "tail_focus_conditional_probability": 0.021166509877704614,
+          "tail_focus_implied_overall_probability": 0.002759485732204453,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-6",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.014204545454545456,
+          "tail_focus_conditional_probability": 0.01175917215428034,
+          "tail_focus_implied_overall_probability": 0.0015330476290024739,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 New Zealand 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.18444444444444444,
+      "attention_level": "medium",
+      "evidence_strength": 0.42,
+      "rationale_cn": "爆冷适用但证据强度有限。新西兰的合理爆冷路径不是控球压制，而是低位守住节奏、依靠Chris Wood支点、定位球或少量转换取得领先并守住。反向证据很强：埃及排名、整体实力、萨拉赫核心作用和Marmoush攻击点都指向埃及更可能获胜。",
+      "supporting_evidence_ids": [
+        "E_8a0f7340f0e7",
+        "E_adcae13dc1e1",
+        "E_e8cc584e6d2f",
+        "E_fd0c2a0d2ab3",
+        "E_9ec66c278e15",
+        "E_7f75b8feaaf0"
+      ],
+      "counter_evidence_ids": [
+        "E_0a9b3d76c017",
+        "E_3027cdcf90a9",
+        "E_d0ed06adcb4e",
+        "E_e95ec94092a2",
+        "E_96718e9617b9",
+        "E_35d3bfe75a39"
+      ],
+      "caution_cn": "爆冷分支不应被理解为新西兰整体占优；其成立通常需要埃及边路转化率下降、新西兰定位球兑现、且比赛长期处于低事件状态。若埃及先入球，爆冷路径会快速变窄。",
+      "audit_note_cn": "删除原提案的3-1(support_grade-1)。该比分是四球级爆冷，与本情景自述的‘爆冷集中在低比分小胜、而非持续压制型胜利’直接矛盾，要求新西兰对埃及防线打入三球，与实力差距和埃及防守纪律证据冲突，且条件概率(0.056)相对前三档断崖下跌。负向支持的候选不应保留，删除后使爆冷回到低事件、单/双次高杠杆兑现的连贯叙事。保留1-0、2-1、2-0并维持原support_grade。",
+      "candidate_pool": [
+        {
+          "score": "1-0",
+          "base_probability": 0.08148148148148149,
+          "base_conditional_probability": 0.4417670682730924,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-1",
+          "base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.25502008032128515,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-0",
+          "base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.12248995983935743,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.05622489959839357,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.050200803212851405,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.028112449799196786,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.020080321285140562,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.012048192771084338,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.08148148148148149,
+          "base_conditional_probability": 0.4417670682730924,
+          "tail_focus_conditional_probability": 0.4870848708487085,
+          "tail_focus_implied_overall_probability": 0.089840098400984,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "新西兰长期低位防守，限制埃及中路渗透，并用犯规控制、人数保护和禁区站位降低萨拉赫威胁；中段或后段通过Wood争顶、定位球二点或一次转换打入唯一进球。",
+          "rationale_cn": "最符合新西兰爆冷机制的比分：低事件、单次高杠杆进攻兑现，与受控节奏机制兼容，推演中也有1-0代表路径。",
+          "evidence_ids": [
+            "E_8a0f7340f0e7",
+            "E_adcae13dc1e1",
+            "E_e8cc584e6d2f",
+            "E_fd0c2a0d2ab3",
+            "E_65abc6389ec1"
+          ],
+          "mechanism_ids": [
+            "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+            "H_CONTROLLED_TEMPO_LOW_EVENT"
+          ]
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.25502008032128515,
+          "tail_focus_conditional_probability": 0.23431734317343172,
+          "tail_focus_implied_overall_probability": 0.04321853218532185,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "埃及凭个人能力制造进球，但新西兰通过定位球、长传二点和反击各兑现一次；比赛后段新西兰回收防线，用低位密集防守守住一球优势。",
+          "rationale_cn": "承认埃及进攻核心大概率制造威胁，同时保留新西兰两次高杠杆回合成功的路径；但对新西兰进攻效率要求高于1-0。",
+          "evidence_ids": [
+            "E_d0ed06adcb4e",
+            "E_e95ec94092a2",
+            "E_8a0f7340f0e7",
+            "E_adcae13dc1e1",
+            "E_4df0aa3556c1"
+          ],
+          "mechanism_ids": [
+            "H_SALAH_RIGHT_FLANK_PRESSURE",
+            "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+          ]
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.12248995983935743,
+          "tail_focus_conditional_probability": 0.1125461254612546,
+          "tail_focus_implied_overall_probability": 0.020758507585075848,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "新西兰先通过定位球或Wood支点取得领先，埃及压上后给出反击空间，新西兰再抓住一次转换或二点球机会扩大；埃及的边路主攻未能转化为进球。",
+          "rationale_cn": "需要新西兰防守端零封并两次兑现，难度较高；但若埃及在低位前效率偏低、新西兰定位球数量充足，该比分仍在候选池内具可解释性。",
+          "evidence_ids": [
+            "E_8a0f7340f0e7",
+            "E_adcae13dc1e1",
+            "E_fd0c2a0d2ab3",
+            "E_65abc6389ec1",
+            "E_d0ed06adcb4e"
+          ],
+          "mechanism_ids": [
+            "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+            "H_CONTROLLED_TEMPO_LOW_EVENT"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.08148148148148149,
+          "base_conditional_probability": 0.4417670682730924,
+          "tail_focus_conditional_probability": 0.4870848708487085,
+          "tail_focus_implied_overall_probability": 0.089840098400984,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.25502008032128515,
+          "tail_focus_conditional_probability": 0.23431734317343172,
+          "tail_focus_implied_overall_probability": 0.04321853218532185,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.02259259259259259,
+          "base_conditional_probability": 0.12248995983935743,
+          "tail_focus_conditional_probability": 0.1125461254612546,
+          "tail_focus_implied_overall_probability": 0.020758507585075848,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.05622489959839357,
+          "tail_focus_conditional_probability": 0.051660516605166046,
+          "tail_focus_implied_overall_probability": 0.009528495284952847,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.050200803212851405,
+          "tail_focus_conditional_probability": 0.04612546125461254,
+          "tail_focus_implied_overall_probability": 0.008507585075850758,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.028112449799196786,
+          "tail_focus_conditional_probability": 0.025830258302583023,
+          "tail_focus_implied_overall_probability": 0.004764247642476424,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.020080321285140562,
+          "tail_focus_conditional_probability": 0.01845018450184502,
+          "tail_focus_implied_overall_probability": 0.0034030340303403033,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.012048192771084338,
+          "tail_focus_conditional_probability": 0.01107011070110701,
+          "tail_focus_implied_overall_probability": 0.002041820418204182,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-3",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.004016064257028112,
+          "tail_focus_conditional_probability": 0.0036900369003690036,
+          "tail_focus_implied_overall_probability": 0.0006806068060680607,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.004016064257028112,
+          "tail_focus_conditional_probability": 0.0036900369003690036,
+          "tail_focus_implied_overall_probability": 0.0006806068060680607,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "1a3f5a1a3f959efeac52cf7b4b7242dd4ccd4c95e93834721d777ebea18698d6"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_New_Zealand_vs_Egypt_M38\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\web_delivery\\New_Zealand_vs_Egypt_M38\\2026.6.22.09\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_New_Zealand_vs_Egypt_M38\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\web_delivery\\New_Zealand_vs_Egypt_M38\\2026.6.22.09\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

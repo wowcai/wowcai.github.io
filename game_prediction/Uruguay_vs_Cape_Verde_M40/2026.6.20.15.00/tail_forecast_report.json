@@ -1,0 +1,889 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-20T07:00:00Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Uruguay_vs_Cape_Verde_M40\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "3e83af140ab203b27ecf93d732bd3c07c7fb48de31b090fc56a744a441ee110f",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-20T07:00:00+00:00"
+  },
+  "match": {
+    "match_id": "M40",
+    "team_a": "Uruguay",
+    "team_b": "Cape Verde",
+    "kickoff_utc": "2026-06-21T22:00:00Z",
+    "venue": "Miami Stadium",
+    "stage": "group",
+    "group": "H",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.4740740740740741,
+    "draw": 0.32185185185185183,
+    "team_b_win": 0.20407407407407407,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.16777777777777778
+      },
+      {
+        "score": "0-0",
+        "probability": 0.14407407407407408
+      },
+      {
+        "score": "1-1",
+        "probability": 0.14333333333333334
+      },
+      {
+        "score": "2-0",
+        "probability": 0.09703703703703703
+      },
+      {
+        "score": "0-1",
+        "probability": 0.09518518518518519
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Uruguay",
+    "underdog_side": "team_b",
+    "underdog_team": "Cape Verde",
+    "team_a_win": 0.4740740740740741,
+    "draw": 0.32185185185185183,
+    "team_b_win": 0.20407407407407407,
+    "win_probability_gap": 0.27,
+    "underdog_win_probability": 0.20407407407407407,
+    "favorite_fail_to_win_probability": 0.5259259259259259,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "提案整体真实引用了输入证据，机制链与所选比分基本对应，激进程度受控，三个池的支持度排序（爆冷>开放>崩盘）与证据结构一致，且明确提示了跨池重叠不可累加。仅对开放大比分情景做一处优化：剔除证据负担最重、与爆冷池高度重叠的1-3，改用条件概率更高且能同时承载乌拉圭优势与佛得角反击的3-2。崩盘与爆冷情景保持原样接受。所有保留比分均来自对应候选池，未改变任何情景总概率。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.14888888888888888,
+      "attention_level": "medium",
+      "evidence_strength": 0.39,
+      "rationale_cn": "总进球至少4球不是主线：最强机制（H_low_block_vozinha_uruguay_creation，7/9激活）指向佛得角低位密集、Vozinha门将发挥与乌拉圭创造力受损，整体压低节奏与效率。开放比分的条件性空间来自乌拉圭压迫与二次进攻密度，以及Araujo缺阵后暴露的反击通道，但都需要早段进球或被迫对攻才能触发，证据支持有限。",
+      "supporting_evidence_ids": [
+        "E_62a30537c776",
+        "E_b53db1f2cff5",
+        "E_5f8252aa45cc",
+        "E_161dccf2227f",
+        "E_211dbbaa3ec9"
+      ],
+      "counter_evidence_ids": [
+        "E_8fbef53f7c6d",
+        "E_4bd7fdc0162a",
+        "E_26779beee884",
+        "E_4212608aa0a0",
+        "E_eeac0ca789ad"
+      ],
+      "caution_cn": "开放大比分与崩盘、爆冷池存在比分重叠（如4-0也属崩盘），不可跨情景累加概率。该情景成立高度依赖比赛早早被打开；若佛得角延续首战低位纪律，开放性会显著下降。",
+      "audit_note_cn": "删除原候选1-3：它要求佛得角把少量反击放大到3球，远超现有证据，且与爆冷池高度重叠、属重复尾部。替换为3-2——其条件概率更高（0.0945>0.0846），且更独特地落在开放大比分逻辑内，可同时承载乌拉圭中场二次进攻与Araujo缺阵后的失球风险。保留3-1、2-2、4-0，支持等级不变。",
+      "candidate_pool": [
+        {
+          "score": "3-1",
+          "base_probability": 0.03481481481481481,
+          "base_conditional_probability": 0.23383084577114427,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.02925925925925926,
+          "base_conditional_probability": 0.1965174129353234,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.09452736318407962,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.0845771144278607,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.07960199004975124,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.011481481481481481,
+          "base_conditional_probability": 0.07711442786069653,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.05472636815920398,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.03980099502487562,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.03481481481481481,
+          "base_conditional_probability": 0.23383084577114427,
+          "tail_focus_conditional_probability": 0.2680608365019011,
+          "tail_focus_implied_overall_probability": 0.03991128010139416,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "乌拉圭早段或上半场中段通过高压、二点球或边路推进破局，随后Valverde-Ugarte-Bentancur中场持续回收解围球形成二次进攻压力；佛得角落后后通过一次边路反击或定位球机会取得进球，但后段被乌拉圭再度拉开。",
+          "rationale_cn": "在开放大比分池中3-1条件概率最高（0.234），同时兼容乌拉圭实力优势、压迫身份与佛得角反击得分可能，比5球以上更自然，且Rollout出现3-1代表比分。",
+          "evidence_ids": [
+            "E_62a30537c776",
+            "E_211dbbaa3ec9",
+            "E_6283adc24f99",
+            "E_5f8252aa45cc",
+            "E_b53db1f2cff5"
+          ],
+          "mechanism_ids": [
+            "H_uruguay_midfield_counterpress_second_balls",
+            "H_araujo_absent_highline_capeverde_counters"
+          ]
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.02925925925925926,
+          "base_conditional_probability": 0.1965174129353234,
+          "tail_focus_conditional_probability": 0.18773764258555134,
+          "tail_focus_implied_overall_probability": 0.027952049007182084,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "前半段佛得角低位防守拖住节奏，乌拉圭通过控球与压迫先后制造进球；但Araujo缺阵下的身后空间被佛得角边路反击利用，比赛进入互相追分，最终形成平局大比分。",
+          "rationale_cn": "2-2要求双方进攻效率都高于主线，证据并不强，但能同时吸收乌拉圭持续压迫与佛得角反击两条机制，且Rollout中有2-2代表场景，作为开放但非一边倒的备选保留。",
+          "evidence_ids": [
+            "E_b53db1f2cff5",
+            "E_62a30537c776",
+            "E_5f8252aa45cc",
+            "E_161dccf2227f",
+            "E_eeac0ca789ad"
+          ],
+          "mechanism_ids": [
+            "H_araujo_absent_highline_capeverde_counters",
+            "H_uruguay_midfield_counterpress_second_balls"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.09452736318407962,
+          "tail_focus_conditional_probability": 0.0903041825095057,
+          "tail_focus_implied_overall_probability": 0.013445289395859737,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "乌拉圭凭借控球与中场二次回收持续施压并取得多个进球，但高位防线在Araujo缺阵下被佛得角边路速度多次穿透，佛得角通过反击与机会主义把比赛打成对攻，乌拉圭最终以一球优势险胜。",
+          "rationale_cn": "3-2在高分池内条件概率高于被剔除的1-3，并且唯一性地落在开放大比分而非与爆冷重叠；它把乌拉圭进攻优势与Araujo缺阵的失球风险同时具象化，比要求佛得角净胜的1-3更贴合现有机制。",
+          "evidence_ids": [
+            "E_62a30537c776",
+            "E_211dbbaa3ec9",
+            "E_b53db1f2cff5",
+            "E_9a44a94f915f",
+            "E_5f8252aa45cc"
+          ],
+          "mechanism_ids": [
+            "H_uruguay_midfield_counterpress_second_balls",
+            "H_araujo_absent_highline_capeverde_counters"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.07960199004975124,
+          "tail_focus_conditional_probability": 0.07604562737642585,
+          "tail_focus_implied_overall_probability": 0.011322348964934515,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "乌拉圭较早打破佛得角低位块，佛得角被迫提高出球与反击风险；乌拉圭中场反抢连续压制，二次进攻与禁区占领不断累积，从控制局面演变为单方面扩大比分。",
+          "rationale_cn": "4-0在候选池内有乌拉圭优势与Rollout支持，但要求佛得角低位防守与Vozinha门将保护同时失效，与多条核心反向证据冲突，只给中性支持。",
+          "evidence_ids": [
+            "E_eca8c2365fda",
+            "E_62a30537c776",
+            "E_211dbbaa3ec9",
+            "E_6283adc24f99"
+          ],
+          "mechanism_ids": [
+            "H_uruguay_midfield_counterpress_second_balls"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.03481481481481481,
+          "base_conditional_probability": 0.23383084577114427,
+          "tail_focus_conditional_probability": 0.2680608365019011,
+          "tail_focus_implied_overall_probability": 0.03991128010139416,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.02925925925925926,
+          "base_conditional_probability": 0.1965174129353234,
+          "tail_focus_conditional_probability": 0.18773764258555134,
+          "tail_focus_implied_overall_probability": 0.027952049007182084,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.09452736318407962,
+          "tail_focus_conditional_probability": 0.0903041825095057,
+          "tail_focus_implied_overall_probability": 0.013445289395859737,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.0845771144278607,
+          "tail_focus_conditional_probability": 0.08079847908745247,
+          "tail_focus_implied_overall_probability": 0.012029995775242922,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.07960199004975124,
+          "tail_focus_conditional_probability": 0.07604562737642585,
+          "tail_focus_implied_overall_probability": 0.011322348964934515,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.011481481481481481,
+          "base_conditional_probability": 0.07711442786069653,
+          "tail_focus_conditional_probability": 0.07366920152091255,
+          "tail_focus_implied_overall_probability": 0.010968525559780312,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.05472636815920398,
+          "tail_focus_conditional_probability": 0.05228136882129277,
+          "tail_focus_implied_overall_probability": 0.007784114913392479,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.03980099502487562,
+          "tail_focus_conditional_probability": 0.03802281368821293,
+          "tail_focus_implied_overall_probability": 0.005661174482467258,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.03482587064676617,
+          "tail_focus_conditional_probability": 0.03326996197718631,
+          "tail_focus_implied_overall_probability": 0.00495352767215885,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.02736318407960199,
+          "tail_focus_conditional_probability": 0.026140684410646386,
+          "tail_focus_implied_overall_probability": 0.0038920574566962394,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.07925925925925927,
+      "attention_level": "low",
+      "evidence_strength": 0.34,
+      "rationale_cn": "一边倒崩盘的主要方向来自乌拉圭整体强度优势、贝尔萨压迫体系与中场二次回收；若乌拉圭早早进球迫使佛得角低位块松动，3-0、4-0、4-1有展开空间。但佛得角刚以0-0限制西班牙，低位纪律与Vozinha门将状态是压制崩盘概率的关键反向因素，故关注度低于爆冷与常规低比分主线。所选三比分为崩盘池条件概率前三（3-0=0.486、4-0=0.150、4-1=0.145），方向正确，未引入佛得角反向大胜的0-3，符合证据。",
+      "supporting_evidence_ids": [
+        "E_eca8c2365fda",
+        "E_62a30537c776",
+        "E_211dbbaa3ec9",
+        "E_6283adc24f99",
+        "E_f9e384033816"
+      ],
+      "counter_evidence_ids": [
+        "E_4bd7fdc0162a",
+        "E_8fbef53f7c6d",
+        "E_26779beee884",
+        "E_4212608aa0a0",
+        "E_b53db1f2cff5"
+      ],
+      "caution_cn": "崩盘比分多与开放大比分重叠，不能与高进球情景相加；该情景需要早球、佛得角低位结构被迫拉开以及Vozinha无法持续救险，若前30分钟无进球路径会显著收窄。",
+      "audit_note_cn": "未作修改。候选选取严格取自崩盘池条件概率前三，支持等级（3-0=1，其余=0）与机制及反向证据匹配，激进程度受控。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.03851851851851852,
+          "base_conditional_probability": 0.48598130841121495,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.14953271028037382,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.011481481481481481,
+          "base_conditional_probability": 0.14485981308411214,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.07009345794392523,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.051401869158878497,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.04205607476635514,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.02336448598130841,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "6-1",
+          "base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.009345794392523364,
+          "total_goals": 7,
+          "winning_margin": 5
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03851851851851852,
+          "base_conditional_probability": 0.48598130841121495,
+          "tail_focus_conditional_probability": 0.5315161839863715,
+          "tail_focus_implied_overall_probability": 0.042127579027067964,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "乌拉圭在前60分钟通过高压与持续控球取得领先，中场三人组压缩佛得角反击出球，比赛长期停留在佛得角半场；佛得角低位块体能与专注度下降，乌拉圭通过二次进攻或定位球混战扩大到三球。",
+          "rationale_cn": "3-0是崩盘池中最温和且条件概率最高（0.486）的一边倒形态，符合乌拉圭实力与中场压制证据，不需要极端射门转化率，且Rollout出现3-0代表比分。",
+          "evidence_ids": [
+            "E_eca8c2365fda",
+            "E_62a30537c776",
+            "E_211dbbaa3ec9",
+            "E_6283adc24f99"
+          ],
+          "mechanism_ids": [
+            "H_uruguay_midfield_counterpress_second_balls"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.14953271028037382,
+          "tail_focus_conditional_probability": 0.1362862010221465,
+          "tail_focus_implied_overall_probability": 0.010801943340273835,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "乌拉圭早段破门后持续压迫，佛得角为追分增加前场人数，清球与第一脚出球质量下降；乌拉圭多次在前场回收球权，将低位围攻转化为连续得分，最终零封大胜。",
+          "rationale_cn": "4-0有Rollout代表场景与乌拉圭控制优势支撑，但与佛得角门将状态、低位防守样本冲突，需要多个条件同时触发，给中性支持。",
+          "evidence_ids": [
+            "E_62a30537c776",
+            "E_eca8c2365fda",
+            "E_f9e384033816",
+            "E_211dbbaa3ec9"
+          ],
+          "mechanism_ids": [
+            "H_uruguay_midfield_counterpress_second_balls"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.011481481481481481,
+          "base_conditional_probability": 0.14485981308411214,
+          "tail_focus_conditional_probability": 0.13202725724020442,
+          "tail_focus_implied_overall_probability": 0.010464382610890277,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "乌拉圭主导场面并较早取得两球优势，佛得角被迫前压后通过一次反击或边路推进追回一球；Araujo缺阵带来的防线风险未演变成持续失控，乌拉圭利用对手阵型拉开继续扩大比分。",
+          "rationale_cn": "4-1比4-0更能容纳佛得角反击能力，但仍要求乌拉圭终结效率显著高于主线，证据只能提供有限支持。",
+          "evidence_ids": [
+            "E_62a30537c776",
+            "E_5f8252aa45cc",
+            "E_b53db1f2cff5",
+            "E_eca8c2365fda"
+          ],
+          "mechanism_ids": [
+            "H_uruguay_midfield_counterpress_second_balls",
+            "H_araujo_absent_highline_capeverde_counters"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03851851851851852,
+          "base_conditional_probability": 0.48598130841121495,
+          "tail_focus_conditional_probability": 0.5315161839863715,
+          "tail_focus_implied_overall_probability": 0.042127579027067964,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.14953271028037382,
+          "tail_focus_conditional_probability": 0.1362862010221465,
+          "tail_focus_implied_overall_probability": 0.010801943340273835,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.011481481481481481,
+          "base_conditional_probability": 0.14485981308411214,
+          "tail_focus_conditional_probability": 0.13202725724020442,
+          "tail_focus_implied_overall_probability": 0.010464382610890277,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.07009345794392523,
+          "tail_focus_conditional_probability": 0.06388415672913118,
+          "tail_focus_implied_overall_probability": 0.005063410940753361,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.051401869158878497,
+          "tail_focus_conditional_probability": 0.04684838160136286,
+          "tail_focus_implied_overall_probability": 0.0037131680232191304,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.04205607476635514,
+          "tail_focus_conditional_probability": 0.03833049403747871,
+          "tail_focus_implied_overall_probability": 0.0030380465644520164,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.02336448598130841,
+          "tail_focus_conditional_probability": 0.02129471890971039,
+          "tail_focus_implied_overall_probability": 0.0016878036469177866,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.009345794392523364,
+          "tail_focus_conditional_probability": 0.008517887563884156,
+          "tail_focus_implied_overall_probability": 0.0006751214587671147,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.004672897196261682,
+          "tail_focus_conditional_probability": 0.004258943781942078,
+          "tail_focus_implied_overall_probability": 0.00033756072938355734,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.004672897196261682,
+          "tail_focus_conditional_probability": 0.004258943781942078,
+          "tail_focus_implied_overall_probability": 0.00033756072938355734,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Cape Verde 获胜。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.20407407407407407,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.58,
+      "rationale_cn": "爆冷是三个高偏离情景中证据链最完整的：佛得角已有对西班牙0-0的低位防守样本，Vozinha被多源描述为关键门将，进攻路径清晰依赖直接反击与边路速度；乌拉圭同时缺少Araujo与De Arrascaeta，分别削弱后场大空间防守与前场创造变化。所选四比分为爆冷池条件概率前四（0-1=0.466、1-2=0.232、0-2=0.147、1-3=0.062），最自然形态为0-1或1-2而非大胜，支持等级阶梯（2/1/1/0）与证据强度匹配。",
+      "supporting_evidence_ids": [
+        "E_4bd7fdc0162a",
+        "E_26779beee884",
+        "E_4212608aa0a0",
+        "E_b53db1f2cff5",
+        "E_5f8252aa45cc",
+        "E_161dccf2227f",
+        "E_c719356da9a2"
+      ],
+      "counter_evidence_ids": [
+        "E_eca8c2365fda",
+        "E_62a30537c776",
+        "E_6283adc24f99",
+        "E_211dbbaa3ec9"
+      ],
+      "caution_cn": "爆冷不等于佛得角主动压制乌拉圭；更合理路径是低射门量、高门将贡献与少数反击高效率。若乌拉圭中场反抢稳定并早早进球，爆冷脚本会迅速弱化。",
+      "audit_note_cn": "未作修改。候选与机制、证据强度高度自洽，0-1作为最自然爆冷形态给予最高支持，1-3作为尾部剧本仅给0，未过度极端。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.09518518518518519,
+          "base_conditional_probability": 0.46642468239564433,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.047407407407407405,
+          "base_conditional_probability": 0.2323049001814882,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.03,
+          "base_conditional_probability": 0.147005444646098,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.06170598911070781,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.03992740471869328,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.02722323049001815,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.009074410163339383,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.007259528130671506,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.09518518518518519,
+          "base_conditional_probability": 0.46642468239564433,
+          "tail_focus_conditional_probability": 0.5260074811207566,
+          "tail_focus_implied_overall_probability": 0.1073444896657544,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "佛得角延续紧凑低位，Vozinha处理乌拉圭传中、远射与禁区混战；乌拉圭缺少De Arrascaeta后中路破解不足久攻不下，佛得角在一次边路反击或机会主义时刻取得唯一进球并收缩守住比分。",
+          "rationale_cn": "0-1条件概率最高（0.466）且最贴合爆冷证据：低位防守、门将高发挥、少数反击决定比赛，不要求佛得角长时间控球，Rollout亦出现0-1代表比分。",
+          "evidence_ids": [
+            "E_4bd7fdc0162a",
+            "E_26779beee884",
+            "E_4212608aa0a0",
+            "E_b53db1f2cff5",
+            "E_5f8252aa45cc"
+          ],
+          "mechanism_ids": [
+            "H_low_block_vozinha_uruguay_creation",
+            "H_araujo_absent_highline_capeverde_counters"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.047407407407407405,
+          "base_conditional_probability": 0.2323049001814882,
+          "tail_focus_conditional_probability": 0.21681134871903449,
+          "tail_focus_implied_overall_probability": 0.04424557523858815,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "乌拉圭依靠控球与压迫取得进球或扳平，但高位防线与边后卫身后空间给佛得角留下两次高价值反击窗口；Ryan Mendes或边路速度点参与推进，佛得角在有限机会中完成两球转化。",
+          "rationale_cn": "1-2比0-1更开放，能体现Araujo缺阵与佛得角反击机制，但要求佛得角进攻效率更高，支持力度低于0-1。",
+          "evidence_ids": [
+            "E_b53db1f2cff5",
+            "E_9a44a94f915f",
+            "E_5f8252aa45cc",
+            "E_161dccf2227f",
+            "E_c719356da9a2"
+          ],
+          "mechanism_ids": [
+            "H_araujo_absent_highline_capeverde_counters",
+            "H_low_block_vozinha_uruguay_creation"
+          ]
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.03,
+          "base_conditional_probability": 0.147005444646098,
+          "tail_focus_conditional_probability": 0.137200931611264,
+          "tail_focus_implied_overall_probability": 0.027999153080669064,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "乌拉圭控球压上但始终无法穿透低位块，佛得角先通过反击或机会主义进球领先；后段乌拉圭加大投入，后场空间扩大，佛得角再利用转换打入第二球。",
+          "rationale_cn": "0-2仍属低位守反逻辑，比1-3、2-3更符合佛得角不需要持续进攻的证据结构，但零封乌拉圭同时打入两球对效率要求较高。",
+          "evidence_ids": [
+            "E_4bd7fdc0162a",
+            "E_26779beee884",
+            "E_b53db1f2cff5",
+            "E_5f8252aa45cc",
+            "E_8fbef53f7c6d"
+          ],
+          "mechanism_ids": [
+            "H_low_block_vozinha_uruguay_creation",
+            "H_araujo_absent_highline_capeverde_counters"
+          ]
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.06170598911070781,
+          "tail_focus_conditional_probability": 0.047992095419577954,
+          "tail_focus_implied_overall_probability": 0.009793942435624982,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "乌拉圭在落后或被扳平后继续高位压迫，阵型逐步拉开；佛得角反击质量与终结效率超出常态，多次利用边路速度与中卫侧后方空间得手，乌拉圭只追回一球。",
+          "rationale_cn": "1-3可由Araujo缺阵与高线反击风险解释，但需要佛得角把反击优势放大到三球，超出现有证据稳健范围，作为爆冷池尾部剧本保留并仅给0。",
+          "evidence_ids": [
+            "E_b53db1f2cff5",
+            "E_9a44a94f915f",
+            "E_5f8252aa45cc",
+            "E_161dccf2227f",
+            "E_c719356da9a2"
+          ],
+          "mechanism_ids": [
+            "H_araujo_absent_highline_capeverde_counters"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.09518518518518519,
+          "base_conditional_probability": 0.46642468239564433,
+          "tail_focus_conditional_probability": 0.5260074811207566,
+          "tail_focus_implied_overall_probability": 0.1073444896657544,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.047407407407407405,
+          "base_conditional_probability": 0.2323049001814882,
+          "tail_focus_conditional_probability": 0.21681134871903449,
+          "tail_focus_implied_overall_probability": 0.04424557523858815,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.03,
+          "base_conditional_probability": 0.147005444646098,
+          "tail_focus_conditional_probability": 0.137200931611264,
+          "tail_focus_implied_overall_probability": 0.027999153080669064,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.06170598911070781,
+          "tail_focus_conditional_probability": 0.047992095419577954,
+          "tail_focus_implied_overall_probability": 0.009793942435624982,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.03992740471869328,
+          "tail_focus_conditional_probability": 0.031053708800903378,
+          "tail_focus_implied_overall_probability": 0.006337256870110282,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.02722323049001815,
+          "tail_focus_conditional_probability": 0.021172983273343216,
+          "tail_focus_implied_overall_probability": 0.004320856956893375,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.009074410163339383,
+          "tail_focus_conditional_probability": 0.007057661091114405,
+          "tail_focus_implied_overall_probability": 0.0014402856522977914,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.007259528130671506,
+          "tail_focus_conditional_probability": 0.005646128872891523,
+          "tail_focus_implied_overall_probability": 0.0011522285218382331,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.0018148820326678765,
+          "tail_focus_conditional_probability": 0.0014115322182228808,
+          "tail_focus_implied_overall_probability": 0.0002880571304595583,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.0018148820326678765,
+          "tail_focus_conditional_probability": 0.0014115322182228808,
+          "tail_focus_implied_overall_probability": 0.0002880571304595583,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "3e83af140ab203b27ecf93d732bd3c07c7fb48de31b090fc56a744a441ee110f"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Uruguay_vs_Cape_Verde_M40\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\web_delivery\\Uruguay_vs_Cape_Verde_M40\\2026.6.22.06\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Uruguay_vs_Cape_Verde_M40\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\web_delivery\\Uruguay_vs_Cape_Verde_M40\\2026.6.22.06\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

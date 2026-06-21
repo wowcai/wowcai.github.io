@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T15:00:00+08:00",
+  "match": {
+    "match_id": "M37",
+    "team_a": "Belgium",
+    "team_b": "Iran",
+    "kickoff_utc": "2026-06-21T19:00:00Z",
+    "venue": "Los Angeles Stadium",
+    "stage": "group",
+    "group": "G",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.875,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 171,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率87.5%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.3937037037037037,
+    "draw": 0.3188888888888889,
+    "team_b_win": 0.2874074074074074
+  },
+  "most_likely_outcome": {
+    "label": "Belgium胜",
+    "probability": 0.3937037037037037
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.14962962962962964
+    },
+    {
+      "score": "1-0",
+      "probability": 0.13111111111111112
+    },
+    {
+      "score": "0-0",
+      "probability": 0.11777777777777777
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "ESPN、CBS均称多库因病缺阵，卢卡库也被主帅称不能首发。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_eb70444ee8f7",
+        "E_90d766d34144",
+        "E_bc3ef1cbeea1"
+      ],
+      "source_names": [
+        "ESPN",
+        "CBS Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "赛前预览普遍认为比利时会控球，进攻组织将更多依赖德布劳内传球。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_9679f419d902",
+        "E_aec24a80a7a4"
+      ],
+      "source_names": [
+        "RotoWire",
+        "Daily Sabah"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "RBFA称塔雷米是伊朗真正锋线支点，伊朗预计会深站位压缩空间。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_98c9c41ff49e",
+        "E_aec24a80a7a4"
+      ],
+      "source_names": [
+        "RBFA",
+        "Daily Sabah"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "《卫报》称比利时除库尔图瓦外防线是弱点，利于伊朗反击寻找机会。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_5c1c389f666c",
+        "E_3cd6f46f7008"
+      ],
+      "source_names": [
+        "The Guardian",
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在洛杉矶SoFi Stadium进行，FIFA列当地12:00开球。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_19a632e8e49f",
+        "E_addcd88b3bc9"
+      ],
+      "source_names": [
+        "SoFi Stadium",
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "小组赛首轮后，比利时、伊朗等队均为1场1分，排名信息仍较接近。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_6f7e6d969a07",
+        "E_421fd4bb6901"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "FOX Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-20T07:00:00Z",
+    "source_state_sha256": "5c995b90f5c5c82e87ddf9620712d9e6492bb6edb578e34789a2979682815b7e",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案整体引用真实、机制链与候选池一致，比分全部来自对应候选池，未引入输入外新事实。三类情景的方向判断合理：爆冷最值得关注，开放大比分与崩盘均为支线。主要校准点在upset的0-1被给到grade 2偏激进——伊朗实际‘获胜’（而非平局）主要依赖H_02，而H_02为tentative（confidence 0.5）且塔雷米首发与状态官方未确认；H_01、H_03的方向实为draw/total down，对‘伊朗取胜’只是间接支撑。据此…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.17925925925925926,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.35,
+        "summary_cn": "总进球≥4不是主线。9/9 rollout激活H_01（攻坚集中、总进球down），代表比分最常见为0-0，主预测也以低比分为主。比利时控球与德布劳内中路组织、伊朗塔雷米反击与防线弱点给了少量开放路径，但多库缺阵、卢卡库不能首发、伊朗深位压缩与中午炎热都压制连续进球。大比分主要依赖早球或后段体能滑落。",
+        "caution_cn": "勿把2-2、3-1、1-3的条件概率相加，它们是同一高比分事件下的不同分支。若伊朗低位完整且上半场无早球，本情景关注度进一步下降。",
+        "top_scores": [
+          {
+            "score": "2-2",
+            "base_probability": 0.044444444444444446,
+            "tail_focus_conditional_probability": 0.28346456692913385,
+            "support_grade": 1,
+            "script_cn": "比利时长期控球并依靠德布劳内在中路或半空间制造机会，伊朗低位反击通过塔雷米支点和二次进攻回应；后段因体能下降与换人放大局部波动，形成双方各有进球的开放平局。"
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.02925925925925926,
+            "tail_focus_conditional_probability": 0.15551181102362205,
+            "support_grade": 0,
+            "script_cn": "比利时控球先取得领先，伊朗被迫早于预期前压，比利时利用中路传递和后段替补冲击扩大优势，伊朗以反击或定位球拿回一球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.08259259259259259,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.27,
+        "summary_cn": "任一方净胜≥3不是主要证据方向。比利时纸面实力、控球预期与德布劳内组织给了3-0、4-0一类基础，但多库缺阵、卢卡库不能首发与伊朗低位紧凑都降低连续打穿概率；伊朗大胜方向需要比利时控球失衡、反击连续命中与后段崩盘同时出现，证据更弱。",
+        "caution_cn": "崩盘比分与开放大比分、爆冷池存在重叠，不能跨情景累加。本情景高度依赖早球或连续转换失误。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.03037037037037037,
+            "tail_focus_conditional_probability": 0.3861549328938074,
+            "support_grade": 0,
+            "script_cn": "比利时在控球压制中先经中路组织或定位球破局，伊朗被迫提高站位后失去低位密度，比利时下半场利用空间再进两球并零封。"
+          },
+          {
+            "score": "0-3",
+            "base_probability": 0.01925925925925926,
+            "tail_focus_conditional_probability": 0.20814692724275963,
+            "support_grade": -1,
+            "script_cn": "比利时控球推进被伊朗低位反复吸收，丢球后阵型前压，伊朗经塔雷米支点与转换连续命中，比利时追分阶段被拉开。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2874074074074074,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.52,
+        "summary_cn": "爆冷是三类高偏离情景中最值得关注方向：多库缺阵削弱边路一对一，卢卡库不能首发削弱开场禁区支点，伊朗预计低位压缩并可经塔雷米支点冲击比利时防线弱点。情景偏向窄胜或两球以内，而非大比分。但需注意：H_01、H_03的方向实为draw/total down，对‘伊朗取胜’只是间接支撑；真正支撑伊朗获胜的H_02为tentative（0.5）且塔雷米首发未获官方确…",
+        "caution_cn": "爆冷关注不等于重置伊朗胜总概率；只说明候选内部伊朗小胜路径机制更清晰。塔雷米首发与状态未官方确认，库尔图瓦会压低伊朗少量机会的转化收益。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.10481481481481482,
+            "tail_focus_conditional_probability": 0.37935656836461124,
+            "support_grade": 1,
+            "script_cn": "比利时长时间控球但边路爆点不足，伊朗低位紧凑限制中路渗透；下半场或一次转换中伊朗经塔雷米支点或二线跟进取得领先，随后深防守住成果。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.06703703703703703,
+            "tail_focus_conditional_probability": 0.24262734584450402,
+            "support_grade": 1,
+            "script_cn": "比利时凭控球与德布劳内创造力取得进球，但防线在转换中被多次冲击；伊朗利用塔雷米牵制与比利时追分时身后空间打入制胜球。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

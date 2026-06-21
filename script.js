@@ -1970,8 +1970,6 @@ function renderLatestMatchPredictions(matches) {
     const stage = matchStagePair(match);
     const time = matchTimePair(match.matchTime);
     const venue = venuePair(match.venue);
-    const summary = refPair(match.predictionSummary);
-    const hasSummary = Boolean(summary.zh);
     const homeName = teamPair(homeTeam, match.homeTeam);
     const awayName = teamPair(awayTeam, match.awayTeam);
 
@@ -1993,7 +1991,6 @@ function renderLatestMatchPredictions(matches) {
           <div>${bi("预测比分", "Predicted score")}<strong>${biAuto(score)}</strong></div>
           <div>${bi("胜率参考", "Win probability")}<strong>${hasReference ? bi(reference.zh, reference.en) : biAuto("待预测")}</strong></div>
         </div>
-        <p ${hasSummary ? biAttrs(summary.zh, summary.en) : biAttrs("预测报告待补充。", "Prediction report to be added.")}>${escapeHtml(hasSummary ? pairText(summary) : L("预测报告待补充。", "Prediction report to be added."))}</p>
       </button>
     `;
   }).join("");

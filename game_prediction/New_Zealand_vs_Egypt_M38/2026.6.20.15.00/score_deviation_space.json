@@ -1,0 +1,610 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T15:00:00+08:00",
+  "quality_label": "ready",
+  "match_id": "M38",
+  "team_a": "New Zealand",
+  "team_b": "Egypt",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "0-1",
+      "deviation": 0.0,
+      "probability": 0.14888888888888888,
+      "probability_percent": 14.8889,
+      "outcome": "team_b",
+      "sample_count": 402,
+      "path_deviation": 0.7033596614704581,
+      "result_surprise": 0.0,
+      "reason_cn": "Egypt通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-7",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "紧凑防守对进攻空间的压缩、伍德高点与定位球削弱埃及整体优势的低控球通道；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT",
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.09425806986630487,
+      "probability": 0.12814814814814815,
+      "probability_percent": 12.8148,
+      "outcome": "draw",
+      "sample_count": 346,
+      "path_deviation": 0.6960770329696706,
+      "result_surprise": 0.1393034825870646,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.10969689873341697,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.24639718580130962,
+      "result_surprise": 0.9950248756218906,
+      "reason_cn": "紧凑防守对进攻空间的压缩、伍德高点与定位球削弱埃及整体优势的低控球通道；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT",
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.17801937260437595,
+      "probability": 0.11555555555555555,
+      "probability_percent": 11.5556,
+      "outcome": "team_b",
+      "sample_count": 312,
+      "path_deviation": 0.7107202415108954,
+      "result_surprise": 0.22388059701492535,
+      "reason_cn": "Egypt充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.3089902673852741,
+      "probability": 0.08703703703703704,
+      "probability_percent": 8.7037,
+      "outcome": "draw",
+      "sample_count": 235,
+      "path_deviation": 0.7016881697851242,
+      "result_surprise": 0.41542288557213924,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道；双方防守结构有效，机会转化不足。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.3192401694482746,
+      "probability": 0.09222222222222222,
+      "probability_percent": 9.2222,
+      "outcome": "team_b",
+      "sample_count": 249,
+      "path_deviation": 0.7278053898847913,
+      "result_surprise": 0.3805970149253731,
+      "reason_cn": "Egypt通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-7",
+      "deviation": 0.3589669844909519,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.4268438522625457,
+      "result_surprise": 0.9925373134328358,
+      "reason_cn": "紧凑防守对进攻空间的压缩、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.37981138532203795,
+      "probability": 0.08148148148148149,
+      "probability_percent": 8.1481,
+      "outcome": "team_a",
+      "sample_count": 220,
+      "path_deviation": 0.7324831848628554,
+      "result_surprise": 0.45273631840796014,
+      "reason_cn": "紧凑防守对进攻空间的压缩；New Zealand在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.4600477805894998,
+      "probability": 0.04703703703703704,
+      "probability_percent": 4.7037,
+      "outcome": "team_b",
+      "sample_count": 127,
+      "path_deviation": 0.6655657160660622,
+      "result_surprise": 0.6840796019900497,
+      "reason_cn": "边路突破与肋部防守对位、紧凑防守对进攻空间的压缩；Egypt充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_SALAH_RIGHT_FLANK_PRESSURE",
+        "H_CONTROLLED_TEMPO_LOW_EVENT"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.4648733971595586,
+      "probability": 0.04703703703703704,
+      "probability_percent": 4.7037,
+      "outcome": "team_a",
+      "sample_count": 127,
+      "path_deviation": 0.6690330503724379,
+      "result_surprise": 0.6840796019900497,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道；New Zealand在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.4762683531000042,
+      "probability": 0.05185185185185185,
+      "probability_percent": 5.1852,
+      "outcome": "team_b",
+      "sample_count": 140,
+      "path_deviation": 0.6946335656824059,
+      "result_surprise": 0.6517412935323383,
+      "reason_cn": "Egypt充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.5567702067285896,
+      "probability": 0.034074074074074076,
+      "probability_percent": 3.4074,
+      "outcome": "draw",
+      "sample_count": 92,
+      "path_deviation": 0.6881823811536153,
+      "result_surprise": 0.7711442786069651,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.5972199223158479,
+      "probability": 0.0044444444444444444,
+      "probability_percent": 0.4444,
+      "outcome": "team_b",
+      "sample_count": 12,
+      "path_deviation": 0.6100900563815966,
+      "result_surprise": 0.9701492537313433,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6217144304285933,
+      "probability": 0.009259259259259259,
+      "probability_percent": 0.9259,
+      "outcome": "team_a",
+      "sample_count": 25,
+      "path_deviation": 0.6451029495682055,
+      "result_surprise": 0.9378109452736318,
+      "reason_cn": "紧凑防守对进攻空间的压缩、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.6305983098790648,
+      "probability": 0.01037037037037037,
+      "probability_percent": 1.037,
+      "outcome": "team_a",
+      "sample_count": 28,
+      "path_deviation": 0.6555046237634793,
+      "result_surprise": 0.9303482587064676,
+      "reason_cn": "紧凑防守对进攻空间的压缩；New Zealand打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.6354191650474812,
+      "probability": 0.017037037037037038,
+      "probability_percent": 1.7037,
+      "outcome": "team_b",
+      "sample_count": 46,
+      "path_deviation": 0.683078755015757,
+      "result_surprise": 0.8855721393034826,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道；Egypt充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.6514599353914481,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.6396867575561277,
+      "result_surprise": 0.9875621890547264,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.6552037133223684,
+      "probability": 0.01888888888888889,
+      "probability_percent": 1.8889,
+      "outcome": "team_b",
+      "sample_count": 51,
+      "path_deviation": 0.703991763838379,
+      "result_surprise": 0.8731343283582089,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.6633759193763242,
+      "probability": 0.024074074074074074,
+      "probability_percent": 2.4074,
+      "outcome": "team_b",
+      "sample_count": 65,
+      "path_deviation": 0.7286161038996526,
+      "result_surprise": 0.8383084577114428,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.6841738512861943,
+      "probability": 0.02259259259259259,
+      "probability_percent": 2.2593,
+      "outcome": "team_a",
+      "sample_count": 61,
+      "path_deviation": 0.7382021468422519,
+      "result_surprise": 0.8482587064676617,
+      "reason_cn": "New Zealand打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.6949507809091435,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_b",
+      "sample_count": 23,
+      "path_deviation": 0.6950463090171302,
+      "result_surprise": 0.9427860696517413,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6965214292316529,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_a",
+      "sample_count": 10,
+      "path_deviation": 0.6787619264357281,
+      "result_surprise": 0.9751243781094527,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT"
+      ]
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.7387266513708695,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_b",
+      "sample_count": 9,
+      "path_deviation": 0.7077480484812457,
+      "result_surprise": 0.9776119402985075,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-5",
+      "deviation": 0.7772997305074048,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 0.7247481828902548,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.7812201680435509,
+      "probability": 0.01,
+      "probability_percent": 1.0,
+      "outcome": "team_b",
+      "sample_count": 27,
+      "path_deviation": 0.7623909925473485,
+      "result_surprise": 0.9328358208955224,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.7908877246400322,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "draw",
+      "sample_count": 18,
+      "path_deviation": 0.7572822809291531,
+      "result_surprise": 0.9552238805970149,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.8284843678777963,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_a",
+      "sample_count": 14,
+      "path_deviation": 0.7789386463361413,
+      "result_surprise": 0.9651741293532339,
+      "reason_cn": "边路突破与肋部防守对位、伍德高点与定位球削弱埃及整体优势的低控球通道；New Zealand打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_SALAH_RIGHT_FLANK_PRESSURE",
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.877554401061456,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "team_b",
+      "sample_count": 20,
+      "path_deviation": 0.8222335142894879,
+      "result_surprise": 0.9502487562189055,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.9150252837766091,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.8290654952075904,
+      "result_surprise": 0.9875621890547264,
+      "reason_cn": "紧凑防守对进攻空间的压缩、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "1-7",
+      "deviation": 0.9165977017611445,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.8261769498089596,
+      "result_surprise": 0.9950248756218906,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "0-10",
+      "deviation": 0.9621168189529193,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8575441939010893,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "紧凑防守对进攻空间的压缩、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.9621168189529193,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.8575441939010893,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "紧凑防守对进攻空间的压缩、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_CONTROLLED_TEMPO_LOW_EVENT",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.9696306658859971,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.8683009197283423,
+      "result_surprise": 0.9875621890547264,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-8",
+      "deviation": 0.9856712913332962,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8744687110000646,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 1.0,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.8914615534421019,
+      "result_surprise": 0.9850746268656716,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-3",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.9572548076416098,
+      "result_surprise": 0.9950248756218906,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.8944891631416421,
+      "result_surprise": 0.9950248756218906,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "0-8",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.9145096152832195,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.9145096152832195,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.9145096152832195,
+      "result_surprise": 0.9975124378109452,
+      "reason_cn": "伍德高点与定位球削弱埃及整体优势的低控球通道、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WOOD_DIRECT_SET_PIECE_OFFSET",
+        "H_SALAH_RIGHT_FLANK_PRESSURE"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-20T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-20T15:00:00+08:00",
+  "match": {
+    "match_id": "M40",
+    "team_a": "Uruguay",
+    "team_b": "Cape Verde",
+    "kickoff_utc": "2026-06-21T22:00:00Z",
+    "venue": "Miami Stadium",
+    "stage": "group",
+    "group": "H",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 2,
+    "world_state_fallback_ratio": 0.05405405405405406,
+    "research_completion_ratio": 0.875,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 189,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率87.5%）。",
+      "World State有2个字段使用局部回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.4740740740740741,
+    "draw": 0.32185185185185183,
+    "team_b_win": 0.20407407407407407
+  },
+  "most_likely_outcome": {
+    "label": "Uruguay胜",
+    "probability": 0.4740740740740741
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.16777777777777778
+    },
+    {
+      "score": "0-0",
+      "probability": 0.14407407407407408
+    },
+    {
+      "score": "1-1",
+      "probability": 0.14333333333333334
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "《卫报》称贝尔萨的乌拉圭以4-3-3、直接进攻和压迫为框架。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_62a30537c776"
+      ],
+      "source_names": [
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "赛前预览认为乌拉圭会更多持球，但需破解佛得角紧凑防守块。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_eeac0ca789ad",
+        "E_8fbef53f7c6d"
+      ],
+      "source_names": [
+        "RotoWire",
+        "Daily Sabah"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "佛得角世界杯首战0-0逼平西班牙，低位防守已有强队样本支撑。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_4bd7fdc0162a",
+        "E_8fbef53f7c6d"
+      ],
+      "source_names": [
+        "ESPN",
+        "Daily Sabah"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "乌拉圭确认缺少Ronald Araujo和De Arrascaeta，两人均因小腿问题缺阵。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_b53db1f2cff5"
+      ],
+      "source_names": [
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "佛得角进攻被描述为依靠直接反击、边路速度和机会主义时刻。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_5f8252aa45cc",
+        "E_161dccf2227f"
+      ],
+      "source_names": [
+        "RotoWire",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "FIFA列明本场为6月21日22:00在迈阿密体育场进行的H组比赛。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_F_a367cc79c632",
+        "E_f7500b52b91a"
+      ],
+      "source_names": [
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-20T07:00:00Z",
+    "source_state_sha256": "3e83af140ab203b27ecf93d732bd3c07c7fb48de31b090fc56a744a441ee110f",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案整体真实引用了输入证据，机制链与所选比分基本对应，激进程度受控，三个池的支持度排序（爆冷>开放>崩盘）与证据结构一致，且明确提示了跨池重叠不可累加。仅对开放大比分情景做一处优化：剔除证据负担最重、与爆冷池高度重叠的1-3，改用条件概率更高且能同时承载乌拉圭优势与佛得角反击的3-2。崩盘与爆冷情景保持原样接受。所有保留比分均来自对应候选池，未改变任何情景总概率。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.14888888888888888,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.39,
+        "summary_cn": "总进球至少4球不是主线：最强机制（H_low_block_vozinha_uruguay_creation，7/9激活）指向佛得角低位密集、Vozinha门将发挥与乌拉圭创造力受损，整体压低节奏与效率。开放比分的条件性空间来自乌拉圭压迫与二次进攻密度，以及Araujo缺阵后暴露的反击通道，但都需要早段进球或被迫对攻才能触发，证据支持有限。",
+        "caution_cn": "开放大比分与崩盘、爆冷池存在比分重叠（如4-0也属崩盘），不可跨情景累加概率。该情景成立高度依赖比赛早早被打开；若佛得角延续首战低位纪律，开放性会显著下降。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.03481481481481481,
+            "tail_focus_conditional_probability": 0.2680608365019011,
+            "support_grade": 1,
+            "script_cn": "乌拉圭早段或上半场中段通过高压、二点球或边路推进破局，随后Valverde-Ugarte-Bentancur中场持续回收解围球形成二次进攻压力；佛得角落后后通过一次边路反击或定位球机会取得进球，但后段被乌拉圭再度拉开。"
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.02925925925925926,
+            "tail_focus_conditional_probability": 0.18773764258555134,
+            "support_grade": 0,
+            "script_cn": "前半段佛得角低位防守拖住节奏，乌拉圭通过控球与压迫先后制造进球；但Araujo缺阵下的身后空间被佛得角边路反击利用，比赛进入互相追分，最终形成平局大比分。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.07925925925925927,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.34,
+        "summary_cn": "一边倒崩盘的主要方向来自乌拉圭整体强度优势、贝尔萨压迫体系与中场二次回收；若乌拉圭早早进球迫使佛得角低位块松动，3-0、4-0、4-1有展开空间。但佛得角刚以0-0限制西班牙，低位纪律与Vozinha门将状态是压制崩盘概率的关键反向因素，故关注度低于爆冷与常规低比分主线。所选三比分为崩盘池条件概率前三（3-0=0.486、4-0=0.150、4-1=0.1…",
+        "caution_cn": "崩盘比分多与开放大比分重叠，不能与高进球情景相加；该情景需要早球、佛得角低位结构被迫拉开以及Vozinha无法持续救险，若前30分钟无进球路径会显著收窄。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.03851851851851852,
+            "tail_focus_conditional_probability": 0.5315161839863715,
+            "support_grade": 1,
+            "script_cn": "乌拉圭在前60分钟通过高压与持续控球取得领先，中场三人组压缩佛得角反击出球，比赛长期停留在佛得角半场；佛得角低位块体能与专注度下降，乌拉圭通过二次进攻或定位球混战扩大到三球。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.011851851851851851,
+            "tail_focus_conditional_probability": 0.1362862010221465,
+            "support_grade": 0,
+            "script_cn": "乌拉圭早段破门后持续压迫，佛得角为追分增加前场人数，清球与第一脚出球质量下降；乌拉圭多次在前场回收球权，将低位围攻转化为连续得分，最终零封大胜。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.20407407407407407,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.58,
+        "summary_cn": "爆冷是三个高偏离情景中证据链最完整的：佛得角已有对西班牙0-0的低位防守样本，Vozinha被多源描述为关键门将，进攻路径清晰依赖直接反击与边路速度；乌拉圭同时缺少Araujo与De Arrascaeta，分别削弱后场大空间防守与前场创造变化。所选四比分为爆冷池条件概率前四（0-1=0.466、1-2=0.232、0-2=0.147、1-3=0.062）…",
+        "caution_cn": "爆冷不等于佛得角主动压制乌拉圭；更合理路径是低射门量、高门将贡献与少数反击高效率。若乌拉圭中场反抢稳定并早早进球，爆冷脚本会迅速弱化。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.09518518518518519,
+            "tail_focus_conditional_probability": 0.5260074811207566,
+            "support_grade": 2,
+            "script_cn": "佛得角延续紧凑低位，Vozinha处理乌拉圭传中、远射与禁区混战；乌拉圭缺少De Arrascaeta后中路破解不足久攻不下，佛得角在一次边路反击或机会主义时刻取得唯一进球并收缩守住比分。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.047407407407407405,
+            "tail_focus_conditional_probability": 0.21681134871903449,
+            "support_grade": 1,
+            "script_cn": "乌拉圭依靠控球与压迫取得进球或扳平，但高位防线与边后卫身后空间给佛得角留下两次高价值反击窗口；Ryan Mendes或边路速度点参与推进，佛得角在有限机会中完成两球转化。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

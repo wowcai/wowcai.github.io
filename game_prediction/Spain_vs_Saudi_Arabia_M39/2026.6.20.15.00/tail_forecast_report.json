@@ -1,0 +1,842 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-20T07:00:00Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Spain_vs_Saudi_Arabia_M39\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "fe65f2df91290836a2acc793e787ae9f407d0316bf475ab30ae18046d5d3d962",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-20T07:00:00+00:00"
+  },
+  "match": {
+    "match_id": "M39",
+    "team_a": "Spain",
+    "team_b": "Saudi Arabia",
+    "kickoff_utc": "2026-06-21T16:00:00Z",
+    "venue": "Atlanta Stadium",
+    "stage": "group",
+    "group": "H",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.7911111111111111,
+    "draw": 0.17148148148148148,
+    "team_b_win": 0.03740740740740741,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.1874074074074074
+      },
+      {
+        "score": "2-0",
+        "probability": 0.18296296296296297
+      },
+      {
+        "score": "3-0",
+        "probability": 0.12296296296296297
+      },
+      {
+        "score": "0-0",
+        "probability": 0.09037037037037036
+      },
+      {
+        "score": "1-1",
+        "probability": 0.06888888888888889
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Spain",
+    "underdog_side": "team_b",
+    "underdog_team": "Saudi Arabia",
+    "team_a_win": 0.7911111111111111,
+    "draw": 0.17148148148148148,
+    "team_b_win": 0.03740740740740741,
+    "win_probability_gap": 0.7537037037037037,
+    "underdog_win_probability": 0.03740740740740741,
+    "favorite_fail_to_win_probability": 0.2088888888888889,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "提案整体结构合理：正确识别出在高偏离筛选中“一边倒胜出”(blowout)比真正开放对攻(high_scoring)更有机制支撑，且明确提示两池在概率上不可累加。三个情景的候选基本来自各自池中条件概率最高的几个比分，证据与机制引用真实、未引入池外事实。主要问题集中在upset情景：在主预测team_b_win仅0.037、expected_goals_a高达2.14的背景下，0-1被赋予中性支持(0)偏高——西班牙零封本身缺乏任何正向证据支持，故下调。high_scoring与blowout维持accepted，仅做说明性确认。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.24444444444444444,
+      "attention_level": "medium",
+      "evidence_strength": 0.53,
+      "rationale_cn": "总进球≥4的现实路径主要是西班牙控球压制后单边累积产出，而非双方对攻。4-0、3-1为池内条件概率最高的两个候选，符合实力差与沙特进攻产量有限的组合；5-0为可解释的极端单边形态；3-2作为真正开放对攻的高波动尾部保留。该情景与blowout高度重叠，概率不可相加这一点提案已正确标注。",
+      "supporting_evidence_ids": [
+        "E_4ebb24f94c5a",
+        "E_63164c70dd5f",
+        "E_73cc6e802e70",
+        "E_ef07e58e6757",
+        "E_f63319cc6137",
+        "E_29d43cb74635"
+      ],
+      "counter_evidence_ids": [
+        "E_4bbd2c5237fb",
+        "E_9e07a8245206",
+        "E_5928930499b6",
+        "E_0a1473e8a658",
+        "E_5f83bb6b7608"
+      ],
+      "caution_cn": "若沙特低位防守保持完整或西班牙延续首战0-0的终结问题，本情景会退化为3-0及以下的控制型胜利，落入blowout而非开放大比分。",
+      "audit_note_cn": "保留提案的四个候选与支持等级。3-2虽不是池内次高概率(4-1、6-0更高)，但提案刻意用其代表与blowout区分的开放对攻尾部，等级-1已如实反映沙特进2球与其弱进攻指标的冲突，判定合理予以保留。仅将evidence_strength由0.55微调至0.53以反映该池对blowout的从属性。",
+      "candidate_pool": [
+        {
+          "score": "4-0",
+          "base_probability": 0.0674074074074074,
+          "base_conditional_probability": 0.27575757575757576,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.04925925925925926,
+          "base_conditional_probability": 0.20151515151515154,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.028148148148148148,
+          "base_conditional_probability": 0.11515151515151516,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.022222222222222223,
+          "base_conditional_probability": 0.09090909090909091,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.07575757575757576,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.05151515151515152,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.045454545454545456,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.045454545454545456,
+          "total_goals": 5,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0674074074074074,
+          "base_conditional_probability": 0.27575757575757576,
+          "tail_focus_conditional_probability": 0.30396659707724427,
+          "tail_focus_implied_overall_probability": 0.07430294595221526,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "西班牙长时间压制沙特低位，前60分钟通过中场转移和边路突破打开局面；领先后沙特体能与阵型间距下降，西班牙继续通过倒三角、二线插上或替补边路冲击扩大比分，沙特转换被Rodri区域反抢压制。",
+          "rationale_cn": "4-0为高比分池内条件概率最高的候选，最贴合西班牙强势控球、沙特产量有限并被持续消耗的单边产出形态。",
+          "evidence_ids": [
+            "E_4ebb24f94c5a",
+            "E_63164c70dd5f",
+            "E_f63319cc6137",
+            "E_0a1473e8a658"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.04925925925925926,
+          "base_conditional_probability": 0.20151515151515154,
+          "tail_focus_conditional_probability": 0.22212943632567853,
+          "tail_focus_implied_overall_probability": 0.05429830665738808,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "西班牙控球主导但前段未完全杀死比赛，沙特依靠低位断球后的Al-Dawsari或边路转换制造一次有效进攻；随后西班牙在下半场加快节奏，利用边路一对一和中场二次进攻拉开到两球差。",
+          "rationale_cn": "覆盖沙特有限但真实存在的单次转换进球路径，与沙特xG约0.9及H_03相符，是池内次高概率候选。",
+          "evidence_ids": [
+            "E_4ebb24f94c5a",
+            "E_2eaada907182",
+            "E_c755a1fffda9",
+            "E_ca8bf383dca0",
+            "E_0a1473e8a658"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02",
+            "H_03"
+          ]
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.028148148148148148,
+          "base_conditional_probability": 0.11515151515151516,
+          "tail_focus_conditional_probability": 0.10577592205984691,
+          "tail_focus_implied_overall_probability": 0.025856336503518134,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "西班牙早早领先迫使沙特防线频繁横移回追，随后通过连续边路压迫、禁区二点球和后段替补冲击形成连锁进球；沙特进攻出口被孤立。",
+          "rationale_cn": "有实力差与rollout尾部支撑，但需西班牙终结效率明显高于首战且沙特防线完整性下降，证据不足以给予正向支持，中性等级恰当。",
+          "evidence_ids": [
+            "E_f63319cc6137",
+            "E_4ebb24f94c5a",
+            "E_73cc6e802e70",
+            "E_29d43cb74635"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.045454545454545456,
+          "tail_focus_conditional_probability": 0.035490605427974956,
+          "tail_focus_implied_overall_probability": 0.008675481326838323,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "比赛早段被西班牙进球打开，沙特在西班牙压上后的身后空间中连续抓到转换机会，形成短时间对攻；西班牙最终依靠控球和边路质量重新取得优势。",
+          "rationale_cn": "真正的开放对攻尾部，与沙特整体进攻指标、预计低位策略并不匹配，仅作为高波动尾部剧本保留。",
+          "evidence_ids": [
+            "E_2eaada907182",
+            "E_c755a1fffda9",
+            "E_ca8bf383dca0",
+            "E_4ebb24f94c5a"
+          ],
+          "mechanism_ids": [
+            "H_02",
+            "H_03"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0674074074074074,
+          "base_conditional_probability": 0.27575757575757576,
+          "tail_focus_conditional_probability": 0.30396659707724427,
+          "tail_focus_implied_overall_probability": 0.07430294595221526,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.04925925925925926,
+          "base_conditional_probability": 0.20151515151515154,
+          "tail_focus_conditional_probability": 0.22212943632567853,
+          "tail_focus_implied_overall_probability": 0.05429830665738808,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.028148148148148148,
+          "base_conditional_probability": 0.11515151515151516,
+          "tail_focus_conditional_probability": 0.10577592205984691,
+          "tail_focus_implied_overall_probability": 0.025856336503518134,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.022222222222222223,
+          "base_conditional_probability": 0.09090909090909091,
+          "tail_focus_conditional_probability": 0.08350730688935283,
+          "tail_focus_implied_overall_probability": 0.02041289723961958,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.07575757575757576,
+          "tail_focus_conditional_probability": 0.06958942240779402,
+          "tail_focus_implied_overall_probability": 0.01701074769968298,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.05151515151515152,
+          "tail_focus_conditional_probability": 0.047320807237299936,
+          "tail_focus_implied_overall_probability": 0.011567308435784428,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.045454545454545456,
+          "tail_focus_conditional_probability": 0.041753653444676415,
+          "tail_focus_implied_overall_probability": 0.01020644861980979,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.045454545454545456,
+          "tail_focus_conditional_probability": 0.035490605427974956,
+          "tail_focus_implied_overall_probability": 0.008675481326838323,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.0196969696969697,
+          "tail_focus_conditional_probability": 0.018093249826026447,
+          "tail_focus_implied_overall_probability": 0.0044227944019175755,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.0044444444444444444,
+          "base_conditional_probability": 0.01818181818181818,
+          "tail_focus_conditional_probability": 0.016701461377870565,
+          "tail_focus_implied_overall_probability": 0.004082579447923916,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.2866666666666667,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.68,
+      "rationale_cn": "一边倒比开放对攻更有机制支撑：西班牙整体强度、中场控制与边路破局能力显著优于沙特，沙特更可能长时间防守。3-0为池内压倒性最高条件概率(约0.43)的核心形态，与expected_goals_a≈2.14一致；4-0、5-0、4-1构成递进的扩大化与单次失球尾部。四个候选即池内条件概率前四，未忽略更合理候选。",
+      "supporting_evidence_ids": [
+        "E_f63319cc6137",
+        "E_4ebb24f94c5a",
+        "E_63164c70dd5f",
+        "E_73cc6e802e70",
+        "E_ef07e58e6757",
+        "E_0a1473e8a658",
+        "E_f6d630599a39"
+      ],
+      "counter_evidence_ids": [
+        "E_5f83bb6b7608",
+        "E_4bbd2c5237fb",
+        "E_9e07a8245206",
+        "E_5928930499b6",
+        "E_6635f56baa5a"
+      ],
+      "caution_cn": "崩盘依赖首球较早或终结在线；若沙特守住前60分钟或西班牙延续高控球低转化，净胜三球以上会明显受限。本情景与4-0、5-0等高比分重叠，不可重复累加。",
+      "audit_note_cn": "全部保留。3-0给予最高等级2在审查后认定合理:它是池内条件概率绝对主导项，并由H_01(0.78)、H_02(0.75)双高置信机制及显著实力差共同支撑,且不要求极端射门转化或沙特对攻,不构成为激进而过度极端。其余候选等级随概率与机制依赖度递减,排序自洽。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.12296296296296297,
+          "base_conditional_probability": 0.4289405684754522,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.0674074074074074,
+          "base_conditional_probability": 0.23514211886304906,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.028148148148148148,
+          "base_conditional_probability": 0.09819121447028423,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.022222222222222223,
+          "base_conditional_probability": 0.07751937984496124,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.06459948320413436,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.04392764857881137,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "6-1",
+          "base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.016795865633074936,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "5-2",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010335917312661497,
+          "total_goals": 7,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.12296296296296297,
+          "base_conditional_probability": 0.4289405684754522,
+          "tail_focus_conditional_probability": 0.5015628255886643,
+          "tail_focus_implied_overall_probability": 0.1437813433354171,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "西班牙通过Rodri、Pedri和Fabian Ruiz稳定控场，把沙特压在中低位；一旦边路或二线进攻取得首球，沙特难以持续向前，西班牙在下半场通过耐心传导与边路换人再进两球。",
+          "rationale_cn": "池内条件概率绝对主导且与expected_goals_a一致，体现西班牙优势又不要求极端转化或沙特对攻，机制支撑最强。",
+          "evidence_ids": [
+            "E_f63319cc6137",
+            "E_4ebb24f94c5a",
+            "E_63164c70dd5f",
+            "E_0a1473e8a658"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0674074074074074,
+          "base_conditional_probability": 0.23514211886304906,
+          "tail_focus_conditional_probability": 0.22754740570952284,
+          "tail_focus_implied_overall_probability": 0.06523025630339654,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "西班牙早段或中段破门后持续占据前场，沙特边路协防负荷增加；Yamal若后段登场，面对体能下降的防线制造额外威胁，西班牙把优势扩大到四球。",
+          "rationale_cn": "同时受实力差、控球压制与沙特进攻受限支持，但比3-0更依赖后段效率与沙特防线疲劳。",
+          "evidence_ids": [
+            "E_4ebb24f94c5a",
+            "E_29d43cb74635",
+            "E_f63319cc6137",
+            "E_f6d630599a39"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.028148148148148148,
+          "base_conditional_probability": 0.09819121447028423,
+          "tail_focus_conditional_probability": 0.07918316315899146,
+          "tail_focus_implied_overall_probability": 0.022699173438910886,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "西班牙取得早期领先后，沙特防守阵型被迫更频繁前移或横向补位，导致禁区前沿和弱侧连续暴露；西班牙在上下半场都有连续进球阶段，沙特转换基本被遏制。",
+          "rationale_cn": "有rollout尾部支撑，但需终结显著改善且沙特低位不能维持基本完整，仅给中性支持。",
+          "evidence_ids": [
+            "E_f63319cc6137",
+            "E_4ebb24f94c5a",
+            "E_73cc6e802e70",
+            "E_5f83bb6b7608"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.022222222222222223,
+          "base_conditional_probability": 0.07751937984496124,
+          "tail_focus_conditional_probability": 0.0625130235465722,
+          "tail_focus_implied_overall_probability": 0.0179204000833507,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "西班牙总体压制并取得多球领先，但沙特在某次低位断球后通过Al-Dawsari带动转换，抓住西班牙边后卫身后空间打入一球；随后西班牙继续掌控节奏并扩大分差。",
+          "rationale_cn": "兼容西班牙一边倒与沙特单次转换进球，但沙特产量有限且西班牙控场较强，支撑弱于3-0、4-0。",
+          "evidence_ids": [
+            "E_2eaada907182",
+            "E_c755a1fffda9",
+            "E_ca8bf383dca0",
+            "E_4ebb24f94c5a",
+            "E_0a1473e8a658"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_03"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.12296296296296297,
+          "base_conditional_probability": 0.4289405684754522,
+          "tail_focus_conditional_probability": 0.5015628255886643,
+          "tail_focus_implied_overall_probability": 0.1437813433354171,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0674074074074074,
+          "base_conditional_probability": 0.23514211886304906,
+          "tail_focus_conditional_probability": 0.22754740570952284,
+          "tail_focus_implied_overall_probability": 0.06523025630339654,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.028148148148148148,
+          "base_conditional_probability": 0.09819121447028423,
+          "tail_focus_conditional_probability": 0.07918316315899146,
+          "tail_focus_implied_overall_probability": 0.022699173438910886,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.022222222222222223,
+          "base_conditional_probability": 0.07751937984496124,
+          "tail_focus_conditional_probability": 0.0625130235465722,
+          "tail_focus_implied_overall_probability": 0.0179204000833507,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.06459948320413436,
+          "tail_focus_conditional_probability": 0.05209418628881017,
+          "tail_focus_implied_overall_probability": 0.014933666736125582,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.04392764857881137,
+          "tail_focus_conditional_probability": 0.035424046676390916,
+          "tail_focus_implied_overall_probability": 0.010154893380565397,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.016795865633074936,
+          "tail_focus_conditional_probability": 0.013544488435090646,
+          "tail_focus_implied_overall_probability": 0.003882753351392652,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010335917312661497,
+          "tail_focus_conditional_probability": 0.008335069806209627,
+          "tail_focus_implied_overall_probability": 0.002389386677780093,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "7-0",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.00904392764857881,
+          "tail_focus_conditional_probability": 0.007293186080433424,
+          "tail_focus_implied_overall_probability": 0.0020907133430575816,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "7-1",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.006459948320413436,
+          "tail_focus_conditional_probability": 0.005209418628881017,
+          "tail_focus_implied_overall_probability": 0.0014933666736125584,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Saudi Arabia 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.0374074074074074,
+      "attention_level": "low",
+      "evidence_strength": 0.22,
+      "rationale_cn": "爆冷仅存在低位防守、门将高压扑救与Al-Dawsari转换出口的窄路径。主线证据明显偏向西班牙控球压制，沙特整体进攻指标与持续推进能力不足。候选0-1、1-2、0-2为池内条件概率前三，引用真实，但需注意所有路径均要求西班牙至少部分零封，这与expected_goals_a≈2.14相冲突。",
+      "supporting_evidence_ids": [
+        "E_0a1473e8a658",
+        "E_f6d630599a39",
+        "E_2eaada907182",
+        "E_c755a1fffda9",
+        "E_ca8bf383dca0",
+        "E_d67db8ff18bf",
+        "E_6635f56baa5a"
+      ],
+      "counter_evidence_ids": [
+        "E_f63319cc6137",
+        "E_4ebb24f94c5a",
+        "E_63164c70dd5f",
+        "E_73cc6e802e70",
+        "E_ef07e58e6757"
+      ],
+      "caution_cn": "爆冷筛选不提高沙特总体胜率，仅在既有池内识别相对更可解释的冷门。若西班牙先进球，所有爆冷路径迅速收窄。",
+      "audit_note_cn": "保留三个候选与排序，但将0-1的support_grade由0下调至-1:在主预测team_b_win仅0.037、expected_goals_a≈2.14且H_03仅为tentative(0.55)的背景下，西班牙全场零封缺乏任何正向证据支持，给予中性偏高，故修正为弱负向以避免高估最可解释冷门的绝对成立度。1-2、0-2的等级如实反映其要求沙特多次高质量转换或零封加双进球的极端性，予以保留。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.4950495049504951,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.28712871287128716,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.13861386138613863,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.039603960396039604,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.029702970297029705,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-4",
+          "base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.009900990099009901,
+          "total_goals": 7,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.4950495049504951,
+          "tail_focus_conditional_probability": 0.5002942907592702,
+          "tail_focus_implied_overall_probability": 0.01871471235803196,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "沙特长时间低位防守，Al Owais和三中卫/四后卫结构承受高射门压力；西班牙延续高控球低转化问题，沙特通过一次Al-Dawsari牵引的转换或少数定位球后的二次进攻取得领先，并在末段收缩守住。",
+          "rationale_cn": "若爆冷发生，0-1是最符合沙特能力边界的方式;但其要求的西班牙零封与高expected_goals_a及主线压制证据冲突，绝对支撑为弱负向,虽仍是池内相对最可解释的冷门。",
+          "evidence_ids": [
+            "E_0a1473e8a658",
+            "E_f6d630599a39",
+            "E_2eaada907182",
+            "E_c755a1fffda9",
+            "E_5f83bb6b7608"
+          ],
+          "mechanism_ids": [
+            "H_03"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.28712871287128716,
+          "tail_focus_conditional_probability": 0.2901706886403767,
+          "tail_focus_implied_overall_probability": 0.010854533167658534,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "西班牙控球并取得或扳回一球，但压上过程中给出身后空间；沙特两次高质量转换由Al-Dawsari或其牵制创造射门，随后低位守住最后阶段。",
+          "rationale_cn": "需要沙特不止一次完成高质量转换，难度高于0-1，但保留了西班牙得分而沙特反击效率异常的冷门组合。",
+          "evidence_ids": [
+            "E_2eaada907182",
+            "E_c755a1fffda9",
+            "E_ca8bf383dca0",
+            "E_4ebb24f94c5a"
+          ],
+          "mechanism_ids": [
+            "H_03",
+            "H_02"
+          ]
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.13861386138613863,
+          "tail_focus_conditional_probability": 0.11536197763390231,
+          "tail_focus_implied_overall_probability": 0.004315392496675605,
+          "support_grade": -2,
+          "multiplier": 0.7,
+          "script_cn": "沙特先通过低位反击或少数前场机会取得领先，西班牙追分时阵型进一步前压，沙特再利用一次转换或后场解围后的推进打入第二球。",
+          "rationale_cn": "要求沙特防守端零封且进攻端两次转化成功，与强度差和西班牙控球压制证据冲突最大，仅作极端尾部冷门保留。",
+          "evidence_ids": [
+            "E_0a1473e8a658",
+            "E_2eaada907182",
+            "E_c755a1fffda9",
+            "E_f63319cc6137"
+          ],
+          "mechanism_ids": [
+            "H_03"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.4950495049504951,
+          "tail_focus_conditional_probability": 0.5002942907592702,
+          "tail_focus_implied_overall_probability": 0.01871471235803196,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.28712871287128716,
+          "tail_focus_conditional_probability": 0.2901706886403767,
+          "tail_focus_implied_overall_probability": 0.010854533167658534,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.13861386138613863,
+          "tail_focus_conditional_probability": 0.11536197763390231,
+          "tail_focus_implied_overall_probability": 0.004315392496675605,
+          "support_grade": -2,
+          "multiplier": 0.7
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.039603960396039604,
+          "tail_focus_conditional_probability": 0.04708652148322543,
+          "tail_focus_implied_overall_probability": 0.0017613846925206547,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.029702970297029705,
+          "tail_focus_conditional_probability": 0.035314891112419075,
+          "tail_focus_implied_overall_probability": 0.0013210385193904912,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-4",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.009900990099009901,
+          "tail_focus_conditional_probability": 0.011771630370806358,
+          "tail_focus_implied_overall_probability": 0.0004403461731301637,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000002
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "fe65f2df91290836a2acc793e787ae9f407d0316bf475ab30ae18046d5d3d962"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Spain_vs_Saudi_Arabia_M39\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\web_delivery\\Spain_vs_Saudi_Arabia_M39\\2026.6.22.00\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Spain_vs_Saudi_Arabia_M39\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\web_delivery\\Spain_vs_Saudi_Arabia_M39\\2026.6.22.00\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

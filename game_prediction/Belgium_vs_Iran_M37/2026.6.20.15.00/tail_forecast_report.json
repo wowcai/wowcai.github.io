@@ -1,0 +1,879 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-20T07:00:00Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Belgium_vs_Iran_M37\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "5c995b90f5c5c82e87ddf9620712d9e6492bb6edb578e34789a2979682815b7e",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-20T07:00:00+00:00"
+  },
+  "match": {
+    "match_id": "M37",
+    "team_a": "Belgium",
+    "team_b": "Iran",
+    "kickoff_utc": "2026-06-21T19:00:00Z",
+    "venue": "Los Angeles Stadium",
+    "stage": "group",
+    "group": "G",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.3937037037037037,
+    "draw": 0.3188888888888889,
+    "team_b_win": 0.2874074074074074,
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.14962962962962964
+      },
+      {
+        "score": "1-0",
+        "probability": 0.13111111111111112
+      },
+      {
+        "score": "0-0",
+        "probability": 0.11777777777777777
+      },
+      {
+        "score": "0-1",
+        "probability": 0.10481481481481482
+      },
+      {
+        "score": "2-1",
+        "probability": 0.07888888888888888
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Belgium",
+    "underdog_side": "team_b",
+    "underdog_team": "Iran",
+    "team_a_win": 0.3937037037037037,
+    "draw": 0.3188888888888889,
+    "team_b_win": 0.2874074074074074,
+    "win_probability_gap": 0.10629629629629633,
+    "underdog_win_probability": 0.2874074074074074,
+    "favorite_fail_to_win_probability": 0.6062962962962963,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "提案整体引用真实、机制链与候选池一致，比分全部来自对应候选池，未引入输入外新事实。三类情景的方向判断合理：爆冷最值得关注，开放大比分与崩盘均为支线。主要校准点在upset的0-1被给到grade 2偏激进——伊朗实际‘获胜’（而非平局）主要依赖H_02，而H_02为tentative（confidence 0.5）且塔雷米首发与状态官方未确认；H_01、H_03的方向实为draw/total down，对‘伊朗取胜’只是间接支撑。据此将0-1降为grade 1，其余保留。blowout中4-0虽在rollout_4出现一次，但条件概率极低且需要比利时在缺多库、卢卡库不能首发情况下连续打穿低位，维持-1。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.17925925925925926,
+      "attention_level": "medium",
+      "evidence_strength": 0.35,
+      "rationale_cn": "总进球≥4不是主线。9/9 rollout激活H_01（攻坚集中、总进球down），代表比分最常见为0-0，主预测也以低比分为主。比利时控球与德布劳内中路组织、伊朗塔雷米反击与防线弱点给了少量开放路径，但多库缺阵、卢卡库不能首发、伊朗深位压缩与中午炎热都压制连续进球。大比分主要依赖早球或后段体能滑落。",
+      "supporting_evidence_ids": [
+        "E_9679f419d902",
+        "E_aec24a80a7a4",
+        "E_98c9c41ff49e",
+        "E_5c1c389f666c",
+        "E_4ec0f9926183"
+      ],
+      "counter_evidence_ids": [
+        "E_eb70444ee8f7",
+        "E_f04c7bb67c1e",
+        "E_bc3ef1cbeea1",
+        "E_3cd6f46f7008"
+      ],
+      "caution_cn": "勿把2-2、3-1、1-3的条件概率相加，它们是同一高比分事件下的不同分支。若伊朗低位完整且上半场无早球，本情景关注度进一步下降。",
+      "audit_note_cn": "保留原三候选与support_grade。三者为池内base概率前三，证据引用核验通过。仅提示2-2引用H_03时方向偏‘total down’，提案已将其限定为后段体能/换人带来的局部波动，逻辑可接受，故不改动。",
+      "candidate_pool": [
+        {
+          "score": "2-2",
+          "base_probability": 0.044444444444444446,
+          "base_conditional_probability": 0.24793388429752067,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.02925925925925926,
+          "base_conditional_probability": 0.16322314049586778,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.02,
+          "base_conditional_probability": 0.1115702479338843,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.016296296296296295,
+          "base_conditional_probability": 0.0909090909090909,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.012222222222222223,
+          "base_conditional_probability": 0.06818181818181819,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.05991735537190082,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.05371900826446281,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.03925619834710744,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.044444444444444446,
+          "base_conditional_probability": 0.24793388429752067,
+          "tail_focus_conditional_probability": 0.28346456692913385,
+          "tail_focus_implied_overall_probability": 0.05081364829396325,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "比利时长期控球并依靠德布劳内在中路或半空间制造机会，伊朗低位反击通过塔雷米支点和二次进攻回应；后段因体能下降与换人放大局部波动，形成双方各有进球的开放平局。",
+          "rationale_cn": "在高比分池内2-2是base概率最高候选，且双方首轮均战平的背景支持谨慎但互有进球；它不要求任一方单边碾压，是池内最自然的开放分支。",
+          "evidence_ids": [
+            "E_9679f419d902",
+            "E_aec24a80a7a4",
+            "E_98c9c41ff49e",
+            "E_5c1c389f666c",
+            "E_4ec0f9926183"
+          ],
+          "mechanism_ids": [
+            "H_02",
+            "H_03"
+          ]
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.02925925925925926,
+          "base_conditional_probability": 0.16322314049586778,
+          "tail_focus_conditional_probability": 0.15551181102362205,
+          "tail_focus_implied_overall_probability": 0.027876932050160397,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "比利时控球先取得领先，伊朗被迫早于预期前压，比利时利用中路传递和后段替补冲击扩大优势，伊朗以反击或定位球拿回一球。",
+          "rationale_cn": "需比利时早破局并在伊朗阵型前移后扩大领先；其纸面实力与德布劳内组织支持此路径，但多库缺阵与卢卡库不能首发削弱稳定打穿低位的证据，维持中性。",
+          "evidence_ids": [
+            "E_10d81382d893",
+            "E_9679f419d902",
+            "E_e885fbafd00d",
+            "E_eb70444ee8f7",
+            "E_bc3ef1cbeea1"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_03"
+          ]
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.02,
+          "base_conditional_probability": 0.1115702479338843,
+          "tail_focus_conditional_probability": 0.1062992125984252,
+          "tail_focus_implied_overall_probability": 0.019055118110236222,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "比利时推进过于集中导致中后场保护拉开，伊朗经塔雷米与二线反击连续转化，比利时后段扳回一球但追分暴露更多空间。",
+          "rationale_cn": "与伊朗反击机制相容，但需伊朗转化率显著偏高并越过库尔图瓦的稳定性，仅作高比分池内低强度分支，维持中性。",
+          "evidence_ids": [
+            "E_98c9c41ff49e",
+            "E_3cd6f46f7008",
+            "E_5c1c389f666c",
+            "E_f04c7bb67c1e",
+            "E_bc3ef1cbeea1"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.044444444444444446,
+          "base_conditional_probability": 0.24793388429752067,
+          "tail_focus_conditional_probability": 0.28346456692913385,
+          "tail_focus_implied_overall_probability": 0.05081364829396325,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.02925925925925926,
+          "base_conditional_probability": 0.16322314049586778,
+          "tail_focus_conditional_probability": 0.15551181102362205,
+          "tail_focus_implied_overall_probability": 0.027876932050160397,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.02,
+          "base_conditional_probability": 0.1115702479338843,
+          "tail_focus_conditional_probability": 0.1062992125984252,
+          "tail_focus_implied_overall_probability": 0.019055118110236222,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.016296296296296295,
+          "base_conditional_probability": 0.0909090909090909,
+          "tail_focus_conditional_probability": 0.08661417322834646,
+          "tail_focus_implied_overall_probability": 0.01552639253426655,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.012222222222222223,
+          "base_conditional_probability": 0.06818181818181819,
+          "tail_focus_conditional_probability": 0.06496062992125985,
+          "tail_focus_implied_overall_probability": 0.011644794400699914,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.05991735537190082,
+          "tail_focus_conditional_probability": 0.05708661417322834,
+          "tail_focus_implied_overall_probability": 0.010233304170312043,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.05371900826446281,
+          "tail_focus_conditional_probability": 0.05118110236220473,
+          "tail_focus_implied_overall_probability": 0.009174686497521144,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.03925619834710744,
+          "tail_focus_conditional_probability": 0.03740157480314961,
+          "tail_focus_implied_overall_probability": 0.006704578594342374,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.03512396694214876,
+          "tail_focus_conditional_probability": 0.03346456692913386,
+          "tail_focus_implied_overall_probability": 0.00599883347914844,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.01652892561983471,
+          "tail_focus_conditional_probability": 0.015748031496062992,
+          "tail_focus_implied_overall_probability": 0.0028229804607757363,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.08259259259259259,
+      "attention_level": "low",
+      "evidence_strength": 0.27,
+      "rationale_cn": "任一方净胜≥3不是主要证据方向。比利时纸面实力、控球预期与德布劳内组织给了3-0、4-0一类基础，但多库缺阵、卢卡库不能首发与伊朗低位紧凑都降低连续打穿概率；伊朗大胜方向需要比利时控球失衡、反击连续命中与后段崩盘同时出现，证据更弱。",
+      "supporting_evidence_ids": [
+        "E_10d81382d893",
+        "E_9679f419d902",
+        "E_e885fbafd00d",
+        "E_98c9c41ff49e",
+        "E_5c1c389f666c"
+      ],
+      "counter_evidence_ids": [
+        "E_eb70444ee8f7",
+        "E_f04c7bb67c1e",
+        "E_bc3ef1cbeea1",
+        "E_aec24a80a7a4",
+        "E_3cd6f46f7008",
+        "E_56f308a6337b"
+      ],
+      "caution_cn": "崩盘比分与开放大比分、爆冷池存在重叠，不能跨情景累加。本情景高度依赖早球或连续转换失误。",
+      "audit_note_cn": "保留原三候选与support_grade。3-0为池内最高条件概率且在rollout_9出现，给0合理；4-0虽在rollout_4出现一次但条件概率仅约0.085、需极端打穿效率，维持-1；0-3未在任一rollout出现（伊朗方向最高仅0-2），需门将失误或状态连续倾斜，维持-1。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.03037037037037037,
+          "base_conditional_probability": 0.36771300448430494,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.01925925925925926,
+          "base_conditional_probability": 0.23318385650224216,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.13004484304932734,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.08520179372197309,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.03587443946188341,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.03587443946188341,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.03139013452914798,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.017937219730941704,
+          "total_goals": 6,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03037037037037037,
+          "base_conditional_probability": 0.36771300448430494,
+          "tail_focus_conditional_probability": 0.3861549328938074,
+          "tail_focus_implied_overall_probability": 0.031893537050118166,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "比利时在控球压制中先经中路组织或定位球破局，伊朗被迫提高站位后失去低位密度，比利时下半场利用空间再进两球并零封。",
+          "rationale_cn": "3-0是崩盘池中相对最可信的比利时方向，不要求极端进球数且符合其实力与控球优势；但人员受限使支持维持中性。",
+          "evidence_ids": [
+            "E_10d81382d893",
+            "E_9679f419d902",
+            "E_e885fbafd00d",
+            "E_aec24a80a7a4",
+            "E_eb70444ee8f7",
+            "E_bc3ef1cbeea1"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_03"
+          ]
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.01925925925925926,
+          "base_conditional_probability": 0.23318385650224216,
+          "tail_focus_conditional_probability": 0.20814692724275963,
+          "tail_focus_implied_overall_probability": 0.01719139436116126,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "比利时控球推进被伊朗低位反复吸收，丢球后阵型前压，伊朗经塔雷米支点与转换连续命中，比利时追分阶段被拉开。",
+          "rationale_cn": "伊朗反击与比利时防线弱点可解释小幅领先或爆冷，但0-3需要反击效率、门将失误或状态连续倾斜，现有材料不足以强支撑。",
+          "evidence_ids": [
+            "E_98c9c41ff49e",
+            "E_3cd6f46f7008",
+            "E_5c1c389f666c",
+            "E_bdbb9b8de0e8",
+            "E_10d81382d893"
+          ],
+          "mechanism_ids": [
+            "H_02"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.08520179372197309,
+          "tail_focus_conditional_probability": 0.07605368495408522,
+          "tail_focus_implied_overall_probability": 0.00628147101657815,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "比利时极早领先后持续控场，伊朗追分导致防线拉开，比利时借换人与体能落差连续扩大比分并保持零封。",
+          "rationale_cn": "需比利时低位攻坚效率显著高于证据基线且伊朗反击几乎完全失效；在缺多库、卢卡库受限背景下证据偏弱，给负向。",
+          "evidence_ids": [
+            "E_9679f419d902",
+            "E_10d81382d893",
+            "E_eb70444ee8f7",
+            "E_f04c7bb67c1e",
+            "E_bc3ef1cbeea1",
+            "E_56f308a6337b"
+          ],
+          "mechanism_ids": [
+            "H_01"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03037037037037037,
+          "base_conditional_probability": 0.36771300448430494,
+          "tail_focus_conditional_probability": 0.3861549328938074,
+          "tail_focus_implied_overall_probability": 0.031893537050118166,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.01925925925925926,
+          "base_conditional_probability": 0.23318385650224216,
+          "tail_focus_conditional_probability": 0.20814692724275963,
+          "tail_focus_implied_overall_probability": 0.01719139436116126,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.13004484304932734,
+          "tail_focus_conditional_probability": 0.13656698846244406,
+          "tail_focus_implied_overall_probability": 0.011279421639675935,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.08520179372197309,
+          "tail_focus_conditional_probability": 0.07605368495408522,
+          "tail_focus_implied_overall_probability": 0.00628147101657815,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.03587443946188341,
+          "tail_focus_conditional_probability": 0.03767365198963974,
+          "tail_focus_implied_overall_probability": 0.0031115645902554303,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.03587443946188341,
+          "tail_focus_conditional_probability": 0.03767365198963974,
+          "tail_focus_implied_overall_probability": 0.0031115645902554303,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.03139013452914798,
+          "tail_focus_conditional_probability": 0.032964445490934774,
+          "tail_focus_implied_overall_probability": 0.0027226190164735017,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.017937219730941704,
+          "tail_focus_conditional_probability": 0.01883682599481987,
+          "tail_focus_implied_overall_probability": 0.0015557822951277151,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.013452914798206279,
+          "tail_focus_conditional_probability": 0.014127619496114905,
+          "tail_focus_implied_overall_probability": 0.0011668367213457866,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.008968609865470852,
+          "tail_focus_conditional_probability": 0.009418412997409935,
+          "tail_focus_implied_overall_probability": 0.0007778911475638576,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Iran 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.2874074074074074,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.52,
+      "rationale_cn": "爆冷是三类高偏离情景中最值得关注方向：多库缺阵削弱边路一对一，卢卡库不能首发削弱开场禁区支点，伊朗预计低位压缩并可经塔雷米支点冲击比利时防线弱点。情景偏向窄胜或两球以内，而非大比分。但需注意：H_01、H_03的方向实为draw/total down，对‘伊朗取胜’只是间接支撑；真正支撑伊朗获胜的H_02为tentative（0.5）且塔雷米首发未获官方确认。",
+      "supporting_evidence_ids": [
+        "E_eb70444ee8f7",
+        "E_f04c7bb67c1e",
+        "E_bc3ef1cbeea1",
+        "E_98c9c41ff49e",
+        "E_aec24a80a7a4",
+        "E_3cd6f46f7008",
+        "E_5c1c389f666c",
+        "E_bdbb9b8de0e8"
+      ],
+      "counter_evidence_ids": [
+        "E_10d81382d893",
+        "E_9679f419d902",
+        "E_56f308a6337b"
+      ],
+      "caution_cn": "爆冷关注不等于重置伊朗胜总概率；只说明候选内部伊朗小胜路径机制更清晰。塔雷米首发与状态未官方确认，库尔图瓦会压低伊朗少量机会的转化收益。",
+      "audit_note_cn": "将0-1的support_grade由2降为1：0-1确为伊朗胜最可信路径且在rollout_2出现，但其‘获胜’核心机制H_02为tentative且塔雷米未确认，原grade 2过于激进，降一级更校准。1-2、0-2、1-3保留原support_grade，结构与证据引用核验通过；counter_evidence去除原列表中重复出现的E_5c1c389f666c（该项实为支持伊朗的防线弱点证据）。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.10481481481481482,
+          "base_conditional_probability": 0.3646907216494846,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.06703703703703703,
+          "base_conditional_probability": 0.23324742268041238,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.04888888888888889,
+          "base_conditional_probability": 0.17010309278350516,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.02,
+          "base_conditional_probability": 0.06958762886597938,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.01925925925925926,
+          "base_conditional_probability": 0.06701030927835053,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.012222222222222223,
+          "base_conditional_probability": 0.04252577319587629,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010309278350515464,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010309278350515464,
+          "total_goals": 5,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.10481481481481482,
+          "base_conditional_probability": 0.3646907216494846,
+          "tail_focus_conditional_probability": 0.37935656836461124,
+          "tail_focus_implied_overall_probability": 0.10902988779664381,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "比利时长时间控球但边路爆点不足，伊朗低位紧凑限制中路渗透；下半场或一次转换中伊朗经塔雷米支点或二线跟进取得领先，随后深防守住成果。",
+          "rationale_cn": "0-1最贴合爆冷证据链，不要求伊朗持续压制，只需一次高价值转换兑现。降为grade 1因获胜机制H_02为tentative且塔雷米首发未确认，避免过度自信。",
+          "evidence_ids": [
+            "E_eb70444ee8f7",
+            "E_f04c7bb67c1e",
+            "E_bc3ef1cbeea1",
+            "E_98c9c41ff49e",
+            "E_aec24a80a7a4",
+            "E_3cd6f46f7008"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02",
+            "H_03"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.06703703703703703,
+          "base_conditional_probability": 0.23324742268041238,
+          "tail_focus_conditional_probability": 0.24262734584450402,
+          "tail_focus_implied_overall_probability": 0.0697328964353093,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "比利时凭控球与德布劳内创造力取得进球，但防线在转换中被多次冲击；伊朗利用塔雷米牵制与比利时追分时身后空间打入制胜球。",
+          "rationale_cn": "比0-1更开放，承认比利时仍可能进球，同时保留伊朗反击击中防线弱点的机制，是爆冷池内较自然的互有进球分支。",
+          "evidence_ids": [
+            "E_9679f419d902",
+            "E_98c9c41ff49e",
+            "E_5c1c389f666c",
+            "E_3cd6f46f7008",
+            "E_eb70444ee8f7"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.04888888888888889,
+          "base_conditional_probability": 0.17010309278350516,
+          "tail_focus_conditional_probability": 0.1769436997319035,
+          "tail_focus_implied_overall_probability": 0.050854929997021146,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "比利时迟迟无法经中路组织打穿伊朗低位，进攻人数增加后后场保护变薄；伊朗先由反击领先，随后在比利时压上阶段再利用空间打入第二球。",
+          "rationale_cn": "需伊朗不只守住领先还能再次惩罚压上；受比利时人员受限与防线疑点支持，但受库尔图瓦与整体实力反制，维持grade 1。",
+          "evidence_ids": [
+            "E_f04c7bb67c1e",
+            "E_bc3ef1cbeea1",
+            "E_98c9c41ff49e",
+            "E_5c1c389f666c",
+            "E_3cd6f46f7008",
+            "E_56f308a6337b"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02",
+            "H_03"
+          ]
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.02,
+          "base_conditional_probability": 0.06958762886597938,
+          "tail_focus_conditional_probability": 0.060321715817694375,
+          "tail_focus_implied_overall_probability": 0.017336907953529938,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "比利时追分阶段持续压上并扳回一球，伊朗在转换中连续找到塔雷米或边路后插上队友，利用身后空间扩大比分。",
+          "rationale_cn": "该比分同属爆冷与开放大比分，机制上可由比利时压上后的反击放大解释，但需伊朗高效率转化多个机会，证据不如0-1、1-2稳固，维持中性。",
+          "evidence_ids": [
+            "E_98c9c41ff49e",
+            "E_3cd6f46f7008",
+            "E_5c1c389f666c",
+            "E_4ec0f9926183",
+            "E_10d81382d893"
+          ],
+          "mechanism_ids": [
+            "H_02",
+            "H_03"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.10481481481481482,
+          "base_conditional_probability": 0.3646907216494846,
+          "tail_focus_conditional_probability": 0.37935656836461124,
+          "tail_focus_implied_overall_probability": 0.10902988779664381,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.06703703703703703,
+          "base_conditional_probability": 0.23324742268041238,
+          "tail_focus_conditional_probability": 0.24262734584450402,
+          "tail_focus_implied_overall_probability": 0.0697328964353093,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.04888888888888889,
+          "base_conditional_probability": 0.17010309278350516,
+          "tail_focus_conditional_probability": 0.1769436997319035,
+          "tail_focus_implied_overall_probability": 0.050854929997021146,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.02,
+          "base_conditional_probability": 0.06958762886597938,
+          "tail_focus_conditional_probability": 0.060321715817694375,
+          "tail_focus_implied_overall_probability": 0.017336907953529938,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.01925925925925926,
+          "base_conditional_probability": 0.06701030927835053,
+          "tail_focus_conditional_probability": 0.05808757819481681,
+          "tail_focus_implied_overall_probability": 0.016694800251547348,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.012222222222222223,
+          "base_conditional_probability": 0.04252577319587629,
+          "tail_focus_conditional_probability": 0.036863270777479897,
+          "tail_focus_implied_overall_probability": 0.010594777082712739,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010309278350515464,
+          "tail_focus_conditional_probability": 0.008936550491510277,
+          "tail_focus_implied_overall_probability": 0.0025684308079303607,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010309278350515464,
+          "tail_focus_conditional_probability": 0.008936550491510277,
+          "tail_focus_implied_overall_probability": 0.0025684308079303607,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010309278350515464,
+          "tail_focus_conditional_probability": 0.008936550491510277,
+          "tail_focus_implied_overall_probability": 0.0025684308079303607,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.005154639175257732,
+          "tail_focus_conditional_probability": 0.004468275245755138,
+          "tail_focus_implied_overall_probability": 0.0012842154039651803,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "5c995b90f5c5c82e87ddf9620712d9e6492bb6edb578e34789a2979682815b7e"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Belgium_vs_Iran_M37\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\web_delivery\\Belgium_vs_Iran_M37\\2026.6.22.03\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\reports_Belgium_vs_Iran_M37\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.22比赛预测_V740\\web_delivery\\Belgium_vs_Iran_M37\\2026.6.22.03\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}
