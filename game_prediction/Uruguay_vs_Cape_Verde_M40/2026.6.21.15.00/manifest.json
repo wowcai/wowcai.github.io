@@ -1,25 +1,26 @@
 {
   "schema_version": "1.0",
-  "prediction_generated_at_utc": "2026-06-20T07:00:00Z",
-  "prediction_generated_at_local": "2026-06-20T15:00:00+08:00",
-  "quality_label": "ready",
+  "prediction_generated_at_utc": "2026-06-21T07:00:00Z",
+  "prediction_generated_at_local": "2026-06-21T15:00:00+08:00",
+  "quality_label": "usable",
   "quality_assessment": {
-    "label": "ready",
-    "label_cn": "可正式使用",
-    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
     "world_state_compiled": true,
     "world_state_model": "gpt-5.5",
-    "world_state_fallback_field_count": 1,
-    "world_state_fallback_ratio": 0.02702702702702703,
-    "research_completion_ratio": 1.0,
-    "critical_research_complete": true,
+    "world_state_fallback_field_count": 2,
+    "world_state_fallback_ratio": 0.05405405405405406,
+    "research_completion_ratio": 0.875,
+    "critical_research_complete": false,
     "rollout_fallback_action_count": 0,
-    "rollout_total_action_count": 135,
+    "rollout_total_action_count": 189,
     "rollout_fallback_ratio": 0.0,
     "committee_fallback_used": false,
     "reasons": [],
     "warnings": [
-      "World State有1个字段使用局部回退。"
+      "关键检索维度未完全覆盖（完成率87.5%）。",
+      "World State有2个字段使用局部回退。"
     ]
   },
   "purpose_cn": "网页最小预测输出：文本结论、比分偏离空间和蒙特卡洛比分矩阵。",
@@ -34,7 +35,7 @@
   },
   "notes_cn": [
     "偏离度越大，表示该比分相对主流比赛路径越激进。",
-    "比分矩阵纵轴为New Zealand，横轴为Egypt。",
+    "比分矩阵纵轴为Uruguay，横轴为Cape Verde。",
     "所有概率字段均使用0到1的小数；probability_percent仅用于直接显示。"
   ]
 }
