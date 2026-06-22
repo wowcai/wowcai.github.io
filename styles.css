@@ -3064,6 +3064,120 @@ button.group-result-line:hover {
   line-height: 1.35;
 }
 
+.latest-score-forecast {
+  display: grid;
+  gap: 10px;
+}
+
+.latest-score-section,
+.latest-score-scenario {
+  min-width: 0;
+  border: 1px solid rgba(6, 63, 44, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.latest-score-section {
+  padding: 10px;
+}
+
+.latest-score-section > span,
+.latest-score-scenario > span {
+  display: block;
+  color: #64746d;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.latest-score-chip-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.latest-score-chip {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  gap: 2px;
+  border-radius: 10px;
+  padding: 7px 5px;
+  background: rgba(6, 63, 44, 0.055);
+  color: #0f172a;
+}
+
+.latest-score-chip.is-primary {
+  background: #063f2c;
+  color: #ffffff;
+}
+
+.latest-score-chip strong {
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.latest-score-chip small {
+  color: currentColor;
+  font-size: 11px;
+  font-weight: 800;
+  opacity: 0.76;
+}
+
+.latest-score-scenarios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.latest-score-scenario {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+}
+
+.latest-scenario-score-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.latest-scenario-score-list .latest-score-chip {
+  width: 100%;
+  padding: 6px 5px;
+}
+
+.latest-scenario-score-list .latest-score-chip strong {
+  font-size: 14px;
+}
+
+.latest-scenario-score-list .latest-score-chip small {
+  font-size: 10px;
+}
+
+.latest-score-scenario em,
+.latest-score-scenario small {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.latest-scenario-score-list > em {
+  grid-column: 1 / -1;
+}
+
+.latest-score-scenario em {
+  color: #0d5f42;
+}
+
+.latest-score-scenario small {
+  color: #64746d;
+}
+
 .latest-match-card p {
   margin: 0;
   color: #52615b;

@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-22T05:19:13.233295Z",
+  "prediction_generated_at_local": "2026-06-22T13:19:13.233295+08:00",
+  "match": {
+    "match_id": "M44",
+    "team_a": "Jordan",
+    "team_b": "Algeria",
+    "kickoff_utc": "2026-06-23T03:00:00Z",
+    "venue": "San Francisco Bay Area Stadium",
+    "stage": "group",
+    "group": "J",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.75,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率75.0%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.21296296296296297,
+    "draw": 0.2625925925925926,
+    "team_b_win": 0.5244444444444445
+  },
+  "most_likely_outcome": {
+    "label": "Algeria胜",
+    "probability": 0.5244444444444445
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.1385185185185185
+    },
+    {
+      "score": "1-1",
+      "probability": 0.12185185185185185
+    },
+    {
+      "score": "0-2",
+      "probability": 0.09777777777777778
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "FIFA称Al Naimat未入名单，约旦前场预计更依赖Tamari、Olwan。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_9b03c397117d",
+        "E_9f131c487178",
+        "E_02150c8d1a3d"
+      ],
+      "source_names": [
+        "FIFA",
+        "Sports Mole",
+        "Racing Post"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "多源预计约旦打3-4-2-1，赛前重点是低位防守和进攻三区精度。",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_02150c8d1a3d",
+        "E_3cb6d96dc118",
+        "E_83b5a592e872"
+      ],
+      "source_names": [
+        "Racing Post",
+        "RotoWire",
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "Goal.com称阿尔及利亚中场需提速，ESPN列Ait-Nouri任左后卫。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_c5ff5e8e6664",
+        "E_b5d7f47415af"
+      ],
+      "source_names": [
+        "Goal.com",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "Nasib对奥地利81分钟伤退，但赛前仍无确认重大伤停。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_97f1f065e05f",
+        "E_5ae5bc0c6bf9",
+        "E_c566d52182c4"
+      ],
+      "source_names": [
+        "Sports Illustrated",
+        "Yahoo Sports",
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "约旦近6场为0胜3平3负，xG 4.9、被xG 5.7。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_27f987af92de"
+      ],
+      "source_names": [
+        "Statz AI"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在旧金山湾区球场进行，Levi's草皮约95%为天然草。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_F_285eb3afb7f1",
+        "E_5563287dc0d0",
+        "E_b2538682aafc"
+      ],
+      "source_names": [
+        "FIFA",
+        "FIFA World Cup 26™ SF Bay Area - SF.gov",
+        "Knox News"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-22T05:22:33.214371Z",
+    "source_state_sha256": "46184514331f6e89a965c6ad10fe8e886e7320b60ebd6f392097dc614ff8ff4b",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案整体方向合理且偏保守，主线（阿尔及利亚受控胜出）与证据一致。三个高偏离情景的候选均取自各自候选池，未引入池外比分，未改动情景总概率。审计后：high_scoring与upset基本保留，仅做说明性确认；blowout删除过度极端、支撑过薄的1-5，并标注提案完全忽略了在rollout_9中实际出现的3-0（约旦方向崩盘）这一候选。多数support_grade与机制方向、矩阵条件概率匹配，未发现为追求激进而系统性抬高极端比分的问题。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.24518518518518517,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.5,
+        "summary_cn": "总进球走高有中等关注价值，主要由阿尔及利亚边路宽度与中场提速持续压迫约旦低位三中卫（H_ALG_WIDTH_TEMPO）驱动，叠加Nasib伤情可能放大失球风险。但约旦战术基调为低位防守、控节奏，且Al Naimat缺席削弱持续终结，开放大比分并非最自然主线，需比赛较早被打破或约旦追分阶段被拉开。所选四个候选均为池内高条件概率项，方向以阿尔及利亚占优为主…",
+        "caution_cn": "该情景与blowout存在比分重叠（1-4同时落入两池），不可将相关概率相加解释；若约旦低位结构保持紧凑且阿尔及利亚仅形成低质量传中，总进球上限会被压低。要求约旦在缺Al Naimat下仍完成两次有效终结的比分（2-2、2-3）支撑相对偏弱。",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.0437037037037037,
+            "tail_focus_conditional_probability": 0.20315638450502152,
+            "support_grade": 1,
+            "script_cn": "阿尔及利亚通过边路推进和中场提速取得阶段性优势，约旦依靠Tamari、Olwan或定位球追回一球，但后续压上后仍被阿尔及利亚再度打穿。"
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.043333333333333335,
+            "tail_focus_conditional_probability": 0.1678622668579627,
+            "support_grade": 0,
+            "script_cn": "阿尔及利亚控球和边路压迫制造进球，但约旦低位反击与二次进攻效率高于常态，双方在不同阶段互相追平。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.12407407407407407,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.58,
+        "summary_cn": "一边倒比纯开放对攻更值得关注，因为它与基础实力差、阿尔及利亚阵容完整度、约旦锋线缺Al Naimat、Nasib伤情风险等多条同向机制叠加。若阿尔及利亚早段进球，约旦低位结构被迫上提、反击支援不足，比分可能由小胜滑向净胜三球以上。审计删除了过度极端、终结要求远超xG基线的1-5。",
+        "caution_cn": "Nasib风险未经官方确认，约旦若维持五后卫紧凑可能把阿尔及利亚限制在小胜；崩盘候选不得与大比分候选（1-4）重复累计解释。另需注意：提案完全忽略了约旦方向的崩盘候选3-0，而rollout_9实际给出过3-0代表比分，其池内条件概率（0.069）高于被删除的1-5。审计因证据基（实力差、Al N…",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.04185185185185185,
+            "tail_focus_conditional_probability": 0.40253040167055637,
+            "support_grade": 2,
+            "script_cn": "阿尔及利亚早段或中段率先破门后继续控制节奏，约旦因缺少稳定中路支点难以形成持续反扑，后防在横移和二点球压力下再丢两球。"
+          },
+          {
+            "score": "1-4",
+            "base_probability": 0.021111111111111112,
+            "tail_focus_conditional_probability": 0.168038324530156,
+            "support_grade": 1,
+            "script_cn": "约旦在落后后通过转换或定位球追回一球，但阿尔及利亚利用其追分后的空间和边路优势连续制造高压，最终拉开到三球差。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.21296296296296297,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.43,
+        "summary_cn": "爆冷路径存在但支撑有限。约旦可行剧本是低位五后卫压缩空间、拖慢节奏，依靠Tamari、Olwan或边路单点在少数转换中取得领先；但Al Naimat缺席、近期进攻产出不强、阿尔及利亚阵容完整且实力更高，限制了约旦赢球比分上沿。所选候选以低比分、低节奏为核心，符合机制方向，未过度抬高高比分爆冷。",
+        "caution_cn": "爆冷不应理解为约旦全面压制；更合理的是低比分、低节奏、靠单次转换或定位球守住优势。若阿尔及利亚先入球，该情景明显削弱。需注意1-0主要依赖H_JOR_NO_AL_NAIMAT机制的‘少量反击/定位球’分支，而该机制净方向为约旦进攻偏弱，故evidence_strength保持低位。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.08148148148148149,
+            "tail_focus_conditional_probability": 0.4305634836500041,
+            "support_grade": 1,
+            "script_cn": "约旦长时间低位防守并把节奏压低，依靠Tamari带动的转换、Olwan插上或定位球取得唯一进球，随后以五后卫结构守住禁区。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.053703703703703705,
+            "tail_focus_conditional_probability": 0.23648373155019164,
+            "support_grade": 0,
+            "script_cn": "约旦在低位反击中先取得进球，阿尔及利亚通过边路压迫扳回或制造持续压力，但约旦再次利用身后空间完成关键一击。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

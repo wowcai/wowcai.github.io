@@ -1,0 +1,893 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-22T05:22:33.214371Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_Jordan_vs_Algeria_M44\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "46184514331f6e89a965c6ad10fe8e886e7320b60ebd6f392097dc614ff8ff4b",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-22T05:19:13.233295+00:00"
+  },
+  "match": {
+    "match_id": "M44",
+    "team_a": "Jordan",
+    "team_b": "Algeria",
+    "kickoff_utc": "2026-06-23T03:00:00Z",
+    "venue": "San Francisco Bay Area Stadium",
+    "stage": "group",
+    "group": "J",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.21296296296296297,
+    "draw": 0.2625925925925926,
+    "team_b_win": 0.5244444444444445,
+    "top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.1385185185185185
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12185185185185185
+      },
+      {
+        "score": "0-2",
+        "probability": 0.09777777777777778
+      },
+      {
+        "score": "1-2",
+        "probability": 0.09222222222222222
+      },
+      {
+        "score": "0-0",
+        "probability": 0.08888888888888889
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_b",
+    "favorite_team": "Algeria",
+    "underdog_side": "team_a",
+    "underdog_team": "Jordan",
+    "team_a_win": 0.21296296296296297,
+    "draw": 0.2625925925925926,
+    "team_b_win": 0.5244444444444445,
+    "win_probability_gap": 0.3114814814814815,
+    "underdog_win_probability": 0.21296296296296297,
+    "favorite_fail_to_win_probability": 0.47555555555555556,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "提案整体方向合理且偏保守，主线（阿尔及利亚受控胜出）与证据一致。三个高偏离情景的候选均取自各自候选池，未引入池外比分，未改动情景总概率。审计后：high_scoring与upset基本保留，仅做说明性确认；blowout删除过度极端、支撑过薄的1-5，并标注提案完全忽略了在rollout_9中实际出现的3-0（约旦方向崩盘）这一候选。多数support_grade与机制方向、矩阵条件概率匹配，未发现为追求激进而系统性抬高极端比分的问题。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.24518518518518517,
+      "attention_level": "medium",
+      "evidence_strength": 0.5,
+      "rationale_cn": "总进球走高有中等关注价值，主要由阿尔及利亚边路宽度与中场提速持续压迫约旦低位三中卫（H_ALG_WIDTH_TEMPO）驱动，叠加Nasib伤情可能放大失球风险。但约旦战术基调为低位防守、控节奏，且Al Naimat缺席削弱持续终结，开放大比分并非最自然主线，需比赛较早被打破或约旦追分阶段被拉开。所选四个候选均为池内高条件概率项，方向以阿尔及利亚占优为主，符合机制。",
+      "supporting_evidence_ids": [
+        "E_c5ff5e8e6664",
+        "E_b5d7f47415af",
+        "E_8c205fd9b5dc",
+        "E_97f1f065e05f",
+        "E_4c9009cd9e26"
+      ],
+      "counter_evidence_ids": [
+        "E_83b5a592e872",
+        "E_5503f9b7b87a",
+        "E_9b03c397117d",
+        "E_27f987af92de"
+      ],
+      "caution_cn": "该情景与blowout存在比分重叠（1-4同时落入两池），不可将相关概率相加解释；若约旦低位结构保持紧凑且阿尔及利亚仅形成低质量传中，总进球上限会被压低。要求约旦在缺Al Naimat下仍完成两次有效终结的比分（2-2、2-3）支撑相对偏弱。",
+      "audit_note_cn": "保留原四个候选与support_grade不变（1-3=1、2-2=0、2-3=0、1-4=1）。核对全部evidence_id与mechanism_id均存在于输入，比分均在high_scoring候选池内，未做修改。仅确认2-2、2-3因依赖约旦双进球而支撑有限，已由grade 0如实反映。",
+      "candidate_pool": [
+        {
+          "score": "1-3",
+          "base_probability": 0.0437037037037037,
+          "base_conditional_probability": 0.17824773413897282,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.043333333333333335,
+          "base_conditional_probability": 0.17673716012084595,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.027777777777777776,
+          "base_conditional_probability": 0.11329305135951662,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.08610271903323263,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.07401812688821753,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.05891238670694864,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.05287009063444109,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.011481481481481481,
+          "base_conditional_probability": 0.04682779456193353,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.0437037037037037,
+          "base_conditional_probability": 0.17824773413897282,
+          "tail_focus_conditional_probability": 0.20315638450502152,
+          "tail_focus_implied_overall_probability": 0.04981093575641638,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "阿尔及利亚通过边路推进和中场提速取得阶段性优势，约旦依靠Tamari、Olwan或定位球追回一球，但后续压上后仍被阿尔及利亚再度打穿。",
+          "rationale_cn": "池内最高条件概率项之一，同时符合阿尔及利亚基线占优、约旦保留少量转换进球能力，以及阿尔及利亚后段扩大优势的机制路径。",
+          "evidence_ids": [
+            "E_c5ff5e8e6664",
+            "E_b5d7f47415af",
+            "E_8c205fd9b5dc",
+            "E_3cb6d96dc118",
+            "E_ae94bff7a6df"
+          ],
+          "mechanism_ids": [
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK",
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING"
+          ]
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.043333333333333335,
+          "base_conditional_probability": 0.17673716012084595,
+          "tail_focus_conditional_probability": 0.1678622668579627,
+          "tail_focus_implied_overall_probability": 0.04115734098517456,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "阿尔及利亚控球和边路压迫制造进球，但约旦低位反击与二次进攻效率高于常态，双方在不同阶段互相追平。",
+          "rationale_cn": "池内次高概率项且有Rollout代表路径（rollout_4为2-2），但需要约旦在缺Al Naimat下完成两次有效终结，故支撑有限，grade 0如实反映。",
+          "evidence_ids": [
+            "E_02150c8d1a3d",
+            "E_3cb6d96dc118",
+            "E_ae94bff7a6df",
+            "E_c5ff5e8e6664"
+          ],
+          "mechanism_ids": [
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING",
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.027777777777777776,
+          "base_conditional_probability": 0.11329305135951662,
+          "tail_focus_conditional_probability": 0.10760401721664276,
+          "tail_focus_implied_overall_probability": 0.026382910887932407,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "比赛较早进入对攻或追分状态，约旦通过边路单点和转换打出两个进球，但阿尔及利亚凭更稳定的推进质量和阵容完整性多进一球。",
+          "rationale_cn": "保留阿尔及利亚胜出方向并承认约旦反击波动，但五球剧本对双方终结效率要求较高，不能抬高，grade 0偏低合理。",
+          "evidence_ids": [
+            "E_9f131c487178",
+            "E_3cb6d96dc118",
+            "E_c5ff5e8e6664",
+            "E_b5d7f47415af",
+            "E_db170efb09e9"
+          ],
+          "mechanism_ids": [
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK",
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.08610271903323263,
+          "tail_focus_conditional_probability": 0.0981348637015782,
+          "tail_focus_implied_overall_probability": 0.024061214729794358,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "约旦先守后追取得一球；但Nasib伤情或三中卫横移压力被放大，阿尔及利亚通过边路、后点和二点球连续扩大比分。",
+          "rationale_cn": "同时落入大比分与崩盘边界，方向与阿尔及利亚占优主线高度一致，机制支撑较2-3更直接，grade 1合理。",
+          "evidence_ids": [
+            "E_97f1f065e05f",
+            "E_4c9009cd9e26",
+            "E_c5ff5e8e6664",
+            "E_b5d7f47415af",
+            "E_8c205fd9b5dc"
+          ],
+          "mechanism_ids": [
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK",
+            "H_NASIB_FITNESS_BACK_THREE_RISK"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.0437037037037037,
+          "base_conditional_probability": 0.17824773413897282,
+          "tail_focus_conditional_probability": 0.20315638450502152,
+          "tail_focus_implied_overall_probability": 0.04981093575641638,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.043333333333333335,
+          "base_conditional_probability": 0.17673716012084595,
+          "tail_focus_conditional_probability": 0.1678622668579627,
+          "tail_focus_implied_overall_probability": 0.04115734098517456,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.027777777777777776,
+          "base_conditional_probability": 0.11329305135951662,
+          "tail_focus_conditional_probability": 0.10760401721664276,
+          "tail_focus_implied_overall_probability": 0.026382910887932407,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.08610271903323263,
+          "tail_focus_conditional_probability": 0.0981348637015782,
+          "tail_focus_implied_overall_probability": 0.024061214729794358,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.07401812688821753,
+          "tail_focus_conditional_probability": 0.07030129124820661,
+          "tail_focus_implied_overall_probability": 0.017236835113449176,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.05891238670694864,
+          "tail_focus_conditional_probability": 0.05595408895265423,
+          "tail_focus_implied_overall_probability": 0.013719113661724852,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.05287009063444109,
+          "tail_focus_conditional_probability": 0.05021520803443329,
+          "tail_focus_implied_overall_probability": 0.012312025081035124,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.011481481481481481,
+          "base_conditional_probability": 0.04682779456193353,
+          "tail_focus_conditional_probability": 0.04447632711621234,
+          "tail_focus_implied_overall_probability": 0.010904936500345396,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.03323262839879154,
+          "tail_focus_conditional_probability": 0.03156384505021521,
+          "tail_focus_implied_overall_probability": 0.007738987193793506,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.028700906344410877,
+          "tail_focus_conditional_probability": 0.0272596843615495,
+          "tail_focus_implied_overall_probability": 0.006683670758276211,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.12407407407407407,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.58,
+      "rationale_cn": "一边倒比纯开放对攻更值得关注，因为它与基础实力差、阿尔及利亚阵容完整度、约旦锋线缺Al Naimat、Nasib伤情风险等多条同向机制叠加。若阿尔及利亚早段进球，约旦低位结构被迫上提、反击支援不足，比分可能由小胜滑向净胜三球以上。审计删除了过度极端、终结要求远超xG基线的1-5。",
+      "supporting_evidence_ids": [
+        "E_9b03c397117d",
+        "E_c5ff5e8e6664",
+        "E_b5d7f47415af",
+        "E_8c205fd9b5dc",
+        "E_97f1f065e05f",
+        "E_db170efb09e9"
+      ],
+      "counter_evidence_ids": [
+        "E_83b5a592e872",
+        "E_5503f9b7b87a",
+        "E_5ae5bc0c6bf9",
+        "E_c566d52182c4"
+      ],
+      "caution_cn": "Nasib风险未经官方确认，约旦若维持五后卫紧凑可能把阿尔及利亚限制在小胜；崩盘候选不得与大比分候选（1-4）重复累计解释。另需注意：提案完全忽略了约旦方向的崩盘候选3-0，而rollout_9实际给出过3-0代表比分，其池内条件概率（0.069）高于被删除的1-5。审计因证据基（实力差、Al Naimat缺席、Nasib风险）强烈指向阿尔及利亚方向而未纳入3-0，但保留此不确定性提示。",
+      "audit_note_cn": "删除1-5（support_grade 0）：六球、阿尔及利亚进5球远超其xG约1.58的基线，仅有方向性支撑，属于过度极端项。保留0-3（2）、1-4（1）、0-4（1）三项，support_grade不变，全部位于blowout候选池内且evidence/mechanism_id均有效。",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.3373134328358209,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.1701492537313433,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.14626865671641792,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.06865671641791045,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.056716417910447764,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.05074626865671642,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "2-5",
+          "base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.04477611940298508,
+          "total_goals": 7,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.03283582089552239,
+          "total_goals": 5,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.3373134328358209,
+          "tail_focus_conditional_probability": 0.40253040167055637,
+          "tail_focus_implied_overall_probability": 0.0499435868739394,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "阿尔及利亚早段或中段率先破门后继续控制节奏，约旦因缺少稳定中路支点难以形成持续反扑，后防在横移和二点球压力下再丢两球。",
+          "rationale_cn": "池内最高条件概率（0.337）且最贴合主方向，Rollout中亦出现0-3代表路径（rollout_6），三条机制同向支撑，grade 2成立。",
+          "evidence_ids": [
+            "E_9b03c397117d",
+            "E_c5ff5e8e6664",
+            "E_b5d7f47415af",
+            "E_8c205fd9b5dc",
+            "E_97f1f065e05f"
+          ],
+          "mechanism_ids": [
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING",
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK",
+            "H_NASIB_FITNESS_BACK_THREE_RISK"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.1701492537313433,
+          "tail_focus_conditional_probability": 0.168038324530156,
+          "tail_focus_implied_overall_probability": 0.020849199525037873,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "约旦在落后后通过转换或定位球追回一球，但阿尔及利亚利用其追分后的空间和边路优势连续制造高压，最终拉开到三球差。",
+          "rationale_cn": "较0-4更承认约旦Tamari、Olwan的单点反击可能；四个进球需后防风险被充分放大，grade 1适中。",
+          "evidence_ids": [
+            "E_3cb6d96dc118",
+            "E_ae94bff7a6df",
+            "E_c5ff5e8e6664",
+            "E_b5d7f47415af",
+            "E_97f1f065e05f"
+          ],
+          "mechanism_ids": [
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK",
+            "H_NASIB_FITNESS_BACK_THREE_RISK",
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.14626865671641792,
+          "tail_focus_conditional_probability": 0.14445399828030955,
+          "tail_focus_implied_overall_probability": 0.017922996082927297,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "约旦低位防线在持续边路压迫下失去出球和反击能力，阿尔及利亚进球后仍能回收二点球并反复再进攻，后段防线下滑。",
+          "rationale_cn": "最纯粹的阿尔及利亚压制剧本，但需要约旦完全无法把反击转化为进球，故支持力度低于0-3，grade 1合理。",
+          "evidence_ids": [
+            "E_9b03c397117d",
+            "E_83b5a592e872",
+            "E_c5ff5e8e6664",
+            "E_b5d7f47415af",
+            "E_8c205fd9b5dc"
+          ],
+          "mechanism_ids": [
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK",
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.3373134328358209,
+          "tail_focus_conditional_probability": 0.40253040167055637,
+          "tail_focus_implied_overall_probability": 0.0499435868739394,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.1701492537313433,
+          "tail_focus_conditional_probability": 0.168038324530156,
+          "tail_focus_implied_overall_probability": 0.020849199525037873,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.14626865671641792,
+          "tail_focus_conditional_probability": 0.14445399828030955,
+          "tail_focus_implied_overall_probability": 0.017922996082927297,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.06865671641791045,
+          "tail_focus_conditional_probability": 0.05650411497359047,
+          "tail_focus_implied_overall_probability": 0.007010695746723262,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.056716417910447764,
+          "tail_focus_conditional_probability": 0.04667731236948778,
+          "tail_focus_implied_overall_probability": 0.005791444312510521,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.05074626865671642,
+          "tail_focus_conditional_probability": 0.04176391106743643,
+          "tail_focus_implied_overall_probability": 0.00518181859540415,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.04477611940298508,
+          "tail_focus_conditional_probability": 0.03685050976538509,
+          "tail_focus_implied_overall_probability": 0.00457219287829778,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.03283582089552239,
+          "tail_focus_conditional_probability": 0.027023707161282395,
+          "tail_focus_implied_overall_probability": 0.0033529414440850377,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.026865671641791048,
+          "tail_focus_conditional_probability": 0.022110305859231055,
+          "tail_focus_implied_overall_probability": 0.002743315726978668,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-6",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.01791044776119403,
+          "tail_focus_conditional_probability": 0.014740203906154036,
+          "tail_focus_implied_overall_probability": 0.0018288771513191118,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Jordan 获胜。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.21296296296296297,
+      "attention_level": "medium",
+      "evidence_strength": 0.43,
+      "rationale_cn": "爆冷路径存在但支撑有限。约旦可行剧本是低位五后卫压缩空间、拖慢节奏，依靠Tamari、Olwan或边路单点在少数转换中取得领先；但Al Naimat缺席、近期进攻产出不强、阿尔及利亚阵容完整且实力更高，限制了约旦赢球比分上沿。所选候选以低比分、低节奏为核心，符合机制方向，未过度抬高高比分爆冷。",
+      "supporting_evidence_ids": [
+        "E_83b5a592e872",
+        "E_5503f9b7b87a",
+        "E_9f131c487178",
+        "E_02150c8d1a3d",
+        "E_ae94bff7a6df"
+      ],
+      "counter_evidence_ids": [
+        "E_9b03c397117d",
+        "E_c5ff5e8e6664",
+        "E_b5d7f47415af",
+        "E_8c205fd9b5dc",
+        "E_27f987af92de",
+        "E_db170efb09e9"
+      ],
+      "caution_cn": "爆冷不应理解为约旦全面压制；更合理的是低比分、低节奏、靠单次转换或定位球守住优势。若阿尔及利亚先入球，该情景明显削弱。需注意1-0主要依赖H_JOR_NO_AL_NAIMAT机制的‘少量反击/定位球’分支，而该机制净方向为约旦进攻偏弱，故evidence_strength保持低位。",
+      "audit_note_cn": "保留原四个候选与support_grade（1-0=1、2-1=0、2-0=0、3-2=-1）。全部位于upset候选池内，evidence/mechanism_id均有效。1-0与rollout_1代表比分一致，作为最贴合爆冷机制的低比分给予grade 1；3-2作为爆冷与开放大比分交叉极端路径，grade -1如实压低，未做修改。",
+      "candidate_pool": [
+        {
+          "score": "1-0",
+          "base_probability": 0.08148148148148149,
+          "base_conditional_probability": 0.3826086956521739,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-1",
+          "base_probability": 0.053703703703703705,
+          "base_conditional_probability": 0.25217391304347825,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-0",
+          "base_probability": 0.03,
+          "base_conditional_probability": 0.1408695652173913,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.06782608695652173,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.0608695652173913,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.04,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.019130434782608695,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.01565217391304348,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.08148148148148149,
+          "base_conditional_probability": 0.3826086956521739,
+          "tail_focus_conditional_probability": 0.4305634836500041,
+          "tail_focus_implied_overall_probability": 0.09169407522176012,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "约旦长时间低位防守并把节奏压低，依靠Tamari带动的转换、Olwan插上或定位球取得唯一进球，随后以五后卫结构守住禁区。",
+          "rationale_cn": "池内最高条件概率（0.383）且与rollout_1一致，不要求约旦持续进攻输出，只需防守纪律与一次机会兑现，最符合约旦爆冷机制，grade 1合理。",
+          "evidence_ids": [
+            "E_83b5a592e872",
+            "E_5503f9b7b87a",
+            "E_9f131c487178",
+            "E_02150c8d1a3d",
+            "E_ae94bff7a6df"
+          ],
+          "mechanism_ids": [
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING"
+          ]
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.053703703703703705,
+          "base_conditional_probability": 0.25217391304347825,
+          "tail_focus_conditional_probability": 0.23648373155019164,
+          "tail_focus_implied_overall_probability": 0.05036227616346674,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "约旦在低位反击中先取得进球，阿尔及利亚通过边路压迫扳回或制造持续压力，但约旦再次利用身后空间完成关键一击。",
+          "rationale_cn": "承认阿尔及利亚进攻质量，同时保留约旦两次转换成功的爆冷可能；对约旦终结效率要求高于1-0，grade 0适中。",
+          "evidence_ids": [
+            "E_3cb6d96dc118",
+            "E_ae94bff7a6df",
+            "E_83b5a592e872",
+            "E_c5ff5e8e6664",
+            "E_b5d7f47415af"
+          ],
+          "mechanism_ids": [
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING",
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK"
+          ]
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.03,
+          "base_conditional_probability": 0.1408695652173913,
+          "tail_focus_conditional_probability": 0.1321047052107967,
+          "tail_focus_implied_overall_probability": 0.02813340944304004,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "约旦先通过反击或定位球领先，随后阿尔及利亚压上未能打穿低位防线，约旦在后段利用开放空间再进一球。",
+          "rationale_cn": "零封阿尔及利亚与其边路和中场提速证据相冲突，故作为低频但结构清晰的爆冷剧本，grade 0偏低合理。",
+          "evidence_ids": [
+            "E_83b5a592e872",
+            "E_5503f9b7b87a",
+            "E_9f131c487178",
+            "E_02150c8d1a3d"
+          ],
+          "mechanism_ids": [
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.06782608695652173,
+          "tail_focus_conditional_probability": 0.05406507379923346,
+          "tail_focus_implied_overall_probability": 0.011513858309096014,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "比赛被早球打乱后进入高波动对攻，约旦多次利用阿尔及利亚压上后的身后空间得分，最终在开放局面中险胜。",
+          "rationale_cn": "爆冷与开放大比分的交叉极端路径，要求约旦在缺Al Naimat时连续完成高效率终结，与现有证据匹配度低，grade -1如实压低。",
+          "evidence_ids": [
+            "E_3cb6d96dc118",
+            "E_ae94bff7a6df",
+            "E_9b03c397117d",
+            "E_27f987af92de"
+          ],
+          "mechanism_ids": [
+            "H_JOR_NO_AL_NAIMAT_COUNTER_FINISHING",
+            "H_ALG_WIDTH_TEMPO_VS_JOR_LOW_BLOCK"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.08148148148148149,
+          "base_conditional_probability": 0.3826086956521739,
+          "tail_focus_conditional_probability": 0.4305634836500041,
+          "tail_focus_implied_overall_probability": 0.09169407522176012,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.053703703703703705,
+          "base_conditional_probability": 0.25217391304347825,
+          "tail_focus_conditional_probability": 0.23648373155019164,
+          "tail_focus_implied_overall_probability": 0.05036227616346674,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.03,
+          "base_conditional_probability": 0.1408695652173913,
+          "tail_focus_conditional_probability": 0.1321047052107967,
+          "tail_focus_implied_overall_probability": 0.02813340944304004,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.0608695652173913,
+          "tail_focus_conditional_probability": 0.0570822800293566,
+          "tail_focus_implied_overall_probability": 0.012156411487733351,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.06782608695652173,
+          "tail_focus_conditional_probability": 0.05406507379923346,
+          "tail_focus_implied_overall_probability": 0.011513858309096014,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.04,
+          "tail_focus_conditional_probability": 0.03751121259072005,
+          "tail_focus_implied_overall_probability": 0.007988498977653344,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.019130434782608695,
+          "tail_focus_conditional_probability": 0.0179401451520835,
+          "tail_focus_implied_overall_probability": 0.003820586467573338,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.01565217391304348,
+          "tail_focus_conditional_probability": 0.014678300578977413,
+          "tail_focus_implied_overall_probability": 0.0031259343825600044,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-3",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.008695652173913044,
+          "tail_focus_conditional_probability": 0.008154611432765229,
+          "tail_focus_implied_overall_probability": 0.0017366302125333358,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.003478260869565217,
+          "tail_focus_conditional_probability": 0.003261844573106091,
+          "tail_focus_implied_overall_probability": 0.0006946520850133342,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "46184514331f6e89a965c6ad10fe8e886e7320b60ebd6f392097dc614ff8ff4b"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_Jordan_vs_Algeria_M44\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\web_delivery\\Jordan_vs_Algeria_M44\\2026.6.23.11\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_Jordan_vs_Algeria_M44\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\web_delivery\\Jordan_vs_Algeria_M44\\2026.6.23.11\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

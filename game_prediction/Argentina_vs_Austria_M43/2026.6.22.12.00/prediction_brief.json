@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-22T04:03:58.593011Z",
+  "prediction_generated_at_local": "2026-06-22T12:03:58.593011+08:00",
+  "match": {
+    "match_id": "M43",
+    "team_a": "Argentina",
+    "team_b": "Austria",
+    "kickoff_utc": "2026-06-22T17:00:00Z",
+    "venue": "Dallas Stadium",
+    "stage": "group",
+    "group": "J",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 8,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.037037037037037035,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "Rollout有8/216个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5711111111111111,
+    "draw": 0.2388888888888889,
+    "team_b_win": 0.19
+  },
+  "most_likely_outcome": {
+    "label": "Argentina胜",
+    "probability": 0.5711111111111111
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.11296296296296296
+    },
+    {
+      "score": "1-1",
+      "probability": 0.10962962962962963
+    },
+    {
+      "score": "2-1",
+      "probability": 0.10666666666666667
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "阿根廷预计以流动4-3-3出战，梅西回撤线间参与组织。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_7b142de072b5",
+        "E_192a7d1dbf19"
+      ],
+      "source_names": [
+        "The Athletic",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "SI预计Mac Allister、Enzo Fernández居中场，Álvarez任中锋。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_36e4a17ae2c6"
+      ],
+      "source_names": [
+        "Sports Illustrated"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "奥地利被预览定位为高强度压迫队，Aimar也称其身体对抗强。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_845a9167c682",
+        "E_d614cf656260"
+      ],
+      "source_names": [
+        "Sports Illustrated",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "奥地利足协确认Baumgartner因严重伤病无缘本届赛事。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_2784f9c0ca4d"
+      ],
+      "source_names": [
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "奥地利首战3-1击败Jordan，Opta列xG为1.66比0.53。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_422ae0c22e76",
+        "E_521c48d8cd9f"
+      ],
+      "source_names": [
+        "UEFA.com",
+        "Opta Analyst"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "FIFA列本场6月22日17:00在Dallas Stadium开球，裁判为Omar。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_db3b7fc7d5f7"
+      ],
+      "source_names": [
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-22T04:07:34.625872Z",
+    "source_state_sha256": "79c4156c489e8879dba79eec0da0bf4aa67487ebb85dd7da7b84556ececfb3ad",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "三类高偏离情景的整体框架成立，主导逻辑（奥地利高压×阿根廷中路破压放大节奏，叠加Baumgartner缺阵削弱奥地利中路终端）与证据和机制基本对应。审计主要做了三处收紧：一是开放大比分中把3-1的机制引用从含‘总进球下降’倾向的H_DALLAS_HEAT_PRESS_003替换为更自洽的H_AUT_CREATION_ABSENCE_002（解释奥地利单球来自边路/定位球路径）；二是一边倒中删除5-1，因其属于4-1剧本的极端延伸、条件…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.3111111111111111,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.6,
+        "summary_cn": "总进球至少4球的开放情景值得跟踪。核心机制是奥地利维持高位压迫时，阿根廷可通过梅西回撤、三中场推进与前锋纵深跑动攻击身后空间(H_PRESS_BREAK_001)；同时奥地利首战3-1且xG占优，说明其并非只能被动防守。Rollout中出现3-1、2-2、3-2等开放代表比分，提示高压与破压互动下比赛可能被拉开。需注意奥地利打入两球与Baumgartner…",
+        "caution_cn": "开放大比分不等于双方同时失控。若奥地利改打中低位，或达拉斯环境与体能因素降低压迫强度，比赛可能回到阿根廷控节奏的低波动路径；Baumgartner缺阵也削弱奥地利持续回应进球的能力，因此凡需奥地利打入两球的比分都不应给到强正向。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.06111111111111111,
+            "tail_focus_conditional_probability": 0.2457248497920197,
+            "support_grade": 2,
+            "script_cn": "阿根廷较早通过中路破压或梅西线间接应取得领先，奥地利被迫继续前压并经反抢、边路或定位球追回一球，但下半场体能与防线身后空间暴露，阿根廷再进两球锁定。"
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.05333333333333334,
+            "tail_focus_conditional_probability": 0.1774765059312895,
+            "support_grade": 1,
+            "script_cn": "双方前半段互相试探后节奏升高，阿根廷通过中路推进制造连续机会，奥地利依靠高压转换、边路推进或二点球回应，比分多次被追平。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.15703703703703703,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.55,
+        "summary_cn": "一边倒崩盘集中在阿根廷方向。阿根廷整体强度、控球组织、梅西回撤与中场推进对奥地利高压存在明确破局路径，Baumgartner缺阵又削弱奥地利落后时的中路回应能力。但奥地利近期状态与压迫体系仍有质量，崩盘不是基础剧本，仅为高偏离备选。",
+        "caution_cn": "崩盘需要连续条件叠加：奥地利高压被频繁打穿、后场疑问转化为实际漏洞、且阿根廷终结效率在线。若奥地利压迫迫使阿根廷出球不稳，或早段维持0-0，崩盘概率明显受限。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.05851851851851852,
+            "tail_focus_conditional_probability": 0.4403228906400154,
+            "support_grade": 2,
+            "script_cn": "阿根廷控球压制并逐渐把奥地利压迫引出空当，上半场或下半场初段取得领先；奥地利缺少稳定中路终端，追分质量有限，阿根廷经反击或阵地二次进攻再进两球。"
+          },
+          {
+            "score": "4-1",
+            "base_probability": 0.025185185185185185,
+            "tail_focus_conditional_probability": 0.15683259657889678,
+            "support_grade": 1,
+            "script_cn": "早段较开放，奥地利借压迫或定位球获得一个进球，但阿根廷持续打穿高位防线，奥地利落后后继续前压导致身后空间被反复利用。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.19,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.36,
+        "summary_cn": "爆冷情景适用但证据与机制支持最弱。奥地利具备高压、身体对抗、首战3-1及xG占优等支撑，若其压迫迫使阿根廷出球失误并经转换或定位球先手得分，存在低比分小胜路径。但关键是：本输入三条机制(H_PRESS_BREAK_001、H_AUT_CREATION_ABSENCE_002、H_DALLAS_HEAT_PRESS_003)的team_b方向均为‘down’…",
+        "caution_cn": "爆冷不应与开放大比分或崩盘叠加理解。奥地利获胜更依赖一次先手与防线抗压，而非长期对攻中的稳定优势；若阿根廷顺利通过第一道压迫，爆冷路径快速收窄。任何要求奥地利打入两球及以上的比分都缺乏机制与终端证据。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.0637037037037037,
+            "tail_focus_conditional_probability": 0.37705516989404453,
+            "support_grade": 1,
+            "script_cn": "奥地利前场压迫在某阶段制造关键转换或定位球机会率先得分，随后降低风险、保持紧凑阵型，阿根廷虽控球占优但未能把线间优势转化为进球。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.051111111111111114,
+            "tail_focus_conditional_probability": 0.25210084033613445,
+            "support_grade": 0,
+            "script_cn": "阿根廷通过控球与梅西回撤制造进球，但奥地利压迫强度带来足够多转换回合，并依靠Sabitzer等中轴与边路推进完成两次关键打击。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

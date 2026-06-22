@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-22T04:50:04.132252Z",
+  "prediction_generated_at_local": "2026-06-22T12:50:04.132252+08:00",
+  "match": {
+    "match_id": "M42",
+    "team_a": "Norway",
+    "team_b": "Senegal",
+    "kickoff_utc": "2026-06-23T00:00:00Z",
+    "venue": "New York New Jersey Stadium",
+    "stage": "group",
+    "group": "I",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.4011111111111111,
+    "draw": 0.2733333333333333,
+    "team_b_win": 0.32555555555555554
+  },
+  "most_likely_outcome": {
+    "label": "Norway胜",
+    "probability": 0.4011111111111111
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.11333333333333333
+    },
+    {
+      "score": "2-1",
+      "probability": 0.0962962962962963
+    },
+    {
+      "score": "2-2",
+      "probability": 0.07666666666666666
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "哈兰德被列为挪威关键点，且对摩尔多瓦11-1一战打进5球。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_1ce93f9cf1d0",
+        "E_74233420c2da"
+      ],
+      "source_names": [
+        "ESPN",
+        "Flashscore"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "挪威世预赛8战全胜晋级，并以8场37球显示强进攻产量。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_fe9a4f881e1a",
+        "E_0125de31397d"
+      ],
+      "source_names": [
+        "FIFA",
+        "Olympics.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "Goal与The Athletic均描述挪威采用高压4-3-3，主动干扰对手出球。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_cf2bc9384565",
+        "E_b44785a030ec"
+      ],
+      "source_names": [
+        "Goal.com",
+        "The Athletic / New York Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "塞内加尔FIFA排名第12，队长库利巴利已从伤病中复出。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_b5bd51b0e10c",
+        "E_36253718b542"
+      ],
+      "source_names": [
+        "Inside FIFA",
+        "The Straits Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "FIFA赛前页面未列官方首发，媒体对挪威4-4-2或4-3-3预测不一。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_32349c0173cc",
+        "E_298da5387d57",
+        "E_1327ed5a9eaf"
+      ],
+      "source_names": [
+        "FIFA",
+        "Evening Standard",
+        "Squawka"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在纽约/新泽西体育场晚间进行，世界杯场地要求使用天然草。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_a6e75ce95fd4",
+        "E_73b567dc0c79",
+        "E_6c2a07857b6f"
+      ],
+      "source_names": [
+        "MetLife Stadium",
+        "FIFA",
+        "FIFA on Instagram"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-22T04:52:56.996080Z",
+    "source_state_sha256": "595713447394ac43b5d7e4272dff38d97e474974a57b20ba38b87f44c7971522",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案整体引用的证据与机制均真实存在于输入，未引入新事实，且正确识别了4-1在大比分与崩盘两池的重叠并提示不可叠加，爆冷情景按冻结定义判为不适用也正确。主要问题集中在high_scoring：候选选择存在明显的挪威方向偏置——同时纳入了概率更低的3-3（条件概率0.056），却忽略了概率更高、且更贴合塞内加尔实力（strength 0.76、FIFA第12、可借挪威高压身后空间反打）的Senegal方向开放比分2-3（0.082）与1-…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.36444444444444446,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.62,
+        "summary_cn": "该情景值得关注：挪威高压4-3-3与强进攻产量证据明确，哈兰德/索尔洛特禁区占位与高位夺回机制均指向总进球上行；但塞内加尔并非弱队，其转换与中场质量使比赛可能从单边压制转为互有机会。需要强调的是，开放大比分并非只朝挪威方向展开——塞内加尔越过第一压迫线后可利用挪威前压身后空间反打，因此Senegal方向的2-3、1-3在候选池中概率高于原提案保留的3-3…",
+        "caution_cn": "4-1同属大比分与崩盘候选，两类关注度或概率不可相加；官方首发未确认，天气仅为不确定扰动，不能单独推出大比分；高比分既可由挪威压制达成，也可由塞内加尔反打达成，方向不应单边化。",
+        "top_scores": [
+          {
+            "score": "2-2",
+            "base_probability": 0.07666666666666666,
+            "tail_focus_conditional_probability": 0.2320194283579301,
+            "support_grade": 1,
+            "script_cn": "挪威高位压迫制造前场夺回与禁区冲击，塞内加尔依靠中场抗压后的转移与转换回应；双方阶段性压制对方但都难以完全控制对手核心，互有进球收场。"
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.04518518518518518,
+            "tail_focus_conditional_probability": 0.13674575004670278,
+            "support_grade": 1,
+            "script_cn": "挪威通过压迫与前场强点先取得领先，塞内加尔被迫提高推进风险，挪威继续借哈兰德、索尔洛特的禁区占位与反击空间扩大优势，塞内加尔追回一球但未能拉回均势。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.11111111111111112,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.45,
+        "summary_cn": "崩盘有条件触发型关注价值但不应放大：支持侧来自挪威高压体系、近期进攻爆发及哈兰德/索尔洛特禁区威胁；反向因素同样明确，塞内加尔FIFA第12、库利巴利回归领衔、门迪预计首发，整体并非易崩弱队。base_event_probability仅0.111，且Rollout中最常见为0-1、0-0等低/接近比分，故崩盘是尾部而非主线。提案已自我设限并兼顾Norwa…",
+        "caution_cn": "崩盘需比赛明显偏离均势（如早段丢球后出球持续受压或追分暴露空间）；现有证据不能推断塞内加尔防线必然失控，天气与伤后回归不能解释为确定性弱点；4-1与大比分池重叠，概率不可叠加。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.024074074074074074,
+            "tail_focus_conditional_probability": 0.24314214463840397,
+            "support_grade": 1,
+            "script_cn": "挪威高位压迫限制塞内加尔后场出球，中段连续制造高质量机会；领先后继续以哈兰德为终结点、索尔洛特做身体牵制，塞内加尔追分未果被零封。"
+          },
+          {
+            "score": "0-3",
+            "base_probability": 0.01925925925925926,
+            "tail_focus_conditional_probability": 0.16209476309226933,
+            "support_grade": 0,
+            "script_cn": "塞内加尔绕过挪威第一压迫线，利用前压身后空间与中场推进形成连续转换；挪威久攻不下后阵型更冒险，反被塞内加尔扩大优势。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": false,
+        "status": "not_applicable",
+        "base_event_probability": 0.0,
+        "attention_level": "not_applicable",
+        "attention_label_cn": "不适用",
+        "evidence_strength": 0.0,
+        "summary_cn": "按冻结定义不适用：输入已明确两队胜率差小于8%（0.401 vs 0.326），不强行定义爆冷方，候选池为空，事件概率为0，无可审计的比分。",
+        "caution_cn": "不要把塞内加尔取胜或挪威取胜直接标记为爆冷；两队主客胜结构接近，胜负方向应回到主预测与具体比分池分析。",
+        "top_scores": [],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

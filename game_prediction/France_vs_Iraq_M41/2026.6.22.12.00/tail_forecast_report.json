@@ -1,0 +1,891 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-22T04:30:09.514756Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_France_vs_Iraq_M41\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "f51a6db6cb3dab881d63fb1e9fae976fd15b4126bcbc4d089717cfaf6aa81e2c",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-22T04:26:56.988186+00:00"
+  },
+  "match": {
+    "match_id": "M41",
+    "team_a": "France",
+    "team_b": "Iraq",
+    "kickoff_utc": "2026-06-22T21:00:00Z",
+    "venue": "Philadelphia Stadium",
+    "stage": "group",
+    "group": "I",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.7507407407407407,
+    "draw": 0.17703703703703705,
+    "team_b_win": 0.07222222222222222,
+    "top_scores": [
+      {
+        "score": "2-0",
+        "probability": 0.15888888888888889
+      },
+      {
+        "score": "1-0",
+        "probability": 0.15074074074074073
+      },
+      {
+        "score": "3-0",
+        "probability": 0.09518518518518519
+      },
+      {
+        "score": "2-1",
+        "probability": 0.08814814814814814
+      },
+      {
+        "score": "1-1",
+        "probability": 0.07888888888888888
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "France",
+    "underdog_side": "team_b",
+    "underdog_team": "Iraq",
+    "team_a_win": 0.7507407407407407,
+    "draw": 0.17703703703703705,
+    "team_b_win": 0.07222222222222222,
+    "win_probability_gap": 0.6785185185185185,
+    "underdog_win_probability": 0.07222222222222222,
+    "favorite_fail_to_win_probability": 0.24925925925925926,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "三类高偏离情景总体成立且方向判断合理：开放大比分与法国方向的一边倒证据较实，爆冷被恰当压低为低关注尾部。审计保留全部三情景，主要修正两点：一是把blowout中的4-0从support_grade 2降为1，因为4个法国进球已高于法国预期进球(约2.18)，给予最高档支持略显激进，3-0才是该池最稳健的核心；二是从upset的1-2与0-2候选中移除机制H_iraq_not_conservative_transition_space，该机制的outcome_direction明确指向team_a(法国利用身后转换空间)，不能用来支撑伊拉克取胜得分，属于机制方向误用。其余引用的证据ID与机制ID均在输入中存在，候选比分均取自对应候选池，未引入新事实，未改动任何情景总概率。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.3,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.62,
+      "rationale_cn": "总进球≥4的开放剧本有合理机制基础：法国预计保留核心框架，姆巴佩与左路巴尔科拉、迪涅持续制造禁区压力；伊拉克主帅表态不会更保守，若防线不够深会让出转换与身后空间，同时伊拉克自身保留直接进攻与定位球通道，可能把法国优势局面推向双方都进球的高比分。所选4个候选均偏向法国主导且贴近现有机制，未过度堆叠5球、6球极端剧本。",
+      "supporting_evidence_ids": [
+        "E_4d0f80456310",
+        "E_6a2f70944309",
+        "E_9e94e571fcc3",
+        "E_0b7c63822eca",
+        "E_fe8abe24b84f",
+        "E_614db56e6508",
+        "E_393fcf5d71a2"
+      ],
+      "counter_evidence_ids": [
+        "E_614db56e6508",
+        "E_f81e6ef3b03e",
+        "E_1c15f15b7461",
+        "E_f77f09ecc609"
+      ],
+      "caution_cn": "高比分不等于必然对攻。伊拉克被描述为防守顽强且赛前重点纠错，法国若早早领先后控节奏或天气中断削弱连续压制，都会压低总进球。该情景概率不得与一边倒情景重复相加。",
+      "audit_note_cn": "保留原提案全部四个候选与support_grade不变。3-1为该≥4球池条件概率最高(约0.204)的候选且兼容双方进球，grade 2成立;3-2维持grade 0仅作高波动尾部观察,因其需伊拉克对健康法国防线打进两球,与无新增伤情信息冲突。",
+      "candidate_pool": [
+        {
+          "score": "3-1",
+          "base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.2037037037037037,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.05814814814814815,
+          "base_conditional_probability": 0.19382716049382717,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.11234567901234567,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.028148148148148148,
+          "base_conditional_probability": 0.09382716049382717,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.07901234567901234,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.05555555555555556,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.015925925925925927,
+          "base_conditional_probability": 0.05308641975308642,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.012222222222222223,
+          "base_conditional_probability": 0.040740740740740744,
+          "total_goals": 6,
+          "winning_margin": 6
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.2037037037037037,
+          "tail_focus_conditional_probability": 0.25619746211918404,
+          "tail_focus_implied_overall_probability": 0.07685923863575521,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "法国通过左路牵扯和姆巴佩接应先建立优势，伊拉克落后后利用直接球或定位球追回一球，但法国凭更高质量的禁区进入和转换机会锁定3-1。",
+          "rationale_cn": "3-1在开放大比分池中条件概率最高，兼容法国优势、伊拉克单次高杠杆进球以及比赛不必完全崩盘的中度开放形态，比5球、6球剧本更贴近现有机制证据。",
+          "evidence_ids": [
+            "E_4d0f80456310",
+            "E_9e94e571fcc3",
+            "E_0b7c63822eca",
+            "E_614db56e6508",
+            "E_454ccfb577fd",
+            "E_fe8abe24b84f"
+          ],
+          "mechanism_ids": [
+            "H_left_width_mbappe_iraq_compact",
+            "H_iraq_direct_set_piece_vs_france_aerial",
+            "H_iraq_not_conservative_transition_space"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.05814814814814815,
+          "base_conditional_probability": 0.19382716049382717,
+          "tail_focus_conditional_probability": 0.2017454623333512,
+          "tail_focus_implied_overall_probability": 0.06052363870000536,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "伊拉克前段保持紧凑但出球持续受限，法国在中段通过边路和二次进攻连续转化机会，伊拉克直接球被法国中卫控制，最终形成单边4-0。",
+          "rationale_cn": "4-0同属开放大比分与一边倒，本情景关注法国进球数打开，受法国左路宽度、姆巴佩终结点与伊拉克首战大败背景支持，但需要较高转化率，grade 1合适。",
+          "evidence_ids": [
+            "E_4d0f80456310",
+            "E_6a2f70944309",
+            "E_9e94e571fcc3",
+            "E_393fcf5d71a2",
+            "E_1c15f15b7461"
+          ],
+          "mechanism_ids": [
+            "H_left_width_mbappe_iraq_compact",
+            "H_france_core_press_cuts_iraq_release"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.11234567901234567,
+          "tail_focus_conditional_probability": 0.1169352679766558,
+          "tail_focus_implied_overall_probability": 0.03508058039299674,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "法国持续压制并多点开花，伊拉克落后后仍坚持直接进攻，通过侯赛因高点、二点球或定位球拿到一球，但防线在回追和横移中继续被打穿。",
+          "rationale_cn": "4-1结合法国强势与伊拉克定位球威胁，与伊拉克首战1-4失利的脆弱性呼应，但要求法国高效率与伊拉克单次破门同时发生，证据中等偏有限。",
+          "evidence_ids": [
+            "E_393fcf5d71a2",
+            "E_4d0f80456310",
+            "E_0b7c63822eca",
+            "E_454ccfb577fd",
+            "E_614db56e6508",
+            "E_fe8abe24b84f"
+          ],
+          "mechanism_ids": [
+            "H_left_width_mbappe_iraq_compact",
+            "H_iraq_direct_set_piece_vs_france_aerial",
+            "H_iraq_not_conservative_transition_space"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.05555555555555556,
+          "tail_focus_conditional_probability": 0.048187610429940575,
+          "tail_focus_implied_overall_probability": 0.014456283128982172,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "比赛被进球打开，法国依靠个人能力和边路优势多次领先，伊拉克通过不保守站位、长传冲击和定位球持续回应，最终法国险胜。",
+          "rationale_cn": "3-2可解释为高波动开放比赛，但要求伊拉克对健康法国防线打进两球，与法国整体防守质量、无新增伤情信息存在冲突，仅作尾部开放剧本观察。",
+          "evidence_ids": [
+            "E_fe8abe24b84f",
+            "E_614db56e6508",
+            "E_454ccfb577fd",
+            "E_a2c04ee0978b",
+            "E_f77f09ecc609"
+          ],
+          "mechanism_ids": [
+            "H_iraq_direct_set_piece_vs_france_aerial",
+            "H_iraq_not_conservative_transition_space"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.2037037037037037,
+          "tail_focus_conditional_probability": 0.25619746211918404,
+          "tail_focus_implied_overall_probability": 0.07685923863575521,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.05814814814814815,
+          "base_conditional_probability": 0.19382716049382717,
+          "tail_focus_conditional_probability": 0.2017454623333512,
+          "tail_focus_implied_overall_probability": 0.06052363870000536,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.11234567901234567,
+          "tail_focus_conditional_probability": 0.1169352679766558,
+          "tail_focus_implied_overall_probability": 0.03508058039299674,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.028148148148148148,
+          "base_conditional_probability": 0.09382716049382717,
+          "tail_focus_conditional_probability": 0.08138351983723296,
+          "tail_focus_implied_overall_probability": 0.024415055951169887,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.07901234567901234,
+          "tail_focus_conditional_probability": 0.06853349038924882,
+          "tail_focus_implied_overall_probability": 0.020560047116774643,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.05555555555555556,
+          "tail_focus_conditional_probability": 0.048187610429940575,
+          "tail_focus_implied_overall_probability": 0.014456283128982172,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.015925925925925927,
+          "base_conditional_probability": 0.05308641975308642,
+          "tail_focus_conditional_probability": 0.04604593885527655,
+          "tail_focus_implied_overall_probability": 0.013813781656582966,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.012222222222222223,
+          "base_conditional_probability": 0.040740740740740744,
+          "tail_focus_conditional_probability": 0.035337580981956426,
+          "tail_focus_implied_overall_probability": 0.010601274294586927,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.03703703703703704,
+          "tail_focus_conditional_probability": 0.032125073619960386,
+          "tail_focus_implied_overall_probability": 0.009637522085988115,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.022222222222222223,
+          "tail_focus_conditional_probability": 0.01927504417197623,
+          "tail_focus_implied_overall_probability": 0.0057825132515928685,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.2625925925925926,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.66,
+      "rationale_cn": "一边倒崩盘主要指向法国方向：胜面大、预期进球优势明显、预计非大轮换，姆巴佩配合左路宽度与高压反抢可把伊拉克出球困难转化为连续射门，伊拉克首战1-4失利也使防线承压崩盘路径值得关注。但极端净胜需要法国早领先且持续进攻而非降速，故对档位做了再校准。",
+      "supporting_evidence_ids": [
+        "E_1c15f15b7461",
+        "E_589a566fcec1",
+        "E_c5ded785c0cd",
+        "E_4d0f80456310",
+        "E_9e94e571fcc3",
+        "E_0b7c63822eca",
+        "E_393fcf5d71a2",
+        "E_e2f40cd1d5c2"
+      ],
+      "counter_evidence_ids": [
+        "E_614db56e6508",
+        "E_f81e6ef3b03e",
+        "E_454ccfb577fd",
+        "E_a2c04ee0978b"
+      ],
+      "caution_cn": "崩盘需要法国较早领先并持续进攻而非控节奏。伊拉克顽强防守、纠错训练、定位球威胁以及法国官方首发未确认，都是限制极端净胜的因素。",
+      "audit_note_cn": "将4-0的support_grade由2降为1。原因：4个法国进球已高于法国预期进球(约2.18)，与3-0并列给予最高档支持略显激进；3-0是该池条件概率最高(约0.362)且不依赖极端转化率的核心崩盘比分，应作为唯一grade 2。其余候选与机制保持不变，5-0维持grade 0作为更极端尾部。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.09518518518518519,
+          "base_conditional_probability": 0.3624823695345557,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.05814814814814815,
+          "base_conditional_probability": 0.22143864598025387,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.12834978843441466,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.09026798307475317,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.015925925925925927,
+          "base_conditional_probability": 0.06064880112834979,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.012222222222222223,
+          "base_conditional_probability": 0.04654442877291961,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "6-1",
+          "base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.025387870239774332,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "5-2",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.019746121297602257,
+          "total_goals": 7,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.09518518518518519,
+          "base_conditional_probability": 0.3624823695345557,
+          "tail_focus_conditional_probability": 0.4262510723477266,
+          "tail_focus_implied_overall_probability": 0.11193037418316228,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "法国通过压迫和边路推进逐步打开局面，先取得领先后继续控制前场二次进攻，伊拉克反击多被迫提前长传，未能形成稳定射门，法国以3-0完成较标准的优势兑现。",
+          "rationale_cn": "3-0是崩盘池中最稳健的法国方向比分，既满足净胜3球又不要求极端射门转化率，与法国核心框架延续、伊拉克首战失利和出球受压机制最吻合。",
+          "evidence_ids": [
+            "E_1c15f15b7461",
+            "E_c5ded785c0cd",
+            "E_6a2f70944309",
+            "E_9e94e571fcc3",
+            "E_393fcf5d71a2"
+          ],
+          "mechanism_ids": [
+            "H_france_core_press_cuts_iraq_release",
+            "H_left_width_mbappe_iraq_compact"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.05814814814814815,
+          "base_conditional_probability": 0.22143864598025387,
+          "tail_focus_conditional_probability": 0.21549899914212178,
+          "tail_focus_implied_overall_probability": 0.05658844088583865,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "伊拉克试图保持阵型和直接进攻，但一旦中场第一传被法国压迫切断，防线反复横移消耗，法国在中段连续进球后比赛变成单向半场攻防。",
+          "rationale_cn": "4-0受法国左路牵扯、姆巴佩终结、伊拉克不保守暴露身后空间等机制支持，但4个进球高于法国预期进球，给予grade 1而非最高档更稳健。",
+          "evidence_ids": [
+            "E_4d0f80456310",
+            "E_6a2f70944309",
+            "E_0b7c63822eca",
+            "E_fe8abe24b84f",
+            "E_393fcf5d71a2"
+          ],
+          "mechanism_ids": [
+            "H_left_width_mbappe_iraq_compact",
+            "H_france_core_press_cuts_iraq_release",
+            "H_iraq_not_conservative_transition_space"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.12834978843441466,
+          "tail_focus_conditional_probability": 0.12490706319702602,
+          "tail_focus_implied_overall_probability": 0.03279966955803387,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "法国整体压制并拉开到多球优势，伊拉克落后后通过侯赛因高点或定位球混战取得安慰球，但开放后的回防距离让法国继续获得转换机会。",
+          "rationale_cn": "4-1是崩盘与伊拉克单点得分威胁的折中版本，得到定位球与侯赛因高点支持，但相较3-0、4-0对双方事件同时发生的要求更高。",
+          "evidence_ids": [
+            "E_454ccfb577fd",
+            "E_614db56e6508",
+            "E_fe8abe24b84f",
+            "E_4d0f80456310",
+            "E_9e94e571fcc3"
+          ],
+          "mechanism_ids": [
+            "H_iraq_direct_set_piece_vs_france_aerial",
+            "H_left_width_mbappe_iraq_compact",
+            "H_iraq_not_conservative_transition_space"
+          ]
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.09026798307475317,
+          "tail_focus_conditional_probability": 0.07320560480411781,
+          "tail_focus_implied_overall_probability": 0.019223249557822047,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "法国早早取得领先，伊拉克在追分或不够保守的站位下暴露大量身后空间，法国持续冲击最终形成5球大胜。",
+          "rationale_cn": "5-0属更极端尾部崩盘，法国优势与伊拉克首战失利给出背景，但需早球、持续高效率与伊拉克防线同步失控，现有证据只能有限支撑，维持grade 0。",
+          "evidence_ids": [
+            "E_393fcf5d71a2",
+            "E_fe8abe24b84f",
+            "E_0b7c63822eca",
+            "E_4d0f80456310"
+          ],
+          "mechanism_ids": [
+            "H_iraq_not_conservative_transition_space",
+            "H_left_width_mbappe_iraq_compact"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.09518518518518519,
+          "base_conditional_probability": 0.3624823695345557,
+          "tail_focus_conditional_probability": 0.4262510723477266,
+          "tail_focus_implied_overall_probability": 0.11193037418316228,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.05814814814814815,
+          "base_conditional_probability": 0.22143864598025387,
+          "tail_focus_conditional_probability": 0.21549899914212178,
+          "tail_focus_implied_overall_probability": 0.05658844088583865,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.12834978843441466,
+          "tail_focus_conditional_probability": 0.12490706319702602,
+          "tail_focus_implied_overall_probability": 0.03279966955803387,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.09026798307475317,
+          "tail_focus_conditional_probability": 0.07320560480411781,
+          "tail_focus_implied_overall_probability": 0.019223249557822047,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.015925925925925927,
+          "base_conditional_probability": 0.06064880112834979,
+          "tail_focus_conditional_probability": 0.04918501572776666,
+          "tail_focus_implied_overall_probability": 0.012915620796661689,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.012222222222222223,
+          "base_conditional_probability": 0.04654442877291961,
+          "tail_focus_conditional_probability": 0.03774663997712325,
+          "tail_focus_implied_overall_probability": 0.009911988053251995,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.025387870239774332,
+          "tail_focus_conditional_probability": 0.020589076351158135,
+          "tail_focus_implied_overall_probability": 0.005406538938137451,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.019746121297602257,
+          "tail_focus_conditional_probability": 0.016013726050900772,
+          "tail_focus_implied_overall_probability": 0.004205085840773573,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "7-0",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.009873060648801129,
+          "tail_focus_conditional_probability": 0.008006863025450386,
+          "tail_focus_implied_overall_probability": 0.0021025429203867865,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-2",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.008462623413258109,
+          "tail_focus_conditional_probability": 0.006863025450386045,
+          "tail_focus_implied_overall_probability": 0.0018021796460458172,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Iraq 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.07222222222222223,
+      "attention_level": "low",
+      "evidence_strength": 0.31,
+      "rationale_cn": "爆冷适用但证据较弱。伊拉克取胜的可行通道主要是侯赛因高点、定位球与直接进攻，叠加法国久攻不下或节奏被打断的低比分偷袭。主预测明显偏向法国，法国阵容健康与攻击端确定性构成强反证，故维持低关注。",
+      "supporting_evidence_ids": [
+        "E_454ccfb577fd",
+        "E_614db56e6508",
+        "E_fe8abe24b84f",
+        "E_a2c04ee0978b",
+        "E_f77f09ecc609"
+      ],
+      "counter_evidence_ids": [
+        "E_1c15f15b7461",
+        "E_589a566fcec1",
+        "E_c5ded785c0cd",
+        "E_4d0f80456310",
+        "E_9e94e571fcc3",
+        "E_0b7c63822eca",
+        "E_393fcf5d71a2"
+      ],
+      "caution_cn": "爆冷不能被解读为主线判断。伊拉克需把低频定位球或直接球转化为进球，同时长期承受法国边路、压迫与姆巴佩终结威胁；若法国先入球，多数爆冷剧本会迅速失效。",
+      "audit_note_cn": "从1-2与0-2候选的mechanism_ids中移除H_iraq_not_conservative_transition_space。该机制outcome_direction为team_a:up、team_b:neutral，描述的是伊拉克不深守时法国利用身后转换空间，方向利于法国，不能用来支撑伊拉克取胜得分，属机制方向误用。两候选改为仅依赖H_iraq_direct_set_piece_vs_france_aerial。比分、support_grade与保留数量不变，0-2维持grade -1作为弱支撑尾部。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.034074074074074076,
+          "base_conditional_probability": 0.4717948717948718,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.29230769230769227,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.08717948717948718,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.07179487179487179,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.030769230769230767,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.02051282051282051,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.010256410256410255,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.010256410256410255,
+          "total_goals": 5,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.034074074074074076,
+          "base_conditional_probability": 0.4717948717948718,
+          "tail_focus_conditional_probability": 0.5235949727294286,
+          "tail_focus_implied_overall_probability": 0.03781519247490318,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "法国长时间围攻但效率不足，伊拉克保持紧凑防守，通过侯赛因争顶、定位球二点或少数直接进攻制造关键进球，随后深守保住0-1。",
+          "rationale_cn": "0-1是最符合爆冷机制的低比分版本，只要求伊拉克兑现一次高杠杆机会并要求法国被低位防守和节奏限制，对伊拉克持续进攻能力要求最低。",
+          "evidence_ids": [
+            "E_614db56e6508",
+            "E_454ccfb577fd",
+            "E_d12cb28b0c02",
+            "E_a2c04ee0978b",
+            "E_f77f09ecc609"
+          ],
+          "mechanism_ids": [
+            "H_iraq_direct_set_piece_vs_france_aerial"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.29230769230769227,
+          "tail_focus_conditional_probability": 0.2703343609200854,
+          "tail_focus_implied_overall_probability": 0.019524148288672837,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "伊拉克利用直接进攻先制造冲击，法国凭个人能力施压并扳平，但伊拉克再通过定位球或二点球打入第二球完成1-2。",
+          "rationale_cn": "1-2在推演中有波动性体现但证据不强：它要求伊拉克对法国防线打进两球，明显高于单次偷袭门槛，仅作高波动爆冷分支观察。已移除方向利于法国的转换机制，仅保留定位球/直接进攻机制。",
+          "evidence_ids": [
+            "E_fe8abe24b84f",
+            "E_614db56e6508",
+            "E_454ccfb577fd",
+            "E_a2c04ee0978b"
+          ],
+          "mechanism_ids": [
+            "H_iraq_direct_set_piece_vs_france_aerial"
+          ]
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.08717948717948718,
+          "tail_focus_conditional_probability": 0.0685321318472848,
+          "tail_focus_implied_overall_probability": 0.004949542855637236,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "伊拉克先凭定位球或直接球领先，法国压上后留下空间，伊拉克再通过长传第二点或角球扩大到0-2。",
+          "rationale_cn": "0-2需要伊拉克既守住法国又二次得分，和法国进攻质量、主力框架及整体实力差距冲突较大，证据偏弱，维持grade -1并仅以定位球机制支撑。",
+          "evidence_ids": [
+            "E_614db56e6508",
+            "E_454ccfb577fd",
+            "E_fe8abe24b84f"
+          ],
+          "mechanism_ids": [
+            "H_iraq_direct_set_piece_vs_france_aerial"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.034074074074074076,
+          "base_conditional_probability": 0.4717948717948718,
+          "tail_focus_conditional_probability": 0.5235949727294286,
+          "tail_focus_implied_overall_probability": 0.03781519247490318,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.29230769230769227,
+          "tail_focus_conditional_probability": 0.2703343609200854,
+          "tail_focus_implied_overall_probability": 0.019524148288672837,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.08717948717948718,
+          "tail_focus_conditional_probability": 0.0685321318472848,
+          "tail_focus_implied_overall_probability": 0.004949542855637236,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.07179487179487179,
+          "tail_focus_conditional_probability": 0.06639791320844202,
+          "tail_focus_implied_overall_probability": 0.004795404842831924,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.030769230769230767,
+          "tail_focus_conditional_probability": 0.028456248517903723,
+          "tail_focus_implied_overall_probability": 0.0020551735040708246,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.02051282051282051,
+          "tail_focus_conditional_probability": 0.01897083234526915,
+          "tail_focus_implied_overall_probability": 0.0013701156693805498,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.010256410256410255,
+          "tail_focus_conditional_probability": 0.009485416172634575,
+          "tail_focus_implied_overall_probability": 0.0006850578346902749,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.010256410256410255,
+          "tail_focus_conditional_probability": 0.009485416172634575,
+          "tail_focus_implied_overall_probability": 0.0006850578346902749,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.005128205128205127,
+          "tail_focus_conditional_probability": 0.0047427080863172875,
+          "tail_focus_implied_overall_probability": 0.00034252891734513744,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "f51a6db6cb3dab881d63fb1e9fae976fd15b4126bcbc4d089717cfaf6aa81e2c"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_France_vs_Iraq_M41\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\web_delivery\\France_vs_Iraq_M41\\2026.6.23.05\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_France_vs_Iraq_M41\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\web_delivery\\France_vs_Iraq_M41\\2026.6.23.05\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

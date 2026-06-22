@@ -1,0 +1,592 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-22T04:26:56.988186Z",
+  "prediction_generated_at_local": "2026-06-22T12:26:56.988186+08:00",
+  "quality_label": "ready",
+  "match_id": "M41",
+  "team_a": "France",
+  "team_b": "Iraq",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "2-0",
+      "deviation": 0.0,
+      "probability": 0.15888888888888889,
+      "probability_percent": 15.8889,
+      "outcome": "team_a",
+      "sample_count": 429,
+      "path_deviation": 0.7121832670029905,
+      "result_surprise": 0.0,
+      "reason_cn": "France打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.012554721786784085,
+      "probability": 0.15074074074074073,
+      "probability_percent": 15.0741,
+      "outcome": "team_a",
+      "sample_count": 407,
+      "path_deviation": 0.6930363658870385,
+      "result_surprise": 0.05128205128205132,
+      "reason_cn": "France在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.28460048000476734,
+      "probability": 0.09518518518518519,
+      "probability_percent": 9.5185,
+      "outcome": "team_a",
+      "sample_count": 257,
+      "path_deviation": 0.6882222385570117,
+      "result_surprise": 0.4009324009324009,
+      "reason_cn": "France打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.28689459425885,
+      "probability": 0.08814814814814814,
+      "probability_percent": 8.8148,
+      "outcome": "team_a",
+      "sample_count": 238,
+      "path_deviation": 0.6659213704249807,
+      "result_surprise": 0.44522144522144524,
+      "reason_cn": "France在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.37470034127742186,
+      "probability": 0.07888888888888888,
+      "probability_percent": 7.8889,
+      "outcome": "draw",
+      "sample_count": 213,
+      "path_deviation": 0.6937559382819383,
+      "result_surprise": 0.5034965034965035,
+      "reason_cn": "抢断后的快速转换；双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": [
+        "H_iraq_not_conservative_transition_space"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.4877155960900606,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5038770045957364,
+      "result_surprise": 0.9976689976689976,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；Iraq充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.5017313652591601,
+      "probability": 0.06592592592592593,
+      "probability_percent": 6.5926,
+      "outcome": "draw",
+      "sample_count": 178,
+      "path_deviation": 0.7354912532295091,
+      "result_surprise": 0.585081585081585,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.5030538562177296,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.51798611207892,
+      "result_surprise": 0.9906759906759907,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.5282566661479894,
+      "probability": 0.05814814814814815,
+      "probability_percent": 5.8148,
+      "outcome": "team_a",
+      "sample_count": 157,
+      "path_deviation": 0.7270208281512532,
+      "result_surprise": 0.634032634032634,
+      "reason_cn": "紧凑防守对进攻空间的压缩；France打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.5328391642878471,
+      "probability": 0.06111111111111111,
+      "probability_percent": 6.1111,
+      "outcome": "team_a",
+      "sample_count": 165,
+      "path_deviation": 0.740152362166512,
+      "result_surprise": 0.6153846153846154,
+      "reason_cn": "France打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-4",
+      "deviation": 0.5714033946414445,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5603134345284707,
+      "result_surprise": 0.9976689976689976,
+      "reason_cn": "抢断后的快速转换、法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "7-3",
+      "deviation": 0.5714033946414445,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5603134345284707,
+      "result_surprise": 0.9976689976689976,
+      "reason_cn": "抢断后的快速转换、法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "9-1",
+      "deviation": 0.5714033946414445,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5603134345284707,
+      "result_surprise": 0.9976689976689976,
+      "reason_cn": "抢断后的快速转换、法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.5814074334142898,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5670598449135089,
+      "result_surprise": 0.9976689976689976,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_iraq_not_conservative_transition_space"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.5861587850273698,
+      "probability": 0.016666666666666666,
+      "probability_percent": 1.6667,
+      "outcome": "team_a",
+      "sample_count": 45,
+      "path_deviation": 0.6254908320691179,
+      "result_surprise": 0.8951048951048951,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.5972065686726429,
+      "probability": 0.021111111111111112,
+      "probability_percent": 2.1111,
+      "outcome": "team_b",
+      "sample_count": 57,
+      "path_deviation": 0.6480029725178923,
+      "result_surprise": 0.8671328671328671,
+      "reason_cn": "抢断后的快速转换；Iraq通过压迫或转换取得一球优势。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6091917838071664,
+      "probability": 0.0337037037037037,
+      "probability_percent": 3.3704,
+      "outcome": "team_a",
+      "sample_count": 91,
+      "path_deviation": 0.6987606996280044,
+      "result_surprise": 0.7878787878787878,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.6163851071798974,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_a",
+      "sample_count": 14,
+      "path_deviation": 0.6069647087883828,
+      "result_surprise": 0.9673659673659674,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.6265285688426396,
+      "probability": 0.028148148148148148,
+      "probability_percent": 2.8148,
+      "outcome": "draw",
+      "sample_count": 76,
+      "path_deviation": 0.6916247578842833,
+      "result_surprise": 0.8228438228438228,
+      "reason_cn": "抢断后的快速转换；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial"
+      ]
+    },
+    {
+      "score": "8-1",
+      "deviation": 0.6273719001506826,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.6005671517066294,
+      "result_surprise": 0.993006993006993,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_iraq_not_conservative_transition_space"
+      ]
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.6356414450558598,
+      "probability": 0.034074074074074076,
+      "probability_percent": 3.4074,
+      "outcome": "team_b",
+      "sample_count": 92,
+      "path_deviation": 0.7178526777745498,
+      "result_surprise": 0.7855477855477855,
+      "reason_cn": "Iraq通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.6887594415116952,
+      "probability": 0.015925925925925927,
+      "probability_percent": 1.5926,
+      "outcome": "team_a",
+      "sample_count": 43,
+      "path_deviation": 0.6921711907687879,
+      "result_surprise": 0.8997668997668997,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.6977786016692654,
+      "probability": 0.023703703703703703,
+      "probability_percent": 2.3704,
+      "outcome": "team_a",
+      "sample_count": 64,
+      "path_deviation": 0.7246116869932008,
+      "result_surprise": 0.8508158508158508,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "7-0",
+      "deviation": 0.718140169714806,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.6667990499091406,
+      "result_surprise": 0.9836829836829837,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.7397190317034001,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.6800960034034436,
+      "result_surprise": 0.986013986013986,
+      "reason_cn": "抢断后的快速转换、法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_not_conservative_transition_space",
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7510335038822137,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "team_a",
+      "sample_count": 30,
+      "path_deviation": 0.717849851461277,
+      "result_surprise": 0.9300699300699301,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "9-0",
+      "deviation": 0.7883480524942038,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.7091244264806599,
+      "result_surprise": 0.993006993006993,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_iraq_not_conservative_transition_space"
+      ]
+    },
+    {
+      "score": "6-3",
+      "deviation": 0.8230226357106819,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.7312527241647887,
+      "result_surprise": 0.9953379953379954,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.8413679498383918,
+      "probability": 0.012222222222222223,
+      "probability_percent": 1.2222,
+      "outcome": "team_a",
+      "sample_count": 33,
+      "path_deviation": 0.7825340375102353,
+      "result_surprise": 0.9230769230769231,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.8434170569414193,
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296,
+      "outcome": "team_b",
+      "sample_count": 17,
+      "path_deviation": 0.7638334095339866,
+      "result_surprise": 0.9603729603729604,
+      "reason_cn": "抢断后的快速转换；Iraq充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_iraq_not_conservative_transition_space"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.8480685955203842,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.7544187104352175,
+      "result_surprise": 0.9836829836829837,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.8654129322779863,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.7648600327546778,
+      "result_surprise": 0.986013986013986,
+      "reason_cn": "Iraq充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.8786718053487973,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "draw",
+      "sample_count": 10,
+      "path_deviation": 0.7788220218420926,
+      "result_surprise": 0.9766899766899767,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_direct_set_piece_vs_france_aerial",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.9343440411668518,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "team_a",
+      "sample_count": 18,
+      "path_deviation": 0.8264068746286297,
+      "result_surprise": 0.958041958041958,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_iraq_not_conservative_transition_space"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.9865799374302834,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.841550645226935,
+      "result_surprise": 0.9953379953379954,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 1.0,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_b",
+      "sample_count": 14,
+      "path_deviation": 0.8656625762738341,
+      "result_surprise": 0.9673659673659674,
+      "reason_cn": "抢断后的快速转换、法国主力框架延续，高压反抢限制伊拉克中路出球；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_iraq_not_conservative_transition_space",
+        "H_france_core_press_cuts_iraq_release"
+      ]
+    },
+    {
+      "score": "7-1",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.8925696849194775,
+      "result_surprise": 0.993006993006993,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_left_width_mbappe_iraq_compact"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.9518485662890812,
+      "result_surprise": 0.9953379953379954,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、抢断后的快速转换；Iraq充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_iraq_not_conservative_transition_space"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 0.9518485662890812,
+      "result_surprise": 0.9976689976689976,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_iraq_not_conservative_transition_space"
+      ]
+    },
+    {
+      "score": "7-2",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9976689976689976,
+      "reason_cn": "法国主力框架延续，高压反抢限制伊拉克中路出球、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_france_core_press_cuts_iraq_release",
+        "H_iraq_not_conservative_transition_space"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

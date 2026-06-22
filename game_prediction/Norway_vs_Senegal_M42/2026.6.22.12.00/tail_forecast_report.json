@@ -1,0 +1,648 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-22T04:52:56.996080Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_Norway_vs_Senegal_M42\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "595713447394ac43b5d7e4272dff38d97e474974a57b20ba38b87f44c7971522",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-22T04:50:04.132252+00:00"
+  },
+  "match": {
+    "match_id": "M42",
+    "team_a": "Norway",
+    "team_b": "Senegal",
+    "kickoff_utc": "2026-06-23T00:00:00Z",
+    "venue": "New York New Jersey Stadium",
+    "stage": "group",
+    "group": "I",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.4011111111111111,
+    "draw": 0.2733333333333333,
+    "team_b_win": 0.32555555555555554,
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.11333333333333333
+      },
+      {
+        "score": "2-1",
+        "probability": 0.0962962962962963
+      },
+      {
+        "score": "2-2",
+        "probability": 0.07666666666666666
+      },
+      {
+        "score": "1-0",
+        "probability": 0.07444444444444444
+      },
+      {
+        "score": "1-2",
+        "probability": 0.07407407407407407
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "",
+    "favorite_team": "",
+    "underdog_side": "",
+    "underdog_team": "",
+    "team_a_win": 0.4011111111111111,
+    "draw": 0.2733333333333333,
+    "team_b_win": 0.32555555555555554,
+    "win_probability_gap": 0.07555555555555554,
+    "underdog_win_probability": 0.0,
+    "favorite_fail_to_win_probability": 0.0,
+    "is_balanced": true
+  },
+  "overall_summary_cn": "提案整体引用的证据与机制均真实存在于输入，未引入新事实，且正确识别了4-1在大比分与崩盘两池的重叠并提示不可叠加，爆冷情景按冻结定义判为不适用也正确。主要问题集中在high_scoring：候选选择存在明显的挪威方向偏置——同时纳入了概率更低的3-3（条件概率0.056），却忽略了概率更高、且更贴合塞内加尔实力（strength 0.76、FIFA第12、可借挪威高压身后空间反打）的Senegal方向开放比分2-3（0.082）与1-3（0.090）。鉴于主预测两队接近（0.401 vs 0.326）且塞内加尔为可信强队，将3-1给到上限support_grade 2在近均势对局中偏激进。据此对high_scoring做修订：下调3-1为1，以更平衡且概率更高的2-3替换3-3。blowout情景已自我设限、Norway/Senegal双向各有覆盖，予以保留。未改变任何情景总概率。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.36444444444444446,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.62,
+      "rationale_cn": "该情景值得关注：挪威高压4-3-3与强进攻产量证据明确，哈兰德/索尔洛特禁区占位与高位夺回机制均指向总进球上行；但塞内加尔并非弱队，其转换与中场质量使比赛可能从单边压制转为互有机会。需要强调的是，开放大比分并非只朝挪威方向展开——塞内加尔越过第一压迫线后可利用挪威前压身后空间反打，因此Senegal方向的2-3、1-3在候选池中概率高于原提案保留的3-3，覆盖时应予体现而非偏向单侧。库利巴利回归领衔、门迪在预测首发、整体紧凑防守仍是对大比分的实质约束。",
+      "supporting_evidence_ids": [
+        "E_1ce93f9cf1d0",
+        "E_74233420c2da",
+        "E_0125de31397d",
+        "E_cf2bc9384565",
+        "E_b44785a030ec",
+        "E_bd08451ffe57"
+      ],
+      "counter_evidence_ids": [
+        "E_b5bd51b0e10c",
+        "E_36253718b542",
+        "E_6a7ac62d958e",
+        "E_32349c0173cc",
+        "E_d3756c5cd688"
+      ],
+      "caution_cn": "4-1同属大比分与崩盘候选，两类关注度或概率不可相加；官方首发未确认，天气仅为不确定扰动，不能单独推出大比分；高比分既可由挪威压制达成，也可由塞内加尔反打达成，方向不应单边化。",
+      "audit_note_cn": "保留2-2、3-1、3-2；将3-1的support_grade由2下调为1，因主预测显示近均势且机制存在塞内加尔化解高压的反向证据，给上限grade偏激进；以概率更高且代表塞内加尔方向的2-3替换概率更低的3-3，纠正原提案对挪威方向的偏置（被忽略的2-3/1-3条件概率均高于3-3）。",
+      "candidate_pool": [
+        {
+          "score": "2-2",
+          "base_probability": 0.07666666666666666,
+          "base_conditional_probability": 0.21036585365853655,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.04518518518518518,
+          "base_conditional_probability": 0.12398373983739835,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.03851851851851852,
+          "base_conditional_probability": 0.10569105691056911,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.032962962962962965,
+          "base_conditional_probability": 0.09044715447154472,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.03,
+          "base_conditional_probability": 0.0823170731707317,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-3",
+          "base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.05589430894308943,
+          "total_goals": 6,
+          "winning_margin": 0
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.03963414634146341,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.03760162601626016,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.07666666666666666,
+          "base_conditional_probability": 0.21036585365853655,
+          "tail_focus_conditional_probability": 0.2320194283579301,
+          "tail_focus_implied_overall_probability": 0.08455819166822341,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "挪威高位压迫制造前场夺回与禁区冲击，塞内加尔依靠中场抗压后的转移与转换回应；双方阶段性压制对方但都难以完全控制对手核心，互有进球收场。",
+          "rationale_cn": "2-2是大比分池中条件概率最高的候选，兼容挪威进攻上行与塞内加尔实力接近、身体对抗强的特征，不要求任一方防线彻底失控，在高偏离但非崩盘剧本中最稳健。",
+          "evidence_ids": [
+            "E_cf2bc9384565",
+            "E_b44785a030ec",
+            "E_1ce93f9cf1d0",
+            "E_b5bd51b0e10c",
+            "E_6a7ac62d958e"
+          ],
+          "mechanism_ids": [
+            "H_PRESS_TRANSITION_001",
+            "H_BOX_AERIAL_002"
+          ]
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.04518518518518518,
+          "base_conditional_probability": 0.12398373983739835,
+          "tail_focus_conditional_probability": 0.13674575004670278,
+          "tail_focus_implied_overall_probability": 0.04983622890590946,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "挪威通过压迫与前场强点先取得领先，塞内加尔被迫提高推进风险，挪威继续借哈兰德、索尔洛特的禁区占位与反击空间扩大优势，塞内加尔追回一球但未能拉回均势。",
+          "rationale_cn": "该比分受挪威高压、强进攻产量与核心前锋状态多重支持，也在Rollout中作为代表比分出现；但鉴于主预测仅为小幅占优且机制含塞内加尔化解高压的反向证据，给予中性偏上的grade 1而非上限，避免在近均势对局中过度极端。",
+          "evidence_ids": [
+            "E_74233420c2da",
+            "E_0125de31397d",
+            "E_cf2bc9384565",
+            "E_b44785a030ec",
+            "E_1ce93f9cf1d0",
+            "E_bd08451ffe57"
+          ],
+          "mechanism_ids": [
+            "H_BOX_AERIAL_002",
+            "H_PRESS_TRANSITION_001"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.03851851851851852,
+          "base_conditional_probability": 0.10569105691056911,
+          "tail_focus_conditional_probability": 0.11657014758079584,
+          "tail_focus_implied_overall_probability": 0.04248334267389004,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "比赛节奏被挪威压迫与塞内加尔转换共同拉高，挪威借前场强点先后破门，塞内加尔凭中前场推进与二次进攻持续咬住，挪威小胜。",
+          "rationale_cn": "3-2刻画开放但未失衡的比赛：挪威进攻机制有上行依据，塞内加尔人员质量也支持其不至被零封，且相较3-3更贴近主预测中挪威小幅占优方向。",
+          "evidence_ids": [
+            "E_fe9a4f881e1a",
+            "E_0125de31397d",
+            "E_cf2bc9384565",
+            "E_b5bd51b0e10c",
+            "E_6a7ac62d958e"
+          ],
+          "mechanism_ids": [
+            "H_PRESS_TRANSITION_001",
+            "H_BOX_AERIAL_002"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.03,
+          "base_conditional_probability": 0.0823170731707317,
+          "tail_focus_conditional_probability": 0.07565850924715113,
+          "tail_focus_implied_overall_probability": 0.027573323370072858,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "塞内加尔越过挪威第一压迫线，利用挪威前压身后空间在转换与定位球中多次得手；挪威凭禁区强点回应保持咬合，但高位风险下防线被反复打穿，最终高比分落败。",
+          "rationale_cn": "替换原3-3：2-3在大比分池中条件概率（0.082）高于3-3（0.056），代表被原提案忽略的塞内加尔方向开放比分，由H_PRESS_TRANSITION_001的反向链（高压被破解、身后空间暴露）支持，并与塞内加尔较高排名/实力一致。因方向与主预测小幅偏挪威相反，给中性grade 0。",
+          "evidence_ids": [
+            "E_b5bd51b0e10c",
+            "E_6a7ac62d958e",
+            "E_cf2bc9384565",
+            "E_36253718b542"
+          ],
+          "mechanism_ids": [
+            "H_PRESS_TRANSITION_001"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.07666666666666666,
+          "base_conditional_probability": 0.21036585365853655,
+          "tail_focus_conditional_probability": 0.2320194283579301,
+          "tail_focus_implied_overall_probability": 0.08455819166822341,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.04518518518518518,
+          "base_conditional_probability": 0.12398373983739835,
+          "tail_focus_conditional_probability": 0.13674575004670278,
+          "tail_focus_implied_overall_probability": 0.04983622890590946,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.03851851851851852,
+          "base_conditional_probability": 0.10569105691056911,
+          "tail_focus_conditional_probability": 0.11657014758079584,
+          "tail_focus_implied_overall_probability": 0.04248334267389004,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.032962962962962965,
+          "base_conditional_probability": 0.09044715447154472,
+          "tail_focus_conditional_probability": 0.08313095460489446,
+          "tail_focus_implied_overall_probability": 0.030296614567117092,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.03,
+          "base_conditional_probability": 0.0823170731707317,
+          "tail_focus_conditional_probability": 0.07565850924715113,
+          "tail_focus_implied_overall_probability": 0.027573323370072858,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.05589430894308943,
+          "tail_focus_conditional_probability": 0.05137306183448534,
+          "tail_focus_implied_overall_probability": 0.0187226269796791,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.03963414634146341,
+          "tail_focus_conditional_probability": 0.036428171118998695,
+          "tail_focus_implied_overall_probability": 0.013276044585590636,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.03760162601626016,
+          "tail_focus_conditional_probability": 0.03456005977956286,
+          "tail_focus_implied_overall_probability": 0.012595221786329578,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.03048780487804878,
+          "tail_focus_conditional_probability": 0.02802167009153746,
+          "tail_focus_implied_overall_probability": 0.010212341988915874,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.027439024390243903,
+          "tail_focus_conditional_probability": 0.02521950308238371,
+          "tail_focus_implied_overall_probability": 0.009191107790024286,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.11111111111111112,
+      "attention_level": "medium",
+      "evidence_strength": 0.45,
+      "rationale_cn": "崩盘有条件触发型关注价值但不应放大：支持侧来自挪威高压体系、近期进攻爆发及哈兰德/索尔洛特禁区威胁；反向因素同样明确，塞内加尔FIFA第12、库利巴利回归领衔、门迪预计首发，整体并非易崩弱队。base_event_probability仅0.111，且Rollout中最常见为0-1、0-0等低/接近比分，故崩盘是尾部而非主线。提案已自我设限并兼顾Norway与Senegal双向路径，证据与机制引用均有效，予以保留。",
+      "supporting_evidence_ids": [
+        "E_74233420c2da",
+        "E_0125de31397d",
+        "E_cf2bc9384565",
+        "E_b44785a030ec",
+        "E_1ce93f9cf1d0",
+        "E_bd08451ffe57"
+      ],
+      "counter_evidence_ids": [
+        "E_b5bd51b0e10c",
+        "E_36253718b542",
+        "E_6a7ac62d958e",
+        "E_32349c0173cc"
+      ],
+      "caution_cn": "崩盘需比赛明显偏离均势（如早段丢球后出球持续受压或追分暴露空间）；现有证据不能推断塞内加尔防线必然失控，天气与伤后回归不能解释为确定性弱点；4-1与大比分池重叠，概率不可叠加。",
+      "audit_note_cn": "未作修改：三个候选3-0、4-1、0-3均来自崩盘候选池，support_grade符合证据方向（挪威方向给1、塞内加尔反向崩盘给0），attention_level与evidence_strength与0.111的基础事件概率及Rollout低分主线相称。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.024074074074074074,
+          "base_conditional_probability": 0.21666666666666665,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.01925925925925926,
+          "base_conditional_probability": 0.17333333333333334,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.12999999999999998,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.09999999999999999,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.07666666666666666,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.06333333333333332,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-2",
+          "base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.043333333333333335,
+          "total_goals": 7,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.0044444444444444444,
+          "base_conditional_probability": 0.039999999999999994,
+          "total_goals": 5,
+          "winning_margin": 5
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.024074074074074074,
+          "base_conditional_probability": 0.21666666666666665,
+          "tail_focus_conditional_probability": 0.24314214463840397,
+          "tail_focus_implied_overall_probability": 0.027015793848711556,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "挪威高位压迫限制塞内加尔后场出球，中段连续制造高质量机会；领先后继续以哈兰德为终结点、索尔洛特做身体牵制，塞内加尔追分未果被零封。",
+          "rationale_cn": "崩盘池中较温和的净胜三球路径，出现在Rollout代表比分中，只需挪威进攻机制兑现与塞内加尔进攻被压制，不要求极端的五球以上失衡。",
+          "evidence_ids": [
+            "E_cf2bc9384565",
+            "E_b44785a030ec",
+            "E_74233420c2da",
+            "E_1ce93f9cf1d0",
+            "E_bd08451ffe57"
+          ],
+          "mechanism_ids": [
+            "H_PRESS_TRANSITION_001",
+            "H_BOX_AERIAL_002"
+          ]
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.01925925925925926,
+          "base_conditional_probability": 0.17333333333333334,
+          "tail_focus_conditional_probability": 0.16209476309226933,
+          "tail_focus_implied_overall_probability": 0.01801052923247437,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "塞内加尔绕过挪威第一压迫线，利用前压身后空间与中场推进形成连续转换；挪威久攻不下后阵型更冒险，反被塞内加尔扩大优势。",
+          "rationale_cn": "反向崩盘路径，可由挪威高压被破解后的身后空间与塞内加尔人员质量解释；但现有机制与证据更多指向挪威进攻端上行，故给中性支持。",
+          "evidence_ids": [
+            "E_b5bd51b0e10c",
+            "E_6a7ac62d958e",
+            "E_36253718b542",
+            "E_cf2bc9384565"
+          ],
+          "mechanism_ids": [
+            "H_PRESS_TRANSITION_001"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.12999999999999998,
+          "tail_focus_conditional_probability": 0.14588528678304238,
+          "tail_focus_implied_overall_probability": 0.016209476309226933,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "挪威压迫与禁区双高点持续制造进球，塞内加尔靠转换或定位球追回一球，但追分使阵型进一步拉开，末段再被挪威扩大分差。",
+          "rationale_cn": "同时契合挪威进攻上行与塞内加尔仍具回应能力的双重证据，较4-0更合理；但仍需挪威终结效率显著偏高，故给中性偏上grade 1。",
+          "evidence_ids": [
+            "E_0125de31397d",
+            "E_74233420c2da",
+            "E_cf2bc9384565",
+            "E_1ce93f9cf1d0",
+            "E_b5bd51b0e10c"
+          ],
+          "mechanism_ids": [
+            "H_BOX_AERIAL_002",
+            "H_PRESS_TRANSITION_001"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.024074074074074074,
+          "base_conditional_probability": 0.21666666666666665,
+          "tail_focus_conditional_probability": 0.24314214463840397,
+          "tail_focus_implied_overall_probability": 0.027015793848711556,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.01925925925925926,
+          "base_conditional_probability": 0.17333333333333334,
+          "tail_focus_conditional_probability": 0.16209476309226933,
+          "tail_focus_implied_overall_probability": 0.01801052923247437,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.12999999999999998,
+          "tail_focus_conditional_probability": 0.14588528678304238,
+          "tail_focus_implied_overall_probability": 0.016209476309226933,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.09999999999999999,
+          "tail_focus_conditional_probability": 0.09351620947630923,
+          "tail_focus_implied_overall_probability": 0.010390689941812137,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.07666666666666666,
+          "tail_focus_conditional_probability": 0.07169576059850374,
+          "tail_focus_implied_overall_probability": 0.007966195622055972,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.007037037037037037,
+          "base_conditional_probability": 0.06333333333333332,
+          "tail_focus_conditional_probability": 0.05922693266832917,
+          "tail_focus_implied_overall_probability": 0.00658077029648102,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.043333333333333335,
+          "tail_focus_conditional_probability": 0.040523690773067333,
+          "tail_focus_implied_overall_probability": 0.004502632308118593,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.0044444444444444444,
+          "base_conditional_probability": 0.039999999999999994,
+          "tail_focus_conditional_probability": 0.03740648379052369,
+          "tail_focus_implied_overall_probability": 0.004156275976724855,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.03333333333333333,
+          "tail_focus_conditional_probability": 0.03117206982543641,
+          "tail_focus_implied_overall_probability": 0.0034635633139373794,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.03333333333333333,
+          "tail_focus_conditional_probability": 0.03117206982543641,
+          "tail_focus_implied_overall_probability": 0.0034635633139373794,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+      "applicable": false,
+      "status": "not_applicable",
+      "base_event_probability": 0,
+      "attention_level": "not_applicable",
+      "evidence_strength": 0.0,
+      "rationale_cn": "按冻结定义不适用：输入已明确两队胜率差小于8%（0.401 vs 0.326），不强行定义爆冷方，候选池为空，事件概率为0，无可审计的比分。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [
+        "E_b5bd51b0e10c",
+        "E_fe9a4f881e1a"
+      ],
+      "caution_cn": "不要把塞内加尔取胜或挪威取胜直接标记为爆冷；两队主客胜结构接近，胜负方向应回到主预测与具体比分池分析。",
+      "audit_note_cn": "未作修改：候选池为空且applicable为false，保持not_applicable与空列表正确。",
+      "candidate_pool": [],
+      "selected_scores": [],
+      "tail_focus_distribution_top10": [],
+      "conditional_probability_sum": 0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "595713447394ac43b5d7e4272dff38d97e474974a57b20ba38b87f44c7971522"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_Norway_vs_Senegal_M42\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\web_delivery\\Norway_vs_Senegal_M42\\2026.6.23.08\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\reports_Norway_vs_Senegal_M42\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.23比赛预测_V740\\web_delivery\\Norway_vs_Senegal_M42\\2026.6.23.08\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

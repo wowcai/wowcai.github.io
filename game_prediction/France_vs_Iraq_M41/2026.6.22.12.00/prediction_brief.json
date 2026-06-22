@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-22T04:26:56.988186Z",
+  "prediction_generated_at_local": "2026-06-22T12:26:56.988186+08:00",
+  "match": {
+    "match_id": "M41",
+    "team_a": "France",
+    "team_b": "Iraq",
+    "kickoff_utc": "2026-06-22T21:00:00Z",
+    "venue": "Philadelphia Stadium",
+    "stage": "group",
+    "group": "I",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 8,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.037037037037037035,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "Rollout有8/216个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.7507407407407407,
+    "draw": 0.17703703703703705,
+    "team_b_win": 0.07222222222222222
+  },
+  "most_likely_outcome": {
+    "label": "France胜",
+    "probability": 0.7507407407407407
+  },
+  "top_scores": [
+    {
+      "score": "2-0",
+      "probability": 0.15888888888888889
+    },
+    {
+      "score": "1-0",
+      "probability": 0.15074074074074073
+    },
+    {
+      "score": "3-0",
+      "probability": 0.09518518518518519
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "多源预测法国4-2-3-1，巴尔科拉、迪涅在左路支援姆巴佩。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_4d0f80456310",
+        "E_6a2f70944309",
+        "E_9e94e571fcc3"
+      ],
+      "source_names": [
+        "Reuters",
+        "Sports Yahoo",
+        "Al Jazeera"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "伊拉克被评为防守顽强且重定位球，6尺2寸侯赛因是高点。",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_614db56e6508",
+        "E_454ccfb577fd"
+      ],
+      "source_names": [
+        "The Athletic",
+        "BBC Sport"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "阿诺德称不会更保守，结合直接打法，伊拉克可能给法国反击空间。",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_fe8abe24b84f",
+        "E_614db56e6508"
+      ],
+      "source_names": [
+        "The Straits Times",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "法国首战后无新增伤情，但萨利巴此前有隐患并仍受关注。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_1c15f15b7461",
+        "E_a2c04ee0978b",
+        "E_f77f09ecc609"
+      ],
+      "source_names": [
+        "Evening Standard",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在费城林肯金融球场当地17:00开球，属世界杯I组。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_9c298f47ce28",
+        "E_4118f7fb3a9a",
+        "E_8f42dccf4a1b"
+      ],
+      "source_names": [
+        "Lincoln Financial Field",
+        "Yahoo Sports",
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-22T04:30:09.514756Z",
+    "source_state_sha256": "f51a6db6cb3dab881d63fb1e9fae976fd15b4126bcbc4d089717cfaf6aa81e2c",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "三类高偏离情景总体成立且方向判断合理：开放大比分与法国方向的一边倒证据较实，爆冷被恰当压低为低关注尾部。审计保留全部三情景，主要修正两点：一是把blowout中的4-0从support_grade 2降为1，因为4个法国进球已高于法国预期进球(约2.18)，给予最高档支持略显激进，3-0才是该池最稳健的核心；二是从upset的1-2与0-2候选中移除机制H_iraq_not_conservative_transition_space…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.3,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.62,
+        "summary_cn": "总进球≥4的开放剧本有合理机制基础：法国预计保留核心框架，姆巴佩与左路巴尔科拉、迪涅持续制造禁区压力；伊拉克主帅表态不会更保守，若防线不够深会让出转换与身后空间，同时伊拉克自身保留直接进攻与定位球通道，可能把法国优势局面推向双方都进球的高比分。所选4个候选均偏向法国主导且贴近现有机制，未过度堆叠5球、6球极端剧本。",
+        "caution_cn": "高比分不等于必然对攻。伊拉克被描述为防守顽强且赛前重点纠错，法国若早早领先后控节奏或天气中断削弱连续压制，都会压低总进球。该情景概率不得与一边倒情景重复相加。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.06111111111111111,
+            "tail_focus_conditional_probability": 0.25619746211918404,
+            "support_grade": 2,
+            "script_cn": "法国通过左路牵扯和姆巴佩接应先建立优势，伊拉克落后后利用直接球或定位球追回一球，但法国凭更高质量的禁区进入和转换机会锁定3-1。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.05814814814814815,
+            "tail_focus_conditional_probability": 0.2017454623333512,
+            "support_grade": 1,
+            "script_cn": "伊拉克前段保持紧凑但出球持续受限，法国在中段通过边路和二次进攻连续转化机会，伊拉克直接球被法国中卫控制，最终形成单边4-0。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2625925925925926,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.66,
+        "summary_cn": "一边倒崩盘主要指向法国方向：胜面大、预期进球优势明显、预计非大轮换，姆巴佩配合左路宽度与高压反抢可把伊拉克出球困难转化为连续射门，伊拉克首战1-4失利也使防线承压崩盘路径值得关注。但极端净胜需要法国早领先且持续进攻而非降速，故对档位做了再校准。",
+        "caution_cn": "崩盘需要法国较早领先并持续进攻而非控节奏。伊拉克顽强防守、纠错训练、定位球威胁以及法国官方首发未确认，都是限制极端净胜的因素。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.09518518518518519,
+            "tail_focus_conditional_probability": 0.4262510723477266,
+            "support_grade": 2,
+            "script_cn": "法国通过压迫和边路推进逐步打开局面，先取得领先后继续控制前场二次进攻，伊拉克反击多被迫提前长传，未能形成稳定射门，法国以3-0完成较标准的优势兑现。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.05814814814814815,
+            "tail_focus_conditional_probability": 0.21549899914212178,
+            "support_grade": 1,
+            "script_cn": "伊拉克试图保持阵型和直接进攻，但一旦中场第一传被法国压迫切断，防线反复横移消耗，法国在中段连续进球后比赛变成单向半场攻防。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.07222222222222223,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.31,
+        "summary_cn": "爆冷适用但证据较弱。伊拉克取胜的可行通道主要是侯赛因高点、定位球与直接进攻，叠加法国久攻不下或节奏被打断的低比分偷袭。主预测明显偏向法国，法国阵容健康与攻击端确定性构成强反证，故维持低关注。",
+        "caution_cn": "爆冷不能被解读为主线判断。伊拉克需把低频定位球或直接球转化为进球，同时长期承受法国边路、压迫与姆巴佩终结威胁；若法国先入球，多数爆冷剧本会迅速失效。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.034074074074074076,
+            "tail_focus_conditional_probability": 0.5235949727294286,
+            "support_grade": 1,
+            "script_cn": "法国长时间围攻但效率不足，伊拉克保持紧凑防守，通过侯赛因争顶、定位球二点或少数直接进攻制造关键进球，随后深守保住0-1。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.021111111111111112,
+            "tail_focus_conditional_probability": 0.2703343609200854,
+            "support_grade": 0,
+            "script_cn": "伊拉克利用直接进攻先制造冲击，法国凭个人能力施压并扳平，但伊拉克再通过定位球或二点球打入第二球完成1-2。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

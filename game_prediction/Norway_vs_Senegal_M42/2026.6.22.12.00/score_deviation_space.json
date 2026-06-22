@@ -1,0 +1,675 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-22T04:50:04.132252Z",
+  "prediction_generated_at_local": "2026-06-22T12:50:04.132252+08:00",
+  "quality_label": "ready",
+  "match_id": "M42",
+  "team_a": "Norway",
+  "team_b": "Senegal",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.11333333333333333,
+      "probability_percent": 11.3333,
+      "outcome": "draw",
+      "sample_count": 306,
+      "path_deviation": 0.5242192295530602,
+      "result_surprise": 0.0,
+      "reason_cn": "抢断后的快速转换；双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.018918890198122477,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "抢断后的快速转换、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.15147926951329285,
+      "probability": 0.0962962962962963,
+      "probability_percent": 9.6296,
+      "outcome": "team_a",
+      "sample_count": 260,
+      "path_deviation": 0.5432196280300948,
+      "result_surprise": 0.15032679738562083,
+      "reason_cn": "Norway在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.29181769118921214,
+      "probability": 0.07444444444444444,
+      "probability_percent": 7.4444,
+      "outcome": "team_a",
+      "sample_count": 201,
+      "path_deviation": 0.5319935093647797,
+      "result_surprise": 0.3431372549019608,
+      "reason_cn": "Norway在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.30433739525422565,
+      "probability": 0.07296296296296297,
+      "probability_percent": 7.2963,
+      "outcome": "team_b",
+      "sample_count": 197,
+      "path_deviation": 0.5332152620633928,
+      "result_surprise": 0.35620915032679734,
+      "reason_cn": "Senegal通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.3230266868364955,
+      "probability": 0.07666666666666666,
+      "probability_percent": 7.6667,
+      "outcome": "draw",
+      "sample_count": 207,
+      "path_deviation": 0.5631431865216388,
+      "result_surprise": 0.32352941176470595,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.3670942063654575,
+      "probability": 0.07407407407407407,
+      "probability_percent": 7.4074,
+      "outcome": "team_b",
+      "sample_count": 200,
+      "path_deviation": 0.5799010646692331,
+      "result_surprise": 0.3464052287581699,
+      "reason_cn": "Senegal通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.420045290648111,
+      "probability": 0.05851851851851852,
+      "probability_percent": 5.8519,
+      "outcome": "draw",
+      "sample_count": 158,
+      "path_deviation": 0.5409315558602898,
+      "result_surprise": 0.4836601307189542,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.4886206137583845,
+      "probability": 0.04518518518518518,
+      "probability_percent": 4.5185,
+      "outcome": "team_a",
+      "sample_count": 122,
+      "path_deviation": 0.5228289453796197,
+      "result_surprise": 0.6013071895424837,
+      "reason_cn": "Norway打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.4926135294332024,
+      "probability": 0.057777777777777775,
+      "probability_percent": 5.7778,
+      "outcome": "team_a",
+      "sample_count": 156,
+      "path_deviation": 0.5852925197693137,
+      "result_surprise": 0.4901960784313726,
+      "reason_cn": "Norway打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.5256406180724709,
+      "probability": 0.044814814814814814,
+      "probability_percent": 4.4815,
+      "outcome": "team_b",
+      "sample_count": 121,
+      "path_deviation": 0.5454949621409338,
+      "result_surprise": 0.6045751633986928,
+      "reason_cn": "哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；Senegal充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 0.5472604914698651,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.360916053936654,
+      "result_surprise": 0.9738562091503268,
+      "reason_cn": "抢断后的快速转换、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.5537498788705967,
+      "probability": 0.03851851851851852,
+      "probability_percent": 3.8519,
+      "outcome": "team_a",
+      "sample_count": 104,
+      "path_deviation": 0.534126843644097,
+      "result_surprise": 0.6601307189542482,
+      "reason_cn": "哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.6069306563125584,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.39500722661210236,
+      "result_surprise": 0.9836601307189542,
+      "reason_cn": "哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "6-4",
+      "deviation": 0.6203659217797075,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.39859274238562115,
+      "result_surprise": 0.9934640522875817,
+      "reason_cn": "抢断后的快速转换、天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001",
+        "H_WEATHER_SURFACE_003"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6234413074147597,
+      "probability": 0.032962962962962965,
+      "probability_percent": 3.2963,
+      "outcome": "team_b",
+      "sample_count": 89,
+      "path_deviation": 0.553713879233213,
+      "result_surprise": 0.7091503267973855,
+      "reason_cn": "Senegal充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-6",
+      "deviation": 0.651662762916675,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.4174826321382694,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "抢断后的快速转换、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.6553842626069484,
+      "probability": 0.024074074074074074,
+      "probability_percent": 2.4074,
+      "outcome": "team_a",
+      "sample_count": 65,
+      "path_deviation": 0.5325574739307777,
+      "result_surprise": 0.7875816993464052,
+      "reason_cn": "哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；Norway打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.6652525559237705,
+      "probability": 0.020370370370370372,
+      "probability_percent": 2.037,
+      "outcome": "draw",
+      "sample_count": 55,
+      "path_deviation": 0.5214717638743265,
+      "result_surprise": 0.8202614379084967,
+      "reason_cn": "哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.6782613427721291,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_b",
+      "sample_count": 22,
+      "path_deviation": 0.47198554334360415,
+      "result_surprise": 0.9281045751633987,
+      "reason_cn": "抢断后的快速转换、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.6804908587935782,
+      "probability": 0.01925925925925926,
+      "probability_percent": 1.9259,
+      "outcome": "team_b",
+      "sample_count": 52,
+      "path_deviation": 0.5262469186679303,
+      "result_surprise": 0.8300653594771241,
+      "reason_cn": "抢断后的快速转换、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；Senegal充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.6919088331180402,
+      "probability": 0.03,
+      "probability_percent": 3.0,
+      "outcome": "team_b",
+      "sample_count": 81,
+      "path_deviation": 0.5848111347732815,
+      "result_surprise": 0.7352941176470589,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7056125949662381,
+      "probability": 0.013703703703703704,
+      "probability_percent": 1.3704,
+      "outcome": "team_a",
+      "sample_count": 37,
+      "path_deviation": 0.5164269962648593,
+      "result_surprise": 0.8790849673202614,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.7364518437546882,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "draw",
+      "sample_count": 10,
+      "path_deviation": 0.48926333388274407,
+      "result_surprise": 0.9673202614379085,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.7531783391188307,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.4950203939091777,
+      "result_surprise": 0.9771241830065359,
+      "reason_cn": "天气与场地条件、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.7594198822848001,
+      "probability": 0.004814814814814815,
+      "probability_percent": 0.4815,
+      "outcome": "team_a",
+      "sample_count": 13,
+      "path_deviation": 0.5096966159618377,
+      "result_surprise": 0.9575163398692811,
+      "reason_cn": "天气与场地条件、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.7659502263275051,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_a",
+      "sample_count": 10,
+      "path_deviation": 0.5087262839503759,
+      "result_surprise": 0.9673202614379085,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.7688244815769032,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_b",
+      "sample_count": 10,
+      "path_deviation": 0.510622709500576,
+      "result_surprise": 0.9673202614379085,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.7904719583830305,
+      "probability": 0.01,
+      "probability_percent": 1.0,
+      "outcome": "team_b",
+      "sample_count": 27,
+      "path_deviation": 0.5548201838825808,
+      "result_surprise": 0.9117647058823529,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7917313385164576,
+      "probability": 0.007037037037037037,
+      "probability_percent": 0.7037,
+      "outcome": "team_b",
+      "sample_count": 19,
+      "path_deviation": 0.5415736935194556,
+      "result_surprise": 0.9379084967320261,
+      "reason_cn": "天气与场地条件；Senegal充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.8127876989477498,
+      "probability": 0.014444444444444444,
+      "probability_percent": 1.4444,
+      "outcome": "team_a",
+      "sample_count": 39,
+      "path_deviation": 0.5906601856664445,
+      "result_surprise": 0.8725490196078431,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.8167828392299689,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_a",
+      "sample_count": 23,
+      "path_deviation": 0.5651413163325378,
+      "result_surprise": 0.9248366013071896,
+      "reason_cn": "Norway打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.8702595540179481,
+      "probability": 0.0044444444444444444,
+      "probability_percent": 0.4444,
+      "outcome": "team_a",
+      "sample_count": 12,
+      "path_deviation": 0.5810686421946804,
+      "result_surprise": 0.9607843137254902,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001"
+      ]
+    },
+    {
+      "score": "2-7",
+      "deviation": 0.8703553498309634,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5617753874704339,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "天气与场地条件、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003",
+        "H_PRESS_TRANSITION_001"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.8874885575911619,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "team_b",
+      "sample_count": 30,
+      "path_deviation": 0.6241104985633329,
+      "result_surprise": 0.9019607843137255,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003"
+      ]
+    },
+    {
+      "score": "3-6",
+      "deviation": 0.8893869036797516,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5743323533092914,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "抢断后的快速转换、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.9317684845709227,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.6075746361760195,
+      "result_surprise": 0.9869281045751634,
+      "reason_cn": "哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.9743071388291612,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.6391608773794232,
+      "result_surprise": 0.9803921568627451,
+      "reason_cn": "天气与场地条件、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 1.0,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_a",
+      "sample_count": 22,
+      "path_deviation": 0.6842678067861935,
+      "result_surprise": 0.9281045751633987,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.7334435952483737,
+      "result_surprise": 0.9869281045751634,
+      "reason_cn": "天气与场地条件、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.7050023142866847,
+      "result_surprise": 0.9869281045751634,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-6",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6898514263164864,
+      "result_surprise": 0.9934640522875817,
+      "reason_cn": "天气与场地条件、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "5-5",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "draw",
+      "sample_count": 2,
+      "path_deviation": 0.7808876937352169,
+      "result_surprise": 0.9934640522875817,
+      "reason_cn": "天气与场地条件、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7976666402137694,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "6-3",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "天气与场地条件、哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_WEATHER_SURFACE_003",
+        "H_BOX_AERIAL_002"
+      ]
+    },
+    {
+      "score": "7-0",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7302836147312678,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_PRESS_TRANSITION_001"
+      ]
+    },
+    {
+      "score": "8-0",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7976666402137694,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "哈兰德与索尔洛特禁区占位对塞内加尔中卫门将保护链；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_BOX_AERIAL_002"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

@@ -1280,8 +1280,103 @@ function parseGamePredictionBriefMarkdown(markdown) {
     },
     win_draw_loss: probabilities,
     top_scores: topScores,
-    key_factors: extractMarkdownSectionBullets(markdown, "关键因素").map((text) => ({ text_cn: text }))
+    key_factors: extractMarkdownSectionBullets(markdown, "关键因素").map((text) => ({ text_cn: text })),
+    tail_forecast_summary: parseMarkdownTailForecastSummary(markdown)
   };
+}
+
+function parseMarkdownTailForecastSummary(markdown) {
+  const text = String(markdown || "");
+  const block = text.match(/<!--\s*TAIL_FORECAST_SUMMARY_START\s*-->([\s\S]*?)<!--\s*TAIL_FORECAST_SUMMARY_END\s*-->/)?.[1] || "";
+
+  if (!block) {
+    return null;
+  }
+
+  const scenarios = [];
+  let currentScenario = null;
+
+  block.split(/\r?\n/).forEach((line) => {
+    const heading = line.match(/^###\s+(.+?)\s*$/);
+
+    if (heading) {
+      const title = stripMarkdownInline(heading[1]);
+
+      if (/其他高偏离风险/.test(title)) {
+        currentScenario = null;
+        return;
+      }
+
+      const titleParts = title.split(/\s*[·•]\s*/).filter(Boolean);
+      const label = titleParts[0] || title;
+      const attentionLabel = titleParts.slice(1).join(" · ");
+
+      currentScenario = {
+        scenario_id: inferTailScenarioId(label, scenarios.length),
+        label_cn: label,
+        title_cn: title,
+        attention_label_cn: attentionLabel.replace(/关注$/, "") || attentionLabel,
+        top_scores: []
+      };
+      scenarios.push(currentScenario);
+      return;
+    }
+
+    if (!currentScenario) {
+      return;
+    }
+
+    const probabilityMatch = line.match(/情景基础概率：\s*\**(\d+(?:\.\d+)?)%\**/);
+    if (probabilityMatch) {
+      currentScenario.base_event_probability = Number(probabilityMatch[1]) / 100;
+      return;
+    }
+
+    const focusScoreMatch = line.match(/聚焦比分：(.+)$/);
+    if (focusScoreMatch) {
+      currentScenario.top_scores = parseTailFocusScores(focusScoreMatch[1]);
+      return;
+    }
+
+    const summaryMatch = line.match(/机制判断：(.+)$/);
+    if (summaryMatch) {
+      currentScenario.summary_cn = stripMarkdownInline(summaryMatch[1]);
+    }
+  });
+
+  return scenarios.length ? {
+    source: "prediction_brief.md",
+    scenarios
+  } : null;
+}
+
+function stripMarkdownInline(value) {
+  return String(value || "").replace(/\*\*|`/g, "").trim();
+}
+
+function inferTailScenarioId(label, index) {
+  if (/大比分|开放/.test(label)) {
+    return "high_scoring";
+  }
+
+  if (/崩盘|一边倒/.test(label)) {
+    return "blowout";
+  }
+
+  if (/爆冷/.test(label)) {
+    return "upset";
+  }
+
+  return `tail_focus_${index + 1}`;
+}
+
+function parseTailFocusScores(text) {
+  return [...String(text || "").matchAll(/`(\d+\-\d+)`(?:[（(][^）)]*?(\d+(?:\.\d+)?)%[^）)]*[）)])?/g)]
+    .map((match) => ({
+      score: match[1],
+      probability: match[2] ? Number(match[2]) / 100 : null
+    }))
+    .filter((item) => item.score);
 }
 
 function normalizeGamePredictionKeyFactors(briefJson, markdown) {
@@ -1325,12 +1420,19 @@ function mergeGamePredictionBrief(markdownBrief, jsonBrief) {
       : jsonBrief.top_scores,
     key_factors: Array.isArray(markdownBrief?.key_factors) && markdownBrief.key_factors.length
       ? markdownBrief.key_factors
-      : jsonBrief.key_factors
+      : jsonBrief.key_factors,
+    tail_forecast_summary: hasTailForecastScenarios(markdownBrief?.tail_forecast_summary)
+      ? markdownBrief.tail_forecast_summary
+      : jsonBrief.tail_forecast_summary
   };
 }
 
 function hasProbabilityValues(values) {
   return Boolean(values && Object.values(values).some((value) => Number.isFinite(Number(value))));
+}
+
+function hasTailForecastScenarios(summary) {
+  return Array.isArray(summary?.scenarios) && summary.scenarios.length > 0;
 }
 
 function parseScoreMatrixCsv(csvText) {
@@ -1964,9 +2066,6 @@ function renderLatestMatchPredictions(matches) {
     const homeTeam = getWorldCupTeam(match.homeTeamId);
     const awayTeam = getWorldCupTeam(match.awayTeamId);
     const statusZh = match.predictionStatus === "predicted" ? "已预测" : "待预测";
-    const score = match.predictedScore || "待预测";
-    const reference = refPair(match.winReference);
-    const hasReference = reference.zh && reference.zh !== "待预测";
     const stage = matchStagePair(match);
     const time = matchTimePair(match.matchTime);
     const venue = venuePair(match.venue);
@@ -1988,12 +2087,114 @@ function renderLatestMatchPredictions(matches) {
         <div class="latest-match-details">
           <div>${bi("比赛时间", "Kick-off")}<strong ${biAttrs(time.zh, time.en)}>${escapeHtml(pairText(time))}</strong></div>
           <div>${bi("比赛场馆", "Venue")}<strong ${biAttrs(venue.zh, venue.en)}>${escapeHtml(pairText(venue))}</strong></div>
-          <div>${bi("预测比分", "Predicted score")}<strong>${biAuto(score)}</strong></div>
-          <div>${bi("胜率参考", "Win probability")}<strong>${hasReference ? bi(reference.zh, reference.en) : biAuto("待预测")}</strong></div>
         </div>
+        ${renderLatestScoreForecast(match)}
       </button>
     `;
   }).join("");
+}
+
+function renderLatestScoreForecast(match) {
+  const latestVersion = getLatestMatchPredictionVersion(match);
+  const brief = latestVersion?.brief || {};
+  const topScores = normalizeLatestScoreItems(brief.top_scores).slice(0, 3);
+  const tailScenarios = getLatestTailFocusScenarios(brief).slice(0, 2);
+
+  return `
+    <div class="latest-score-forecast">
+      <div class="latest-score-section is-main">
+        <span ${biAttrs("高概率比分", "High probability scores")}>${L("高概率比分", "High probability scores")}</span>
+        <div class="latest-score-chip-row">
+          ${topScores.length ? topScores.map((item, index) => renderLatestScoreChip(item, index === 0)).join("") : `<em>${L("待补充", "Pending")}</em>`}
+        </div>
+      </div>
+      <div class="latest-score-scenarios">
+        ${tailScenarios.length
+          ? tailScenarios.map((scenario) => renderLatestScenarioTile(scenario)).join("")
+          : renderLatestScenarioTile({ labelZh: "高偏离预测", labelEn: "Tail focus", scoreItems: [] })}
+      </div>
+    </div>
+  `;
+}
+
+function getLatestMatchPredictionVersion(match) {
+  const sourceVersions = match?.gamePredictionSource?.versions || [];
+  const historyVersions = match?.predictionHistory || [];
+  const versions = sourceVersions.length ? sourceVersions : historyVersions;
+
+  return versions.find((version) => version.isLatest) || versions[versions.length - 1] || null;
+}
+
+function normalizeLatestScoreItems(scores = []) {
+  return (Array.isArray(scores) ? scores : [])
+    .map((item) => ({
+      score: String(item?.score || "").trim(),
+      probability: normalizeProbabilityToPercent(item?.probability ?? item?.base_probability ?? item?.tail_focus_conditional_probability)
+    }))
+    .filter((item) => item.score);
+}
+
+function getLatestTailFocusScenarios(brief) {
+  const scenarios = brief?.tail_forecast_summary?.scenarios || [];
+
+  return (Array.isArray(scenarios) ? scenarios : [])
+    .map((scenario) => {
+      const labelZh = scenario?.label_cn || scenario?.label || "高偏离预测";
+      const labelEn = scenario?.title_en || scenario?.label_en || buildTailScenarioLabelEn(scenario, labelZh);
+
+      return {
+        labelZh,
+        labelEn,
+        scoreItems: normalizeLatestScoreItems(scenario?.top_scores || scenario?.selected_scores || []).slice(0, 2)
+      };
+    })
+    .filter((scenario) => scenario.labelZh || scenario.scoreItems.length);
+}
+
+function buildTailScenarioLabelEn(scenario, labelZh) {
+  return translateTailScenarioName(scenario?.scenario_id, scenario?.label_cn || labelZh) || "Tail focus";
+}
+
+function translateTailScenarioName(scenarioId, label) {
+  if (scenarioId === "high_scoring" || /大比分|开放/.test(label || "")) {
+    return "Open high-score";
+  }
+
+  if (scenarioId === "blowout" || /崩盘|一边倒/.test(label || "")) {
+    return "Blowout";
+  }
+
+  if (scenarioId === "upset" || /爆冷/.test(label || "")) {
+    return "Upset";
+  }
+
+  return label || "Tail focus";
+}
+
+function renderLatestScoreChip(item, isPrimary = false) {
+  const probability = Number.isFinite(item.probability) ? formatProbabilityValue(item.probability) : "";
+
+  return `
+    <span class="latest-score-chip ${isPrimary ? "is-primary" : ""}">
+      <strong>${escapeHtml(item.score)}</strong>
+      ${probability ? `<small>${escapeHtml(probability)}</small>` : ""}
+    </span>
+  `;
+}
+
+function renderLatestScenarioTile(scenario) {
+  const labelZh = scenario?.labelZh || "高偏离预测";
+  const labelEn = scenario?.labelEn || "Tail focus";
+  const scores = Array.isArray(scenario?.scoreItems) ? scenario.scoreItems : [];
+
+  return `
+    <div class="latest-score-scenario">
+      <span ${biAttrs(labelZh, labelEn)}>${escapeHtml(L(labelZh, labelEn))}</span>
+      <div class="latest-scenario-score-list">
+        ${scores.length ? scores.map((item) => renderLatestScoreChip(item)).join("") : `<em>${escapeHtml(L("待补充", "Pending"))}</em>`}
+      </div>
+    </div>
+  `;
 }
 
 function renderLatestTeam(team, fallbackName) {
