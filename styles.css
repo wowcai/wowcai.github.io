@@ -3129,7 +3129,7 @@ button.group-result-line:hover {
 
 .latest-score-scenarios {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 10px;
 }
 
@@ -3137,6 +3137,10 @@ button.group-result-line:hover {
   display: grid;
   gap: 6px;
   padding: 10px;
+}
+
+.latest-score-scenario:nth-child(3) {
+  grid-column: 1 / -1;
 }
 
 .latest-scenario-score-list {
@@ -6537,8 +6541,9 @@ body.modal-open {
 
 .gaokao-province-school-score strong {
   color: #f6d68f;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 900;
+  line-height: 1.15;
 }
 
 .gaokao-province-school-score small {
@@ -7080,6 +7085,7 @@ body.modal-open {
   font-size: 13px;
   font-weight: 900;
   white-space: nowrap;
+  line-height: 1.1;
 }
 
 @media (max-width: 760px) {

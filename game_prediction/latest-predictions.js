@@ -1,22 +1,22 @@
 window.WORLD_CUP_LATEST_GAME_PREDICTIONS = [
   {
-    matchNo: "M41",
-    matchFolder: "France_vs_Iraq_M41",
-    versions: ["2026.6.22.12.00"]
+    matchNo: "M45",
+    matchFolder: "England_vs_Ghana_M45",
+    versions: ["2026.6.23.9.30"]
   },
   {
-    matchNo: "M42",
-    matchFolder: "Norway_vs_Senegal_M42",
-    versions: ["2026.6.22.12.00"]
+    matchNo: "M46",
+    matchFolder: "Panama_vs_Croatia_M46",
+    versions: ["2026.6.23.9.30"]
   },
   {
-    matchNo: "M43",
-    matchFolder: "Argentina_vs_Austria_M43",
-    versions: ["2026.6.22.12.00"]
+    matchNo: "M47",
+    matchFolder: "Portugal_vs_Uzbekistan_M47",
+    versions: ["2026.6.23.9.30"]
   },
   {
-    matchNo: "M44",
-    matchFolder: "Jordan_vs_Algeria_M44",
-    versions: ["2026.6.22.12.00"]
+    matchNo: "M48",
+    matchFolder: "Colombia_vs_DR_Congo_M48",
+    versions: ["2026.6.23.9.30"]
   }
 ];

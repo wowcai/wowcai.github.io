@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-23T01:34:28.373901Z",
+  "prediction_generated_at_local": "2026-06-23T09:34:28.373901+08:00",
+  "match": {
+    "match_id": "M48",
+    "team_a": "Colombia",
+    "team_b": "DR Congo",
+    "kickoff_utc": "2026-06-24T02:00:00Z",
+    "venue": "Guadalajara Stadium",
+    "stage": "group",
+    "group": "K",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 40,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.18518518518518517,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "Rollout有40/216个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5433333333333333,
+    "draw": 0.2474074074074074,
+    "team_b_win": 0.20925925925925926
+  },
+  "most_likely_outcome": {
+    "label": "Colombia胜",
+    "probability": 0.5433333333333333
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.1262962962962963
+    },
+    {
+      "score": "1-1",
+      "probability": 0.11851851851851852
+    },
+    {
+      "score": "2-1",
+      "probability": 0.10444444444444445
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "哥伦比亚赛前被描述为可在4-2-3-1、4-3-3或相近结构间切换，因此哥伦比亚若让Diaz在左路拉开宽度，James在中路或左半空间接球，会迫使刚果民主共和国右翼卫、右中卫和中场一侧共同横移。",
+      "text_en": "Evidence from The Athletic / The New York Times, The Athletic: tactical structure supports Team A.",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_b30156fa31fd",
+        "E_247c7b62c8e9",
+        "E_0b6f708b0425",
+        "E_3c2ad3f4ae15",
+        "E_c97bcb5c9bfe",
+        "E_f2102c61d436",
+        "E_204fe3ccb073",
+        "E_d785c03ec95d",
+        "E_1e05cf444808"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times",
+        "The Athletic",
+        "World Soccer Talk"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "哥伦比亚无球阶段被描述为侵略性4-4-2，并能依靠转换进攻制造威胁，因此哥伦比亚若高位压迫并让边路、前腰和中场同时前插，就需要Lerma、Rios和中卫保持足够的保护距离。",
+      "text_en": "Evidence from The Athletic / The New York Times, Goal.com: tactical structure supports Team B.",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_b30156fa31fd",
+        "E_55adf2bc753b",
+        "E_a79edb38fbb3",
+        "E_204fe3ccb073",
+        "E_14d0c349cb62",
+        "E_0872b2caccdc",
+        "E_0c2c5421ebf9",
+        "E_9ddb26f77aec",
+        "E_c5f662a0e89f"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times",
+        "Goal.com",
+        "Mozzart Sport"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "比赛在瓜达拉哈拉的世界杯场地进行，因此如果实际比赛出现湿热、降雨或草皮湿滑，持续高压和高频往返的体能成本会上升。",
+      "text_en": "Evidence from FIFA, ESPN Australia: venue and environmental conditions supports a tighter or draw-leaning game.",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_bbb7cb6a05ff",
+        "E_79cd1f9e67c7",
+        "E_3cca2dd5e936",
+        "E_3c6d1cd1e78b",
+        "E_6e660025a2b5",
+        "E_62cd6b24fe46",
+        "E_698e94528453",
+        "E_9ddb26f77aec",
+        "E_c5f662a0e89f",
+        "E_8a743cd28c09",
+        "E_204fe3ccb073",
+        "E_a79edb38fbb3"
+      ],
+      "source_names": [
+        "FIFA",
+        "ESPN Australia",
+        "Climate Central"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "近期状态：Colombia is in FIFA World Cup Group K with Portugal; Colombia vs Portugal kicks off at 00:30…",
+      "text_en": "近期状态：Colombia is in FIFA World Cup Group K with Portugal; Colombia vs Portugal kicks off at 00:30…",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_6d813ea752af"
+      ],
+      "source_names": [
+        "BBC Sport - Colombia"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "球员状态：Colombia: TNT Sports' team news listed 'No confirmed absentees' and stated Colombia have no…",
+      "text_en": "球员状态：Colombia: TNT Sports' team news listed 'No confirmed absentees' and stated Colombia have no…",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_5cc46ab54c6a"
+      ],
+      "source_names": [
+        "TNT Sports"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "战术：The Guardian 的 DR Congo 2026 team guide 明确称，Sébastien Desabre 2022 年接手后最初偏好 4-2-3-1 阵型，之后逐步调整其…",
+      "text_en": "战术：The Guardian 的 DR Congo 2026 team guide 明确称，Sébastien Desabre 2022 年接手后最初偏好 4-2-3-1 阵型，之后逐步调整其…",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_d23668472f05"
+      ],
+      "source_names": [
+        "The Guardian"
+      ],
+      "generated_by": "fallback"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "fallback_no_llm",
+    "source_report_generated_at": "2026-06-23T01:34:30.115908Z",
+    "source_state_sha256": "b77255543b7a5381c2968dce1fb5a40aeeab29d8409d595735429b1359595395",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.27444444444444444,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.061481481481481484,
+            "tail_focus_conditional_probability": 0.22402159244264508,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.045925925925925926,
+            "tail_focus_conditional_probability": 0.16734143049932523,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.11851851851851852,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.042222222222222223,
+            "tail_focus_conditional_probability": 0.35625,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.021111111111111112,
+            "tail_focus_conditional_probability": 0.178125,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.20925925925925926,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.08703703703703704,
+            "tail_focus_conditional_probability": 0.41592920353982304,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.04555555555555556,
+            "tail_focus_conditional_probability": 0.2176991150442478,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

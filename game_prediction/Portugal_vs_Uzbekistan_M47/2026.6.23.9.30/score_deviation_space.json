@@ -1,0 +1,552 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-23T00:24:26.059984Z",
+  "prediction_generated_at_local": "2026-06-23T08:24:26.059984+08:00",
+  "quality_label": "ready",
+  "match_id": "M47",
+  "team_a": "Portugal",
+  "team_b": "Uzbekistan",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-0",
+      "deviation": 0.0,
+      "probability": 0.1348148148148148,
+      "probability_percent": 13.4815,
+      "outcome": "team_a",
+      "sample_count": 364,
+      "path_deviation": 0.581155144938013,
+      "result_surprise": 0.0,
+      "reason_cn": "Portugal在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.05210587104002434,
+      "probability": 0.12037037037037036,
+      "probability_percent": 12.037,
+      "outcome": "draw",
+      "sample_count": 325,
+      "path_deviation": 0.5602953720792416,
+      "result_surprise": 0.1071428571428571,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.09752466470527817,
+      "probability": 0.12111111111111111,
+      "probability_percent": 12.1111,
+      "outcome": "team_a",
+      "sample_count": 327,
+      "path_deviation": 0.59535953366181,
+      "result_surprise": 0.10164835164835151,
+      "reason_cn": "Portugal打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.21375997599356603,
+      "probability": 0.09111111111111111,
+      "probability_percent": 9.1111,
+      "outcome": "draw",
+      "sample_count": 246,
+      "path_deviation": 0.557701324120003,
+      "result_surprise": 0.32417582417582413,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.21778540022349788,
+      "probability": 0.09518518518518519,
+      "probability_percent": 9.5185,
+      "outcome": "team_a",
+      "sample_count": 257,
+      "path_deviation": 0.5768190004595323,
+      "result_surprise": 0.2939560439560438,
+      "reason_cn": "Portugal在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.3776060933374129,
+      "probability": 0.058888888888888886,
+      "probability_percent": 5.8889,
+      "outcome": "team_b",
+      "sample_count": 159,
+      "path_deviation": 0.544822443690201,
+      "result_surprise": 0.5631868131868132,
+      "reason_cn": "边路突破与肋部防守对位；Uzbekistan通过压迫或转换取得一球优势。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.38728550985014654,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.32089538710897536,
+      "result_surprise": 0.9917582417582418,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_residual_defense",
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.41056373861318357,
+      "probability": 0.061481481481481484,
+      "probability_percent": 6.1481,
+      "outcome": "team_a",
+      "sample_count": 166,
+      "path_deviation": 0.5784745335385318,
+      "result_surprise": 0.5439560439560439,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏；Portugal打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.4356566626104026,
+      "probability": 0.056296296296296296,
+      "probability_percent": 5.6296,
+      "outcome": "team_a",
+      "sample_count": 152,
+      "path_deviation": 0.5755021300044901,
+      "result_surprise": 0.5824175824175823,
+      "reason_cn": "Portugal打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.47248973768638797,
+      "probability": 0.04703703703703704,
+      "probability_percent": 4.7037,
+      "outcome": "team_b",
+      "sample_count": 127,
+      "path_deviation": 0.5645564008564319,
+      "result_surprise": 0.651098901098901,
+      "reason_cn": "Uzbekistan通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.47581732592795783,
+      "probability": 0.0362962962962963,
+      "probability_percent": 3.6296,
+      "outcome": "draw",
+      "sample_count": 98,
+      "path_deviation": 0.5240091941069557,
+      "result_surprise": 0.7307692307692307,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.5311459489928892,
+      "probability": 0.024444444444444446,
+      "probability_percent": 2.4444,
+      "outcome": "team_a",
+      "sample_count": 66,
+      "path_deviation": 0.5157825458710292,
+      "result_surprise": 0.8186813186813187,
+      "reason_cn": "边路突破与肋部防守对位、小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish",
+        "H_group_pressure_conservative_start"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.5622761988896152,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.44311330289453915,
+      "result_surprise": 0.9945054945054945,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start",
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.564368905547899,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.44311330289453915,
+      "result_surprise": 0.9972527472527473,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start",
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "7-0",
+      "deviation": 0.575889658693466,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.45421565876675024,
+      "result_surprise": 0.9917582417582418,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start",
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "8-0",
+      "deviation": 0.5879281552411008,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.45976683670285573,
+      "result_surprise": 0.9972527472527473,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start",
+        "H_dias_residual_defense"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.5971368794675779,
+      "probability": 0.025925925925925925,
+      "probability_percent": 2.5926,
+      "outcome": "team_a",
+      "sample_count": 70,
+      "path_deviation": 0.5683472944164093,
+      "result_surprise": 0.8076923076923077,
+      "reason_cn": "关键球员状态与角色变化；Portugal打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_dias_residual_defense"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.5976121335060646,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.4725293952600501,
+      "result_surprise": 0.9862637362637363,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.6396444569792475,
+      "probability": 0.008888888888888889,
+      "probability_percent": 0.8889,
+      "outcome": "team_a",
+      "sample_count": 24,
+      "path_deviation": 0.5303476619005009,
+      "result_surprise": 0.9340659340659341,
+      "reason_cn": "关键球员状态与角色变化、小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_residual_defense",
+        "H_group_pressure_conservative_start"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.6509953051175951,
+      "probability": 0.008888888888888889,
+      "probability_percent": 0.8889,
+      "outcome": "team_b",
+      "sample_count": 24,
+      "path_deviation": 0.5383713356459167,
+      "result_surprise": 0.9340659340659341,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6542021359404154,
+      "probability": 0.02074074074074074,
+      "probability_percent": 2.0741,
+      "outcome": "team_a",
+      "sample_count": 56,
+      "path_deviation": 0.5879754544294783,
+      "result_surprise": 0.8461538461538461,
+      "reason_cn": "关键球员状态与角色变化、小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_residual_defense",
+        "H_group_pressure_conservative_start"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.6769247098274059,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "draw",
+      "sample_count": 16,
+      "path_deviation": 0.5448659622269818,
+      "result_surprise": 0.9560439560439561,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.6903853479196749,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.5395881023242131,
+      "result_surprise": 0.9835164835164835,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "7-1",
+      "deviation": 0.6958597917625035,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.537540710775317,
+      "result_surprise": 0.9945054945054945,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start",
+        "H_dias_residual_defense"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 0.6979524984207872,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.537540710775317,
+      "result_surprise": 0.9972527472527473,
+      "reason_cn": "小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_group_pressure_conservative_start",
+        "H_dias_residual_defense"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.7005438573684409,
+      "probability": 0.015555555555555555,
+      "probability_percent": 1.5556,
+      "outcome": "team_b",
+      "sample_count": 42,
+      "path_deviation": 0.6000233750147619,
+      "result_surprise": 0.8846153846153846,
+      "reason_cn": "Uzbekistan充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.720602494267921,
+      "probability": 0.018518518518518517,
+      "probability_percent": 1.8519,
+      "outcome": "team_b",
+      "sample_count": 50,
+      "path_deviation": 0.6260367194298869,
+      "result_surprise": 0.8626373626373627,
+      "reason_cn": "边路突破与肋部防守对位；Uzbekistan充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.7283719902491557,
+      "probability": 0.004814814814814815,
+      "probability_percent": 0.4815,
+      "outcome": "team_b",
+      "sample_count": 13,
+      "path_deviation": 0.576795083501704,
+      "result_surprise": 0.9642857142857143,
+      "reason_cn": "边路突破与肋部防守对位；Uzbekistan充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.7496205760111047,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5740637787068638,
+      "result_surprise": 0.9972527472527473,
+      "reason_cn": "关键球员状态与角色变化、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_residual_defense",
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7559880986683893,
+      "probability": 0.012592592592592593,
+      "probability_percent": 1.2593,
+      "outcome": "team_a",
+      "sample_count": 34,
+      "path_deviation": 0.6273814134362573,
+      "result_surprise": 0.9065934065934066,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.8080657362223881,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.6183360024518033,
+      "result_surprise": 0.9917582417582418,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.8187598545568879,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_a",
+      "sample_count": 8,
+      "path_deviation": 0.6332918975352744,
+      "result_surprise": 0.978021978021978,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_residual_defense"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.8267249045108506,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.6359636424908098,
+      "result_surprise": 0.9835164835164835,
+      "reason_cn": "边路突破与肋部防守对位、小组形势与大赛压力促成乌兹别克保守开局，阶段性压低节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish",
+        "H_group_pressure_conservative_start"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.8829760561992086,
+      "probability": 0.01,
+      "probability_percent": 1.0,
+      "outcome": "team_a",
+      "sample_count": 27,
+      "path_deviation": 0.7067914770316229,
+      "result_surprise": 0.9258241758241759,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.8923907113784543,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.6779435384699065,
+      "result_surprise": 0.9917582417582418,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_dias_residual_defense"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.937928859491181,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "draw",
+      "sample_count": 3,
+      "path_deviation": 0.710133489297681,
+      "result_surprise": 0.9917582417582418,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 1.0,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.7599274214729225,
+      "result_surprise": 0.9807692307692307,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-3",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.7781683445930898,
+      "result_surprise": 0.9945054945054945,
+      "reason_cn": "边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_possession_wide_lowblock_finish"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

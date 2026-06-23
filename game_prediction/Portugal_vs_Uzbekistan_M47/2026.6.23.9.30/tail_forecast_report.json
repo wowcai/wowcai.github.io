@@ -1,0 +1,896 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-23T00:27:00.434381Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_Portugal_vs_Uzbekistan_M47\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "78db58a388246a3f0c683c1e403ff87111016b547aa04223fdea0c4220a8979f",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-23T00:24:26.059984+00:00"
+  },
+  "match": {
+    "match_id": "M47",
+    "team_a": "Portugal",
+    "team_b": "Uzbekistan",
+    "kickoff_utc": "2026-06-23T17:00:00Z",
+    "venue": "Houston Stadium",
+    "stage": "group",
+    "group": "K",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.5877777777777777,
+    "draw": 0.2548148148148148,
+    "team_b_win": 0.1574074074074074,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.1348148148148148
+      },
+      {
+        "score": "2-0",
+        "probability": 0.12111111111111111
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12037037037037036
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09518518518518519
+      },
+      {
+        "score": "0-0",
+        "probability": 0.09111111111111111
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Portugal",
+    "underdog_side": "team_b",
+    "underdog_team": "Uzbekistan",
+    "team_a_win": 0.5877777777777777,
+    "draw": 0.2548148148148148,
+    "team_b_win": 0.1574074074074074,
+    "win_probability_gap": 0.4303703703703703,
+    "underdog_win_probability": 0.1574074074074074,
+    "favorite_fail_to_win_probability": 0.41222222222222227,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "提案整体结构合理，三个情景均有输入证据支撑，机制引用真实存在，无新事实引入。主要问题：high_scoring中4-1与blowout重叠较严重且支持强度略被高估；blowout的5-0 support_grade=0偏高，证据无法支撑五球差；upset中0-2的support_grade=-1在候选池内偏低但尚在合理范围，1-2的evidence_ids误引E_72347843995e（该证据主要支持葡萄牙进攻方向，不支持乌兹别克爆冷路径），予以替换为E_ea878f27804f。其余候选维持原提案。总体attention_level和evidence_strength与证据体量相符，未发现为激进而过度极端的情形，无整体rejected。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.2518518518518519,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.58,
+      "rationale_cn": "开放大比分情景保持中等偏高关注，核心驱动是葡萄牙高控球、边路传中结构与乌兹别克低位防守之间的持续对抗。首战1-1的效率风险与保守开局机制共同压制节奏，令大比分需要具体触发路径而非默认结果。4-1与blowout的4-1高度重叠，但两个情景定义不同（4球总进球 vs 净胜≥3），该比分在两个候选池中均合法，保留但降低support_grade以区分情景重心。",
+      "supporting_evidence_ids": [
+        "E_f908b36a26d7",
+        "E_0c85ad37aa21",
+        "E_72347843995e",
+        "E_6b76cf7df360",
+        "E_315d613b4388"
+      ],
+      "counter_evidence_ids": [
+        "E_4d8bae57d2d5",
+        "E_61f69e76a7a1",
+        "E_9aea94b2a902",
+        "E_ea878f27804f",
+        "E_03959cdadf43"
+      ],
+      "caution_cn": "大比分与一边倒候选存在比分重叠，不可将两个情景概率相加。葡萄牙终结效率是核心闸门，首战高控球仅1-1是最强反向信号。",
+      "audit_note_cn": "4-1的support_grade由1降为0，理由是其在high_scoring情景中依赖葡萄牙极高效率且与blowout池高度重叠，在本情景下证据仅能给中性支持；其余三个候选维持原提案。",
+      "candidate_pool": [
+        {
+          "score": "3-1",
+          "base_probability": 0.061481481481481484,
+          "base_conditional_probability": 0.24411764705882352,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.0362962962962963,
+          "base_conditional_probability": 0.14411764705882352,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.025925925925925925,
+          "base_conditional_probability": 0.10294117647058822,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.024444444444444446,
+          "base_conditional_probability": 0.09705882352941175,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.08235294117647057,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.06176470588235293,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.049999999999999996,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.01,
+          "base_conditional_probability": 0.039705882352941174,
+          "total_goals": 6,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.061481481481481484,
+          "base_conditional_probability": 0.24411764705882352,
+          "tail_focus_conditional_probability": 0.3189346760302107,
+          "tail_focus_implied_overall_probability": 0.080324288777979,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "葡萄牙延续高控球和边路压制，前中段取得领先；乌兹别克在低位防守中仍通过转换或定位阶段拿到一次进球，但葡萄牙靠持续禁区占位和二次进攻再拉开到两球差。",
+          "rationale_cn": "大比分池中最贴合现有机制的比分，既反映葡萄牙场面优势，也保留乌兹别克打出一次高价值机会的可能，原始候选位置靠前。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_72347843995e",
+            "E_315d613b4388",
+            "E_6b76cf7df360",
+            "E_9aea94b2a902"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_group_pressure_conservative_start"
+          ]
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.0362962962962963,
+          "base_conditional_probability": 0.14411764705882352,
+          "tail_focus_conditional_probability": 0.12985292169073806,
+          "tail_focus_implied_overall_probability": 0.032703698796185884,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "葡萄牙控球时间更长但终结效率波动；乌兹别克在守转攻阶段或葡萄牙压上后的空间中两次惩罚对手，比赛在葡萄牙围攻和乌兹别克反击之间变得开放。",
+          "rationale_cn": "能解释葡萄牙高控球但防守转换受考验的路径，与部分推演代表比分相符，但要求乌兹别克进攻端效率明显高于基础预期，给中性支持。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_4d8bae57d2d5",
+            "E_61f69e76a7a1",
+            "E_dc1e0f8c1f01",
+            "E_9aea94b2a902"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_dias_residual_defense",
+            "H_group_pressure_conservative_start"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.024444444444444446,
+          "base_conditional_probability": 0.09705882352941175,
+          "tail_focus_conditional_probability": 0.08745196766927257,
+          "tail_focus_implied_overall_probability": 0.022024940005594577,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "葡萄牙占据主动并多次领先，但乌兹别克在比赛被拉开后利用转换和葡萄牙身后空间连续回应，形成高波动的单球差大比分。",
+          "rationale_cn": "符合开放比赛定义，但需要乌兹别克进攻端产出显著超出常规预期；现有证据更多支持其低位防守而非持续对攻，仅作边缘关注。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_72347843995e",
+            "E_dc1e0f8c1f01",
+            "E_9aea94b2a902"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_dias_residual_defense"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.08235294117647057,
+          "tail_focus_conditional_probability": 0.0742016695375646,
+          "tail_focus_implied_overall_probability": 0.01868782788353479,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "葡萄牙较早取得优势后迫使乌兹别克防线前移，边路传中、肋部配合和定位球持续制造压力；乌兹别克仍能在某个阶段追回一球，但无法阻止葡萄牙后续扩大比分。",
+          "rationale_cn": "该比分是3-1剧本的更极端版本，依赖葡萄牙终结改善和乌兹别克落后后结构松动。证据支持葡萄牙压制能力，但首战效率问题限制支持强度，在high_scoring情景中降为中性支持。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_0c85ad37aa21",
+            "E_72347843995e",
+            "E_6b76cf7df360",
+            "E_ea878f27804f"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.061481481481481484,
+          "base_conditional_probability": 0.24411764705882352,
+          "tail_focus_conditional_probability": 0.3189346760302107,
+          "tail_focus_implied_overall_probability": 0.080324288777979,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.0362962962962963,
+          "base_conditional_probability": 0.14411764705882352,
+          "tail_focus_conditional_probability": 0.12985292169073806,
+          "tail_focus_implied_overall_probability": 0.032703698796185884,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.025925925925925925,
+          "base_conditional_probability": 0.10294117647058822,
+          "tail_focus_conditional_probability": 0.09275208692195575,
+          "tail_focus_implied_overall_probability": 0.023359784854418485,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.024444444444444446,
+          "base_conditional_probability": 0.09705882352941175,
+          "tail_focus_conditional_probability": 0.08745196766927257,
+          "tail_focus_implied_overall_probability": 0.022024940005594577,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.08235294117647057,
+          "tail_focus_conditional_probability": 0.0742016695375646,
+          "tail_focus_implied_overall_probability": 0.01868782788353479,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.06176470588235293,
+          "tail_focus_conditional_probability": 0.05565125215317345,
+          "tail_focus_implied_overall_probability": 0.014015870912651093,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.049999999999999996,
+          "tail_focus_conditional_probability": 0.04505101364780708,
+          "tail_focus_implied_overall_probability": 0.011346181215003266,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.039705882352941174,
+          "tail_focus_conditional_probability": 0.0357758049556115,
+          "tail_focus_implied_overall_probability": 0.009010202729561417,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.035294117647058816,
+          "tail_focus_conditional_probability": 0.031800715516099115,
+          "tail_focus_implied_overall_probability": 0.008009069092943482,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.035294117647058816,
+          "tail_focus_conditional_probability": 0.031800715516099115,
+          "tail_focus_implied_overall_probability": 0.008009069092943482,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.1411111111111111,
+      "attention_level": "medium",
+      "evidence_strength": 0.5,
+      "rationale_cn": "一边倒情景主要指向葡萄牙方向，葡萄牙控球、边路输送和创造点能够长期压迫低位防线，若乌兹别克早失球结构松动则存在路径。但葡萄牙首战效率不足、乌兹别克低位防守韧性以及Dias复出仅降低对手进球而非直接放大己方比分，均制约崩盘发生概率。5-0的support_grade由0降为-1，因证据无法合理支撑五球净胜差，保留作极边缘候选。",
+      "supporting_evidence_ids": [
+        "E_f908b36a26d7",
+        "E_0c85ad37aa21",
+        "E_72347843995e",
+        "E_6b76cf7df360",
+        "E_ea878f27804f"
+      ],
+      "counter_evidence_ids": [
+        "E_4d8bae57d2d5",
+        "E_61f69e76a7a1",
+        "E_9aea94b2a902",
+        "E_03959cdadf43",
+        "E_b0e56d922b60"
+      ],
+      "caution_cn": "崩盘候选不与大比分重复计入情景概率；4-0、4-1依赖终结效率显著改善，现有证据对此的支撑较基础预期偏弱。不能引入红牌、伤退或更衣室冲突等额外崩盘触发器。",
+      "audit_note_cn": "5-0的support_grade由0改为-1：五球净胜差要求葡萄牙终结效率极高且乌兹别克防守完全崩溃，现有证据（高控球+低位防守+首战1-1）不能支持零分支持，降至负分作极低频边缘保留；其余三个候选维持原提案。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.056296296296296296,
+          "base_conditional_probability": 0.3989501312335958,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.025925925925925925,
+          "base_conditional_probability": 0.1837270341207349,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.14698162729658792,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.01,
+          "base_conditional_probability": 0.07086614173228346,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.06299212598425197,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.03412073490813649,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "6-1",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.02099737532808399,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.01837270341207349,
+          "total_goals": 6,
+          "winning_margin": 6
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.056296296296296296,
+          "base_conditional_probability": 0.3989501312335958,
+          "tail_focus_conditional_probability": 0.46794055201698515,
+          "tail_focus_implied_overall_probability": 0.06603161122906345,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "乌兹别克开局保持低位，但葡萄牙通过持续控球和边路传中不断压缩其防线；中段破门后葡萄牙继续控制节奏并在后续阶段扩大到三球，Dias回归相关机制帮助降低被反击破门的风险。",
+          "rationale_cn": "崩盘池中最自然的葡萄牙压制比分：不要求极端射门效率，符合葡萄牙控球优势、乌兹别克低位承压和葡萄牙防线稳定性改善的组合。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_72347843995e",
+            "E_6b76cf7df360",
+            "E_03959cdadf43",
+            "E_b0e56d922b60"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_dias_residual_defense"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.025925925925925925,
+          "base_conditional_probability": 0.1837270341207349,
+          "tail_focus_conditional_probability": 0.178343949044586,
+          "tail_focus_implied_overall_probability": 0.025166312809624912,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "葡萄牙较早打开局面后持续把球权留在乌兹别克半场，边路和定位球压力造成连续禁区事件；乌兹别克进攻出口被葡萄牙残余防守限制，最终形成零封大胜。",
+          "rationale_cn": "要求葡萄牙终结效率明显改善，但仍在机制可解释范围内：高控球、边路传中和低位防线承压共同支持葡萄牙多球领先。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_0c85ad37aa21",
+            "E_72347843995e",
+            "E_6b76cf7df360",
+            "E_572931fd75c4"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_dias_residual_defense"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.14698162729658792,
+          "tail_focus_conditional_probability": 0.14267515923566879,
+          "tail_focus_implied_overall_probability": 0.020133050247699926,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "葡萄牙在控球和宽度进攻中建立多球优势；乌兹别克在落后后通过一次转换或防守反击取得进球，但整体防守压力过大，最终仍被拉开到三球差。",
+          "rationale_cn": "相比4-0更承认葡萄牙压上后残余防守的不确定性和Araújo缺席带来的后场轮换风险；仍依赖葡萄牙进攻端高效兑现。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_72347843995e",
+            "E_dc1e0f8c1f01",
+            "E_315d613b4388",
+            "E_ea878f27804f"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_dias_residual_defense"
+          ]
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.06299212598425197,
+          "tail_focus_conditional_probability": 0.04331210191082802,
+          "tail_focus_implied_overall_probability": 0.006111818825194621,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "葡萄牙早段或中段连续得分后完全掌控比赛，乌兹别克被迫前压但无法有效出球，葡萄牙在后续阶段继续通过边路、二点球和定位球扩大比分并保持零封。",
+          "rationale_cn": "证据可以支持葡萄牙优势，但五球净胜差要求终结效率和对手防守崩溃同时成立，现有证据（首战1-1、乌兹别克低位韧性）不能给零或正向支持，降至-1作极低频边缘候选。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_72347843995e",
+            "E_6b76cf7df360",
+            "E_9aea94b2a902"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_dias_residual_defense"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.056296296296296296,
+          "base_conditional_probability": 0.3989501312335958,
+          "tail_focus_conditional_probability": 0.46794055201698515,
+          "tail_focus_implied_overall_probability": 0.06603161122906345,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.025925925925925925,
+          "base_conditional_probability": 0.1837270341207349,
+          "tail_focus_conditional_probability": 0.178343949044586,
+          "tail_focus_implied_overall_probability": 0.025166312809624912,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.02074074074074074,
+          "base_conditional_probability": 0.14698162729658792,
+          "tail_focus_conditional_probability": 0.14267515923566879,
+          "tail_focus_implied_overall_probability": 0.020133050247699926,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.07086614173228346,
+          "tail_focus_conditional_probability": 0.05732484076433122,
+          "tail_focus_implied_overall_probability": 0.008089171974522294,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.06299212598425197,
+          "tail_focus_conditional_probability": 0.04331210191082802,
+          "tail_focus_implied_overall_probability": 0.006111818825194621,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.03412073490813649,
+          "tail_focus_conditional_probability": 0.027600849256900217,
+          "tail_focus_implied_overall_probability": 0.0038947865062514747,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.02099737532808399,
+          "tail_focus_conditional_probability": 0.016985138004246284,
+          "tail_focus_implied_overall_probability": 0.0023967916961547533,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.01837270341207349,
+          "tail_focus_conditional_probability": 0.014861995753715499,
+          "tail_focus_implied_overall_probability": 0.002097192734135409,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.015748031496062992,
+          "tail_focus_conditional_probability": 0.012738853503184714,
+          "tail_focus_implied_overall_probability": 0.0017975937721160652,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-2",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.015748031496062992,
+          "tail_focus_conditional_probability": 0.012738853503184714,
+          "tail_focus_implied_overall_probability": 0.0017975937721160652,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Uzbekistan 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.1574074074074074,
+      "attention_level": "medium",
+      "evidence_strength": 0.34,
+      "rationale_cn": "爆冷适用但证据强度偏低。支持路径是葡萄牙首战未赢、终结转化存在风险，乌兹别克低位防守若执行到位可把比赛带入低比分偷袭。反向证据更强：葡萄牙整体实力、控球能力和创造点压低乌兹别克持续制造机会的空间。三个候选均保留，但1-2的evidence_ids中E_72347843995e（支持葡萄牙进攻身份）替换为E_ea878f27804f（支持乌兹别克承压与大赛心理）。",
+      "supporting_evidence_ids": [
+        "E_4d8bae57d2d5",
+        "E_61f69e76a7a1",
+        "E_9aea94b2a902",
+        "E_dc1e0f8c1f01",
+        "E_ea878f27804f"
+      ],
+      "counter_evidence_ids": [
+        "E_f908b36a26d7",
+        "E_0c85ad37aa21",
+        "E_72347843995e",
+        "E_03959cdadf43",
+        "E_b0e56d922b60",
+        "E_572931fd75c4"
+      ],
+      "caution_cn": "爆冷情景不能被理解为乌兹别克全面占优；合理候选是低比分、少机会、高效率。不引入红牌、门将失误或内部冲突等额外触发器。",
+      "audit_note_cn": "1-2的evidence_ids中将E_72347843995e（葡萄牙进攻身份证据，不支持爆冷路径）替换为E_ea878f27804f（Cannavaro称大赛场合带来压力，与乌兹别克心理和机会把握相关）；support_grade和script均维持原提案。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.058888888888888886,
+          "base_conditional_probability": 0.3741176470588235,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.2988235294117647,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.1176470588235294,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.0988235294117647,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.05647058823529411,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.03058823529411765,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.007058823529411764,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "3-4",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.007058823529411764,
+          "total_goals": 7,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.058888888888888886,
+          "base_conditional_probability": 0.3741176470588235,
+          "tail_focus_conditional_probability": 0.4246605831293122,
+          "tail_focus_implied_overall_probability": 0.06684472141850285,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "葡萄牙长时间控球但难以打穿密集防线，比赛保持低节奏；乌兹别克通过一次转换、二点球或定位阶段取得领先，随后继续收缩保护禁区。",
+          "rationale_cn": "爆冷池中最符合现有证据的路径：不要求乌兹别克持续压制，只要求葡萄牙终结低效和乌兹别克低位防守执行到位。",
+          "evidence_ids": [
+            "E_4d8bae57d2d5",
+            "E_61f69e76a7a1",
+            "E_9aea94b2a902",
+            "E_f908b36a26d7",
+            "E_dc1e0f8c1f01"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_group_pressure_conservative_start",
+            "H_dias_residual_defense"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.2988235294117647,
+          "tail_focus_conditional_probability": 0.28266191853995104,
+          "tail_focus_implied_overall_probability": 0.04449307977017748,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "葡萄牙依靠控球和边路压力取得进球或扳平，但乌兹别克在葡萄牙压上后利用转换空间再次得分，最终以单球优势爆冷。",
+          "rationale_cn": "该比分比0-1更开放，需要乌兹别克把少数机会转化为两个进球。葡萄牙后防人员和Dias锐度的不确定性提供一定路径，但证据不足以给正向强支持。",
+          "evidence_ids": [
+            "E_f908b36a26d7",
+            "E_ea878f27804f",
+            "E_6b0f5bfcbb79",
+            "E_dc1e0f8c1f01",
+            "E_9aea94b2a902"
+          ],
+          "mechanism_ids": [
+            "H_possession_wide_lowblock_finish",
+            "H_dias_residual_defense"
+          ]
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.1176470588235294,
+          "tail_focus_conditional_probability": 0.09459158691297574,
+          "tail_focus_implied_overall_probability": 0.01488941645852396,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "葡萄牙控球无果并在追分阶段进一步前压，乌兹别克先通过低位防守守住优势，再利用比赛后段空间追加一球。",
+          "rationale_cn": "仍属低比分爆冷路径，但要求乌兹别克既能零封葡萄牙又能两次有效惩罚其压上，考虑到葡萄牙进攻资源和控球压制能力，证据支撑偏弱。",
+          "evidence_ids": [
+            "E_4d8bae57d2d5",
+            "E_61f69e76a7a1",
+            "E_9aea94b2a902",
+            "E_03959cdadf43",
+            "E_b0e56d922b60"
+          ],
+          "mechanism_ids": [
+            "H_group_pressure_conservative_start",
+            "H_dias_residual_defense"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.058888888888888886,
+          "base_conditional_probability": 0.3741176470588235,
+          "tail_focus_conditional_probability": 0.4246605831293122,
+          "tail_focus_implied_overall_probability": 0.06684472141850285,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.2988235294117647,
+          "tail_focus_conditional_probability": 0.28266191853995104,
+          "tail_focus_implied_overall_probability": 0.04449307977017748,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.1176470588235294,
+          "tail_focus_conditional_probability": 0.09459158691297574,
+          "tail_focus_implied_overall_probability": 0.01488941645852396,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.0988235294117647,
+          "tail_focus_conditional_probability": 0.09347874471399956,
+          "tail_focus_implied_overall_probability": 0.01471424685312956,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.05647058823529411,
+          "tail_focus_conditional_probability": 0.05341642555085689,
+          "tail_focus_implied_overall_probability": 0.008408141058931177,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.03058823529411765,
+          "tail_focus_conditional_probability": 0.02893389717338082,
+          "tail_focus_implied_overall_probability": 0.004554409740254389,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.007058823529411764,
+          "tail_focus_conditional_probability": 0.006677053193857111,
+          "tail_focus_implied_overall_probability": 0.001051017632366397,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-4",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.007058823529411764,
+          "tail_focus_conditional_probability": 0.006677053193857111,
+          "tail_focus_implied_overall_probability": 0.001051017632366397,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.004705882352941176,
+          "tail_focus_conditional_probability": 0.004451368795904741,
+          "tail_focus_implied_overall_probability": 0.0007006784215775982,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-6",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.002352941176470588,
+          "tail_focus_conditional_probability": 0.0022256843979523706,
+          "tail_focus_implied_overall_probability": 0.0003503392107887991,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "78db58a388246a3f0c683c1e403ff87111016b547aa04223fdea0c4220a8979f"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_Portugal_vs_Uzbekistan_M47\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\web_delivery\\Portugal_vs_Uzbekistan_M47\\2026.6.24.01\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_Portugal_vs_Uzbekistan_M47\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\web_delivery\\Portugal_vs_Uzbekistan_M47\\2026.6.24.01\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

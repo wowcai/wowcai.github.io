@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-23T00:46:11.773535Z",
+  "prediction_generated_at_local": "2026-06-23T08:46:11.773535+08:00",
+  "match": {
+    "match_id": "M45",
+    "team_a": "England",
+    "team_b": "Ghana",
+    "kickoff_utc": "2026-06-23T20:00:00Z",
+    "venue": "Boston Stadium",
+    "stage": "group",
+    "group": "L",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 198,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.6844444444444444,
+    "draw": 0.2114814814814815,
+    "team_b_win": 0.10407407407407407
+  },
+  "most_likely_outcome": {
+    "label": "England胜",
+    "probability": 0.6844444444444444
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.14666666666666667
+    },
+    {
+      "score": "2-0",
+      "probability": 0.12925925925925927
+    },
+    {
+      "score": "1-1",
+      "probability": 0.09666666666666666
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "英格兰被指采用4-2-3-1，凯恩和赖斯赛前均可出战。",
+      "text_en": "England are reported to be set up in a 4-2-3-1, with Harry Kane and Declan Rice both available before the Ghana match",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_dd824565c6cf",
+        "E_d0b68f2f4e7c",
+        "E_8ee9590930bd"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times",
+        "AOL",
+        "Evening Standard"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "加纳主要威胁来自反击和定位球，并被报道倾向中低位防守。",
+      "text_en": "Ghana’s clearest threats are described as counter-attacks and set pieces, while previews also report a tendency to defend in a mid or low block",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_69d222a8a96f",
+        "E_bb8cee354c1c"
+      ],
+      "source_names": [
+        "Ghana Football Association",
+        "The Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "图赫尔称萨卡不太可能首发，《卫报》称其对加纳仍将替补。",
+      "text_en": "Thomas Tuchel has indicated Bukayo Saka is unlikely to start, and The Guardian reports he is set for another bench role against Ghana",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_ea5c77c74e25",
+        "E_cc8879dcfec4",
+        "E_ec997bcbd7f8"
+      ],
+      "source_names": [
+        "Sky Sports",
+        "Fox Sports",
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "加纳预计4-2-3-1，努阿马、苏莱马纳、塞梅尼奥在前场。",
+      "text_en": "Ghana are previewed in a 4-2-3-1, with Nuamah, Sulemana and Semenyo listed among the attacking players in the predicted line-up",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_c7c9c59420c9",
+        "E_4b22537e3a97"
+      ],
+      "source_names": [
+        "Sports Mole",
+        "Racing Post"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛6月23日16时在波士顿体育场开球，早晨有雨赛时或转晴。",
+      "text_en": "The match is scheduled for 4 p.m. on June 23 at Boston Stadium, with local messaging noting a rainy morning but hoped-for clearer skies by kickoff",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_ea02dc5e515b",
+        "E_3a2ee77a54c0"
+      ],
+      "source_names": [
+        "City of Boston Facebook",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.0-tail-brief-summary-v1",
+    "source_tool_version": "7.4.0-tail-postprocessor",
+    "source_report_status": "proposer_only",
+    "source_report_generated_at": "2026-06-23T00:49:26.595684Z",
+    "source_state_sha256": "c773b551410b82109460f01e326000dea1534fc18f57262e1d11c747d6fb2bd3",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "主线仍是英格兰优势，但高偏离池中最值得关注的是英格兰控场后转化为3球以上输出；开放大比分主要依赖英格兰持续压制叠加加纳反击/定位球偷到一球，爆冷则需要加纳把少量转换机会极高效兑现。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.2814814814814815,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.58,
+        "summary_cn": "总进球至少4球的路径并非单纯对攻，而更像英格兰长期领地优势制造多次禁区压力，同时加纳凭反击或定位球获得有限但有价值的得分窗口。英格兰凯恩、赖斯可用，贝林厄姆前腰角色明确，加纳中低位防守会给英格兰持续围攻条件；但萨卡大概率替补和加纳低位紧凑也会压低早段开放程度。",
+        "caution_cn": "大比分不能简单理解为双方都会持续开放；若加纳低位压缩成功、英格兰右路爆点后置，比赛可能长时间停留在低比分。不要把本情景与一边倒情景中相同比分的事件概率重复相加。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.052592592592592594,
+            "tail_focus_conditional_probability": 0.23762261973456433,
+            "support_grade": 2,
+            "script_cn": "英格兰控球和反抢建立持续压制，上半场或中段先打开局面；加纳在落后后通过反击或定位球追回一球，但英格兰凭凯恩支点、贝林厄姆前插和边路宽度再度拉开。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.04814814814814815,
+            "tail_focus_conditional_probability": 0.1800346220427005,
+            "support_grade": 1,
+            "script_cn": "英格兰早段或中段破门后继续压在加纳半场，加纳反击第一脚多次被赖斯所在的中场屏障破坏，比赛后段因体能和阵型拉伸再丢球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.23296296296296296,
+        "attention_level": "medium_high",
+        "attention_label_cn": "中高",
+        "evidence_strength": 0.61,
+        "summary_cn": "一边倒路径主要来自英格兰基础实力、控球压迫和禁区占领优势，而不是加纳主动崩盘的独立证据。加纳门将位置不确定、整体防守被迫长期承压，会提高英格兰净胜3球以上的尾部空间；但加纳中低位防守与反击/定位球威胁会限制无阻力碾压的确定性。",
+        "caution_cn": "崩盘情景依赖早破门、加纳低位结构被迫拉开，以及英格兰终结效率维持；若前30分钟无进球或加纳反击制造威胁，净胜3球以上会明显变难。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.09592592592592593,
+            "tail_focus_conditional_probability": 0.4764955909408108,
+            "support_grade": 2,
+            "script_cn": "英格兰稳态压制但不完全打疯，先通过持续控球和禁区压力取得领先，随后在加纳体能下降或阵型前压时补进第二、第三球，防守端由赖斯和中卫保护住反击空间。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.04814814814814815,
+            "tail_focus_conditional_probability": 0.1979318657615936,
+            "support_grade": 1,
+            "script_cn": "英格兰较早破门后继续压迫，加纳中低位防线被迫长时间横移和封堵，门将或后防承压增加；下半场英格兰通过肋部、传中和二点球把优势扩大到四球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.10407407407407407,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.36,
+        "summary_cn": "爆冷的核心证据不是加纳能持续压制英格兰，而是其反击和定位球可以在低控球、少机会情况下制造高价值瞬间。若英格兰压上后丢失肋部保护，或萨卡替补导致早段攻坚效率不足，加纳有守住优势的路径；但英格兰核心健康和整体实力优势构成强反证。",
+        "caution_cn": "爆冷不应扩展为加纳场面占优假设；更合理的是低比分、小样本机会兑现。若英格兰先取得领先，绝大多数爆冷比分脚本会迅速失效。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.04518518518518518,
+            "tail_focus_conditional_probability": 0.48702594810379235,
+            "support_grade": 1,
+            "script_cn": "加纳前60分钟保持低位紧凑，英格兰控球多但高质量机会不足；加纳利用一次定位球、二点球或边路反击打入唯一进球，随后继续压低节奏守住。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.025555555555555557,
+            "tail_focus_conditional_probability": 0.22954091816367264,
+            "support_grade": 0,
+            "script_cn": "英格兰通过持续压制取得进球或扳平，但加纳两次把反击/定位球机会转化为进球；英格兰后段加强进攻却暴露更多身后空间。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

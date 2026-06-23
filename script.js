@@ -79,22 +79,40 @@ const WC_DICT = {
 };
 
 const WC_VENUE_ZH = {
-  "Estadio Azteca, Mexico City": "阿兹特克体育场（墨西哥城）",
-  "Estadio Akron, Zapopan": "阿克隆体育场（萨波潘）",
-  "Estadio BBVA, Guadalupe": "BBVA 体育场（瓜达卢佩）",
-  "Mercedes-Benz Stadium, Atlanta": "梅赛德斯-奔驰体育场（亚特兰大）",
-  "BMO Field, Toronto": "BMO 球场（多伦多）",
-  "Levi's Stadium, Santa Clara": "李维斯体育场（圣克拉拉）",
-  "SoFi Stadium, Inglewood": "SoFi 体育场（英格尔伍德）",
-  "BC Place, Vancouver": "BC Place 体育场（温哥华）",
-  "Lumen Field, Seattle": "流明球场（西雅图）",
-  "Gillette Stadium, Foxborough": "吉列体育场（福克斯堡）",
-  "MetLife Stadium, East Rutherford": "大都会人寿体育场（东卢瑟福）",
-  "Lincoln Financial Field, Philadelphia": "林肯金融球场（费城）",
-  "Hard Rock Stadium, Miami Gardens": "硬石体育场（迈阿密花园）",
-  "NRG Stadium, Houston": "NRG 体育场（休斯顿）",
-  "Arrowhead Stadium, Kansas City": "箭头体育场（堪萨斯城）",
-  "AT&T Stadium, Arlington": "AT&T 体育场（阿灵顿）"
+  "Estadio Azteca, Mexico City": "阿兹特克体育场",
+  "Estadio Akron, Zapopan": "阿克隆体育场",
+  "Estadio BBVA, Guadalupe": "BBVA 体育场",
+  "Mercedes-Benz Stadium, Atlanta": "梅赛德斯-奔驰体育场",
+  "BMO Field, Toronto": "BMO 球场",
+  "Levi's Stadium, Santa Clara": "李维斯体育场",
+  "SoFi Stadium, Inglewood": "SoFi 体育场",
+  "BC Place, Vancouver": "BC Place 体育场",
+  "Lumen Field, Seattle": "流明球场",
+  "Gillette Stadium, Foxborough": "吉列体育场",
+  "MetLife Stadium, East Rutherford": "大都会人寿体育场",
+  "Lincoln Financial Field, Philadelphia": "林肯金融球场",
+  "Hard Rock Stadium, Miami Gardens": "硬石体育场",
+  "NRG Stadium, Houston": "NRG 体育场",
+  "Arrowhead Stadium, Kansas City": "箭头体育场",
+  "AT&T Stadium, Arlington": "AT&T 体育场",
+  "Atlanta Stadium": "梅赛德斯-奔驰体育场",
+  "Boston Stadium": "吉列体育场",
+  "Dallas Stadium": "AT&T 体育场",
+  "Guadalajara Stadium": "阿克隆体育场",
+  "Houston Stadium": "NRG 体育场",
+  "Kansas City Stadium": "箭头体育场",
+  "Los Angeles Stadium": "SoFi 体育场",
+  "Mexico City Stadium": "阿兹特克体育场",
+  "Miami Stadium": "硬石体育场",
+  "Monterrey Stadium": "BBVA 体育场",
+  "New York New Jersey Stadium": "大都会人寿体育场",
+  "New York/New Jersey Stadium, East Rutherford": "大都会人寿体育场",
+  "Philadelphia Stadium": "林肯金融球场",
+  "San Francisco Bay Area Stadium": "李维斯体育场",
+  "San Francisco Bay Area Stadium, Santa Clara": "李维斯体育场",
+  "Seattle Stadium": "流明球场",
+  "Toronto Stadium": "BMO 球场",
+  "BC Place Vancouver": "BC Place 体育场"
 };
 
 const WC_CITY_ZH = {
@@ -716,7 +734,7 @@ function updateTournamentPredictionRangeBadge(files = []) {
     return;
   }
 
-  setRangeBadge(node, formatPredictionRangeLabel(getTournamentEvidenceTimeLabels(files)));
+  setRangeBadge(node, formatLatestPredictionTimeLabel(getTournamentEvidenceTimeLabels(files)));
 }
 
 function setRangeBadge(node, pair) {
@@ -759,6 +777,17 @@ function formatPredictionRangeLabel(labels) {
   }
 
   return { zh: `${first} 至 ${last}`, en: `${first} – ${last}` };
+}
+
+function formatLatestPredictionTimeLabel(labels) {
+  const uniqueLabels = [...new Set(labels || [])].filter(Boolean);
+
+  if (!uniqueLabels.length) {
+    return { zh: "时间待定", en: "Time TBD" };
+  }
+
+  const latest = uniqueLabels[uniqueLabels.length - 1];
+  return { zh: latest, en: latest };
 }
 
 function renderTournamentSummaryMount(summaryPanel, predictions) {
@@ -1182,7 +1211,7 @@ async function loadGamePredictionMatch(spec, baseMatches = worldCupMatches || []
     group: latest.brief?.match?.group ? `${latest.brief.match.group}组` : baseMatch?.group,
     round: baseMatch?.round || "第1轮",
     matchTime: formatKickoffTime(latest.brief?.match?.kickoff_utc) || baseMatch?.matchTime || "时间待定",
-    venue: latest.brief?.match?.venue || baseMatch?.venue || "场馆待定",
+    venue: baseMatch?.venue || latest.brief?.match?.venue || "场馆待定",
     predictionStatus: "predicted",
     matchStatus: baseMatch?.matchStatus || "upcoming",
     predictedScore: topScore || baseMatch?.predictedScore || "待预测",
@@ -2098,7 +2127,8 @@ function renderLatestScoreForecast(match) {
   const latestVersion = getLatestMatchPredictionVersion(match);
   const brief = latestVersion?.brief || {};
   const topScores = normalizeLatestScoreItems(brief.top_scores).slice(0, 3);
-  const tailScenarios = getLatestTailFocusScenarios(brief).slice(0, 2);
+  const tailScenarios = getLatestTailFocusScenarios(brief)
+    .filter((scenario) => shouldShowLatestScenario(match, scenario));
 
   return `
     <div class="latest-score-forecast">
@@ -2115,6 +2145,16 @@ function renderLatestScoreForecast(match) {
       </div>
     </div>
   `;
+}
+
+function shouldShowLatestScenario(match, scenario) {
+  if (["high_scoring", "blowout"].includes(scenario?.scenarioId)) {
+    return true;
+  }
+
+  const matchNo = String(match?.matchNo || match?.id || "").toUpperCase();
+
+  return scenario?.scenarioId === "upset" && matchNo === "M48";
 }
 
 function getLatestMatchPredictionVersion(match) {
@@ -2143,12 +2183,14 @@ function getLatestTailFocusScenarios(brief) {
       const labelEn = scenario?.title_en || scenario?.label_en || buildTailScenarioLabelEn(scenario, labelZh);
 
       return {
+        scenarioId: scenario?.scenario_id || inferTailScenarioId(labelZh, 0),
         labelZh,
         labelEn,
+        baseProbability: normalizeProbabilityToPercent(scenario?.base_event_probability),
         scoreItems: normalizeLatestScoreItems(scenario?.top_scores || scenario?.selected_scores || []).slice(0, 2)
       };
     })
-    .filter((scenario) => scenario.labelZh || scenario.scoreItems.length);
+    .filter((scenario) => scenario.labelZh || Number.isFinite(scenario.baseProbability) || scenario.scoreItems.length);
 }
 
 function buildTailScenarioLabelEn(scenario, labelZh) {
@@ -2171,8 +2213,9 @@ function translateTailScenarioName(scenarioId, label) {
   return label || "Tail focus";
 }
 
-function renderLatestScoreChip(item, isPrimary = false) {
-  const probability = Number.isFinite(item.probability) ? formatProbabilityValue(item.probability) : "";
+function renderLatestScoreChip(item, isPrimary = false, options = {}) {
+  const showProbability = options.showProbability !== false;
+  const probability = showProbability && Number.isFinite(item.probability) ? formatProbabilityValue(item.probability) : "";
 
   return `
     <span class="latest-score-chip ${isPrimary ? "is-primary" : ""}">
@@ -2183,18 +2226,57 @@ function renderLatestScoreChip(item, isPrimary = false) {
 }
 
 function renderLatestScenarioTile(scenario) {
-  const labelZh = scenario?.labelZh || "高偏离预测";
-  const labelEn = scenario?.labelEn || "Tail focus";
+  const displayLabel = getLatestScenarioDisplayLabel(scenario);
+  const labelZh = displayLabel.zh;
+  const labelEn = displayLabel.en;
+  const baseProbability = Number.isFinite(scenario?.baseProbability)
+    ? formatProbabilityValue(scenario.baseProbability)
+    : "";
   const scores = Array.isArray(scenario?.scoreItems) ? scenario.scoreItems : [];
+  const labelText = baseProbability
+    ? `${L(labelZh, labelEn)} · ${baseProbability}`
+    : L(labelZh, labelEn);
+  const labelAriaZh = baseProbability ? `${labelZh} ${baseProbability}` : labelZh;
+  const labelAriaEn = baseProbability ? `${labelEn} ${baseProbability}` : labelEn;
 
   return `
     <div class="latest-score-scenario">
-      <span ${biAttrs(labelZh, labelEn)}>${escapeHtml(L(labelZh, labelEn))}</span>
+      <span ${biAttrs(labelAriaZh, labelAriaEn)}>${escapeHtml(labelText)}</span>
       <div class="latest-scenario-score-list">
-        ${scores.length ? scores.map((item) => renderLatestScoreChip(item)).join("") : `<em>${escapeHtml(L("待补充", "Pending"))}</em>`}
+        ${scores.length ? scores.map((item) => renderLatestScoreChip(item, false, { showProbability: false })).join("") : `<em>${escapeHtml(L("待补充", "Pending"))}</em>`}
       </div>
     </div>
   `;
+}
+
+function getLatestScenarioDisplayLabel(scenario) {
+  const scenarioId = scenario?.scenarioId || inferTailScenarioId(scenario?.labelZh || "", 0);
+
+  if (scenarioId === "high_scoring") {
+    return {
+      zh: "总进球数≥4",
+      en: "Goal fest (total goals >= 4)"
+    };
+  }
+
+  if (scenarioId === "blowout") {
+    return {
+      zh: "一方大胜",
+      en: "One-sided win (margin >= 3)"
+    };
+  }
+
+  if (scenarioId === "upset") {
+    return {
+      zh: "爆冷",
+      en: "Upset"
+    };
+  }
+
+  return {
+    zh: scenario?.labelZh || "高偏离预测",
+    en: scenario?.labelEn || "Tail focus"
+  };
 }
 
 function renderLatestTeam(team, fallbackName) {
@@ -3673,7 +3755,7 @@ function renderWorldCupTournamentBoard(predictions) {
 const GK_PROVINCE_EN = {
   "北京": "Beijing", "天津": "Tianjin", "河北": "Hebei", "山西": "Shanxi",
   "内蒙古": "Inner Mongolia", "辽宁": "Liaoning", "吉林": "Jilin", "黑龙江": "Heilongjiang",
-  "上海": "Shanghai", "江苏": "Jiangsu", "浙江": "Zhejiang", "安徽": "Anhui",
+  "上海": "Shanghai", "上海市": "Shanghai", "江苏": "Jiangsu", "浙江": "Zhejiang", "安徽": "Anhui",
   "福建": "Fujian", "江西": "Jiangxi", "山东": "Shandong", "河南": "Henan",
   "湖北": "Hubei", "湖南": "Hunan", "广东": "Guangdong", "广西": "Guangxi",
   "海南": "Hainan", "重庆": "Chongqing", "四川": "Sichuan", "贵州": "Guizhou",
@@ -3725,7 +3807,8 @@ const GK_NOTE_EN = {
   "示例数据，后续替换为官方和模型结果。": "Sample data, to be replaced with official and model results.",
   "由旧版示例数据适配，缺失字段已按占位逻辑补齐。": "Adapted from legacy sample data; missing fields use placeholder logic.",
   "示例/占位数据：用于展示页面结构和交互口径，后续应替换为各省官方投档线、最低位次、招生计划和模型预测结果。": "Sample / placeholder data, used to show the page structure and interaction. Replace with each province's official admission lines, minimum ranks, enrollment plans and model predictions.",
-  "浙江综合类预测数据，最终以浙江省教育考试院和高校官方信息为准。": "Zhejiang comprehensive-track prediction data; final decisions follow the official Zhejiang examination authority and university information."
+  "浙江综合类预测数据，最终以浙江省教育考试院和高校官方信息为准。": "Zhejiang comprehensive-track prediction data; final decisions follow the official Zhejiang examination authority and university information.",
+  "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。": "Shanghai comprehensive-track prediction data; final decisions follow the official Shanghai examination authority and university information."
 };
 
 function gkProvinceEn(zh) {
@@ -4176,11 +4259,13 @@ function estimateFallbackRank(score, index) {
 
 function getGaokaoProvinceOrder(data, releaseData) {
   const provinceSet = new Set(data.map((item) => item.province));
-  if (provinceSet.has("浙江")) {
-    return ["浙江"];
-  }
+  const preferred = ["浙江", "上海市"];
+  const ordered = preferred.filter((province) => provinceSet.has(province));
+  const rest = [...provinceSet]
+    .filter((province) => !preferred.includes(province))
+    .sort((a, b) => a.localeCompare(b, "zh-CN"));
 
-  return [...provinceSet].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  return [...ordered, ...rest];
 }
 
 function renderGaokaoHeroStats(data, meta, target) {
@@ -4219,7 +4304,7 @@ function renderProvinceQuickButtons(provinceOrder, state, refs) {
     return;
   }
 
-  const quick = ["浙江"].filter((province) => provinceOrder.includes(province));
+  const quick = ["浙江", "上海市"].filter((province) => provinceOrder.includes(province));
   refs.quickList.innerHTML = quick.map((province) => `
     <button class="${province === state.province ? "is-active" : ""}" type="button" data-gaokao-quick-province="${escapeHtml(province)}">${escapeHtml(gkProvinceText(province))}</button>
   `).join("");
@@ -4336,7 +4421,6 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
       return point && Number.isFinite(Number(point.x)) && Number.isFinite(Number(point.y));
     })
     .sort((a, b) => b.prediction.predictedScore - a.prediction.predictedScore);
-  const scoreValues = entries.map((entry) => entry.prediction.predictedScore).filter(Number.isFinite);
   const provinceGroups = getGaokaoProvinceGroups(entries);
   const sourceHeight = Number(refs.predictionMap.dataset.mapSourceHeight) || 0;
   const cropHeight = Number(refs.predictionMap.dataset.mapCropHeight) || 0;
@@ -4352,10 +4436,9 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
 
   if (refs.mapSummary) {
     if (entries.length) {
-      const rangeStr = formatMinMax(scoreValues, "分");
       refs.mapSummary.textContent = getLang() === "en"
-        ? `${provinceGroups.length} regions · ${entries.length} universities, predicted range ${rangeStr}. Tap a region first, then pick a university.`
-        : `${provinceGroups.length} 个高校所在省份 · ${entries.length} 所高校，预测范围 ${rangeStr}。先点击地图上的省份，再选择高校查看趋势。`;
+        ? `${provinceGroups.length} regions · ${entries.length} universities. Tap a region first, then pick a university.`
+        : `${provinceGroups.length} 个高校所在省份 · ${entries.length} 所高校。先点击地图上的省份，再选择高校查看趋势。`;
     } else {
       refs.mapSummary.textContent = L(
         "当前省份和科类暂无可展示的高校预测数据。",
@@ -4778,16 +4861,14 @@ function renderGaokaoProvincePanel(locationProvince, entries, state) {
     (a, b) => (b.prediction?.predictedScore || 0) - (a.prediction?.predictedScore || 0)
   );
   const provinceName = gkProvinceText(locationProvince);
-  const scoreValues = sorted.map((entry) => entry.prediction?.predictedScore).filter(Number.isFinite);
-  const rangeStr = formatMinMax(scoreValues, "分");
   const sourceProvinceText = state.province ? gkProvinceText(state.province) : "";
   const subjText = state.subjectType ? gkSubjectText(state.subjectType) : "";
   const contextText = getLang() === "en"
     ? `${sourceProvinceText} ${subjText}`.trim()
     : `${sourceProvinceText}${subjText}`;
   const metaText = getLang() === "en"
-    ? `${contextText} · ${sorted.length} universities · range ${rangeStr}`
-    : `${contextText}招生 · ${sorted.length} 所高校 · 预测范围 ${rangeStr}`;
+    ? `${contextText} · ${sorted.length} universities`
+    : `${contextText}招生 · ${sorted.length} 所高校`;
 
   const items = sorted.map((entry) => `
     <button type="button" class="gaokao-province-school" data-open-gaokao-detail-from-province="${escapeHtml(entry.universityId)}">
@@ -4796,8 +4877,8 @@ function renderGaokaoProvincePanel(locationProvince, entries, state) {
         <small>${escapeHtml(gkLocationText(entry))} · ${escapeHtml(gkMajorGroupText(entry.majorGroup))}</small>
       </span>
       <span class="gaokao-province-school-score">
-        <strong>${formatNullable(entry.prediction.predictedScore, "分")}</strong>
-        <small>${escapeHtml(L("位次", "Rank"))} ${formatRank(entry.prediction.predictedRank)}</small>
+        <strong>${formatRank(entry.prediction.predictedRank)}</strong>
+        <small>${escapeHtml(L("预测位次", "Predicted rank"))}</small>
       </span>
     </button>
   `).join("");
@@ -4846,13 +4927,16 @@ function renderUniversityDetail(entry) {
   const rankValues = entry.history.map((row) => row.minRank);
   const years = entry.history.map((row) => row.year);
   const predictionYear = entry.prediction?.year || 2026;
+  const rankChangeFromLastYear = Number.isFinite(nullableNumber(entry.prediction?.predictedRank)) && Number.isFinite(nullableNumber(latest?.minRank))
+    ? nullableNumber(entry.prediction.predictedRank) - nullableNumber(latest.minRank)
+    : null;
 
   const admissionText = getLang() === "en"
     ? `${gkProvinceEn(entry.province)} admission`
     : `${entry.province}招生`;
-  const latestText = getLang() === "en"
-    ? `Latest history ${formatNullable(latest?.minScore, "分")}`
-    : `最新历史分 ${formatNullable(latest?.minScore, "分")}`;
+  const latestRankText = getLang() === "en"
+    ? `Latest historical rank ${formatRank(latest?.minRank)}`
+    : `最新历史位次 ${formatRank(latest?.minRank)}`;
 
   return `
     <div class="gaokao-detail-header">
@@ -4861,28 +4945,29 @@ function renderUniversityDetail(entry) {
         <h2 id="gaokao-detail-title">${escapeHtml(gkUniversityName(entry))}</h2>
         <p>${escapeHtml(gkLocationText(entry))} · ${escapeHtml(admissionText)} · ${escapeHtml(gkSubjectText(entry.subjectType))} · ${escapeHtml(gkMajorGroupText(entry.majorGroup))}</p>
       </div>
-      <span class="gaokao-detail-score-chip">${formatNullable(entry.prediction.predictedScore, "分")}</span>
+      <span class="gaokao-detail-score-chip">${formatRank(entry.prediction.predictedRank)}</span>
     </div>
 
     <div class="gaokao-detail-kpis">
-      <div><span>${escapeHtml(L("预测分数线", "Predicted score"))}</span><strong>${formatNullable(entry.prediction.predictedScore, "分")}</strong><p>${formatRange(entry.prediction.scoreRange, "分")}</p></div>
       <div><span>${escapeHtml(L("预测位次", "Predicted rank"))}</span><strong>${formatRank(entry.prediction.predictedRank)}</strong><p>${formatRankRange(entry.prediction.rankRange)}</p></div>
-      <div><span>${escapeHtml(L("较上一年变化", "Change vs last year"))}</span><strong>${formatSigned(entry.prediction.changeFromLastYear)}${gkUnit(" 分")}</strong><p>${escapeHtml(latestText)}</p></div>
+      <div><span>${escapeHtml(L("位次较上一年变化", "Rank change vs last year"))}</span><strong>${formatSigned(rankChangeFromLastYear)}${gkUnit(" 名")}</strong><p>${escapeHtml(latestRankText)}</p></div>
+      <div><span>${escapeHtml(L("预测分数线", "Predicted score"))}</span><strong>${escapeHtml(L("待更新", "Pending"))}</strong><p>${escapeHtml(L("待更新", "Pending"))}</p></div>
     </div>
 
     <div class="gaokao-detail-chart-grid">
       <div>
-        <h3>${escapeHtml(L("2021-2026 最低分趋势", "2021-2026 minimum score trend"))}</h3>
-        ${renderDetailLineChart(scoreValues, years, "score", {
-          year: predictionYear,
-          value: entry.prediction.predictedScore
-        })}
-      </div>
-      <div>
-        <h3>${escapeHtml(L("2021-2026 最低位次趋势", "2021-2026 minimum rank trend"))}</h3>
+        <h3>${escapeHtml(L("2021-2026最低位次趋势", "2021-2026 minimum rank trend"))}</h3>
         ${renderDetailLineChart(rankValues, years, "rank", {
           year: predictionYear,
           value: entry.prediction.predictedRank
+        })}
+      </div>
+      <div>
+        <h3>${escapeHtml(L("2021-2026最低分趋势", "2021-2026 minimum score trend"))}</h3>
+        ${renderDetailLineChart(scoreValues, years, "score", {
+          year: predictionYear,
+          value: null,
+          reserveYear: true
         })}
       </div>
     </div>
@@ -5019,6 +5104,7 @@ function renderDetailLineChart(values, labels, type, forecast = null) {
   })).filter((point) => Number.isFinite(point.value));
   const forecastValue = nullableNumber(forecast?.value);
   const hasForecast = Number.isFinite(forecastValue);
+  const shouldReserveForecastYear = Boolean(forecast && (hasForecast || forecast.reserveYear));
   const allValues = [
     ...historicalPoints.map((point) => point.value),
     ...(hasForecast ? [forecastValue] : [])
@@ -5034,7 +5120,7 @@ function renderDetailLineChart(values, labels, type, forecast = null) {
   const min = Math.min(...allValues);
   const max = Math.max(...allValues);
   const range = max - min || 1;
-  const chartLabels = hasForecast ? [...labels, forecast.year || 2026] : labels;
+  const chartLabels = shouldReserveForecastYear ? [...labels, forecast.year || 2026] : labels;
   const forecastIndex = chartLabels.length - 1;
   const denominator = Math.max(1, chartLabels.length - 1);
   const xFor = (index) => pad.left + (index * (width - pad.left - pad.right)) / denominator;
@@ -5065,7 +5151,7 @@ function renderDetailLineChart(values, labels, type, forecast = null) {
     </svg>
     <div class="gaokao-chart-legend">
       <span class="history">${escapeHtml(L("2021-2025 往年", "2021-2025 historical"))}</span>
-      <span class="forecast">${escapeHtml(L("2026 预测", "2026 forecast"))}</span>
+      ${hasForecast ? `<span class="forecast">${escapeHtml(L("2026 预测", "2026 forecast"))}</span>` : ""}
     </div>
   `;
 }

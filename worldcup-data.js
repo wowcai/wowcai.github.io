@@ -424,7 +424,7 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M41", "M42", "M43", "M44"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M45", "M46", "M47", "M48"];
 
 window.WORLD_CUP_ROUTE_DATA = {
   leftBracket: {

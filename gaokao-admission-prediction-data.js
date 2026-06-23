@@ -8,13 +8,13 @@
           2024,
           2025
       ],
-      "updatedAt": "2026-06-18",
-      "provinceCount": 1,
+      "updatedAt": "2026-06-22",
+      "provinceCount": 2,
       "universityCount": 125,
       "isSampleData": false,
-      "badgeZh": "浙江预测数据",
-      "badgeEn": "Zhejiang forecasts",
-      "sourceNote": "预测数据涵盖 2021-2025 往年分数/位次与 2026 年模型预测值。预测仅供参考，最终以浙江省教育考试院和高校官方信息为准。"
+      "badgeZh": "浙江 / 上海市预测数据",
+      "badgeEn": "Zhejiang / Shanghai forecasts",
+      "sourceNote": "预测数据涵盖 2021-2025 往年分数/位次与 2026 年模型预测值。预测仅供参考，最终以各省市教育考试院和高校官方信息为准。"
   };
 
   window.gaokaoAdmissionPredictionData = [
@@ -7892,6 +7892,1896 @@
           "predictionReason": "中央民族大学是教育部直属的985、211、双一流高校，是我国民族院校的最高学府，民族学等学科全国顶尖。在浙江省按综合类招生。由于2022-2025年浙江省录取数据缺失，本次预测以2021年录取位次12715名（638分）为基础，结合浙江省考生规模持续增长（2021年约25.3万人增至2026年约40万人）等因素综合判断。2026年招生计划数据缺失，按供需平衡假设位次小幅后移。预计2026年录取位次在13478名左右，对应分数约645分，建议位次在12978-13978名的考生参考填报。",
           "predictionReasonEn": "Minzu University of China is a 985 (Project 985), 211 (Project 211), and Double First-Class university directly under the Ministry of Education; it is the highest institution among China's ethnic-minority universities, with top-tier disciplines such as Ethnology. It admits students in Zhejiang through the comprehensive track. Because Zhejiang admission data for 2022-2025 is missing, this prediction is based on the 2021 admission rank of 12,715 (638 points), combined with a comprehensive judgment of factors such as the continued growth in Zhejiang's candidate pool (from about 253,000 in 2021 to about 400,000 in 2026). With the 2026 enrollment plan data missing, the rank is assumed to shift back slightly under a supply-demand balance assumption. The 2026 admission rank is projected to be around 13,478, corresponding to a score of approximately 645 points; candidates ranked 12,978-13,978 are advised to consider applying.",
           "sourceNote": "浙江综合类预测数据，最终以浙江省教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-001",
+          "universityName": "安徽大学",
+          "universityNameEn": "Anhui University",
+          "universityLocation": "安徽 · 合肥",
+          "map": {
+              "x": 65.7,
+              "y": 42.4
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 521,
+                  "minRank": 11175,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 524,
+                  "minRank": 12419,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 529,
+                  "minRank": 12442,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 525,
+                  "minRank": 13276,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 529,
+                  "minRank": 16109,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 525,
+              "predictedRank": 16309,
+              "scoreRange": [
+                  523,
+                  528
+              ],
+              "rankRange": [
+                  15809,
+                  16809
+              ],
+              "changeFromLastYear": -4,
+              "confidence": "medium"
+          },
+          "predictionReason": "安徽大学2026年在上海的综合类录取，主要受两大因素影响：一是2025年招生计划从14人骤降至8人，导致当年位次大幅下滑至16109名；二是2026年上海高考人数预计达6.67万人，比2025年增加约35%，竞争明显加剧。虽然2026年招生计划暂未公布，但考虑到2025年已大幅缩招，继续大幅缩减的可能性不大。综合来看，2026年录取位次预计在16300名左右，较2025年略有下降。分数方面，近年最低分在521-529之间窄幅波动，考虑到2026年高考整体难度偏难、考生人数大增，预计最低录取分约为525分，较2025年回落4分左右。建议考生参考位次而非分数进行志愿填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-007",
+          "universityName": "北京交通大学",
+          "universityNameEn": "Beijing Jiaotong University",
+          "universityLocation": "北京 · 北京",
+          "map": {
+              "x": 63.5,
+              "y": 28.3
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 545,
+                  "minRank": 6447,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 550,
+                  "minRank": 6996,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 548,
+                  "minRank": 8061,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 551,
+                  "minRank": 7592,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 560,
+                  "minRank": 8117,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 563,
+              "predictedRank": 8217,
+              "scoreRange": [
+                  560,
+                  566
+              ],
+              "rankRange": [
+                  7717,
+                  8717
+              ],
+              "changeFromLastYear": 3,
+              "confidence": "medium"
+          },
+          "predictionReason": "北京交通大学是211重点大学，软科排名全国前50，系统科学、交通运输、计算机等优势学科与当前热门专业高度匹配，对上海考生有持续吸引力。但2026年上海高考人数预计从约4.9万大幅增至约6.7万，竞争明显加剧；同时该校在沪招生计划近年持续缩减（2025年仅8人），供需双重压力下录取位次预计小幅下滑。参考2025年最低分560分和历年上升趋势，结合2026年高考难度基本稳定，预测最低分在563分左右。建议全市排名7700-8700名的考生重点关注，560分以上可尝试报考。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-008",
+          "universityName": "北京科技大学",
+          "universityNameEn": "University of Science and Technology Beijing",
+          "universityLocation": "北京 · 北京",
+          "map": {
+              "x": 63.5,
+              "y": 28.3
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 543,
+                  "minRank": 6800,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 545,
+                  "minRank": 7977,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 552,
+                  "minRank": 7242,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 550,
+                  "minRank": 7798,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 562,
+                  "minRank": 7663,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 560,
+              "predictedRank": 7863,
+              "scoreRange": [
+                  558,
+                  563
+              ],
+              "rankRange": [
+                  7363,
+                  8363
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "北京科技大学是211、双一流高校，软科排名全国第35位，材料科学与工程、冶金工程均为A+顶尖学科，学校层次高、实力雄厚。2026年上海高考人数预计约6.67万人，比2025年增加约1.7万人，竞争明显加剧，预计录取位次会有所后移。从历年录取看，最低分从2021年543分逐步攀升至2025年562分，呈稳步上升趋势；2026年高考难度与2025年基本持平，分数预计在560分左右小幅波动。招生计划近年稳定在13-14人，未出现大幅扩招或缩招。综合来看，2026年录取位次预计在7363-8363名之间，建议考生参考此区间合理定位。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-011",
+          "universityName": "北京师范大学",
+          "universityNameEn": "Beijing Normal University",
+          "universityLocation": "北京 · 北京",
+          "map": {
+              "x": 63.5,
+              "y": 28.3
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 562,
+                  "minRank": 3653,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 569,
+                  "minRank": 3780,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 568,
+                  "minRank": 4260,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 568,
+                  "minRank": 4499,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 577,
+                  "minRank": 4649,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 575,
+              "predictedRank": 4619,
+              "scoreRange": [
+                  573,
+                  577
+              ],
+              "rankRange": [
+                  4296,
+                  4942
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "北京师范大学在上海市近五年录取位次持续后移（3653→4649），2025年计划数与2024年持平，2026年招生计划暂缺，按不变处理。M3供需弹性主值为4649名。考虑2026年上海考生总数预计大幅增加（约6.67万），竞争加剧可能使北师大录取位次小幅前移，因此修正-30名至4619名。分数方面，2025年最低分577为近年最高，2026年高考难度与2025年接近（上海卷自主命题，整体中性偏稍微难），预计分数小幅回调至575分左右。北京师范大学作为985/211、软科排名第19的顶尖师范院校，教育学、心理学、中国语言文学等18个学科获评A-及以上，学科实力雄厚，对上海考生持续保持较强吸引力。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-016",
+          "universityName": "重庆大学",
+          "universityNameEn": "Chongqing University",
+          "universityLocation": "重庆 · 重庆",
+          "map": {
+              "x": 49.5,
+              "y": 47.1
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 551,
+                  "minRank": 5356,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 558,
+                  "minRank": 5551,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 560,
+                  "minRank": 5664,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 556,
+                  "minRank": 6631,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 576,
+                  "minRank": 4823,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 573,
+              "predictedRank": 5023,
+              "scoreRange": [
+                  571,
+                  575
+              ],
+              "rankRange": [
+                  4523,
+                  5523
+              ],
+              "changeFromLastYear": -3,
+              "confidence": "medium"
+          },
+          "predictionReason": "重庆大学是985/211高校，软科排名全国第34，工科实力突出（土木A+、电气A-、机械A-）。2025年在上海录取最低分576分、位次4823，均为近年最高水平。2026年上海高考人数预计大幅增加至约6.67万人（较2025年增长约35%），竞争加剧将导致位次有所下滑。同时2026年全国高考整体偏难，上海卷虽无直接难度数据但受大环境影响，分数预计小幅回落。招生计划若维持18人不变，供需基本平衡。综合判断2026年录取位次约5023名（较2025年下降约200位），最低分约573分（较2025年下降3分），建议考生参考此区间合理定位。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-020",
+          "universityName": "电子科技大学",
+          "universityNameEn": "University of Electronic Science and Technology of China",
+          "universityLocation": "四川 · 成都",
+          "map": {
+              "x": 46.2,
+              "y": 44.8
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 559,
+                  "minRank": 4094,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 569,
+                  "minRank": 3780,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 573,
+                  "minRank": 3404,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 576,
+                  "minRank": 3250,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 584,
+                  "minRank": 3396,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 584,
+              "predictedRank": 3396,
+              "scoreRange": [
+                  581,
+                  586
+              ],
+              "rankRange": [
+                  2896,
+                  3896
+              ],
+              "changeFromLastYear": 0,
+              "confidence": "medium"
+          },
+          "predictionReason": "电子科技大学是教育部直属985、211高校，软科排名全国第33位，在电子信息领域实力顶尖（信息与通信工程、电子科学与技术均为A+）。2026年上海高考整体难度略高于2025年，对理工类考生有一定下压影响，但电子科大作为热门院校，在上海招生计划稳定（近年均为10人），且计算机、电子信息等专业持续受考生追捧。综合来看，2026年录取位次预计与2025年基本持平，约在3400名左右；最低分预计在584分附近，波动区间581-586分。建议全市排名2900-3900名的考生积极填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-021",
+          "universityName": "东北大学",
+          "universityNameEn": "Northeastern University",
+          "universityLocation": "辽宁 · 沈阳",
+          "map": {
+              "x": 74.1,
+              "y": 19.7
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 547,
+                  "minRank": 6081,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 555,
+                  "minRank": 6089,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 563,
+                  "minRank": 5080,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 565,
+                  "minRank": 5019,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 575,
+                  "minRank": 5016,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 578,
+              "predictedRank": 5016,
+              "scoreRange": [
+                  576,
+                  580
+              ],
+              "rankRange": [
+                  4516,
+                  5516
+              ],
+              "changeFromLastYear": 3,
+              "confidence": "medium"
+          },
+          "predictionReason": "东北大学近五年在上海的录取位次从6080名左右跃升至5000名附近并趋于稳定，2025年最低位次5016名、最低分575分。学校是985工程重点大学，控制科学与工程、计算机等优势学科与当前热门专业方向高度契合，在上海考生中的认可度持续提升。2026年上海高考人数预计增至约6.7万人，竞争有所加剧，但东北大学招生计划若保持稳定，位次大概率延续近三年的平稳态势。综合判断2026年录取位次约在5016名左右，对应分数约578分，建议考生参考位次区间4516-5516名、分数区间576-580分进行志愿填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-023",
+          "universityName": "东北林业大学",
+          "universityNameEn": "Northeast Forestry University",
+          "universityLocation": "黑龙江 · 哈尔滨",
+          "map": {
+              "x": 75.4,
+              "y": 16.1
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 493,
+                  "minRank": 17269,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 504,
+                  "minRank": 16713,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 518,
+                  "minRank": 15161,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 514,
+                  "minRank": 15979,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 503,
+                  "minRank": 23377,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 505,
+              "predictedRank": 22877,
+              "scoreRange": [
+                  502,
+                  508
+              ],
+              "rankRange": [
+                  22377,
+                  23377
+              ],
+              "changeFromLastYear": 2,
+              "confidence": "medium"
+          },
+          "predictionReason": "东北林业大学2025年在上海大幅扩招（从6人增至11人），导致最低录取位次从约1.6万名骤降至2.3万名。2026年招生计划若维持不变，扩招带来的冲击已基本消化；同时上海高考人数预计从约4.9万增至约6.7万，竞争加剧会推动位次小幅前移。但该校位于哈尔滨、属于农林类院校，在上海考生中热度一般，回升幅度有限。综合判断2026年录取位次预计在2.29万名左右，对应分数约505分，较2025年略有回升。建议考生参考位次区间2.24万-2.34万名、分数区间502-508分进行志愿填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-025",
+          "universityName": "东北师范大学",
+          "universityNameEn": "Northeast Normal University",
+          "universityLocation": "吉林 · 长春",
+          "map": {
+              "x": 72.2,
+              "y": 23.5
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 503,
+                  "minRank": 15067,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 512,
+                  "minRank": 14994,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 440,
+                  "minRank": 33965,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 521,
+                  "minRank": 14281,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 531,
+                  "minRank": 15514,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 535,
+              "predictedRank": 15714,
+              "scoreRange": [
+                  533,
+                  537
+              ],
+              "rankRange": [
+                  15214,
+                  16214
+              ],
+              "changeFromLastYear": 4,
+              "confidence": "medium"
+          },
+          "predictionReason": "东北师范大学是教育部直属211师范院校，软科排名约48位，教育学、马克思主义理论等6个学科获评A类。2026年上海高考人数约6.67万，较2025年大幅增长约35%，竞争明显加剧，预计录取位次将小幅下滑。学校在上海招生计划近年稳定在9-11人，2026年计划暂缺按不变处理。上海卷2026年难度与2025年基本持平，分数走势上，近四年最低分从503分逐步升至531分，呈稳步上升趋势，预计2026年约535分左右。综合判断，2026年录取位次约15714名，分数约535分，建议考生参考此范围合理定位。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-027",
+          "universityName": "东南大学",
+          "universityNameEn": "Southeast University",
+          "universityLocation": "江苏 · 南京",
+          "map": {
+              "x": 68.2,
+              "y": 42.1
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 562,
+                  "minRank": 3653,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 569,
+                  "minRank": 3780,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 572,
+                  "minRank": 3586,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 581,
+                  "minRank": 2552,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 590,
+                  "minRank": 2503,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 596,
+              "predictedRank": 2473,
+              "scoreRange": [
+                  594,
+                  598
+              ],
+              "rankRange": [
+                  2191,
+                  2755
+              ],
+              "changeFromLastYear": 6,
+              "confidence": "medium"
+          },
+          "predictionReason": "东南大学在上海近五年录取最低分持续上升（562→590），位次在2024年大幅跃升至2552后，2025年进一步稳定在2503。学校软科排名全国第15名，拥有18个A-以上学科，建筑、电子、信息等优势学科均为当前热门方向，专业热度持续走高。2026年招生计划暂未公布，按不变处理。考虑到上海考生对南京高校认可度高、学校工科优势突出，预计2026年录取位次将略有提升（约2473名），最低分约596分左右。建议位次在2200-2750名、分数594-598分的考生积极填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-032",
+          "universityName": "广西大学",
+          "universityNameEn": "Guangxi University",
+          "universityLocation": "广西 · 南宁",
+          "map": {
+              "x": 55.1,
+              "y": 61.4
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 489,
+                  "minRank": 18200,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 496,
+                  "minRank": 18448,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 501,
+                  "minRank": 19420,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 495,
+                  "minRank": 20693,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 494,
+                  "minRank": 25917,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 492,
+              "predictedRank": 26417,
+              "scoreRange": [
+                  489,
+                  495
+              ],
+              "rankRange": [
+                  25917,
+                  26917
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "广西大学是211高校，软科排名近年持续上升（从94升至86），办学实力稳步增强。2026年上海高考人数预计达6.67万人，较2025年增加约35%，竞争明显加剧。广西大学在沪招生计划连续5年保持10人不变，供需关系趋于紧张。从历年录取看，2025年位次已大幅下滑至25917名，2026年考生人数继续攀升，位次可能进一步小幅下移。分数方面，近5年最低分在489-501间窄幅波动，2025年为494分；2026年高考难度整体中性偏难，分数预计略有回落至492分左右。综合来看，建议考生参考位次26000名左右、分数490分以上作为报考参考。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-045",
+          "universityName": "湖南师范大学",
+          "universityNameEn": "Hunan Normal University",
+          "universityLocation": "湖南 · 长沙",
+          "map": {
+              "x": 60,
+              "y": 49.4
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 520,
+                  "minRank": 11391,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 524,
+                  "minRank": 12419,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 524,
+                  "minRank": 13663,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 523,
+                  "minRank": 13763,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 537,
+                  "minRank": 13876,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 538,
+              "predictedRank": 13776,
+              "scoreRange": [
+                  535,
+                  541
+              ],
+              "rankRange": [
+                  13276,
+                  14276
+              ],
+              "changeFromLastYear": 1,
+              "confidence": "medium"
+          },
+          "predictionReason": "湖南师范大学近五年在上海（综合类）的最低录取位次从11391持续下滑至13876，但2024→2025年已趋于稳定（13763→13876）。2026年该校在上海招生计划维持8人不变，但上海高考总人数从约4.9万大幅增至约6.7万，竞争明显加剧，预计录取位次将小幅回升至13776名左右。分数方面，2025年最低分537分创近年新高，2026年上海卷难度预计与2025年基本持平（轻微偏难），但考生人数大增会推高分数线，预计最低分在538分左右，波动区间535-541分。该校为211、双一流师范院校，软科排名约92位，拥有A-级外国语言文学学科，对上海考生有一定吸引力，但省外师范类院校热度一般，位次不会大幅波动。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-049",
+          "universityName": "华东师范大学",
+          "universityNameEn": "East China Normal University",
+          "universityLocation": "上海 · 上海",
+          "map": {
+              "x": 71.3,
+              "y": 43.2
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 565,
+                  "minRank": 3226,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 564,
+                  "minRank": 4568,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 561,
+                  "minRank": 5453,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 562,
+                  "minRank": 5544,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 575,
+                  "minRank": 5016,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 570,
+              "predictedRank": 5066,
+              "scoreRange": [
+                  568,
+                  573
+              ],
+              "rankRange": [
+                  4566,
+                  5566
+              ],
+              "changeFromLastYear": -5,
+              "confidence": "medium"
+          },
+          "predictionReason": "华东师大是上海本地985，软科全国前30，教育学和统计学等14个学科获评A类以上，实力雄厚。2026年上海高考人数预计达6.67万，比2025年增加约35%，竞争明显加剧，录取位次预计小幅后移。2025年最低分575为近5年高点，2026年试卷难度整体偏难，但考生人数激增对分数下拉作用更强，预计最低分回落至570左右。师范类专业社会热度中等，未出现异常追捧。综合来看，2026年报考华东师大需比2025年更靠前一些的位次才有把握，建议考生参考近3年位次波动区间合理定位。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-050",
+          "universityName": "华南理工大学",
+          "universityNameEn": "South China University of Technology",
+          "universityLocation": "广东 · 广州",
+          "map": {
+              "x": 60.3,
+              "y": 58.5
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 554,
+                  "minRank": 4880,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 560,
+                  "minRank": 5198,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 567,
+                  "minRank": 4425,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 563,
+                  "minRank": 5356,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 581,
+                  "minRank": 3934,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 579,
+              "predictedRank": 3884,
+              "scoreRange": [
+                  576,
+                  582
+              ],
+              "rankRange": [
+                  3384,
+                  4384
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "华南理工大学是广东的985工科强校，轻工技术与工程、化学工程与技术、材料科学等学科实力突出。在上海本科批招生，2025年最低分581分、位次3934名，均为近年最好水平。2026年上海高考考生人数预计大幅增加至约6.7万人（较2025年增长约35%），竞争显著加剧，将推高录取位次。同时2026年全国高考难度整体偏难，可能使分数线略有下压。综合来看，考生增加带来的竞争效应略强于难度上升效应，预计2026年录取位次小幅上升至3884名左右，最低分约579分。建议考生参考位次区间3384-4384名、分数区间576-582分进行志愿填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-058",
+          "universityName": "兰州大学",
+          "universityNameEn": "Lanzhou University",
+          "universityLocation": "甘肃 · 兰州",
+          "map": {
+              "x": 46.4,
+              "y": 35.3
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 519,
+                  "minRank": 11614,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 532,
+                  "minRank": 10720,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 536,
+                  "minRank": 10808,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 539,
+                  "minRank": 10069,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 552,
+                  "minRank": 10002,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 548,
+              "predictedRank": 10202,
+              "scoreRange": [
+                  546,
+                  550
+              ],
+              "rankRange": [
+                  9702,
+                  10702
+              ],
+              "changeFromLastYear": -4,
+              "confidence": "medium"
+          },
+          "predictionReason": "兰州大学作为985/211高校，软科排名约40位，在上海的录取位次近年稳定在10000名左右。2025年最低分552分、位次10002，较前几年有明显提升。2026年上海高考考生人数预计大幅增长至约6.67万人（较2025年增加约35%），竞争加剧，预计录取位次会略有后移。同时2026年高考整体难度偏难，分数线有下压趋势。综合判断，2026年兰州大学在上海的最低录取位次约在10200名左右，最低分约548分，较2025年略有下降。兰州大学虽为老牌985，但地处西北，在上海考生中地域吸引力一般，其优势学科（生态学、草学等）非当前最热门方向，但985品牌仍具较强号召力。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-062",
+          "universityName": "南京航空航天大学",
+          "universityNameEn": "Nanjing University of Aeronautics and Astronautics",
+          "universityLocation": "江苏 · 南京",
+          "map": {
+              "x": 68.2,
+              "y": 42.1
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 534,
+                  "minRank": 8481,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 544,
+                  "minRank": 8160,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 540,
+                  "minRank": 9864,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 567,
+                  "minRank": 4662,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 578,
+                  "minRank": 4467,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 576,
+              "predictedRank": 4517,
+              "scoreRange": [
+                  574,
+                  578
+              ],
+              "rankRange": [
+                  4017,
+                  5017
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "南京航空航天大学作为211、双一流理工强校，软科排名稳定在36-37名，拥有力学、机械工程等7个A-以上优势学科，在航空航天领域享有盛誉，对上海考生吸引力强。2024-2025年录取位次从4662名跃升至4467名，分数从567分升至578分，呈明显上升趋势。2026年上海高考人数预计达6.67万人，较2025年增长约35%，竞争显著加剧，可能推动录取位次小幅后移。同时2026年高考整体难度偏难，但上海自主命题难度变化相对温和。综合供需弹性模型计算，结合考生规模扩大带来的竞争压力，预测2026年录取位次约在4500名左右，最低分约576分，建议考生参考此范围合理定位。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-073",
+          "universityName": "山东大学",
+          "universityNameEn": "Shandong University",
+          "universityLocation": "山东 · 济南",
+          "map": {
+              "x": 64.9,
+              "y": 34.1
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 553,
+                  "minRank": 5028,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 560,
+                  "minRank": 5198,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 562,
+                  "minRank": 5270,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 558,
+                  "minRank": 6285,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 567,
+                  "minRank": 6602,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 568,
+              "predictedRank": 6652,
+              "scoreRange": [
+                  566,
+                  570
+              ],
+              "rankRange": [
+                  6152,
+                  7152
+              ],
+              "changeFromLastYear": 1,
+              "confidence": "medium"
+          },
+          "predictionReason": "山东大学在上海市近五年最低录取位次持续后移（5028→6602），2026年上海考生人数预计大幅增加至约6.67万人（+35%），竞争加剧，位次可能继续小幅后移。但山东大学作为985名校、软科排名稳定第22位，拥有数学A+等19个A-以上优势学科，对考生吸引力强，位次不会大幅波动。综合判断2026年最低录取位次约6652名。分数方面，历年最低分在553-567分之间缓慢上升，2026年高考难度与2025年基本持平，预计最低录取分约568分，建议566-570分考生重点关注。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-075",
+          "universityName": "上海财经大学",
+          "universityNameEn": "Shanghai University of Finance and Economics",
+          "universityLocation": "上海 · 上海",
+          "map": {
+              "x": 71.3,
+              "y": 43.2
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 558,
+                  "minRank": 4266,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 565,
+                  "minRank": 4410,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 566,
+                  "minRank": 4600,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 561,
+                  "minRank": 5731,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 573,
+                  "minRank": 5410,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 571,
+              "predictedRank": 5510,
+              "scoreRange": [
+                  569,
+                  573
+              ],
+              "rankRange": [
+                  5010,
+                  6010
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "上海财经大学是211、双一流高校，软科排名全国第35位，财经类学科实力顶尖（工商管理、应用经济学均为A+）。2025年上财在沪录取最低分为573分、最低位次5410名，分数创近年新高。2026年上海高考考生人数预计大幅增加至约6.7万人（较2025年增长约35%），竞争加剧将推高分数线，但2026年高考难度预计略有提升（上海卷整体偏中性），对分数有一定下压作用。同时上财在沪招生计划近年持续扩招（从2021年235人增至2025年298人），2026年有望继续扩招或持平，这会使录取位次略有后移。综合以上因素，预计2026年上财在沪录取最低分约为571分，较2025年微降2分；最低位次约为5510名，较2025年后移约100名。建议考生参考位次区间5010-6010名、分数区间569-573分进行志愿填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-078",
+          "universityName": "上海交通大学医学院",
+          "universityNameEn": "Shanghai Jiao Tong University School of Medicine",
+          "universityLocation": "上海 · 上海",
+          "map": {
+              "x": 71.3,
+              "y": 43.2
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 556,
+                  "minRank": 4556,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 566,
+                  "minRank": 4276,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 553,
+                  "minRank": 7041,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 567,
+                  "minRank": 4662,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 577,
+                  "minRank": 4649,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 578,
+              "predictedRank": 4599,
+              "scoreRange": [
+                  575,
+                  580
+              ],
+              "rankRange": [
+                  4099,
+                  5099
+              ],
+              "changeFromLastYear": 1,
+              "confidence": "medium"
+          },
+          "predictionReason": "上海交通大学医学院近年持续扩招（2021年90人→2025年121人），但由于2026年上海高考考生预计从约4.9万人增至约6.7万人，竞争压力明显加大，抵消了扩招的稀释效应。整体来看，录取位次预计与2025年基本持平或略有前移，约在4600名左右；录取分数方面，参考历年走势（2025年最低577分）及2026年高考难度无明显变化，预计稳定在578分附近。该校临床医学等优势学科持续受到考生追捧，属稳健热门选择。建议全市排名4500名以内的考生重点参考。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-081",
+          "universityName": "四川大学",
+          "universityNameEn": "Sichuan University",
+          "universityLocation": "四川 · 成都",
+          "map": {
+              "x": 46.2,
+              "y": 44.8
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 555,
+                  "minRank": 4726,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 562,
+                  "minRank": 4877,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 562,
+                  "minRank": 5270,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 561,
+                  "minRank": 5731,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 570,
+                  "minRank": 6004,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 568,
+              "predictedRank": 6154,
+              "scoreRange": [
+                  566,
+                  571
+              ],
+              "rankRange": [
+                  5654,
+                  6654
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "四川大学作为985名校，软科排名第16，拥有口腔医学、护理学等19个A-以上优势学科，综合实力强劲，对上海考生吸引力大。2025年上海招生计划从19人扩至30人，位次相应下移至6004名。2026年上海高考人数预计从4.9万大幅增至6.7万，竞争加剧将推动位次进一步下移。但川大层次高、招生计划小，位次下移幅度有限。分数方面，近年最低分在555-570之间波动，2025年达到570分高位，考虑到2026年高考整体难度偏难，分数可能轻微回落。综合判断，2026年录取位次约在6154名左右，最低分约568分。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-084",
+          "universityName": "太原理工大学",
+          "universityNameEn": "Taiyuan University of Technology",
+          "universityLocation": "山西 · 太原",
+          "map": {
+              "x": 57.7,
+              "y": 32.8
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 502,
+                  "minRank": 15285,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 514,
+                  "minRank": 14579,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 524,
+                  "minRank": 13663,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 520,
+                  "minRank": 14532,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 544,
+                  "minRank": 12020,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 540,
+              "predictedRank": 11820,
+              "scoreRange": [
+                  537,
+                  543
+              ],
+              "rankRange": [
+                  11320,
+                  12320
+              ],
+              "changeFromLastYear": -4,
+              "confidence": "medium"
+          },
+          "predictionReason": "太原理工大学是山西省唯一的211和双一流高校，软科排名持续上升（2026年跃居第97位），学校综合实力稳步提升。2025年在沪录取最低分544分、最低位次12020名，创近五年新高。2026年上海高考考生人数预计大幅增至约6.67万人（较2025年增长约35%），竞争加剧；同时2026年全国高考整体难度偏难，分数有下压趋势。但太原理工大学排名上升、211品牌效应增强，对考生吸引力提升。招生计划保持8人不变，供需基本平衡，预计2026年录取位次在11820名左右，较2025年略有前移；对应分数约540分，较2025年小幅回落，反映难度上升的影响。建议位次在11300-12300名、分数在537-543分的考生积极填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-087",
+          "universityName": "同济大学",
+          "universityNameEn": "Tongji University",
+          "universityLocation": "上海 · 上海",
+          "map": {
+              "x": 71.3,
+              "y": 43.2
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 564,
+                  "minRank": 3386,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 527,
+                  "minRank": 11799,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 537,
+                  "minRank": 10565,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 541,
+                  "minRank": 9624,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 550,
+                  "minRank": 10506,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 555,
+              "predictedRank": 10556,
+              "scoreRange": [
+                  552,
+                  558
+              ],
+              "rankRange": [
+                  10056,
+                  11056
+              ],
+              "changeFromLastYear": 5,
+              "confidence": "medium"
+          },
+          "predictionReason": "同济大学2026年在沪录取预计保持稳定。从近五年看，最低录取位次在9600~11800之间波动，2025年为10506名。2026年上海高考人数预计增至约6.7万人，比2025年增加约35%，竞争加剧可能使位次略有后移。但同济作为上海本地顶尖985，对本市招生比例逐年提升（从2021年5.7%升至2025年8.8%），对本地考生形成保护。学校软科排名第18，拥有土木、建筑、环境、管理等多个A+学科，综合实力强劲。土木建筑类专业虽受舆情影响热度下降，但同济整体品牌效应依然突出。综合判断，2026年录取位次预计在10500名附近，最低分约555分，较2025年略有上升。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-088",
+          "universityName": "武汉大学",
+          "universityNameEn": "Wuhan University",
+          "universityLocation": "湖北 · 武汉",
+          "map": {
+              "x": 61,
+              "y": 45.4
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 560,
+                  "minRank": 3965,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 569,
+                  "minRank": 3780,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 571,
+                  "minRank": 3741,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 570,
+                  "minRank": 4158,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 585,
+                  "minRank": 3231,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 586,
+              "predictedRank": 3151,
+              "scoreRange": [
+                  584,
+                  588
+              ],
+              "rankRange": [
+                  2804,
+                  3498
+              ],
+              "changeFromLastYear": 1,
+              "confidence": "medium"
+          },
+          "predictionReason": "武汉大学是顶尖985高校，软科全国第8，拥有法学、测绘等20个A类学科，实力雄厚。2025年在沪录取最低分585分、最低位次3231名，较2024年大幅前移927位，热度明显上升。2026年上海高考人数预计增至约6.67万人（增加35%），竞争显著加剧；同时武大在沪招生计划近年持续缩减（从58人降至54人），供需矛盾进一步突出。综合判断2026年录取位次将继续前移至3150名左右，最低分预计在586分附近。建议考生参考位次区间2800-3500名、分数区间584-588分进行志愿填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-090",
+          "universityName": "西安电子科技大学",
+          "universityNameEn": "Xidian University",
+          "universityLocation": "陕西 · 西安",
+          "map": {
+              "x": 53.5,
+              "y": 38.8
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 554,
+                  "minRank": 4880,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 563,
+                  "minRank": 4727,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 567,
+                  "minRank": 4425,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 571,
+                  "minRank": 3998,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 580,
+                  "minRank": 4096,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 578,
+              "predictedRank": 4146,
+              "scoreRange": [
+                  576,
+                  580
+              ],
+              "rankRange": [
+                  3646,
+                  4646
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "西安电子科技大学是211、双一流高校，软科排名约40名，信息与通信工程、电子科学与技术均为A+，计算机科学与技术为A，学科实力非常突出。2026年电子信息、计算机类专业热度持续高涨，与西电优势学科高度匹配，会吸引更多高分考生报考。但2026年上海考生总数从约4.9万大幅增至约6.7万（+35%），竞争明显加剧；同时西电地处陕西，上海考生存在一定地域偏好。综合来看，位次预计在2025年4096名基础上小幅后移至4146名左右。分数方面，2021-2025年最低分从554分持续上升至580分，呈明显上涨趋势；2026年高考难度预计略有上升，分数可能小幅回落至578分左右，建议576-580分考生重点关注。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-091",
+          "universityName": "西安交通大学",
+          "universityNameEn": "Xi'an Jiaotong University",
+          "universityLocation": "陕西 · 西安",
+          "map": {
+              "x": 53.5,
+              "y": 38.8
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 562,
+                  "minRank": 3653,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 570,
+                  "minRank": 3650,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 574,
+                  "minRank": 3270,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 579,
+                  "minRank": 2831,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 589,
+                  "minRank": 2641,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 590,
+              "predictedRank": 2591,
+              "scoreRange": [
+                  588,
+                  592
+              ],
+              "rankRange": [
+                  2296,
+                  2886
+              ],
+              "changeFromLastYear": 1,
+              "confidence": "medium"
+          },
+          "predictionReason": "西安交通大学作为C9高校、软科排名第10的顶尖工科院校，在上海市的录取位次近年持续攀升，从2021年的3653名提升至2025年的2641名，年均提升约250位。学校拥有13个A-及以上学科，其中电气工程、机械工程、控制科学与工程、计算机科学等均为当前社会高度热门的专业方向，与考生报考偏好高度契合。2026年上海考生总数预计增至约6.67万人，较2025年增长约35%，竞争加剧，但顶尖高校受影响相对有限。综合来看，预计2026年录取位次在2591名左右，最低录取分数约590分，建议考生参考此区间合理定位。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-102",
+          "universityName": "长安大学",
+          "universityNameEn": "Chang'an University",
+          "universityLocation": "陕西 · 西安",
+          "map": {
+              "x": 53.5,
+              "y": 38.8
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 508,
+                  "minRank": 13979,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 521,
+                  "minRank": 13075,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 523,
+                  "minRank": 13919,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 520,
+                  "minRank": 14532,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 546,
+                  "minRank": 11525,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 540,
+              "predictedRank": 11725,
+              "scoreRange": [
+                  537,
+                  543
+              ],
+              "rankRange": [
+                  11225,
+                  12225
+              ],
+              "changeFromLastYear": -6,
+              "confidence": "medium"
+          },
+          "predictionReason": "长安大学是211、双一流理工类高校，软科排名约89，在交通运输工程领域有A-优势学科。2025年在沪录取最低分546分、位次11525，较2024年大幅上升，主要因专业组统一调整为'物理+化学'后生源质量提升。2026年上海高考人数预计增至约6.7万人，较2025年增长约35%，竞争显著加剧，位次面临回调压力。同时2026年高考整体难度偏难，数学、物理等科目压分信号明显，预计分数线略有下压。综合来看，2026年录取位次预计在11725名左右，较2025年小幅回落；最低分预计在540分左右，较2025年下降约6分。建议考生参考位次区间11225-12225、分数区间537-543分进行志愿定位。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-113",
+          "universityName": "中国农业大学",
+          "universityNameEn": "China Agricultural University",
+          "universityLocation": "北京 · 北京",
+          "map": {
+              "x": 63.5,
+              "y": 28.3
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 551,
+                  "minRank": 5356,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 554,
+                  "minRank": 6263,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 564,
+                  "minRank": 4910,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 558,
+                  "minRank": 6285,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 573,
+                  "minRank": 5410,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 572,
+              "predictedRank": 5460,
+              "scoreRange": [
+                  569,
+                  575
+              ],
+              "rankRange": [
+                  4960,
+                  5960
+              ],
+              "changeFromLastYear": -1,
+              "confidence": "medium"
+          },
+          "predictionReason": "中国农业大学是985/211双一流高校，软科排名从2021年第30位持续上升至2026年第24位，学校层次稳步提升。2025年上海录取最低分573分（位次5410），创近5年新高。2026年上海高考人数预计约6.67万人，较2025年增长约35%，竞争明显加剧，位次可能小幅后移。学校优势学科集中在农学、食品科学、生物学等领域，共7个A-及以上学科，实力雄厚。综合供需弹性模型计算，结合考生人数增长和学校排名提升的正负因素，预测2026年录取位次约5460名左右，对应分数约572分。建议位次在4960-5960名、分数在569-575分的考生积极报考。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-119",
+          "universityName": "中国药科大学",
+          "universityNameEn": "China Pharmaceutical University",
+          "universityLocation": "江苏 · 南京",
+          "map": {
+              "x": 68.2,
+              "y": 42.1
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 530,
+                  "minRank": 9287,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 546,
+                  "minRank": 7800,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 553,
+                  "minRank": 7041,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 551,
+                  "minRank": 7592,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 559,
+                  "minRank": 8336,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 560,
+              "predictedRank": 8386,
+              "scoreRange": [
+                  558,
+                  563
+              ],
+              "rankRange": [
+                  7886,
+                  8886
+              ],
+              "changeFromLastYear": 1,
+              "confidence": "medium"
+          },
+          "predictionReason": "中国药科大学是211、双一流高校，药学学科全国顶尖（A+），软科排名第88位，在医药类院校中声誉突出。上海考生对长三角高校有天然地域偏好，学校近年录取位次在7000-9300之间波动，2025年最低分559分、位次8336。2026年上海高考人数从约4.9万大幅增至约6.7万，竞争明显加剧，预计录取位次将小幅后移。学校2026年招生计划暂未公布，按近年稳定在12-14人的趋势推测变化不大。综合来看，预测2026年录取最低分约560分，最低位次约8386名，建议考生参考此范围合理定位。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-122",
+          "universityName": "中南大学",
+          "universityNameEn": "Central South University",
+          "universityLocation": "湖南 · 长沙",
+          "map": {
+              "x": 60,
+              "y": 49.4
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 561,
+                  "minRank": 3794,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 570,
+                  "minRank": 3650,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 571,
+                  "minRank": 3741,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 571,
+                  "minRank": 3998,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 577,
+                  "minRank": 4649,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 575,
+              "predictedRank": 4699,
+              "scoreRange": [
+                  573,
+                  578
+              ],
+              "rankRange": [
+                  4224,
+                  5174
+              ],
+              "changeFromLastYear": -2,
+              "confidence": "medium"
+          },
+          "predictionReason": "中南大学是985、双一流高校，软科全国第27名，拥有13个A类学科（冶金工程、护理学A+，材料科学、临床医学等实力突出）。2026年上海考生人数预计达6.67万，比2025年增长约35%，竞争明显加剧；同时中南大学在沪招生计划从2021年的6人持续扩至2025年的10人，扩招趋势大概率延续。综合供需关系，2026年录取位次预计在4700名左右，较2025年略有后移。分数方面，2021-2025年最低分从561分稳步升至577分，考虑到2026年全国高考整体偏难，分数可能小幅回落至575分附近，波动区间573-578分。建议位次在4200-5200名、分数573分以上的考生积极填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
+      },
+      {
+          "province": "上海市",
+          "subjectType": "综合",
+          "universityId": "zj-school-123",
+          "universityName": "中山大学",
+          "universityNameEn": "Sun Yat-sen University",
+          "universityLocation": "广东 · 广州",
+          "map": {
+              "x": 60.3,
+              "y": 58.5
+          },
+          "majorGroup": "本科普通批",
+          "history": [
+              {
+                  "year": 2021,
+                  "minScore": 554,
+                  "minRank": 4880,
+                  "planCount": null
+              },
+              {
+                  "year": 2022,
+                  "minScore": 564,
+                  "minRank": 4568,
+                  "planCount": null
+              },
+              {
+                  "year": 2023,
+                  "minScore": 568,
+                  "minRank": 4260,
+                  "planCount": null
+              },
+              {
+                  "year": 2024,
+                  "minScore": 567,
+                  "minRank": 4662,
+                  "planCount": null
+              },
+              {
+                  "year": 2025,
+                  "minScore": 578,
+                  "minRank": 4467,
+                  "planCount": null
+              }
+          ],
+          "prediction": {
+              "year": 2026,
+              "predictedScore": 580,
+              "predictedRank": 4417,
+              "scoreRange": [
+                  578,
+                  582
+              ],
+              "rankRange": [
+                  3917,
+                  4917
+              ],
+              "changeFromLastYear": 2,
+              "confidence": "medium"
+          },
+          "predictionReason": "中山大学是985、双一流综合类名校，软科全国第13名，拥有23个A-及以上优势学科，涵盖文理医工，综合实力突出。2026年上海高考人数预计达6.67万人，比2025年增长约35%，竞争明显加剧，预计录取位次会略有前移。近五年最低录取分从554分逐步攀升至578分，呈稳步上升趋势；2026年高考难度预计与2025年基本持平，无明显压分信号。综合判断2026年最低录取分约580分左右，对应位次约4400名左右。建议考生参考位次而非分数进行志愿定位，位次在3900-4900名之间的考生均可积极填报。",
+          "predictionReasonEn": "",
+          "sourceNote": "上海综合类预测数据，最终以上海市教育考试院和高校官方信息为准。"
       }
   ];
 })();

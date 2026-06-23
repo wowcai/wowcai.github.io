@@ -1,0 +1,895 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-23T00:49:26.595684Z",
+  "status": "proposer_only",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_England_vs_Ghana_M45\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "c773b551410b82109460f01e326000dea1534fc18f57262e1d11c747d6fb2bd3",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-23T00:46:11.773535+00:00"
+  },
+  "match": {
+    "match_id": "M45",
+    "team_a": "England",
+    "team_b": "Ghana",
+    "kickoff_utc": "2026-06-23T20:00:00Z",
+    "venue": "Boston Stadium",
+    "stage": "group",
+    "group": "L",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.6844444444444444,
+    "draw": 0.2114814814814815,
+    "team_b_win": 0.10407407407407407,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.14666666666666667
+      },
+      {
+        "score": "2-0",
+        "probability": 0.12925925925925927
+      },
+      {
+        "score": "1-1",
+        "probability": 0.09666666666666666
+      },
+      {
+        "score": "3-0",
+        "probability": 0.09592592592592593
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09185185185185185
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "England",
+    "underdog_side": "team_b",
+    "underdog_team": "Ghana",
+    "team_a_win": 0.6844444444444444,
+    "draw": 0.2114814814814815,
+    "team_b_win": 0.10407407407407407,
+    "win_probability_gap": 0.5803703703703703,
+    "underdog_win_probability": 0.10407407407407407,
+    "favorite_fail_to_win_probability": 0.3155555555555556,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "主线仍是英格兰优势，但高偏离池中最值得关注的是英格兰控场后转化为3球以上输出；开放大比分主要依赖英格兰持续压制叠加加纳反击/定位球偷到一球，爆冷则需要加纳把少量转换机会极高效兑现。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.2814814814814815,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.58,
+      "rationale_cn": "总进球至少4球的路径并非单纯对攻，而更像英格兰长期领地优势制造多次禁区压力，同时加纳凭反击或定位球获得有限但有价值的得分窗口。英格兰凯恩、赖斯可用，贝林厄姆前腰角色明确，加纳中低位防守会给英格兰持续围攻条件；但萨卡大概率替补和加纳低位紧凑也会压低早段开放程度。",
+      "supporting_evidence_ids": [
+        "E_d0b68f2f4e7c",
+        "E_8ee9590930bd",
+        "E_c7a30b90a1f4",
+        "E_dd824565c6cf",
+        "E_73e4cf2ee2c5",
+        "E_69d222a8a96f",
+        "E_bb8cee354c1c"
+      ],
+      "counter_evidence_ids": [
+        "E_ea5c77c74e25",
+        "E_cc8879dcfec4",
+        "E_ec997bcbd7f8",
+        "E_bb8cee354c1c"
+      ],
+      "caution_cn": "大比分不能简单理解为双方都会持续开放；若加纳低位压缩成功、英格兰右路爆点后置，比赛可能长时间停留在低比分。不要把本情景与一边倒情景中相同比分的事件概率重复相加。",
+      "audit_note_cn": "Auditor调用失败，本报告暂时采用Proposer结果。",
+      "candidate_pool": [
+        {
+          "score": "3-1",
+          "base_probability": 0.052592592592592594,
+          "base_conditional_probability": 0.1868421052631579,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.04814814814814815,
+          "base_conditional_probability": 0.17105263157894735,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.03740740740740741,
+          "base_conditional_probability": 0.13289473684210526,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.030740740740740742,
+          "base_conditional_probability": 0.10921052631578947,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06315789473684211,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.061842105263157886,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.04736842105263158,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.04736842105263158,
+          "total_goals": 6,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.052592592592592594,
+          "base_conditional_probability": 0.1868421052631579,
+          "tail_focus_conditional_probability": 0.23762261973456433,
+          "tail_focus_implied_overall_probability": 0.06688636703639589,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "英格兰控球和反抢建立持续压制，上半场或中段先打开局面；加纳在落后后通过反击或定位球追回一球，但英格兰凭凯恩支点、贝林厄姆前插和边路宽度再度拉开。",
+          "rationale_cn": "在开放大比分池中，3-1同时符合英格兰优势主线和加纳具备少量高价值机会的机制，不要求比赛完全失控，路径更稳。",
+          "evidence_ids": [
+            "E_d0b68f2f4e7c",
+            "E_8ee9590930bd",
+            "E_c7a30b90a1f4",
+            "E_69d222a8a96f",
+            "E_bb8cee354c1c"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.04814814814814815,
+          "base_conditional_probability": 0.17105263157894735,
+          "tail_focus_conditional_probability": 0.1800346220427005,
+          "tail_focus_implied_overall_probability": 0.05067641213053792,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "英格兰早段或中段破门后继续压在加纳半场，加纳反击第一脚多次被赖斯所在的中场屏障破坏，比赛后段因体能和阵型拉伸再丢球。",
+          "rationale_cn": "该比分得到英格兰实力差和持续禁区压力机制支持，但需要加纳反击、定位球窗口全部失效，因此支持力度低于3-1。",
+          "evidence_ids": [
+            "E_d0b68f2f4e7c",
+            "E_8ee9590930bd",
+            "E_dd824565c6cf",
+            "E_73e4cf2ee2c5",
+            "E_bb8cee354c1c"
+          ],
+          "mechanism_ids": [
+            "H_01"
+          ]
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.03740740740740741,
+          "base_conditional_probability": 0.13289473684210526,
+          "tail_focus_conditional_probability": 0.11656087709174841,
+          "tail_focus_implied_overall_probability": 0.03280972836656622,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "英格兰长时间控场但防转换细节出现波动，加纳依靠边路速度点或定位球两次打穿局部；英格兰仍凭整体进攻质量追回或维持平局。",
+          "rationale_cn": "2-2契合H_02的加纳少量高价值机会，但与英格兰明显实力优势和赖斯可用的防反屏障存在冲突，更多是波动型而非主线型大比分。",
+          "evidence_ids": [
+            "E_69d222a8a96f",
+            "E_c7c9c59420c9",
+            "E_4b22537e3a97",
+            "E_d0b68f2f4e7c"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02",
+            "H_03"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.030740740740740742,
+          "base_conditional_probability": 0.10921052631578947,
+          "tail_focus_conditional_probability": 0.11494518176572417,
+          "tail_focus_implied_overall_probability": 0.032354940052574215,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "英格兰先通过持续压迫建立两球左右优势，加纳被迫前压后留出更多身后空间，英格兰在后段利用替补冲击或边路推进继续扩大，但加纳仍从反击/定位球取得安慰球。",
+          "rationale_cn": "4-1是3-1向更极端方向延展的版本，适合英格兰早破门且加纳被迫改变低位结构的分支；但需要更高进球转化率。",
+          "evidence_ids": [
+            "E_d0b68f2f4e7c",
+            "E_8ee9590930bd",
+            "E_c7a30b90a1f4",
+            "E_69d222a8a96f",
+            "E_ec997bcbd7f8"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02",
+            "H_03"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.052592592592592594,
+          "base_conditional_probability": 0.1868421052631579,
+          "tail_focus_conditional_probability": 0.23762261973456433,
+          "tail_focus_implied_overall_probability": 0.06688636703639589,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.04814814814814815,
+          "base_conditional_probability": 0.17105263157894735,
+          "tail_focus_conditional_probability": 0.1800346220427005,
+          "tail_focus_implied_overall_probability": 0.05067641213053792,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.03740740740740741,
+          "base_conditional_probability": 0.13289473684210526,
+          "tail_focus_conditional_probability": 0.11656087709174841,
+          "tail_focus_implied_overall_probability": 0.03280972836656622,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.030740740740740742,
+          "base_conditional_probability": 0.10921052631578947,
+          "tail_focus_conditional_probability": 0.11494518176572417,
+          "tail_focus_implied_overall_probability": 0.032354940052574215,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06315789473684211,
+          "tail_focus_conditional_probability": 0.05539526832083092,
+          "tail_focus_implied_overall_probability": 0.015592742194011668,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.061842105263157886,
+          "tail_focus_conditional_probability": 0.05424120023081361,
+          "tail_focus_implied_overall_probability": 0.015267893398303091,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.04736842105263158,
+          "tail_focus_conditional_probability": 0.0415464512406232,
+          "tail_focus_implied_overall_probability": 0.011694556645508754,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.04736842105263158,
+          "tail_focus_conditional_probability": 0.0415464512406232,
+          "tail_focus_implied_overall_probability": 0.011694556645508754,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.02631578947368421,
+          "tail_focus_conditional_probability": 0.023081361800346218,
+          "tail_focus_implied_overall_probability": 0.006496975914171529,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.02631578947368421,
+          "tail_focus_conditional_probability": 0.023081361800346218,
+          "tail_focus_implied_overall_probability": 0.006496975914171529,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.23296296296296296,
+      "attention_level": "medium_high",
+      "evidence_strength": 0.61,
+      "rationale_cn": "一边倒路径主要来自英格兰基础实力、控球压迫和禁区占领优势，而不是加纳主动崩盘的独立证据。加纳门将位置不确定、整体防守被迫长期承压，会提高英格兰净胜3球以上的尾部空间；但加纳中低位防守与反击/定位球威胁会限制无阻力碾压的确定性。",
+      "supporting_evidence_ids": [
+        "E_d0b68f2f4e7c",
+        "E_8ee9590930bd",
+        "E_c7a30b90a1f4",
+        "E_dd824565c6cf",
+        "E_73e4cf2ee2c5",
+        "E_bb0140fbf4ac",
+        "E_1f57221819f9"
+      ],
+      "counter_evidence_ids": [
+        "E_69d222a8a96f",
+        "E_bb8cee354c1c",
+        "E_c7c9c59420c9",
+        "E_ea5c77c74e25"
+      ],
+      "caution_cn": "崩盘情景依赖早破门、加纳低位结构被迫拉开，以及英格兰终结效率维持；若前30分钟无进球或加纳反击制造威胁，净胜3球以上会明显变难。",
+      "audit_note_cn": "Auditor调用失败，本报告暂时采用Proposer结果。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.09592592592592593,
+          "base_conditional_probability": 0.411764705882353,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.04814814814814815,
+          "base_conditional_probability": 0.20667726550079493,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.030740740740740742,
+          "base_conditional_probability": 0.13195548489666137,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.07472178060413354,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.057233704292527825,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "6-1",
+          "base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.028616852146263912,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.02543720190779014,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "5-2",
+          "base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.014308426073131956,
+          "total_goals": 7,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.09592592592592593,
+          "base_conditional_probability": 0.411764705882353,
+          "tail_focus_conditional_probability": 0.4764955909408108,
+          "tail_focus_implied_overall_probability": 0.11100582470435925,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "script_cn": "英格兰稳态压制但不完全打疯，先通过持续控球和禁区压力取得领先，随后在加纳体能下降或阵型前压时补进第二、第三球，防守端由赖斯和中卫保护住反击空间。",
+          "rationale_cn": "3-0是崩盘池中最贴近主线优势的比分：不要求极端射门转化，只要求英格兰把领地优势稳定兑现且加纳未能把反击/定位球转成进球。",
+          "evidence_ids": [
+            "E_d0b68f2f4e7c",
+            "E_8ee9590930bd",
+            "E_dd824565c6cf",
+            "E_c7a30b90a1f4",
+            "E_bb8cee354c1c"
+          ],
+          "mechanism_ids": [
+            "H_01"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.04814814814814815,
+          "base_conditional_probability": 0.20667726550079493,
+          "tail_focus_conditional_probability": 0.1979318657615936,
+          "tail_focus_implied_overall_probability": 0.046110793912608285,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "英格兰较早破门后继续压迫，加纳中低位防线被迫长时间横移和封堵，门将或后防承压增加；下半场英格兰通过肋部、传中和二点球把优势扩大到四球。",
+          "rationale_cn": "4-0受英格兰健康核心、体系完整和加纳门将不确定性支持，但需要加纳所有反击窗口都被压住，尾部属性更强。",
+          "evidence_ids": [
+            "E_d0b68f2f4e7c",
+            "E_8ee9590930bd",
+            "E_bb0140fbf4ac",
+            "E_1f57221819f9",
+            "E_73e4cf2ee2c5"
+          ],
+          "mechanism_ids": [
+            "H_01"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.030740740740740742,
+          "base_conditional_probability": 0.13195548489666137,
+          "tail_focus_conditional_probability": 0.12637188352470977,
+          "tail_focus_implied_overall_probability": 0.029439968421126828,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "英格兰先把比赛推向一边倒，加纳落后后通过定位球或一次快速推进扳回一球，但因压出后的空间被英格兰反复利用，最终仍形成三球差。",
+          "rationale_cn": "该比分兼容英格兰崩盘式胜利与加纳反击/定位球存在感，比4-0更承认H_02，但也需要英格兰进攻端达到较高效率。",
+          "evidence_ids": [
+            "E_d0b68f2f4e7c",
+            "E_c7a30b90a1f4",
+            "E_69d222a8a96f",
+            "E_c7c9c59420c9"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.07472178060413354,
+          "tail_focus_conditional_probability": 0.059633318530736536,
+          "tail_focus_implied_overall_probability": 0.013892354576234549,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "英格兰早早建立两球优势后，加纳低位计划失效并在后段阵型断裂，英格兰替补和边路持续冲击制造更多进球。",
+          "rationale_cn": "5-0只是极端顺风尾部：有实力差和门将不确定性作为有限支撑，但对早破门、终结效率和加纳心理/体能下滑要求都很高。",
+          "evidence_ids": [
+            "E_d0b68f2f4e7c",
+            "E_8ee9590930bd",
+            "E_bb0140fbf4ac",
+            "E_ec997bcbd7f8"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_03"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.09592592592592593,
+          "base_conditional_probability": 0.411764705882353,
+          "tail_focus_conditional_probability": 0.4764955909408108,
+          "tail_focus_implied_overall_probability": 0.11100582470435925,
+          "support_grade": 2,
+          "multiplier": 1.45
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.04814814814814815,
+          "base_conditional_probability": 0.20667726550079493,
+          "tail_focus_conditional_probability": 0.1979318657615936,
+          "tail_focus_implied_overall_probability": 0.046110793912608285,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.030740740740740742,
+          "base_conditional_probability": 0.13195548489666137,
+          "tail_focus_conditional_probability": 0.12637188352470977,
+          "tail_focus_implied_overall_probability": 0.029439968421126828,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.07472178060413354,
+          "tail_focus_conditional_probability": 0.059633318530736536,
+          "tail_focus_implied_overall_probability": 0.013892354576234549,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.013333333333333334,
+          "base_conditional_probability": 0.057233704292527825,
+          "tail_focus_conditional_probability": 0.04567658440652161,
+          "tail_focus_implied_overall_probability": 0.010640952441371145,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.028616852146263912,
+          "tail_focus_conditional_probability": 0.022838292203260804,
+          "tail_focus_implied_overall_probability": 0.0053204762206855724,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.02543720190779014,
+          "tail_focus_conditional_probability": 0.02030070418067627,
+          "tail_focus_implied_overall_probability": 0.004729312196164953,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.014308426073131956,
+          "tail_focus_conditional_probability": 0.011419146101630402,
+          "tail_focus_implied_overall_probability": 0.0026602381103427862,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.01271860095389507,
+          "tail_focus_conditional_probability": 0.010150352090338134,
+          "tail_focus_implied_overall_probability": 0.0023646560980824763,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "7-0",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.009538950715421305,
+          "tail_focus_conditional_probability": 0.007612764067753601,
+          "tail_focus_implied_overall_probability": 0.0017734920735618573,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Ghana 获胜。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.10407407407407407,
+      "attention_level": "medium",
+      "evidence_strength": 0.36,
+      "rationale_cn": "爆冷的核心证据不是加纳能持续压制英格兰，而是其反击和定位球可以在低控球、少机会情况下制造高价值瞬间。若英格兰压上后丢失肋部保护，或萨卡替补导致早段攻坚效率不足，加纳有守住优势的路径；但英格兰核心健康和整体实力优势构成强反证。",
+      "supporting_evidence_ids": [
+        "E_69d222a8a96f",
+        "E_bb8cee354c1c",
+        "E_c7c9c59420c9",
+        "E_4b22537e3a97",
+        "E_cb9f19705c97",
+        "E_ea5c77c74e25",
+        "E_ec997bcbd7f8"
+      ],
+      "counter_evidence_ids": [
+        "E_d0b68f2f4e7c",
+        "E_8ee9590930bd",
+        "E_c7a30b90a1f4",
+        "E_dd824565c6cf",
+        "E_73e4cf2ee2c5"
+      ],
+      "caution_cn": "爆冷不应扩展为加纳场面占优假设；更合理的是低比分、小样本机会兑现。若英格兰先取得领先，绝大多数爆冷比分脚本会迅速失效。",
+      "audit_note_cn": "Auditor调用失败，本报告暂时采用Proposer结果。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.04518518518518518,
+          "base_conditional_probability": 0.43416370106761565,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.24555160142348756,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.11387900355871886,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.0711743772241993,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.0711743772241993,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.028469750889679714,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.014234875444839857,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.010676156583629894,
+          "total_goals": 5,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.04518518518518518,
+          "base_conditional_probability": 0.43416370106761565,
+          "tail_focus_conditional_probability": 0.48702594810379235,
+          "tail_focus_implied_overall_probability": 0.05068677459895024,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "script_cn": "加纳前60分钟保持低位紧凑，英格兰控球多但高质量机会不足；加纳利用一次定位球、二点球或边路反击打入唯一进球，随后继续压低节奏守住。",
+          "rationale_cn": "0-1是爆冷池中最符合证据的形式：不要求加纳创造大量机会，只要求一次高价值转换或定位球兑现，并依靠中低位防守承压。",
+          "evidence_ids": [
+            "E_69d222a8a96f",
+            "E_bb8cee354c1c",
+            "E_c7c9c59420c9",
+            "E_cb9f19705c97",
+            "E_ea5c77c74e25"
+          ],
+          "mechanism_ids": [
+            "H_02",
+            "H_03"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.24555160142348756,
+          "tail_focus_conditional_probability": 0.22954091816367264,
+          "tail_focus_implied_overall_probability": 0.023889258519997042,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "英格兰通过持续压制取得进球或扳平，但加纳两次把反击/定位球机会转化为进球；英格兰后段加强进攻却暴露更多身后空间。",
+          "rationale_cn": "1-2承认英格兰进攻质量大概率会有产出，因此比0-1更开放；但要求加纳两次高效兑现，证据支持有限。",
+          "evidence_ids": [
+            "E_69d222a8a96f",
+            "E_4b22537e3a97",
+            "E_c7c9c59420c9",
+            "E_d0b68f2f4e7c"
+          ],
+          "mechanism_ids": [
+            "H_01",
+            "H_02"
+          ]
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.11387900355871886,
+          "tail_focus_conditional_probability": 0.09048569527611443,
+          "tail_focus_implied_overall_probability": 0.009417214952810426,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "script_cn": "加纳先由反击或定位球领先，英格兰压上追分时再次被打到身后，最终加纳在低射门量下取得两球胜利。",
+          "rationale_cn": "0-2需要英格兰既无法破门又二次被转换惩罚，和英格兰核心健康、进攻状态证据冲突较大；仅作为极端反击效率分支保留。",
+          "evidence_ids": [
+            "E_69d222a8a96f",
+            "E_bb8cee354c1c",
+            "E_c7c9c59420c9",
+            "E_d0b68f2f4e7c"
+          ],
+          "mechanism_ids": [
+            "H_02"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.04518518518518518,
+          "base_conditional_probability": 0.43416370106761565,
+          "tail_focus_conditional_probability": 0.48702594810379235,
+          "tail_focus_implied_overall_probability": 0.05068677459895024,
+          "support_grade": 1,
+          "multiplier": 1.2
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.24555160142348756,
+          "tail_focus_conditional_probability": 0.22954091816367264,
+          "tail_focus_implied_overall_probability": 0.023889258519997042,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.11387900355871886,
+          "tail_focus_conditional_probability": 0.09048569527611443,
+          "tail_focus_implied_overall_probability": 0.009417214952810426,
+          "support_grade": -1,
+          "multiplier": 0.85
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.0711743772241993,
+          "tail_focus_conditional_probability": 0.0665335994677312,
+          "tail_focus_implied_overall_probability": 0.006924422759419432,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.0711743772241993,
+          "tail_focus_conditional_probability": 0.0665335994677312,
+          "tail_focus_implied_overall_probability": 0.006924422759419432,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.028469750889679714,
+          "tail_focus_conditional_probability": 0.026613439787092477,
+          "tail_focus_implied_overall_probability": 0.0027697691037677726,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.014234875444839857,
+          "tail_focus_conditional_probability": 0.013306719893546239,
+          "tail_focus_implied_overall_probability": 0.0013848845518838863,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.010676156583629894,
+          "tail_focus_conditional_probability": 0.00998003992015968,
+          "tail_focus_implied_overall_probability": 0.0010386634139129148,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-4",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.0071174377224199285,
+          "tail_focus_conditional_probability": 0.006653359946773119,
+          "tail_focus_implied_overall_probability": 0.0006924422759419432,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-5",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.0035587188612099642,
+          "tail_focus_conditional_probability": 0.0033266799733865596,
+          "tail_focus_implied_overall_probability": 0.0003462211379709716,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "failed",
+    "cache_enabled": true,
+    "errors": [
+      "Auditor失败：RuntimeError: LLM 调用失败（claude-opus-4-8 / tail_forecast_auditor_v740）：BUSINESS_VALIDATION_FAILED: missing scenarios: ['high_scoring', 'blowout', 'upset']"
+    ]
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "c773b551410b82109460f01e326000dea1534fc18f57262e1d11c747d6fb2bd3"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_England_vs_Ghana_M45\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\web_delivery\\England_vs_Ghana_M45\\2026.6.24.04\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_England_vs_Ghana_M45\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\web_delivery\\England_vs_Ghana_M45\\2026.6.24.04\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

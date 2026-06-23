@@ -1,0 +1,737 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.0-tail-postprocessor",
+  "generated_at": "2026-06-23T01:34:30.115908Z",
+  "status": "fallback_no_llm",
+  "source": {
+    "path": "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_Colombia_vs_DR_Congo_M48\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "b77255543b7a5381c2968dce1fb5a40aeeab29d8409d595735429b1359595395",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-23T01:34:28.373901+00:00"
+  },
+  "match": {
+    "match_id": "M48",
+    "team_a": "Colombia",
+    "team_b": "DR Congo",
+    "kickoff_utc": "2026-06-24T02:00:00Z",
+    "venue": "Guadalajara Stadium",
+    "stage": "group",
+    "group": "K",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "top_probability_cells_within_each_tail_event",
+    "proposer_role": "evidence_based_selection_and_support_grading",
+    "auditor_role": "evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.5433333333333333,
+    "draw": 0.2474074074074074,
+    "team_b_win": 0.20925925925925926,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.1262962962962963
+      },
+      {
+        "score": "1-1",
+        "probability": 0.11851851851851852
+      },
+      {
+        "score": "2-1",
+        "probability": 0.10444444444444445
+      },
+      {
+        "score": "2-0",
+        "probability": 0.09518518518518519
+      },
+      {
+        "score": "0-1",
+        "probability": 0.08703703703703704
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Colombia",
+    "underdog_side": "team_b",
+    "underdog_team": "DR Congo",
+    "team_a_win": 0.5433333333333333,
+    "draw": 0.2474074074074074,
+    "team_b_win": 0.20925925925925926,
+    "win_probability_gap": 0.3340740740740741,
+    "underdog_win_probability": 0.20925925925925926,
+    "favorite_fail_to_win_probability": 0.45666666666666667,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.27444444444444444,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "3-1",
+          "base_probability": 0.061481481481481484,
+          "base_conditional_probability": 0.22402159244264508,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.045925925925925926,
+          "base_conditional_probability": 0.16734143049932523,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.03222222222222222,
+          "base_conditional_probability": 0.11740890688259109,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.07692307692307693,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06477732793522267,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.06072874493927126,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.05668016194331984,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.04723346828609987,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.061481481481481484,
+          "base_conditional_probability": 0.22402159244264508,
+          "tail_focus_conditional_probability": 0.22402159244264508,
+          "tail_focus_implied_overall_probability": 0.061481481481481484,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.045925925925925926,
+          "base_conditional_probability": 0.16734143049932523,
+          "tail_focus_conditional_probability": 0.16734143049932523,
+          "tail_focus_implied_overall_probability": 0.045925925925925926,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.03222222222222222,
+          "base_conditional_probability": 0.11740890688259109,
+          "tail_focus_conditional_probability": 0.11740890688259109,
+          "tail_focus_implied_overall_probability": 0.03222222222222222,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.061481481481481484,
+          "base_conditional_probability": 0.22402159244264508,
+          "tail_focus_conditional_probability": 0.22402159244264508,
+          "tail_focus_implied_overall_probability": 0.061481481481481484,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.045925925925925926,
+          "base_conditional_probability": 0.16734143049932523,
+          "tail_focus_conditional_probability": 0.16734143049932523,
+          "tail_focus_implied_overall_probability": 0.045925925925925926,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.03222222222222222,
+          "base_conditional_probability": 0.11740890688259109,
+          "tail_focus_conditional_probability": 0.11740890688259109,
+          "tail_focus_implied_overall_probability": 0.03222222222222222,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.07692307692307693,
+          "tail_focus_conditional_probability": 0.07692307692307693,
+          "tail_focus_implied_overall_probability": 0.021111111111111112,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06477732793522267,
+          "tail_focus_conditional_probability": 0.06477732793522267,
+          "tail_focus_implied_overall_probability": 0.017777777777777778,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.06072874493927126,
+          "tail_focus_conditional_probability": 0.06072874493927126,
+          "tail_focus_implied_overall_probability": 0.016666666666666666,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.05668016194331984,
+          "tail_focus_conditional_probability": 0.05668016194331984,
+          "tail_focus_implied_overall_probability": 0.015555555555555555,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.04723346828609987,
+          "tail_focus_conditional_probability": 0.04723346828609987,
+          "tail_focus_implied_overall_probability": 0.012962962962962963,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.03643724696356276,
+          "tail_focus_conditional_probability": 0.03643724696356276,
+          "tail_focus_implied_overall_probability": 0.01,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.024291497975708506,
+          "tail_focus_conditional_probability": 0.024291497975708506,
+          "tail_focus_implied_overall_probability": 0.006666666666666667,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.11851851851851852,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.042222222222222223,
+          "base_conditional_probability": 0.35625,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.178125,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.15,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.07812499999999999,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.05625,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.053125,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "5-2",
+          "base_probability": 0.0044444444444444444,
+          "base_conditional_probability": 0.0375,
+          "total_goals": 7,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.03125,
+          "total_goals": 5,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.042222222222222223,
+          "base_conditional_probability": 0.35625,
+          "tail_focus_conditional_probability": 0.35625,
+          "tail_focus_implied_overall_probability": 0.042222222222222223,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.178125,
+          "tail_focus_conditional_probability": 0.178125,
+          "tail_focus_implied_overall_probability": 0.021111111111111112,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.15,
+          "tail_focus_conditional_probability": 0.15,
+          "tail_focus_implied_overall_probability": 0.017777777777777778,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.042222222222222223,
+          "base_conditional_probability": 0.35625,
+          "tail_focus_conditional_probability": 0.35625,
+          "tail_focus_implied_overall_probability": 0.042222222222222223,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.178125,
+          "tail_focus_conditional_probability": 0.178125,
+          "tail_focus_implied_overall_probability": 0.021111111111111112,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.15,
+          "tail_focus_conditional_probability": 0.15,
+          "tail_focus_implied_overall_probability": 0.017777777777777778,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.07812499999999999,
+          "tail_focus_conditional_probability": 0.07812499999999999,
+          "tail_focus_implied_overall_probability": 0.009259259259259259,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.05625,
+          "tail_focus_conditional_probability": 0.05625,
+          "tail_focus_implied_overall_probability": 0.006666666666666667,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.053125,
+          "tail_focus_conditional_probability": 0.053125,
+          "tail_focus_implied_overall_probability": 0.006296296296296296,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0044444444444444444,
+          "base_conditional_probability": 0.0375,
+          "tail_focus_conditional_probability": 0.0375,
+          "tail_focus_implied_overall_probability": 0.0044444444444444444,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.03125,
+          "tail_focus_conditional_probability": 0.03125,
+          "tail_focus_implied_overall_probability": 0.003703703703703704,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.015625,
+          "tail_focus_conditional_probability": 0.015625,
+          "tail_focus_implied_overall_probability": 0.001851851851851852,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "6-2",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.009375,
+          "tail_focus_conditional_probability": 0.009375,
+          "tail_focus_implied_overall_probability": 0.0011111111111111111,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 DR Congo 获胜。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.20925925925925926,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.08703703703703704,
+          "base_conditional_probability": 0.41592920353982304,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.04555555555555556,
+          "base_conditional_probability": 0.2176991150442478,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.025185185185185185,
+          "base_conditional_probability": 0.12035398230088495,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.07964601769911504,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.0743362831858407,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.04424778761061947,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.017699115044247787,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.010619469026548672,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.08703703703703704,
+          "base_conditional_probability": 0.41592920353982304,
+          "tail_focus_conditional_probability": 0.41592920353982304,
+          "tail_focus_implied_overall_probability": 0.08703703703703704,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.04555555555555556,
+          "base_conditional_probability": 0.2176991150442478,
+          "tail_focus_conditional_probability": 0.2176991150442478,
+          "tail_focus_implied_overall_probability": 0.04555555555555556,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.025185185185185185,
+          "base_conditional_probability": 0.12035398230088495,
+          "tail_focus_conditional_probability": 0.12035398230088495,
+          "tail_focus_implied_overall_probability": 0.025185185185185185,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.08703703703703704,
+          "base_conditional_probability": 0.41592920353982304,
+          "tail_focus_conditional_probability": 0.41592920353982304,
+          "tail_focus_implied_overall_probability": 0.08703703703703704,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.04555555555555556,
+          "base_conditional_probability": 0.2176991150442478,
+          "tail_focus_conditional_probability": 0.2176991150442478,
+          "tail_focus_implied_overall_probability": 0.04555555555555556,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.025185185185185185,
+          "base_conditional_probability": 0.12035398230088495,
+          "tail_focus_conditional_probability": 0.12035398230088495,
+          "tail_focus_implied_overall_probability": 0.025185185185185185,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.07964601769911504,
+          "tail_focus_conditional_probability": 0.07964601769911504,
+          "tail_focus_implied_overall_probability": 0.016666666666666666,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.015555555555555555,
+          "base_conditional_probability": 0.0743362831858407,
+          "tail_focus_conditional_probability": 0.0743362831858407,
+          "tail_focus_implied_overall_probability": 0.015555555555555555,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.04424778761061947,
+          "tail_focus_conditional_probability": 0.04424778761061947,
+          "tail_focus_implied_overall_probability": 0.009259259259259259,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.017699115044247787,
+          "tail_focus_conditional_probability": 0.017699115044247787,
+          "tail_focus_implied_overall_probability": 0.0037037037037037034,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.010619469026548672,
+          "tail_focus_conditional_probability": 0.010619469026548672,
+          "tail_focus_implied_overall_probability": 0.0022222222222222222,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "3-4",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.008849557522123894,
+          "tail_focus_conditional_probability": 0.008849557522123894,
+          "tail_focus_implied_overall_probability": 0.0018518518518518517,
+          "support_grade": 0,
+          "multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.0035398230088495575,
+          "tail_focus_conditional_probability": 0.0035398230088495575,
+          "tail_focus_implied_overall_probability": 0.0007407407407407407,
+          "support_grade": 0,
+          "multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "failed",
+    "auditor_status": "skipped",
+    "cache_enabled": true,
+    "errors": [
+      "Proposer失败：RuntimeError: LLM 调用失败（gpt-5.5 / tail_forecast_proposer_v740）：Connection error."
+    ]
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "b77255543b7a5381c2968dce1fb5a40aeeab29d8409d595735429b1359595395"
+  },
+  "brief_integration": {
+    "version": "7.4.0-tail-brief-summary-v1",
+    "updated_markdown": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_Colombia_vs_DR_Congo_M48\\web_export\\prediction_brief.md",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\web_delivery\\Colombia_vs_DR_Congo_M48\\2026.6.24.10\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\reports_Colombia_vs_DR_Congo_M48\\web_export\\prediction_brief.json",
+      "C:\\Users\\22955\\Desktop\\世界杯预测\\worldcup_mas_v7_3_7_production_reliability_shared_gateway\\6.24比赛预测_V741\\web_delivery\\Colombia_vs_DR_Congo_M48\\2026.6.24.10\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}
