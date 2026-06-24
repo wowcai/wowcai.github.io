@@ -6204,14 +6204,6 @@ body.modal-open {
   color: rgba(226, 238, 255, 0.42);
 }
 
-.gaokao-quick-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.gaokao-quick-row button,
 .gaokao-filter-tabs button {
   min-height: 36px;
   border: 1px solid rgba(255, 207, 130, 0.18);
@@ -6224,7 +6216,6 @@ body.modal-open {
   cursor: pointer;
 }
 
-.gaokao-quick-row button.is-active,
 .gaokao-filter-tabs button.is-active {
   border-color: rgba(246, 214, 143, 0.72);
   background: linear-gradient(135deg, #f6d68f, #f59b34);
@@ -6825,7 +6816,7 @@ body.modal-open {
 }
 
 .gaokao-detail-header h2 {
-  margin: 0 0 8px;
+  margin: 0;
   color: #ffffff;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
 }
@@ -6836,32 +6827,33 @@ body.modal-open {
 }
 
 .gaokao-detail-kpis {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .gaokao-detail-kpis div {
-  min-height: 116px;
+  min-height: 74px;
+  padding: 10px 12px;
 }
 
 .gaokao-detail-kpis p {
-  margin: 6px 0 0;
+  margin: 4px 0 0;
   color: rgba(226, 238, 255, 0.62);
   font-size: 12px;
 }
 
 .gaokao-detail-chart-grid {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .gaokao-detail-chart-grid h3 {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 0.94rem;
 }
 
 .gaokao-detail-chart {
   width: 100%;
-  height: auto;
+  height: 172px;
   display: block;
 }
 
@@ -6916,8 +6908,8 @@ body.modal-open {
 .gaokao-chart-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 8px;
+  gap: 8px;
+  margin-top: 5px;
   color: rgba(226, 238, 255, 0.72);
   font-size: 12px;
   font-weight: 800;
@@ -6961,18 +6953,94 @@ body.modal-open {
   line-height: 1.7;
 }
 
-.gaokao-detail-table {
-  background: rgba(2, 8, 19, 0.42);
-  color: #eef6ff;
+.gaokao-detail-section-list,
+.gaokao-detail-major-advice {
+  margin-top: 12px;
 }
 
-.gaokao-detail-table th,
-.gaokao-detail-table td {
-  border-color: rgba(255, 207, 130, 0.14);
+.gaokao-detail-subhead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
-.gaokao-detail-table th {
+.gaokao-detail-subhead strong {
   color: #f6d68f;
+  font-size: 1rem;
+}
+
+.gaokao-detail-subhead span {
+  color: rgba(226, 238, 255, 0.52);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.gaokao-detail-reason-grid,
+.gaokao-major-tier-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.gaokao-detail-reason-grid article,
+.gaokao-major-tier-grid article {
+  border: 1px solid rgba(255, 207, 130, 0.13);
+  border-radius: 12px;
+  padding: 11px 12px;
+  background: rgba(2, 8, 19, 0.34);
+}
+
+.gaokao-detail-reason-grid h4,
+.gaokao-major-tier-grid h4 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.gaokao-detail-reason-grid p,
+.gaokao-major-tier-grid p,
+.gaokao-major-tier-grid li {
+  margin: 0;
+  color: rgba(226, 238, 255, 0.74);
+  line-height: 1.55;
+  font-size: 13px;
+}
+
+.gaokao-detail-reason-grid p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.gaokao-major-tier-grid article.is-wide {
+  grid-column: 1 / -1;
+}
+
+.gaokao-major-tier-grid ul {
+  display: grid;
+  gap: 6px;
+  margin: 9px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gaokao-major-tier-grid li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.gaokao-major-tier-grid li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: #f6d68f;
 }
 
 /* Simplified province-level Gaokao prediction workspace */
@@ -9505,7 +9573,9 @@ body.about-brand-page {
   }
 
   .gaokao-side-column,
-  .gaokao-detail-chart-grid {
+  .gaokao-detail-chart-grid,
+  .gaokao-detail-reason-grid,
+  .gaokao-major-tier-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -9585,6 +9655,11 @@ body.about-brand-page {
 
   .gaokao-detail-header {
     padding-right: 44px;
+  }
+
+  .gaokao-detail-subhead {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 

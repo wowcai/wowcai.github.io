@@ -4004,6 +4004,82 @@ function resolveGaokaoMapPoint(entry) {
   return entry?.map || null;
 }
 
+let gaokaoStandardMapSvgPromise = null;
+
+function loadGaokaoStandardMapSvg() {
+  if (!gaokaoStandardMapSvgPromise) {
+    gaokaoStandardMapSvgPromise = fetch("china-standard-map.svg", { cache: "force-cache" })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Map SVG request failed: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then((svgText) => {
+        if (!/<svg[\s>]/i.test(svgText)) {
+          throw new Error("Map SVG response is not valid SVG text.");
+        }
+        return svgText;
+      })
+      .catch(() => "");
+  }
+
+  return gaokaoStandardMapSvgPromise;
+}
+
+function installGaokaoStandardMapFallback(container, imageSelector) {
+  if (!container) {
+    return;
+  }
+
+  const image = container.querySelector(imageSelector);
+
+  if (!image) {
+    return;
+  }
+
+  const inlineSvg = (svgText) => {
+    if (!svgText || !image.isConnected) {
+      return;
+    }
+
+    const template = document.createElement("template");
+    template.innerHTML = svgText.trim();
+    const svg = template.content.querySelector("svg");
+
+    if (!svg) {
+      return;
+    }
+
+    const imageClass = image.getAttribute("class");
+    const imageAlt = image.getAttribute("alt");
+
+    if (imageClass) {
+      svg.setAttribute("class", imageClass);
+    }
+
+    if (imageAlt) {
+      svg.setAttribute("role", "img");
+      svg.setAttribute("aria-label", imageAlt);
+    }
+
+    svg.setAttribute("preserveAspectRatio", "none");
+    image.replaceWith(svg);
+  };
+
+  const tryInlineSvg = () => {
+    loadGaokaoStandardMapSvg().then(inlineSvg);
+  };
+
+  image.addEventListener("error", tryInlineSvg, { once: true });
+
+  window.setTimeout(() => {
+    if (image.isConnected && image.complete && image.naturalWidth === 0) {
+      tryInlineSvg();
+    }
+  }, 0);
+}
+
 function gkMajorGroupText(zh) {
   const s = String(zh ?? "");
   if (getLang() !== "en") {
@@ -4306,8 +4382,53 @@ function normalizeAdmissionPredictionItem(item) {
     },
     predictionReason: String(item.predictionReason || item.prediction_reason || ""),
     predictionReasonEn: item.predictionReasonEn ? String(item.predictionReasonEn) : "",
+    predictionReasonSections: normalizeGaokaoReasonSections(item.predictionReasonSections || item.prediction_reason_sections || item.predictionReasonDetail || item.prediction_reason),
+    majorTierRecommendation: normalizeGaokaoTierRecommendation(item.majorTierRecommendation || item.major_tier_recommendation),
+    sourceFile: item.sourceFile ? String(item.sourceFile) : "",
     sourceNote: String(item.sourceNote || "示例数据，后续替换为官方和模型结果。")
   };
+}
+
+function normalizeGaokaoReasonSections(value) {
+  if (!value) {
+    return [];
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((item) => ({
+      title: String(item?.title || item?.name || ""),
+      text: String(item?.text || item?.value || item || "")
+    })).filter((item) => item.title && item.text);
+  }
+
+  if (typeof value === "object") {
+    return Object.entries(value).map(([title, text]) => ({
+      title: String(title),
+      text: String(text || "")
+    })).filter((item) => item.title && item.text);
+  }
+
+  const text = String(value || "");
+  return text ? [{ title: "预测依据", text }] : [];
+}
+
+function normalizeGaokaoTierRecommendation(value) {
+  if (!value || typeof value !== "object") {
+    return [];
+  }
+
+  const labels = {
+    tier_1: "一档",
+    tier_2: "二档",
+    tier_3: "三档",
+    overall_advice: "整体建议"
+  };
+
+  return Object.entries(value).map(([key, text]) => ({
+    key,
+    title: labels[key] || String(key),
+    text: String(text || "")
+  })).filter((item) => item.text.trim());
 }
 
 function nullableNumber(value) {
@@ -4343,7 +4464,7 @@ function estimateFallbackRank(score, index) {
 
 function getGaokaoProvinceOrder(data, releaseData) {
   const provinceSet = new Set(data.map((item) => item.province));
-  const preferred = ["浙江", "上海市"];
+  const preferred = ["浙江", "上海", "上海市"];
   const ordered = preferred.filter((province) => provinceSet.has(province));
   const rest = [...provinceSet]
     .filter((province) => !preferred.includes(province))
@@ -4388,7 +4509,7 @@ function renderProvinceQuickButtons(provinceOrder, state, refs) {
     return;
   }
 
-  const quick = ["浙江", "上海市"].filter((province) => provinceOrder.includes(province));
+  const quick = ["浙江", "上海", "上海市"].filter((province) => provinceOrder.includes(province));
   refs.quickList.innerHTML = quick.map((province) => `
     <button class="${province === state.province ? "is-active" : ""}" type="button" data-gaokao-quick-province="${escapeHtml(province)}">${escapeHtml(gkProvinceText(province))}</button>
   `).join("");
@@ -4549,6 +4670,7 @@ function renderUniversityPredictionMap(data, meta, state, refs) {
       <img class="gaokao-prediction-map-bg" src="china-standard-map.svg" alt="中华人民共和国标准地图（含台湾省）">
     </div>
   `;
+  installGaokaoStandardMapFallback(refs.predictionMap, ".gaokao-prediction-map-bg");
   const markerLayer = refs.predictionMap.querySelector("[data-gaokao-map-coordinate-layer]") || refs.predictionMap;
 
   const maxCount = provinceGroups.reduce((max, group) => Math.max(max, group.count), 0);
@@ -5015,9 +5137,6 @@ function renderUniversityDetail(entry) {
     ? nullableNumber(entry.prediction.predictedRank) - nullableNumber(latest.minRank)
     : null;
 
-  const admissionText = getLang() === "en"
-    ? `${gkProvinceEn(entry.province)} admission`
-    : `${entry.province}招生`;
   const latestRankText = getLang() === "en"
     ? `Latest historical rank ${formatRank(latest?.minRank)}`
     : `最新历史位次 ${formatRank(latest?.minRank)}`;
@@ -5027,7 +5146,6 @@ function renderUniversityDetail(entry) {
       <div>
         <p class="kicker">UNIVERSITY DETAIL</p>
         <h2 id="gaokao-detail-title">${escapeHtml(gkUniversityName(entry))}</h2>
-        <p>${escapeHtml(gkLocationText(entry))} · ${escapeHtml(admissionText)} · ${escapeHtml(gkSubjectText(entry.subjectType))} · ${escapeHtml(gkMajorGroupText(entry.majorGroup))}</p>
       </div>
       <span class="gaokao-detail-score-chip">${formatRank(entry.prediction.predictedRank)}</span>
     </div>
@@ -5056,11 +5174,6 @@ function renderUniversityDetail(entry) {
       </div>
     </div>
 
-    <div class="gaokao-detail-judgement">
-      <strong>${escapeHtml(L("趋势判断", "Trend read"))}</strong>
-      <p>${escapeHtml(makeGaokaoTrendJudgement(entry))}</p>
-    </div>
-
     ${entry.predictionReason ? `
       <div class="gaokao-detail-judgement gaokao-detail-reason">
         <strong>${escapeHtml(L(`${predictionYear} 预测依据`, `${predictionYear} forecast basis`))}</strong>
@@ -5068,51 +5181,79 @@ function renderUniversityDetail(entry) {
       </div>
     ` : ""}
 
-    <div class="modal-table-wrap">
-      <table class="modal-data-table gaokao-detail-table">
-        <thead>
-          <tr><th>${escapeHtml(L("年份", "Year"))}</th><th>${escapeHtml(L("最低分", "Min score"))}</th><th>${escapeHtml(L("最低位次", "Min rank"))}</th><th>${escapeHtml(L("招生计划", "Plan"))}</th></tr>
-        </thead>
-        <tbody>
-          ${entry.history.map((row) => `
-            <tr>
-              <td>${row.year}</td>
-              <td>${formatNullable(row.minScore, "分")}</td>
-              <td>${formatRank(row.minRank)}</td>
-              <td>${row.planCount == null ? gkTbd() : `${row.planCount}${gkUnit(" 人")}`}</td>
-            </tr>
-          `).join("")}
-        </tbody>
-      </table>
+    ${renderGaokaoReasonSections(entry)}
+    ${renderGaokaoTierRecommendation(entry)}
+  `;
+}
+
+function renderGaokaoReasonSections(entry) {
+  const sections = Array.isArray(entry?.predictionReasonSections) ? entry.predictionReasonSections : [];
+  const visibleSections = sections.filter((section) => section?.title && section?.text).slice(0, 8);
+
+  if (!visibleSections.length) {
+    return "";
+  }
+
+  return `
+    <div class="gaokao-detail-section-list">
+      <div class="gaokao-detail-subhead">
+        <strong>${escapeHtml(L("关键依据拆解", "Evidence breakdown"))}</strong>
+      </div>
+      <div class="gaokao-detail-reason-grid">
+        ${visibleSections.map((section) => `
+          <article>
+            <h4>${escapeHtml(section.title)}</h4>
+            <p>${escapeHtml(section.text)}</p>
+          </article>
+        `).join("")}
+      </div>
     </div>
   `;
 }
 
-function makeGaokaoTrendJudgement(entry) {
-  const lastThree = entry.history.filter((row) => Number.isFinite(row.minRank)).slice(-3);
-  const ranks = lastThree.map((row) => row.minRank);
-  const rankUp = ranks.length === 3 && ranks[2] < ranks[1] && ranks[1] < ranks[0];
-  const rankDown = ranks.length === 3 && ranks[2] > ranks[1] && ranks[1] > ranks[0];
-  const change = entry.prediction.changeFromLastYear;
+function renderGaokaoTierRecommendation(entry) {
+  const tiers = Array.isArray(entry?.majorTierRecommendation) ? entry.majorTierRecommendation : [];
+  const visibleTiers = tiers.filter((item) => item?.title && item?.text);
 
-  if (rankUp && change > 0) {
-    return L(
-      "该校近三年录取位次整体上移，预测分数线可能小幅上涨，建议结合位次和专业组热度判断。",
-      "Admission ranks have risen over the past three years, so the predicted score line may edge up. Weigh the rank trend and how competitive each major group is."
-    );
+  if (!visibleTiers.length) {
+    return "";
   }
 
-  if (rankDown && change < 0) {
-    return L(
-      "该校近三年录取位次有所下移，预测门槛可能小幅回落，但仍需核对当年招生计划变化。",
-      "Admission ranks have eased over the past three years, so the predicted threshold may dip slightly, but still check this year's enrollment-plan changes."
-    );
+  return `
+    <div class="gaokao-detail-major-advice">
+      <div class="gaokao-detail-subhead">
+        <strong>${escapeHtml(L("专业档位建议", "Major-tier advice"))}</strong>
+      </div>
+      <div class="gaokao-major-tier-grid">
+        ${visibleTiers.map((item) => `
+          <article class="${item.key === "overall_advice" ? "is-wide" : ""}">
+            <h4>${escapeHtml(item.title)}</h4>
+            ${renderGaokaoAdviceText(item.text)}
+          </article>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderGaokaoAdviceText(text) {
+  const lines = String(text || "").split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+
+  if (!lines.length) {
+    return "";
   }
 
-  return L(
-    "该校近年最低分和最低位次存在波动，建议优先看位次区间，并结合专业组、招生计划和院校热度综合判断。",
-    "Minimum scores and ranks have fluctuated in recent years. Prioritize the rank range, and weigh major groups, enrollment plans and overall demand together."
-  );
+  const [summary, ...items] = lines;
+  const itemLines = items.length ? items : [];
+
+  return `
+    <p>${escapeHtml(summary)}</p>
+    ${itemLines.length ? `
+      <ul>
+        ${itemLines.map((line) => `<li>${escapeHtml(line.replace(/^[-•]\s*/, ""))}</li>`).join("")}
+      </ul>
+    ` : ""}
+  `;
 }
 
 function renderScoreReleaseModule(releaseData, state, refs) {
@@ -5199,8 +5340,8 @@ function renderDetailLineChart(values, labels, type, forecast = null) {
   }
 
   const width = 560;
-  const height = 230;
-  const pad = { left: 56, right: 18, top: 24, bottom: 40 };
+  const height = 180;
+  const pad = { left: 54, right: 18, top: 18, bottom: 34 };
   const min = Math.min(...allValues);
   const max = Math.max(...allValues);
   const range = max - min || 1;
@@ -5440,6 +5581,7 @@ function renderChinaMap(target, universities, type) {
   target.innerHTML = `
     <img class="china-map-bg standard-map-image" src="china-standard-map.svg" alt="中华人民共和国标准地图（含台湾省）">
   `;
+  installGaokaoStandardMapFallback(target, ".standard-map-image");
 
   universities
     .filter((school) => {
