@@ -1,0 +1,911 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-24T08:30:38.838281Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Morocco_vs_Haiti_M52\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "bcbb45b9df8ad8a5d76f2d930fd9fae1f1537346d62da780fc29cbbec183cd54",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-24T08:27:51.530313+00:00"
+  },
+  "match": {
+    "match_id": "M52",
+    "team_a": "Morocco",
+    "team_b": "Haiti",
+    "kickoff_utc": "2026-06-24T22:00:00Z",
+    "venue": "Mercedes-Benz Stadium, Atlanta",
+    "stage": "group",
+    "group": "C",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 95,
+      "usable_evidence": 95,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 1,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.6814814814814815,
+    "draw": 0.22777777777777777,
+    "team_b_win": 0.09074074074074075,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.1814814814814815
+      },
+      {
+        "score": "2-0",
+        "probability": 0.14925925925925926
+      },
+      {
+        "score": "0-0",
+        "probability": 0.10074074074074074
+      },
+      {
+        "score": "1-1",
+        "probability": 0.0974074074074074
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09074074074074075
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999998
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Morocco",
+    "underdog_side": "team_b",
+    "underdog_team": "Haiti",
+    "team_a_win": 0.6814814814814815,
+    "draw": 0.22777777777777777,
+    "team_b_win": 0.09074074074074075,
+    "win_probability_gap": 0.5907407407407407,
+    "underdog_win_probability": 0.09074074074074075,
+    "favorite_fail_to_win_probability": 0.31851851851851853,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.21555555555555558,
+      "attention_level": "medium",
+      "evidence_strength": 0.58,
+      "rationale_cn": "摩洛哥对阵已淘汰的海地，强度差距显著（0.74 vs 0.41），进攻机制H_RIGHT_OVERLOAD_001在9条推演中8条激活，具备持续制造机会的结构支撑。但Reuters明确记录摩洛哥转化不足（E_60b4f9e660d4），Saibari包办本届全部进球（E_6d9a4fe8b7d0），依赖单点终结；海地对苏格兰防守样本显示低位有韧性（E_392738fd3ab7），Placide为有经验门将（E_0b3c75967b0d）。开放大比分情景成立但需要摩洛哥突破转化瓶颈，证据整体支持中等偏弱。",
+      "supporting_evidence_ids": [
+        "E_b061053a0211",
+        "E_51da71b2bac0",
+        "E_923be46a377b",
+        "E_448f91f8a0c3",
+        "E_a713122dfa83"
+      ],
+      "counter_evidence_ids": [
+        "E_60b4f9e660d4",
+        "E_392738fd3ab7",
+        "E_0b3c75967b0d",
+        "E_779a7bd47105"
+      ],
+      "caution_cn": "摩洛哥转化不足为赛内明确记录，非预测推断；3-2依赖海地两球回追，当前海地finishing_state仅0.35，结构支撑弱；4-0和4-1需要摩洛哥突破转化瓶颈且海地零封或极少威胁，4-0额外要求零失球，两者均为小概率叠加。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "3-1",
+          "base_probability": 0.056666666666666664,
+          "base_conditional_probability": 0.2628865979381443,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.09793814432989689,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.044673539518900345,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.18213058419243983,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.025185185185185185,
+          "base_conditional_probability": 0.11683848797250858,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.06013745704467353,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.05154639175257732,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.03608247422680412,
+          "total_goals": 6,
+          "winning_margin": 6
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.056666666666666664,
+          "base_conditional_probability": 0.2628865979381443,
+          "tail_focus_conditional_probability": 0.2972795040826372,
+          "tail_focus_implied_overall_probability": 0.06408024865781292,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "候选池中概率最高的开放大比分（base 0.0567），9条推演中两条直接以3-1为代表比分（rollout_5、rollout_9），H_RIGHT_OVERLOAD_001激活时边路持续压制可累积进球，同时海地有限反击能力（E_13c42d275588，对巴西7次射门3射正）提供1球支撑。转化不足风险存在但3球对海地仍在可信区间。",
+          "evidence_ids": [
+            "E_b061053a0211",
+            "E_51da71b2bac0",
+            "E_00c6ede88992",
+            "E_923be46a377b",
+            "E_13c42d275588"
+          ],
+          "mechanism_ids": [
+            "H_RIGHT_OVERLOAD_001",
+            "H_GROUP_CONTEXT_TRANSITIONS_003"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.18213058419243983,
+          "tail_focus_conditional_probability": 0.17044828902101175,
+          "tail_focus_implied_overall_probability": 0.036741075633418094,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "base概率0.039，为候选池中第二高。4球需要摩洛哥突破转化瓶颈，但海地defence仅0.43且已被淘汰、动机弱化，零失球对海地而言需门将超常发挥方能阻止。支撑证据充分度低，降为support_grade 1。",
+          "evidence_ids": [
+            "E_448f91f8a0c3",
+            "E_923be46a377b",
+            "E_b061053a0211"
+          ],
+          "mechanism_ids": [
+            "H_RIGHT_OVERLOAD_001"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.09793814432989689,
+          "tail_focus_conditional_probability": 0.10958888147679897,
+          "tail_focus_implied_overall_probability": 0.023622492229443338,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "",
+          "rationale_cn": "base概率0.021，叠加摩洛哥4球且海地1球，两侧均需条件达成。摩洛哥4球依赖转化突破，海地1球有反击结构依据（E_13c42d275588），整体合理但属于小概率叠加路径，维持support_grade 1。",
+          "evidence_ids": [
+            "E_13c42d275588",
+            "E_b061053a0211",
+            "E_51da71b2bac0"
+          ],
+          "mechanism_ids": [
+            "H_RIGHT_OVERLOAD_001",
+            "H_GROUP_CONTEXT_TRANSITIONS_003"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.06013745704467353,
+          "tail_focus_conditional_probability": 0.056076182042221694,
+          "tail_focus_implied_overall_probability": 0.012087532573545567,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "",
+          "rationale_cn": "海地需打入2球。当前海地finishing_state 0.35为候选池最低，attack 0.40，Leverton Pierre伤缺削弱中场组织（E_0bbc47fe9497），两球要求严重超出证据支撑。3-2路径需要海地在低转化状态下多次把握反击机会，与现有证据严重不符，降级为support_grade 0。",
+          "evidence_ids": [
+            "E_0bbc47fe9497",
+            "E_392738fd3ab7"
+          ],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.056666666666666664,
+          "base_conditional_probability": 0.2628865979381443,
+          "tail_focus_conditional_probability": 0.2972795040826372,
+          "tail_focus_implied_overall_probability": 0.06408024865781292,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.18213058419243983,
+          "tail_focus_conditional_probability": 0.17044828902101175,
+          "tail_focus_implied_overall_probability": 0.036741075633418094,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.09793814432989689,
+          "tail_focus_conditional_probability": 0.10958888147679897,
+          "tail_focus_implied_overall_probability": 0.023622492229443338,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.025185185185185185,
+          "base_conditional_probability": 0.11683848797250858,
+          "tail_focus_conditional_probability": 0.09112015450808804,
+          "tail_focus_implied_overall_probability": 0.01964145552729898,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.06013745704467353,
+          "tail_focus_conditional_probability": 0.056076182042221694,
+          "tail_focus_implied_overall_probability": 0.012087532573545567,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.05154639175257732,
+          "tail_focus_conditional_probability": 0.04806529889333288,
+          "tail_focus_implied_overall_probability": 0.0103607422058962,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.044673539518900345,
+          "tail_focus_conditional_probability": 0.04620094790595512,
+          "tail_focus_implied_overall_probability": 0.009958870993061439,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.03608247422680412,
+          "tail_focus_conditional_probability": 0.03731615023173298,
+          "tail_focus_implied_overall_probability": 0.008043703494395777,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.02577319587628866,
+          "tail_focus_conditional_probability": 0.026654393022666412,
+          "tail_focus_implied_overall_probability": 0.005745502495996983,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.02577319587628866,
+          "tail_focus_conditional_probability": 0.020100034082666477,
+          "tail_focus_implied_overall_probability": 0.004332674013374774,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999998
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.1851851851851852,
+      "attention_level": "medium",
+      "evidence_strength": 0.52,
+      "rationale_cn": "摩洛哥综合实力（strength 0.74 vs 0.41）、进攻结构（3-2-4-1/Hakimi右路）与海地两战0分净胜球-4的客观落差，为一边倒情景提供真实基础。但关键制约同样有据可查：Reuters明确指出摩洛哥转化不足（E_60b4f9e660d4）；海地对苏格兰仅丢1球且射门、射正和xGA均为赛程最佳防守表现（E_392738fd3ab7）；Placide/Ade构成有经验防线（E_71d0e54ffb33、E_0b3c75967b0d）；海地finishing_state仅0.35但goalkeeper_state达0.61；MAS 9条推演中0-0出现3次，3-0和3-1各出现2次，无单一推演产生5球及以上净胜。证据整体支持一边倒情景低概率成立，但不支持极端大比分。",
+      "supporting_evidence_ids": [
+        "E_b061053a0211",
+        "E_51da71b2bac0",
+        "E_923be46a377b",
+        "E_448f91f8a0c3",
+        "E_0bbc47fe9497",
+        "E_a713122dfa83"
+      ],
+      "counter_evidence_ids": [
+        "E_60b4f9e660d4",
+        "E_392738fd3ab7",
+        "E_71d0e54ffb33",
+        "E_0b3c75967b0d",
+        "E_13c42d275588"
+      ],
+      "caution_cn": "摩洛哥转化不足有直接新闻证据；海地对苏格兰防守样本表明其低位结构并非一触即溃。5-0及以上净胜缺乏机制和证据双重支撑，保留其为support_grade=0的尾部候选需注意不可将其理解为合理预期。4-1保留是因为机制H_GROUP_CONTEXT_TRANSITIONS_003和海地对巴西7次射门均为真实证据，但应限制其支持等级。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.08555555555555555,
+          "base_conditional_probability": 0.4619999999999999,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.11399999999999999,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.21199999999999997,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.06,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.052,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.041999999999999996,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "6-1",
+          "base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.018,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.013999999999999999,
+          "total_goals": 3,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.08555555555555555,
+          "base_conditional_probability": 0.4619999999999999,
+          "tail_focus_conditional_probability": 0.48323780147359024,
+          "tail_focus_implied_overall_probability": 0.08948848175436858,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "",
+          "rationale_cn": "候选池中与证据链最直接吻合的崩盘路径。摩洛哥3-2-4-1结构（E_b061053a0211）、Hakimi右路推进（E_51da71b2bac0）、海地0-3负巴西样本（E_923be46a377b）、积分落差（E_448f91f8a0c3）均为真实证据。同时，转化不足（E_60b4f9e660d4）和海地低位韧性（E_392738fd3ab7）限制比分进一步扩大，3球净胜是证据强度可以支撑的一边倒下限。MAS中3-0出现在rollout_5/9，3-1出现在rollout_5/9，印证该区间合理。",
+          "evidence_ids": [
+            "E_b061053a0211",
+            "E_51da71b2bac0",
+            "E_923be46a377b",
+            "E_448f91f8a0c3",
+            "E_60b4f9e660d4",
+            "E_392738fd3ab7"
+          ],
+          "mechanism_ids": [
+            "H_RIGHT_OVERLOAD_001",
+            "H_GROUP_CONTEXT_TRANSITIONS_003"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.21199999999999997,
+          "tail_focus_conditional_probability": 0.21792228664751695,
+          "tail_focus_implied_overall_probability": 0.04035597900879944,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "",
+          "rationale_cn": "需要摩洛哥早段破门后持续压制、海地低位横移被反复打穿且门将无法再扑救的条件链。摩洛哥争夺小组头名动机（E_41943d67525d）和Leverton Pierre伤缺（E_0bbc47fe9497）为真实支持，但Placide经验值（E_71d0e54ffb33）和摩洛哥转化瓶颈（E_60b4f9e660d4）限制此路径概率。support_grade=1（条件性）合理，不上调。",
+          "evidence_ids": [
+            "E_41943d67525d",
+            "E_0bbc47fe9497",
+            "E_60b4f9e660d4",
+            "E_71d0e54ffb33"
+          ],
+          "mechanism_ids": [
+            "H_RIGHT_OVERLOAD_001",
+            "H_GROUP_CONTEXT_TRANSITIONS_003"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.11399999999999999,
+          "tail_focus_conditional_probability": 0.10657633339440829,
+          "tail_focus_implied_overall_probability": 0.019736358036001538,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "",
+          "rationale_cn": "海地对巴西7次射门3次射正（E_13c42d275588）和机制H_GROUP_CONTEXT_TRANSITIONS_003关于边后卫身后反击窗口均为真实证据，支持海地在大比分落后时仍可制造反击进球。4-1比4-0更符合海地并非完全无攻击威胁的证据。条件是摩洛哥已先建立3球优势，然后海地在开放空间中扳回1球。支持等级保持1，不应升至2，因该组合需要额外条件链。",
+          "evidence_ids": [
+            "E_13c42d275588",
+            "E_448f91f8a0c3",
+            "E_923be46a377b"
+          ],
+          "mechanism_ids": [
+            "H_RIGHT_OVERLOAD_001",
+            "H_GROUP_CONTEXT_TRANSITIONS_003"
+          ]
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.06,
+          "tail_focus_conditional_probability": 0.05550850697625433,
+          "tail_focus_implied_overall_probability": 0.010279353143750803,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312,
+          "script_cn": "",
+          "rationale_cn": "作为概率分布尾部保留，仅反映极低概率极端路径。无任何MAS推演产生5球净胜；摩洛哥转化不足（E_60b4f9e660d4）和海地goalkeeper_state=0.61（E_71d0e54ffb33）均为反向证据。support_grade=0表示证据不支持该比分为合理预期，仅作为数学尾部存在。不删除是因为候选池中已列出且base_probability>0，删除会改变情景总概率分布。",
+          "evidence_ids": [
+            "E_60b4f9e660d4",
+            "E_71d0e54ffb33"
+          ],
+          "mechanism_ids": [
+            "H_RIGHT_OVERLOAD_001"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.08555555555555555,
+          "base_conditional_probability": 0.4619999999999999,
+          "tail_focus_conditional_probability": 0.48323780147359024,
+          "tail_focus_implied_overall_probability": 0.08948848175436858,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.21199999999999997,
+          "tail_focus_conditional_probability": 0.21792228664751695,
+          "tail_focus_implied_overall_probability": 0.04035597900879944,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.11399999999999999,
+          "tail_focus_conditional_probability": 0.10657633339440829,
+          "tail_focus_implied_overall_probability": 0.019736358036001538,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.06,
+          "tail_focus_conditional_probability": 0.05550850697625433,
+          "tail_focus_implied_overall_probability": 0.010279353143750803,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.052,
+          "tail_focus_conditional_probability": 0.04810737271275376,
+          "tail_focus_implied_overall_probability": 0.00890877272458403,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.041999999999999996,
+          "tail_focus_conditional_probability": 0.03885595488337803,
+          "tail_focus_implied_overall_probability": 0.007195547200625561,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.018,
+          "tail_focus_conditional_probability": 0.0166525520928763,
+          "tail_focus_implied_overall_probability": 0.0030838059431252413,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.013999999999999999,
+          "tail_focus_conditional_probability": 0.010099013614913067,
+          "tail_focus_implied_overall_probability": 0.0018701877064653829,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "7-0",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.01,
+          "tail_focus_conditional_probability": 0.009251417829375722,
+          "tail_focus_implied_overall_probability": 0.0017132255239584672,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.003999999999999999,
+          "tail_focus_conditional_probability": 0.003116267058316032,
+          "tail_focus_implied_overall_probability": 0.0005770864922807467,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999998
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Haiti 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.09074074074074072,
+      "attention_level": "low",
+      "evidence_strength": 0.42,
+      "rationale_cn": "海地强弱差距显著（strength 0.41 vs 0.74），两战全负净胜球-4，finishing_state仅0.35，爆冷概率基础仅9.07%。支撑爆冷的核心机制是：摩洛哥转化效率不足（Reuters证据真实）、海地低位防守有一定韧性（苏格兰场仅丢1球）、摩洛哥边后卫高位后存在反击窗口。但海地主动得分能力极弱，Isidor/Bellegarde连接反击需较多条件同时成立。整体情景成立但概率极低。",
+      "supporting_evidence_ids": [
+        "E_60b4f9e660d4",
+        "E_6d9a4fe8b7d0",
+        "E_392738fd3ab7",
+        "E_71d0e54ffb33",
+        "E_0b3c75967b0d",
+        "E_13c42d275588"
+      ],
+      "counter_evidence_ids": [
+        "E_00c6ede88992",
+        "E_52aa9592b9cb",
+        "E_923be46a377b",
+        "E_a713122dfa83",
+        "E_b061053a0211",
+        "E_448f91f8a0c3"
+      ],
+      "caution_cn": "1-2候选原support_grade已为0，机制链要求摩洛哥主动压上后海地完成两次有效终结，而海地finishing_state=0.35，对巴西3次射正也未进球，该比分要求海地净打出两球领先，证据支撑严重不足，降级处理。0-1为最合理的爆冷比分，但应注意不可将所有爆冷概率机械压缩至此一个比分。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.04296296296296296,
+          "base_conditional_probability": 0.4734693877551021,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.2408163265306123,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.1306122448979592,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.06122448979591839,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.04489795918367347,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.028571428571428577,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.012244897959183676,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.004081632653061225,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.04296296296296296,
+          "base_conditional_probability": 0.4734693877551021,
+          "tail_focus_conditional_probability": 0.5443365695792881,
+          "tail_focus_implied_overall_probability": 0.04939350353589835,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "海地全场维持中低位紧凑防守，Placide门线稳健，摩洛哥产生大量机会但转化效率低下（Reuters证据支撑）；海地在一次反击窗口中，由Bellegarde或Isidor通过直传或边路突破完成单次有效终结，Placide此后守住领先。",
+          "rationale_cn": "0-1是爆冷情景内概率最高的候选（base_conditional≈47.3%）。所有引用证据均真实：Reuters转化效率不足（E_60b4f9e660d4）、Saibari进球集中度（E_6d9a4fe8b7d0）、Placide防守组织（E_71d0e54ffb33、E_0b3c75967b0d）、海地苏格兰场防守样本（E_392738fd3ab7）、海地对巴西射门记录（E_13c42d275588）均与剧本直接对应。机制链合理：H_CONVERSION_BOTTLENECK_002与H_GROUP_CONTEXT_TRANSITIONS_003共同支撑，无幻觉证据。",
+          "evidence_ids": [
+            "E_60b4f9e660d4",
+            "E_6d9a4fe8b7d0",
+            "E_71d0e54ffb33",
+            "E_0b3c75967b0d",
+            "E_392738fd3ab7",
+            "E_13c42d275588"
+          ],
+          "mechanism_ids": [
+            "H_CONVERSION_BOTTLENECK_002",
+            "H_GROUP_CONTEXT_TRANSITIONS_003"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.2408163265306123,
+          "tail_focus_conditional_probability": 0.22912621359223304,
+          "tail_focus_implied_overall_probability": 0.0207910823444804,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "摩洛哥通过Hakimi右路推进或定位球取得1球领先后，为追求小组头名继续压上，身后空间被海地利用；Bellegarde中路传递+Isidor跑位完成两次反击终结，形成逆转。比赛必须进入相对开放状态才能触发此剧本。",
+          "rationale_cn": "1-2在爆冷情景内base_conditional≈24.1%，是第二合理候选。证据链：摩洛哥右路压迫（E_b061053a0211、E_51da71b2bac0）制造得分，随后积分动机驱动摩洛哥继续压上（E_41943d67525d、E_448f91f8a0c3），转换窗口扩大（H_GROUP_CONTEXT_TRANSITIONS_003）；海地Bellegarde/Isidor（E_0b3c75967b0d）完成两次终结。条件较苛刻：需摩洛哥先进球后仍大举压上，且海地finishing_state=0.35仍需完成两球，support_grade定为1而非更高。",
+          "evidence_ids": [
+            "E_b061053a0211",
+            "E_51da71b2bac0",
+            "E_60b4f9e660d4",
+            "E_0b3c75967b0d",
+            "E_41943d67525d",
+            "E_448f91f8a0c3"
+          ],
+          "mechanism_ids": [
+            "H_RIGHT_OVERLOAD_001",
+            "H_GROUP_CONTEXT_TRANSITIONS_003"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.04296296296296296,
+          "base_conditional_probability": 0.4734693877551021,
+          "tail_focus_conditional_probability": 0.5443365695792881,
+          "tail_focus_implied_overall_probability": 0.04939350353589835,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.2408163265306123,
+          "tail_focus_conditional_probability": 0.22912621359223304,
+          "tail_focus_implied_overall_probability": 0.0207910823444804,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.1306122448979592,
+          "tail_focus_conditional_probability": 0.10355987055016183,
+          "tail_focus_implied_overall_probability": 0.009397099364736905,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.06122448979591839,
+          "tail_focus_conditional_probability": 0.04854368932038836,
+          "tail_focus_implied_overall_probability": 0.004404890327220424,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.04489795918367347,
+          "tail_focus_conditional_probability": 0.03559870550161813,
+          "tail_focus_implied_overall_probability": 0.003230252906628311,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.028571428571428577,
+          "tail_focus_conditional_probability": 0.0226537216828479,
+          "tail_focus_implied_overall_probability": 0.002055615486036198,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.012244897959183676,
+          "tail_focus_conditional_probability": 0.009708737864077673,
+          "tail_focus_implied_overall_probability": 0.0008809780654440849,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.004081632653061225,
+          "tail_focus_conditional_probability": 0.0032362459546925572,
+          "tail_focus_implied_overall_probability": 0.00029365935514802827,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-4",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.004081632653061225,
+          "tail_focus_conditional_probability": 0.0032362459546925572,
+          "tail_focus_implied_overall_probability": 0.00029365935514802827,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999998,
+    "source_hash": "bcbb45b9df8ad8a5d76f2d930fd9fae1f1537346d62da780fc29cbbec183cd54"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Morocco_vs_Haiti_M52\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\web_delivery\\Morocco_vs_Haiti_M52\\2026.6.25.06\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Morocco_vs_Haiti_M52\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\web_delivery\\Morocco_vs_Haiti_M52\\2026.6.25.06\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

@@ -1,0 +1,874 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-24T09:17:19.582715Z",
+  "status": "partial_audit",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_South_Africa_vs_South_Korea_M54\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "544479fa944a1dffaab3d43d62c3494e02e983b9a994d516feeb1b7f48ae970b",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-24T09:14:53.443097+00:00"
+  },
+  "match": {
+    "match_id": "M54",
+    "team_a": "South Africa",
+    "team_b": "South Korea",
+    "kickoff_utc": "2026-06-25T01:00:00Z",
+    "venue": "Estadio BBVA, Monterrey",
+    "stage": "group",
+    "group": "A",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 76,
+      "usable_evidence": 76,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 0,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.19333333333333333,
+    "draw": 0.2811111111111111,
+    "team_b_win": 0.5255555555555556,
+    "top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.16444444444444445
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12962962962962962
+      },
+      {
+        "score": "0-2",
+        "probability": 0.12111111111111111
+      },
+      {
+        "score": "0-0",
+        "probability": 0.11037037037037037
+      },
+      {
+        "score": "1-2",
+        "probability": 0.0874074074074074
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999997
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_b",
+    "favorite_team": "South Korea",
+    "underdog_side": "team_a",
+    "underdog_team": "South Africa",
+    "team_a_win": 0.19333333333333333,
+    "draw": 0.2811111111111111,
+    "team_b_win": 0.5255555555555556,
+    "win_probability_gap": 0.3322222222222222,
+    "underdog_win_probability": 0.19333333333333333,
+    "favorite_fail_to_win_probability": 0.47444444444444445,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；爆冷情景（南非获胜）在结构上成立：南非有真实证据支持的进攻出口（Mofokeng）、韩国存在低层级后卫伤缺、比赛压力不对等。但整体证据显著偏向韩国，南非双中场停赛是高可靠性证据，Elo差距（1527 vs 1758）和小组积分差（1分 vs 3分）均有实据支撑。候选比分保留1-0和2-1，均来自原候选池，概率不变。2-0和更大比分机制支撑极弱——南非进攻评分0.39、finishing_state 0.37，缺少Mokoena和Zwane后中路推进基础更薄，无证据支持南非在本场打出清盘或大胜，保留会构成激进偏离，予以删除。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.17962962962962967,
+      "attention_level": "medium",
+      "evidence_strength": 0.52,
+      "rationale_cn": "候选整体证据链真实可追溯，核心依赖E_4551c48961e3（Mokoena/Zwane停赛）、E_33317570d748（停赛直接影响封堵和反击发起）、E_7120deec8103（韩国反击在开阔空间的威胁）均为B/C级真实来源，没有幻觉证据。韩国xG约1.43、南非约0.77，主Pipeline支持韩国单方向进球更容易，但4+球总量的基础概率仅约18%，属于尾部情景。提案未把开放大比分压回2-2或3-1等最低达标比分，方向合理。主要争议点：H_001/H_002对total_goals方向存在对立（H_001向上，H_002向下），提案对此处理较轻；0-4依赖rollout_9单条推演且需要完全压制南非，证据支持偏弱。",
+      "supporting_evidence_ids": [
+        "E_4551c48961e3",
+        "E_33317570d748",
+        "E_7120deec8103",
+        "E_73951fc484dd",
+        "E_12867e27412f",
+        "E_dc5ca2e15a7b"
+      ],
+      "counter_evidence_ids": [
+        "E_73951fc484dd",
+        "E_31c57eade210"
+      ],
+      "caution_cn": "H_002（韩国平局即晋级→主动降节奏）是对高进球总量的直接对冲，提案在1-4和0-4条目中均已提及但权重偏轻。韩国finishing_state仅0.60，goalkeeper_state仅0.57，双方均非高产型。南非defence 0.48+Mokoena缺席组合是开放局面的主要入口，但南非attack仅0.39，自身产量瓶颈限制了2球以上的南非侧进球可信度。0-4要求南非全程无产出且韩国4次转换得分，在韩国有降速动机的前提下偏极端。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "2-2",
+          "base_probability": 0.035555555555555556,
+          "base_conditional_probability": 0.19793814432989687,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.02148148148148148,
+          "base_conditional_probability": 0.11958762886597935,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.04123711340206185,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.03111111111111111,
+          "base_conditional_probability": 0.17319587628865976,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.0804123711340206,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.09484536082474225,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.06185567010309277,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.0536082474226804,
+          "total_goals": 4,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03111111111111111,
+          "base_conditional_probability": 0.17319587628865976,
+          "tail_focus_conditional_probability": 0.19387857501254394,
+          "tail_focus_implied_overall_probability": 0.03482633662262364,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "4球最低门槛内与韩国方向一致的版本，证据链与2-3基本重叠。南非1球相比2球更保守，但与南非attack 0.39、finishing_state 0.37的弱进攻属性更匹配。H_001的机制链（南非压上→身后空间→韩国转换3球）对该比分支撑同样有效，且韩国需要达到3球的条件与rollout_6的1-2形态有延伸关联。南非得球入口仍为Mofokeng或定位球，不需要假设多次成功推进。",
+          "evidence_ids": [
+            "E_4551c48961e3",
+            "E_33317570d748",
+            "E_7120deec8103",
+            "E_dc5ca2e15a7b",
+            "E_111d425febfd"
+          ],
+          "mechanism_ids": [
+            "H_001",
+            "H_004"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.02148148148148148,
+          "base_conditional_probability": 0.11958762886597935,
+          "tail_focus_conditional_probability": 0.16006021073758153,
+          "tail_focus_implied_overall_probability": 0.028751556373232245,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "",
+          "rationale_cn": "最有证据支持的高分情景。南非Mokoena/Zwane停赛→中场封堵受损→韩国Son/Lee Kang-in反击空间扩大（H_001，置信度0.75），南非因积分压力前压进一步暴露身后（E_73951fc484dd）。南非2球由Mofokeng边路突破（E_dc5ca2e15a7b，中等可靠性但非幻觉）和比赛后段增加进攻风险两个入口支撑，韩国3球与xG差距（1.43 vs 0.77）及基础面一致。该比分是4球门槛内证据密度最高、机制链最完整的选择。",
+          "evidence_ids": [
+            "E_4551c48961e3",
+            "E_33317570d748",
+            "E_7120deec8103",
+            "E_dc5ca2e15a7b",
+            "E_73951fc484dd",
+            "E_12867e27412f"
+          ],
+          "mechanism_ids": [
+            "H_001",
+            "H_004"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.0804123711340206,
+          "tail_focus_conditional_probability": 0.0890703669740644,
+          "tail_focus_implied_overall_probability": 0.015999677030526387,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "",
+          "rationale_cn": "5球情景，需要韩国4次转换得分。H_002提示韩国有平局即晋级的降速动机，是该比分的主要对冲。Oh Hyeon-gyu替补进球能力（E_5f1782368b1c/E_e2f227de2460）和韩国后段调整能力提供有限支持，但整体要求韩国持续高产且南非防线持续暴露，条件较苛刻。保留但仅给+1。",
+          "evidence_ids": [
+            "E_4551c48961e3",
+            "E_33317570d748",
+            "E_7120deec8103",
+            "E_73951fc484dd",
+            "E_5f1782368b1c"
+          ],
+          "mechanism_ids": [
+            "H_001"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.09484536082474225,
+          "tail_focus_conditional_probability": 0.08786615222243371,
+          "tail_focus_implied_overall_probability": 0.01578336438069643,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "rollout_9提供了真实路径参考（韩国0-30分2球+30-60分1球+后段1球），但该比分要求南非完全零产出。南非有Mofokeng边路突破入口和Appollis宽度，韩国goalkeeper_state 0.57也非铁桶。H_002降速动机进一步降低韩国主动推进拿4球的概率。该比分作为一边倒崩盘与大比分的交叉型保留，但支持强度不超过+1，且是四个候选中证据最薄弱的。",
+          "evidence_ids": [
+            "E_4551c48961e3",
+            "E_33317570d748",
+            "E_7120deec8103",
+            "E_73951fc484dd",
+            "E_111d425febfd"
+          ],
+          "mechanism_ids": [
+            "H_001",
+            "H_002"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03111111111111111,
+          "base_conditional_probability": 0.17319587628865976,
+          "tail_focus_conditional_probability": 0.19387857501254394,
+          "tail_focus_implied_overall_probability": 0.03482633662262364,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.02148148148148148,
+          "base_conditional_probability": 0.11958762886597935,
+          "tail_focus_conditional_probability": 0.16006021073758153,
+          "tail_focus_implied_overall_probability": 0.028751556373232245,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.035555555555555556,
+          "base_conditional_probability": 0.19793814432989687,
+          "tail_focus_conditional_probability": 0.152810699517276,
+          "tail_focus_implied_overall_probability": 0.027449329357732914,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.0804123711340206,
+          "tail_focus_conditional_probability": 0.0890703669740644,
+          "tail_focus_implied_overall_probability": 0.015999677030526387,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.09484536082474225,
+          "tail_focus_conditional_probability": 0.08786615222243371,
+          "tail_focus_implied_overall_probability": 0.01578336438069643,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.06185567010309277,
+          "tail_focus_conditional_probability": 0.05709638908593872,
+          "tail_focus_implied_overall_probability": 0.010256203224696402,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.04123711340206185,
+          "tail_focus_conditional_probability": 0.04221672405142136,
+          "tail_focus_implied_overall_probability": 0.0075833745055330975,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.0536082474226804,
+          "tail_focus_conditional_probability": 0.041386231119262255,
+          "tail_focus_implied_overall_probability": 0.007434193367719333,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.028865979381443294,
+          "tail_focus_conditional_probability": 0.029551706835994947,
+          "tail_focus_implied_overall_probability": 0.005308362153873167,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.028865979381443294,
+          "tail_focus_conditional_probability": 0.029551706835994947,
+          "tail_focus_implied_overall_probability": 0.005308362153873167,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.1007407407407407,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.41544117647058837,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.14338235294117652,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.1691176470588236,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.051470588235294136,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.04779411764705885,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.058823529411764726,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-6",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.025735294117647068,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.025735294117647068,
+          "total_goals": 5,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.41544117647058837,
+          "tail_focus_conditional_probability": 0.37968197434626666,
+          "tail_focus_implied_overall_probability": 0.03824944334154981,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.1691176470588236,
+          "tail_focus_conditional_probability": 0.18354095441296303,
+          "tail_focus_implied_overall_probability": 0.018490051703824416,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.14338235294117652,
+          "tail_focus_conditional_probability": 0.14152393592446685,
+          "tail_focus_implied_overall_probability": 0.014257226137575914,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.41544117647058837,
+          "tail_focus_conditional_probability": 0.37968197434626666,
+          "tail_focus_implied_overall_probability": 0.03824944334154981,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.1691176470588236,
+          "tail_focus_conditional_probability": 0.18354095441296303,
+          "tail_focus_implied_overall_probability": 0.018490051703824416,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.014444444444444444,
+          "base_conditional_probability": 0.14338235294117652,
+          "tail_focus_conditional_probability": 0.14152393592446685,
+          "tail_focus_implied_overall_probability": 0.014257226137575914,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.051470588235294136,
+          "tail_focus_conditional_probability": 0.060329113711391325,
+          "tail_focus_implied_overall_probability": 0.006077599603517938,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.04779411764705885,
+          "tail_focus_conditional_probability": 0.05601989130343481,
+          "tail_focus_implied_overall_probability": 0.005643485346123801,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.058823529411764726,
+          "tail_focus_conditional_probability": 0.053760279553453694,
+          "tail_focus_implied_overall_probability": 0.005415850384644222,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.025735294117647068,
+          "tail_focus_conditional_probability": 0.030164556855695662,
+          "tail_focus_implied_overall_probability": 0.003038799801758969,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.025735294117647068,
+          "tail_focus_conditional_probability": 0.02540173208900687,
+          "tail_focus_implied_overall_probability": 0.002558989306744395,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "2-6",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.011029411764705887,
+          "tail_focus_conditional_probability": 0.01292766722386957,
+          "tail_focus_implied_overall_probability": 0.0013023427721824154,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.011029411764705887,
+          "tail_focus_conditional_probability": 0.011970062244323674,
+          "tail_focus_implied_overall_probability": 0.00120587293720594,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 South Africa 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.19333333333333333,
+      "attention_level": "low",
+      "evidence_strength": 0.38,
+      "rationale_cn": "爆冷基础成立但证据偏弱。真实证据：Mofokeng对捷克下半场改变比赛（E_dc5ca2e15a7b，中可靠性）、韩国后卫Kim Tae-hyeon停赛（E_8732023d4587，中可靠性C级）、韩国另有一名后卫因足底筋膜炎退出（E_c2e676bb9f4d）。反向高可靠性证据：南非Mokoena+Zwane双停赛直接削弱中场屏障和反击发起（E_4551c48961e3，高可靠性）、韩国打平即晋级动机降低进攻冒险、韩国Elo领先约230分。爆冷路径仅能依托Mofokeng边路单挑、定位球和韩国后防局部漏洞，不支持高效率进球或大分差。",
+      "supporting_evidence_ids": [
+        "E_dc5ca2e15a7b",
+        "E_8732023d4587",
+        "E_c2e676bb9f4d",
+        "E_45bfdd642f11",
+        "E_6cc3d0ff0d27"
+      ],
+      "counter_evidence_ids": [
+        "E_4551c48961e3",
+        "E_33317570d748",
+        "E_7120deec8103",
+        "E_73951fc484dd",
+        "E_12867e27412f",
+        "E_192c04f9394b",
+        "E_6adb5676d71b"
+      ],
+      "caution_cn": "2-0及以上比分无充分机制支撑，南非attack 0.39、finishing_state 0.37，缺失双中场后连续推进基础不存在，删除所有≥2球差或总进球≥4的候选。1-0和2-1保留，两者均需依赖韩国防线局部失位或定位球，且受韩国平局即可晋级的保守策略对冲，support_grade不宜高估。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-0",
+          "base_probability": 0.08518518518518518,
+          "base_conditional_probability": 0.44061302681992337,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-1",
+          "base_probability": 0.04962962962962963,
+          "base_conditional_probability": 0.2567049808429119,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-0",
+          "base_probability": 0.024814814814814814,
+          "base_conditional_probability": 0.12835249042145594,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.0574712643678161,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.04980842911877395,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.03065134099616858,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.013409961685823755,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.011494252873563218,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.08518518518518518,
+          "base_conditional_probability": 0.44061302681992337,
+          "tail_focus_conditional_probability": 0.48591549295774644,
+          "tail_focus_implied_overall_probability": 0.09394366197183097,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "南非低块防守吸引韩国进攻后伺机反击，Mofokeng左路突破或Appollis右路推进打穿韩国翼卫身后，单刀或定位球制造一粒进球，随后全队退守低块，韩国未能利用平局晋级压力压出足够空间破门。",
+          "rationale_cn": "最低限度爆冷路径：南非1球领先后收缩，韩国因平局即晋级不愿大幅压上，进球来源可为定位球、反击单次质量机会或韩国后防失误。Mofokeng是唯一有证据支撑的个人质量出口。机制H_003（Mofokeng突破）支持进球产生，H_001（南非中场缺失放大韩国转换）在此脚本中被韩国低风险策略部分抵消。",
+          "evidence_ids": [
+            "E_dc5ca2e15a7b",
+            "E_8732023d4587",
+            "E_c2e676bb9f4d",
+            "E_e2f2cada4b0a",
+            "E_45bfdd642f11"
+          ],
+          "mechanism_ids": [
+            "H_003",
+            "H_001"
+          ]
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.04962962962962963,
+          "base_conditional_probability": 0.2567049808429119,
+          "tail_focus_conditional_probability": 0.23591549295774647,
+          "tail_focus_implied_overall_probability": 0.04561032863849765,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "南非早段或中段通过边路突破或定位球取得领先，韩国被迫加大进攻投入后在某次推进中扳平，南非随后再次通过反击或混乱球完成绝杀。比赛高度依赖韩国失误和南非门将Williams的超常发挥。",
+          "rationale_cn": "相较1-0需要更多进球事件叠加，南非finishing_state 0.37且双中场停赛，连续两次高质量进球的路径极窄。可行性边界：需韩国因必须争胜而压上，且南非完成两次有效转换，两个条件均非高概率。H_003和H_001叠加可解释进球来源，但总体支撑明显弱于1-0。support_grade降为0反映其为低概率爆冷延伸。",
+          "evidence_ids": [
+            "E_dc5ca2e15a7b",
+            "E_8732023d4587",
+            "E_e2f2cada4b0a",
+            "E_4551c48961e3"
+          ],
+          "mechanism_ids": [
+            "H_003",
+            "H_001",
+            "H_004"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.08518518518518518,
+          "base_conditional_probability": 0.44061302681992337,
+          "tail_focus_conditional_probability": 0.48591549295774644,
+          "tail_focus_implied_overall_probability": 0.09394366197183097,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.04962962962962963,
+          "base_conditional_probability": 0.2567049808429119,
+          "tail_focus_conditional_probability": 0.23591549295774647,
+          "tail_focus_implied_overall_probability": 0.04561032863849765,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.024814814814814814,
+          "base_conditional_probability": 0.12835249042145594,
+          "tail_focus_conditional_probability": 0.11795774647887323,
+          "tail_focus_implied_overall_probability": 0.022805164319248825,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.0574712643678161,
+          "tail_focus_conditional_probability": 0.0528169014084507,
+          "tail_focus_implied_overall_probability": 0.010211267605633803,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.04980842911877395,
+          "tail_focus_conditional_probability": 0.045774647887323945,
+          "tail_focus_implied_overall_probability": 0.008849765258215963,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.03065134099616858,
+          "tail_focus_conditional_probability": 0.02816901408450704,
+          "tail_focus_implied_overall_probability": 0.005446009389671361,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.013409961685823755,
+          "tail_focus_conditional_probability": 0.01232394366197183,
+          "tail_focus_implied_overall_probability": 0.0023826291079812206,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.011494252873563218,
+          "tail_focus_conditional_probability": 0.01056338028169014,
+          "tail_focus_implied_overall_probability": 0.0020422535211267606,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.005747126436781609,
+          "tail_focus_conditional_probability": 0.00528169014084507,
+          "tail_focus_implied_overall_probability": 0.0010211267605633803,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-3",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.0019157088122605363,
+          "tail_focus_conditional_probability": 0.00176056338028169,
+          "tail_focus_implied_overall_probability": 0.00034037558685446007,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000002
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "partial",
+    "auditor_status": "partial",
+    "cache_enabled": true,
+    "errors": [
+      "blowout Proposer失败：RuntimeError: LLM 调用失败（gpt-5.5 / tail_forecast_proposer_v744_blowout）：BUSINESS_VALIDATION_FAILED: blowout must select 1-4 candidate scores"
+    ]
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999997,
+    "source_hash": "544479fa944a1dffaab3d43d62c3494e02e983b9a994d516feeb1b7f48ae970b"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_South_Africa_vs_South_Korea_M54\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\web_delivery\\South_Africa_vs_South_Korea_M54\\2026.6.25.09\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_South_Africa_vs_South_Korea_M54\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\web_delivery\\South_Africa_vs_South_Korea_M54\\2026.6.25.09\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

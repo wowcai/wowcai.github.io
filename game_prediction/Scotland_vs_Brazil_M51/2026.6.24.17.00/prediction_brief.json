@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-24T08:00:11.384780Z",
+  "prediction_generated_at_local": "2026-06-24T16:00:11.384780+08:00",
+  "match": {
+    "match_id": "M51",
+    "team_a": "Scotland",
+    "team_b": "Brazil",
+    "kickoff_utc": "2026-06-24T22:00:00Z",
+    "venue": "Hard Rock Stadium, Miami Gardens",
+    "stage": "group",
+    "group": "C",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 207,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.17407407407407408,
+    "draw": 0.25962962962962965,
+    "team_b_win": 0.5662962962962963
+  },
+  "most_likely_outcome": {
+    "label": "Brazil胜",
+    "probability": 0.5662962962962963
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.14666666666666667
+    },
+    {
+      "score": "1-1",
+      "probability": 0.1288888888888889
+    },
+    {
+      "score": "0-2",
+      "probability": 0.1174074074074074
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "克拉克称巴西天然倾向前压进攻，苏格兰需应对棘手局面。",
+      "text_en": "Steve Clarke said Brazil’s inherent traits are to attack and play on the front foot, making this a tricky match for Scotland to navigate",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_67651cfa58f7"
+      ],
+      "source_names": [
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "预览称苏格兰可能低位防守，巴西或遇到类似对摩洛哥的破局难题。",
+      "text_en": "A pre-match preview expects Scotland to defend in a passive low block, which could pose Brazil problems similar to those they faced against Morocco",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_39c9b3c3e628"
+      ],
+      "source_names": [
+        "Unexpected Goals"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "ESPN和Yahoo预测巴西首发均列出维尼修斯、库尼亚、帕奎塔和吉马良斯。",
+      "text_en": "Both ESPN and Yahoo’s predicted Brazil lineups include Vinícius Júnior, Matheus Cunha, Lucas Paquetá and Bruno Guimarães in the attacking structure",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_12825f633036",
+        "E_2a1f518ee945"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "拉菲尼亚因腿筋伤缺席；内马尔已恢复训练，并被称可踢90分钟。",
+      "text_en": "Raphinha will miss the Scotland match with a hamstring issue, while Neymar has returned to training and was described as ready for 90 minutes",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_f292c08b6c92",
+        "E_c1685b93ccd7",
+        "E_7f00ee329809"
+      ],
+      "source_names": [
+        "ESPN",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "小组形势显示巴西4分、苏格兰3分，巴西只要不败即可晋级。",
+      "text_en": "The group table has Brazil on four points and Scotland on three, with Brazil reported to qualify for the knockouts by avoiding defeat",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_38d0b4bd5f16",
+        "E_0d28cba990ab"
+      ],
+      "source_names": [
+        "Sporting News",
+        "The Independent"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "迈阿密赛地预报炎热：最高可达107°F，另有实时体感94°F信息。",
+      "text_en": "Conditions in Miami could be hot: reports cite a possible 107°F high, while AccuWeather showed 86°F with a 94°F RealFeel",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_bd593151c4ba",
+        "E_77dc3e0a0421"
+      ],
+      "source_names": [
+        "The New York Times",
+        "AccuWeather"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-24T08:02:10.444940Z",
+    "source_state_sha256": "eb19bdde990b4fccb2bec0d76c4eb9f3206596089da699a54560853860fac4b1",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2177777777777778,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.52,
+        "summary_cn": "高比分情景成立的核心基础：巴西进攻资源充足（维尼修斯、库尼亚、帕奎塔、吉马良斯均在预测首发），苏格兰强度低于巴西且炎热环境加速体力消耗，苏格兰必须争胜意味着后段会打开空间。苏格兰的得分入口有限但真实：麦金已有本届进球、罗伯逊传中、定位球（战术材料确认）。拉菲尼亚缺席轻微削弱巴西宽度但不改变进攻整体强度。主要限制是巴西晋级只需不败、炎热环境抑制高压节奏、苏格…",
+        "caution_cn": "不应把开放情景压回0-2/1-2等低进球比分；但也不应把0-4、0-5、1-5等极端比分定为主要候选——巴西保平动机+炎热环境会压制其持续全力高压。2-2被rollout_4直接支持，不应删除。",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.04407407407407407,
+            "tail_focus_conditional_probability": 0.22697000631957612,
+            "support_grade": 2,
+            "script_cn": "苏格兰低位紧凑防守撑住前60分钟，利用定位球或罗伯逊传中取得一球；巴西通过维尼修斯左路单挑、库尼亚禁区前沿和快速反击打入三球，符合巴西进攻个人能力+苏格兰后段体力下降的组合。"
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.03259259259259259,
+            "tail_focus_conditional_probability": 0.13890485463545196,
+            "support_grade": 1,
+            "script_cn": "苏格兰必须争胜，后段提高站位和前场投入；双方各进两球，苏格兰通过定位球/传中取得两球，巴西通过维尼修斯或反击回击。rollout_4有2-2代表路径，互有进球剧本有机制支撑。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.13962962962962958,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.58,
+        "summary_cn": "巴西对苏格兰的实力差距（0.84 vs 0.62）、维尼修斯左路隔离威胁（wing_isolation_quality 0.90）、苏格兰对摩洛哥进攻匮乏、炎热环境体能折损，以及苏格兰出线压力驱动的后段开放——这些因素共同支撑一边倒情景成立。主候选池中0-3基础概率0.0548为所有大比分中最高，rollout_6有直接0-3代表比分。blowout情景成…",
+        "caution_cn": "巴西晋级条件允许降速保守，且拉菲尼亚缺席后双翼均衡度下降；巴西对摩洛哥低位防守仅平局，说明破密集阵不稳定。0-5及以上路径缺乏机制支撑和rollout代表，应删除。3-0（苏格兰赢3球）与苏格兰整体实力不符，应删除。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.054814814814814816,
+            "tail_focus_conditional_probability": 0.4218156944529075,
+            "support_grade": 2,
+            "script_cn": "最核心的blowout路径。维尼修斯左路持续撕裂苏格兰边路防守，巴西早中段通过转换和边路单挑取得两球，苏格兰出线压力迫使后段提高前场投入后防线暴露，巴西第三球来自身后空间反击。rollout_6直接支持该比分，基础概率0.0548为候选池最高，H_lowblock_vinicius_transition机制完整覆盖。"
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.02185185185185185,
+            "tail_focus_conditional_probability": 0.16525701076946964,
+            "support_grade": 1,
+            "script_cn": "在0-3基础上，苏格兰后段为出线继续前压，防线身后空间进一步扩大，炎热削弱横移和回追质量，巴西用边路单挑或定向反击补入第四球。苏格兰进攻匮乏（对摩洛哥仅四次射正）使其零封路径有一定合理性。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.17407407407407408,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.48,
+        "summary_cn": "苏格兰爆冷证据基础薄弱但并非虚构：定位球威胁（Robertson传中+McGinn后插上）有E_90e99e1eb31a、E_e1be29981b19直接支撑；Raphinha缺席削弱巴西右路（E_f292c08b6c92）；热环境压低节奏（E_77dc3e0a0421、E_bd593151c4ba）；苏格兰需赢球激励真实（E_2dcc7cc2a665）…",
+        "caution_cn": "苏格兰对摩洛哥进攻创造极有限，两场仅1-0险胜海地，阵地进攻持续施压能力不足。巴西即便缺Raphinha，Vinicius+Cunha+Paqueta组合质量依然高于苏格兰防线承受极限。2-0要求苏格兰连续两次高质量转化且全程零失球，与当前证据不符，予以删除。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.07444444444444444,
+            "tail_focus_conditional_probability": 0.49833290587330076,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.04518518518518518,
+            "tail_focus_conditional_probability": 0.2503205950243652,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

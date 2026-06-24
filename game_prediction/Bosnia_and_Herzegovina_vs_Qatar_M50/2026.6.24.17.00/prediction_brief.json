@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-24T07:36:15.358786Z",
+  "prediction_generated_at_local": "2026-06-24T15:36:15.358786+08:00",
+  "match": {
+    "match_id": "M50",
+    "team_a": "Bosnia and Herzegovina",
+    "team_b": "Qatar",
+    "kickoff_utc": "2026-06-24T19:00:00Z",
+    "venue": "Lumen Field, Seattle",
+    "stage": "group",
+    "group": "B",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 8,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.037037037037037035,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "Rollout有8/216个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.577037037037037,
+    "draw": 0.24851851851851853,
+    "team_b_win": 0.17444444444444446
+  },
+  "most_likely_outcome": {
+    "label": "Bosnia and Herzegovina胜",
+    "probability": 0.577037037037037
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.15074074074074073
+    },
+    {
+      "score": "1-1",
+      "probability": 0.11518518518518518
+    },
+    {
+      "score": "2-1",
+      "probability": 0.10444444444444445
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "路透与ESPN均称卡塔尔有红牌停赛，Madibo缺席将削弱关键区域一线质量。",
+      "text_en": "Reuters and ESPN both report Qatar red-card suspensions, with Madibo among the absentees, reducing first-team quality in important central and defensive areas",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_40908eb0919c",
+        "E_4ab5dfc0dea8"
+      ],
+      "source_names": [
+        "Reuters",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "ESPN称波黑会依赖Edin Dzeko，战术预览指球队可围绕他直接出球。",
+      "text_en": "ESPN says Bosnia will lean on Edin Dzeko, while tactical previews point to a more direct approach using him as the attacking reference point",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_95ccde40ab77",
+        "E_45495657fb84",
+        "E_eb9e77b14caf"
+      ],
+      "source_names": [
+        "ESPN",
+        "RotoWire",
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "The Athletic称波黑传中打法契合锋线站位和头球能力，利于制造禁区压力。",
+      "text_en": "The Athletic says Bosnia’s crossing focus suits the striker’s positioning and heading strengths, giving them a clear route to create box pressure",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_8da9dc355d52"
+      ],
+      "source_names": [
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "RotoWire称波黑后卫Tarik Muharemovic因停赛缺阵，削弱波黑防线选择。",
+      "text_en": "RotoWire reports Bosnia will be without suspended defender Tarik Muharemovic, which reduces their defensive selection options for the Qatar match",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_26779d373814"
+      ],
+      "source_names": [
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "卡塔尔曾1-1平瑞士、随后九人0-6负加拿大，末轮前状态波动明显。",
+      "text_en": "Qatar drew 1-1 with Switzerland, then lost 6-0 to Canada after going down to nine men, showing a highly uneven tournament start",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_923e59614635",
+        "E_2dab376022c4"
+      ],
+      "source_names": [
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在西雅图中午12点开球，天气证据显示晴朗约31°C、湿度25%。",
+      "text_en": "The match is scheduled for noon in Seattle, with weather evidence showing clear conditions around 31°C and 25 percent humidity",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_dfa0b5123803",
+        "E_a2e8256c12d5",
+        "E_122687bf1b19"
+      ],
+      "source_names": [
+        "Sounders FC",
+        "Lumen Field",
+        "National Weather Service"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-24T07:39:13.360439Z",
+    "source_state_sha256": "ce7741646392301ce0c02ad74fb7574aa8144c3144233f87ae7093505ecc465c",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "高比分情景成立。卡塔尔双停赛（中场+左路）削弱关键防线，波黑Dzeko支点/传中机制有B级双源支撑，H_1置信度最高且在8/9条推演中激活。保留3个候选：3-1为核心路径，4-1降级为辅助路径，4-2保留为低概率极端路径；5-0因波黑进攻基础不足、证据类比偏离而删除。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.25037037037037035,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.62,
+        "summary_cn": "卡塔尔双停赛（Madibo中场、Homam左路）由路透/ESPN双源确认，直接对应H_1机制链；波黑Dzeko支点传中打法有The Athletic/ESPN/RotoWire支持；卡塔尔整体实力最弱（ESPN Elo最低）、近期0-6大败、defence 0.34/low_block_compactness 0.38均为最弱分项。高比分场景的证据链完整…",
+        "caution_cn": "波黑attack 0.58/finishing_state 0.54属中等，进攻效率存在上限；波黑自身曾1-4失利说明防线不稳，不排除卡塔尔通过Afif个人能力偷球；环境机制H_2实际方向偏向压低进球总数，对极端高分有一定制约。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.05185185185185185,
+            "tail_focus_conditional_probability": 0.24240316074200602,
+            "support_grade": 2,
+            "script_cn": "波黑通过Dzeko支点、传中和定位球在前70分钟建立2-0或2-1优势；卡塔尔末轮求胜压力迫使前压，Afif或Almoez Ali抓住一次机会追至2-1或3-1；波黑在反击或定位球中锁定3-1。"
+          },
+          {
+            "score": "4-1",
+            "base_probability": 0.01814814814814815,
+            "tail_focus_conditional_probability": 0.0839507198371865,
+            "support_grade": 1,
+            "script_cn": "在3-1基础上，卡塔尔为追分持续前压，防线空间进一步扩大，波黑通过反击或二次球追加第4球；卡塔尔仅保留1球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.13962962962962963,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.62,
+        "summary_cn": "证据基础真实：卡塔尔双停赛（路透/ESPN B级）、波黑Dzeko支点+传中战术（ESPN/The Athletic B级）、卡塔尔0-6负加拿大的崩盘样本（ESPN B级）、Elo/市值最低（ESPN B级）均有据可查。机制H_1（停赛削弱中路左路）和H_3（末轮前压给反击空间）有足够证据支撑，可为净胜3+球的路径提供合理链条。6条rollout中3-0…",
+        "caution_cn": "0-6样本含红牌少人因素，不可直接等量类比本场；波黑进攻效率存在波动（1-4负瑞士）；卡塔尔Afif个人能力真实，进球路径不能完全排除；5-0以上比分的成立条件苛刻，证据不足以支撑独立候选。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.05555555555555555,
+            "tail_focus_conditional_probability": 0.41260953716118,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.022962962962962963,
+            "tail_focus_conditional_probability": 0.20252251448994585,
+            "support_grade": 2,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.17444444444444446,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.38,
+        "summary_cn": "卡塔尔爆冷获胜的基础概率仅17.4%，且证据整体有利于波黑。卡塔尔有Afif和Almoez Ali等进攻质量，但两名关键球员停赛、整体强度指标最低、0-6惨败在前，支撑爆冷的机制单薄。0-1是爆冷中最合理的低入球比分，但仅凭H_2（天气/草皮）支撑明显证据不足。需换为真正支持卡塔尔进攻的机制（H_1逆用+H_3）。2-3和0-3证据问题突出：2-3依赖E_…",
+        "caution_cn": "卡塔尔基础实力证据一面倒处于下风；停赛削弱关键区域；0-6惨败显示崩盘风险而非爆冷潜力。所有爆冷比分均需依赖卡塔尔在波黑强度优势下把握少数机会，概率上限极低。0-3已因证据链不成立而删除。",
+        "top_scores": [
+          {
+            "score": "1-2",
+            "base_probability": 0.048518518518518516,
+            "tail_focus_conditional_probability": 0.3161705551086082,
+            "support_grade": 1,
+            "script_cn": ""
+          },
+          {
+            "score": "0-1",
+            "base_probability": 0.06888888888888889,
+            "tail_focus_conditional_probability": 0.37409493161705554,
+            "support_grade": 0,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

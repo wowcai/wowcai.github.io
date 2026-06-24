@@ -28,6 +28,7 @@ const worldCupRouteData = window.WORLD_CUP_ROUTE_DATA;
 const worldCupRouteRounds = window.WORLD_CUP_ROUTE_ROUNDS;
 const worldCupLatestMatchIds = window.WORLD_CUP_LATEST_MATCH_IDS;
 const worldCupPredictionReports = window.WORLD_CUP_PREDICTION_REPORTS;
+const WORLD_CUP_LATEST_MATCH_LIMIT = 6;
 let currentWorldCupTournamentPredictions = worldCupTournamentPredictionSpecs;
 let currentWorldCupMatches = worldCupMatches || [];
 const worldCupGamePredictionLoadCache = new Map();
@@ -838,7 +839,7 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
     currentWorldCupMatches = merged;
     window.WORLD_CUP_MATCH_PREDICTIONS = merged;
     const sortedMatches = getLatestLoadedGamePredictionMatches(loadedMatches, specs);
-    latestMatches.innerHTML = renderLatestMatchPredictions(sortedMatches.slice(0, 4));
+    latestMatches.innerHTML = renderLatestMatchPredictions(sortedMatches.slice(0, WORLD_CUP_LATEST_MATCH_LIMIT));
     if (routeMap && (worldCupRouteData || worldCupRouteRounds) && worldCupTeams) {
       routeMap.innerHTML = renderTournamentRouteMap(worldCupRouteData || worldCupRouteRounds, merged);
     }
@@ -1039,7 +1040,7 @@ function mergeWorldCupMatchPrediction(loadedMatch) {
 }
 
 async function discoverGamePredictionSpecs() {
-  const latestSpecs = normalizeGamePredictionManifest(worldCupLatestGamePredictions, { limit: 4 });
+  const latestSpecs = normalizeGamePredictionManifest(worldCupLatestGamePredictions, { limit: WORLD_CUP_LATEST_MATCH_LIMIT });
 
   if (latestSpecs.length) {
     return latestSpecs;
@@ -1084,7 +1085,7 @@ function extractDirectoryLinks(indexHtml) {
 }
 
 function normalizeGamePredictionManifest(manifest, options = {}) {
-  const limit = options.limit === null ? null : Number(options.limit || 4);
+  const limit = options.limit === null ? null : Number(options.limit || WORLD_CUP_LATEST_MATCH_LIMIT);
   const specs = (manifest || [])
     .map((entry) => {
       if (typeof entry === "string") {
@@ -1141,15 +1142,8 @@ function normalizeGamePredictionVersionId(version) {
 
 function getLatestGamePredictionSpecs(specs = []) {
   const sortedSpecs = sortGamePredictionSpecs(specs);
-  const latestVersion = getLatestGamePredictionSpecVersion(sortedSpecs[0]);
 
-  if (!latestVersion) {
-    return [];
-  }
-
-  return sortedSpecs
-    .filter((spec) => getLatestGamePredictionSpecVersion(spec) === latestVersion)
-    .slice(0, 4);
+  return sortedSpecs.slice(0, WORLD_CUP_LATEST_MATCH_LIMIT);
 }
 
 function getLatestLoadedGamePredictionMatches(matches = [], specs = []) {
@@ -1752,7 +1746,7 @@ function getLatestWorldCupMatches(matches) {
     return selected.sort((a, b) => (worldCupLatestMatchIds || []).indexOf(a.id) - (worldCupLatestMatchIds || []).indexOf(b.id));
   }
 
-  return matches.filter((match) => match.predictionStatus === "predicted").slice(0, 4);
+  return matches.filter((match) => match.predictionStatus === "predicted").slice(0, WORLD_CUP_LATEST_MATCH_LIMIT);
 }
 
 function renderTournamentRouteMap(routeData, matches = worldCupMatches || []) {
@@ -2186,6 +2180,12 @@ function getLatestTailFocusScenarios(brief) {
         scenarioId: scenario?.scenario_id || inferTailScenarioId(labelZh, 0),
         labelZh,
         labelEn,
+        titleZh: scenario?.title_cn || labelZh,
+        titleEn: scenario?.title_en || labelEn,
+        attentionZh: scenario?.attention_label_cn || "",
+        attentionEn: scenario?.attention_label_en || scenario?.attention_label_cn || "",
+        summaryZh: scenario?.summary_cn || scenario?.mechanism_judgment_cn || "",
+        summaryEn: scenario?.summary_en || scenario?.summary_cn || scenario?.mechanism_judgment_cn || "",
         baseProbability: normalizeProbabilityToPercent(scenario?.base_event_probability),
         scoreItems: normalizeLatestScoreItems(scenario?.top_scores || scenario?.selected_scores || []).slice(0, 2)
       };
@@ -2247,6 +2247,82 @@ function renderLatestScenarioTile(scenario) {
       </div>
     </div>
   `;
+}
+
+function renderGameTailFocusPanel(version) {
+  const scenarios = getLatestTailFocusScenarios(version?.brief).slice(0, 2);
+
+  return `
+    <section class="tail-focus-card">
+      <div class="panel-section-head">
+        <span>TAIL FOCUS</span>
+        <h3 ${biAttrs("高偏离聚焦预测", "Tail-focus predictions")}>${L("高偏离聚焦预测", "Tail-focus predictions")}</h3>
+      </div>
+      ${scenarios.length
+        ? `<div class="tail-focus-list">
+            ${scenarios.map((scenario, index) => renderTailFocusScenarioCard(scenario, index)).join("")}
+          </div>`
+        : `<p class="empty-state" ${biAttrs("该版本高偏离聚焦预测待补充。", "Tail-focus predictions for this version are pending.")}>${L("该版本高偏离聚焦预测待补充。", "Tail-focus predictions for this version are pending.")}</p>`}
+    </section>
+  `;
+}
+
+function renderTailFocusScenarioCard(scenario, index) {
+  const title = {
+    zh: cleanTailFocusTitle(scenario?.titleZh || scenario?.labelZh || "高偏离情景"),
+    en: cleanTailFocusTitle(scenario?.titleEn || scenario?.labelEn || "Tail scenario")
+  };
+  const summary = {
+    zh: scenario?.summaryZh || "机制判断待补充。",
+    en: scenario?.summaryEn || "Mechanism note pending."
+  };
+  const baseProbability = Number.isFinite(scenario?.baseProbability)
+    ? formatProbabilityValue(scenario.baseProbability)
+    : L("概率待补充", "Probability pending");
+  const scores = Array.isArray(scenario?.scoreItems) ? scenario.scoreItems : [];
+
+  return `
+    <article class="tail-focus-scenario-card">
+      <div class="tail-focus-scenario-head">
+        <span>${String(index + 1).padStart(2, "0")}</span>
+        <div>
+          <strong ${biAttrs(title.zh, title.en)}>${escapeHtml(pairText(title))}</strong>
+        </div>
+        <em>${escapeHtml(baseProbability)}</em>
+      </div>
+      <div class="tail-focus-score-row">
+        ${scores.length
+          ? scores.map((item) => renderTailFocusScoreChip(item)).join("")
+          : `<span class="tail-focus-score-chip is-empty">${escapeHtml(L("比分待补充", "Scores pending"))}</span>`}
+      </div>
+      <p ${biAttrs(summary.zh, summary.en)}>${escapeHtml(pairText(summary))}</p>
+    </article>
+  `;
+}
+
+function renderTailFocusScoreChip(item) {
+  return `
+    <span class="tail-focus-score-chip">
+      <strong>${escapeHtml(item?.score || "--")}</strong>
+    </span>
+  `;
+}
+
+function cleanTailFocusTitle(value) {
+  const cleaned = String(value || "")
+    .replace(/\s*[·•]\s*(?:低|中低|中|中高|高)关注\s*$/u, "")
+    .replace(/\s*(?:低|中低|中|中高|高)关注\s*$/u, "")
+    .trim();
+
+  if (/开放|大比分|high.?score|goal.?fest/i.test(cleaned)) {
+    return "总进球数≥4";
+  }
+
+  if (/一边倒|崩盘|blowout|one.?sided/i.test(cleaned)) {
+    return "一方大胜";
+  }
+
+  return cleaned;
 }
 
 function getLatestScenarioDisplayLabel(scenario) {
@@ -2743,7 +2819,11 @@ function openMatchPredictionModal(matchId) {
   body.innerHTML = `
     <div class="prediction-report-shell">
       <div class="professional-report-layout">
-        ${renderPredictionHistory(versions)}
+        <aside class="prediction-side-panel">
+          ${renderPredictionHistory(versions)}
+          ${isGamePredictionReport ? `<div data-tail-focus-panel>${renderGameTailFocusPanel(versions[versions.length - 1])}</div>` : ""}
+          ${isGamePredictionReport ? '<div class="prediction-side-spacer" aria-hidden="true"></div>' : ''}
+        </aside>
         <section class="prediction-report-main" data-version-report>
           ${renderPredictionVersionReport(versions[versions.length - 1], match)}
         </section>
@@ -2767,6 +2847,10 @@ function openMatchPredictionModal(matchId) {
         item.classList.toggle("is-active", item === button);
       });
       reportNode.innerHTML = renderPredictionVersionReport(selectedVersion, match);
+      const tailFocusNode = body.querySelector("[data-tail-focus-panel]");
+      if (tailFocusNode) {
+        tailFocusNode.innerHTML = isGamePredictionReport ? renderGameTailFocusPanel(selectedVersion) : "";
+      }
     });
   });
 

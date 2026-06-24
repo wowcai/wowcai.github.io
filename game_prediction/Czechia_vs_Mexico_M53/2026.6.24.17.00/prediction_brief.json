@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-24T08:51:41.069735Z",
+  "prediction_generated_at_local": "2026-06-24T16:51:41.069735+08:00",
+  "match": {
+    "match_id": "M53",
+    "team_a": "Czechia",
+    "team_b": "Mexico",
+    "kickoff_utc": "2026-06-25T01:00:00Z",
+    "venue": "Estadio Azteca, Mexico City",
+    "stage": "group",
+    "group": "A",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.8888888888888888,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.23148148148148148,
+    "draw": 0.27814814814814814,
+    "team_b_win": 0.49037037037037035
+  },
+  "most_likely_outcome": {
+    "label": "Mexico胜",
+    "probability": 0.49037037037037035
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.1451851851851852
+    },
+    {
+      "score": "1-1",
+      "probability": 0.12814814814814815
+    },
+    {
+      "score": "0-0",
+      "probability": 0.10555555555555556
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "墨西哥常用4-3-3/4-1-2-3，三中场可压缩捷克3-5-2中路连接。",
+      "text_en": "Mexico are described as using a 4-3-3 or 4-1-2-3, giving their midfield a clear route to crowd Czechia’s expected 3-5-2 central links",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_4e357633c008",
+        "E_9b78ae7dc306",
+        "E_9c1830848e4a"
+      ],
+      "source_names": [
+        "Goal",
+        "The Athletic / The New York Times",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "捷克预计翼卫高位前插，主要为Patrik Schick在禁区内制造机会。",
+      "text_en": "Czechia are expected to push their wing-backs high, with the tactical aim of creating penalty-box chances for Patrik Schick",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_910cedc7a69e",
+        "E_9c1830848e4a"
+      ],
+      "source_names": [
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "Yahoo称Ochoa将首发；Montes也被多方认为可回到墨西哥防线。",
+      "text_en": "Yahoo reports Memo Ochoa is set to start, while multiple previews indicate Cesar Montes is available again for Mexico’s defence",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_88f01f8aa19e",
+        "E_473a0a9d502d",
+        "E_60b3d60f6590"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "Squawka",
+        "Bolavip"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "小组赛近况上，墨西哥2-0胜南非；捷克此前与南非1-1战平。",
+      "text_en": "Recent tournament evidence favours Mexico: they beat South Africa 2-0, while Czechia’s previous World Cup match against South Africa ended 1-1",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_5358bb3a35df",
+        "E_86dcc5550e5c",
+        "E_681917c78d95"
+      ],
+      "source_names": [
+        "FIFA",
+        "UEFA.com",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "环境资料显示墨西哥城球场海拔约2200米，比赛开球为美国东部晚9点。",
+      "text_en": "Environmental notes point to Mexico City’s stadium altitude of about 2,200 metres, with kickoff listed for 9 p.m. U.S. Eastern Time",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_c9a07cff9659",
+        "E_e84fc66023f1"
+      ],
+      "source_names": [
+        "FOX Sports",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-24T08:55:24.167133Z",
+    "source_state_sha256": "e016db2e499c44861d9d1a77c3bcf414bd871b17fee543acf8ba2e792406e572",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "对 high_scoring（总进球≥4）情景进行独立审计。该情景与已接受机制存在张力：H1、H2 的 outcome_direction 对 total_goals 均为 down，且证据明确显示捷克开放战 xG 低于0.5/场（E_c1b321b3f4a8），而墨西哥实力、防守与近况均显著占优（E_ac46e877f05b、E_8da7200e30bf）。因此本情景为真实但偏弱的尾部，需要把候选导向‘墨西哥取胜/一边倒大比分’，而…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.19703703703703712,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.42,
+        "summary_cn": "高比分情景的证据强度被下调：两队 xG 合计约2.3，远低于4球门槛，且两条被激活率最高的机制（H1 中路屏障、H2 传中转化压制）都把总进球推向下降。证据真实可查，无过期或幻觉项（Montes 红牌停赛已被本场可用证据 E_60b3d60f6590 取代，使用正确）。情景成立但属真实尾部，候选应优先反映墨西哥占优的开放/一边倒大比分。",
+        "caution_cn": "本情景与主预测低分倾向相反，且 H1/H2 机制方向对总进球为下降，故整体置信偏低。选择刻意偏向墨西哥取胜或一边倒大比分，并剔除要求捷克连入两球的 2-2 最低达标平局；捷克弱开放战进攻（E_c1b321b3f4a8）使任何捷克进2球以上的比分（2-2/2-3）支持度有限，仅作高节奏尾部保留。",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.03222222222222222,
+            "tail_focus_conditional_probability": 0.18856440968216776,
+            "support_grade": 2,
+            "script_cn": "墨西哥整体实力、近期小组赛状态和4-3-3结构优势兑现，捷克因资格压力和翼卫前插获得一定进攻量，但主要依赖传中与Schick禁区终结，难以持续压穿墨西哥防线。后段捷克提高风险后，墨西哥利用转换或边路推进再进球，把比分拉到四球区间。"
+          },
+          {
+            "score": "2-3",
+            "base_probability": 0.023333333333333334,
+            "tail_focus_conditional_probability": 0.13511361826990878,
+            "support_grade": 1,
+            "script_cn": "比赛进入更开放的五球状态：捷克的高翼卫、禁区装载和Schick支点作用产生更高转化，墨西哥则凭借更稳定的4-3-3结构、较强xG产出和后段转换空间保持进球上限，最终以一球优势收住结果。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.09925925925925923,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.52,
+        "summary_cn": "墨西哥4-3-3中路压缩+高质量反击对阵捷克低开放战创造力(<0.5 xG/场)，构成净胜3球的真实路径。但墨西哥已出线动机存疑、捷克翼卫体系可制造部分传中压力，限制了blowout概率上限。候选维持0-3/0-4/1-4，删除0-5（证据仅间接支持，无具体机制链支撑5球产出）。",
+        "caution_cn": "墨西哥已锁定出线，存在降低强度或轮换风险；捷克3-5-2翼卫体系至少可制造边路传中压力，完全崩盘需要捷克防线连续失误叠加，概率受限。0-5已删除：现有证据（xG排名、2场胜绩）仅支持墨西哥攻强，无法支撑单场5球产出的具体机制链。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.03666666666666667,
+            "tail_focus_conditional_probability": 0.4025360754204826,
+            "support_grade": 2,
+            "script_cn": "墨西哥中路压缩封堵捷克开放战输出，利用快速转换和边路宽度累积进球；捷克进攻端无效，全场0射正或极低转化率，墨西哥三名不同球员各进一球。"
+          },
+          {
+            "score": "1-4",
+            "base_probability": 0.01814814814814815,
+            "tail_focus_conditional_probability": 0.17807489330200155,
+            "support_grade": 1,
+            "script_cn": "捷克翼卫体系打出1球（Schick头球或定位球），但墨西哥仍打入4球完成净胜3球的blowout。这是捷克有限输出与墨西哥高效进攻并存的混乱比赛版本。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.23148148148148154,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.45,
+        "summary_cn": "爆冷总概率约0.231。情景内部由低比分窄胜主导：捷克进攻产量低、墨西哥防守强且门将状态被强化，使捷克即便获胜也更可能是1球或2球级别。机制 H2（捷克翼卫前插/禁区装载为 Schick 制造的边路与定位球入口）为唯一可信的捷克得分通道，但 H1（墨西哥中路屏障压缩捷克连接）与墨西哥防守证据同时压低其转化与上限。需要特别标注的反向信号是 E_2308343…",
+        "caution_cn": "不要把 1-0/2-1 的集中解读为‘机械压回最低比分’：此处低比分集中是由捷克低产量与墨西哥强防守的真实证据驱动。同时也不应人为抬高 3-0 等开放大比分——它仅有单条 rollout 支撑、缺乏公开证据正向背书，只能作为极端尾部保留。E_2308343d714f 显示捷克难以守住领先，凡依赖捷…",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.09703703703703703,
+            "tail_focus_conditional_probability": 0.47517569712083413,
+            "support_grade": 1,
+            "script_cn": "捷克通过边路传中、定位球或 Schick 禁区终结取得单球领先，并以三中卫低位结构尽力守住。该剧本与 H2 的捷克边路/定位球入口相容，也与整体低比分机制一致，是爆冷中条件概率最高(0.419)的路径。需注意 E_2308343d714f 显示捷克曾领先未守住，故‘守住’并非确定。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.05925925925925926,
+            "tail_focus_conditional_probability": 0.24181969319126423,
+            "support_grade": 0,
+            "script_cn": "捷克取得领先并最终多打进一球，但墨西哥凭借更强进攻与后段转换至少追回一球。该比分承认墨西哥进攻质量（xG≈1.4）与 H3 的后段转换威胁，同时要求捷克进攻效率较常态上浮。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

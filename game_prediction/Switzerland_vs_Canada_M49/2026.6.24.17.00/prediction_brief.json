@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-24T05:29:02.597204Z",
+  "prediction_generated_at_local": "2026-06-24T13:29:02.597204+08:00",
+  "match": {
+    "match_id": "M49",
+    "team_a": "Switzerland",
+    "team_b": "Canada",
+    "kickoff_utc": "2026-06-24T19:00:00Z",
+    "venue": "BC Place, Vancouver",
+    "stage": "group",
+    "group": "B",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 199,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.4111111111111111,
+    "draw": 0.29444444444444445,
+    "team_b_win": 0.29444444444444445
+  },
+  "most_likely_outcome": {
+    "label": "Switzerland胜",
+    "probability": 0.4111111111111111
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.14666666666666667
+    },
+    {
+      "score": "1-0",
+      "probability": 0.11962962962962963
+    },
+    {
+      "score": "0-1",
+      "probability": 0.10074074074074074
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "加拿大此前6-0击败Qatar，并在该场制造极高的进攻禁区触球量，因此加拿大近期能把进攻推进到禁区内，而非只在外围控球。",
+      "text_en": "Evidence from ESPN, Olympics.com: tactical structure supports Team A.",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_6ad2622be91c",
+        "E_1de571c961db",
+        "E_abf6db5eb4ae",
+        "E_c9898b6b20a3",
+        "E_10e884f951e1",
+        "E_28c4ce8ead63",
+        "E_a7eed608ca5b",
+        "E_343d4a0e21b0",
+        "E_02aace515c4a"
+      ],
+      "source_names": [
+        "ESPN",
+        "Olympics.com",
+        "TSN"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "Davies进入加拿大世界杯名单，但仍受腿筋问题影响，因此若Davies不首发，加拿大左路开局的单兵推进和纵向冲刺上限会低于完全健康时。",
+      "text_en": "Evidence from FIFA, ESPN: lineup and rotation supports Team B.",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_b586ce26d346",
+        "E_3b2ff1a8e975",
+        "E_d398177ea1cd",
+        "E_6bc20675af5f",
+        "E_002f7e0b7e2e",
+        "E_2fec7f059695",
+        "E_8012d49232d6",
+        "E_4909e161c6a0",
+        "E_810187bebcb3"
+      ],
+      "source_names": [
+        "FIFA",
+        "ESPN",
+        "Sportsnet"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "加拿大在Marsch下强调直接进攻和压迫，因此加拿大若继续前场压迫，需要中场及时跟进二点球和封锁中路接应。",
+      "text_en": "Evidence from The Athletic / The New York Times, CBC: tactical structure supports Team A.",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_fbb53f614bd1",
+        "E_0227aeca9ef3",
+        "E_b8762bea8add",
+        "E_d55534ed2a23",
+        "E_69a060f8010b",
+        "E_6a9fa6874c69",
+        "E_761d944d89e7",
+        "E_810187bebcb3",
+        "E_c9898b6b20a3"
+      ],
+      "source_names": [
+        "The Athletic / The New York Times",
+        "CBC",
+        "The Straits Times"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "赛前加拿大和瑞士同积4分，加拿大净胜球更高，因此积分形势允许加拿大通过不败获得有利位置，但赛前公开口径并非保守守平。",
+      "text_en": "Evidence from NBC Sports, The Athletic: pre-match evidence supports Team B.",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_1b6f7651d63f",
+        "E_4909e161c6a0",
+        "E_8012d49232d6",
+        "E_0227aeca9ef3",
+        "E_b8762bea8add",
+        "E_fbb53f614bd1",
+        "E_6ad2622be91c"
+      ],
+      "source_names": [
+        "NBC Sports",
+        "The Athletic",
+        "Toronto Sun"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "关键证据：FIFA's match report says Qatar earned a 1-1 draw with Switzerland through a header four minu…",
+      "text_en": "关键证据：FIFA's match report says Qatar earned a 1-1 draw with Switzerland through a header four minu…",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_04b077600f7c"
+      ],
+      "source_names": [
+        "FIFA"
+      ],
+      "generated_by": "fallback"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "关键证据：FIFA's matchday round-up says Switzerland downed Bosnia and Herzegovina。",
+      "text_en": "关键证据：FIFA's matchday round-up says Switzerland downed Bosnia and Herzegovina。",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_797637259a10"
+      ],
+      "source_names": [
+        "FIFA"
+      ],
+      "generated_by": "fallback"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-24T05:46:31.419063Z",
+    "source_state_sha256": "67fe32b7f14b33925de1445fa106eb6a10d16afc5c3fa53e55ceb5c0655749ad",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2240740740740741,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.52,
+        "summary_cn": "开放大比分情景的成立基础有限但并非无据：加拿大对卡塔尔97次禁区触球和6-0大胜是真实证据，Marsch明确不保守的公开口径有多条B级来源支撑，瑞士被卡塔尔补时扳平说明其后段防守并非无懈可击。但核心约束同样真实：瑞士的low_block_compactness 0.76、Xhaka/Freuler双后腰结构、期望进球xG_A仅1.32，主模型top_sco…",
+        "caution_cn": "2-2若不附加具体开放升级机制（如瑞士早失球被迫拉开、Davies阶段性冲击制造开放转换），本质上是最低达标比分而非高开放情景的代表性比分，需降级处理。4-2需要双方防线全面崩溃，当前证据无法支撑，删除。3-3同理，无证据支撑双方各失3球的结构性崩溃，池内概率最低(0.008)，删除。",
+        "top_scores": [
+          {
+            "score": "3-2",
+            "base_probability": 0.022962962962962963,
+            "tail_focus_conditional_probability": 0.142340609895472,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.04185185185185185,
+            "tail_focus_conditional_probability": 0.1795659395862061,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.08999999999999998,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.42,
+        "summary_cn": "崩盘情景总概率约9%，在两队强度接近（0.73 vs 0.70）、双方均有进攻动机的背景下属于低概率尾部事件。瑞士方向崩盘（3-0/4-1）有中场伤缺机制支撑，但瑞士xG仅1.32，要达到净胜3+球需叠加多重条件同时成立。加拿大方向崩盘（0-3/0-4）有6-0大胜Qatar的近期形态支撑，但Qatar强度远低于瑞士（defence 0.77），不可直接外…",
+        "caution_cn": "①rollout_4给出3-0，但该rollout中加拿大0-30分钟无进球且表现为'中等压迫/控制节奏'，与崩盘剧本的前提（加拿大开局主动却被反打）并不完全吻合，需谨慎引用。②rollout_9给出0-4，但加拿大6-0大胜的对手是Qatar（strength远低于瑞士defence 0.77）…",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.027407407407407408,
+            "tail_focus_conditional_probability": 0.30921642538151495,
+            "support_grade": 1,
+            "script_cn": "瑞士方向最低门槛崩盘路径。加拿大Kone确认缺席、Eustaquio状态存疑削弱中场覆盖，瑞士Xhaka/Freuler获得中路控制优势；加拿大主动前压但中场保护不足时瑞士可利用转换逐步拉开。rollout_4提供了该代表比分，但需注意该rollout描述为瑞士30-60分钟产生1个进球，完整3-0仍需后续补充。机制H_midfield_control_001直接支持该方向。"
+          },
+          {
+            "score": "0-3",
+            "base_probability": 0.017037037037037038,
+            "tail_focus_conditional_probability": 0.19221561577769847,
+            "support_grade": 1,
+            "script_cn": "加拿大方向最低门槛崩盘路径。加拿大早段高压制造进球、瑞士被迫提速暴露转换空间，且赛前口径并非保守守平。rollout_1直接给出0-3代表比分，且该rollout描述加拿大0-30分钟产生1个进球事件。机制H_canada_non_conservative_start_004和H_davies_phase_002共同支撑。但瑞士defence 0.77和低块紧凑性0.76是明显约束。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.29444444444444445,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.52,
+        "summary_cn": "加拿大爆冷成立的核心证据真实：6-0击败Qatar（禁区触球量历史级）、Marsch明确争胜口径、小组第一激励、Davies可回归释放阶段性威胁。制约同样真实：Kone缺席、Eustaquio存疑、瑞士Xhaka-Freuler控场轴稳固、防守评分领先加拿大。两队实力差距（0.73 vs 0.70）较小，爆冷基础概率0.294有支撑，但不支持大比分单边碾压…",
+        "caution_cn": "0-3已删除：需要加拿大压迫持续全场+Davies关键冲击+瑞士防线多次失位，三个条件同时成立的证据支撑不足；Kone缺席和Eustaquio存疑反而削弱压迫衔接。0-2降级为support_grade 0：证据仅支持加拿大有阶段性进球能力，双球需要瑞士主动失位或Davies阶段释放两次转换，仍属…",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.10074074074074074,
+            "tail_focus_conditional_probability": 0.36731937879810944,
+            "support_grade": 1,
+            "script_cn": ""
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.0725925925925926,
+            "tail_focus_conditional_probability": 0.26468602295746124,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

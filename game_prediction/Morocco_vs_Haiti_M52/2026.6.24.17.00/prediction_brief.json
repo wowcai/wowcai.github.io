@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-24T08:27:51.530313Z",
+  "prediction_generated_at_local": "2026-06-24T16:27:51.530313+08:00",
+  "match": {
+    "match_id": "M52",
+    "team_a": "Morocco",
+    "team_b": "Haiti",
+    "kickoff_utc": "2026-06-24T22:00:00Z",
+    "venue": "Mercedes-Benz Stadium, Atlanta",
+    "stage": "group",
+    "group": "C",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.8888888888888888,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率88.9%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.6814814814814815,
+    "draw": 0.22777777777777777,
+    "team_b_win": 0.09074074074074075
+  },
+  "most_likely_outcome": {
+    "label": "Morocco胜",
+    "probability": 0.6814814814814815
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.1814814814814815
+    },
+    {
+      "score": "2-0",
+      "probability": 0.14925925925925926
+    },
+    {
+      "score": "0-0",
+      "probability": 0.10074074074074074
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "摩洛哥进攻常呈3-2-4-1，Hakimi是右路最危险推进点。",
+      "text_en": "Morocco often attack in a 3-2-4-1 shape, with Achraf Hakimi identified as their most dangerous outlet down the right",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_b061053a0211",
+        "E_51da71b2bac0"
+      ],
+      "source_names": [
+        "ny times / The Athletic",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "Brahim Diaz、El Khannouss和El Kaabi被多家来源点名前场有威胁。",
+      "text_en": "Brahim Diaz, Bilal El Khannouss and Ayoub El Kaabi were highlighted by multiple sources as attacking threats for Morocco",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_8bc0bdd16106",
+        "E_deddd2204ea2"
+      ],
+      "source_names": [
+        "ESPN",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "Reuters称摩洛哥踢法流畅但转化不足，Saibari包办本届已知进球。",
+      "text_en": "Reuters described Morocco as free-flowing but short on goals, while Ismael Saibari has scored all of Morocco’s reported tournament goals so far",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_60b4f9e660d4",
+        "E_6d9a4fe8b7d0"
+      ],
+      "source_names": [
+        "Reuters",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "海地对苏格兰仅丢1球，射门、射正和预期失球均为最佳防守表现。",
+      "text_en": "Haiti conceded only once against Scotland, with their best defensive marks for shots faced, shots on target faced and expected goals conceded",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_392738fd3ab7"
+      ],
+      "source_names": [
+        "AOL.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "赛前积分：摩洛哥4分排第2，海地两战0分且净胜球-4。",
+      "text_en": "Before kickoff, Morocco sit second in Group C on four points, while Haiti have zero points from two matches and a minus-four goal difference",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_448f91f8a0c3",
+        "E_aca8b6973c29"
+      ],
+      "source_names": [
+        "ESPN",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在亚特兰大进行，世界杯要求草皮，场馆屋顶据报将关闭保护草皮。",
+      "text_en": "The match is in Atlanta on a World Cup grass surface, and local reporting said the stadium roof would stay closed to protect the pitch",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_0396081c7807",
+        "E_ba0be5e5f1bb",
+        "E_F_16bb2af378d7"
+      ],
+      "source_names": [
+        "FIFA",
+        "Knox News",
+        "WSB-TV"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-24T08:30:38.838281Z",
+    "source_state_sha256": "bcbb45b9df8ad8a5d76f2d930fd9fae1f1537346d62da780fc29cbbec183cd54",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.21555555555555558,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.58,
+        "summary_cn": "摩洛哥对阵已淘汰的海地，强度差距显著（0.74 vs 0.41），进攻机制H_RIGHT_OVERLOAD_001在9条推演中8条激活，具备持续制造机会的结构支撑。但Reuters明确记录摩洛哥转化不足（E_60b4f9e660d4），Saibari包办本届全部进球（E_6d9a4fe8b7d0），依赖单点终结；海地对苏格兰防守样本显示低位有韧性（E_39…",
+        "caution_cn": "摩洛哥转化不足为赛内明确记录，非预测推断；3-2依赖海地两球回追，当前海地finishing_state仅0.35，结构支撑弱；4-0和4-1需要摩洛哥突破转化瓶颈且海地零封或极少威胁，4-0额外要求零失球，两者均为小概率叠加。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.056666666666666664,
+            "tail_focus_conditional_probability": 0.2972795040826372,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.03925925925925926,
+            "tail_focus_conditional_probability": 0.17044828902101175,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.1851851851851852,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.52,
+        "summary_cn": "摩洛哥综合实力（strength 0.74 vs 0.41）、进攻结构（3-2-4-1/Hakimi右路）与海地两战0分净胜球-4的客观落差，为一边倒情景提供真实基础。但关键制约同样有据可查：Reuters明确指出摩洛哥转化不足（E_60b4f9e660d4）；海地对苏格兰仅丢1球且射门、射正和xGA均为赛程最佳防守表现（E_392738fd3ab7）；P…",
+        "caution_cn": "摩洛哥转化不足有直接新闻证据；海地对苏格兰防守样本表明其低位结构并非一触即溃。5-0及以上净胜缺乏机制和证据双重支撑，保留其为support_grade=0的尾部候选需注意不可将其理解为合理预期。4-1保留是因为机制H_GROUP_CONTEXT_TRANSITIONS_003和海地对巴西7次射门…",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.08555555555555555,
+            "tail_focus_conditional_probability": 0.48323780147359024,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.03925925925925926,
+            "tail_focus_conditional_probability": 0.21792228664751695,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.09074074074074072,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.42,
+        "summary_cn": "海地强弱差距显著（strength 0.41 vs 0.74），两战全负净胜球-4，finishing_state仅0.35，爆冷概率基础仅9.07%。支撑爆冷的核心机制是：摩洛哥转化效率不足（Reuters证据真实）、海地低位防守有一定韧性（苏格兰场仅丢1球）、摩洛哥边后卫高位后存在反击窗口。但海地主动得分能力极弱，Isidor/Bellegarde连接…",
+        "caution_cn": "1-2候选原support_grade已为0，机制链要求摩洛哥主动压上后海地完成两次有效终结，而海地finishing_state=0.35，对巴西3次射正也未进球，该比分要求海地净打出两球领先，证据支撑严重不足，降级处理。0-1为最合理的爆冷比分，但应注意不可将所有爆冷概率机械压缩至此一个比分。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.04296296296296296,
+            "tail_focus_conditional_probability": 0.5443365695792881,
+            "support_grade": 2,
+            "script_cn": "海地全场维持中低位紧凑防守，Placide门线稳健，摩洛哥产生大量机会但转化效率低下（Reuters证据支撑）；海地在一次反击窗口中，由Bellegarde或Isidor通过直传或边路突破完成单次有效终结，Placide此后守住领先。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.02185185185185185,
+            "tail_focus_conditional_probability": 0.22912621359223304,
+            "support_grade": 1,
+            "script_cn": "摩洛哥通过Hakimi右路推进或定位球取得1球领先后，为追求小组头名继续压上，身后空间被海地利用；Bellegarde中路传递+Isidor跑位完成两次反击终结，形成逆转。比赛必须进入相对开放状态才能触发此剧本。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,912 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-24T07:39:13.360439Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Bosnia_and_Herzegovina_vs_Qatar_M50\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "ce7741646392301ce0c02ad74fb7574aa8144c3144233f87ae7093505ecc465c",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-24T07:36:15.358786+00:00"
+  },
+  "match": {
+    "match_id": "M50",
+    "team_a": "Bosnia and Herzegovina",
+    "team_b": "Qatar",
+    "kickoff_utc": "2026-06-24T19:00:00Z",
+    "venue": "Lumen Field, Seattle",
+    "stage": "group",
+    "group": "B",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 76,
+      "usable_evidence": 76,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 1,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.577037037037037,
+    "draw": 0.24851851851851853,
+    "team_b_win": 0.17444444444444446,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.15074074074074073
+      },
+      {
+        "score": "1-1",
+        "probability": 0.11518518518518518
+      },
+      {
+        "score": "2-1",
+        "probability": 0.10444444444444445
+      },
+      {
+        "score": "2-0",
+        "probability": 0.10333333333333333
+      },
+      {
+        "score": "0-0",
+        "probability": 0.07925925925925927
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999997
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Bosnia and Herzegovina",
+    "underdog_side": "team_b",
+    "underdog_team": "Qatar",
+    "team_a_win": 0.577037037037037,
+    "draw": 0.24851851851851853,
+    "team_b_win": 0.17444444444444446,
+    "win_probability_gap": 0.40259259259259256,
+    "underdog_win_probability": 0.17444444444444446,
+    "favorite_fail_to_win_probability": 0.422962962962963,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "高比分情景成立。卡塔尔双停赛（中场+左路）削弱关键防线，波黑Dzeko支点/传中机制有B级双源支撑，H_1置信度最高且在8/9条推演中激活。保留3个候选：3-1为核心路径，4-1降级为辅助路径，4-2保留为低概率极端路径；5-0因波黑进攻基础不足、证据类比偏离而删除。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.25037037037037035,
+      "attention_level": "medium",
+      "evidence_strength": 0.62,
+      "rationale_cn": "卡塔尔双停赛（Madibo中场、Homam左路）由路透/ESPN双源确认，直接对应H_1机制链；波黑Dzeko支点传中打法有The Athletic/ESPN/RotoWire支持；卡塔尔整体实力最弱（ESPN Elo最低）、近期0-6大败、defence 0.34/low_block_compactness 0.38均为最弱分项。高比分场景的证据链完整，不依赖幻觉或过期证据。",
+      "supporting_evidence_ids": [
+        "E_40908eb0919c",
+        "E_4ab5dfc0dea8",
+        "E_95ccde40ab77",
+        "E_8da9dc355d52",
+        "E_45495657fb84",
+        "E_2dab376022c4",
+        "E_83e678aa1c0d"
+      ],
+      "counter_evidence_ids": [
+        "E_26779d373814",
+        "E_923e59614635"
+      ],
+      "caution_cn": "波黑attack 0.58/finishing_state 0.54属中等，进攻效率存在上限；波黑自身曾1-4失利说明防线不稳，不排除卡塔尔通过Afif个人能力偷球；环境机制H_2实际方向偏向压低进球总数，对极端高分有一定制约。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "3-1",
+          "base_probability": 0.05185185185185185,
+          "base_conditional_probability": 0.20710059171597633,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.08431952662721895,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.04142011834319527,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.04555555555555556,
+          "base_conditional_probability": 0.1819526627218935,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.022962962962962963,
+          "base_conditional_probability": 0.09171597633136096,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.07248520710059173,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.044378698224852076,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.044378698224852076,
+          "total_goals": 5,
+          "winning_margin": 5
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.05185185185185185,
+          "base_conditional_probability": 0.20710059171597633,
+          "tail_focus_conditional_probability": 0.24240316074200602,
+          "tail_focus_implied_overall_probability": 0.06069056913392447,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "波黑通过Dzeko支点、传中和定位球在前70分钟建立2-0或2-1优势；卡塔尔末轮求胜压力迫使前压，Afif或Almoez Ali抓住一次机会追至2-1或3-1；波黑在反击或定位球中锁定3-1。",
+          "rationale_cn": "池内条件概率最高（20.7%），H_1+H_3核心机制均指向波黑多球胜；卡塔尔的1球来自其仍有Afif等个人进攻质量和求胜动力，有真实证据支撑。",
+          "evidence_ids": [
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8",
+            "E_95ccde40ab77",
+            "E_8da9dc355d52",
+            "E_45495657fb84"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3",
+            "H_4"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.07248520710059173,
+          "tail_focus_conditional_probability": 0.0839507198371865,
+          "tail_focus_implied_overall_probability": 0.02101877281849558,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "在3-1基础上，卡塔尔为追分持续前压，防线空间进一步扩大，波黑通过反击或二次球追加第4球；卡塔尔仅保留1球。",
+          "rationale_cn": "卡塔尔defence 0.34/goalkeeper_state 0.39为池内最弱，停赛后中路覆盖进一步下降，理论上允许波黑连续得分；但波黑attack 0.58属中等、自身进攻持续性存疑，将此路径定为低概率辅助，support_grade从2降为1。",
+          "evidence_ids": [
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8",
+            "E_2dab376022c4",
+            "E_83e678aa1c0d"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3"
+          ]
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.04142011834319527,
+          "tail_focus_conditional_probability": 0.05320513153317793,
+          "tail_focus_implied_overall_probability": 0.013320988487566028,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.22,
+          "script_cn": "卡塔尔前压后Afif制造2次进球，波黑同样利用空间打入4球，形成双方各有漏洞的高回合局面。",
+          "rationale_cn": "6球路径需要双方均高效进攻，卡塔尔finishing_state 0.37偏弱，主要依赖Afif个人；但H_3机制若充分实现（卡塔尔大幅前压），波黑背后空间被利用同时卡塔尔也能打入2球，在极低概率下有理论路径。池内条件概率4.1%，作为尾部路径保留。",
+          "evidence_ids": [
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8",
+            "E_26779d373814",
+            "E_95ccde40ab77"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.05185185185185185,
+          "base_conditional_probability": 0.20710059171597633,
+          "tail_focus_conditional_probability": 0.24240316074200602,
+          "tail_focus_implied_overall_probability": 0.06069056913392447,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.04555555555555556,
+          "base_conditional_probability": 0.1819526627218935,
+          "tail_focus_conditional_probability": 0.14687482153333373,
+          "tail_focus_implied_overall_probability": 0.03677310346538281,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.07248520710059173,
+          "tail_focus_conditional_probability": 0.0839507198371865,
+          "tail_focus_implied_overall_probability": 0.02101877281849558,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.08431952662721895,
+          "tail_focus_conditional_probability": 0.08138079984217059,
+          "tail_focus_implied_overall_probability": 0.020375340997521228,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.022962962962962963,
+          "base_conditional_probability": 0.09171597633136096,
+          "tail_focus_conditional_probability": 0.07403446288672105,
+          "tail_focus_implied_overall_probability": 0.01853603589311979,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.04142011834319527,
+          "tail_focus_conditional_probability": 0.05320513153317793,
+          "tail_focus_implied_overall_probability": 0.013320988487566028,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.044378698224852076,
+          "tail_focus_conditional_probability": 0.04283199991693189,
+          "tail_focus_implied_overall_probability": 0.010723863682905909,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.044378698224852076,
+          "tail_focus_conditional_probability": 0.04283199991693189,
+          "tail_focus_implied_overall_probability": 0.010723863682905909,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.051775147928994084,
+          "tail_focus_conditional_probability": 0.04179364840379415,
+          "tail_focus_implied_overall_probability": 0.010463891229986979,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.02958579881656805,
+          "tail_focus_conditional_probability": 0.03166972115070116,
+          "tail_focus_implied_overall_probability": 0.007929159814027401,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000007
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.13962962962962963,
+      "attention_level": "medium",
+      "evidence_strength": 0.62,
+      "rationale_cn": "证据基础真实：卡塔尔双停赛（路透/ESPN B级）、波黑Dzeko支点+传中战术（ESPN/The Athletic B级）、卡塔尔0-6负加拿大的崩盘样本（ESPN B级）、Elo/市值最低（ESPN B级）均有据可查。机制H_1（停赛削弱中路左路）和H_3（末轮前压给反击空间）有足够证据支撑，可为净胜3+球的路径提供合理链条。6条rollout中3-0是最常见代表比分，且rollout_6为高权重（0.123）高质量（0.908）支持。主要制约：卡塔尔仍有Afif/Almoez Ali个人威胁；波黑防线自身也有停赛（Muharemovic）；4-1被合理替代4-1中卡塔尔进球路径存在；5-0及以上依赖少人因素类比，证据不充分。",
+      "supporting_evidence_ids": [
+        "E_40908eb0919c",
+        "E_4ab5dfc0dea8",
+        "E_2dab376022c4",
+        "E_83e678aa1c0d",
+        "E_95ccde40ab77",
+        "E_8da9dc355d52",
+        "E_45495657fb84"
+      ],
+      "counter_evidence_ids": [
+        "E_26779d373814",
+        "E_923e59614635",
+        "E_cead273a8923"
+      ],
+      "caution_cn": "0-6样本含红牌少人因素，不可直接等量类比本场；波黑进攻效率存在波动（1-4负瑞士）；卡塔尔Afif个人能力真实，进球路径不能完全排除；5-0以上比分的成立条件苛刻，证据不足以支撑独立候选。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.05555555555555555,
+          "base_conditional_probability": 0.3978779840848806,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.12997347480106103,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.022962962962962963,
+          "base_conditional_probability": 0.16445623342175067,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.07957559681697612,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.05305039787798409,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-2",
+          "base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.042440318302387266,
+          "total_goals": 7,
+          "winning_margin": 3
+        },
+        {
+          "score": "6-0",
+          "base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.029177718832891244,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.03713527851458886,
+          "total_goals": 3,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.05555555555555555,
+          "base_conditional_probability": 0.3978779840848806,
+          "tail_focus_conditional_probability": 0.41260953716118,
+          "tail_focus_implied_overall_probability": 0.05761251685546846,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "",
+          "rationale_cn": "候选池中基础概率最高（0.0556），rollout_6直接以此为代表比分且权重/质量均最高，机制H_1+H_3+H_4三重支持。卡塔尔停赛削弱中路左路防守，波黑Dzeko支点+传中+定位球二点可稳定制造禁区压力，卡塔尔进攻效率偏低（attack 0.40，finishing 0.37）令零封具备条件。最核心的崩盘候选。",
+          "evidence_ids": [
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8",
+            "E_95ccde40ab77",
+            "E_8da9dc355d52",
+            "E_45495657fb84",
+            "E_2dab376022c4",
+            "E_83e678aa1c0d"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3",
+            "H_4"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.022962962962962963,
+          "base_conditional_probability": 0.16445623342175067,
+          "tail_focus_conditional_probability": 0.20252251448994585,
+          "tail_focus_implied_overall_probability": 0.02827814368989244,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "",
+          "rationale_cn": "在3-0崩盘状态已形成的延伸路径上，卡塔尔中后场覆盖缺口（停赛+整体防守评分0.34为候选池最低）在领先后被继续利用有合理机制支持。零封条件与3-0相同，卡塔尔进攻端薄弱（finishing 0.37，goalkeeper 0.39）进一步支持。基础概率（0.0230）也高于4-1。",
+          "evidence_ids": [
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8",
+            "E_83e678aa1c0d",
+            "E_2dab376022c4"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3"
+          ]
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.12997347480106103,
+          "tail_focus_conditional_probability": 0.12047060251900495,
+          "tail_focus_implied_overall_probability": 0.01682126561098699,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "",
+          "rationale_cn": "卡塔尔仍有Afif（importance 0.86，预计出场85分钟）和Almoez Ali作为真实个人攻击点，末轮求胜语境增加进攻投入，取得一球有证据支持且不违背崩盘定义。波黑防线自身有Muharemovic停赛，存在被打穿一球的真实路径。作为崩盘中非零封的补充候选保留。",
+          "evidence_ids": [
+            "E_95ccde40ab77",
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8",
+            "E_cead273a8923"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.05555555555555555,
+          "base_conditional_probability": 0.3978779840848806,
+          "tail_focus_conditional_probability": 0.41260953716118,
+          "tail_focus_implied_overall_probability": 0.05761251685546846,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.022962962962962963,
+          "base_conditional_probability": 0.16445623342175067,
+          "tail_focus_conditional_probability": 0.20252251448994585,
+          "tail_focus_implied_overall_probability": 0.02827814368989244,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.12997347480106103,
+          "tail_focus_conditional_probability": 0.12047060251900495,
+          "tail_focus_implied_overall_probability": 0.01682126561098699,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.07957559681697612,
+          "tail_focus_conditional_probability": 0.07298920433230531,
+          "tail_focus_implied_overall_probability": 0.010191455567881149,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.05305039787798409,
+          "tail_focus_conditional_probability": 0.04865946955487021,
+          "tail_focus_implied_overall_probability": 0.006794303711920766,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.042440318302387266,
+          "tail_focus_conditional_probability": 0.032781116331702026,
+          "tail_focus_implied_overall_probability": 0.004577215132241357,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "6-0",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.029177718832891244,
+          "tail_focus_conditional_probability": 0.026762708255178607,
+          "tail_focus_implied_overall_probability": 0.0037368670415564203,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.03713527851458886,
+          "tail_focus_conditional_probability": 0.0265587748057771,
+          "tail_focus_implied_overall_probability": 0.0037083918895473955,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.015915119363395226,
+          "tail_focus_conditional_probability": 0.012292918624388261,
+          "tail_focus_implied_overall_probability": 0.001716455674590509,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.013262599469496022,
+          "tail_focus_conditional_probability": 0.012164867388717552,
+          "tail_focus_implied_overall_probability": 0.0016985759279801915,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000002
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Qatar 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.17444444444444446,
+      "attention_level": "medium",
+      "evidence_strength": 0.38,
+      "rationale_cn": "卡塔尔爆冷获胜的基础概率仅17.4%，且证据整体有利于波黑。卡塔尔有Afif和Almoez Ali等进攻质量，但两名关键球员停赛、整体强度指标最低、0-6惨败在前，支撑爆冷的机制单薄。0-1是爆冷中最合理的低入球比分，但仅凭H_2（天气/草皮）支撑明显证据不足。需换为真正支持卡塔尔进攻的机制（H_1逆用+H_3）。2-3和0-3证据问题突出：2-3依赖E_5691192d2080（波黑进球证据，实为支持wave黑非卡塔尔）、E_dfed14734fb5（卡塔尔0-6惨败，方向相反），逻辑矛盾；0-3仅靠H_3单机制且E_020c68af57a3为训练出勤证据，无法支撑三球爆冷。0-3作为极端比分在概率池中仅0.52%，且证据链不成立，予以删除。2-3保留但修正evidence_ids，去除逻辑相反证据。0-1的机制从H_2修正为H_1+H_3的逆向应用（卡塔尔逼抢和Afif个人质量）。",
+      "supporting_evidence_ids": [
+        "E_cead273a8923",
+        "E_923e59614635",
+        "E_40908eb0919c",
+        "E_4ab5dfc0dea8",
+        "E_95ccde40ab77"
+      ],
+      "counter_evidence_ids": [
+        "E_83e678aa1c0d",
+        "E_2dab376022c4",
+        "E_dfed14734fb5",
+        "E_4ab5dfc0dea8"
+      ],
+      "caution_cn": "卡塔尔基础实力证据一面倒处于下风；停赛削弱关键区域；0-6惨败显示崩盘风险而非爆冷潜力。所有爆冷比分均需依赖卡塔尔在波黑强度优势下把握少数机会，概率上限极低。0-3已因证据链不成立而删除。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.06888888888888889,
+          "base_conditional_probability": 0.3949044585987261,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.048518518518518516,
+          "base_conditional_probability": 0.2781316348195329,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.10615711252653927,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.07430997876857749,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.06369426751592357,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.029723991507430995,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "3-4",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.01698513800424628,
+          "total_goals": 7,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.012738853503184712,
+          "total_goals": 5,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.06888888888888889,
+          "base_conditional_probability": 0.3949044585987261,
+          "tail_focus_conditional_probability": 0.37409493161705554,
+          "tail_focus_implied_overall_probability": 0.0652587825154197,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "",
+          "rationale_cn": "卡塔尔1-0胜须靠单次高效把握。Afif个人质量（E_95ccde40ab77提及卡塔尔有进攻个人质量）加上波黑进攻效率不稳定（1-1未能守住领先）提供基础可能。H_3机制（卡塔尔求胜前压）若波黑控制节奏则可能产生反击单刀场景。证据整体薄弱，support_grade维持0。原H_2（天气草皮）作为唯一机制逻辑牵强，替换为H_1+H_3。",
+          "evidence_ids": [
+            "E_cead273a8923",
+            "E_923e59614635",
+            "E_95ccde40ab77",
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.048518518518518516,
+          "base_conditional_probability": 0.2781316348195329,
+          "tail_focus_conditional_probability": 0.3161705551086082,
+          "tail_focus_implied_overall_probability": 0.05515419683561277,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "",
+          "rationale_cn": "波黑先进一球后卡塔尔被迫前压（H_3），停赛削弱中路保护（H_1）使波黑有二球，但卡塔尔在开放空间凭Afif连进两球完成逆转。该剧本在卡塔尔爆冷候选中机制最完整，证据支撑最充分，support_grade=1合理。E_26779d373814为波黑停赛证据（支持team_b方向），与卡塔尔反扑逻辑吻合，保留。",
+          "evidence_ids": [
+            "E_cead273a8923",
+            "E_923e59614635",
+            "E_26779d373814",
+            "E_95ccde40ab77",
+            "E_8da9dc355d52",
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3",
+            "H_4"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.06369426751592357,
+          "tail_focus_conditional_probability": 0.06033789219629928,
+          "tail_focus_implied_overall_probability": 0.010525610083132209,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "",
+          "rationale_cn": "高入球数爆冷比分，需双方均有多次得分。H_1+H_3机制可支撑开放对攻场景。但原证据中E_5691192d2080（波黑进球）和E_dfed14734fb5（卡塔尔0-6惨败）方向相反，予以移除，替换为实际支持开放比赛的证据。卡塔尔在5球比赛中赢得比赛概率极低（base_probability仅1.1%），support_grade降为0。",
+          "evidence_ids": [
+            "E_cead273a8923",
+            "E_923e59614635",
+            "E_95ccde40ab77",
+            "E_40908eb0919c",
+            "E_4ab5dfc0dea8"
+          ],
+          "mechanism_ids": [
+            "H_1",
+            "H_3"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.06888888888888889,
+          "base_conditional_probability": 0.3949044585987261,
+          "tail_focus_conditional_probability": 0.37409493161705554,
+          "tail_focus_implied_overall_probability": 0.0652587825154197,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.048518518518518516,
+          "base_conditional_probability": 0.2781316348195329,
+          "tail_focus_conditional_probability": 0.3161705551086082,
+          "tail_focus_implied_overall_probability": 0.05515419683561277,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.018518518518518517,
+          "base_conditional_probability": 0.10615711252653927,
+          "tail_focus_conditional_probability": 0.10056315366049878,
+          "tail_focus_implied_overall_probability": 0.017542683471887012,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.07430997876857749,
+          "tail_focus_conditional_probability": 0.07039420756234915,
+          "tail_focus_implied_overall_probability": 0.012279878430320908,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.06369426751592357,
+          "tail_focus_conditional_probability": 0.06033789219629928,
+          "tail_focus_implied_overall_probability": 0.010525610083132209,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.029723991507430995,
+          "tail_focus_conditional_probability": 0.02815768302493966,
+          "tail_focus_implied_overall_probability": 0.004911951372128363,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-4",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.01698513800424628,
+          "tail_focus_conditional_probability": 0.016090104585679808,
+          "tail_focus_implied_overall_probability": 0.002806829355501922,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.012738853503184712,
+          "tail_focus_conditional_probability": 0.012067578439259855,
+          "tail_focus_implied_overall_probability": 0.0021051220166264416,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.00849256900212314,
+          "tail_focus_conditional_probability": 0.008045052292839904,
+          "tail_focus_implied_overall_probability": 0.001403414677750961,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.006369426751592356,
+          "tail_focus_conditional_probability": 0.006033789219629927,
+          "tail_focus_implied_overall_probability": 0.0010525610083132208,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999997,
+    "source_hash": "ce7741646392301ce0c02ad74fb7574aa8144c3144233f87ae7093505ecc465c"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Bosnia_and_Herzegovina_vs_Qatar_M50\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\web_delivery\\Bosnia_and_Herzegovina_vs_Qatar_M50\\2026.6.25.03\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Bosnia_and_Herzegovina_vs_Qatar_M50\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\web_delivery\\Bosnia_and_Herzegovina_vs_Qatar_M50\\2026.6.25.03\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

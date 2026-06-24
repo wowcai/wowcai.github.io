@@ -1,0 +1,579 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-24T07:36:15.358786Z",
+  "prediction_generated_at_local": "2026-06-24T15:36:15.358786+08:00",
+  "quality_label": "ready",
+  "match_id": "M50",
+  "team_a": "Bosnia and Herzegovina",
+  "team_b": "Qatar",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-0",
+      "deviation": 0.0,
+      "probability": 0.15074074074074073,
+      "probability_percent": 15.0741,
+      "outcome": "team_a",
+      "sample_count": 407,
+      "path_deviation": 0.7510550605627482,
+      "result_surprise": 0.0,
+      "reason_cn": "Bosnia and Herzegovina在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.2473125358793906,
+      "probability": 0.10444444444444445,
+      "probability_percent": 10.4444,
+      "outcome": "team_a",
+      "sample_count": 282,
+      "path_deviation": 0.758367070553548,
+      "result_surprise": 0.30712530712530706,
+      "reason_cn": "Bosnia and Herzegovina在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.2490012548591088,
+      "probability": 0.11518518518518518,
+      "probability_percent": 11.5185,
+      "outcome": "draw",
+      "sample_count": 311,
+      "path_deviation": 0.7979132651229095,
+      "result_surprise": 0.23587223587223582,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.29000328018765487,
+      "probability": 0.10333333333333333,
+      "probability_percent": 10.3333,
+      "outcome": "team_a",
+      "sample_count": 279,
+      "path_deviation": 0.7842070854547402,
+      "result_surprise": 0.31449631449631443,
+      "reason_cn": "Bosnia and Herzegovina打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.3744006951474421,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.4793126251752545,
+      "result_surprise": 0.9901719901719902,
+      "reason_cn": "卡塔尔停赛削弱中路与左路保护，提升波黑直接传中与支点进攻、紧凑防守对进攻空间的压缩；Qatar充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_1",
+        "H_2"
+      ]
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.4030342796743951,
+      "probability": 0.06888888888888889,
+      "probability_percent": 6.8889,
+      "outcome": "team_b",
+      "sample_count": 186,
+      "path_deviation": 0.740092404966625,
+      "result_surprise": 0.542997542997543,
+      "reason_cn": "Qatar通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-3",
+      "deviation": 0.40781740221148666,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.5,
+      "result_surprise": 0.995085995085995,
+      "reason_cn": "波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成、卡塔尔停赛削弱中路与左路保护，提升波黑直接传中与支点进攻；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_4",
+        "H_1"
+      ]
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.4404735324464458,
+      "probability": 0.07925925925925927,
+      "probability_percent": 7.9259,
+      "outcome": "draw",
+      "sample_count": 214,
+      "path_deviation": 0.8032785814943266,
+      "result_surprise": 0.47420147420147407,
+      "reason_cn": "紧凑防守对进攻空间的压缩；双方防守结构有效，机会转化不足。",
+      "mechanism_ids": [
+        "H_2"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.46749731683939777,
+      "probability": 0.05555555555555555,
+      "probability_percent": 5.5556,
+      "outcome": "team_a",
+      "sample_count": 150,
+      "path_deviation": 0.7374759850911,
+      "result_surprise": 0.6314496314496314,
+      "reason_cn": "抢断后的快速转换；Bosnia and Herzegovina打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_3"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.5044884837692467,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "draw",
+      "sample_count": 3,
+      "path_deviation": 0.5688240519851632,
+      "result_surprise": 0.9926289926289926,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.53693486271588,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.5914798931507735,
+      "result_surprise": 0.9926289926289926,
+      "reason_cn": "波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_4"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.5976072425884528,
+      "probability": 0.048518518518518516,
+      "probability_percent": 4.8519,
+      "outcome": "team_b",
+      "sample_count": 131,
+      "path_deviation": 0.8031888454432485,
+      "result_surprise": 0.6781326781326782,
+      "reason_cn": "Qatar通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "8-0",
+      "deviation": 0.6131148538471226,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.6420269380835404,
+      "result_surprise": 0.9975429975429976,
+      "reason_cn": "紧凑防守对进攻空间的压缩、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2",
+        "H_3"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.6244713465874622,
+      "probability": 0.018518518518518517,
+      "probability_percent": 1.8519,
+      "outcome": "team_b",
+      "sample_count": 50,
+      "path_deviation": 0.7147837289409498,
+      "result_surprise": 0.8771498771498771,
+      "reason_cn": "Qatar充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.6271958018046975,
+      "probability": 0.04555555555555556,
+      "probability_percent": 4.5556,
+      "outcome": "draw",
+      "sample_count": 123,
+      "path_deviation": 0.8132651895639978,
+      "result_surprise": 0.6977886977886978,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_2"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.6282423570004847,
+      "probability": 0.05185185185185185,
+      "probability_percent": 5.1852,
+      "outcome": "team_a",
+      "sample_count": 140,
+      "path_deviation": 0.8364869742866333,
+      "result_surprise": 0.6560196560196561,
+      "reason_cn": "Bosnia and Herzegovina打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.6497495057202066,
+      "probability": 0.022962962962962963,
+      "probability_percent": 2.2963,
+      "outcome": "team_a",
+      "sample_count": 62,
+      "path_deviation": 0.7483103417976777,
+      "result_surprise": 0.8476658476658476,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；Bosnia and Herzegovina打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6518043231152801,
+      "probability": 0.01814814814814815,
+      "probability_percent": 1.8148,
+      "outcome": "team_a",
+      "sample_count": 49,
+      "path_deviation": 0.7325461107917113,
+      "result_surprise": 0.8796068796068796,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.6700123434556314,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.6870478909235157,
+      "result_surprise": 0.9877149877149877,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.7022713440273258,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_a",
+      "sample_count": 8,
+      "path_deviation": 0.7135418982007695,
+      "result_surprise": 0.9803439803439803,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7203973556724488,
+      "probability": 0.01037037037037037,
+      "probability_percent": 1.037,
+      "outcome": "team_a",
+      "sample_count": 28,
+      "path_deviation": 0.7526585000362286,
+      "result_surprise": 0.9312039312039312,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.7253973057805065,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.7243977076508593,
+      "result_surprise": 0.9901719901719902,
+      "reason_cn": "卡塔尔停赛削弱中路与左路保护，提升波黑直接传中与支点进攻、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_1",
+        "H_2"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.771037554229533,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_b",
+      "sample_count": 14,
+      "path_deviation": 0.7694962452952875,
+      "result_surprise": 0.9656019656019657,
+      "reason_cn": "Qatar充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.7835585600905223,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "draw",
+      "sample_count": 20,
+      "path_deviation": 0.7861771061872977,
+      "result_surprise": 0.9508599508599509,
+      "reason_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_2"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.7903183561646593,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "team_a",
+      "sample_count": 30,
+      "path_deviation": 0.8041271797488341,
+      "result_surprise": 0.9262899262899262,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.7945464155977249,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "team_a",
+      "sample_count": 20,
+      "path_deviation": 0.7938494294851088,
+      "result_surprise": 0.9508599508599509,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.7945733581455068,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "team_b",
+      "sample_count": 30,
+      "path_deviation": 0.8070982554795341,
+      "result_surprise": 0.9262899262899262,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.8027486861294305,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7744396794523206,
+      "result_surprise": 0.9975429975429976,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.8066011370880095,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_a",
+      "sample_count": 16,
+      "path_deviation": 0.7969746918280765,
+      "result_surprise": 0.9606879606879607,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.8156646122161244,
+      "probability": 0.021111111111111112,
+      "probability_percent": 2.1111,
+      "outcome": "team_a",
+      "sample_count": 57,
+      "path_deviation": 0.8575463614537214,
+      "result_surprise": 0.85995085995086,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.8235162584701772,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.7982017466317236,
+      "result_surprise": 0.9803439803439803,
+      "reason_cn": "卡塔尔停赛削弱中路与左路保护，提升波黑直接传中与支点进攻；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_1"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.8564146546865772,
+      "probability": 0.012962962962962963,
+      "probability_percent": 1.2963,
+      "outcome": "team_b",
+      "sample_count": 35,
+      "path_deviation": 0.8568942467651054,
+      "result_surprise": 0.914004914004914,
+      "reason_cn": "Qatar充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.8616679987658246,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_a",
+      "sample_count": 11,
+      "path_deviation": 0.8288103879467463,
+      "result_surprise": 0.972972972972973,
+      "reason_cn": "波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_4",
+        "H_3"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.8809969181724042,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.8303998875826288,
+      "result_surprise": 0.995085995085995,
+      "reason_cn": "抢断后的快速转换、卡塔尔停赛削弱中路与左路保护，提升波黑直接传中与支点进攻；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_1"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 0.9155963084047236,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8532360779777448,
+      "result_surprise": 0.9975429975429976,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "7-4",
+      "deviation": 0.9155963084047236,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.8532360779777448,
+      "result_surprise": 0.9975429975429976,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "8-1",
+      "deviation": 0.9155963084047236,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.8532360779777448,
+      "result_surprise": 0.9975429975429976,
+      "reason_cn": "抢断后的快速转换、波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_3",
+        "H_4"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.9186847696478334,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.8580386136373429,
+      "result_surprise": 0.9926289926289926,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-4",
+      "deviation": 1.0,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.9187863708297438,
+      "result_surprise": 0.9852579852579852,
+      "reason_cn": "卡塔尔停赛削弱中路与左路保护，提升波黑直接传中与支点进攻；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_1"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 1.0,
+      "result_surprise": 0.995085995085995,
+      "reason_cn": "波黑定位球和高球成为辅助得分路径，但证据强度不足以单独成、卡塔尔停赛削弱中路与左路保护，提升波黑直接传中与支点进攻；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_4",
+        "H_1"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

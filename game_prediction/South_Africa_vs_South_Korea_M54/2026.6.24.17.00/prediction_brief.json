@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-24T09:14:53.443097Z",
+  "prediction_generated_at_local": "2026-06-24T17:14:53.443097+08:00",
+  "match": {
+    "match_id": "M54",
+    "team_a": "South Africa",
+    "team_b": "South Korea",
+    "kickoff_utc": "2026-06-25T01:00:00Z",
+    "venue": "Estadio BBVA, Monterrey",
+    "stage": "group",
+    "group": "A",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.8888888888888888,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 189,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.19333333333333333,
+    "draw": 0.2811111111111111,
+    "team_b_win": 0.5255555555555556
+  },
+  "most_likely_outcome": {
+    "label": "South Korea胜",
+    "probability": 0.5255555555555556
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.16444444444444445
+    },
+    {
+      "score": "1-1",
+      "probability": 0.12962962962962962
+    },
+    {
+      "score": "0-2",
+      "probability": 0.12111111111111111
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "南非中场Mokoena、Zwane双双停赛，Mokoena缺席被指会削弱封堵传球线路。",
+      "text_en": "South Africa are missing suspended midfielders Teboho Mokoena and Themba Zwane; Chosun linked Mokoena’s absence to weaker passing-lane blocking and counterattack starts",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_4551c48961e3",
+        "E_33317570d748"
+      ],
+      "source_names": [
+        "ESPN",
+        "Chosun English"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "韩国两轮后积3分、南非1分；ESPN称韩国打平即可从小组晋级。",
+      "text_en": "South Korea have three points after two group games, while South Africa have one; ESPN says a draw is enough for Korea to advance",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_73951fc484dd",
+        "E_12867e27412f"
+      ],
+      "source_names": [
+        "ESPN Africa",
+        "The Straits Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "The Athletic称韩国主要威胁来自反击，Son和Lee Kang-in在开阔空间更危险。",
+      "text_en": "The Athletic described South Korea’s main threat as counterattacks, with Son Heung-min and Lee Kang-in especially dangerous when released into open space",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_7120deec8103"
+      ],
+      "source_names": [
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "Mofokeng曾在对捷克下半场改变比赛，Chosun称他是对韩国一战首发人选。",
+      "text_en": "Chosun reported that Lelohile Mofokeng changed the match in the second half against Czech Republic and was mentioned as a starter against South Korea",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_dc5ca2e15a7b"
+      ],
+      "source_names": [
+        "Chosun"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "韩国中卫Kim Tae-hyeon训练中脚踝重伤，Yahoo称将缺席整个小组赛。",
+      "text_en": "South Korea centre-back Kim Tae-hyeon suffered a serious ankle injury in training, and Yahoo Sports says he will miss the entire group stage",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_8732023d4587"
+      ],
+      "source_names": [
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛地点列为Estadio BBVA；场地草皮为FIFA要求的混合草，约95%天然草。",
+      "text_en": "The match is listed at Estadio BBVA, where the pitch is described as FIFA-required hybrid turf with about 95 percent natural grass",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_e22a41934943",
+        "E_a23a0c0e2e87"
+      ],
+      "source_names": [
+        "GoalTickets",
+        "Knox News"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "partial_audit",
+    "source_report_generated_at": "2026-06-24T09:17:19.582715Z",
+    "source_state_sha256": "544479fa944a1dffaab3d43d62c3494e02e983b9a994d516feeb1b7f48ae970b",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；爆冷情景（南非获胜）在结构上成立：南非有真实证据支持的进攻出口（Mofokeng）、韩国存在低层级后卫伤缺、比赛压力不对等。但整体证据显著偏向韩国，南非双中场停赛是高可靠性证据，Elo差距（1527 vs 1758）和小组积分差（1分 vs 3分）均有实据支撑。候选比分保留1-0和2-1，均来自原候选池，概率不变。2-0和更大比分机制支撑极弱——南非进攻评分0.39、finishing_sta…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.17962962962962967,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.52,
+        "summary_cn": "候选整体证据链真实可追溯，核心依赖E_4551c48961e3（Mokoena/Zwane停赛）、E_33317570d748（停赛直接影响封堵和反击发起）、E_7120deec8103（韩国反击在开阔空间的威胁）均为B/C级真实来源，没有幻觉证据。韩国xG约1.43、南非约0.77，主Pipeline支持韩国单方向进球更容易，但4+球总量的基础概率仅约1…",
+        "caution_cn": "H_002（韩国平局即晋级→主动降节奏）是对高进球总量的直接对冲，提案在1-4和0-4条目中均已提及但权重偏轻。韩国finishing_state仅0.60，goalkeeper_state仅0.57，双方均非高产型。南非defence 0.48+Mokoena缺席组合是开放局面的主要入口，但南非…",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.03111111111111111,
+            "tail_focus_conditional_probability": 0.19387857501254394,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "2-3",
+            "base_probability": 0.02148148148148148,
+            "tail_focus_conditional_probability": 0.16006021073758153,
+            "support_grade": 2,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.1007407407407407,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.04185185185185185,
+            "tail_focus_conditional_probability": 0.37968197434626666,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.017037037037037038,
+            "tail_focus_conditional_probability": 0.18354095441296303,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.19333333333333333,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.38,
+        "summary_cn": "爆冷基础成立但证据偏弱。真实证据：Mofokeng对捷克下半场改变比赛（E_dc5ca2e15a7b，中可靠性）、韩国后卫Kim Tae-hyeon停赛（E_8732023d4587，中可靠性C级）、韩国另有一名后卫因足底筋膜炎退出（E_c2e676bb9f4d）。反向高可靠性证据：南非Mokoena+Zwane双停赛直接削弱中场屏障和反击发起（E_455…",
+        "caution_cn": "2-0及以上比分无充分机制支撑，南非attack 0.39、finishing_state 0.37，缺失双中场后连续推进基础不存在，删除所有≥2球差或总进球≥4的候选。1-0和2-1保留，两者均需依赖韩国防线局部失位或定位球，且受韩国平局即可晋级的保守策略对冲，support_grade不宜高估。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.08518518518518518,
+            "tail_focus_conditional_probability": 0.48591549295774644,
+            "support_grade": 1,
+            "script_cn": "南非低块防守吸引韩国进攻后伺机反击，Mofokeng左路突破或Appollis右路推进打穿韩国翼卫身后，单刀或定位球制造一粒进球，随后全队退守低块，韩国未能利用平局晋级压力压出足够空间破门。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.04962962962962963,
+            "tail_focus_conditional_probability": 0.23591549295774647,
+            "support_grade": 0,
+            "script_cn": "南非早段或中段通过边路突破或定位球取得领先，韩国被迫加大进攻投入后在某次推进中扳平，南非随后再次通过反击或混乱球完成绝杀。比赛高度依赖韩国失误和南非门将Williams的超常发挥。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

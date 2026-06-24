@@ -2940,7 +2940,7 @@ button.group-result-line:hover {
 
 .latest-match-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -3744,9 +3744,17 @@ button.group-result-line:hover {
   min-width: 0;
 }
 
+.prediction-side-panel {
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+  align-self: stretch;
+}
+
 .prediction-current-card,
 .prediction-history-card,
-.prediction-report-main {
+.prediction-report-main,
+.tail-focus-card {
   min-width: 0;
   border: 1px solid rgba(6, 63, 44, 0.1);
   border-radius: 18px;
@@ -3755,7 +3763,8 @@ button.group-result-line:hover {
 }
 
 .prediction-current-card,
-.prediction-history-card {
+.prediction-history-card,
+.tail-focus-card {
   padding: 16px;
 }
 
@@ -4299,13 +4308,34 @@ button.group-result-line:hover {
 }
 
 .match-prediction-modal.is-game-prediction .professional-report-layout {
+  --game-top-row-height: minmax(204px, 0.4fr);
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 18px;
   align-items: stretch;
 }
 
-.match-prediction-modal.is-game-prediction .prediction-history-card {
+.match-prediction-modal.is-game-prediction .prediction-side-panel {
+  grid-template-rows: auto auto minmax(0, 1fr);
   height: 100%;
+  gap: 12px;
+  min-height: 0;
+}
+
+.match-prediction-modal.is-game-prediction .prediction-side-spacer {
+  min-height: 0;
+}
+
+.match-prediction-modal.is-game-prediction .prediction-history-card {
+  height: auto;
+  overflow: hidden;
+  padding: 14px 16px;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-card {
+  height: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   padding: 14px 16px;
 }
@@ -4334,7 +4364,7 @@ button.group-result-line:hover {
 
 .game-prediction-dashboard {
   display: grid;
-  grid-template-rows: minmax(198px, 0.4fr) minmax(158px, 0.32fr) minmax(126px, 0.28fr);
+  grid-template-rows: var(--game-top-row-height) minmax(158px, 0.32fr) minmax(126px, 0.28fr);
   gap: 10px;
   height: 100%;
   padding: 0;
@@ -4353,6 +4383,7 @@ button.group-result-line:hover {
 .match-prediction-modal.is-game-prediction .probability-pie-panel,
 .match-prediction-modal.is-game-prediction .score-matrix-card,
 .match-prediction-modal.is-game-prediction .score-scatter-card,
+.match-prediction-modal.is-game-prediction .tail-focus-card,
 .match-prediction-modal.is-game-prediction .game-factor-card {
   min-height: 0;
   margin: 0;
@@ -4460,6 +4491,117 @@ button.group-result-line:hover {
 
 .match-prediction-modal.is-game-prediction .game-factor-card {
   overflow: hidden;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-list {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  margin-top: 8px;
+  align-content: start;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-scenario-card {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 8px;
+  border: 1px solid rgba(6, 63, 44, 0.1);
+  border-radius: 14px;
+  padding: 9px 10px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(246, 196, 83, 0.16), transparent 8rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 252, 249, 0.96));
+  overflow: hidden;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-scenario-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 7px;
+  align-items: center;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-scenario-head > span {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #063f2c;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-scenario-head div {
+  min-width: 0;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-scenario-head strong {
+  display: block;
+  color: #082f22;
+  font-size: 12px;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-scenario-head small {
+  display: none;
+  margin-top: 2px;
+  color: #0d7a56;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-scenario-head em {
+  border-radius: 999px;
+  padding: 4px 7px;
+  background: rgba(246, 196, 83, 0.18);
+  color: #7a4d00;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-score-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-score-chip {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  padding: 8px 7px;
+  background: rgba(6, 63, 44, 0.07);
+  color: #082f22;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-score-chip strong {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-score-chip small {
+  display: none;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-score-chip.is-empty {
+  grid-column: 1 / -1;
+  display: block;
+  color: #64746d;
+  font-size: 11px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.match-prediction-modal.is-game-prediction .tail-focus-scenario-card p {
+  display: none;
 }
 
 .match-prediction-modal.is-game-prediction .game-factor-card ul {
@@ -4616,6 +4758,96 @@ button.group-result-line:hover {
   color: #52615b;
   font-size: 12px;
   line-height: 1.6;
+}
+
+.tail-focus-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.tail-focus-scenario-card {
+  border: 1px solid rgba(6, 63, 44, 0.1);
+  border-radius: 14px;
+  padding: 12px;
+  background: linear-gradient(180deg, #ffffff, #f7fcf9);
+}
+
+.tail-focus-scenario-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: start;
+}
+
+.tail-focus-scenario-head > span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #063f2c;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.tail-focus-scenario-head strong {
+  display: block;
+  color: #082f22;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.tail-focus-scenario-head small {
+  display: none;
+  margin-top: 3px;
+  color: #0d7a56;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.tail-focus-scenario-head em {
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: rgba(246, 196, 83, 0.18);
+  color: #7a4d00;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.tail-focus-score-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.tail-focus-score-chip {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  padding: 7px 8px;
+  background: rgba(6, 63, 44, 0.07);
+  color: #082f22;
+}
+
+.tail-focus-score-chip strong {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.tail-focus-score-chip small {
+  display: none;
+}
+
+.tail-focus-scenario-card p {
+  margin: 9px 0 0;
+  color: #40524b;
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .score-scatter-plot {
@@ -5004,6 +5236,7 @@ body.modal-open {
 
   .match-prediction-modal.is-game-prediction .prediction-report-shell,
   .match-prediction-modal.is-game-prediction .professional-report-layout,
+  .match-prediction-modal.is-game-prediction .prediction-side-panel,
   .match-prediction-modal.is-game-prediction .prediction-report-main,
   .match-prediction-modal.is-game-prediction .game-prediction-dashboard,
   .match-prediction-modal.is-game-prediction .game-prediction-top-row {
@@ -5018,6 +5251,14 @@ body.modal-open {
 
   .match-prediction-modal.is-game-prediction .prediction-history-card {
     height: auto;
+  }
+
+  .match-prediction-modal.is-game-prediction .tail-focus-card,
+  .match-prediction-modal.is-game-prediction .tail-focus-list,
+  .match-prediction-modal.is-game-prediction .tail-focus-scenario-card {
+    height: auto;
+    grid-template-rows: auto;
+    overflow: visible;
   }
 
   .match-prediction-modal.is-game-prediction .probability-pie-panel {

@@ -1,0 +1,593 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-24T05:29:02.597204Z",
+  "prediction_generated_at_local": "2026-06-24T13:29:02.597204+08:00",
+  "quality_label": "ready",
+  "match_id": "M49",
+  "team_a": "Switzerland",
+  "team_b": "Canada",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.14666666666666667,
+      "probability_percent": 14.6667,
+      "outcome": "draw",
+      "sample_count": 396,
+      "path_deviation": 0.6538087418810491,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.1528309327394068,
+      "probability": 0.11962962962962963,
+      "probability_percent": 11.963,
+      "outcome": "team_a",
+      "sample_count": 323,
+      "path_deviation": 0.6469522753873397,
+      "result_surprise": 0.18434343434343436,
+      "reason_cn": "Switzerland在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.21852417075396124,
+      "probability": 0.09777777777777778,
+      "probability_percent": 9.7778,
+      "outcome": "draw",
+      "sample_count": 264,
+      "path_deviation": 0.6064467106257467,
+      "result_surprise": 0.33333333333333326,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.22866194037636003,
+      "probability": 0.10074074074074074,
+      "probability_percent": 10.0741,
+      "outcome": "team_b",
+      "sample_count": 272,
+      "path_deviation": 0.6234542691390539,
+      "result_surprise": 0.31313131313131315,
+      "reason_cn": "Canada通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.36928840402924523,
+      "probability": 0.0837037037037037,
+      "probability_percent": 8.3704,
+      "outcome": "team_a",
+      "sample_count": 226,
+      "path_deviation": 0.645931963829476,
+      "result_surprise": 0.4292929292929294,
+      "reason_cn": "Switzerland在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.37214757499661544,
+      "probability": 0.0725925925925926,
+      "probability_percent": 7.2593,
+      "outcome": "team_b",
+      "sample_count": 196,
+      "path_deviation": 0.6068681489100535,
+      "result_surprise": 0.505050505050505,
+      "reason_cn": "关键球员状态与角色变化；Canada通过压迫或转换取得一球优势。",
+      "mechanism_ids": [
+        "H_midfield_control_001"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.46710143295805606,
+      "probability": 0.06851851851851852,
+      "probability_percent": 6.8519,
+      "outcome": "team_a",
+      "sample_count": 185,
+      "path_deviation": 0.6493223479343605,
+      "result_surprise": 0.5328282828282829,
+      "reason_cn": "Switzerland打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.5900779771685652,
+      "probability": 0.04185185185185185,
+      "probability_percent": 4.1852,
+      "outcome": "team_b",
+      "sample_count": 113,
+      "path_deviation": 0.6257749270311362,
+      "result_surprise": 0.7146464646464648,
+      "reason_cn": "Canada充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-5",
+      "deviation": 0.6085502041346549,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.4873710452778388,
+      "result_surprise": 0.9924242424242424,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_box_vs_block_003",
+        "H_midfield_control_001"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.6473038836311371,
+      "probability": 0.04185185185185185,
+      "probability_percent": 4.1852,
+      "outcome": "team_a",
+      "sample_count": 113,
+      "path_deviation": 0.6603751332599649,
+      "result_surprise": 0.7146464646464648,
+      "reason_cn": "关键球员状态与角色变化；Switzerland打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_midfield_control_001"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.6485300508607297,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.514263357608036,
+      "result_surprise": 0.9873737373737373,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.6809022068512784,
+      "probability": 0.040740740740740744,
+      "probability_percent": 4.0741,
+      "outcome": "draw",
+      "sample_count": 110,
+      "path_deviation": 0.6766102609742095,
+      "result_surprise": 0.7222222222222222,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.6884692127584623,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_a",
+      "sample_count": 23,
+      "path_deviation": 0.5628870926352263,
+      "result_surprise": 0.9419191919191919,
+      "reason_cn": "紧凑防守对进攻空间的压缩、Davies若被保护使用，加拿大左路威胁更阶段性释放；Switzerland打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_box_vs_block_003",
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6917175175431459,
+      "probability": 0.022962962962962963,
+      "probability_percent": 2.2963,
+      "outcome": "team_a",
+      "sample_count": 62,
+      "path_deviation": 0.6178814015221714,
+      "result_surprise": 0.8434343434343434,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.6964645097282529,
+      "probability": 0.017777777777777778,
+      "probability_percent": 1.7778,
+      "outcome": "team_b",
+      "sample_count": 48,
+      "path_deviation": 0.601715032016246,
+      "result_surprise": 0.8787878787878788,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midfield_control_001"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.7296222375461264,
+      "probability": 0.02259259259259259,
+      "probability_percent": 2.2593,
+      "outcome": "team_b",
+      "sample_count": 61,
+      "path_deviation": 0.6394397865488994,
+      "result_surprise": 0.845959595959596,
+      "reason_cn": "Davies若被保护使用，加拿大左路威胁更阶段性释放；Canada充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.7329449622450283,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5598637069513848,
+      "result_surprise": 0.9974747474747475,
+      "reason_cn": "加拿大虽平局有利但赛前口径偏主动，开局不保守、Davies若被保护使用，加拿大左路威胁更阶段性释放；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_canada_non_conservative_start_004",
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.7329449622450283,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5598637069513848,
+      "result_surprise": 0.9974747474747475,
+      "reason_cn": "加拿大虽平局有利但赛前口径偏主动，开局不保守、Davies若被保护使用，加拿大左路威胁更阶段性释放；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_canada_non_conservative_start_004",
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.7797462740982259,
+      "probability": 0.014074074074074074,
+      "probability_percent": 1.4074,
+      "outcome": "team_a",
+      "sample_count": 38,
+      "path_deviation": 0.6384717443353886,
+      "result_surprise": 0.9040404040404041,
+      "reason_cn": "加拿大虽平局有利但赛前口径偏主动，开局不保守、Davies若被保护使用，加拿大左路威胁更阶段性释放；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_canada_non_conservative_start_004",
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.7801759022248677,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.5952194646733634,
+      "result_surprise": 0.9848484848484849,
+      "reason_cn": "Davies若被保护使用，加拿大左路威胁更阶段性释放、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_davies_phase_002",
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.7928435544193849,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.6001591395092575,
+      "result_surprise": 0.98989898989899,
+      "reason_cn": "加拿大虽平局有利但赛前口径偏主动，开局不保守、Davies若被保护使用，加拿大左路威胁更阶段性释放；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_canada_non_conservative_start_004",
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.8006165715076685,
+      "probability": 0.027407407407407408,
+      "probability_percent": 2.7407,
+      "outcome": "team_a",
+      "sample_count": 74,
+      "path_deviation": 0.7000414941347325,
+      "result_surprise": 0.8131313131313131,
+      "reason_cn": "Switzerland打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.8066051611316716,
+      "probability": 0.017037037037037038,
+      "probability_percent": 1.7037,
+      "outcome": "team_b",
+      "sample_count": 46,
+      "path_deviation": 0.6655893062817928,
+      "result_surprise": 0.8838383838383839,
+      "reason_cn": "Canada充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.8460785332320963,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.6364255857077284,
+      "result_surprise": 0.9823232323232324,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.8631043241043725,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_b",
+      "sample_count": 7,
+      "path_deviation": 0.6467198022925713,
+      "result_surprise": 0.9823232323232324,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.8681910713579566,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.6470758734676132,
+      "result_surprise": 0.9873737373737373,
+      "reason_cn": "关键球员状态与角色变化、加拿大虽平局有利但赛前口径偏主动，开局不保守；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midfield_control_001",
+        "H_canada_non_conservative_start_004"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.8906821171313728,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "draw",
+      "sample_count": 22,
+      "path_deviation": 0.6837902921997944,
+      "result_surprise": 0.9444444444444444,
+      "reason_cn": "Davies若被保护使用，加拿大左路威胁更阶段性释放、加拿大虽平局有利但赛前口径偏主动，开局不保守；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_davies_phase_002",
+        "H_canada_non_conservative_start_004"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.8917920734237611,
+      "probability": 0.011851851851851851,
+      "probability_percent": 1.1852,
+      "outcome": "team_a",
+      "sample_count": 32,
+      "path_deviation": 0.6980589129757804,
+      "result_surprise": 0.9191919191919192,
+      "reason_cn": "加拿大虽平局有利但赛前口径偏主动，开局不保守、Davies若被保护使用，加拿大左路威胁更阶段性释放；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_canada_non_conservative_start_004",
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.8949562617394516,
+      "probability": 0.004814814814814815,
+      "probability_percent": 0.4815,
+      "outcome": "team_b",
+      "sample_count": 13,
+      "path_deviation": 0.6741367840880561,
+      "result_surprise": 0.9671717171717171,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.9084559812599232,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.6727807907235911,
+      "result_surprise": 0.9848484848484849,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midfield_control_001",
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.9134027632701062,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.6716924840718509,
+      "result_surprise": 0.9924242424242424,
+      "reason_cn": "Davies若被保护使用，加拿大左路威胁更阶段性释放、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_davies_phase_002",
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.9385488593897456,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.6896159418769502,
+      "result_surprise": 0.9873737373737373,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.9779238421717571,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7079840302653746,
+      "result_surprise": 0.9974747474747475,
+      "reason_cn": "关键球员状态与角色变化、加拿大虽平局有利但赛前口径偏主动，开局不保守；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midfield_control_001",
+        "H_canada_non_conservative_start_004"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.9897615076733494,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.716501128584599,
+      "result_surprise": 0.9949494949494949,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.9985386338578911,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_b",
+      "sample_count": 11,
+      "path_deviation": 0.7340457595965627,
+      "result_surprise": 0.9722222222222222,
+      "reason_cn": "紧凑防守对进攻空间的压缩；Canada充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 1.0,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.7281305811108182,
+      "result_surprise": 0.9848484848484849,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midfield_control_001",
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "draw",
+      "sample_count": 3,
+      "path_deviation": 0.7895837506875317,
+      "result_surprise": 0.9924242424242424,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midfield_control_001"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.8401653155011143,
+      "result_surprise": 0.9924242424242424,
+      "reason_cn": "加拿大虽平局有利但赛前口径偏主动，开局不保守、Davies若被保护使用，加拿大左路威胁更阶段性释放；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_canada_non_conservative_start_004",
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.7838361089693409,
+      "result_surprise": 0.9949494949494949,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_box_vs_block_003"
+      ]
+    },
+    {
+      "score": "2-8",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8125119162379681,
+      "result_surprise": 0.9974747474747475,
+      "reason_cn": "加拿大虽平局有利但赛前口径偏主动，开局不保守、Davies若被保护使用，加拿大左路威胁更阶段性释放；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_canada_non_conservative_start_004",
+        "H_davies_phase_002"
+      ]
+    },
+    {
+      "score": "6-3",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7551603017007137,
+      "result_surprise": 0.9974747474747475,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_midfield_control_001",
+        "H_box_vs_block_003"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

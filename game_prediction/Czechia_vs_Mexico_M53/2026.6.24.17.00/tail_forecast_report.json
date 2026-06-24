@@ -1,0 +1,946 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-24T08:55:24.167133Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Czechia_vs_Mexico_M53\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "e016db2e499c44861d9d1a77c3bcf414bd871b17fee543acf8ba2e792406e572",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-24T08:51:41.069735+00:00"
+  },
+  "match": {
+    "match_id": "M53",
+    "team_a": "Czechia",
+    "team_b": "Mexico",
+    "kickoff_utc": "2026-06-25T01:00:00Z",
+    "venue": "Estadio Azteca, Mexico City",
+    "stage": "group",
+    "group": "A",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 81,
+      "usable_evidence": 81,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 0,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.23148148148148148,
+    "draw": 0.27814814814814814,
+    "team_b_win": 0.49037037037037035,
+    "top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.1451851851851852
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12814814814814815
+      },
+      {
+        "score": "0-0",
+        "probability": 0.10555555555555556
+      },
+      {
+        "score": "0-2",
+        "probability": 0.09925925925925926
+      },
+      {
+        "score": "1-0",
+        "probability": 0.09703703703703703
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999998
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_b",
+    "favorite_team": "Mexico",
+    "underdog_side": "team_a",
+    "underdog_team": "Czechia",
+    "team_a_win": 0.23148148148148148,
+    "draw": 0.27814814814814814,
+    "team_b_win": 0.49037037037037035,
+    "win_probability_gap": 0.25888888888888884,
+    "underdog_win_probability": 0.23148148148148148,
+    "favorite_fail_to_win_probability": 0.5096296296296297,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "对 high_scoring（总进球≥4）情景进行独立审计。该情景与已接受机制存在张力：H1、H2 的 outcome_direction 对 total_goals 均为 down，且证据明确显示捷克开放战 xG 低于0.5/场（E_c1b321b3f4a8），而墨西哥实力、防守与近况均显著占优（E_ac46e877f05b、E_8da7200e30bf）。因此本情景为真实但偏弱的尾部，需要把候选导向‘墨西哥取胜/一边倒大比分’，而非机械保留要求捷克连入多球的最低达标平局。审计删除了 2-2（4球最低达标平局，机制支持最弱且与捷克弱攻证据冲突，正是本情景应规避的‘压回最低达标比分’模式），补入 0-4（池内最能体现墨西哥一边倒的开放大比分），保留并重新分级 1-3、2-3、1-4。所有比分均取自原候选池，未改变情景总概率。；证据真实支持墨西哥对捷克的结构性优势：墨西哥2胜出线、捷克1分垫底、捷克开放战xG偏低(<0.5/场)、墨西哥xG产出高且防守稳固。blowout情景以墨西哥净胜3+球为核心，0-3是最合理的锚点候选，0-4在原始池中概率合理，1-4需要捷克进球机制支撑。主要风险是捷克并非完全无攻击力（翼卫传中+Schick体系），以及墨西哥小组赛已锁定出线可能降低强度。0-5证据链不足，被删除。；仅审计 upset（Czechia 获胜）情景。证据普遍支持：捷克开放战产量很低（E_c1b321b3f4a8，<0.5 xG/场），墨西哥防守强、被创造 xG 低（E_ac46e877f05b），Ochoa 预计首发（E_88f01f8aa19e/E_f6c0bc05be55），Montes 预计可用（E_60b3d60f6590）。因此‘捷克获胜’这一爆冷在现实中更可能以低比分窄胜出现，而非高比分一边倒。候选池条件概率也印证：1-0(0.419)与2-1(0.256)合计约0.68，主导整个情景。提案把重心放在 1-0/2-1 属于证据驱动，而非机械压回最低达标比分，故予以保留。审计调整：2-0 由 grade 0 降为 -1，因为它同时要求捷克打进两球（高于其常态产量）且墨西哥零封（墨西哥 xG≈1.4、攻强），双重条件使其明显弱于 2-1。3-0 保留为 -1 尾部候选：它确有 rollout_9 的直接推演支撑（捷克30-60分钟连入两球），但从公开证据与机制看缺乏正向支持，仅作极端尾部呈现。所有引用证据均真实存在于 shortlist，未发现幻觉或过期证据被用作正向依据（Montes 红牌停赛旧信息已被本场可用证据覆盖）。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.19703703703703712,
+      "attention_level": "low",
+      "evidence_strength": 0.42,
+      "rationale_cn": "高比分情景的证据强度被下调：两队 xG 合计约2.3，远低于4球门槛，且两条被激活率最高的机制（H1 中路屏障、H2 传中转化压制）都把总进球推向下降。证据真实可查，无过期或幻觉项（Montes 红牌停赛已被本场可用证据 E_60b3d60f6590 取代，使用正确）。情景成立但属真实尾部，候选应优先反映墨西哥占优的开放/一边倒大比分。",
+      "supporting_evidence_ids": [
+        "E_ac46e877f05b",
+        "E_8da7200e30bf",
+        "E_5358bb3a35df",
+        "E_88f01f8aa19e",
+        "E_910cedc7a69e",
+        "E_4e357633c008"
+      ],
+      "counter_evidence_ids": [
+        "E_c1b321b3f4a8",
+        "E_2308343d714f"
+      ],
+      "caution_cn": "本情景与主预测低分倾向相反，且 H1/H2 机制方向对总进球为下降，故整体置信偏低。选择刻意偏向墨西哥取胜或一边倒大比分，并剔除要求捷克连入两球的 2-2 最低达标平局；捷克弱开放战进攻（E_c1b321b3f4a8）使任何捷克进2球以上的比分（2-2/2-3）支持度有限，仅作高节奏尾部保留。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "2-2",
+          "base_probability": 0.038148148148148146,
+          "base_conditional_probability": 0.1936090225563909,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.023333333333333334,
+          "base_conditional_probability": 0.1184210526315789,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.04135338345864659,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.03222222222222222,
+          "base_conditional_probability": 0.1635338345864661,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.0921052631578947,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.0695488721804511,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.015185185185185185,
+          "base_conditional_probability": 0.0770676691729323,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.0714285714285714,
+          "total_goals": 4,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03222222222222222,
+          "base_conditional_probability": 0.1635338345864661,
+          "tail_focus_conditional_probability": 0.18856440968216776,
+          "tail_focus_implied_overall_probability": 0.03715417257441233,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "墨西哥整体实力、近期小组赛状态和4-3-3结构优势兑现，捷克因资格压力和翼卫前插获得一定进攻量，但主要依赖传中与Schick禁区终结，难以持续压穿墨西哥防线。后段捷克提高风险后，墨西哥利用转换或边路推进再进球，把比分拉到四球区间。",
+          "rationale_cn": "池内条件概率0.164（仅次于2-2），且为墨西哥净胜两球、捷克仅入一球的结构，最契合‘墨西哥强攻+捷克弱开放战’证据组合，是本情景最稳健的锚点。",
+          "evidence_ids": [
+            "E_ac46e877f05b",
+            "E_c1b321b3f4a8",
+            "E_910cedc7a69e"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2",
+            "H3"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.023333333333333334,
+          "base_conditional_probability": 0.1184210526315789,
+          "tail_focus_conditional_probability": 0.13511361826990878,
+          "tail_focus_implied_overall_probability": 0.026622387007256113,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "比赛进入更开放的五球状态：捷克的高翼卫、禁区装载和Schick支点作用产生更高转化，墨西哥则凭借更稳定的4-3-3结构、较强xG产出和后段转换空间保持进球上限，最终以一球优势收住结果。",
+          "rationale_cn": "保留为高节奏尾部：墨西哥取胜符合实力差，但要求捷克进2球与其弱开放战证据冲突，故由原边际支持维持低档；置于墨西哥净胜结构内而非平局，避免压回最低达标比分。",
+          "evidence_ids": [
+            "E_910cedc7a69e",
+            "E_2308343d714f",
+            "E_ac46e877f05b"
+          ],
+          "mechanism_ids": [
+            "H2",
+            "H3"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.0921052631578947,
+          "tail_focus_conditional_probability": 0.10508836976548461,
+          "tail_focus_implied_overall_probability": 0.02070630100564364,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "捷克在需要结果的背景下推高翼卫和增加禁区投入，先取得或追回一球，但中路连接被墨西哥三中场压缩后，丢失球权带来更大身后空间。墨西哥在领先后不必持续高压，仍可通过选择性推进和转换效率扩大到五球总量。",
+          "rationale_cn": "墨西哥一边倒取胜、捷克仅入一球，符合证据方向；条件概率0.092，墨西哥进4球为尾部，给中等支持。",
+          "evidence_ids": [
+            "E_ac46e877f05b",
+            "E_8da7200e30bf",
+            "E_910cedc7a69e"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H3"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.015185185185185185,
+          "base_conditional_probability": 0.0770676691729323,
+          "tail_focus_conditional_probability": 0.07354236192122597,
+          "tail_focus_implied_overall_probability": 0.01449056908966379,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "墨西哥凭借更强结构、xG产出和后段转换效率持续打穿，捷克在中路被三中场压缩、传中转化被中卫与Ochoa压低，全场未能取得进球，形成一边倒的开放大比分。",
+          "rationale_cn": "补入候选：池内最能体现‘一边倒大比分’的比分，捷克零进球与其开放战弱攻证据(E_c1b321b3f4a8)及H1/H2压制方向一致；墨西哥进4球为真实尾部，故给中等支持。直接对冲了原提案漏掉一边倒情景、易回落到要求捷克连入球的倾向。",
+          "evidence_ids": [
+            "E_c1b321b3f4a8",
+            "E_ac46e877f05b",
+            "E_88f01f8aa19e"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03222222222222222,
+          "base_conditional_probability": 0.1635338345864661,
+          "tail_focus_conditional_probability": 0.18856440968216776,
+          "tail_focus_implied_overall_probability": 0.03715417257441233,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.038148148148148146,
+          "base_conditional_probability": 0.1936090225563909,
+          "tail_focus_conditional_probability": 0.1539606357293958,
+          "tail_focus_implied_overall_probability": 0.030335947484458742,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.023333333333333334,
+          "base_conditional_probability": 0.1184210526315789,
+          "tail_focus_conditional_probability": 0.13511361826990878,
+          "tail_focus_implied_overall_probability": 0.026622387007256113,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.0921052631578947,
+          "tail_focus_conditional_probability": 0.10508836976548461,
+          "tail_focus_implied_overall_probability": 0.02070630100564364,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.015185185185185185,
+          "base_conditional_probability": 0.0770676691729323,
+          "tail_focus_conditional_probability": 0.07354236192122597,
+          "tail_focus_implied_overall_probability": 0.01449056908966379,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.0695488721804511,
+          "tail_focus_conditional_probability": 0.06612703539664848,
+          "tail_focus_implied_overall_probability": 0.013029475122598892,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.0714285714285714,
+          "tail_focus_conditional_probability": 0.056801011239971264,
+          "tail_focus_implied_overall_probability": 0.01119190295543138,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.04135338345864659,
+          "tail_focus_conditional_probability": 0.04360809901833034,
+          "tail_focus_implied_overall_probability": 0.008592410621389537,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.0319548872180451,
+          "tail_focus_conditional_probability": 0.033697167423255264,
+          "tail_focus_implied_overall_probability": 0.006639590025619188,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.020676691729323297,
+          "tail_focus_conditional_probability": 0.02180404950916517,
+          "tail_focus_implied_overall_probability": 0.0042962053106947685,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.09925925925925923,
+      "attention_level": "low",
+      "evidence_strength": 0.52,
+      "rationale_cn": "墨西哥4-3-3中路压缩+高质量反击对阵捷克低开放战创造力(<0.5 xG/场)，构成净胜3球的真实路径。但墨西哥已出线动机存疑、捷克翼卫体系可制造部分传中压力，限制了blowout概率上限。候选维持0-3/0-4/1-4，删除0-5（证据仅间接支持，无具体机制链支撑5球产出）。",
+      "supporting_evidence_ids": [
+        "E_ac46e877f05b",
+        "E_c1b321b3f4a8",
+        "E_8da7200e30bf",
+        "E_5358bb3a35df",
+        "E_e3be3293be36",
+        "E_88f01f8aa19e",
+        "E_4e357633c008",
+        "E_9b78ae7dc306"
+      ],
+      "counter_evidence_ids": [
+        "E_910cedc7a69e",
+        "E_f4945268203e",
+        "E_e21054a95d06",
+        "E_2308343d714f"
+      ],
+      "caution_cn": "墨西哥已锁定出线，存在降低强度或轮换风险；捷克3-5-2翼卫体系至少可制造边路传中压力，完全崩盘需要捷克防线连续失误叠加，概率受限。0-5已删除：现有证据（xG排名、2场胜绩）仅支持墨西哥攻强，无法支撑单场5球产出的具体机制链。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.03666666666666667,
+          "base_conditional_probability": 0.369402985074627,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.18283582089552247,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.015185185185185185,
+          "base_conditional_probability": 0.15298507462686572,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.09328358208955226,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.04104477611940299,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.04104477611940299,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.026119402985074633,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-6",
+          "base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.018656716417910453,
+          "total_goals": 6,
+          "winning_margin": 6
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.03666666666666667,
+          "base_conditional_probability": 0.369402985074627,
+          "tail_focus_conditional_probability": 0.4025360754204826,
+          "tail_focus_implied_overall_probability": 0.039955432671366406,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "墨西哥中路压缩封堵捷克开放战输出，利用快速转换和边路宽度累积进球；捷克进攻端无效，全场0射正或极低转化率，墨西哥三名不同球员各进一球。",
+          "rationale_cn": "原始池中概率最高(3.67%)，rollout_6直接呈现0-3路径并激活H1/H2/H3全部机制。证据链完整：墨西哥xG产出高(E_ac46e877f05b)、捷克open-play xG<0.5(E_c1b321b3f4a8)、墨西哥2胜(E_8da7200e30bf)、Ochoa首发稳固防线(E_88f01f8aa19e)。净胜3球是合理的blowout锚点比分。",
+          "evidence_ids": [
+            "E_ac46e877f05b",
+            "E_c1b321b3f4a8",
+            "E_8da7200e30bf",
+            "E_88f01f8aa19e",
+            "E_5358bb3a35df",
+            "E_4e357633c008",
+            "E_9b78ae7dc306",
+            "E_e3be3293be36"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2",
+            "H3"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.18283582089552247,
+          "tail_focus_conditional_probability": 0.17807489330200155,
+          "tail_focus_implied_overall_probability": 0.017675582001828297,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "捷克翼卫体系打出1球（Schick头球或定位球），但墨西哥仍打入4球完成净胜3球的blowout。这是捷克有限输出与墨西哥高效进攻并存的混乱比赛版本。",
+          "rationale_cn": "原始池概率1.81%，高于0-4。1-4需要捷克至少进1球，这与E_910cedc7a69e(翼卫前插/Schick禁区存在)和E_bd140ee1f534(三中卫体系预测XI)提供的捷克进攻机制一致，并非无中生有。墨西哥4球需要进攻机制高度激活，可信度与0-4相当但路径不同，保留。",
+          "evidence_ids": [
+            "E_910cedc7a69e",
+            "E_bd140ee1f534",
+            "E_88f01f8aa19e",
+            "E_27a442ee44b4",
+            "E_ac46e877f05b",
+            "E_c1b321b3f4a8"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.015185185185185185,
+          "base_conditional_probability": 0.15298507462686572,
+          "tail_focus_conditional_probability": 0.1638326033189947,
+          "tail_focus_implied_overall_probability": 0.01626190284795947,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "捷克进攻彻底哑火，墨西哥在0-3基础上增加一粒转换或定位球进球，达成净胜4球。需要捷克后防在压力下出现额外失误。",
+          "rationale_cn": "原始池概率1.52%，低于0-3但在blowout范围内合理存在。需要捷克防线比0-3情景更彻底瓦解。证据E_c9a07cff9659(高海拔体能消耗)和E_f4945268203e(墨西哥出线后心理优势)提供弱支撑，但机制链需要额外一次转换机会成功转化，不确定性更高。",
+          "evidence_ids": [
+            "E_ac46e877f05b",
+            "E_c1b321b3f4a8",
+            "E_88f01f8aa19e",
+            "E_8da7200e30bf",
+            "E_c9a07cff9659",
+            "E_60b3d60f6590"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H3"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.03666666666666667,
+          "base_conditional_probability": 0.369402985074627,
+          "tail_focus_conditional_probability": 0.4025360754204826,
+          "tail_focus_implied_overall_probability": 0.039955432671366406,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.01814814814814815,
+          "base_conditional_probability": 0.18283582089552247,
+          "tail_focus_conditional_probability": 0.17807489330200155,
+          "tail_focus_implied_overall_probability": 0.017675582001828297,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.015185185185185185,
+          "base_conditional_probability": 0.15298507462686572,
+          "tail_focus_conditional_probability": 0.1638326033189947,
+          "tail_focus_implied_overall_probability": 0.01626190284795947,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.09328358208955226,
+          "tail_focus_conditional_probability": 0.0701038097214355,
+          "tail_focus_implied_overall_probability": 0.0069584522242017435,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.04104477611940299,
+          "tail_focus_conditional_probability": 0.039559579825806046,
+          "tail_focus_implied_overall_probability": 0.003926654590117044,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.004074074074074074,
+          "base_conditional_probability": 0.04104477611940299,
+          "tail_focus_conditional_probability": 0.039559579825806046,
+          "tail_focus_implied_overall_probability": 0.003926654590117044,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.026119402985074633,
+          "tail_focus_conditional_probability": 0.021199392059762092,
+          "tail_focus_implied_overall_probability": 0.002104235952598607,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.018656716417910453,
+          "tail_focus_conditional_probability": 0.017981627193548205,
+          "tail_focus_implied_overall_probability": 0.0017848429955077472,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.018656716417910453,
+          "tail_focus_conditional_probability": 0.015142422899830067,
+          "tail_focus_implied_overall_probability": 0.0015030256804275765,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.011194029850746271,
+          "tail_focus_conditional_probability": 0.009989792885304556,
+          "tail_focus_implied_overall_probability": 0.0009915794419487482,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Czechia 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.23148148148148154,
+      "attention_level": "low",
+      "evidence_strength": 0.45,
+      "rationale_cn": "爆冷总概率约0.231。情景内部由低比分窄胜主导：捷克进攻产量低、墨西哥防守强且门将状态被强化，使捷克即便获胜也更可能是1球或2球级别。机制 H2（捷克翼卫前插/禁区装载为 Schick 制造的边路与定位球入口）为唯一可信的捷克得分通道，但 H1（墨西哥中路屏障压缩捷克连接）与墨西哥防守证据同时压低其转化与上限。需要特别标注的反向信号是 E_2308343d714f / E_e3be3293be36：捷克近期有‘领先后未能守住’的记录，这削弱了任何依赖捷克守住领先的剧本，使部分概率本应漏向平局而非稳定爆冷。",
+      "supporting_evidence_ids": [
+        "E_910cedc7a69e",
+        "E_2308343d714f",
+        "E_e3be3293be36"
+      ],
+      "counter_evidence_ids": [
+        "E_88f01f8aa19e",
+        "E_f6c0bc05be55",
+        "E_ac46e877f05b",
+        "E_c1b321b3f4a8",
+        "E_8da7200e30bf",
+        "E_60b3d60f6590",
+        "E_5358bb3a35df"
+      ],
+      "caution_cn": "不要把 1-0/2-1 的集中解读为‘机械压回最低比分’：此处低比分集中是由捷克低产量与墨西哥强防守的真实证据驱动。同时也不应人为抬高 3-0 等开放大比分——它仅有单条 rollout 支撑、缺乏公开证据正向背书，只能作为极端尾部保留。E_2308343d714f 显示捷克难以守住领先，凡依赖捷克‘降速守住’的剧本都应附带此反向证据。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-0",
+          "base_probability": 0.09703703703703703,
+          "base_conditional_probability": 0.4191999999999999,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-1",
+          "base_probability": 0.05925925925925926,
+          "base_conditional_probability": 0.25599999999999995,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-0",
+          "base_probability": 0.02962962962962963,
+          "base_conditional_probability": 0.12799999999999997,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.060799999999999986,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.05919999999999999,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.03999999999999999,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.011199999999999996,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.009599999999999997,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.09703703703703703,
+          "base_conditional_probability": 0.4191999999999999,
+          "tail_focus_conditional_probability": 0.47517569712083413,
+          "tail_focus_implied_overall_probability": 0.10999437433352645,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "捷克通过边路传中、定位球或 Schick 禁区终结取得单球领先，并以三中卫低位结构尽力守住。该剧本与 H2 的捷克边路/定位球入口相容，也与整体低比分机制一致，是爆冷中条件概率最高(0.419)的路径。需注意 E_2308343d714f 显示捷克曾领先未守住，故‘守住’并非确定。",
+          "rationale_cn": "条件概率最高、机制可支撑、与捷克低产量画像最契合的爆冷比分，作为唯一 grade 1 候选合理。",
+          "evidence_ids": [
+            "E_910cedc7a69e",
+            "E_c1b321b3f4a8",
+            "E_2308343d714f"
+          ],
+          "mechanism_ids": [
+            "H2",
+            "H1"
+          ]
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.05925925925925926,
+          "base_conditional_probability": 0.25599999999999995,
+          "tail_focus_conditional_probability": 0.24181969319126423,
+          "tail_focus_implied_overall_probability": 0.055976780831311176,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "捷克取得领先并最终多打进一球，但墨西哥凭借更强进攻与后段转换至少追回一球。该比分承认墨西哥进攻质量（xG≈1.4）与 H3 的后段转换威胁，同时要求捷克进攻效率较常态上浮。",
+          "rationale_cn": "条件概率第二(0.256)，允许墨西哥得分符合其攻强证据，机制可支撑，保留为正常 grade 0。",
+          "evidence_ids": [
+            "E_910cedc7a69e",
+            "E_ac46e877f05b"
+          ],
+          "mechanism_ids": [
+            "H2",
+            "H3"
+          ]
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.02962962962962963,
+          "base_conditional_probability": 0.12799999999999997,
+          "tail_focus_conditional_probability": 0.10277336960628729,
+          "tail_focus_implied_overall_probability": 0.023790131853307247,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "捷克打进两球且墨西哥被零封。该路径同时要求捷克得分高于常态产量，并要求 xG≈1.4、攻强的墨西哥完全不破门，双重条件叠加。",
+          "rationale_cn": "由原提案 grade 0 降为 -1。相比 2-1，2-0 额外要求墨西哥零封，与墨西哥进攻强度及 Ochoa 之外的进攻证据冲突更大，条件概率(0.128)也明显低于 2-1，应作为较弱候选。",
+          "evidence_ids": [
+            "E_910cedc7a69e",
+            "E_ac46e877f05b",
+            "E_88f01f8aa19e"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2"
+          ]
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.03999999999999999,
+          "tail_focus_conditional_probability": 0.03211667800196477,
+          "tail_focus_implied_overall_probability": 0.007434416204158514,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "极端爆冷：捷克中段连续转化后转入低位保护，墨西哥因节奏、轮换或效率问题无法追回。仅因 rollout_9 直接出现而保留为尾部候选。",
+          "rationale_cn": "保留为 -1 尾部候选。它有 rollout_9 的真实推演支撑，但公开证据与机制方向（捷克开放战产量低、墨西哥防守 xG 低）均不支持三球零封胜，缺乏正向证据，仅作极端尾部呈现而非主张。",
+          "evidence_ids": [
+            "E_c1b321b3f4a8",
+            "E_ac46e877f05b"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.09703703703703703,
+          "base_conditional_probability": 0.4191999999999999,
+          "tail_focus_conditional_probability": 0.47517569712083413,
+          "tail_focus_implied_overall_probability": 0.10999437433352645,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.05925925925925926,
+          "base_conditional_probability": 0.25599999999999995,
+          "tail_focus_conditional_probability": 0.24181969319126423,
+          "tail_focus_implied_overall_probability": 0.055976780831311176,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.02962962962962963,
+          "base_conditional_probability": 0.12799999999999997,
+          "tail_focus_conditional_probability": 0.10277336960628729,
+          "tail_focus_implied_overall_probability": 0.023790131853307247,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.060799999999999986,
+          "tail_focus_conditional_probability": 0.05743217713292525,
+          "tail_focus_implied_overall_probability": 0.013294485447436404,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.05919999999999999,
+          "tail_focus_conditional_probability": 0.05592080405047985,
+          "tail_focus_implied_overall_probability": 0.012944630567240708,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.03999999999999999,
+          "tail_focus_conditional_probability": 0.03211667800196477,
+          "tail_focus_implied_overall_probability": 0.007434416204158514,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.011199999999999996,
+          "tail_focus_conditional_probability": 0.01057961157711781,
+          "tail_focus_implied_overall_probability": 0.002448984161369864,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.009599999999999997,
+          "tail_focus_conditional_probability": 0.009068238494672408,
+          "tail_focus_implied_overall_probability": 0.002099129281174169,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.004799999999999999,
+          "tail_focus_conditional_probability": 0.004534119247336204,
+          "tail_focus_implied_overall_probability": 0.0010495646405870845,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.003199999999999999,
+          "tail_focus_conditional_probability": 0.0030227461648908026,
+          "tail_focus_implied_overall_probability": 0.0006997097603913897,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999998,
+    "source_hash": "e016db2e499c44861d9d1a77c3bcf414bd871b17fee543acf8ba2e792406e572"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Czechia_vs_Mexico_M53\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\web_delivery\\Czechia_vs_Mexico_M53\\2026.6.25.09\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\reports_Czechia_vs_Mexico_M53\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\6.25比赛预测_V743\\web_delivery\\Czechia_vs_Mexico_M53\\2026.6.25.09\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}
