@@ -1,0 +1,610 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-25T07:28:53.259929Z",
+  "status": "proposer_only",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Paraguay_vs_Australia_M60\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "c9d097ce51879abdc398d937c078031eddd03fceece30a5707a3233de1d8834d",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-25T07:21:05.946780+00:00"
+  },
+  "match": {
+    "match_id": "M60",
+    "team_a": "Paraguay",
+    "team_b": "Australia",
+    "kickoff_utc": "2026-06-26T02:00:00Z",
+    "venue": "Levi's Stadium, Santa Clara",
+    "stage": "group",
+    "group": "D",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 82,
+      "usable_evidence": 82,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 0,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.37296296296296294,
+    "draw": 0.33,
+    "team_b_win": 0.29703703703703704,
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.15481481481481482
+      },
+      {
+        "score": "1-0",
+        "probability": 0.1348148148148148
+      },
+      {
+        "score": "0-0",
+        "probability": 0.12962962962962962
+      },
+      {
+        "score": "0-1",
+        "probability": 0.11481481481481481
+      },
+      {
+        "score": "2-1",
+        "probability": 0.07407407407407407
+      }
+    ],
+    "score_matrix_probability_sum": 1.0
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "",
+    "favorite_team": "",
+    "underdog_side": "",
+    "underdog_team": "",
+    "team_a_win": 0.37296296296296294,
+    "draw": 0.33,
+    "team_b_win": 0.29703703703703704,
+    "win_probability_gap": 0.0759259259259259,
+    "underdog_win_probability": 0.0,
+    "favorite_fail_to_win_probability": 0.0,
+    "is_balanced": true
+  },
+  "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；该情景不适用。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.17370370370370372,
+      "attention_level": "low",
+      "evidence_strength": 0.5,
+      "rationale_cn": "",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "",
+      "audit_note_cn": "Auditor调用失败，本情景暂时采用Proposer结果。",
+      "candidate_pool": [
+        {
+          "score": "2-2",
+          "base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.2409381663113006,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.01962962962962963,
+          "base_conditional_probability": 0.11300639658848613,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.029850746268656712,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.03,
+          "base_conditional_probability": 0.17270788912579954,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.12153518123667377,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.04904051172707889,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.04690831556503197,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.038379530916844345,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.2409381663113006,
+          "tail_focus_conditional_probability": 0.24134648868253056,
+          "tail_focus_implied_overall_probability": 0.04192277896003957,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "这是最符合“双方都有可解释进球路径”的开放比分。澳大利亚可通过低控球转换攻击巴拉圭线间裂缝；巴拉圭则可利用澳大利亚右后卫Italiano缺阵后的补位区，以及边路传中、定位球和Pitta/Gómez/Alderete的禁区存在感制造回应。末轮出线收益和低节奏机制限制其上行，因此不是强支持，但在大比分条件下，双方互有进球比单边4-0更贴合证据。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.01962962962962963,
+          "base_conditional_probability": 0.11300639658848613,
+          "tail_focus_conditional_probability": 0.13534532791642492,
+          "tail_focus_implied_overall_probability": 0.023509984738075293,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "",
+          "rationale_cn": "若比赛早段被打开，巴拉圭可从澳大利亚右路人员调整和Leckie缺席带来的边路保护下降中获益，并通过传中、二点球和定位球提高进球数。澳大利亚仍有低控球反击与Irankunda变量，可把比分推到5球区间。该剧本比单纯4球更能体现开放状态后的互相惩罚，但受到Almiron停赛削弱巴拉圭快速推进的限制。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.12153518123667377,
+          "tail_focus_conditional_probability": 0.12174114915844463,
+          "tail_focus_implied_overall_probability": 0.021146888501966866,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "澳大利亚方向的大比分路径有明确机制：巴拉圭首战曾被美国通过大量破线传球打穿并1-4失利，澳大利亚又有低控球2-0击败Türkiye的转换样本。Almiron停赛削弱巴拉圭反击出口，若巴拉圭因比分或出线形势压出，澳大利亚可通过中场二点和纵向转换扩大领先。选择1-3而非更极端比分，是因为澳大利亚Leckie缺阵、Irankunda首发未定，且巴拉圭中卫评价仍较强。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.029850746268656712,
+          "tail_focus_conditional_probability": 0.03304314180692592,
+          "tail_focus_implied_overall_probability": 0.005739716113869725,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22,
+          "script_cn": "",
+          "rationale_cn": "在开放大比分已经成立的条件下，6球路径不能被自动排除：巴拉圭可集中测试澳大利亚右后卫替换区并获得定位球、传中和二点球机会；澳大利亚也有反击打穿巴拉圭线间的证据基础。因此4-2比4-0更符合双方都有进球机制的开放剧本。不过，巴拉圭长期防守记录较好、Almiron缺席压低其流畅推进，末轮低节奏机制也对6球以上形成明显约束，所以仅给中性支持。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.04185185185185185,
+          "base_conditional_probability": 0.2409381663113006,
+          "tail_focus_conditional_probability": 0.24134648868253056,
+          "tail_focus_implied_overall_probability": 0.04192277896003957,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.03,
+          "base_conditional_probability": 0.17270788912579954,
+          "tail_focus_conditional_probability": 0.14416715031921074,
+          "tail_focus_implied_overall_probability": 0.025042367962855496,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.01962962962962963,
+          "base_conditional_probability": 0.11300639658848613,
+          "tail_focus_conditional_probability": 0.13534532791642492,
+          "tail_focus_implied_overall_probability": 0.023509984738075293,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.12153518123667377,
+          "tail_focus_conditional_probability": 0.12174114915844463,
+          "tail_focus_implied_overall_probability": 0.021146888501966866,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.04904051172707889,
+          "tail_focus_conditional_probability": 0.04894563745405303,
+          "tail_focus_implied_overall_probability": 0.00850203850590773,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.04690831556503197,
+          "tail_focus_conditional_probability": 0.04681756626039855,
+          "tail_focus_implied_overall_probability": 0.008132384657824785,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.029850746268656712,
+          "tail_focus_conditional_probability": 0.03304314180692592,
+          "tail_focus_implied_overall_probability": 0.005739716113869725,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.038379530916844345,
+          "tail_focus_conditional_probability": 0.03203714451538017,
+          "tail_focus_implied_overall_probability": 0.005564970658412334,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.021321961620469083,
+          "tail_focus_conditional_probability": 0.02360224414780423,
+          "tail_focus_implied_overall_probability": 0.004099797224192661,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.021321961620469083,
+          "tail_focus_conditional_probability": 0.021280711936544797,
+          "tail_focus_implied_overall_probability": 0.0036965384808294484,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000007
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.06777777777777777,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.2568306010928962,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.12021857923497269,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.09836065573770493,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.014814814814814815,
+          "base_conditional_probability": 0.21857923497267762,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.054644808743169404,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.054644808743169404,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.049180327868852465,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.03825136612021858,
+          "total_goals": 6,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.2568306010928962,
+          "tail_focus_conditional_probability": 0.23551518947698086,
+          "tail_focus_implied_overall_probability": 0.015962696175662035,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.12021857923497269,
+          "tail_focus_conditional_probability": 0.11906044472283117,
+          "tail_focus_implied_overall_probability": 0.008069652364547444,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.09836065573770493,
+          "tail_focus_conditional_probability": 0.10710930159724395,
+          "tail_focus_implied_overall_probability": 0.007259630441590979,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.2568306010928962,
+          "tail_focus_conditional_probability": 0.23551518947698086,
+          "tail_focus_implied_overall_probability": 0.015962696175662035,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.014814814814814815,
+          "base_conditional_probability": 0.21857923497267762,
+          "tail_focus_conditional_probability": 0.20043845912934544,
+          "tail_focus_implied_overall_probability": 0.013585273340988966,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.12021857923497269,
+          "tail_focus_conditional_probability": 0.11906044472283117,
+          "tail_focus_implied_overall_probability": 0.008069652364547444,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.09836065573770493,
+          "tail_focus_conditional_probability": 0.10710930159724395,
+          "tail_focus_implied_overall_probability": 0.007259630441590979,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.054644808743169404,
+          "tail_focus_conditional_probability": 0.06426558095834639,
+          "tail_focus_implied_overall_probability": 0.004355778264954588,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.054644808743169404,
+          "tail_focus_conditional_probability": 0.059505167554024414,
+          "tail_focus_implied_overall_probability": 0.004033128023106099,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.049180327868852465,
+          "tail_focus_conditional_probability": 0.04870654556843094,
+          "tail_focus_implied_overall_probability": 0.003301221421860319,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.03825136612021858,
+          "tail_focus_conditional_probability": 0.044985906670842464,
+          "tail_focus_implied_overall_probability": 0.003049044785468211,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.027322404371584702,
+          "tail_focus_conditional_probability": 0.027059191982461633,
+          "tail_focus_implied_overall_probability": 0.0018340119010335104,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.02185792349726776,
+          "tail_focus_conditional_probability": 0.02570623238333855,
+          "tail_focus_implied_overall_probability": 0.001742311305981835,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999997
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+      "applicable": false,
+      "status": "not_applicable",
+      "base_event_probability": 0,
+      "attention_level": "not_applicable",
+      "evidence_strength": 0.0,
+      "rationale_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "该情景没有满足预设适用条件。",
+      "audit_note_cn": "未执行LLM分析。",
+      "candidate_pool": [],
+      "selected_scores": [],
+      "tail_focus_distribution_top10": [],
+      "conditional_probability_sum": 0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "partial",
+    "auditor_status": "failed",
+    "cache_enabled": true,
+    "errors": [
+      "high_scoring Auditor失败：RuntimeError: LLM 调用失败（claude-opus-4-8 / tail_forecast_auditor_v744_high_scoring）：Request timed out.",
+      "blowout Proposer失败：RuntimeError: LLM 调用失败（gpt-5.5 / tail_forecast_proposer_v744_blowout）：BUSINESS_VALIDATION_FAILED: blowout must select 1-4 candidate scores"
+    ]
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 1.0,
+    "source_hash": "c9d097ce51879abdc398d937c078031eddd03fceece30a5707a3233de1d8834d"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Paraguay_vs_Australia_M60\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\web_delivery\\Paraguay_vs_Australia_M60\\2026.6.26.10\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Paraguay_vs_Australia_M60\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\web_delivery\\Paraguay_vs_Australia_M60\\2026.6.26.10\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

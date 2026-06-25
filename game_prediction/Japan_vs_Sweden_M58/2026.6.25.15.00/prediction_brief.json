@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T06:29:32.466476Z",
+  "prediction_generated_at_local": "2026-06-25T14:29:32.466476+08:00",
+  "match": {
+    "match_id": "M58",
+    "team_a": "Japan",
+    "team_b": "Sweden",
+    "kickoff_utc": "2026-06-25T23:00:00Z",
+    "venue": "AT&T Stadium, Arlington",
+    "stage": "group",
+    "group": "F",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.4114814814814815,
+    "draw": 0.29074074074074074,
+    "team_b_win": 0.29777777777777775
+  },
+  "most_likely_outcome": {
+    "label": "Japan胜",
+    "probability": 0.4114814814814815
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.13703703703703704
+    },
+    {
+      "score": "1-0",
+      "probability": 0.10666666666666667
+    },
+    {
+      "score": "0-0",
+      "probability": 0.09
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "日本赛前1胜1平列小组第二，战平荷兰并4-0胜突尼斯，状态证据更强。",
+      "text_en": "Japan enter from second place in Group F after a win and a draw, including a 2-2 draw with the Netherlands and a 4-0 win over Tunisia",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_2c73095cfb5c",
+        "E_3072c85120a8",
+        "E_a7f97c30e936"
+      ],
+      "source_names": [
+        "FOX Sports",
+        "FIFA",
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "久保建英已被列为因膝伤缺席，远藤航也因伤退出日本世界杯阵容。",
+      "text_en": "Japan are missing Takefusa Kubo because of a knee injury, while captain Wataru Endo had already withdrawn from the World Cup squad",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_7a2b07847b04",
+        "E_25adb6cb54b8"
+      ],
+      "source_names": [
+        "RotoWire",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "瑞典可调用伊萨克，且伊萨克和约克雷斯被列为日本重点防守对象。",
+      "text_en": "Sweden can call on Alexander Isak, and Reuters identified Isak and Viktor Gyokeres as the Swedish strikers Japan must watch closely",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_421541170218",
+        "E_4bcd38efa926"
+      ],
+      "source_names": [
+        "FIFA",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "日本长期由森保一执教，3-4-2-1体系稳定，预测首发也延续三中卫结构。",
+      "text_en": "Japan have continuity under Hajime Moriyasu, with a settled 3-4-2-1 shape, and the predicted lineup also keeps a back-three structure",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_6acbd3b39b9d",
+        "E_ead4a8d80833"
+      ],
+      "source_names": [
+        "The Athletic",
+        "Racing Post"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "末轮形势不同：日本平局即可出线，瑞典必须取胜，后段风险偏向打开。",
+      "text_en": "The final-round stakes differ: Japan can advance with a draw, while Sweden need a win, creating a setup that may open up later",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_4fa81a51c858",
+        "E_38541e977f86"
+      ],
+      "source_names": [
+        "RotoWire",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在阿灵顿AT&T体育场进行，世界杯已铺设天然草混合草皮。",
+      "text_en": "The match is scheduled for AT&T Stadium in Arlington, where a natural-grass hybrid World Cup pitch has been installed",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_6f80ca8db967",
+        "E_82b9b110f5c4",
+        "E_7268b6d8e167"
+      ],
+      "source_names": [
+        "AT&T Stadium: Home",
+        "Is FIFA changing turf at AT&T Stadium in Texas for 2026 World Cup?",
+        "Here's an early look at the World Cup field in AT&T Stadium"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-25T06:31:59.682055Z",
+    "source_state_sha256": "d5cdc00772af7da6005d0e646459dbb7c6a9e709b27486b2645352c39c11436f",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "提案在high_scoring情景中选取了四个候选比分，但存在多处问题：(1) 将3-2、2-3、3-3、3-1全部纳入且support_grade普遍偏低，未能聚焦最具证据支撑的路径；(2) 所有rationale_cn均未引用具体evidence_ids，无法验证是否真实使用输入证据；(3) 3-2被标为grade=2但描述过于笼统，未说明为何优于其他候选；(4) 3-3作为6球平局在原始联合概率极低(1.74%)的情况下仅凭'高…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2622222222222222,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.35,
+        "summary_cn": "原提案列举4个候选但均未引用证据ID且support_grade偏低，实际证据链不完整。high_scoring本身适用但需更严格筛选。",
+        "caution_cn": "瑞典5-1负荷兰与5-1胜突尼斯的极端波动支持开放比分存在，但日本2-2战平荷兰与4-0胜突尼斯显示其也具备控场能力；末轮日本平局即可出线的动机会抑制前段冒险，开放度主要依赖瑞典后段搏命。原提案未明确最优路径且证据引用缺失。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.04,
+            "tail_focus_conditional_probability": 0.17741720973533706,
+            "support_grade": 2,
+            "script_cn": "瑞典后段搏命前压但防线在高强度下再次失位(参考5-1负荷兰E_69e89a2c0b76)，日本利用稳定三中卫结构(E_6acbd3b39b9d)与反击连接点多次破门。瑞典双前锋(E_4bcd38efa926)在远藤缺阵时制造一次进球事件，但整体攻守平衡差使其无法持续回应。"
+          },
+          {
+            "score": "3-2",
+            "base_probability": 0.02666666666666667,
+            "tail_focus_conditional_probability": 0.1414195150064281,
+            "support_grade": 2,
+            "script_cn": "瑞典末轮必须取胜(E_38541e977f86)，后段前压给日本反击空间；日本近期4-0胜突尼斯(E_a7f97c30e936)显示进攻输出能力，瑞典被荷兰5-1击败(E_69e89a2c0b76)暴露防线失位风险。瑞典双前锋伊萨克、约克雷斯(E_4bcd38efa926)与远藤缺阵(E_25adb6cb54b8)机制支持瑞典回应进球，但不足以完全压制日本，最终形成日本小胜的对攻局面。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.10148148148148146,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.32,
+        "summary_cn": "末轮双方动机（日本求稳、瑞典后段搏命）使开局大概率谨慎，rollout多数显示前30分钟未进球。瑞典被荷兰5-1但对手是荷兰；日本4-0突尼斯但对手是突尼斯。当前证据池未直接支持任一方连续大比分输出，机制推演也未产生崩盘主线。",
+        "caution_cn": "瑞典5-1败荷兰与日本4-0胜突尼斯均为对手实力差异背景，直接外推至本场为过度激进。rollout代表比分为1-0/0-0/2-1，无任何rollout代表比分≥3球差。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.03037037037037037,
+            "tail_focus_conditional_probability": 0.3130069663135796,
+            "support_grade": 1,
+            "script_cn": "瑞典60分钟后必须前压，日本三中卫+翼卫反击体系连续转化并形成3球优势。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.013703703703703704,
+            "tail_focus_conditional_probability": 0.13976365429271242,
+            "support_grade": 0,
+            "script_cn": "日本从开局压制瑞典并持续扩大比分至4-0。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2977777777777777,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.58,
+        "summary_cn": "爆冷核心证据：远藤航伤退(E_25adb6cb54b8)削弱日本中路拦截屏障；久保建英缺阵(E_6b12796069c3, E_7a2b07847b04)降低右侧半空间创造力；瑞典可用伊萨克+约克雷斯双前锋(E_421541170218, E_4bcd38efa926, E_b68f2a9afc64)具备纵深和禁区占位能力；末轮瑞典必须取胜的动机不对称(E…",
+        "caution_cn": "瑞典防线被荷兰5-1打穿说明其开放比赛的代价是自身也容易失球，爆冷路径不等于瑞典稳定控场，高进球比分下日本同样可能得分。久保缺阵对日本阵地战有影响，但日本4-0胜突尼斯时表现已说明进攻不单依赖久保。",
+        "top_scores": [
+          {
+            "score": "1-2",
+            "base_probability": 0.06518518518518518,
+            "tail_focus_conditional_probability": 0.26622157312747763,
+            "support_grade": 2,
+            "script_cn": "瑞典依靠伊萨克或约克雷斯在中前场拿球突破日本远藤缺阵后的中路保护漏洞打入两球；日本上田或镰田利用瑞典防线不稳定性追回一球，但未能完成逆转。末轮瑞典必须争胜的动机推动其在落平或先平时加强前场投入，最终以小比分爆冷获胜。"
+          },
+          {
+            "score": "0-1",
+            "base_probability": 0.08703703703703704,
+            "tail_focus_conditional_probability": 0.2941790110577927,
+            "support_grade": 1,
+            "script_cn": "日本久保缺阵后阵地战创造力下降，比赛前段节奏偏低；瑞典依靠一次高质量机会（伊萨克或约克雷斯个人能力或定位球）打入唯一进球，日本因平局价值较高而未全力冒进，最终瑞典以单球爆冷获胜。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

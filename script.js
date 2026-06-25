@@ -2142,13 +2142,7 @@ function renderLatestScoreForecast(match) {
 }
 
 function shouldShowLatestScenario(match, scenario) {
-  if (["high_scoring", "blowout"].includes(scenario?.scenarioId)) {
-    return true;
-  }
-
-  const matchNo = String(match?.matchNo || match?.id || "").toUpperCase();
-
-  return scenario?.scenarioId === "upset" && matchNo === "M48";
+  return ["high_scoring", "blowout", "upset"].includes(scenario?.scenarioId);
 }
 
 function getLatestMatchPredictionVersion(match) {

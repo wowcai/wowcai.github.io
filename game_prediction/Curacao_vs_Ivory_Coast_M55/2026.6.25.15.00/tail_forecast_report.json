@@ -1,0 +1,920 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-25T05:10:58.489633Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Curacao_vs_Ivory_Coast_M55\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "b358115bdbf9387669506a6a012b9d8b758dad12422bc0d518b6c118f5463bb5",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-25T05:08:39.388335+00:00"
+  },
+  "match": {
+    "match_id": "M55",
+    "team_a": "Curacao",
+    "team_b": "Ivory Coast",
+    "kickoff_utc": "2026-06-25T20:00:00Z",
+    "venue": "Lincoln Financial Field, Philadelphia",
+    "stage": "group",
+    "group": "E",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 77,
+      "usable_evidence": 77,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 0,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.11481481481481481,
+    "draw": 0.2651851851851852,
+    "team_b_win": 0.62,
+    "top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.18333333333333332
+      },
+      {
+        "score": "0-2",
+        "probability": 0.14444444444444443
+      },
+      {
+        "score": "0-0",
+        "probability": 0.12444444444444444
+      },
+      {
+        "score": "1-1",
+        "probability": 0.11037037037037037
+      },
+      {
+        "score": "1-2",
+        "probability": 0.0811111111111111
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999998
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_b",
+    "favorite_team": "Ivory Coast",
+    "underdog_side": "team_a",
+    "underdog_team": "Curacao",
+    "team_a_win": 0.11481481481481481,
+    "draw": 0.2651851851851852,
+    "team_b_win": 0.62,
+    "win_probability_gap": 0.5051851851851852,
+    "underdog_win_probability": 0.11481481481481481,
+    "favorite_fail_to_win_probability": 0.38,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.18148148148148147,
+      "attention_level": "medium",
+      "evidence_strength": 0.52,
+      "rationale_cn": "开放大比分情景成立基础：科特迪瓦进攻强度（H_width_pressure_vs_low_block置信度0.73）与库拉索结构脆弱性（7-1负德国尾部风险）共同支持总进球≥4的可能性。但核心制约真实存在：库拉索对厄瓜多尔守出0-0（对手xG 3.08），Room高扑救有直接证据；科特迪瓦出线动机保守（只需不败），持续高强度投入有限。rollout样本中大比分仅rollout_9（0-4）和rollout_1（2-3）出现，其余7条为低比分，说明大比分条件对应的发生路径较窄。",
+      "supporting_evidence_ids": [
+        "E_cc79b37015b3",
+        "E_cb645f2869a9",
+        "E_61e5a51f85c4",
+        "E_bee1b5a82ab6",
+        "E_9cf8ffebafbe"
+      ],
+      "counter_evidence_ids": [
+        "E_6dd3eb839284",
+        "E_a693c62ca4d9",
+        "E_e58960cdb15b",
+        "E_1593ad029035",
+        "E_a5ba25ab67f2"
+      ],
+      "caution_cn": "1-4被删除：候选池中1-4的base_probability（0.0174）低于0-4（0.0256）和1-3（0.04），且引用机制与1-3完全重叠，未提供独立叙事，属冗余候选。2-3保留但降为support_grade 0，因库拉索打入两球的证据基础薄弱（进攻数值0.28，xG历史0.48），rollout_1为唯一支撑，风险较高。0-4保留但降为support_grade 1，rollout_9有直接支撑，但9条rollout仅此一条，不宜过高。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-3",
+          "base_probability": 0.04,
+          "base_conditional_probability": 0.22040816326530616,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.02,
+          "base_conditional_probability": 0.11020408163265308,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.04285714285714286,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.027037037037037037,
+          "base_conditional_probability": 0.1489795918367347,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.14081632653061227,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.09591836734693877,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.05714285714285715,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.034693877551020415,
+          "total_goals": 5,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.04,
+          "base_conditional_probability": 0.22040816326530616,
+          "tail_focus_conditional_probability": 0.2575805252016706,
+          "tail_focus_implied_overall_probability": 0.04674609531437725,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "候选池中base_probability最高（0.04），rollout无直接代表但机制链最完整：H_width_pressure_vs_low_block驱动科特迪瓦三球，H_room_and_defensive_injury_upset_path解释库拉索一球（边路/远射/Singo缺席引发防线调整）。总进球4球是该情景最低门槛，1-3是结构上最稳健的大比分入口。",
+          "evidence_ids": [
+            "E_cb645f2869a9",
+            "E_bee1b5a82ab6",
+            "E_61e5a51f85c4",
+            "E_a5ba25ab67f2",
+            "E_5053b1ba3895",
+            "E_6dd3eb839284"
+          ],
+          "mechanism_ids": [
+            "H_width_pressure_vs_low_block",
+            "H_group_late_two_phase_game",
+            "H_room_and_defensive_injury_upset_path"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.14081632653061227,
+          "tail_focus_conditional_probability": 0.13619200183076838,
+          "tail_focus_implied_overall_probability": 0.02471632625817648,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "rollout_9直接给出0-4代表比分，机制链真实：科特迪瓦持续边路压制+两阶段比赛后段开放+库拉索无稳定进攻出口（xG 0.48历史）。但9条rollout仅1条达到此比分，且科特迪瓦保守出线动机（H_group_late_two_phase_game反证：前段控风险）抑制早段得分效率，使0-4成为低频尾部而非中心路径。",
+          "evidence_ids": [
+            "E_cc79b37015b3",
+            "E_cb645f2869a9",
+            "E_9cf8ffebafbe",
+            "E_a693c62ca4d9",
+            "E_1593ad029035"
+          ],
+          "mechanism_ids": [
+            "H_width_pressure_vs_low_block",
+            "H_group_late_two_phase_game",
+            "H_second_half_depth_transition"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.02,
+          "base_conditional_probability": 0.11020408163265308,
+          "tail_focus_conditional_probability": 0.10619886721208309,
+          "tail_focus_implied_overall_probability": 0.019273127753303965,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "",
+          "rationale_cn": "rollout_1给出2-3代表比分，机制上双向进球有一定叙事：科特迪瓦三球来自前场质量，库拉索两球依赖Room拖延+末段抬线+科特迪瓦防线调整。但库拉索打入两球的证据基础极弱（进攻0.28，历史xG 0.48，Locadia停赛），base_probability仅0.02，属高不确定性候选，不宜升级。",
+          "evidence_ids": [
+            "E_a693c62ca4d9",
+            "E_a5ba25ab67f2",
+            "E_efc7a172ba78",
+            "E_5053b1ba3895",
+            "E_1593ad029035"
+          ],
+          "mechanism_ids": [
+            "H_group_late_two_phase_game",
+            "H_room_and_defensive_injury_upset_path",
+            "H_width_pressure_vs_low_block"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.04,
+          "base_conditional_probability": 0.22040816326530616,
+          "tail_focus_conditional_probability": 0.2575805252016706,
+          "tail_focus_implied_overall_probability": 0.04674609531437725,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.14081632653061227,
+          "tail_focus_conditional_probability": 0.13619200183076838,
+          "tail_focus_implied_overall_probability": 0.02471632625817648,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.027037037037037037,
+          "base_conditional_probability": 0.1489795918367347,
+          "tail_focus_conditional_probability": 0.12007265861891415,
+          "tail_focus_implied_overall_probability": 0.021790963971580715,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.02,
+          "base_conditional_probability": 0.11020408163265308,
+          "tail_focus_conditional_probability": 0.10619886721208309,
+          "tail_focus_implied_overall_probability": 0.019273127753303965,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.09591836734693877,
+          "tail_focus_conditional_probability": 0.09243234738829453,
+          "tail_focus_implied_overall_probability": 0.016774759340838635,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.05714285714285715,
+          "tail_focus_conditional_probability": 0.0550660792951542,
+          "tail_focus_implied_overall_probability": 0.009993473649861317,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.04285714285714286,
+          "tail_focus_conditional_probability": 0.045804965959150984,
+          "tail_focus_implied_overall_probability": 0.008312753081475548,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.034693877551020415,
+          "tail_focus_conditional_probability": 0.03343297671491505,
+          "tail_focus_implied_overall_probability": 0.006067466144558656,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.026530612244897965,
+          "tail_focus_conditional_probability": 0.028355455117569657,
+          "tail_focus_implied_overall_probability": 0.005145990002818197,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.018367346938775512,
+          "tail_focus_conditional_probability": 0.019630699696778997,
+          "tail_focus_implied_overall_probability": 0.0035626084634895216,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000002
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.14444444444444443,
+      "attention_level": "medium",
+      "evidence_strength": 0.58,
+      "rationale_cn": "崩盘情景成立的核心证据链清晰：库拉索1-7负德国（E_cc79b37015b3）、对厄瓜多尔让出3.08 xG（E_6dd3eb839284/E_a693c62ca4d9）、科特迪瓦前场速度盘带资源（E_cb645f2869a9）、CAF预选赛进球领先（E_61e5a51f85c4）、机制H_width_pressure_vs_low_block在8/9条rollout中激活。主要制约因素：科特迪瓦只需不败（E_1593ad029035）会压制其持续追击意愿，Room扑救可延迟比分（E_e58960cdb15b），Singo缺席削弱右路但不影响整体进攻输出。rollout_9（0-4）直接提供路径支撑，整体证据可支持候选池上限至0-4。",
+      "supporting_evidence_ids": [
+        "E_cc79b37015b3",
+        "E_6dd3eb839284",
+        "E_a693c62ca4d9",
+        "E_cb645f2869a9",
+        "E_61e5a51f85c4",
+        "E_bee1b5a82ab6",
+        "E_9cf8ffebafbe"
+      ],
+      "counter_evidence_ids": [
+        "E_1593ad029035",
+        "E_e58960cdb15b",
+        "E_6dd3eb839284"
+      ],
+      "caution_cn": "科特迪瓦末轮出线条件（不败即可）是最大单一抑制因素——领先后大概率切换为控风险而非持续压制，这使得5球以上零封路径证据不足。Room高扑救上限已在Ecuador一战被观察到，可能对任何崩盘路径造成延迟。0-3是情景内最低达标比分，不应作为代表性比分被优先摆放。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.07148148148148148,
+          "base_conditional_probability": 0.4948717948717949,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.12051282051282051,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.17692307692307696,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.0717948717948718,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.03333333333333334,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-6",
+          "base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.02307692307692308,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "1-6",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.015384615384615385,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "2-5",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.015384615384615385,
+          "total_goals": 7,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.07148148148148148,
+          "base_conditional_probability": 0.4948717948717949,
+          "tail_focus_conditional_probability": 0.44142968133341887,
+          "tail_focus_implied_overall_probability": 0.06376206508149383,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "",
+          "rationale_cn": "0-3是崩盘池中base_probability最高的比分（0.071），是情景成立的基准落点。科特迪瓦有足够质量打入3球且保持零封（库拉索xG极低），但3球净胜差正好在末轮控风险与持续进攻之间的临界点，不能排除科特迪瓦领先后主动降速导致比分停在此处。作为最低达标比分保留，不应是情景内主要代表。",
+          "evidence_ids": [
+            "E_cc79b37015b3",
+            "E_6dd3eb839284",
+            "E_cb645f2869a9",
+            "E_1593ad029035"
+          ],
+          "mechanism_ids": [
+            "H_width_pressure_vs_low_block"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.17692307692307696,
+          "tail_focus_conditional_probability": 0.22645071047354345,
+          "tail_focus_implied_overall_probability": 0.03270954706840072,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "",
+          "rationale_cn": "rollout_9直接代表比分，且包含0-30分钟双进球、30-60再进球的完整崩盘路径。机制H_width_pressure_vs_low_block与H_group_late_two_phase_game均激活，库拉索1-7负德国证实极端崩盘非低概率幻觉。科特迪瓦后段可能降速，但若早段已4球领先，比赛实际上已进入崩盘状态，降速不影响该比分本身。证据链完整，机制与路径均有真实锚点。",
+          "evidence_ids": [
+            "E_cc79b37015b3",
+            "E_a693c62ca4d9",
+            "E_6dd3eb839284",
+            "E_cb645f2869a9",
+            "E_61e5a51f85c4"
+          ],
+          "mechanism_ids": [
+            "H_width_pressure_vs_low_block",
+            "H_group_late_two_phase_game"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.12051282051282051,
+          "tail_focus_conditional_probability": 0.14028543784759193,
+          "tail_focus_implied_overall_probability": 0.020263452133541054,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "",
+          "rationale_cn": "1-4与H_group_late_two_phase_game双阶段机制高度契合：科特迪瓦前段主导、库拉索后段被迫抬线后通过远射或定位球拿到一球（符合E_5053b1ba3895边路远射路径），科特迪瓦反击反复惩罚开放空间。base_probability（0.017）在候选池中有明确条目，比分逻辑自洽，优于将崩盘机械压回0-3最低达标。",
+          "evidence_ids": [
+            "E_5053b1ba3895",
+            "E_cc79b37015b3",
+            "E_a693c62ca4d9",
+            "E_cb645f2869a9"
+          ],
+          "mechanism_ids": [
+            "H_width_pressure_vs_low_block",
+            "H_group_late_two_phase_game",
+            "H_second_half_depth_transition"
+          ]
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.0717948717948718,
+          "tail_focus_conditional_probability": 0.06844447261089409,
+          "tail_focus_implied_overall_probability": 0.00988642382157359,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312,
+          "script_cn": "",
+          "rationale_cn": "0-5证据基础仅依赖1-7历史参照和CAF进球数，缺乏本场具体路径支撑。科特迪瓦末轮只需不败的出线条件在领先后会强烈压制其持续追击意愿；Room已有高扑救上限观察。该比分保留作为尾部可能性，但证据不足以给予更高support_grade。",
+          "evidence_ids": [
+            "E_cc79b37015b3",
+            "E_61e5a51f85c4",
+            "E_1593ad029035"
+          ],
+          "mechanism_ids": [
+            "H_width_pressure_vs_low_block"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.07148148148148148,
+          "base_conditional_probability": 0.4948717948717949,
+          "tail_focus_conditional_probability": 0.44142968133341887,
+          "tail_focus_implied_overall_probability": 0.06376206508149383,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.17692307692307696,
+          "tail_focus_conditional_probability": 0.22645071047354345,
+          "tail_focus_implied_overall_probability": 0.03270954706840072,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.12051282051282051,
+          "tail_focus_conditional_probability": 0.14028543784759193,
+          "tail_focus_implied_overall_probability": 0.020263452133541054,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.01037037037037037,
+          "base_conditional_probability": 0.0717948717948718,
+          "tail_focus_conditional_probability": 0.06844447261089409,
+          "tail_focus_implied_overall_probability": 0.00988642382157359,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.004814814814814815,
+          "base_conditional_probability": 0.03333333333333334,
+          "tail_focus_conditional_probability": 0.031777790855057976,
+          "tail_focus_implied_overall_probability": 0.0045901253457305965,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.02307692307692308,
+          "tail_focus_conditional_probability": 0.022000009053501676,
+          "tail_focus_implied_overall_probability": 0.0031777790855057973,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-6",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.015384615384615385,
+          "tail_focus_conditional_probability": 0.01466667270233445,
+          "tail_focus_implied_overall_probability": 0.002118519390337198,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.015384615384615385,
+          "tail_focus_conditional_probability": 0.012350882275650062,
+          "tail_focus_implied_overall_probability": 0.0017840163287050088,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "2-6",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.010256410256410256,
+          "tail_focus_conditional_probability": 0.0097777818015563,
+          "tail_focus_implied_overall_probability": 0.0014123462602247988,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.012820512820512822,
+          "tail_focus_conditional_probability": 0.009530001755902826,
+          "tail_focus_implied_overall_probability": 0.0013765558091859637,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Curacao 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.11481481481481481,
+      "attention_level": "low",
+      "evidence_strength": 0.5,
+      "rationale_cn": "库拉索爆冷路径的核心机制真实存在：H_room_and_defensive_injury_upset_path有直接证据支撑（Room对厄瓜多尔15次扑救/xG差值3.08-0.48、Singo伤缺确认），H_group_late_two_phase_game也有出线条件证据支撑。但库拉索进攻产量极低（对厄瓜多尔仅0.48 xG），Curaçao在爆冷情景下的比分天花板有客观上限。主候选池中1-0和2-1有合理机制支撑；2-0边际证据不足但与零封路径逻辑一致；其他高比分候选（3-2、3-1、3-0、4-1、4-3）缺乏进攻端实质支撑，应删除。提案中三个候选均未填写evidence_ids和mechanism_ids，需补全。",
+      "supporting_evidence_ids": [
+        "E_a693c62ca4d9",
+        "E_6dd3eb839284",
+        "E_e58960cdb15b",
+        "E_a5ba25ab67f2",
+        "E_efc7a172ba78",
+        "E_fbef07885712",
+        "E_5053b1ba3895",
+        "E_1312945b3ca7",
+        "E_1593ad029035",
+        "E_62ebf812054e"
+      ],
+      "counter_evidence_ids": [
+        "E_cc79b37015b3",
+        "E_61e5a51f85c4",
+        "E_cb645f2869a9",
+        "E_9911aeec36ba"
+      ],
+      "caution_cn": "库拉索爆冷路径高度依赖Room超水平发挥和偶发进球（定位球/远射/传中），任何一个条件失效即归零。科特迪瓦对厄瓜多尔1-0胜后拥有充足出线缓冲，若早段领先则库拉索反击空间收窄。候选均为低频低概率路径，support_grade不应超过2。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-0",
+          "base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.532258064516129,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-1",
+          "base_probability": 0.026296296296296297,
+          "base_conditional_probability": 0.22903225806451613,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-0",
+          "base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.12258064516129032,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.054838709677419356,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.03225806451612903,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.016129032258064516,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.00967741935483871,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-3",
+          "base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.0032258064516129032,
+          "total_goals": 7,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.532258064516129,
+          "tail_focus_conditional_probability": 0.6004517505333165,
+          "tail_focus_implied_overall_probability": 0.06894075654271412,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "Curaçao依靠五后卫低位+Room高扑救将科特迪瓦压制至无进球，前段比赛科特迪瓦控风险、节奏平缓，Curaçao通过一次定位球、边路传中落点或Juninho Bacuna远射偷进一球，此后利用双阶段机制控制时钟完赛。",
+          "rationale_cn": "唯一一个在底层概率（0.061）和机制链完整性上均最强的爆冷候选。H_room_and_defensive_injury_upset_path直接指向低得分偷袭路径，H_group_late_two_phase_game支持科特迪瓦前段降速，进一步提升该路径可实现性。证据：Room对厄瓜多尔高扑救（E_6dd3eb839284、E_a693c62ca4d9）、Singo缺席（E_a5ba25ab67f2、E_efc7a172ba78）、库拉索边路进攻路径（E_5053b1ba3895）、出线条件（E_1593ad029035）均真实存在且未过期。",
+          "evidence_ids": [
+            "E_a693c62ca4d9",
+            "E_6dd3eb839284",
+            "E_e58960cdb15b",
+            "E_a5ba25ab67f2",
+            "E_efc7a172ba78",
+            "E_5053b1ba3895",
+            "E_1593ad029035",
+            "E_1312945b3ca7"
+          ],
+          "mechanism_ids": [
+            "H_room_and_defensive_injury_upset_path",
+            "H_group_late_two_phase_game"
+          ]
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.026296296296296297,
+          "base_conditional_probability": 0.22903225806451613,
+          "tail_focus_conditional_probability": 0.21382858576985816,
+          "tail_focus_implied_overall_probability": 0.02455068947728001,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "Curaçao先进球，科特迪瓦被迫追分，Singo缺席的右路调整在防守专注度下降时暴露，库拉索利用科特迪瓦压上后的反击空间再进一球；科特迪瓦中途扳平一球，但未能完成逆转。",
+          "rationale_cn": "该比分要求库拉索在90分钟内完成至少两次有效进攻转化，而库拉索对厄瓜多尔全场仅产出0.48 xG（E_a693c62ca4d9），进攻产量基础极低。H_room_and_defensive_injury_upset_path和H_group_late_two_phase_game的末段抬线机制为第二球提供有限路径支撑，Singo缺席（E_a5ba25ab67f2）带来的右路协防问题对此有帮助，但整体概率（0.026）和证据强度均弱于1-0。support_grade降为1合理。",
+          "evidence_ids": [
+            "E_a693c62ca4d9",
+            "E_a5ba25ab67f2",
+            "E_efc7a172ba78",
+            "E_fbef07885712",
+            "E_1593ad029035",
+            "E_62ebf812054e"
+          ],
+          "mechanism_ids": [
+            "H_room_and_defensive_injury_upset_path",
+            "H_group_late_two_phase_game"
+          ]
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.12258064516129032,
+          "tail_focus_conditional_probability": 0.09536955703350483,
+          "tail_focus_implied_overall_probability": 0.010949838029772776,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "Curaçao依靠Room零封加两次有效进攻（定位球/传中/远射）实现2-0，科特迪瓦始终未能破门，库拉索防线在末段顶住压力完赛。",
+          "rationale_cn": "2-0在逻辑上与零封+偷袭机制不矛盾，但需要库拉索产出两次独立进球且科特迪瓦全场颗粒无收。考虑到库拉索进攻产量极低的实证（对厄0.48 xG，E_a693c62ca4d9），第二个进球在证据层面缺乏支撑。底层概率0.014较低。保留但support_grade定0，作为低频零封尾部路径存在。",
+          "evidence_ids": [
+            "E_a693c62ca4d9",
+            "E_6dd3eb839284",
+            "E_e58960cdb15b",
+            "E_a5ba25ab67f2",
+            "E_5053b1ba3895"
+          ],
+          "mechanism_ids": [
+            "H_room_and_defensive_injury_upset_path"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.532258064516129,
+          "tail_focus_conditional_probability": 0.6004517505333165,
+          "tail_focus_implied_overall_probability": 0.06894075654271412,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.026296296296296297,
+          "base_conditional_probability": 0.22903225806451613,
+          "tail_focus_conditional_probability": 0.21382858576985816,
+          "tail_focus_implied_overall_probability": 0.02455068947728001,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.014074074074074074,
+          "base_conditional_probability": 0.12258064516129032,
+          "tail_focus_conditional_probability": 0.09536955703350483,
+          "tail_focus_implied_overall_probability": 0.010949838029772776,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.054838709677419356,
+          "tail_focus_conditional_probability": 0.04266532814656795,
+          "tail_focus_implied_overall_probability": 0.004898611750161505,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.03225806451612903,
+          "tail_focus_conditional_probability": 0.025097251850922323,
+          "tail_focus_implied_overall_probability": 0.0028815363236244147,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.016129032258064516,
+          "tail_focus_conditional_probability": 0.012548625925461162,
+          "tail_focus_implied_overall_probability": 0.0014407681618122073,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.00967741935483871,
+          "tail_focus_conditional_probability": 0.007529175555276697,
+          "tail_focus_implied_overall_probability": 0.0008644608970873245,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-3",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.0032258064516129032,
+          "tail_focus_conditional_probability": 0.0025097251850922323,
+          "tail_focus_implied_overall_probability": 0.00028815363236244147,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999998
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999998,
+    "source_hash": "b358115bdbf9387669506a6a012b9d8b758dad12422bc0d518b6c118f5463bb5"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Curacao_vs_Ivory_Coast_M55\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\web_delivery\\Curacao_vs_Ivory_Coast_M55\\2026.6.26.04\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Curacao_vs_Ivory_Coast_M55\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\web_delivery\\Curacao_vs_Ivory_Coast_M55\\2026.6.26.04\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

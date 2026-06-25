@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T05:37:39.756498Z",
+  "prediction_generated_at_local": "2026-06-25T13:37:39.756498+08:00",
+  "match": {
+    "match_id": "M56",
+    "team_a": "Ecuador",
+    "team_b": "Germany",
+    "kickoff_utc": "2026-06-25T20:00:00Z",
+    "venue": "MetLife Stadium, East Rutherford",
+    "stage": "group",
+    "group": "E",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 8,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.037037037037037035,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "Rollout有8/216个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.24444444444444444,
+    "draw": 0.28925925925925927,
+    "team_b_win": 0.4662962962962963
+  },
+  "most_likely_outcome": {
+    "label": "Germany胜",
+    "probability": 0.4662962962962963
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.14296296296296296
+    },
+    {
+      "score": "1-1",
+      "probability": 0.13592592592592592
+    },
+    {
+      "score": "1-0",
+      "probability": 0.09592592592592593
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "德国前两战已进9球且xG为6.11，7-1大胜库拉索显示火力充足。",
+      "text_en": "Germany have scored nine goals through two matches with 6.11 xG, and the 7-1 win over Curaçao underlines their attacking output",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_bf576c7cc364",
+        "E_75ff59ee8ace"
+      ],
+      "source_names": [
+        "ESPN",
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "厄瓜多尔被称为“吝啬防线”和“超防守”，Caicedo需保护三中卫身前。",
+      "text_en": "Ecuador have been described as having a miserly, ultra-defensive setup, with Caicedo tasked to protect the space in front of the back three",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_869557a0389e",
+        "E_129b7441d6a7",
+        "E_c06212d66a9e"
+      ],
+      "source_names": [
+        "The Guardian",
+        "The Athletic",
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "厄瓜多尔末轮必须击败德国才有出线希望，追到4分是其明确目标。",
+      "text_en": "Ecuador need to beat Germany in the final group match to stay in knockout contention and move onto four points",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_faa23ed5f419",
+        "E_0175d2a2a793"
+      ],
+      "source_names": [
+        "ESPN",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "德国已6分提前锁定E组头名，但Reuters称仍想三连胜保持势头。",
+      "text_en": "Germany already have six points and have secured top spot in Group E, while Reuters says they still want a third straight win for momentum",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_57d715e5ce39",
+        "E_aeb5bd0c558a"
+      ],
+      "source_names": [
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "Schlotterbeck脚踝伤退世界杯，德国后防需调整，Rüdiger预计与Tah搭档。",
+      "text_en": "Nico Schlotterbeck is out of the World Cup with an ankle injury, forcing Germany to adjust their back line, with Rüdiger likely to start alongside Tah",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_07ee22f1c8eb",
+        "E_12991ef16cfc"
+      ],
+      "source_names": [
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "FIFA赛程确认比赛在新泽西20:00进行，官方首发名单尚未显示。",
+      "text_en": "FIFA lists the match in New Jersey at 20:00, but the official match-centre information does not yet show starting lineups",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_f750cb997fd4"
+      ],
+      "source_names": [
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-25T05:42:09.701000Z",
+    "source_state_sha256": "64922e75cc04da186f5294f7d0b3042d1d8f8c0937a811014c8baf3d1138f0da",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "blowout情景在德国方向（0-3、0-4、1-4）有较强机制和证据支撑：德国前两场进9球、xG 6.11并有7-1大胜库拉索的高产样本，厄瓜多尔本届尚未进球、终结状态弱（finishing_state 0.36），且必须取胜的出线压力会迫使其后段前压从而暴露转换空间。主推0-4和0-3，1-4作为厄瓜多尔取得安慰球的开放分支，0-5作为低支持极端尾部。厄瓜多尔方向崩盘（3-0等）无可靠证据基础，不选入。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.20888888888888893,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.48,
+        "summary_cn": "证据真实且可溯源：德国前两场9球/xG6.11、7-1大胜库拉索（E_bf576c7cc364、E_75ff59ee8ace）是实证支撑；厄瓜多尔末轮必须赢球（E_faa23ed5f419、E_0175d2a2a793）是打开比赛的触发机制；厄瓜多尔对库拉索近30脚射门/三次中框/Curaçao门将15扑（E_272376825a68、E_6509da95…",
+        "caution_cn": "厄瓜多尔0进球是本届赛事硬事实，2-3和2-4中给厄瓜多尔进2球的机制支撑偏弱；需防止把'必须赢球=能进球'的逻辑滑坡。德国轮换/降速可能压制总进球上行。0-4有rollout_9支撑且不依赖厄瓜多尔进球，机制最纯粹。2-3依赖厄瓜多尔终结改善，机制较薄但rollout_1有支撑，可保留低档位。2…",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.03518518518518519,
+            "tail_focus_conditional_probability": 0.19937699605116188,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "2-3",
+            "base_probability": 0.02074074074074074,
+            "tail_focus_conditional_probability": 0.11629407044978998,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.09407407407407406,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.5,
+        "summary_cn": "德国进攻产出数据真实且来自FIFA/ESPN一级来源（9球、xG 6.11、7-1），厄瓜多尔零进球和终结弱点有FIFA/The Guardian/The Athletic多方确认。动机错位（德国轮换vs厄瓜多尔必须赢）和德国后防重组均有Reuters直接报道。崩盘路径机制链完整，但厄瓜多尔低位纪律和德国轮换降速构成真实制约，因此attention_lev…",
+        "caution_cn": "7-1样本来自Curaçao，不可直接外推至防守更强的厄瓜多尔。德国已锁定头名存在真实轮换和降速动机，且官方首发未确认。厄瓜多尔低位三中卫结构和Caicedo保护真实有效，可能把领先差压缩在2球内。崩盘成立需要德国早破门叠加厄瓜多尔被迫前压，缺一则路径退回主预测区间。",
+        "top_scores": [
+          {
+            "score": "0-4",
+            "base_probability": 0.011111111111111112,
+            "tail_focus_conditional_probability": 0.16133465237994474,
+            "support_grade": 2,
+            "script_cn": "德国0-30分钟利用高质量创造（H_germany_attack_vs_ecuador_low_block）早破两球；厄瓜多尔必须赢球压力迫使翼卫和中场前压（H_group_motivation_late_opening），三中卫身前保护区暴露；德国通过转换和肋部插入30-60分钟再进第三球；后段厄瓜多尔继续前压但终结低效，德国补进第四球。rollout_9直接给出0-4代表比分并包含完整崩盘事件链。"
+          },
+          {
+            "score": "0-3",
+            "base_probability": 0.044444444444444446,
+            "tail_focus_conditional_probability": 0.44974596380325804,
+            "support_grade": 1,
+            "script_cn": "德国在前段通过边路或定位球打开局面，厄瓜多尔因必须追分逐步放弃低位结构；德国控球压制并利用转换空间在60-90分钟再进第二、三球；厄瓜多尔终结持续低效（对Curaçao近30脚仍0-0），无法完成追分。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2444444444444445,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.48,
+        "summary_cn": "爆冷成立但概率受限。核心支撑：德国已锁定头名存在真实轮换语境（Wirtz/Havertz/Neuer可能休息，证据层级B可信），Schlotterbeck确认伤退后防需重组（Reuters层级B强证据），厄瓜多尔末轮必须赢球动机明确（ESPN/Yahoo Sports），厄瓜多尔防守紧凑有韧性（首战仅0-1小负）。核心制约：厄瓜多尔前两场零进球，对Cura…",
+        "caution_cn": "厄瓜多尔本届赛事零进球是最强反向证据，2球及以上爆冷路径需要其在一场比赛内突破整届赛事的进球困境；不应因爆冷情景的独立分析语境而忽视该约束。德国轮换幅度未经官方首发确认，support_grade不应基于最大化轮换假设。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.09592592592592593,
+            "tail_focus_conditional_probability": 0.4633273703041145,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.06296296296296296,
+            "tail_focus_conditional_probability": 0.25168095737462215,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

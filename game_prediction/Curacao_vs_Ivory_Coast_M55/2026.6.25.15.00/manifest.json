@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T05:08:39.388335Z",
+  "prediction_generated_at_local": "2026-06-25T13:08:39.388335+08:00",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "purpose_cn": "网页最小预测输出：文本结论、比分偏离空间和蒙特卡洛比分矩阵。",
+  "files": {
+    "brief_markdown": "web_export/prediction_brief.md",
+    "brief_json": "web_export/prediction_brief.json",
+    "score_deviation_json": "web_export/score_deviation_space.json",
+    "score_deviation_csv": "web_export/score_deviation_space.csv",
+    "score_matrix_json": "web_export/monte_carlo_score_matrix.json",
+    "score_matrix_csv": "web_export/monte_carlo_score_matrix.csv",
+    "manifest": "web_export/manifest.json"
+  },
+  "notes_cn": [
+    "偏离度越大，表示该比分相对主流比赛路径越激进。",
+    "比分矩阵纵轴为Curacao，横轴为Ivory Coast。",
+    "所有概率字段均使用0到1的小数；probability_percent仅用于直接显示。"
+  ]
+}

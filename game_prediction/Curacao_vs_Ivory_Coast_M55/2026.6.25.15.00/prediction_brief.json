@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T05:08:39.388335Z",
+  "prediction_generated_at_local": "2026-06-25T13:08:39.388335+08:00",
+  "match": {
+    "match_id": "M55",
+    "team_a": "Curacao",
+    "team_b": "Ivory Coast",
+    "kickoff_utc": "2026-06-25T20:00:00Z",
+    "venue": "Lincoln Financial Field, Philadelphia",
+    "stage": "group",
+    "group": "E",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.11481481481481481,
+    "draw": 0.2651851851851852,
+    "team_b_win": 0.62
+  },
+  "most_likely_outcome": {
+    "label": "Ivory Coast胜",
+    "probability": 0.62
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.18333333333333332
+    },
+    {
+      "score": "0-2",
+      "probability": 0.14444444444444443
+    },
+    {
+      "score": "0-0",
+      "probability": 0.12444444444444444
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "ESPN称科特迪瓦前场具速度、盘带和快速传递，Diallo也在首发讨论中。",
+      "text_en": "ESPN highlighted Ivory Coast’s pace, dribbling and quick passing in the final third, with Amad Diallo also discussed as a likely starter",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_cb645f2869a9",
+        "E_9cf8ffebafbe"
+      ],
+      "source_names": [
+        "ESPN",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "科特迪瓦只要不输即可进前二，末轮目标支持更稳的控风险踢法。",
+      "text_en": "Ivory Coast only need to avoid defeat to finish in the top two, a group-stage context that supports a more risk-controlled approach",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_1593ad029035",
+        "E_9fca8f067971"
+      ],
+      "source_names": [
+        "AS",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "库拉索0-0逼平厄瓜多尔，但对手xG达3.08，Room扑救表现是关键变量。",
+      "text_en": "Curaçao held Ecuador 0-0 despite conceding 3.08 xG, making Eloy Room’s goalkeeping performance a key uncertainty factor",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_a693c62ca4d9",
+        "E_6dd3eb839284",
+        "E_e58960cdb15b"
+      ],
+      "source_names": [
+        "FOX Sports",
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "库拉索首战1-7负德国，且主要进攻来自边路传中和远射，中路推进证据有限。",
+      "text_en": "Curaçao lost 7-1 to Germany in their opener, while their main attacking routes are described as wide play, crosses and long shots",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_cc79b37015b3",
+        "E_5053b1ba3895"
+      ],
+      "source_names": [
+        "FIFA",
+        "The New York Times / The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "Singo对德国一战82分钟伤退且可能缺席，科特迪瓦防线存在调整风险。",
+      "text_en": "Wilfried Singo went off injured in the 82nd minute against Germany and seemed likely to miss this match, creating a defensive adjustment risk",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_a5ba25ab67f2"
+      ],
+      "source_names": [
+        "Field Level Media"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在费城Lincoln Financial Field露天球场进行，草坪约95%为天然草。",
+      "text_en": "The match is staged at Philadelphia’s open-air Lincoln Financial Field, with reports describing the surface as roughly 95 percent natural grass",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_db5e0c48dd00",
+        "E_4dabf2d4fb15",
+        "E_de2d430c1822"
+      ],
+      "source_names": [
+        "Lincoln Financial Field",
+        "Knox News"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-25T05:10:58.489633Z",
+    "source_state_sha256": "b358115bdbf9387669506a6a012b9d8b758dad12422bc0d518b6c118f5463bb5",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.18148148148148147,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.52,
+        "summary_cn": "开放大比分情景成立基础：科特迪瓦进攻强度（H_width_pressure_vs_low_block置信度0.73）与库拉索结构脆弱性（7-1负德国尾部风险）共同支持总进球≥4的可能性。但核心制约真实存在：库拉索对厄瓜多尔守出0-0（对手xG 3.08），Room高扑救有直接证据；科特迪瓦出线动机保守（只需不败），持续高强度投入有限。rollout样本中大…",
+        "caution_cn": "1-4被删除：候选池中1-4的base_probability（0.0174）低于0-4（0.0256）和1-3（0.04），且引用机制与1-3完全重叠，未提供独立叙事，属冗余候选。2-3保留但降为support_grade 0，因库拉索打入两球的证据基础薄弱（进攻数值0.28，xG历史0.48）…",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.04,
+            "tail_focus_conditional_probability": 0.2575805252016706,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.025555555555555557,
+            "tail_focus_conditional_probability": 0.13619200183076838,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.14444444444444443,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.58,
+        "summary_cn": "崩盘情景成立的核心证据链清晰：库拉索1-7负德国（E_cc79b37015b3）、对厄瓜多尔让出3.08 xG（E_6dd3eb839284/E_a693c62ca4d9）、科特迪瓦前场速度盘带资源（E_cb645f2869a9）、CAF预选赛进球领先（E_61e5a51f85c4）、机制H_width_pressure_vs_low_block在8/9条…",
+        "caution_cn": "科特迪瓦末轮出线条件（不败即可）是最大单一抑制因素——领先后大概率切换为控风险而非持续压制，这使得5球以上零封路径证据不足。Room高扑救上限已在Ecuador一战被观察到，可能对任何崩盘路径造成延迟。0-3是情景内最低达标比分，不应作为代表性比分被优先摆放。",
+        "top_scores": [
+          {
+            "score": "0-4",
+            "base_probability": 0.025555555555555557,
+            "tail_focus_conditional_probability": 0.22645071047354345,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "1-4",
+            "base_probability": 0.017407407407407406,
+            "tail_focus_conditional_probability": 0.14028543784759193,
+            "support_grade": 2,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.11481481481481481,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.5,
+        "summary_cn": "库拉索爆冷路径的核心机制真实存在：H_room_and_defensive_injury_upset_path有直接证据支撑（Room对厄瓜多尔15次扑救/xG差值3.08-0.48、Singo伤缺确认），H_group_late_two_phase_game也有出线条件证据支撑。但库拉索进攻产量极低（对厄瓜多尔仅0.48 xG），Curaçao在爆冷情景…",
+        "caution_cn": "库拉索爆冷路径高度依赖Room超水平发挥和偶发进球（定位球/远射/传中），任何一个条件失效即归零。科特迪瓦对厄瓜多尔1-0胜后拥有充足出线缓冲，若早段领先则库拉索反击空间收窄。候选均为低频低概率路径，support_grade不应超过2。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.06111111111111111,
+            "tail_focus_conditional_probability": 0.6004517505333165,
+            "support_grade": 2,
+            "script_cn": "Curaçao依靠五后卫低位+Room高扑救将科特迪瓦压制至无进球，前段比赛科特迪瓦控风险、节奏平缓，Curaçao通过一次定位球、边路传中落点或Juninho Bacuna远射偷进一球，此后利用双阶段机制控制时钟完赛。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.026296296296296297,
+            "tail_focus_conditional_probability": 0.21382858576985816,
+            "support_grade": 1,
+            "script_cn": "Curaçao先进球，科特迪瓦被迫追分，Singo缺席的右路调整在防守专注度下降时暴露，库拉索利用科特迪瓦压上后的反击空间再进一球；科特迪瓦中途扳平一球，但未能完成逆转。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

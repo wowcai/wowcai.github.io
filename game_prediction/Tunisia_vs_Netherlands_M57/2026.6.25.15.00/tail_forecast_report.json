@@ -1,0 +1,799 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-25T06:07:23.021447Z",
+  "status": "partial_audit",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Tunisia_vs_Netherlands_M57\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "d69e266a0e0e537b955e8f7010d86079f0a712306f6c92f1b400b72687e5535f",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-25T06:04:36.422865+00:00"
+  },
+  "match": {
+    "match_id": "M57",
+    "team_a": "Tunisia",
+    "team_b": "Netherlands",
+    "kickoff_utc": "2026-06-25T23:00:00Z",
+    "venue": "Arrowhead Stadium, Kansas City",
+    "stage": "group",
+    "group": "F",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 79,
+      "usable_evidence": 79,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 0,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.03,
+    "draw": 0.1288888888888889,
+    "team_b_win": 0.8411111111111111,
+    "top_scores": [
+      {
+        "score": "0-2",
+        "probability": 0.18703703703703703
+      },
+      {
+        "score": "0-1",
+        "probability": 0.17333333333333334
+      },
+      {
+        "score": "0-3",
+        "probability": 0.14185185185185184
+      },
+      {
+        "score": "0-4",
+        "probability": 0.08296296296296296
+      },
+      {
+        "score": "1-2",
+        "probability": 0.06888888888888889
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999998
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_b",
+    "favorite_team": "Netherlands",
+    "underdog_side": "team_a",
+    "underdog_team": "Tunisia",
+    "team_a_win": 0.03,
+    "draw": 0.1288888888888889,
+    "team_b_win": 0.8411111111111111,
+    "win_probability_gap": 0.8111111111111111,
+    "underdog_win_probability": 0.03,
+    "favorite_fail_to_win_probability": 0.15888888888888889,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；blowout情景成立。核心证据真实：突尼斯两场丢9球、0-4负日本xG仅0.05，荷兰5-1胜瑞典且末轮仍有头名竞争动机。H1（confidence 0.78）和H2（confidence 0.72）共同支撑净胜3球以上的崩盘路径。0-3为门槛比分且条件概率最高，不应被压至低于0-4；将0-3与0-4并列为主要候选，0-5为次级尾部，0-6为深尾保留。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.28074074074074074,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "0-4",
+          "base_probability": 0.08296296296296296,
+          "base_conditional_probability": 0.2955145118733509,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.13984168865435356,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "0-6",
+          "base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.059366754617414245,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.04888888888888889,
+          "base_conditional_probability": 0.1741424802110818,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.03259259259259259,
+          "base_conditional_probability": 0.11609498680738785,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.04617414248021108,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-6",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.027704485488126648,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.029023746701846962,
+          "total_goals": 5,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-4",
+          "main_base_probability": 0.08296296296296296,
+          "base_conditional_probability": 0.2955145118733509,
+          "tail_focus_conditional_probability": 0.2629778980143943,
+          "tail_focus_implied_overall_probability": 0.07382860988700403,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.13984168865435356,
+          "tail_focus_conditional_probability": 0.14879281302638966,
+          "tail_focus_implied_overall_probability": 0.04177220454592717,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.059366754617414245,
+          "tail_focus_conditional_probability": 0.07005767954673063,
+          "tail_focus_implied_overall_probability": 0.0196680448505266,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-4",
+          "main_base_probability": 0.08296296296296296,
+          "base_conditional_probability": 0.2955145118733509,
+          "tail_focus_conditional_probability": 0.2629778980143943,
+          "tail_focus_implied_overall_probability": 0.07382860988700403,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.04888888888888889,
+          "base_conditional_probability": 0.1741424802110818,
+          "tail_focus_conditional_probability": 0.15496911847276812,
+          "tail_focus_implied_overall_probability": 0.04350614511198453,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.13984168865435356,
+          "tail_focus_conditional_probability": 0.14879281302638966,
+          "tail_focus_implied_overall_probability": 0.04177220454592717,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.03259259259259259,
+          "base_conditional_probability": 0.11609498680738785,
+          "tail_focus_conditional_probability": 0.12352610892756877,
+          "tail_focus_implied_overall_probability": 0.034678811321147085,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.059366754617414245,
+          "tail_focus_conditional_probability": 0.07005767954673063,
+          "tail_focus_implied_overall_probability": 0.0196680448505266,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.04617414248021108,
+          "tail_focus_conditional_probability": 0.05448930631412382,
+          "tail_focus_implied_overall_probability": 0.015297368217076243,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "1-6",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.027704485488126648,
+          "tail_focus_conditional_probability": 0.0326935837884743,
+          "tail_focus_implied_overall_probability": 0.009178420930245746,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.029023746701846962,
+          "tail_focus_conditional_probability": 0.030881527231892192,
+          "tail_focus_implied_overall_probability": 0.008669702830286771,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.00962962962962963,
+          "base_conditional_probability": 0.03430079155672824,
+          "tail_focus_conditional_probability": 0.030524220305242208,
+          "tail_focus_implied_overall_probability": 0.008569392219027257,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "0-7",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.021108179419525065,
+          "tail_focus_conditional_probability": 0.024909397172170892,
+          "tail_focus_implied_overall_probability": 0.006993082613520569,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.3492592592592592,
+      "attention_level": "medium",
+      "evidence_strength": 0.72,
+      "rationale_cn": "突尼斯防线在本届已系统性崩溃（两场丢9球、对日本开放战xG=0.03），荷兰具备中路推进、边路终结、替补深度三重优势，且头名竞争使其领先后仍有扩大比分动机。H1与H2机制链条完整，证据均来自A/B级来源，blowout情景基础事件概率0.349，成立。",
+      "supporting_evidence_ids": [
+        "E_d8a7a26a126b",
+        "E_076b5133875d",
+        "E_671348115a38",
+        "E_27a12f51fc90",
+        "E_45df1ac5e184",
+        "E_de8b5a63d169",
+        "E_43e35b004af7",
+        "E_eb2b2974f5fc",
+        "E_a786e93303cd"
+      ],
+      "counter_evidence_ids": [
+        "E_2f199de2ddf1",
+        "E_b9475f9f25b5",
+        "E_ba6934c08933"
+      ],
+      "caution_cn": "H4提示荷兰领先后存在降速管理风险；荷兰对日本2-2说明其并非绝对无懈可击；Depay伤况存疑可能影响终结效率上沿。0-6需要多条件同时满足，证据支撑较弱。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.14185185185185184,
+          "base_conditional_probability": 0.4061505832449629,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.03259259259259259,
+          "base_conditional_probability": 0.09331919406150584,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.08296296296296296,
+          "base_conditional_probability": 0.23753976670201488,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.11240721102863203,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "0-6",
+          "base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.04772004241781549,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.037115588547189826,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-6",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.022269353128313893,
+          "total_goals": 7,
+          "winning_margin": 5
+        },
+        {
+          "score": "0-7",
+          "base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.016967126193001062,
+          "total_goals": 7,
+          "winning_margin": 7
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.14185185185185184,
+          "base_conditional_probability": 0.4061505832449629,
+          "tail_focus_conditional_probability": 0.40259192793579107,
+          "tail_focus_implied_overall_probability": 0.14060895853461144,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "荷兰通过H1中路控球推进早段破局，突尼斯被迫拉高防线，身后与肋部空间扩大，荷兰累计3球胜出；突尼斯进攻端xG极低无法还球，清零收场。条件概率最高（40.6%），是blowout情景内最核心的代表比分。",
+          "rationale_cn": "0-3是候选池条件概率最高比分（0.406），rollout_6直接以0-3为代表比分，H1机制链条直接支持。原提案将其降至grade=1属于不当压制——0-3是崩盘情景的主体，而非仅为门槛。与0-4并列grade=2。",
+          "evidence_ids": [
+            "E_d8a7a26a126b",
+            "E_076b5133875d",
+            "E_27a12f51fc90",
+            "E_671348115a38"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H3"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.08296296296296296,
+          "base_conditional_probability": 0.23753976670201488,
+          "tail_focus_conditional_probability": 0.2796069264514893,
+          "tail_focus_implied_overall_probability": 0.09765530801620534,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "荷兰早段取得2球领先，突尼斯被迫前提防线，身后空间进一步开放；H2末轮头名竞争动机使荷兰下半场仍保持前场投入，替补补充边路速度，最终4球落差。",
+          "rationale_cn": "条件概率0.238，H1+H2双机制联合驱动，rollout_9（1-3，净胜3）和荷兰5-1历史样本均支持荷兰具备多球输出能力。头名竞争使领先后降速不是必然选项。grade=2与0-3并列合理。",
+          "evidence_ids": [
+            "E_d8a7a26a126b",
+            "E_076b5133875d",
+            "E_27a12f51fc90",
+            "E_de8b5a63d169",
+            "E_43e35b004af7",
+            "E_a786e93303cd"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2"
+          ]
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.11240721102863203,
+          "tail_focus_conditional_probability": 0.11826133352278266,
+          "tail_focus_implied_overall_probability": 0.041303865745179275,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.2312,
+          "script_cn": "荷兰在全场维持高效终结，突尼斯防守纪律下半场进一步瓦解，Gakpo/Brobbey等多点输出各自贡献，最终5球落差。需要荷兰避开H4降速管理且终结效率持续在线。",
+          "rationale_cn": "条件概率0.112，荷兰有5-1胜瑞典的直接近期样本（E_27a12f51fc90），突尼斯连续大比分失利背景下不排除。但需要H4反面条件成立（荷兰不降速）且多球终结同时兑现，较0-4门槛更高，grade=1。",
+          "evidence_ids": [
+            "E_27a12f51fc90",
+            "E_45df1ac5e184",
+            "E_076b5133875d",
+            "E_671348115a38"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2"
+          ]
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.04772004241781549,
+          "tail_focus_conditional_probability": 0.04183773591607877,
+          "tail_focus_implied_overall_probability": 0.014612216655134175,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312,
+          "script_cn": "完全崩盘剧本：荷兰全场不降速、突尼斯防守纪律彻底断裂、终结效率极高，6球落差。条件苛刻，rollout中无直接6球级代表比分。",
+          "rationale_cn": "条件概率0.048，需要多个极端条件同时满足：荷兰不保护主力、突尼斯下半场阵型完全瓦解、荷兰终结持续在线。rollout_1至rollout_9均未给出6球级代表比分，证据链对此级别支撑较弱，保留为深尾观察位，grade=0。",
+          "evidence_ids": [
+            "E_27a12f51fc90",
+            "E_671348115a38"
+          ],
+          "mechanism_ids": [
+            "H1",
+            "H2"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.14185185185185184,
+          "base_conditional_probability": 0.4061505832449629,
+          "tail_focus_conditional_probability": 0.40259192793579107,
+          "tail_focus_implied_overall_probability": 0.14060895853461144,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.08296296296296296,
+          "base_conditional_probability": 0.23753976670201488,
+          "tail_focus_conditional_probability": 0.2796069264514893,
+          "tail_focus_implied_overall_probability": 0.09765530801620534,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.03925925925925926,
+          "base_conditional_probability": 0.11240721102863203,
+          "tail_focus_conditional_probability": 0.11826133352278266,
+          "tail_focus_implied_overall_probability": 0.041303865745179275,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.03259259259259259,
+          "base_conditional_probability": 0.09331919406150584,
+          "tail_focus_conditional_probability": 0.06889769844425601,
+          "tail_focus_implied_overall_probability": 0.024063159123308673,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.016666666666666666,
+          "base_conditional_probability": 0.04772004241781549,
+          "tail_focus_conditional_probability": 0.04183773591607877,
+          "tail_focus_implied_overall_probability": 0.014612216655134175,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.012962962962962963,
+          "base_conditional_probability": 0.037115588547189826,
+          "tail_focus_conditional_probability": 0.03254046126806127,
+          "tail_focus_implied_overall_probability": 0.011365057398437692,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-6",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.022269353128313893,
+          "tail_focus_conditional_probability": 0.019524276760836755,
+          "tail_focus_implied_overall_probability": 0.006819034439062614,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "0-7",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.016967126193001062,
+          "tail_focus_conditional_probability": 0.014875639436828007,
+          "tail_focus_implied_overall_probability": 0.005195454810714374,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.008483563096500531,
+          "tail_focus_conditional_probability": 0.006263427131296002,
+          "tail_focus_implied_overall_probability": 0.0021875599203007886,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "1-7",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.0053022269353128326,
+          "tail_focus_conditional_probability": 0.004648637324008753,
+          "tail_focus_implied_overall_probability": 0.001623579628348242,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Tunisia 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.030000000000000002,
+      "attention_level": "low",
+      "evidence_strength": 0.28,
+      "rationale_cn": "突尼斯爆冷获胜的证据基础极弱。核心反证：突尼斯对日本开放战xG仅0.03、xGOT为0，前两场共丢9球，近期4连败；荷兰5-1击败瑞典，前场状态正热，且末轮仍有争头名动机。唯一支持方向来自H3（定位球/反击路径，confidence仅0.44）和范戴克的轻微健康不确定性。爆冷成立需要突尼斯定位球得分+荷兰多次高线失误，属于低概率叠加事件。候选池中1-0和2-1是仅有两个合理的爆冷比分，2-0/3-1/3-0所需进攻能力与证据严重脱节，予以删除。",
+      "supporting_evidence_ids": [
+        "E_7f8eea7afea6",
+        "E_19f543e053a3",
+        "E_2ba32d8a2a19",
+        "E_2f199de2ddf1",
+        "E_b9475f9f25b5"
+      ],
+      "counter_evidence_ids": [
+        "E_d8a7a26a126b",
+        "E_076b5133875d",
+        "E_671348115a38",
+        "E_27a12f51fc90",
+        "E_de8b5a63d169",
+        "E_43e35b004af7"
+      ],
+      "caution_cn": "突尼斯开放战进攻质量极低（xG 0.03 vs日本），2-1需要突尼斯连续进球且荷兰防线多次失误，在现有证据下属于极小概率叠加。1-0是爆冷中相对最可辩护的路径（定位球单球+荷兰低效）。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-0",
+          "base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.6296296296296295,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-1",
+          "base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.2839506172839506,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-0",
+          "base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.049382716049382706,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.024691358024691353,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.012345679012345677,
+          "total_goals": 3,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.6296296296296295,
+          "tail_focus_conditional_probability": 0.6812528788576694,
+          "tail_focus_implied_overall_probability": 0.020437586365730082,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "突尼斯通过前场任意球或角球打入一球（Skhiri二点球或Talbi/Bronn争顶），此后退守低位顽强防守，荷兰未能在正常时间内打开僵局。荷兰进攻虽持续施压但未能将xG转化为进球，比赛以1-0结束。",
+          "rationale_cn": "H3（置信度0.44）支持突尼斯定位球路径存在；荷兰对日本曾以2-2结束说明其终结转化并非100%；范戴克存在轻微健康不确定；突尼斯在无需争排名的情况下可能展现出低位收缩的顽强。这是爆冷情景中证据最为可辩护的路径，但整体仍属极低概率。",
+          "evidence_ids": [
+            "E_7f8eea7afea6",
+            "E_2ba32d8a2a19",
+            "E_19f543e053a3",
+            "E_2f199de2ddf1",
+            "E_b9475f9f25b5"
+          ],
+          "mechanism_ids": [
+            "H3",
+            "H4"
+          ]
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.2839506172839506,
+          "tail_focus_conditional_probability": 0.25426070935052975,
+          "tail_focus_implied_overall_probability": 0.0076278212805158925,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "突尼斯先通过定位球或快速反击打入一球，荷兰追平后突尼斯再度依靠反击或二次进攻得分，最终以2-1守住胜果。",
+          "rationale_cn": "2-1需要突尼斯两次进球且荷兰单球回追后无法完成逆转，依赖H3路径两次成立加上荷兰高线暴露。突尼斯开放战xG极低（0.03 vs日本）使两球路径可信度很低，support_grade仅1。候选池中合法比分，保留但降级。",
+          "evidence_ids": [
+            "E_7f8eea7afea6",
+            "E_2f199de2ddf1",
+            "E_b9475f9f25b5"
+          ],
+          "mechanism_ids": [
+            "H3"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.6296296296296295,
+          "tail_focus_conditional_probability": 0.6812528788576694,
+          "tail_focus_implied_overall_probability": 0.020437586365730082,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.008518518518518519,
+          "base_conditional_probability": 0.2839506172839506,
+          "tail_focus_conditional_probability": 0.25426070935052975,
+          "tail_focus_implied_overall_probability": 0.0076278212805158925,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.049382716049382706,
+          "tail_focus_conditional_probability": 0.03684937816674344,
+          "tail_focus_implied_overall_probability": 0.0011054813450023034,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.024691358024691353,
+          "tail_focus_conditional_probability": 0.01842468908337172,
+          "tail_focus_implied_overall_probability": 0.0005527406725011517,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.012345679012345677,
+          "tail_focus_conditional_probability": 0.00921234454168586,
+          "tail_focus_implied_overall_probability": 0.00027637033625057584,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "partial",
+    "auditor_status": "partial",
+    "cache_enabled": true,
+    "errors": [
+      "high_scoring Proposer失败：RuntimeError: LLM 调用失败（gpt-5.5 / tail_forecast_proposer_v744_high_scoring）：BUSINESS_VALIDATION_FAILED: high_scoring must select 1-4 candidate scores"
+    ]
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999998,
+    "source_hash": "d69e266a0e0e537b955e8f7010d86079f0a712306f6c92f1b400b72687e5535f"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Tunisia_vs_Netherlands_M57\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\web_delivery\\Tunisia_vs_Netherlands_M57\\2026.6.26.07\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Tunisia_vs_Netherlands_M57\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\web_delivery\\Tunisia_vs_Netherlands_M57\\2026.6.26.07\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

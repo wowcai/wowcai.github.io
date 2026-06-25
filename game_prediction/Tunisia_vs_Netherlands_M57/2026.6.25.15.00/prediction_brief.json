@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T06:04:36.422865Z",
+  "prediction_generated_at_local": "2026-06-25T14:04:36.422865+08:00",
+  "match": {
+    "match_id": "M57",
+    "team_a": "Tunisia",
+    "team_b": "Netherlands",
+    "kickoff_utc": "2026-06-25T23:00:00Z",
+    "venue": "Arrowhead Stadium, Kansas City",
+    "stage": "group",
+    "group": "F",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.03,
+    "draw": 0.1288888888888889,
+    "team_b_win": 0.8411111111111111
+  },
+  "most_likely_outcome": {
+    "label": "Netherlands胜",
+    "probability": 0.8411111111111111
+  },
+  "top_scores": [
+    {
+      "score": "0-2",
+      "probability": 0.18703703703703703
+    },
+    {
+      "score": "0-1",
+      "probability": 0.17333333333333334
+    },
+    {
+      "score": "0-3",
+      "probability": 0.14185185185185184
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "突尼斯0-4负日本且xG仅0.05，开放战xG0.03，进攻威胁极低。",
+      "text_en": "Tunisia lost 4-0 to Japan with only 0.05 xG and 0.03 open-play xG, showing very limited attacking threat",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_d8a7a26a126b"
+      ],
+      "source_names": [
+        "ESPN.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "突尼斯已提前出局，前两战共丢9球，近况防守崩盘明显。",
+      "text_en": "Tunisia had already been eliminated after two heavy defeats and nine goals conceded, underlining a clear defensive collapse",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_076b5133875d",
+        "E_bc086d0cac70"
+      ],
+      "source_names": [
+        "Reuters",
+        "The Athletic - The New York Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "荷兰5-1击败瑞典，Gakpo与Brobbey均梅开二度，前场状态正热。",
+      "text_en": "The Netherlands beat Sweden 5-1, with Cody Gakpo and Brian Brobbey both scoring twice, indicating strong attacking form",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_27a12f51fc90",
+        "E_45df1ac5e184"
+      ],
+      "source_names": [
+        "The Athletic - The New York Times",
+        "ESPN FC"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "Depay、范戴克、Frenkie de Jong入选，Timber也被报道可能回归。",
+      "text_en": "Memphis Depay, Virgil van Dijk and Frenkie de Jong were named in the Dutch squad, while Quinten Timber was reportedly likely to return",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_eb2b2974f5fc",
+        "E_a786e93303cd"
+      ],
+      "source_names": [
+        "FIFA",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "荷兰与日本积分和排序指标接近，末轮仍需争小组头名。",
+      "text_en": "The Netherlands remain close to Japan on group-ranking criteria, so the final match still matters for first place",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_de8b5a63d169",
+        "E_43e35b004af7",
+        "E_fa1b6b433301"
+      ],
+      "source_names": [
+        "Reuters",
+        "Yahoo Sports",
+        "AS"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "Skhiri是突尼斯中场锚点，Hannibal被视为创造核心，定位球和反击仍是入口。",
+      "text_en": "Ellyes Skhiri anchors Tunisia’s midfield and Hannibal Mejbri is viewed as a creative engine, leaving set pieces and counters as plausible routes",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_7f8eea7afea6",
+        "E_19f543e053a3"
+      ],
+      "source_names": [
+        "Goal.com",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "partial_audit",
+    "source_report_generated_at": "2026-06-25T06:07:23.021447Z",
+    "source_state_sha256": "d69e266a0e0e537b955e8f7010d86079f0a712306f6c92f1b400b72687e5535f",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；blowout情景成立。核心证据真实：突尼斯两场丢9球、0-4负日本xG仅0.05，荷兰5-1胜瑞典且末轮仍有头名竞争动机。H1（confidence 0.78）和H2（confidence 0.72）共同支撑净胜3球以上的崩盘路径。0-3为门槛比分且条件概率最高，不应被压至低于0-4；将0-3与0-4并列为主要候选，0-5为次级尾部，0-6为深尾保留。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.28074074074074074,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "0-4",
+            "base_probability": 0.08296296296296296,
+            "tail_focus_conditional_probability": 0.2629778980143943,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "0-5",
+            "base_probability": 0.03925925925925926,
+            "tail_focus_conditional_probability": 0.14879281302638966,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.3492592592592592,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.72,
+        "summary_cn": "突尼斯防线在本届已系统性崩溃（两场丢9球、对日本开放战xG=0.03），荷兰具备中路推进、边路终结、替补深度三重优势，且头名竞争使其领先后仍有扩大比分动机。H1与H2机制链条完整，证据均来自A/B级来源，blowout情景基础事件概率0.349，成立。",
+        "caution_cn": "H4提示荷兰领先后存在降速管理风险；荷兰对日本2-2说明其并非绝对无懈可击；Depay伤况存疑可能影响终结效率上沿。0-6需要多条件同时满足，证据支撑较弱。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.14185185185185184,
+            "tail_focus_conditional_probability": 0.40259192793579107,
+            "support_grade": 2,
+            "script_cn": "荷兰通过H1中路控球推进早段破局，突尼斯被迫拉高防线，身后与肋部空间扩大，荷兰累计3球胜出；突尼斯进攻端xG极低无法还球，清零收场。条件概率最高（40.6%），是blowout情景内最核心的代表比分。"
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.08296296296296296,
+            "tail_focus_conditional_probability": 0.2796069264514893,
+            "support_grade": 2,
+            "script_cn": "荷兰早段取得2球领先，突尼斯被迫前提防线，身后空间进一步开放；H2末轮头名竞争动机使荷兰下半场仍保持前场投入，替补补充边路速度，最终4球落差。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.030000000000000002,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.28,
+        "summary_cn": "突尼斯爆冷获胜的证据基础极弱。核心反证：突尼斯对日本开放战xG仅0.03、xGOT为0，前两场共丢9球，近期4连败；荷兰5-1击败瑞典，前场状态正热，且末轮仍有争头名动机。唯一支持方向来自H3（定位球/反击路径，confidence仅0.44）和范戴克的轻微健康不确定性。爆冷成立需要突尼斯定位球得分+荷兰多次高线失误，属于低概率叠加事件。候选池中1-0和2…",
+        "caution_cn": "突尼斯开放战进攻质量极低（xG 0.03 vs日本），2-1需要突尼斯连续进球且荷兰防线多次失误，在现有证据下属于极小概率叠加。1-0是爆冷中相对最可辩护的路径（定位球单球+荷兰低效）。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.01888888888888889,
+            "tail_focus_conditional_probability": 0.6812528788576694,
+            "support_grade": 2,
+            "script_cn": "突尼斯通过前场任意球或角球打入一球（Skhiri二点球或Talbi/Bronn争顶），此后退守低位顽强防守，荷兰未能在正常时间内打开僵局。荷兰进攻虽持续施压但未能将xG转化为进球，比赛以1-0结束。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.008518518518518519,
+            "tail_focus_conditional_probability": 0.25426070935052975,
+            "support_grade": 1,
+            "script_cn": "突尼斯先通过定位球或快速反击打入一球，荷兰追平后突尼斯再度依靠反击或二次进攻得分，最终以2-1守住胜果。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

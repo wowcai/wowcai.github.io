@@ -1,0 +1,618 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T07:00:18.771035Z",
+  "prediction_generated_at_local": "2026-06-25T15:00:18.771035+08:00",
+  "quality_label": "usable",
+  "match_id": "M59",
+  "team_a": "Turkey",
+  "team_b": "United States",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.13333333333333333,
+      "probability_percent": 13.3333,
+      "outcome": "draw",
+      "sample_count": 360,
+      "path_deviation": 0.586974433611097,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9972222222222222,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.1208955831214664,
+      "probability": 0.10962962962962963,
+      "probability_percent": 10.963,
+      "outcome": "team_a",
+      "sample_count": 296,
+      "path_deviation": 0.5646664440781317,
+      "result_surprise": 0.1777777777777777,
+      "reason_cn": "Turkey在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.14412814024875314,
+      "probability": 0.10814814814814815,
+      "probability_percent": 10.8148,
+      "outcome": "team_b",
+      "sample_count": 292,
+      "path_deviation": 0.5727924045674399,
+      "result_surprise": 0.18888888888888888,
+      "reason_cn": "United States通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.18535669310130945,
+      "probability": 0.09851851851851852,
+      "probability_percent": 9.8519,
+      "outcome": "draw",
+      "sample_count": 266,
+      "path_deviation": 0.558941144720089,
+      "result_surprise": 0.26111111111111107,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.33529455688479537,
+      "probability": 0.0725925925925926,
+      "probability_percent": 7.2593,
+      "outcome": "team_a",
+      "sample_count": 196,
+      "path_deviation": 0.5452958414017226,
+      "result_surprise": 0.4555555555555555,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应、双低压力末轮形成前段试阵、后段开放的分段节奏；Turkey在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003",
+        "H_LOW_STAKES_004"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.34651569898314216,
+      "probability": 0.06851851851851852,
+      "probability_percent": 6.8519,
+      "outcome": "team_a",
+      "sample_count": 185,
+      "path_deviation": 0.5356573213245648,
+      "result_surprise": 0.48611111111111105,
+      "reason_cn": "土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结、双低压力末轮形成前段试阵、后段开放的分段节奏；Turkey打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_TUR_SHOT_002",
+        "H_LOW_STAKES_004"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.4358676967960491,
+      "probability": 0.07,
+      "probability_percent": 7.0,
+      "outcome": "team_b",
+      "sample_count": 189,
+      "path_deviation": 0.5959026745818278,
+      "result_surprise": 0.475,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应；United States通过压迫或转换取得一球优势。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.5150324929272134,
+      "probability": 0.047407407407407405,
+      "probability_percent": 4.7407,
+      "outcome": "draw",
+      "sample_count": 128,
+      "path_deviation": 0.5527392344415238,
+      "result_surprise": 0.6444444444444444,
+      "reason_cn": "土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结、双低压力末轮形成前段试阵、后段开放的分段节奏；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_TUR_SHOT_002",
+        "H_LOW_STAKES_004"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.540545992852418,
+      "probability": 0.05740740740740741,
+      "probability_percent": 5.7407,
+      "outcome": "team_b",
+      "sample_count": 155,
+      "path_deviation": 0.6086179067959068,
+      "result_surprise": 0.5694444444444444,
+      "reason_cn": "United States充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-8",
+      "deviation": 0.5485651150476064,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.3831459477311551,
+      "result_surprise": 0.9972222222222222,
+      "reason_cn": "土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结、美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_TUR_SHOT_002",
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.5784967239936636,
+      "probability": 0.022222222222222223,
+      "probability_percent": 2.2222,
+      "outcome": "team_a",
+      "sample_count": 60,
+      "path_deviation": 0.48957093507279553,
+      "result_surprise": 0.8333333333333333,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；Turkey打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.5844271090981584,
+      "probability": 0.007037037037037037,
+      "probability_percent": 0.7037,
+      "outcome": "team_b",
+      "sample_count": 19,
+      "path_deviation": 0.43184760385730714,
+      "result_surprise": 0.9472222222222222,
+      "reason_cn": "美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.6277214665651063,
+      "probability": 0.037037037037037035,
+      "probability_percent": 3.7037,
+      "outcome": "team_a",
+      "sample_count": 100,
+      "path_deviation": 0.579293618589706,
+      "result_surprise": 0.7222222222222222,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏；Turkey打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.6586919751010178,
+      "probability": 0.007037037037037037,
+      "probability_percent": 0.7037,
+      "outcome": "team_a",
+      "sample_count": 19,
+      "path_deviation": 0.47694780837937367,
+      "result_surprise": 0.9472222222222222,
+      "reason_cn": "美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；Turkey打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_ROT_USA_001",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6715213121662787,
+      "probability": 0.02148148148148148,
+      "probability_percent": 2.1481,
+      "outcome": "team_a",
+      "sample_count": 58,
+      "path_deviation": 0.5430722515156051,
+      "result_surprise": 0.8388888888888889,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.6847292097149906,
+      "probability": 0.025185185185185185,
+      "probability_percent": 2.5185,
+      "outcome": "team_b",
+      "sample_count": 68,
+      "path_deviation": 0.5660505217316755,
+      "result_surprise": 0.8111111111111111,
+      "reason_cn": "United States充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.7449073119674258,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.5053737733709446,
+      "result_surprise": 0.9916666666666667,
+      "reason_cn": "土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.7449420549727281,
+      "probability": 0.03037037037037037,
+      "probability_percent": 3.037,
+      "outcome": "team_b",
+      "sample_count": 82,
+      "path_deviation": 0.6235572655634604,
+      "result_surprise": 0.7722222222222223,
+      "reason_cn": "United States充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7671132729577832,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_a",
+      "sample_count": 23,
+      "path_deviation": 0.5487737296543256,
+      "result_surprise": 0.9361111111111111,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应、双低压力末轮形成前段试阵、后段开放的分段节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003",
+        "H_LOW_STAKES_004"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.7674248366921661,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.5175526823398183,
+      "result_surprise": 0.9944444444444445,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7728401379168867,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_b",
+      "sample_count": 16,
+      "path_deviation": 0.5417815038348032,
+      "result_surprise": 0.9555555555555556,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应、美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；United States充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003",
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.7732697391232373,
+      "probability": 0.017037037037037038,
+      "probability_percent": 1.7037,
+      "outcome": "team_b",
+      "sample_count": 46,
+      "path_deviation": 0.5869141906102959,
+      "result_surprise": 0.8722222222222222,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.7770707744613287,
+      "probability": 0.00962962962962963,
+      "probability_percent": 0.963,
+      "outcome": "draw",
+      "sample_count": 26,
+      "path_deviation": 0.5593079860233431,
+      "result_surprise": 0.9277777777777778,
+      "reason_cn": "美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.7878898268419064,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5284851105149669,
+      "result_surprise": 0.9972222222222222,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "1-7",
+      "deviation": 0.8390090136447177,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5595292085373044,
+      "result_surprise": 0.9972222222222222,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.8390090136447177,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5595292085373044,
+      "result_surprise": 0.9972222222222222,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.8513175652634702,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.5744826837680235,
+      "result_surprise": 0.9833333333333333,
+      "reason_cn": "美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ROT_USA_001",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.8578281087152435,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_a",
+      "sample_count": 8,
+      "path_deviation": 0.581427915403788,
+      "result_surprise": 0.9777777777777777,
+      "reason_cn": "土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结、双低压力末轮形成前段试阵、后段开放的分段节奏；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_TUR_SHOT_002",
+        "H_LOW_STAKES_004"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.8645216929235039,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_a",
+      "sample_count": 22,
+      "path_deviation": 0.6064330235481358,
+      "result_surprise": 0.9388888888888889,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_TUR_SHOT_002"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.8698547687163984,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.5812529361189628,
+      "result_surprise": 0.9916666666666667,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.894540367991664,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "team_b",
+      "sample_count": 30,
+      "path_deviation": 0.6366288338688005,
+      "result_surprise": 0.9166666666666666,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应、美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003",
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.9092101413911284,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.6066487307384794,
+      "result_surprise": 0.9888888888888889,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应、美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003",
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.9209445268898075,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6107834359752096,
+      "result_surprise": 0.9944444444444445,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应、美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003",
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.9526810393677612,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.6345438368470168,
+      "result_surprise": 0.9861111111111112,
+      "reason_cn": "美国当前赛事状态和阵容深度约束轮换负面效应、美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_US_DEPTH_003",
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.9805385757852074,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.6529571268896749,
+      "result_surprise": 0.9833333333333333,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.9953468084462674,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.6649414503671318,
+      "result_surprise": 0.9777777777777777,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、美国当前赛事状态和阵容深度约束轮换负面效应；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_US_DEPTH_003"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 1.0,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_b",
+      "sample_count": 7,
+      "path_deviation": 0.666271553931418,
+      "result_surprise": 0.9805555555555555,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-4",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "draw",
+      "sample_count": 2,
+      "path_deviation": 0.8749147123252619,
+      "result_surprise": 0.9944444444444445,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9972222222222222,
+      "reason_cn": "美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9972222222222222,
+      "reason_cn": "美国锁定头名后的轮换与黄牌管理削弱首发连续性，但不等于整；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ROT_USA_001"
+      ]
+    },
+    {
+      "score": "7-2",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7498294246505236,
+      "result_surprise": 0.9972222222222222,
+      "reason_cn": "双低压力末轮形成前段试阵、后段开放的分段节奏、土耳其高射门低转化遇上美国轮换防线，提升进攻参与度但终结；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_LOW_STAKES_004",
+        "H_TUR_SHOT_002"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

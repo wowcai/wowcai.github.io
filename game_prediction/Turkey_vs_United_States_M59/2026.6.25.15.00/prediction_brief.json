@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T07:00:18.771035Z",
+  "prediction_generated_at_local": "2026-06-25T15:00:18.771035+08:00",
+  "match": {
+    "match_id": "M59",
+    "team_a": "Turkey",
+    "team_b": "United States",
+    "kickoff_utc": "2026-06-26T02:00:00Z",
+    "venue": "SoFi Stadium, Inglewood",
+    "stage": "group",
+    "group": "D",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.7777777777777778,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率77.8%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.3655555555555556,
+    "draw": 0.2896296296296296,
+    "team_b_win": 0.3448148148148148
+  },
+  "most_likely_outcome": {
+    "label": "Turkey胜",
+    "probability": 0.3655555555555556
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.13333333333333333
+    },
+    {
+      "score": "1-0",
+      "probability": 0.10962962962962963
+    },
+    {
+      "score": "0-1",
+      "probability": 0.10814814814814815
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "美国已锁定小组第一，Adams、Balogun等四人带黄，轮换动机明确。",
+      "text_en": "The United States have already secured first place, while Adams, Balogun and two other key players are on yellows, making rotation a clear pre-match issue",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_4f4443a70d66",
+        "E_fdcc1a85e450",
+        "E_6ea9b80e115a",
+        "E_0428f491614b"
+      ],
+      "source_names": [
+        "NY1 / AP Top News",
+        "The Athletic / New York Times",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "FOX称Pochettino可休整多数甚至全部首发，美国首发连续性存疑。",
+      "text_en": "FOX reported that Mauricio Pochettino could rest most or even all starters, so the U.S. starting XI may lack its usual continuity",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_0c610acddb84",
+        "E_be66c25fd093"
+      ],
+      "source_names": [
+        "Fox Sports",
+        "FOX Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "土耳其对澳大利亚30射0球，两战62射0球，推进多但终结效率低。",
+      "text_en": "Turkey produced 30 shots against Australia and reportedly 62 shots without a goal across two games, showing volume in attack but poor finishing",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_db4990e8c3c5",
+        "E_f5a65c077c17"
+      ],
+      "source_names": [
+        "The Analyst",
+        "TNT Sports Football on Facebook"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "FIFA赛前发布Yildiz“为尊严而战”，土耳其仍有体面收官动机。",
+      "text_en": "FIFA highlighted Kenan Yildiz saying Turkey wanted to go out with pride, giving them a clear motivation despite the group situation",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_a0fe787d2a2f"
+      ],
+      "source_names": [
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "澳大利亚曾用深度低位限制土耳其，控球和射门数不必然等于高质量机会。",
+      "text_en": "Australia used a deep low block against Turkey, a reminder that Turkish possession and shot volume do not automatically create high-quality chances",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_dffb22a17151",
+        "E_db4990e8c3c5"
+      ],
+      "source_names": [
+        "The Analyst"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在SoFi Stadium室内进行，预报无天气问题，外部环境干扰较小。",
+      "text_en": "The match is at indoor SoFi Stadium, and the weather preview reported no weather issues, reducing external match-condition disruption",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_83f9752c00d6",
+        "E_020924928343"
+      ],
+      "source_names": [
+        "SoFi Stadium",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-25T07:01:47.647429Z",
+    "source_state_sha256": "e892d2ac46b6dd03fc8deeaed0a3e8118fe61c55c741b92edc4f6974cb097dec",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "该情景不适用。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2344444444444445,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.48,
+        "summary_cn": "双方实际进攻能力均属中等偏下：土耳其本届两战均未进球、终结问题系统性存在；美国虽前两场强势但面临大幅轮换、4名带黄核心可能缺席。总进球≥4的情景需要双方都能破门且节奏足够开放。低压力末轮H_LOW_STAKES_004机制提供一定后段开放支撑，但土耳其进球能力存疑限制了高总进球天花板。",
+        "caution_cn": "土耳其本届0进球、高射低转化是系统性问题，不应因美国轮换就线性推导土耳其必然破门。2-2需要土耳其进2球，证据支撑较弱。1-4需要美国轮换阵进4球且土耳其仅进1球，对轮换阵进攻上限要求过高。3-2和2-3均需总进球5个，概率基础本已低，机制支撑也不充分。",
+        "top_scores": [
+          {
+            "score": "2-2",
+            "base_probability": 0.047407407407407405,
+            "tail_focus_conditional_probability": 0.20150811667940535,
+            "support_grade": 1,
+            "script_cn": ""
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.037037037037037035,
+            "tail_focus_conditional_probability": 0.15742821615578542,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.09629629629629627,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.38,
+        "summary_cn": "本场存在真实的强队优势差距（美国综合strength 0.66 vs 土耳其 0.58），美国前两场净胜5球，土耳其两战零进球；但blowout的核心障碍是：美国有强烈轮换动机（rotation_pressure 0.86），4名关键球员带黄，Pochettino可能大幅换人；土耳其已出局但仍有尊严动机；双方均属低压力末轮。净胜3+球需要极端单向主导，而美…",
+        "caution_cn": "美国轮换力度是blowout成立与否的关键变量。若Pulisic、Balogun均出场且土耳其进攻继续哑火，0-3/0-4仍可达；但若Adams等核心缺席且土耳其早期进球，3-0反向blowout完全无法依托现有证据支撑。不应因土耳其两战零进球就机械排除其在低压力开放节奏下破门。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.025185185185185185,
+            "tail_focus_conditional_probability": 0.3128147778015721,
+            "support_grade": 2,
+            "script_cn": "美国轮换幅度有限或轮换后仍保持进攻连接，土耳其转化继续低迷；美国前半段定位球或转换得分，后半场替补扩大优势。"
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.005925925925925926,
+            "tail_focus_conditional_probability": 0.07233445166202679,
+            "support_grade": 1,
+            "script_cn": "美国轮换幅度有限，Pulisic或Balogun首发或早期登场，土耳其防线在持续压力下崩溃；60分钟后美国继续追加。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": false,
+        "status": "not_applicable",
+        "base_event_probability": 0.0,
+        "attention_level": "not_applicable",
+        "attention_label_cn": "不适用",
+        "evidence_strength": 0.0,
+        "summary_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+        "caution_cn": "该情景没有满足预设适用条件。",
+        "top_scores": [],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

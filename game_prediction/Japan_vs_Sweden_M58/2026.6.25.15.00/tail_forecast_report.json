@@ -1,0 +1,890 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-25T06:31:59.682055Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Japan_vs_Sweden_M58\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "d5cdc00772af7da6005d0e646459dbb7c6a9e709b27486b2645352c39c11436f",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-25T06:29:32.466476+00:00"
+  },
+  "match": {
+    "match_id": "M58",
+    "team_a": "Japan",
+    "team_b": "Sweden",
+    "kickoff_utc": "2026-06-25T23:00:00Z",
+    "venue": "AT&T Stadium, Arlington",
+    "stage": "group",
+    "group": "F",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 67,
+      "usable_evidence": 67,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 0,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.4114814814814815,
+    "draw": 0.29074074074074074,
+    "team_b_win": 0.29777777777777775,
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13703703703703704
+      },
+      {
+        "score": "1-0",
+        "probability": 0.10666666666666667
+      },
+      {
+        "score": "0-0",
+        "probability": 0.09
+      },
+      {
+        "score": "2-1",
+        "probability": 0.08925925925925926
+      },
+      {
+        "score": "0-1",
+        "probability": 0.08703703703703704
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999998
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Japan",
+    "underdog_side": "team_b",
+    "underdog_team": "Sweden",
+    "team_a_win": 0.4114814814814815,
+    "draw": 0.29074074074074074,
+    "team_b_win": 0.29777777777777775,
+    "win_probability_gap": 0.11370370370370375,
+    "underdog_win_probability": 0.29777777777777775,
+    "favorite_fail_to_win_probability": 0.5885185185185184,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "提案在high_scoring情景中选取了四个候选比分，但存在多处问题：(1) 将3-2、2-3、3-3、3-1全部纳入且support_grade普遍偏低，未能聚焦最具证据支撑的路径；(2) 所有rationale_cn均未引用具体evidence_ids，无法验证是否真实使用输入证据；(3) 3-2被标为grade=2但描述过于笼统，未说明为何优于其他候选；(4) 3-3作为6球平局在原始联合概率极低(1.74%)的情况下仅凭'高波动背景'支持显得证据不足；(5) 整体未体现independent_parallel_scenario_analysis要求的'不被主预测最低达标比分惯性束缚'——实际上提案仍在开放大比分池中选取了多个中等比分，而非聚焦真正极端或最合理的一两条路径。建议大幅削减候选数量、提升核心候选support_grade、补充真实evidence_ids引用，或在证据不足时直接标记rejected。；blowout情景保留四个候选但支持度全面降级。3-0降为grade-1（日本后段反击可能但非主线），4-0和4-1降为grade-0（缺乏直接证据且与末轮保守开局冲突），0-4删除（瑞典防线脆弱但日本缺少久保和远藤、瑞典必须前压不等于能连续破门）。；瑞典爆冷情景有真实证据支撑：远藤航和久保建英缺阵削弱日本中路保护与创造力，瑞典伊萨克+约克雷斯双前锋有能力形成持续冲击；末轮出线动机不对称使瑞典后段必然增加前场投入，打开比赛空间。但瑞典防线被荷兰5-1击穿的证据也暗示比赛可能双向开放而非单边压制，日本仍有上田、镰田等进攻点，完全零封日本概率有限。1-2是机制最匹配的核心爆冷路径，0-1是低比分单球爆冷路径，1-3和2-3对应后段打开后的高进球版本。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.2622222222222222,
+      "attention_level": "low",
+      "evidence_strength": 0.35,
+      "rationale_cn": "原提案列举4个候选但均未引用证据ID且support_grade偏低，实际证据链不完整。high_scoring本身适用但需更严格筛选。",
+      "supporting_evidence_ids": [
+        "E_a7f97c30e936",
+        "E_69e89a2c0b76",
+        "E_978366df136e",
+        "E_38541e977f86",
+        "E_25adb6cb54b8",
+        "E_4bcd38efa926"
+      ],
+      "counter_evidence_ids": [
+        "E_3072c85120a8",
+        "E_6acbd3b39b9d"
+      ],
+      "caution_cn": "瑞典5-1负荷兰与5-1胜突尼斯的极端波动支持开放比分存在，但日本2-2战平荷兰与4-0胜突尼斯显示其也具备控场能力；末轮日本平局即可出线的动机会抑制前段冒险，开放度主要依赖瑞典后段搏命。原提案未明确最优路径且证据引用缺失。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "2-2",
+          "base_probability": 0.04518518518518518,
+          "base_conditional_probability": 0.17231638418079098,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.02666666666666667,
+          "base_conditional_probability": 0.10169491525423731,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-3",
+          "base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.06638418079096045,
+          "total_goals": 6,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.04,
+          "base_conditional_probability": 0.15254237288135594,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.03148148148148148,
+          "base_conditional_probability": 0.12005649717514125,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.0805084745762712,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.048022598870056506,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.05225988700564973,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.04,
+          "base_conditional_probability": 0.15254237288135594,
+          "tail_focus_conditional_probability": 0.17741720973533706,
+          "tail_focus_implied_overall_probability": 0.046522734997266155,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "瑞典后段搏命前压但防线在高强度下再次失位(参考5-1负荷兰E_69e89a2c0b76)，日本利用稳定三中卫结构(E_6acbd3b39b9d)与反击连接点多次破门。瑞典双前锋(E_4bcd38efa926)在远藤缺阵时制造一次进球事件，但整体攻守平衡差使其无法持续回应。",
+          "rationale_cn": "比3-2更偏向日本优势兑现，瑞典仅进1球符合其防守波动大、进攻依赖个人的特点。但瑞典必须争胜压力与双前锋威胁使完全零封不够稳，故3-1比4-0更合理。",
+          "evidence_ids": [
+            "E_69e89a2c0b76",
+            "E_6acbd3b39b9d",
+            "E_4bcd38efa926",
+            "E_25adb6cb54b8"
+          ],
+          "mechanism_ids": [
+            "H_JPN_STRUCTURE_VS_SWE_OPENING",
+            "H_GROUP_LATE_STATE_TRANSITION"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.02666666666666667,
+          "base_conditional_probability": 0.10169491525423731,
+          "tail_focus_conditional_probability": 0.1414195150064281,
+          "tail_focus_implied_overall_probability": 0.03708333949057448,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "瑞典末轮必须取胜(E_38541e977f86)，后段前压给日本反击空间；日本近期4-0胜突尼斯(E_a7f97c30e936)显示进攻输出能力，瑞典被荷兰5-1击败(E_69e89a2c0b76)暴露防线失位风险。瑞典双前锋伊萨克、约克雷斯(E_4bcd38efa926)与远藤缺阵(E_25adb6cb54b8)机制支持瑞典回应进球，但不足以完全压制日本，最终形成日本小胜的对攻局面。",
+          "rationale_cn": "在开放大比分路径中，3-2最平衡地反映双方机制：日本反击受益于瑞典后段前压、瑞典锋线威胁在远藤缺阵时仍能兑现。相比3-1，瑞典进2球更符合其双前锋配置与必须争胜压力；相比2-3，日本小组第二、主控节奏且近期状态更强，客胜不如主胜合理。",
+          "evidence_ids": [
+            "E_38541e977f86",
+            "E_a7f97c30e936",
+            "E_69e89a2c0b76",
+            "E_4bcd38efa926",
+            "E_25adb6cb54b8"
+          ],
+          "mechanism_ids": [
+            "H_JPN_STRUCTURE_VS_SWE_OPENING",
+            "H_GROUP_LATE_STATE_TRANSITION",
+            "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.04,
+          "base_conditional_probability": 0.15254237288135594,
+          "tail_focus_conditional_probability": 0.17741720973533706,
+          "tail_focus_implied_overall_probability": 0.046522734997266155,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.02666666666666667,
+          "base_conditional_probability": 0.10169491525423731,
+          "tail_focus_conditional_probability": 0.1414195150064281,
+          "tail_focus_implied_overall_probability": 0.03708333949057448,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.04518518518518518,
+          "base_conditional_probability": 0.17231638418079098,
+          "tail_focus_conditional_probability": 0.13821774960224215,
+          "tail_focus_implied_overall_probability": 0.0362437654512546,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03148148148148148,
+          "base_conditional_probability": 0.12005649717514125,
+          "tail_focus_conditional_probability": 0.09629925177205395,
+          "tail_focus_implied_overall_probability": 0.025251803798005255,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.0805084745762712,
+          "tail_focus_conditional_probability": 0.07721180417017627,
+          "tail_focus_implied_overall_probability": 0.020246650871290663,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.017407407407407406,
+          "base_conditional_probability": 0.06638418079096045,
+          "tail_focus_conditional_probability": 0.07061124164462369,
+          "tail_focus_implied_overall_probability": 0.018515836697923543,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.048022598870056506,
+          "tail_focus_conditional_probability": 0.046056163890982334,
+          "tail_focus_implied_overall_probability": 0.012076949642524254,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.05225988700564973,
+          "tail_focus_conditional_probability": 0.041918497830188195,
+          "tail_focus_implied_overall_probability": 0.010991961653249347,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.009259259259259259,
+          "base_conditional_probability": 0.03531073446327684,
+          "tail_focus_conditional_probability": 0.037559171087565804,
+          "tail_focus_implied_overall_probability": 0.009848849307406144,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.025423728813559327,
+          "tail_focus_conditional_probability": 0.02704260318304738,
+          "tail_focus_implied_overall_probability": 0.007091171501332424,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999988
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.10148148148148146,
+      "attention_level": "low",
+      "evidence_strength": 0.32,
+      "rationale_cn": "末轮双方动机（日本求稳、瑞典后段搏命）使开局大概率谨慎，rollout多数显示前30分钟未进球。瑞典被荷兰5-1但对手是荷兰；日本4-0突尼斯但对手是突尼斯。当前证据池未直接支持任一方连续大比分输出，机制推演也未产生崩盘主线。",
+      "supporting_evidence_ids": [
+        "E_69e89a2c0b76",
+        "E_a7f97c30e936",
+        "E_25adb6cb54b8",
+        "E_6b12796069c3"
+      ],
+      "counter_evidence_ids": [
+        "E_38541e977f86",
+        "E_4fa81a51c858",
+        "E_2c73095cfb5c"
+      ],
+      "caution_cn": "瑞典5-1败荷兰与日本4-0胜突尼斯均为对手实力差异背景，直接外推至本场为过度激进。rollout代表比分为1-0/0-0/2-1，无任何rollout代表比分≥3球差。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.03037037037037037,
+          "base_conditional_probability": 0.2992700729927008,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.12408759124087594,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.135036496350365,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.1861313868613139,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.06204379562043797,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.036496350364963515,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.036496350364963515,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.025547445255474456,
+          "total_goals": 6,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03037037037037037,
+          "base_conditional_probability": 0.2992700729927008,
+          "tail_focus_conditional_probability": 0.3130069663135796,
+          "tail_focus_implied_overall_probability": 0.03176441065552622,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "瑞典60分钟后必须前压，日本三中卫+翼卫反击体系连续转化并形成3球优势。",
+          "rationale_cn": "H_JPN_STRUCTURE_VS_SWE_OPENING和H_GROUP_LATE_STATE_TRANSITION叠加可支持日本后段反击得分，但从rollout_4（3-0代表）仅1条、且该rollout未激活瑞典锋线机制来看，连续3球输出为边缘路径而非主线。久保和远藤缺阵也削弱日本持续创造力。",
+          "evidence_ids": [
+            "E_6acbd3b39b9d",
+            "E_a7f97c30e936",
+            "E_38541e977f86"
+          ],
+          "mechanism_ids": [
+            "H_JPN_STRUCTURE_VS_SWE_OPENING",
+            "H_GROUP_LATE_STATE_TRANSITION"
+          ]
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.135036496350365,
+          "tail_focus_conditional_probability": 0.13976365429271242,
+          "tail_focus_implied_overall_probability": 0.014183422694890074,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "日本从开局压制瑞典并持续扩大比分至4-0。",
+          "rationale_cn": "与末轮日本求稳动机（E_38541e977f86）和rollout普遍显示前30分钟未进球直接矛盾。日本4-0突尼斯为对弱队结果，无证据支持对瑞典复制。该比分未出现在任何rollout中。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.12408759124087594,
+          "tail_focus_conditional_probability": 0.11680503864872605,
+          "tail_focus_implied_overall_probability": 0.011853548366574419,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "瑞典早期进球后日本被迫开放，但日本反击连续破门形成4-1。",
+          "rationale_cn": "rollout_1显示2-5且瑞典先进球，与4-1方向相反。4-1需要日本在缺少久保+远藤情况下持续高效输出，证据不支持。该比分未出现在任何rollout代表比分中。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03037037037037037,
+          "base_conditional_probability": 0.2992700729927008,
+          "tail_focus_conditional_probability": 0.3130069663135796,
+          "tail_focus_implied_overall_probability": 0.03176441065552622,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.1861313868613139,
+          "tail_focus_conditional_probability": 0.16222922034545284,
+          "tail_focus_implied_overall_probability": 0.01646326162024225,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.013703703703703704,
+          "base_conditional_probability": 0.135036496350365,
+          "tail_focus_conditional_probability": 0.13976365429271242,
+          "tail_focus_implied_overall_probability": 0.014183422694890074,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.12408759124087594,
+          "tail_focus_conditional_probability": 0.11680503864872605,
+          "tail_focus_implied_overall_probability": 0.011853548366574419,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.06204379562043797,
+          "tail_focus_conditional_probability": 0.06421573305340841,
+          "tail_focus_implied_overall_probability": 0.006516707724679223,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.036496350364963515,
+          "tail_focus_conditional_probability": 0.04079587746922418,
+          "tail_focus_implied_overall_probability": 0.004140026083913861,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.036496350364963515,
+          "tail_focus_conditional_probability": 0.03435442313197825,
+          "tail_focus_implied_overall_probability": 0.0034863377548748293,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.025547445255474456,
+          "tail_focus_conditional_probability": 0.02855711422845692,
+          "tail_focus_implied_overall_probability": 0.002898018258739702,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.021897810218978107,
+          "tail_focus_conditional_probability": 0.02061265387918695,
+          "tail_focus_implied_overall_probability": 0.0020918026529248976,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.018248175182481757,
+          "tail_focus_conditional_probability": 0.02039793873461209,
+          "tail_focus_implied_overall_probability": 0.0020700130419569304,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000002
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Sweden 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.2977777777777777,
+      "attention_level": "medium",
+      "evidence_strength": 0.58,
+      "rationale_cn": "爆冷核心证据：远藤航伤退(E_25adb6cb54b8)削弱日本中路拦截屏障；久保建英缺阵(E_6b12796069c3, E_7a2b07847b04)降低右侧半空间创造力；瑞典可用伊萨克+约克雷斯双前锋(E_421541170218, E_4bcd38efa926, E_b68f2a9afc64)具备纵深和禁区占位能力；末轮瑞典必须取胜的动机不对称(E_38541e977f86)使其后段必然增加前场投入。反向证据：日本3-4-2-1结构稳定(E_6acbd3b39b9d)、近期4-0胜突尼斯(E_a7f97c30e936)和2-2战平荷兰(E_3072c85120a8)显示进攻能力实在；瑞典5-1负于荷兰(E_69e89a2c0b76)说明其攻守平衡差，主动防线存在被反打风险。爆冷基础概率29.8%，机制合理性中等偏上。",
+      "supporting_evidence_ids": [
+        "E_25adb6cb54b8",
+        "E_6b12796069c3",
+        "E_7a2b07847b04",
+        "E_421541170218",
+        "E_4bcd38efa926",
+        "E_b68f2a9afc64",
+        "E_38541e977f86",
+        "E_978366df136e"
+      ],
+      "counter_evidence_ids": [
+        "E_6acbd3b39b9d",
+        "E_a7f97c30e936",
+        "E_3072c85120a8",
+        "E_69e89a2c0b76",
+        "E_ead4a8d80833"
+      ],
+      "caution_cn": "瑞典防线被荷兰5-1打穿说明其开放比赛的代价是自身也容易失球，爆冷路径不等于瑞典稳定控场，高进球比分下日本同样可能得分。久保缺阵对日本阵地战有影响，但日本4-0胜突尼斯时表现已说明进攻不单依赖久保。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.08703703703703704,
+          "base_conditional_probability": 0.29228855721393043,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.06518518518518518,
+          "base_conditional_probability": 0.21890547263681595,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.04814814814814815,
+          "base_conditional_probability": 0.16169154228855726,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.03148148148148148,
+          "base_conditional_probability": 0.10572139303482589,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.07089552238805973,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.06343283582089554,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.022388059701492546,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.02114427860696518,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.08703703703703704,
+          "base_conditional_probability": 0.29228855721393043,
+          "tail_focus_conditional_probability": 0.2941790110577927,
+          "tail_focus_implied_overall_probability": 0.0875999721816538,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "日本久保缺阵后阵地战创造力下降，比赛前段节奏偏低；瑞典依靠一次高质量机会（伊萨克或约克雷斯个人能力或定位球）打入唯一进球，日本因平局价值较高而未全力冒进，最终瑞典以单球爆冷获胜。",
+          "rationale_cn": "候选池base_conditional=29.2%，是爆冷候选中最高的单一比分。H_KUBO_ABSENCE_LIMITS_JPN_CREATION支持日本进攻降速，H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP支持瑞典前锋单次效率性进球。但机制信号同时指向后段比赛打开（末轮动机），使低进球版本不如1-2自然，因此grade=1而非2。",
+          "evidence_ids": [
+            "E_6b12796069c3",
+            "E_7a2b07847b04",
+            "E_421541170218",
+            "E_4bcd38efa926",
+            "E_38541e977f86"
+          ],
+          "mechanism_ids": [
+            "H_KUBO_ABSENCE_LIMITS_JPN_CREATION",
+            "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+          ]
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.06518518518518518,
+          "base_conditional_probability": 0.21890547263681595,
+          "tail_focus_conditional_probability": 0.26622157312747763,
+          "tail_focus_implied_overall_probability": 0.07927486844240443,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "瑞典依靠伊萨克或约克雷斯在中前场拿球突破日本远藤缺阵后的中路保护漏洞打入两球；日本上田或镰田利用瑞典防线不稳定性追回一球，但未能完成逆转。末轮瑞典必须争胜的动机推动其在落平或先平时加强前场投入，最终以小比分爆冷获胜。",
+          "rationale_cn": "候选池base_conditional=21.9%，是爆冷候选中第二高。机制H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP（远藤缺阵+双前锋冲击）与H_GROUP_LATE_STATE_TRANSITION（末轮动机打开后段）共同支撑；日本有进球符合其近期强进攻状态和三中卫体系稳定的证据，瑞典防线波动使零封日本不自然。是爆冷情景中证据最平衡、机制最充分的路径。",
+          "evidence_ids": [
+            "E_25adb6cb54b8",
+            "E_4bcd38efa926",
+            "E_b68f2a9afc64",
+            "E_38541e977f86",
+            "E_a7f97c30e936"
+          ],
+          "mechanism_ids": [
+            "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+            "H_GROUP_LATE_STATE_TRANSITION"
+          ]
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03148148148148148,
+          "base_conditional_probability": 0.10572139303482589,
+          "tail_focus_conditional_probability": 0.10640517421239311,
+          "tail_focus_implied_overall_probability": 0.03168509632102372,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "瑞典在日本中路保护缺口被持续放大的条件下，双前锋多次兑现进球；末轮形势迫使瑞典后段加大前场投入，同时打开了日本反击空间，上田或镰田打入一球，但无法阻止瑞典以3-1完成较大比分爆冷。",
+          "rationale_cn": "候选池base_conditional=10.6%。需要H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP持续发酵（远藤缺阵+双前锋不断冲击）与H_GROUP_LATE_STATE_TRANSITION后段全面打开共同叠加。瑞典5-1胜突尼斯(E_978366df136e)显示其锋线有大量进球能力，但被荷兰5-1打穿也说明其防线漏洞会限制稳定控场。日本有进球符合整体进攻证据，3球需要日本中场保护持续失位，条件相对苛刻，grade=1合理。",
+          "evidence_ids": [
+            "E_25adb6cb54b8",
+            "E_4bcd38efa926",
+            "E_b68f2a9afc64",
+            "E_978366df136e",
+            "E_38541e977f86"
+          ],
+          "mechanism_ids": [
+            "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+            "H_GROUP_LATE_STATE_TRANSITION"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.07089552238805973,
+          "tail_focus_conditional_probability": 0.07135405800125186,
+          "tail_focus_implied_overall_probability": 0.021247652827039436,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "比赛高度开放：瑞典双前锋打入3球，日本通过上田、镰田等前场连接点回应打入2球，末轮动机和双方防线波动共同推动5球高分对攻局面，瑞典最终以一球之差完成爆冷。",
+          "rationale_cn": "候选池base_conditional=7.1%，原提案grade=0，审计升级至grade=1。依据：瑞典5-1胜突尼斯(E_978366df136e)与5-1负荷兰(E_69e89a2c0b76)双向证据均指向比赛极度开放的可能性；日本3-4-2-1进攻端上田+镰田证据强(E_a7f97c30e936, E_3072c85120a8)，2球回应有据可查；H_GROUP_LATE_STATE_TRANSITION后段动机打开支持5球方向。该比分需要双方同时暴露防线，条件不是最自然但有真实证据支撑，不应给grade=0。",
+          "evidence_ids": [
+            "E_978366df136e",
+            "E_69e89a2c0b76",
+            "E_a7f97c30e936",
+            "E_3072c85120a8",
+            "E_38541e977f86"
+          ],
+          "mechanism_ids": [
+            "H_GROUP_LATE_STATE_TRANSITION",
+            "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+            "H_JPN_STRUCTURE_VS_SWE_OPENING"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.08703703703703704,
+          "base_conditional_probability": 0.29228855721393043,
+          "tail_focus_conditional_probability": 0.2941790110577927,
+          "tail_focus_implied_overall_probability": 0.0875999721816538,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.06518518518518518,
+          "base_conditional_probability": 0.21890547263681595,
+          "tail_focus_conditional_probability": 0.26622157312747763,
+          "tail_focus_implied_overall_probability": 0.07927486844240443,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.04814814814814815,
+          "base_conditional_probability": 0.16169154228855726,
+          "tail_focus_conditional_probability": 0.1356144377216775,
+          "tail_focus_implied_overall_probability": 0.04038296589934395,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03148148148148148,
+          "base_conditional_probability": 0.10572139303482589,
+          "tail_focus_conditional_probability": 0.10640517421239311,
+          "tail_focus_implied_overall_probability": 0.03168509632102372,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.07089552238805973,
+          "tail_focus_conditional_probability": 0.07135405800125186,
+          "tail_focus_implied_overall_probability": 0.021247652827039436,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.06343283582089554,
+          "tail_focus_conditional_probability": 0.05320258710619656,
+          "tail_focus_implied_overall_probability": 0.015842548160511862,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.022388059701492546,
+          "tail_focus_conditional_probability": 0.018777383684539965,
+          "tail_focus_implied_overall_probability": 0.00559148758606301,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.02114427860696518,
+          "tail_focus_conditional_probability": 0.01773419570206552,
+          "tail_focus_implied_overall_probability": 0.005280849386837287,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.012437810945273636,
+          "tail_focus_conditional_probability": 0.010431879824744424,
+          "tail_focus_implied_overall_probability": 0.0031063819922572274,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.008706467661691544,
+          "tail_focus_conditional_probability": 0.007302315877321096,
+          "tail_focus_implied_overall_probability": 0.002174467394580059,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000007
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.5",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999998,
+    "source_hash": "d5cdc00772af7da6005d0e646459dbb7c6a9e709b27486b2645352c39c11436f"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Japan_vs_Sweden_M58\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\web_delivery\\Japan_vs_Sweden_M58\\2026.6.26.07\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\reports_Japan_vs_Sweden_M58\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_26_v746_skills\\web_delivery\\Japan_vs_Sweden_M58\\2026.6.26.07\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

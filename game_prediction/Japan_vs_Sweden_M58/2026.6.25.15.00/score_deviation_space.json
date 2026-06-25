@@ -1,0 +1,653 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T06:29:32.466476Z",
+  "prediction_generated_at_local": "2026-06-25T14:29:32.466476+08:00",
+  "quality_label": "ready",
+  "match_id": "M58",
+  "team_a": "Japan",
+  "team_b": "Sweden",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-1",
+      "deviation": 0.0,
+      "probability": 0.13703703703703704,
+      "probability_percent": 13.7037,
+      "outcome": "draw",
+      "sample_count": 370,
+      "path_deviation": 0.6159679222559712,
+      "result_surprise": 0.0,
+      "reason_cn": "关键球员状态与角色变化；双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.0,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_JPN_STRUCTURE_VS_SWE_OPENING",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.1199716793826297,
+      "probability": 0.10666666666666667,
+      "probability_percent": 10.6667,
+      "outcome": "team_a",
+      "sample_count": 288,
+      "path_deviation": 0.5747723675623678,
+      "result_surprise": 0.22162162162162158,
+      "reason_cn": "Japan在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.1978263555458071,
+      "probability": 0.09,
+      "probability_percent": 9.0,
+      "outcome": "draw",
+      "sample_count": 243,
+      "path_deviation": 0.5599915973643307,
+      "result_surprise": 0.3432432432432433,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.22541022371503347,
+      "probability": 0.08703703703703704,
+      "probability_percent": 8.7037,
+      "outcome": "team_b",
+      "sample_count": 235,
+      "path_deviation": 0.5663149291990923,
+      "result_surprise": 0.3648648648648649,
+      "reason_cn": "Sweden通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.25309664704334844,
+      "probability": 0.08925925925925926,
+      "probability_percent": 8.9259,
+      "outcome": "team_a",
+      "sample_count": 241,
+      "path_deviation": 0.5930792769593417,
+      "result_surprise": 0.34864864864864864,
+      "reason_cn": "关键球员状态与角色变化；Japan在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.39500577166929457,
+      "probability": 0.06518518518518518,
+      "probability_percent": 6.5185,
+      "outcome": "team_a",
+      "sample_count": 176,
+      "path_deviation": 0.5909119994639602,
+      "result_surprise": 0.5243243243243243,
+      "reason_cn": "抢断后的快速转换；Japan打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_JPN_STRUCTURE_VS_SWE_OPENING"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.4092844457674991,
+      "probability": 0.06518518518518518,
+      "probability_percent": 6.5185,
+      "outcome": "team_b",
+      "sample_count": 176,
+      "path_deviation": 0.6002118915047979,
+      "result_surprise": 0.5243243243243243,
+      "reason_cn": "Sweden通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.45751960183669793,
+      "probability": 0.04814814814814815,
+      "probability_percent": 4.8148,
+      "outcome": "team_b",
+      "sample_count": 130,
+      "path_deviation": 0.5646842289599731,
+      "result_surprise": 0.6486486486486487,
+      "reason_cn": "Sweden充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.49125080387847686,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.4003752271987386,
+      "result_surprise": 0.9945945945945946,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_JPN_STRUCTURE_VS_SWE_OPENING",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.5046536647125206,
+      "probability": 0.04518518518518518,
+      "probability_percent": 4.5185,
+      "outcome": "draw",
+      "sample_count": 122,
+      "path_deviation": 0.5837408649445623,
+      "result_surprise": 0.6702702702702703,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.5065112794586034,
+      "probability": 0.04,
+      "probability_percent": 4.0,
+      "outcome": "team_a",
+      "sample_count": 108,
+      "path_deviation": 0.5645765339811669,
+      "result_surprise": 0.7081081081081081,
+      "reason_cn": "关键球员状态与角色变化、末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；Japan打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION",
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 0.5508390747309411,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.4377305661444104,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.5565311825408014,
+      "probability": 0.02666666666666667,
+      "probability_percent": 2.6667,
+      "outcome": "team_a",
+      "sample_count": 72,
+      "path_deviation": 0.5447643156678369,
+      "result_surprise": 0.8054054054054054,
+      "reason_cn": "关键球员状态与角色变化、末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION",
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.5658743271589984,
+      "probability": 0.03148148148148148,
+      "probability_percent": 3.1481,
+      "outcome": "team_b",
+      "sample_count": 85,
+      "path_deviation": 0.569768550049071,
+      "result_surprise": 0.7702702702702703,
+      "reason_cn": "Sweden充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.5801931006760066,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.46267044295533966,
+      "result_surprise": 0.9864864864864865,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.5900658095477287,
+      "probability": 0.03037037037037037,
+      "probability_percent": 3.037,
+      "outcome": "team_a",
+      "sample_count": 82,
+      "path_deviation": 0.5811588827802308,
+      "result_surprise": 0.7783783783783784,
+      "reason_cn": "末轮出线动机使比赛更前稳后开，60分钟后状态转移关键、关键球员状态与角色变化；Japan打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_GROUP_LATE_STATE_TRANSITION",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.6003928367857223,
+      "probability": 0.017407407407407406,
+      "probability_percent": 1.7407,
+      "outcome": "draw",
+      "sample_count": 47,
+      "path_deviation": 0.5369494632596552,
+      "result_surprise": 0.8729729729729729,
+      "reason_cn": "末轮出线动机使比赛更前稳后开，60分钟后状态转移关键、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_GROUP_LATE_STATE_TRANSITION",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.6355355471210755,
+      "probability": 0.005555555555555556,
+      "probability_percent": 0.5556,
+      "outcome": "team_a",
+      "sample_count": 15,
+      "path_deviation": 0.5132687354995157,
+      "result_surprise": 0.9594594594594594,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "1-7",
+      "deviation": 0.6470262261738605,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5003785485818927,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_JPN_STRUCTURE_VS_SWE_OPENING",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "7-3",
+      "deviation": 0.6470262261738605,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5003785485818927,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_JPN_STRUCTURE_VS_SWE_OPENING",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6496904755468922,
+      "probability": 0.012592592592592593,
+      "probability_percent": 1.2593,
+      "outcome": "team_a",
+      "sample_count": 34,
+      "path_deviation": 0.5501387579741535,
+      "result_surprise": 0.9081081081081082,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_JPN_STRUCTURE_VS_SWE_OPENING",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.6730155539656535,
+      "probability": 0.013703703703703704,
+      "probability_percent": 1.3704,
+      "outcome": "team_a",
+      "sample_count": 37,
+      "path_deviation": 0.5696965989055005,
+      "result_surprise": 0.9,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；Japan打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_JPN_STRUCTURE_VS_SWE_OPENING",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.6821648033221144,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_b",
+      "sample_count": 10,
+      "path_deviation": 0.5363624884888931,
+      "result_surprise": 0.972972972972973,
+      "reason_cn": "末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.6841158877661373,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "team_b",
+      "sample_count": 18,
+      "path_deviation": 0.5492756676106363,
+      "result_surprise": 0.9513513513513514,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.6883778747736328,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.530222035109252,
+      "result_surprise": 0.9918918918918919,
+      "reason_cn": "末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.6948451692570273,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.532978969333413,
+      "result_surprise": 0.9945945945945946,
+      "reason_cn": "关键球员状态与角色变化、末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION",
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.7082946743887024,
+      "probability": 0.01888888888888889,
+      "probability_percent": 1.8889,
+      "outcome": "team_b",
+      "sample_count": 51,
+      "path_deviation": 0.6130485838097848,
+      "result_surprise": 0.8621621621621621,
+      "reason_cn": "Sweden充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.7132921286612351,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5435384200715536,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "关键球员状态与角色变化、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+        "H_JPN_STRUCTURE_VS_SWE_OPENING"
+      ]
+    },
+    {
+      "score": "2-7",
+      "deviation": 0.7132921286612351,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5435384200715536,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "关键球员状态与角色变化、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+        "H_JPN_STRUCTURE_VS_SWE_OPENING"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.713522519808995,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.5451437783729316,
+      "result_surprise": 0.9945945945945946,
+      "reason_cn": "末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "1-8",
+      "deviation": 0.7157569301767329,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5451437783729316,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "3-6",
+      "deviation": 0.7157569301767329,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5451437783729316,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "6-4",
+      "deviation": 0.7157569301767329,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5451437783729316,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7228132746027675,
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296,
+      "outcome": "team_b",
+      "sample_count": 17,
+      "path_deviation": 0.5730244934691199,
+      "result_surprise": 0.9540540540540541,
+      "reason_cn": "Sweden充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.7298933057173846,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_b",
+      "sample_count": 7,
+      "path_deviation": 0.5630827981855877,
+      "result_surprise": 0.981081081081081,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.7658277038390938,
+      "probability": 0.021111111111111112,
+      "probability_percent": 2.1111,
+      "outcome": "team_b",
+      "sample_count": 57,
+      "path_deviation": 0.6592524266388107,
+      "result_surprise": 0.845945945945946,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.7975079064556794,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.6056657934884951,
+      "result_surprise": 0.9837837837837837,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.7975901726654862,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "draw",
+      "sample_count": 3,
+      "path_deviation": 0.6013534702089403,
+      "result_surprise": 0.9918918918918919,
+      "reason_cn": "关键球员状态与角色变化、末轮出线动机使比赛更前稳后开，60分钟后状态转移关键；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_KUBO_ABSENCE_LIMITS_JPN_CREATION",
+        "H_GROUP_LATE_STATE_TRANSITION"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.8400486008700373,
+      "probability": 0.009259259259259259,
+      "probability_percent": 0.9259,
+      "outcome": "team_a",
+      "sample_count": 25,
+      "path_deviation": 0.6610238462504205,
+      "result_surprise": 0.9324324324324325,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.8925450869323137,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.6661094829492646,
+      "result_surprise": 0.9864864864864865,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.906502355788021,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.6752000394428361,
+      "result_surprise": 0.9864864864864865,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-1",
+      "deviation": 1.0,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_a",
+      "sample_count": 10,
+      "path_deviation": 0.7433728170077301,
+      "result_surprise": 0.972972972972973,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_JPN_STRUCTURE_VS_SWE_OPENING",
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7648984801744231,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP"
+      ]
+    },
+    {
+      "score": "4-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9972972972972973,
+      "reason_cn": "关键球员状态与角色变化、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_SWE_STRIKERS_VS_JPN_MIDFIELD_GAP",
+        "H_JPN_STRUCTURE_VS_SWE_OPENING"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

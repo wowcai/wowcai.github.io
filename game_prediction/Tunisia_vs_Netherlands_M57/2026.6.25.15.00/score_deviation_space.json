@@ -1,0 +1,471 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-25T06:04:36.422865Z",
+  "prediction_generated_at_local": "2026-06-25T14:04:36.422865+08:00",
+  "quality_label": "ready",
+  "match_id": "M57",
+  "team_a": "Tunisia",
+  "team_b": "Netherlands",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "0-2",
+      "deviation": 0.0,
+      "probability": 0.18703703703703703,
+      "probability_percent": 18.7037,
+      "outcome": "team_b",
+      "sample_count": 505,
+      "path_deviation": 0.6472945112681162,
+      "result_surprise": 0.0,
+      "reason_cn": "Netherlands充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.03502304197288585,
+      "probability": 0.17333333333333334,
+      "probability_percent": 17.3333,
+      "outcome": "team_b",
+      "sample_count": 468,
+      "path_deviation": 0.628330528497099,
+      "result_surprise": 0.07326732673267322,
+      "reason_cn": "Netherlands通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.16370680522220502,
+      "probability": 0.14185185185185184,
+      "probability_percent": 14.1852,
+      "outcome": "team_b",
+      "sample_count": 383,
+      "path_deviation": 0.6129753591338204,
+      "result_surprise": 0.24158415841584158,
+      "reason_cn": "Netherlands充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.37201328961535307,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.3285845066142271,
+      "result_surprise": 0.996039603960396,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；Tunisia打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H4",
+        "H2"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.4614662848372998,
+      "probability": 0.08296296296296296,
+      "probability_percent": 8.2963,
+      "outcome": "team_b",
+      "sample_count": 224,
+      "path_deviation": 0.6176222268736656,
+      "result_surprise": 0.5564356435643565,
+      "reason_cn": "Netherlands充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-9",
+      "deviation": 0.48156448112026523,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.39160311305079043,
+      "result_surprise": 0.998019801980198,
+      "reason_cn": "关键球员状态与角色变化、荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H1"
+      ]
+    },
+    {
+      "score": "2-8",
+      "deviation": 0.5268799411372427,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.41811158990261205,
+      "result_surprise": 0.998019801980198,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H4",
+        "H2"
+      ]
+    },
+    {
+      "score": "0-8",
+      "deviation": 0.5493018340877056,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.43229412967615277,
+      "result_surprise": 0.996039603960396,
+      "reason_cn": "突尼斯的少量进球路径集中在定位球、长传二点和荷兰压上身后、荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.5523937327704095,
+      "probability": 0.06777777777777778,
+      "probability_percent": 6.7778,
+      "outcome": "draw",
+      "sample_count": 183,
+      "path_deviation": 0.6270959630543216,
+      "result_surprise": 0.6376237623762375,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.564610723602983,
+      "probability": 0.06888888888888889,
+      "probability_percent": 6.8889,
+      "outcome": "team_b",
+      "sample_count": 186,
+      "path_deviation": 0.6374413963765405,
+      "result_surprise": 0.6316831683168317,
+      "reason_cn": "Netherlands通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.6002191725621242,
+      "probability": 0.016666666666666666,
+      "probability_percent": 1.6667,
+      "outcome": "team_b",
+      "sample_count": 45,
+      "path_deviation": 0.5079287737962163,
+      "result_surprise": 0.9108910891089109,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.601870523807866,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome": "team_b",
+      "sample_count": 21,
+      "path_deviation": 0.4833045240499479,
+      "result_surprise": 0.9584158415841584,
+      "reason_cn": "荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6200500906786274,
+      "probability": 0.04888888888888889,
+      "probability_percent": 4.8889,
+      "outcome": "team_b",
+      "sample_count": 132,
+      "path_deviation": 0.612294054923158,
+      "result_surprise": 0.7386138613861386,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；Netherlands充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H2",
+        "H4"
+      ]
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.6738094491035223,
+      "probability": 0.051111111111111114,
+      "probability_percent": 5.1111,
+      "outcome": "draw",
+      "sample_count": 138,
+      "path_deviation": 0.6501395763082848,
+      "result_surprise": 0.7267326732673267,
+      "reason_cn": "紧凑防守对进攻空间的压缩；双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": [
+        "H4"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.6836938060764541,
+      "probability": 0.03925925925925926,
+      "probability_percent": 3.9259,
+      "outcome": "team_b",
+      "sample_count": 106,
+      "path_deviation": 0.6218013572331714,
+      "result_surprise": 0.7900990099009901,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.6841393832065386,
+      "probability": 0.012962962962962963,
+      "probability_percent": 1.2963,
+      "outcome": "team_b",
+      "sample_count": 35,
+      "path_deviation": 0.5463575158338767,
+      "result_surprise": 0.9306930693069306,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2",
+        "H4"
+      ]
+    },
+    {
+      "score": "1-7",
+      "deviation": 0.7112510258854582,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.5302293741085469,
+      "result_surprise": 0.9900990099009901,
+      "reason_cn": "荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空、突尼斯的少量进球路径集中在定位球、长传二点和荷兰压上身后；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1",
+        "H3"
+      ]
+    },
+    {
+      "score": "0-7",
+      "deviation": 0.7194789503692136,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_b",
+      "sample_count": 16,
+      "path_deviation": 0.546771381343785,
+      "result_surprise": 0.9683168316831683,
+      "reason_cn": "突尼斯的少量进球路径集中在定位球、长传二点和荷兰压上身后、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H2"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.7274891618725484,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.5429270826411773,
+      "result_surprise": 0.9841584158415841,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.7471211200179434,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_b",
+      "sample_count": 14,
+      "path_deviation": 0.5608088786225888,
+      "result_surprise": 0.9722772277227723,
+      "reason_cn": "荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1",
+        "H4"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.759729425884768,
+      "probability": 0.03259259259259259,
+      "probability_percent": 3.2593,
+      "outcome": "team_b",
+      "sample_count": 88,
+      "path_deviation": 0.6470877155499687,
+      "result_surprise": 0.8257425742574258,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.8755851370164442,
+      "probability": 0.00962962962962963,
+      "probability_percent": 0.963,
+      "outcome": "draw",
+      "sample_count": 26,
+      "path_deviation": 0.6487524286814922,
+      "result_surprise": 0.9485148514851485,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H4",
+        "H2"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.8822999203504904,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6270901674542261,
+      "result_surprise": 0.996039603960396,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H2"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.9286915281594917,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_a",
+      "sample_count": 23,
+      "path_deviation": 0.6766196353354469,
+      "result_surprise": 0.9544554455445544,
+      "reason_cn": "Tunisia在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.9358610341725709,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_b",
+      "sample_count": 22,
+      "path_deviation": 0.6797473670265274,
+      "result_surprise": 0.9564356435643564,
+      "reason_cn": "突尼斯的少量进球路径集中在定位球、长传二点和荷兰压上身后；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.995693169885051,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.69555506876757,
+      "result_surprise": 0.9920792079207921,
+      "reason_cn": "荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空、紧凑防守对进攻空间的压缩；Tunisia打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H1",
+        "H4"
+      ]
+    },
+    {
+      "score": "1-0",
+      "deviation": 1.0,
+      "probability": 0.01888888888888889,
+      "probability_percent": 1.8889,
+      "outcome": "team_a",
+      "sample_count": 51,
+      "path_deviation": 0.7481887051449054,
+      "result_surprise": 0.899009900990099,
+      "reason_cn": "荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空、紧凑防守对进攻空间的压缩；Tunisia在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H1",
+        "H4"
+      ]
+    },
+    {
+      "score": "1-8",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.7754086612958759,
+      "result_surprise": 0.9920792079207921,
+      "reason_cn": "突尼斯的少量进球路径集中在定位球、长传二点和荷兰压上身后、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H4"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.7330461759759181,
+      "result_surprise": 0.996039603960396,
+      "reason_cn": "突尼斯的少量进球路径集中在定位球、长传二点和荷兰压上身后、荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H3",
+        "H1"
+      ]
+    },
+    {
+      "score": "1-9",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.9459970952650563,
+      "result_surprise": 0.998019801980198,
+      "reason_cn": "荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.9459970952650563,
+      "result_surprise": 0.998019801980198,
+      "reason_cn": "荷兰控球推进与突尼斯出球脆弱叠加，抬高荷兰压制和多球胜空；Tunisia打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H1"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 0.8625772218576617,
+      "result_surprise": 0.998019801980198,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H4",
+        "H2"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}
