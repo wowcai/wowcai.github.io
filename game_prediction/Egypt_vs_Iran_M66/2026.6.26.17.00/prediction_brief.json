@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T08:18:53.950583Z",
+  "prediction_generated_at_local": "2026-06-26T16:18:53.950583+08:00",
+  "match": {
+    "match_id": "M66",
+    "team_a": "Egypt",
+    "team_b": "Iran",
+    "kickoff_utc": "2026-06-27T03:00:00Z",
+    "venue": "Lumen Field, Seattle",
+    "stage": "group",
+    "group": "G",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.4",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": true,
+    "reasons": [],
+    "warnings": [
+      "委员会审计使用了确定性备用路径。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.42074074074074075,
+    "draw": 0.30074074074074075,
+    "team_b_win": 0.2785185185185185
+  },
+  "most_likely_outcome": {
+    "label": "Egypt胜",
+    "probability": 0.42074074074074075
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.14333333333333334
+    },
+    {
+      "score": "1-0",
+      "probability": 0.13148148148148148
+    },
+    {
+      "score": "0-0",
+      "probability": 0.11
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "埃及前两轮1胜1平暂列G组第一，且对新西兰一战3比1取胜并打出1.96 xG，近期状态更有说服力。",
+      "text_en": "Egypt are top of Group G with one win and one draw, and their 3-1 win over New Zealand came with 1.96 xG, pointing to stronger recent form",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_d97b6d266773",
+        "E_7cf540390dce",
+        "E_45a2918fc8f6"
+      ],
+      "source_names": [
+        "FOX Sports",
+        "The Guardian",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "出线形势对埃及更友好：费城联盟追踪显示，埃及本场打平或取胜都有较大机会晋级。",
+      "text_en": "Qualification math favors Egypt: Philadelphia Union's World Cup tracker says a draw or a win would likely be enough for them to advance",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_544c15074e97"
+      ],
+      "source_names": [
+        "Philadelphia Union"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "埃及中场哈姆迪·法蒂因肌肉伤缺席一周，Ahram称他无缘此战，削弱中场对抗与轮换深度。",
+      "text_en": "Egypt lose midfielder Hamdi Fathi to a muscle injury, with Ahram reporting he will miss this match, reducing midfield bite and depth",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_4fb199a3fbeb"
+      ],
+      "source_names": [
+        "Ahram Online"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "伊朗前两轮先后2比2战平新西兰、0比0逼平比利时，连续拿分说明其防守韧性与比赛续航在线。",
+      "text_en": "Iran have already drawn 2-2 with New Zealand and held Belgium 0-0, evidence of resilience and enough defensive structure to stay competitive",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_0dd0f559bdb5",
+        "E_cb5bd365f9fb"
+      ],
+      "source_names": [
+        "BBC Sport",
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "两队都带着较好的晋级机会进入末轮，路透称双方都有出线希望，末轮情境会抬高谨慎博弈成分。",
+      "text_en": "Both teams enter the final group game with realistic chances to progress, and Reuters says that context can increase caution and game management",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_427d1bc8bb35",
+        "E_0e42afa5fe33"
+      ],
+      "source_names": [
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在西雅图Lumen Field举行，世界杯期间改铺天然草；另有本地天气信息提示周五转凉并可能有雨。",
+      "text_en": "The match is at Seattle's Lumen Field, converted to natural grass for the World Cup, with local weather information pointing to cooler conditions and possible rain",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_dbce371ddcec",
+        "E_58d9841540cd",
+        "E_2c4b5e8b8e59"
+      ],
+      "source_names": [
+        "Lumen Field",
+        "ESPN",
+        "Facebook / Claire Anderson Wx"
+      ],
+      "generated_by": "gpt-5.4"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "partial_audit",
+    "source_report_generated_at": "2026-06-26T09:15:00.133228Z",
+    "source_state_sha256": "e0ef9217eb8981855c8a521ff001495fcb6e26174a7dd2e49fd219e03be7ad6b",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "已对 high_scoring（开放／大比分，总进球≥4）情景进行独立审计。提案引用的证据（伊朗两度扳平2-2、埃及3-1胜新西兰及1.96 xG、Fathi伤缺、出线形势）均真实存在于证据池，无过期或幻觉证据。所选比分全部取自原候选池，未改变情景总概率。审计保留4个候选，但下调情景证据强度并补充关键反向约束：本情景基础概率仅0.183，主预测与9条推演的代表比分以低进球（0-0最常见）为主，且三条被接受机制(H_072c07e3c1…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.1833333333333334,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.45,
+        "summary_cn": "高进球为低概率尾部情景(base_event_probability=0.183)，且与主预测低进球倾向(xG_a≈1.26、xG_b≈0.98)和推演代表比分(0-0最常见)相悖。三条被接受机制的total_goals方向均为down/neutral，无机制支持开放对攻，因此本情景整体可信度有限。在此前提下，证据可支持的开放路径以总进球4-5、埃及占优为…",
+        "caution_cn": "本情景为低概率尾部，仅在比赛偏离主预测、转为开放对攻时成立。关键反向约束：伊朗防守韧性(连续0-0比利时、2-2新西兰)、强门将与74低位紧凑度，使任一方打入≥4球(尤其4-1)的可能性受限；同时无任何被接受机制支持高总进球，机制方向反而压低进球。所有分级均应被视为条件性、非主线判断，不可据此抬高…",
+        "top_scores": [
+          {
+            "score": "2-2",
+            "base_probability": 0.04148148148148148,
+            "tail_focus_conditional_probability": 0.246041156166838,
+            "support_grade": 2,
+            "script_cn": "上下半场互有攻守，伊朗在落后或拉锯中依靠转换与定位球追平，埃及凭萨拉赫/马尔穆什再下一城，全场呈开放对攻型平局。"
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.03333333333333333,
+            "tail_focus_conditional_probability": 0.19771164334835198,
+            "support_grade": 2,
+            "script_cn": "埃及通过萨拉赫与边路单挑及快速转换多点取分，伊朗为求胜上压后被反击打穿，仅由塔雷米保留一粒回追球。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.08703703703703704,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.03333333333333333,
+            "tail_focus_conditional_probability": 0.359985600575977,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "4-1",
+            "base_probability": 0.012592592592592593,
+            "tail_focus_conditional_probability": 0.1468741250349986,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.27851851851851844,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.10592592592592592,
+            "tail_focus_conditional_probability": 0.3803191489361703,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.07111111111111111,
+            "tail_focus_conditional_probability": 0.2553191489361703,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

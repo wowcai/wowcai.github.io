@@ -1,0 +1,912 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-26T09:10:27.535932Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_New_Zealand_vs_Belgium_M65\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "9791a3503a82675e305841feb1e59104b7ede850a81f8a80025259fd7ad313ac",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-26T08:04:18.383645+00:00"
+  },
+  "match": {
+    "match_id": "M65",
+    "team_a": "New Zealand",
+    "team_b": "Belgium",
+    "kickoff_utc": "2026-06-27T03:00:00Z",
+    "venue": "BC Place, Vancouver",
+    "stage": "group",
+    "group": "G",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 95,
+      "usable_evidence": 95,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 1,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.15,
+    "draw": 0.25555555555555554,
+    "team_b_win": 0.5944444444444444,
+    "top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.18037037037037038
+      },
+      {
+        "score": "0-2",
+        "probability": 0.1425925925925926
+      },
+      {
+        "score": "0-0",
+        "probability": 0.12037037037037036
+      },
+      {
+        "score": "1-1",
+        "probability": 0.11037037037037037
+      },
+      {
+        "score": "1-2",
+        "probability": 0.08074074074074074
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999999
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_b",
+    "favorite_team": "Belgium",
+    "underdog_side": "team_a",
+    "underdog_team": "New Zealand",
+    "team_a_win": 0.15,
+    "draw": 0.25555555555555554,
+    "team_b_win": 0.5944444444444444,
+    "win_probability_gap": 0.4444444444444444,
+    "underdog_win_probability": 0.15,
+    "favorite_fail_to_win_probability": 0.40555555555555556,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "已对 high_scoring（总进球≥4）情景做独立复核。提案引用的证据（E_4e7918677913、E_794b8816b8e2、E_db50b6cdb579、E_80eb0f7cec8d、E_4bf09bbab09c）均真实存在且未过期，未发现幻觉证据。提案的一个优点是没有把开放大比分机械压回 2-2 这类最低达标的开放平局（候选池中 2-2 存在但未被强行纳入）。核心问题在于：本场三条被接受的机制（H_6d47daccae、H_2d31786687、H_490a3696e7）的 outcome_direction 对 total_goals 一致为 down，且比利时 finishing_state 仅 0.44、expected_goals_b 1.53、前两轮 1-1 与 0-0、卢卡库不能首发，这些都明确削弱『比利时单场打入 4 球』的可信度。因此对依赖比利时 4 球的两条候选做了处理：1-4 由 grade1 降为 grade0，0-4 删除（其『净胜4球+零封』被双重反证——既违背比利时偏弱的终结状态，又忽视新西兰被验证的空中/定位球进球能力）。保留 1-3、2-3、1-4 三条，1-3 作为最契合且证据最扎实的开放主路径维持 grade2。；blowout情景成立且方向明确：Belgium(strength0.72/attack0.70/transition0.71/dribble0.78)对位NZ(strength0.36/defence0.45)，team_b_win0.594、eg_b1.53，且NZ上一场1-3负埃及暴露无人盯防失位(PF_04)。提案正确地以Belgium净胜为主轴，且没有把开放大比分机械压回最低达标比分——它保留了0-3并认真比较了更深一档的0-4，对0-5也做了显式评估，结构合理。主要保留意见来自Belgium终结薄弱(finishing_state0.44、本届两战仅1-1/0-0且进球为乌龙)，因此大胜更可能来自NZ崩盘而非Belgium高效终结，净胜上限不宜超过4。审计后保留4个候选，对0-3、0-4维持，1-4维持中性、0-5维持负支持以记录其被评估但不被看好。；对 upset 情景独立复核：候选全部引用真实存在的证据，未发现过期/幻觉证据，机制方向（Lukaku无法完整首发、Belgium关键破局功能受限、New Zealand紧凑中低位防守 → total_goals 下行、team_a/draw 上行）与所选低净胜球比分一致。本场爆冷的真实形态本就是低比分小胜（New Zealand attack 0.38、expected_goals_a 0.62、Belgium GK Courtois 0.8），因此 1-0、2-1、2-0 属于证据支撑区间，并非把开放大比分机械压回最低达标比分；同时正确",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.1737037037037038,
+      "attention_level": "low",
+      "evidence_strength": 0.42,
+      "rationale_cn": "开放/大比分情景有真实但有限的证据基础：新西兰末轮必须取胜否则出局（E_4e7918677913、E_794b8816b8e2），将被迫压上并暴露已被验证的防线失位（1-3 负埃及、无人盯防头球，E_db50b6cdb579、E_80eb0f7cec8d），而比利时实力、转换与边路单挑质量明显占优（strength 0.72、transition 0.71、wing_isolation 0.76）。但三条被接受机制对 total_goals 一致指向下行，且比利时终结偏弱（finishing_state 0.44、xG 1.53）、前两轮仅打入合计 1 球、卢卡库不能首发，这些都压制了比利时高产出与整体大比分的概率。因此本情景整体证据强度偏低，候选集中在『新西兰开放被反击打穿、比利时占优但产出不极端』的主路径，避免把比利时单场 4 球作为高强度结论。",
+      "supporting_evidence_ids": [
+        "E_4e7918677913",
+        "E_794b8816b8e2",
+        "E_db50b6cdb579",
+        "E_80eb0f7cec8d",
+        "E_4bf09bbab09c"
+      ],
+      "counter_evidence_ids": [
+        "E_F_45b3b4078c88",
+        "E_F_973ce687a8f7",
+        "E_94984264b175",
+        "E_60b0b79bcf8f",
+        "E_ecc064244c97"
+      ],
+      "caution_cn": "注意：本场三条被接受机制（H_6d47daccae、H_2d31786687、H_490a3696e7）均判定 total_goals 下行，故 high_scoring 与主推演方向相反，属低注意度尾部情景。任何依赖比利时打入 4 球以上的比分都与比利时偏弱的终结状态及破局功能受限相冲突，应保持低强度；同时不得把开放局机械压回 2-2 等最低达标开放平局。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-3",
+          "base_probability": 0.03888888888888889,
+          "base_conditional_probability": 0.22388059701492524,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.1172707889125799,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.03837953091684433,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.023333333333333334,
+          "base_conditional_probability": 0.13432835820895514,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.1257995735607675,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.10234541577825154,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.04690831556503195,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.04690831556503195,
+          "total_goals": 5,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03888888888888889,
+          "base_conditional_probability": 0.22388059701492524,
+          "tail_focus_conditional_probability": 0.2618473445123662,
+          "tail_focus_implied_overall_probability": 0.04548385354677771,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "新西兰为求胜整体压上，比利时利用被打开的中路与肋部空间通过快速转换和边路单挑（Doku/De Bruyne）多次完成反击破门取得 3 球；新西兰则借 Chris Wood 支点与定位球/空中威胁扳回 1 球。",
+          "rationale_cn": "最契合开放情景的主路径，且证据最扎实。新西兰末轮非胜即遭淘汰（E_4e7918677913、E_794b8816b8e2）必须压上抢分，从而暴露其已被验证的防线失位（1-3 负埃及、无人盯防头球，E_db50b6cdb579、E_80eb0f7cec8d）；比利时凭实力与转换/单挑质量在被打开空间完成多次反击，取得 3 球，新西兰借 Wood 与定位球拿下 1 球（E_24e7dac9f189）。比利时 3 球略高于其 xG 1.53，但在开放对攻局中可接受。维持 grade2。",
+          "evidence_ids": [
+            "E_4e7918677913",
+            "E_794b8816b8e2",
+            "E_db50b6cdb579",
+            "E_80eb0f7cec8d",
+            "E_24e7dac9f189"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.1172707889125799,
+          "tail_focus_conditional_probability": 0.13571869216533008,
+          "tail_focus_implied_overall_probability": 0.023574839490940684,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "双方均需取胜、相互压上，比赛被彻底打开；新西兰借空中/定位球与边路反击拿下 2 球，比利时以质量优势取得 3 球，形成 5 球对攻。",
+          "rationale_cn": "开放对攻的合理延伸。在新西兰被迫全力追分、比利时同样需要赢球确保出线（E_4bf09bbab09c、E_4e7918677913）的双向压上下节奏被打开，新西兰打入 2 球虽高于其 xG 0.62，但在对攻情景下成立。比起最低达标的 4 球，本 5 球路径体现两端均失守的开放延伸，证据支撑中等，grade1 合适。",
+          "evidence_ids": [
+            "E_4bf09bbab09c",
+            "E_4e7918677913",
+            "E_db50b6cdb579",
+            "E_24e7dac9f189"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.10234541577825154,
+          "tail_focus_conditional_probability": 0.09870450339296734,
+          "tail_focus_implied_overall_probability": 0.017145337811593227,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "新西兰彻底拉开阵型追分，已暴露的盯人与协防漏洞被比利时转换与个人突破连续惩罚，比利时扩大到 4 球，新西兰仅靠一次定位球/空中机会保留进球。",
+          "rationale_cn": "较大净胜球的一边倒尾部路径，已由 grade1 下调为 grade0。比利时单场打入 4 球明显高于其 xG 1.53 且与偏弱的 finishing_state 0.44 冲突，并直接违背三条被接受机制对其破局功能受限（卢卡库不能首发、Doku 或难踢满，H_6d47daccae、H_2d31786687）与 total_goals 下行的判定。仅在『新西兰开放后被持续打穿』这一条件假设下保留有限证据支持，故以最低强度纳入。新西兰保留 1 球与其被验证的空中/定位球能力一致（E_24e7dac9f189）。",
+          "evidence_ids": [
+            "E_db50b6cdb579",
+            "E_80eb0f7cec8d",
+            "E_24e7dac9f189"
+          ],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.03888888888888889,
+          "base_conditional_probability": 0.22388059701492524,
+          "tail_focus_conditional_probability": 0.2618473445123662,
+          "tail_focus_implied_overall_probability": 0.04548385354677771,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.1172707889125799,
+          "tail_focus_conditional_probability": 0.13571869216533008,
+          "tail_focus_implied_overall_probability": 0.023574839490940684,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.023333333333333334,
+          "base_conditional_probability": 0.13432835820895514,
+          "tail_focus_conditional_probability": 0.10835062531546187,
+          "tail_focus_implied_overall_probability": 0.01882090491590802,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.1257995735607675,
+          "tail_focus_conditional_probability": 0.10147122053352778,
+          "tail_focus_implied_overall_probability": 0.017625926826009095,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.10234541577825154,
+          "tail_focus_conditional_probability": 0.09870450339296734,
+          "tail_focus_implied_overall_probability": 0.017145337811593227,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.04690831556503195,
+          "tail_focus_conditional_probability": 0.045239564055110024,
+          "tail_focus_implied_overall_probability": 0.00785827983031356,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.04690831556503195,
+          "tail_focus_conditional_probability": 0.045239564055110024,
+          "tail_focus_implied_overall_probability": 0.00785827983031356,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.006666666666666667,
+          "base_conditional_probability": 0.03837953091684433,
+          "tail_focus_conditional_probability": 0.04105210027480233,
+          "tail_focus_implied_overall_probability": 0.007130901862549001,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.03411513859275051,
+          "tail_focus_conditional_probability": 0.03649075579982428,
+          "tail_focus_implied_overall_probability": 0.006338579433376889,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.044776119402985044,
+          "tail_focus_conditional_probability": 0.036116875105153955,
+          "tail_focus_implied_overall_probability": 0.0062736349719693385,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000007
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.12888888888888894,
+      "attention_level": "medium",
+      "evidence_strength": 0.55,
+      "rationale_cn": "blowout方向证据真实且收敛于Belgium净胜：强弱差显著(0.72 vs 0.36)、team_b_win0.594、eg_b1.53，NZ防线在1-3负埃及时出现盯防失位(E_db50b6cdb579/E_80eb0f7cec8d)。但Belgium终结不稳(finishing_state0.44，本届1-1/0-0且进球为乌龙E_8129e6d02053)，故大胜应来自NZ崩盘而非Belgium高效终结，净胜上限合理止于4，5球及以上缺乏证据支撑。所引证据均存在于输入证据池且时效新鲜，未发现幻觉或过期证据。提案未将开放大比分压回2-2/3-1等最低达标比分，结构通过审计。",
+      "supporting_evidence_ids": [
+        "E_db50b6cdb579",
+        "E_80eb0f7cec8d",
+        "E_4bf09bbab09c",
+        "E_e2063f051ffb"
+      ],
+      "counter_evidence_ids": [
+        "E_8129e6d02053",
+        "E_F_45b3b4078c88",
+        "E_F_973ce687a8f7",
+        "E_ecc064244c97"
+      ],
+      "caution_cn": "Belgium终结薄弱(0.44)且本届两场低进球，崩盘更依赖NZ防线持续失位而非Belgium批量终结，因此净胜不宜外推至5球及以上；0-3为最可支持路径，0-4为合理的更深净胜比较项，更高净胜仅作记录性评估。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.47413793103448254,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.13793103448275856,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.1695402298850574,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.06321839080459767,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.04597701149425285,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.022988505747126426,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-6",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.01724137931034482,
+          "total_goals": 6,
+          "winning_margin": 6
+        },
+        {
+          "score": "2-5",
+          "base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.014367816091954018,
+          "total_goals": 7,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.47413793103448254,
+          "tail_focus_conditional_probability": 0.5151500960052451,
+          "tail_focus_implied_overall_probability": 0.0663971234851205,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "NZ低位防守但defence仅0.45，Belgium借De Bruyne中路组织与Doku/Trossard边路单挑(wing_isolation0.76、dribble0.78、transition0.71)逐步打开；如对埃及般出现无人盯防失位，Belgium在中后段连续得手净胜3球，而其终结效率有限使总进球不外溢，落在0-3。",
+          "rationale_cn": "本情景内最受支持的崩盘路径。比利时进攻端(transition 0.71、dribble 0.78、wing_isolation 0.76、De Bruyne组织)对位新西兰low_block_compactness 0.59但defence仅0.45，且PF_04显示其防线在1-3负埃及时出现无人盯防失位。claude-opus rollout_6以0-3为代表且三条机制全部激活。同时比利时finishing_state 0.44与两场低进球(1-1、0-0)使净胜3但总进球不外溢，最符合证据画像。",
+          "evidence_ids": [
+            "E_db50b6cdb579",
+            "E_80eb0f7cec8d",
+            "E_4bf09bbab09c",
+            "E_e2063f051ffb"
+          ],
+          "mechanism_ids": [
+            "H_6d47daccae",
+            "H_2d31786687",
+            "H_490a3696e7"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.1695402298850574,
+          "tail_focus_conditional_probability": 0.1810292343642256,
+          "tail_focus_implied_overall_probability": 0.02333265687361131,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "若NZ防线如对埃及般反复失位且体能在末段下滑，Belgium边路单挑与转换威胁把净胜从3扩大到4；属合理的更深净胜路径，但受限于Belgium终结不稳。",
+          "rationale_cn": "更深一档的净胜路径。一旦新西兰防线如对埃及般持续失位(PF_04)，比利时凭边路单挑与转换可把净胜扩大到4。条件概率为非0-3候选中最高(0.170)，是合理的更大净胜球比较对象，但比利时终结不稳(finishing_state 0.44)对其支持度有限。",
+          "evidence_ids": [
+            "E_db50b6cdb579",
+            "E_80eb0f7cec8d",
+            "E_4bf09bbab09c"
+          ],
+          "mechanism_ids": [
+            "H_490a3696e7"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.13793103448275856,
+          "tail_focus_conditional_probability": 0.11162123710308007,
+          "tail_focus_implied_overall_probability": 0.014386737226619215,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "崩盘格局下NZ仍借Chris Wood支点与定位球(aerial_threat0.63、set_piece0.52)打入1球，但Belgium净胜仍达3，总进球升至5。",
+          "rationale_cn": "崩盘但新西兰仍打入1球的路径。Chris Wood的支点/定位球与新西兰aerial_threat 0.63、set_piece 0.52可解释这1球，条件概率0.138居次。但其总进球升至5，与抑制总进球的机制(H_6d47daccae、H_2d31786687)方向相左，故仅给中性支持。",
+          "evidence_ids": [
+            "E_24e7dac9f189",
+            "E_F_badec508a121"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.06321839080459767,
+          "tail_focus_conditional_probability": 0.05163935617542232,
+          "tail_focus_implied_overall_probability": 0.006655739240387769,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "scenario_focus_multiplier": 1.2312,
+          "script_cn": "理论上的更大净胜球路径，需Belgium罕见高效终结叠加NZ全面崩盘，与现有终结画像不符，仅作记录性评估。",
+          "rationale_cn": "已认真比较的更大净胜球路径，但证据支持有限。比利时本届两战仅1-1、0-0且其中比利时进球为乌龙(E_8129e6d02053)，叠加finishing_state 0.44与Lukaku无法首发(E_F_45b3b4078c88、E_F_973ce687a8f7)，5球大胜缺乏证据支撑，机制方向亦压制总进球，故给予负支持以记录该路径被认真评估但不被看好。",
+          "evidence_ids": [
+            "E_8129e6d02053",
+            "E_F_45b3b4078c88",
+            "E_F_973ce687a8f7",
+            "E_ecc064244c97"
+          ],
+          "mechanism_ids": [
+            "H_6d47daccae",
+            "H_2d31786687"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.06111111111111111,
+          "base_conditional_probability": 0.47413793103448254,
+          "tail_focus_conditional_probability": 0.5151500960052451,
+          "tail_focus_implied_overall_probability": 0.0663971234851205,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.1695402298850574,
+          "tail_focus_conditional_probability": 0.1810292343642256,
+          "tail_focus_implied_overall_probability": 0.02333265687361131,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.13793103448275856,
+          "tail_focus_conditional_probability": 0.11162123710308007,
+          "tail_focus_implied_overall_probability": 0.014386737226619215,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.06321839080459767,
+          "tail_focus_conditional_probability": 0.05163935617542232,
+          "tail_focus_implied_overall_probability": 0.006655739240387769,
+          "support_grade": -1,
+          "multiplier": 0.85,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.04597701149425285,
+          "tail_focus_conditional_probability": 0.04418340635330253,
+          "tail_focus_implied_overall_probability": 0.005694750152203439,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.022988505747126426,
+          "tail_focus_conditional_probability": 0.017225499552944452,
+          "tail_focus_implied_overall_probability": 0.002220175497935064,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.01724137931034482,
+          "tail_focus_conditional_probability": 0.01656877738248845,
+          "tail_focus_implied_overall_probability": 0.00213553130707629,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.014367816091954018,
+          "tail_focus_conditional_probability": 0.011627212198237508,
+          "tail_focus_implied_overall_probability": 0.0014986184611061682,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "1-6",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.011494252873563213,
+          "tail_focus_conditional_probability": 0.011045851588325632,
+          "tail_focus_implied_overall_probability": 0.0014236875380508598,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.00862068965517241,
+          "tail_focus_conditional_probability": 0.006976327318942504,
+          "tail_focus_implied_overall_probability": 0.0008991710766637009,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 New Zealand 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.15000000000000005,
+      "attention_level": "low",
+      "evidence_strength": 0.5,
+      "rationale_cn": "Belgium 为明显热门（strength 0.72 vs 0.36，team_b_win 0.594，base_event_probability 仅 0.15），故 attention 维持 low。爆冷成立的核心路径有真实证据与已激活机制支撑：Lukaku 受限只能替补（E_F_45b3b4078c88、E_F_973ce687a8f7、E_94984264b175、E_60b0b79bcf8f）、New Zealand 紧凑防守压缩中路肋部（H_490a3696e7），叠加 Wood 支点与定位球（E_24e7dac9f189）。但 New Zealand 进攻能力与终结状态偏弱，机制总方向为 total_goals 下行，因此 upset 只能是低比分小胜，证据强度中性偏低，定为 0.5。",
+      "supporting_evidence_ids": [
+        "E_F_45b3b4078c88",
+        "E_F_973ce687a8f7",
+        "E_94984264b175",
+        "E_60b0b79bcf8f",
+        "E_24e7dac9f189",
+        "E_8129e6d02053",
+        "E_4e7918677913",
+        "E_794b8816b8e2"
+      ],
+      "counter_evidence_ids": [
+        "E_db50b6cdb579",
+        "E_80eb0f7cec8d",
+        "E_4bf09bbab09c",
+        "E_e2063f051ffb",
+        "E_F_56dbd2116288"
+      ],
+      "caution_cn": "upset 总概率仅 0.15，且 New Zealand 此前 2-2 平伊朗、1-3 负埃及并暴露后防失位（E_db50b6cdb579、E_80eb0f7cec8d），Belgium 控场与 xG 仍占优、末轮抢分动机明确（E_4bf09bbab09c、E_F_56dbd2116288）。所有候选限于低净胜球，不应外推到 3-0 及以上大比分，因 New Zealand 弱进攻无法支撑。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-0",
+          "base_probability": 0.07592592592592592,
+          "base_conditional_probability": 0.5061728395061726,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-1",
+          "base_probability": 0.03481481481481481,
+          "base_conditional_probability": 0.23209876543209867,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-0",
+          "base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.11358024691358022,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.05432098765432097,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.051851851851851836,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.01975308641975308,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.007407407407407405,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.007407407407407405,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.07592592592592592,
+          "base_conditional_probability": 0.5061728395061726,
+          "tail_focus_conditional_probability": 0.5659209900047595,
+          "tail_focus_implied_overall_probability": 0.08488814850071395,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "前中段拉锯、低总进球节奏，Belgium 控球难转化为高质量机会；New Zealand 凭一次定位球或反击由 Wood 区域破门，随后回收紧凑防线零封保住一球小胜。",
+          "rationale_cn": "该比分与已激活核心机制最一致：Lukaku无法以完整状态首发、Belgium关键破局功能受限，叠加New Zealand紧凑中低位防守压缩中路与肋部，使Belgium控球难以等比例转化为高质量机会（H_6d47daccae、H_2d31786687、H_490a3696e7均指向total_goals下行）。New Zealand凭借Chris Wood的支点与定位球威胁制造单次破门即可锁定一球小胜，符合9条Rollout中以0-1为代表比分、低总进球节奏的主基调，且为候选池中条件概率最高（0.506）的爆冷形态，定为最高支持。",
+          "evidence_ids": [
+            "E_F_45b3b4078c88",
+            "E_F_973ce687a8f7",
+            "E_94984264b175",
+            "E_60b0b79bcf8f",
+            "E_24e7dac9f189",
+            "E_8129e6d02053"
+          ],
+          "mechanism_ids": [
+            "H_6d47daccae",
+            "H_2d31786687",
+            "H_490a3696e7"
+          ]
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.03481481481481481,
+          "base_conditional_probability": 0.23209876543209867,
+          "tail_focus_conditional_probability": 0.2147548786292241,
+          "tail_focus_implied_overall_probability": 0.03221323179438362,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "New Zealand 必须取胜，比赛转为开放对攻；Belgium 后段借 Lukaku 替补或边路单挑偶发扳回一球，但 New Zealand 通过反击/定位球再下一城保住净胜一球。",
+          "rationale_cn": "在New Zealand必须取胜（任何非胜即出局）且Belgium同样有抢分动机的开放对攻情境下，单球净胜伴随Belgium偶发破门具备机制空间：Belgium后段可通过Lukaku替补、边路单挑或转换短暂恢复威胁（counter_evidence与PF_01），但New Zealand凭反击/定位球再下一城仍可保住小胜。winning_margin=1与主导的小净胜球结构一致，条件概率次高（0.232），故给予有限正支持。",
+          "evidence_ids": [
+            "E_4e7918677913",
+            "E_794b8816b8e2",
+            "E_F_56dbd2116288",
+            "E_24e7dac9f189"
+          ],
+          "mechanism_ids": [
+            "H_6d47daccae"
+          ]
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.11358024691358022,
+          "tail_focus_conditional_probability": 0.10509281294621606,
+          "tail_focus_implied_overall_probability": 0.015763921941932414,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "Belgium 前中段破门把握被削弱（Lukaku受限、Doku未必踢满），New Zealand 保持零封并通过定位球/反击两度得手。",
+          "rationale_cn": "与1-0同源：Belgium前中段破门把握被削弱（Lukaku受限、Doku未必踢满），New Zealand紧凑防守保持零封并通过定位球/反击二次得手。低总进球（2球）与净胜2球仍处于机制可支撑区间，但需要New Zealand把握两次有限机会、且面对Courtois仍能零封，难度高于1-0，故支持度低于1-0。",
+          "evidence_ids": [
+            "E_F_45b3b4078c88",
+            "E_94984264b175",
+            "E_24e7dac9f189",
+            "E_8129e6d02053"
+          ],
+          "mechanism_ids": [
+            "H_6d47daccae",
+            "H_2d31786687"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.07592592592592592,
+          "base_conditional_probability": 0.5061728395061726,
+          "tail_focus_conditional_probability": 0.5659209900047595,
+          "tail_focus_implied_overall_probability": 0.08488814850071395,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.03481481481481481,
+          "base_conditional_probability": 0.23209876543209867,
+          "tail_focus_conditional_probability": 0.2147548786292241,
+          "tail_focus_implied_overall_probability": 0.03221323179438362,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.11358024691358022,
+          "tail_focus_conditional_probability": 0.10509281294621606,
+          "tail_focus_implied_overall_probability": 0.015763921941932414,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.05432098765432097,
+          "tail_focus_conditional_probability": 0.04188481675392668,
+          "tail_focus_implied_overall_probability": 0.006282722513089005,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.051851851851851836,
+          "tail_focus_conditional_probability": 0.03998096144693002,
+          "tail_focus_implied_overall_probability": 0.0059971442170395056,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.01975308641975308,
+          "tail_focus_conditional_probability": 0.01523084245597334,
+          "tail_focus_implied_overall_probability": 0.0022846263683960017,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.007407407407407405,
+          "tail_focus_conditional_probability": 0.005711565920990003,
+          "tail_focus_implied_overall_probability": 0.0008567348881485008,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.007407407407407405,
+          "tail_focus_conditional_probability": 0.005711565920990003,
+          "tail_focus_implied_overall_probability": 0.0008567348881485008,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.002469135802469135,
+          "tail_focus_conditional_probability": 0.0019038553069966675,
+          "tail_focus_implied_overall_probability": 0.0002855782960495002,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.002469135802469135,
+          "tail_focus_conditional_probability": 0.0019038553069966675,
+          "tail_focus_implied_overall_probability": 0.0002855782960495002,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999997
+    }
+  ],
+  "llm": {
+    "proposer_model": "claude-opus-4-8",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999999,
+    "source_hash": "9791a3503a82675e305841feb1e59104b7ede850a81f8a80025259fd7ad313ac"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_New_Zealand_vs_Belgium_M65\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\web_delivery\\New_Zealand_vs_Belgium_M65\\2026.6.27.11\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_New_Zealand_vs_Belgium_M65\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\web_delivery\\New_Zealand_vs_Belgium_M65\\2026.6.27.11\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

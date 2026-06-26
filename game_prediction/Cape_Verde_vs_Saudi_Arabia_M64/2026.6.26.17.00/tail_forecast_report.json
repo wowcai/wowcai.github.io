@@ -1,0 +1,839 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-26T09:06:18.748606Z",
+  "status": "partial_audit",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Cape_Verde_vs_Saudi_Arabia_M64\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "0a67efe730d4331d91cc74b7c4037f35621722e60b710a0fc7bd26b7f0c32833",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-26T07:49:50.495309+00:00"
+  },
+  "match": {
+    "match_id": "M64",
+    "team_a": "Cape Verde",
+    "team_b": "Saudi Arabia",
+    "kickoff_utc": "2026-06-27T00:00:00Z",
+    "venue": "NRG Stadium, Houston",
+    "stage": "group",
+    "group": "H",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 103,
+      "usable_evidence": 103,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 1,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.45185185185185184,
+    "draw": 0.33,
+    "team_b_win": 0.21814814814814815,
+    "top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.1674074074074074
+      },
+      {
+        "score": "0-0",
+        "probability": 0.15481481481481482
+      },
+      {
+        "score": "1-1",
+        "probability": 0.14037037037037037
+      },
+      {
+        "score": "0-1",
+        "probability": 0.10407407407407407
+      },
+      {
+        "score": "2-0",
+        "probability": 0.09296296296296297
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999998
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Cape Verde",
+    "underdog_side": "team_b",
+    "underdog_team": "Saudi Arabia",
+    "team_a_win": 0.45185185185185184,
+    "draw": 0.33,
+    "team_b_win": 0.21814814814814815,
+    "win_probability_gap": 0.2337037037037037,
+    "underdog_win_probability": 0.21814814814814815,
+    "favorite_fail_to_win_probability": 0.5481481481481482,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；独立审计：blowout情景仅审一项。提案方向（佛得角净胜≥3）与世界状态及主预测一致，沙特防线已被西班牙0-4+前65分钟21次禁区射门暴露，佛得角防守0.72/门将0.72对位沙特进攻0.46且其采5-4-1低位反击，反向大比分（0-3）证据弱、合理剔除。所引证据E_7badaa2e47f9、E_2f450db1bf45、E_cddd1f8788ae、E_eb2d913150da、E_30372d4b9f68、E_e56639ee75cb均真实存在于证据池，无过期/幻觉证据。核心保留判断：3-0为条件池内最受支持路径（条件概率约0.50），非机械压回最低达标比分，而是受佛得角中等产出（攻0.52/终结0.5、代表比分1-0/0-0为主）与xG_a≈1.18约束的合理收敛；同时拒绝5-0/5-1极端拔高，方向正确。4-0、4-1作为条件池次级候选（条件概率0.13/0.15）以grade1弱支持保留，符合其需要佛得角达到4球的尾部性质；4-1中沙特入1球由Al-Dawsari反击核心支撑。整体予以保留，并补充佛得角低产出的反向证据以校准。；已对 upset（爆冷=Saudi Arabia 获胜）情景做独立审计。证据链真实可核：佛得角防守韧性（E_cddd1f8788ae、E_b39ceac65b90）、沙特反击身份与队长Al-Dawsari（E_e56639ee75cb）、末轮双方均需取胜导致佛得角可能压上留出反击空间（E_24400ac54ab2、E_30372d4b9f68）均有出处。提案未出现幻觉或过期证据。沙特attack 0.46、finishing 0.42、xG仅0.75，且赛前0比4负西班牙暴露的是其防守而非进攻，故爆冷若发生应为依靠单次/有限转换的窄比分小胜，不存在被机械压低的问题；提案未盲目堆叠0-3/0-4等极端开放比分，方向正确。核心修正：补齐空白证据引用，并将整体强度从0.5下调至0.45以反映证据主体其实指向沙特偏弱。保留0-1为主路径，1-2、0-2作有限支持次级路径。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.13592592592592592,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "3-1",
+          "base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.24795640326975477,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.07901907356948229,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.043596730245231606,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.02962962962962963,
+          "base_conditional_probability": 0.21798365122615806,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.01,
+          "base_conditional_probability": 0.07356948228882834,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.08719346049046321,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.05722070844686648,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.06539509536784742,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.24795640326975477,
+          "tail_focus_conditional_probability": 0.22705576046864823,
+          "tail_focus_implied_overall_probability": 0.03086276447851626,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.07901907356948229,
+          "tail_focus_conditional_probability": 0.08651551312649162,
+          "tail_focus_implied_overall_probability": 0.011759701228674972,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.043596730245231606,
+          "tail_focus_conditional_probability": 0.05293990019527011,
+          "tail_focus_implied_overall_probability": 0.007195904952468197,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-1",
+          "main_base_probability": 0.0337037037037037,
+          "base_conditional_probability": 0.24795640326975477,
+          "tail_focus_conditional_probability": 0.22705576046864823,
+          "tail_focus_implied_overall_probability": 0.03086276447851626,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.02962962962962963,
+          "base_conditional_probability": 0.21798365122615806,
+          "tail_focus_conditional_probability": 0.19960945975265781,
+          "tail_focus_implied_overall_probability": 0.02713210064045386,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.01074074074074074,
+          "base_conditional_probability": 0.07901907356948229,
+          "tail_focus_conditional_probability": 0.08651551312649162,
+          "tail_focus_implied_overall_probability": 0.011759701228674972,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.07356948228882834,
+          "tail_focus_conditional_probability": 0.0805489260143198,
+          "tail_focus_implied_overall_probability": 0.010948687350835321,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.08719346049046321,
+          "tail_focus_conditional_probability": 0.07984378390106311,
+          "tail_focus_implied_overall_probability": 0.010852840256181542,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.05722070844686648,
+          "tail_focus_conditional_probability": 0.06264916467780428,
+          "tail_focus_implied_overall_probability": 0.00851564571731636,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.06539509536784742,
+          "tail_focus_conditional_probability": 0.05988283792579734,
+          "tail_focus_implied_overall_probability": 0.008139630192136158,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.005925925925925926,
+          "base_conditional_probability": 0.043596730245231606,
+          "tail_focus_conditional_probability": 0.05293990019527011,
+          "tail_focus_implied_overall_probability": 0.007195904952468197,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.005185185185185185,
+          "base_conditional_probability": 0.03814713896457766,
+          "tail_focus_conditional_probability": 0.046322412670861346,
+          "tail_focus_implied_overall_probability": 0.006296416833409672,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "4-3",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.016348773841961855,
+          "tail_focus_conditional_probability": 0.01985246257322629,
+          "tail_focus_implied_overall_probability": 0.0026984643571755737,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999994
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.06629629629629628,
+      "attention_level": "low",
+      "evidence_strength": 0.48,
+      "rationale_cn": "在已进入崩盘状态条件下，证据明确指向佛得角一侧大比分而非沙特：佛得角连续两战不败（0-0平西班牙、2-2平乌拉圭，PF_01），沙特0-4负西班牙、前65分钟禁区内被射21次（PF_03），战力面佛得角防守0.72/门将0.72显著优于沙特防守0.44。反向（沙特净胜≥3）与世界状态相悖：沙特进攻0.46、5-4-1低位反击难破佛得角强韧低位。幅度判断上佛得角并非高产输出（攻0.52、终结0.5、低位收缩控节奏，PF_02），9条推演代表比分以1-0/0-0/0-1为主，仅rollout_9出现3-0，故条件状态内最受支持为中等幅度大胜3-0；5球及以上极端净胜缺机制与推演支撑，不予拔高。4-0/4-1作为条件池次级候选以弱支持保留。",
+      "supporting_evidence_ids": [
+        "E_7badaa2e47f9",
+        "E_2f450db1bf45",
+        "E_cddd1f8788ae",
+        "E_eb2d913150da",
+        "E_30372d4b9f68"
+      ],
+      "counter_evidence_ids": [
+        "E_b39ceac65b90"
+      ],
+      "caution_cn": "佛得角进攻产出有限（xG≈1.18、终结0.5），4球级别（4-0/4-1）属明显尾部，仅以弱支持保留；切勿据此误读为高开放对攻，本场两队均偏控速与低位。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.5027932960893856,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.01,
+          "base_conditional_probability": 0.15083798882681568,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.13407821229050282,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.08379888268156427,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.033519553072625705,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.027932960893854754,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.016759776536312852,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-2",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.016759776536312852,
+          "total_goals": 7,
+          "winning_margin": 3
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.5027932960893856,
+          "tail_focus_conditional_probability": 0.5379624209545639,
+          "tail_focus_implied_overall_probability": 0.03566491605587664,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "佛得角控节奏压制，沙特5-4-1低位在西班牙战已暴露的防线再度被打穿，佛得角中后段连续扩大优势取得净胜3球的中等幅度大胜。",
+          "rationale_cn": "条件池内最受支持比分（条件概率约0.50），方向与防守/门将战力差及沙特0-4崩盘先例一致，且符合佛得角中等产出约束，非机械压回最低达标。",
+          "evidence_ids": [
+            "E_7badaa2e47f9",
+            "E_2f450db1bf45",
+            "E_cddd1f8788ae",
+            "E_30372d4b9f68"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.15083798882681568,
+          "tail_focus_conditional_probability": 0.14424813052905822,
+          "tail_focus_implied_overall_probability": 0.009563116801741265,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "佛得角大幅领先，沙特凭Al-Dawsari反击扳回一球但无碍净胜3球的崩盘结局。",
+          "rationale_cn": "条件池第二高条件概率（约0.15），沙特入1球由队长反击核心E_e56639ee75cb支撑，尾部产出性质决定弱支持。",
+          "evidence_ids": [
+            "E_7badaa2e47f9",
+            "E_2f450db1bf45",
+            "E_e56639ee75cb"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.13407821229050282,
+          "tail_focus_conditional_probability": 0.14098325514671328,
+          "tail_focus_implied_overall_probability": 0.009346667656022841,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "沙特防线在反复承压下彻底崩盘，佛得角效率超出常态打入4球且零封。",
+          "rationale_cn": "条件池次级候选（条件概率约0.13），方向正确但需佛得角达4球的尾部产出，弱支持保留。",
+          "evidence_ids": [
+            "E_7badaa2e47f9",
+            "E_2f450db1bf45",
+            "E_cddd1f8788ae"
+          ],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.5027932960893856,
+          "tail_focus_conditional_probability": 0.5379624209545639,
+          "tail_focus_implied_overall_probability": 0.03566491605587664,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.01,
+          "base_conditional_probability": 0.15083798882681568,
+          "tail_focus_conditional_probability": 0.14424813052905822,
+          "tail_focus_implied_overall_probability": 0.009563116801741265,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.13407821229050282,
+          "tail_focus_conditional_probability": 0.14098325514671328,
+          "tail_focus_implied_overall_probability": 0.009346667656022841,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.08379888268156427,
+          "tail_focus_conditional_probability": 0.061834761029260214,
+          "tail_focus_implied_overall_probability": 0.00409941563860651,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.033519553072625705,
+          "tail_focus_conditional_probability": 0.031721232408010495,
+          "tail_focus_implied_overall_probability": 0.00210300022260514,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.027932960893854754,
+          "tail_focus_conditional_probability": 0.026434360340008747,
+          "tail_focus_implied_overall_probability": 0.0017525001855042833,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.016759776536312852,
+          "tail_focus_conditional_probability": 0.013356308382320208,
+          "tail_focus_implied_overall_probability": 0.0008854737779390062,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "5-2",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.016759776536312852,
+          "tail_focus_conditional_probability": 0.013356308382320208,
+          "tail_focus_implied_overall_probability": 0.0008854737779390062,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "6-1",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.011173184357541902,
+          "tail_focus_conditional_probability": 0.010573744136003498,
+          "tail_focus_implied_overall_probability": 0.0007010000742017133,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.011173184357541902,
+          "tail_focus_conditional_probability": 0.009790503829632867,
+          "tail_focus_implied_overall_probability": 0.000649074142779364,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Saudi Arabia 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.21814814814814817,
+      "attention_level": "low",
+      "evidence_strength": 0.45,
+      "rationale_cn": "爆冷整体证据偏弱：沙特strength 0.5、attack 0.46、finishing 0.42、xG 0.75，且0比4负西班牙暴露的是防守而非进攻能力，多数证据其实指向沙特处于下风。可支撑爆冷的结构性理由有限但真实——沙特transition 0.71的反击身份配合队长Al-Dawsari（E_e56639ee75cb），以及末轮佛得角需取胜锁定前二而可能压上、留出身后空间（E_24400ac54ab2、E_30372d4b9f68）。因此爆冷若发生，最合理形态是依靠单次或有限转换打成的窄比分小胜，而非开放大比分。保留覆盖约87%爆冷条件质量的前三个候选，0-1为主路径，1-2、0-2为有限支持次级路径，未纳入0-3/0-4等缺乏沙特进攻证据支撑的极端比分。",
+      "supporting_evidence_ids": [
+        "E_e56639ee75cb",
+        "E_24400ac54ab2",
+        "E_30372d4b9f68",
+        "E_3f3928131c3e"
+      ],
+      "counter_evidence_ids": [
+        "E_7badaa2e47f9",
+        "E_d555b1ff5900",
+        "E_cddd1f8788ae",
+        "E_eb2d913150da",
+        "E_b39ceac65b90"
+      ],
+      "caution_cn": "爆冷为低注意度尾部情景：证据主体指向沙特偏弱，0-1之外的比分支撑度迅速下降；沙特预计5-4-1降速踢法与“多次进球”存在张力，1-2/0-2仅作低权重路径，不应据此抬高整体爆冷预期。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.10407407407407407,
+          "base_conditional_probability": 0.4770797962648556,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.048518518518518516,
+          "base_conditional_probability": 0.2224108658743633,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.03740740740740741,
+          "base_conditional_probability": 0.17147707979626484,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.05432937181663836,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.03565365025466893,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.025466893039049233,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.005093378607809847,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.0033955857385398977,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.10407407407407407,
+          "base_conditional_probability": 0.4770797962648556,
+          "tail_focus_conditional_probability": 0.522628642281463,
+          "tail_focus_implied_overall_probability": 0.11401047048288213,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "佛得角为争胜适度压上，沙特凭借Al-Dawsari领衔的单次快速转换在中前段或下半场打入一球，随后双方收缩、沙特以5-4-1低位护住领先，佛得角面对密集防线难以扳平。",
+          "rationale_cn": "最契合爆冷机制且证据支撑最实：沙特反击身份（transition 0.71）+队长Al-Dawsari（E_e56639ee75cb），叠加末轮佛得角需取胜而压上的动机（E_24400ac54ab2、E_30372d4b9f68）。佛得角强防守（E_cddd1f8788ae、E_b39ceac65b90）与沙特弱终结（finishing 0.42）共同把比分压向窄差小胜，base_conditional最高(0.477)。Rollout_7正是此路径代表比分。",
+          "evidence_ids": [
+            "E_e56639ee75cb",
+            "E_24400ac54ab2",
+            "E_30372d4b9f68",
+            "E_cddd1f8788ae"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.048518518518518516,
+          "base_conditional_probability": 0.2224108658743633,
+          "tail_focus_conditional_probability": 0.20303781773093613,
+          "tail_focus_implied_overall_probability": 0.04429232394204496,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "佛得角通过Mendes/Monteiro边中推进先取得或扳平进球，但沙特利用其压上后的身后空间两度反击得手完成逆转。",
+          "rationale_cn": "对攻型次级路径，机制真实存在（佛得角进攻点 vs Al-Dawsari反击），且佛得角末轮必须争胜会主动留出转换空间。但与沙特预计5-4-1降速踢法存在张力，且要求沙特两度破门与其attack 0.46/finishing 0.42相悖，故仅作有限支持。条件概率0.222。",
+          "evidence_ids": [
+            "E_e56639ee75cb",
+            "E_24400ac54ab2"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.03740740740740741,
+          "base_conditional_probability": 0.17147707979626484,
+          "tail_focus_conditional_probability": 0.15654060756354618,
+          "tail_focus_implied_overall_probability": 0.0341490436499736,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "佛得角控节奏压上但久攻不下，沙特两次反击转化破门，佛得角进攻端被密集低位封死保持零进球。",
+          "rationale_cn": "可由两次转换构成，符合沙特转换优势与佛得角压上被打身后的逻辑。但佛得角禁区保护强、Vozinha状态好（goalkeeper_state 0.72），叠加沙特终结仅0.42，二度破门概率明显受限，证据仅给予有限支持。条件概率0.171。",
+          "evidence_ids": [
+            "E_e56639ee75cb",
+            "E_24400ac54ab2"
+          ],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.10407407407407407,
+          "base_conditional_probability": 0.4770797962648556,
+          "tail_focus_conditional_probability": 0.522628642281463,
+          "tail_focus_implied_overall_probability": 0.11401047048288213,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.048518518518518516,
+          "base_conditional_probability": 0.2224108658743633,
+          "tail_focus_conditional_probability": 0.20303781773093613,
+          "tail_focus_implied_overall_probability": 0.04429232394204496,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.03740740740740741,
+          "base_conditional_probability": 0.17147707979626484,
+          "tail_focus_conditional_probability": 0.15654060756354618,
+          "tail_focus_implied_overall_probability": 0.0341490436499736,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.05432937181663836,
+          "tail_focus_conditional_probability": 0.049597024178549276,
+          "tail_focus_implied_overall_probability": 0.010819498978209455,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.03565365025466893,
+          "tail_focus_conditional_probability": 0.03254804711717296,
+          "tail_focus_implied_overall_probability": 0.007100296204449954,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.025466893039049233,
+          "tail_focus_conditional_probability": 0.023248605083694977,
+          "tail_focus_implied_overall_probability": 0.005071640146035682,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.0011111111111111111,
+          "base_conditional_probability": 0.005093378607809847,
+          "tail_focus_conditional_probability": 0.0046497210167389955,
+          "tail_focus_implied_overall_probability": 0.0010143280292071366,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.0033955857385398977,
+          "tail_focus_conditional_probability": 0.0030998140111593298,
+          "tail_focus_implied_overall_probability": 0.0006762186861380909,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.0033955857385398977,
+          "tail_focus_conditional_probability": 0.0030998140111593298,
+          "tail_focus_implied_overall_probability": 0.0006762186861380909,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.00037037037037037035,
+          "base_conditional_probability": 0.0016977928692699488,
+          "tail_focus_conditional_probability": 0.0015499070055796649,
+          "tail_focus_implied_overall_probability": 0.00033810934306904546,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999998
+    }
+  ],
+  "llm": {
+    "proposer_model": "claude-opus-4-8",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "partial",
+    "auditor_status": "partial",
+    "cache_enabled": true,
+    "errors": [
+      "high_scoring Proposer失败：RuntimeError: LLM 调用失败（claude-opus-4-8 / tail_forecast_proposer_v744_high_scoring）：BUSINESS_VALIDATION_FAILED: high_scoring must select 1-4 candidate scores"
+    ]
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999998,
+    "source_hash": "0a67efe730d4331d91cc74b7c4037f35621722e60b710a0fc7bd26b7f0c32833"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Cape_Verde_vs_Saudi_Arabia_M64\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\web_delivery\\Cape_Verde_vs_Saudi_Arabia_M64\\2026.6.27.08\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Cape_Verde_vs_Saudi_Arabia_M64\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\web_delivery\\Cape_Verde_vs_Saudi_Arabia_M64\\2026.6.27.08\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

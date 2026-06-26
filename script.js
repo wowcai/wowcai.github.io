@@ -4190,6 +4190,10 @@ function initGaokaoPredictionPage(context = {}) {
         lastMapWidth = width;
         renderUniversityPredictionMap(data, meta, gaokaoPredictionState, refs);
       }
+
+      if (refs.detailModal?.classList.contains("is-open")) {
+        scheduleGaokaoInsightBalance(refs.detailBody);
+      }
     }, 220);
   });
 
@@ -4215,6 +4219,7 @@ function initGaokaoPredictionPage(context = {}) {
 
       if (entry) {
         refs.detailBody.innerHTML = renderUniversityDetail(entry);
+        scheduleGaokaoInsightBalance(refs.detailBody);
       }
     }
 
@@ -4417,8 +4422,13 @@ function normalizeGaokaoTierRecommendation(value) {
     tier_3: "三档",
     overall_advice: "整体建议"
   };
+  const order = ["tier_1", "tier_2", "tier_3", "overall_advice"];
+  const entries = [
+    ...order.filter((key) => Object.prototype.hasOwnProperty.call(value, key)).map((key) => [key, value[key]]),
+    ...Object.entries(value).filter(([key]) => !order.includes(key))
+  ];
 
-  return Object.entries(value).map(([key, text]) => ({
+  return entries.map(([key, text]) => ({
     key,
     title: labels[key] || String(key),
     text: String(text || "")
@@ -5092,7 +5102,7 @@ function renderGaokaoProvincePanel(locationProvince, entries, state) {
       </div>
       <span class="gaokao-province-count">${sorted.length}</span>
     </div>
-    <p class="gaokao-province-tip">${escapeHtml(L("点击任意高校，查看 2021-2026 年分数 / 位次趋势与预测依据。", "Tap any university to view its 2021-2026 score / rank trend and forecast basis."))}</p>
+    <p class="gaokao-province-tip">${escapeHtml(L("点击任意高校，查看 2021-2026 年分数 / 位次趋势、关键依据拆解与专业档位建议。", "Tap any university to view its 2021-2026 score / rank trend, evidence breakdown, and major-tier advice."))}</p>
     <div class="gaokao-province-school-list">${items}</div>
   `;
 }
@@ -5107,6 +5117,7 @@ function openGaokaoUniversityDetail(entry, state, refs) {
   refs.detailModal.classList.add("is-open");
   refs.detailModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
+  scheduleGaokaoInsightBalance(refs.detailBody);
 }
 
 function closeGaokaoUniversityDetail() {
@@ -5119,6 +5130,61 @@ function closeGaokaoUniversityDetail() {
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
   syncGaokaoModalScrollLock();
+}
+
+function scheduleGaokaoInsightBalance(detailBody = document.querySelector("[data-gaokao-detail-body]")) {
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      balanceGaokaoInsightColumns(detailBody);
+    });
+  });
+}
+
+function balanceGaokaoInsightColumns(detailBody = document.querySelector("[data-gaokao-detail-body]")) {
+  const body = detailBody || document.querySelector("[data-gaokao-detail-body]");
+  const reason = body?.querySelector(".gaokao-detail-section-list");
+  const advice = body?.querySelector(".gaokao-detail-major-advice");
+
+  if (!reason || !advice) {
+    return;
+  }
+
+  resetGaokaoReasonScale(reason);
+
+  if (window.matchMedia("(max-width: 960px)").matches) {
+    return;
+  }
+
+  const reasonHeight = reason.getBoundingClientRect().height;
+  const adviceHeight = advice.getBoundingClientRect().height;
+
+  if (!reasonHeight || adviceHeight <= reasonHeight + 8) {
+    return;
+  }
+
+  const scale = Math.min(1.28, Math.max(1.03, Math.sqrt(adviceHeight / reasonHeight)));
+  const compactMode = window.matchMedia("(max-height: 820px) and (min-width: 961px)").matches;
+  const base = compactMode
+    ? { title: 0.75, body: 10.5, line: 1.34, gap: 5, padY: 6, padX: 7 }
+    : { title: 0.82, body: 11.5, line: 1.42, gap: 6, padY: 8, padX: 9 };
+
+  reason.style.setProperty("--gaokao-reason-title-size", `${Math.min(base.title * scale, 1.04).toFixed(3)}rem`);
+  reason.style.setProperty("--gaokao-reason-body-size", `${Math.min(base.body * scale, 14.6).toFixed(2)}px`);
+  reason.style.setProperty("--gaokao-reason-line-height", Math.min(base.line + (scale - 1) * 0.45, 1.62).toFixed(2));
+  reason.style.setProperty("--gaokao-reason-card-gap", `${Math.min(base.gap * scale, 9.5).toFixed(2)}px`);
+  reason.style.setProperty("--gaokao-reason-card-padding-y", `${Math.min(base.padY * scale, 12).toFixed(2)}px`);
+  reason.style.setProperty("--gaokao-reason-card-padding-x", `${Math.min(base.padX * scale, 13).toFixed(2)}px`);
+}
+
+function resetGaokaoReasonScale(reason) {
+  [
+    "--gaokao-reason-title-size",
+    "--gaokao-reason-body-size",
+    "--gaokao-reason-line-height",
+    "--gaokao-reason-card-gap",
+    "--gaokao-reason-card-padding-y",
+    "--gaokao-reason-card-padding-x"
+  ].forEach((property) => reason.style.removeProperty(property));
 }
 
 function renderUniversityDetail(entry) {
@@ -5168,21 +5234,29 @@ function renderUniversityDetail(entry) {
       </div>
     </div>
 
-    ${entry.predictionReason ? `
-      <div class="gaokao-detail-judgement gaokao-detail-reason">
-        <strong>${escapeHtml(L(`${predictionYear} 预测依据`, `${predictionYear} forecast basis`))}</strong>
-        <p>${escapeHtml(getLang() === "en" && entry.predictionReasonEn ? entry.predictionReasonEn : entry.predictionReason)}</p>
-      </div>
-    ` : ""}
+    ${renderGaokaoDetailInsightGrid(entry)}
+  `;
+}
 
-    ${renderGaokaoReasonSections(entry)}
-    ${renderGaokaoTierRecommendation(entry)}
+function renderGaokaoDetailInsightGrid(entry) {
+  const reasonSections = renderGaokaoReasonSections(entry);
+  const tierRecommendation = renderGaokaoTierRecommendation(entry);
+
+  if (!reasonSections && !tierRecommendation) {
+    return "";
+  }
+
+  return `
+    <div class="gaokao-detail-insight-grid">
+      ${reasonSections}
+      ${tierRecommendation}
+    </div>
   `;
 }
 
 function renderGaokaoReasonSections(entry) {
   const sections = Array.isArray(entry?.predictionReasonSections) ? entry.predictionReasonSections : [];
-  const visibleSections = sections.filter((section) => section?.title && section?.text).slice(0, 8);
+  const visibleSections = sections.filter((section) => section?.title && section?.text).slice(0, 4);
 
   if (!visibleSections.length) {
     return "";
@@ -5197,7 +5271,7 @@ function renderGaokaoReasonSections(entry) {
         ${visibleSections.map((section) => `
           <article>
             <h4>${escapeHtml(section.title)}</h4>
-            <p>${escapeHtml(section.text)}</p>
+            <p title="${escapeHtml(section.text)}">${escapeHtml(section.text)}</p>
           </article>
         `).join("")}
       </div>
@@ -5220,9 +5294,9 @@ function renderGaokaoTierRecommendation(entry) {
       </div>
       <div class="gaokao-major-tier-grid">
         ${visibleTiers.map((item) => `
-          <article class="${item.key === "overall_advice" ? "is-wide" : ""}">
+          <article class="${item.key === "overall_advice" ? "is-overall" : ""}">
             <h4>${escapeHtml(item.title)}</h4>
-            ${renderGaokaoAdviceText(item.text)}
+            ${renderGaokaoAdviceText(item.text, item)}
           </article>
         `).join("")}
       </div>
@@ -5230,24 +5304,81 @@ function renderGaokaoTierRecommendation(entry) {
   `;
 }
 
-function renderGaokaoAdviceText(text) {
-  const lines = String(text || "").split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+function renderGaokaoAdviceText(text, item = {}) {
+  const lines = String(text || "")
+    .split(/\r?\n/)
+    .map((line) => cleanGaokaoTierHeadingLine(line.trim(), item))
+    .filter(Boolean);
+  const displayLines = trimGaokaoTierEndingPeriod(lines, item);
 
-  if (!lines.length) {
+  if (!displayLines.length) {
     return "";
   }
 
-  const [summary, ...items] = lines;
-  const itemLines = items.length ? items : [];
+  const displayText = formatGaokaoAdviceDisplayText(displayLines).replace(/\u9225\?/g, "\u2022 ");
 
   return `
-    <p>${escapeHtml(summary)}</p>
-    ${itemLines.length ? `
-      <ul>
-        ${itemLines.map((line) => `<li>${escapeHtml(line.replace(/^[-•]\s*/, ""))}</li>`).join("")}
-      </ul>
-    ` : ""}
+    <p class="gaokao-tier-copy" title="${escapeHtml(displayText)}">${escapeHtml(displayText)}</p>
   `;
+}
+
+function cleanGaokaoListMarker(line) {
+  return String(line || "").replace(/^[-\u2022]\s*/, "").trim();
+}
+
+function formatGaokaoAdviceDisplayText(lines) {
+  const cleaned = lines.map((line) => cleanGaokaoListMarker(line)).filter(Boolean);
+
+  if (!cleaned.length) {
+    return "";
+  }
+
+  if (lines.every((line) => /^[-\u2022]\s*/.test(line))) {
+    return cleaned.map((line) => `• ${line}`).join("\n");
+  }
+
+  const [summary, ...items] = cleaned;
+  return [summary, ...items.map((line) => `• ${line}`)].join("\n");
+}
+
+function trimGaokaoTierEndingPeriod(lines, item = {}) {
+  if (!["tier_1", "tier_2", "tier_3"].includes(item?.key)) {
+    return lines;
+  }
+
+  const nextLines = [...lines];
+  const lastIndex = nextLines.length - 1;
+
+  if (lastIndex >= 0) {
+    nextLines[lastIndex] = nextLines[lastIndex].replace(/[\u3002.]\s*$/, "");
+    nextLines[lastIndex] = nextLines[lastIndex].replace(/[。.]\s*$/, "");
+  }
+
+  return nextLines;
+}
+
+function cleanGaokaoTierHeadingLine(line, item = {}) {
+  const labelMap = {
+    tier_1: "\u4e00\u6863",
+    tier_2: "\u4e8c\u6863",
+    tier_3: "\u4e09\u6863"
+  };
+  const label = labelMap[item?.key];
+
+  if (!label || !line.startsWith(label)) {
+    return line;
+  }
+
+  let cleaned = line.slice(label.length).trimStart();
+  const bracketPairs = [["\uFF08", "\uFF09"], ["(", ")"]];
+  const pair = bracketPairs.find(([open]) => cleaned.startsWith(open));
+
+  if (pair) {
+    const closeIndex = cleaned.indexOf(pair[1]);
+    cleaned = closeIndex >= 0 ? cleaned.slice(closeIndex + 1).trimStart() : cleaned;
+  }
+
+  return cleaned.replace(/^(?:[:\uFF1A\-\s])+/, "").trim();
 }
 
 function renderScoreReleaseModule(releaseData, state, refs) {
@@ -5333,9 +5464,9 @@ function renderDetailLineChart(values, labels, type, forecast = null) {
     return `<div class="gaokao-chart-empty">${escapeHtml(L("趋势数据待补充", "Trend data TBD"))}</div>`;
   }
 
-  const width = 560;
+  const width = 640;
   const height = 180;
-  const pad = { left: 54, right: 18, top: 18, bottom: 34 };
+  const pad = { left: 40, right: 8, top: 18, bottom: 34 };
   const min = Math.min(...allValues);
   const max = Math.max(...allValues);
   const range = max - min || 1;
@@ -5349,6 +5480,10 @@ function renderDetailLineChart(values, labels, type, forecast = null) {
   };
   const points = historicalPoints.map((point) => `${xFor(point.index)},${yFor(point.value)}`).join(" ");
   const latestHistoricalPoint = historicalPoints[historicalPoints.length - 1] || null;
+  const baselineY = height - pad.bottom;
+  const historyArea = historicalPoints.length >= 2
+    ? `${xFor(historicalPoints[0].index)},${baselineY} ${points} ${xFor(latestHistoricalPoint.index)},${baselineY}`
+    : "";
   const forecastBridge = latestHistoricalPoint && hasForecast
     ? `${xFor(latestHistoricalPoint.index)},${yFor(latestHistoricalPoint.value)} ${xFor(forecastIndex)},${yFor(forecastValue)}`
     : "";
@@ -5360,10 +5495,11 @@ function renderDetailLineChart(values, labels, type, forecast = null) {
       <g class="chart-grid">
         ${ticks.map((tick) => `<line x1="${pad.left}" x2="${width - pad.right}" y1="${yFor(tick)}" y2="${yFor(tick)}"></line><text x="12" y="${yFor(tick) + 4}">${type === "rank" ? formatNumber(tick) : tick}</text>`).join("")}
       </g>
+      ${historyArea ? `<polygon class="history-area" points="${historyArea}"></polygon>` : ""}
       ${historicalPoints.length >= 2 ? `<polyline points="${points}"></polyline>` : ""}
       ${forecastBridge ? `<polyline class="forecast-bridge" points="${forecastBridge}"></polyline>` : ""}
-      ${historicalPoints.map((point) => `<circle cx="${xFor(point.index)}" cy="${yFor(point.value)}" r="4"><title>${point.label}${titleSeparator}${type === "rank" ? formatRank(point.value) : formatNullable(point.value, "分")}</title></circle>`).join("")}
-      ${hasForecast ? `<circle class="forecast-point" cx="${xFor(forecastIndex)}" cy="${yFor(forecastValue)}" r="5"><title>${forecast.year || 2026}${titleSeparator}${type === "rank" ? formatRank(forecastValue) : formatNullable(forecastValue, "分")}</title></circle>` : ""}
+      ${historicalPoints.map((point) => `<circle cx="${xFor(point.index)}" cy="${yFor(point.value)}" r="3.6"><title>${point.label}${titleSeparator}${type === "rank" ? formatRank(point.value) : formatNullable(point.value, "分")}</title></circle>`).join("")}
+      ${hasForecast ? `<circle class="forecast-point" cx="${xFor(forecastIndex)}" cy="${yFor(forecastValue)}" r="4.4"><title>${forecast.year || 2026}${titleSeparator}${type === "rank" ? formatRank(forecastValue) : formatNullable(forecastValue, "分")}</title></circle>` : ""}
       <g class="chart-axis">
         ${chartLabels.map((label, index) => `<text class="${index === forecastIndex && hasForecast ? "forecast-label" : ""}" x="${xFor(index)}" y="${height - 12}">${label}</text>`).join("")}
       </g>

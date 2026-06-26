@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T07:21:13.574320Z",
+  "prediction_generated_at_local": "2026-06-26T15:21:13.574320+08:00",
+  "match": {
+    "match_id": "M61",
+    "team_a": "Norway",
+    "team_b": "France",
+    "kickoff_utc": "2026-06-26T19:00:00Z",
+    "venue": "Gillette Stadium, Foxborough",
+    "stage": "group",
+    "group": "I",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.4",
+    "world_state_fallback_field_count": 4,
+    "world_state_fallback_ratio": 0.10810810810810811,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "World State有4个字段使用局部回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.3388888888888889,
+    "draw": 0.2733333333333333,
+    "team_b_win": 0.3877777777777778
+  },
+  "most_likely_outcome": {
+    "label": "France胜",
+    "probability": 0.3877777777777778
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.12222222222222222
+    },
+    {
+      "score": "1-2",
+      "probability": 0.08666666666666667
+    },
+    {
+      "score": "2-1",
+      "probability": 0.08333333333333333
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "末轮两队同积6分，法国因净胜球占优，打平即可锁定小组头名，平局动机直接存在。",
+      "text_en": "Both teams have six points, but France lead on goal difference and only need a draw to secure first place in the group, giving the draw a clear incentive base",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_9769c8311abc",
+        "E_c61aead1d892",
+        "E_3f081e4e9b2f",
+        "E_c3eec12c438d"
+      ],
+      "source_names": [
+        "Al Jazeera",
+        "Sporting News",
+        "Racing Post"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "挪威只有赢球才能反超法国拿头名，且被称为“几乎没压力”，更有理由主动提速争胜。",
+      "text_en": "Norway can only overtake France for top spot by winning, and reports said they were playing with almost no pressure, which supports a more proactive approach",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_9769c8311abc",
+        "E_c3eec12c438d",
+        "E_0debbcf51590"
+      ],
+      "source_names": [
+        "Al Jazeera",
+        "Racing Post",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "哈兰德与瑟洛特构成双高点，厄德高赛前健康无忧，挪威边路传中和定位球威胁持续。",
+      "text_en": "With Haaland and Sorloth as twin aerial targets and Odegaard fit, Norway carry repeatable danger from crosses, set pieces and deliveries into the box",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_8944b4204a45",
+        "E_3829ac7c418c"
+      ],
+      "source_names": [
+        "The Athletic",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "挪威本届赛前已制造10次重大机会，世预赛还是进球和xG双第一，进攻产量有连续证据。",
+      "text_en": "Norway had already created 10 big chances at this World Cup, and they also led qualifying in both goals and expected goals, showing sustained attacking output",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_da13b1e453b5",
+        "E_fa782654a01a"
+      ],
+      "source_names": [
+        "The Analyst",
+        "Opta Analyst"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "法国常用4-2-3-1，姆巴佩赛前与哈兰德同为4球，并且法国前两战全胜、被列为实力榜第1。",
+      "text_en": "France usually line up in a 4-2-3-1, Mbappe entered the match level with Haaland on four goals, and France had won both group games and topped ESPN's rankings",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_c844a668ceb9",
+        "E_ba6baccd74bd",
+        "E_7ba74bec429e",
+        "E_075f50798372"
+      ],
+      "source_names": [
+        "The Athletic",
+        "FOX Sports",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "法国赛前有轮换讨论，助教Guy Stephan带队，Saliba因背部问题预计休息，后防稳定性存变数。",
+      "text_en": "France were discussing rotation, assistant coach Guy Stephan was in charge, and Saliba was expected to be rested with a back issue, adding some uncertainty at the back",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_bde3288b8d29",
+        "E_5f2fb0f7bb1f"
+      ],
+      "source_names": [
+        "Al Jazeera",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.4"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "partial_audit",
+    "source_report_generated_at": "2026-06-26T09:03:28.010249Z",
+    "source_state_sha256": "af06fd87a3f9b13e4693ae0caffc0fda121329b8669976ba290eaa7169806859",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；该情景不适用。",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.3462962962962962,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.62,
+        "summary_cn": "两队攻击指标均强（挪威attack 0.84，法国attack 0.86），哈兰德+瑟洛特双高点经多个B级证据证实，法国边路爆点（姆巴佩/德姆贝莱）有FOX/The Athletic佐证，萨利巴休整有Yahoo报道支持。H_2/H_3机制链均有可追溯证据。候选比分全部来自原池，无机械压回最低达标分的问题。主要不确定性在于法国轮换幅度与挪威实际压迫强度。",
+        "caution_cn": "H_3（法国反打）置信度仅0.64，属tentative；rollout_6代表比分0-3为3球非4+球路径，不能直接支撑高分情景。2-3和3-2均需双方各有2+进球，概率基础偏低，support_grade维持1档合理，但rationale中援引rollout_1（4-2）是有效的。",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.042222222222222223,
+            "tail_focus_conditional_probability": 0.13745765346889044,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.0362962962962963,
+            "tail_focus_conditional_probability": 0.11816535122764266,
+            "support_grade": 2,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.12037037037037035,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.03222222222222222,
+            "tail_focus_conditional_probability": 0.24514465648048353,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "1-4",
+            "base_probability": 0.015185185185185185,
+            "tail_focus_conditional_probability": 0.12477017688454954,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": false,
+        "status": "not_applicable",
+        "base_event_probability": 0.0,
+        "attention_level": "not_applicable",
+        "attention_label_cn": "不适用",
+        "evidence_strength": 0.0,
+        "summary_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+        "caution_cn": "该情景没有满足预设适用条件。",
+        "top_scores": [],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

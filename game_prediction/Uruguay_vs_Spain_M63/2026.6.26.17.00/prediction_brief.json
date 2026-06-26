@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T07:34:30.230282Z",
+  "prediction_generated_at_local": "2026-06-26T15:34:30.230282+08:00",
+  "match": {
+    "match_id": "M63",
+    "team_a": "Uruguay",
+    "team_b": "Spain",
+    "kickoff_utc": "2026-06-27T00:00:00Z",
+    "venue": "Estadio Akron, Guadalajara",
+    "stage": "group",
+    "group": "H",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.4",
+    "world_state_fallback_field_count": 2,
+    "world_state_fallback_ratio": 0.05405405405405406,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": true,
+    "reasons": [],
+    "warnings": [
+      "World State有2个字段使用局部回退。",
+      "委员会审计使用了确定性备用路径。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.22037037037037038,
+    "draw": 0.23703703703703705,
+    "team_b_win": 0.5425925925925926
+  },
+  "most_likely_outcome": {
+    "label": "Spain胜",
+    "probability": 0.5425925925925926
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.11333333333333333
+    },
+    {
+      "score": "1-1",
+      "probability": 0.11333333333333333
+    },
+    {
+      "score": "1-2",
+      "probability": 0.10333333333333333
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "乌拉圭确认缺少阿劳霍，且RotoWire同时列出德阿拉斯卡埃塔伤缺，防线与前场组织都受影响。",
+      "text_en": "Uruguay are confirmed without Ronald Araujo, and RotoWire also lists Giorgian De Arrascaeta as out, hurting both defensive stability and attacking link play",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_ee6f0c02829d",
+        "E_641dbd2aca23"
+      ],
+      "source_names": [
+        "Barca Blaugranes",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "FIFA与路透都指向同一点：乌拉圭前两轮两连平，本场基本需要击败西班牙才更稳晋级。",
+      "text_en": "FIFA and Reuters point to the same pressure point: after two draws, Uruguay largely need a win over Spain to improve their path to qualification",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_d2760bf47584",
+        "E_2ce367204ab2",
+        "E_6bc1e9c87deb"
+      ],
+      "source_names": [
+        "FIFA",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "西班牙赢球即可锁定小组第一，而Evening Standard称平局也足以头名出线，容错空间更大。",
+      "text_en": "Spain can secure first place with a win, and the Evening Standard says even a draw would be enough to finish top of the group",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_99289c710c90",
+        "E_55e367bbee4e"
+      ],
+      "source_names": [
+        "Sports Illustrated",
+        "Evening Standard"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "The Athletic指出乌拉圭在传球失误或回追失败时会露出空间，这类转换防守问题更容易被西班牙利用。",
+      "text_en": "The Athletic says Uruguay can leave exploitable space after passing errors or failed recovery runs, a transition issue Spain are well placed to attack",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_737e0cb515f9"
+      ],
+      "source_names": [
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "阿克伦球场为约95%天然草的混合草，地面坚实且球速顺畅；赛前风速约2.2到8.9mph、无雨。",
+      "text_en": "Estadio Akron uses hybrid turf with about 95% natural grass, a firm surface and smooth ball roll; forecast wind is roughly 2.2 to 8.9 mph with no rain",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_a1725e969c0a",
+        "E_8928308f3138",
+        "E_a5ed9afbe7c3"
+      ],
+      "source_names": [
+        "Knox News",
+        "Chivas",
+        "Windy.app"
+      ],
+      "generated_by": "gpt-5.4"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-26T07:36:54.009451Z",
+    "source_state_sha256": "01b5c8f254c11e0acbc10006d45b1374d1d3287ef6f9485ec127df7ca65c93ac",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "西班牙整体实力显著强于乌拉圭（strength 0.83 vs 0.63），乌拉圭核心后卫Araujo与前场组织核心De Arrascaeta双双确认缺阵，The Athletic指出乌拉圭转换防守存在系统性漏洞，西班牙本届赛前有4-0大胜沙特的实力背书。崩盘情景有真实机制支撑，但需警惕过度极端：西班牙赛前战略容错大（平局即可头名），不具强烈动机持续扩大比分；乌拉圭仍有Valverde/Nunez等进攻支点，且必须争胜动机强，完全被压…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.29629629629629634,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.58,
+        "summary_cn": "证据链真实且可追溯：西班牙4-0大胜沙特（E_bdad281070e1/E_48d996f02374）、Araujo+De Arrascaeta伤缺（E_ee6f0c02829d/E_641dbd2aca23）、乌拉圭高压体系暴露空间（E_737e0cb515f9）、场地条件利于快速出球（E_8928308f3138/E_a1725e969c0a）均为真实…",
+        "caution_cn": "H_a1c2be1709机制标注总进球方向为down，与高比分情景存在轻度矛盾，需注意该情景概率天花板。西班牙战略容错（平局即晋级）可能抑制其主动扩大比分的意愿，削弱极端大比分（如1-4、2-4）的可信度。",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.052222222222222225,
+            "tail_focus_conditional_probability": 0.2013677600039397,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.04703703703703704,
+            "tail_focus_conditional_probability": 0.1501024535319169,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.14481481481481479,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.58,
+        "summary_cn": "真实存在的实力差距、双核缺阵、系统性转换漏洞共同构成崩盘情景的真实机制基础。rollout_5直接产出0-3且事件链贴合，rollout_1产出1-5说明高进球崩盘路径亦有模型支撑。主要限制因素是西班牙战略容错大（不需要大比分），以及乌拉圭必须争胜可能带来短暂主动性，使极端零封路径概率受压。",
+        "caution_cn": "西班牙平局即可出线头名，主动追求大比分动机不强；不应将崩盘路径机械压回2-2/3-1等最低达标比分，但也不应无证据推向0-5/0-6等极端路径。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.05074074074074074,
+            "tail_focus_conditional_probability": 0.3834190790800644,
+            "support_grade": 2,
+            "script_cn": "西班牙早段建立领先，乌拉圭高压体系在传失或回追失败时被对方快速反击利用，30-60分钟再拉开至0-3；乌拉圭追分心态让空间进一步暴露但未能破门。"
+          },
+          {
+            "score": "1-4",
+            "base_probability": 0.023703703703703703,
+            "tail_focus_conditional_probability": 0.16009218270937256,
+            "support_grade": 1,
+            "script_cn": "乌拉圭依靠Valverde/Nunez的直线冲击在追分阶段偷进1球，但整体已处于劣势崩溃态，西班牙边路单挑和中路推进持续制造威胁，最终扩大至4球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.22037037037037038,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.5,
+        "summary_cn": "爆冷情景成立基础：乌拉圭两连平后必须争胜（FIFA/Reuters实证），强动机可转化为比赛开放度；西班牙知晓平局即出线，可能降低强度。主要压制因素：阿劳霍+德阿拉斯卡埃塔缺阵（双来源确认），西班牙4-0大胜沙特显示进攻状态在线，整体实力差距约0.20。候选比分均为候选池内原有比分，无改动总情景概率。",
+        "caution_cn": "阿劳霍缺阵削弱防线，西班牙进攻质量高（attack 0.82），零封西班牙剧本均需额外谨慎。3-2等高进球数比分在爆冷概率基础上属于双重尾部，支持强度不应高估。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.06851851851851852,
+            "tail_focus_conditional_probability": 0.37789673874762275,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.05851851851851852,
+            "tail_focus_conditional_probability": 0.2670986828203141,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

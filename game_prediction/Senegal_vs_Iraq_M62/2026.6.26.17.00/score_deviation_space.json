@@ -1,0 +1,619 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T08:59:53.094582Z",
+  "prediction_generated_at_local": "2026-06-26T16:59:53.094582+08:00",
+  "quality_label": "usable",
+  "match_id": "M62",
+  "team_a": "Senegal",
+  "team_b": "Iraq",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-0",
+      "deviation": 0.0,
+      "probability": 0.12259259259259259,
+      "probability_percent": 12.2593,
+      "outcome": "team_a",
+      "sample_count": 331,
+      "path_deviation": 0.5962496609894805,
+      "result_surprise": 0.0,
+      "reason_cn": "Senegal在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.062259043375608634,
+      "probability": 0.11851851851851852,
+      "probability_percent": 11.8519,
+      "outcome": "draw",
+      "sample_count": 320,
+      "path_deviation": 0.6187752509968256,
+      "result_surprise": 0.033232628398791486,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.09584336669265986,
+      "probability": 0.10777777777777778,
+      "probability_percent": 10.7778,
+      "outcome": "team_a",
+      "sample_count": 291,
+      "path_deviation": 0.5934026203467825,
+      "result_surprise": 0.12084592145015105,
+      "reason_cn": "Senegal打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.18317154565689728,
+      "probability": 0.09851851851851852,
+      "probability_percent": 9.8519,
+      "outcome": "team_a",
+      "sample_count": 266,
+      "path_deviation": 0.6094288934277754,
+      "result_surprise": 0.1963746223564954,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价；Senegal在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_04"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.27375322935327817,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.23876890809016799,
+      "result_surprise": 0.9939577039274925,
+      "reason_cn": "紧凑防守对进攻空间的压缩、末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_01",
+        "H_02"
+      ]
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.30447393866906,
+      "probability": 0.07222222222222222,
+      "probability_percent": 7.2222,
+      "outcome": "draw",
+      "sample_count": 195,
+      "path_deviation": 0.5726805380534709,
+      "result_surprise": 0.4108761329305136,
+      "reason_cn": "关键球员状态与角色变化；双方防守结构有效，机会转化不足。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.4223724537990507,
+      "probability": 0.06444444444444444,
+      "probability_percent": 6.4444,
+      "outcome": "team_a",
+      "sample_count": 174,
+      "path_deviation": 0.6150609035091235,
+      "result_surprise": 0.47432024169184284,
+      "reason_cn": "Senegal打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.4392475422974031,
+      "probability": 0.06222222222222222,
+      "probability_percent": 6.2222,
+      "outcome": "team_b",
+      "sample_count": 168,
+      "path_deviation": 0.6162559884673965,
+      "result_surprise": 0.49244712990936557,
+      "reason_cn": "Iraq通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.4594320408124928,
+      "probability": 0.05296296296296296,
+      "probability_percent": 5.2963,
+      "outcome": "team_a",
+      "sample_count": 143,
+      "path_deviation": 0.5886909543695387,
+      "result_surprise": 0.5679758308157099,
+      "reason_cn": "Senegal打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.47157211938841365,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_a",
+      "sample_count": 8,
+      "path_deviation": 0.3769583654313133,
+      "result_surprise": 0.9758308157099698,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04",
+        "H_03"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.49573292056941015,
+      "probability": 0.04814814814814815,
+      "probability_percent": 4.8148,
+      "outcome": "team_b",
+      "sample_count": 130,
+      "path_deviation": 0.5911103304137039,
+      "result_surprise": 0.607250755287009,
+      "reason_cn": "关键球员状态与角色变化；Iraq通过压迫或转换取得一球优势。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.5198215646699282,
+      "probability": 0.044814814814814814,
+      "probability_percent": 4.4815,
+      "outcome": "draw",
+      "sample_count": 121,
+      "path_deviation": 0.592108314710637,
+      "result_surprise": 0.6344410876132931,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.5331564548862308,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.41043332284333073,
+      "result_surprise": 0.9879154078549849,
+      "reason_cn": "紧凑防守对进攻空间的压缩、末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_01",
+        "H_02"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.5966822590271862,
+      "probability": 0.024814814814814814,
+      "probability_percent": 2.4815,
+      "outcome": "team_a",
+      "sample_count": 67,
+      "path_deviation": 0.5541624541331911,
+      "result_surprise": 0.797583081570997,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "7-0",
+      "deviation": 0.5996731435680867,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.4519907997278711,
+      "result_surprise": 0.9909365558912386,
+      "reason_cn": "关键球员状态与角色变化、末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.6023411456730876,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.4504693874179047,
+      "result_surprise": 0.9969788519637462,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03",
+        "H_01"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.6046043249110722,
+      "probability": 0.026296296296296297,
+      "probability_percent": 2.6296,
+      "outcome": "team_a",
+      "sample_count": 71,
+      "path_deviation": 0.5658127396816189,
+      "result_surprise": 0.7854984894259819,
+      "reason_cn": "紧凑防守对进攻空间的压缩、当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价；Senegal打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_01",
+        "H_04"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.6059109461916543,
+      "probability": 0.005185185185185185,
+      "probability_percent": 0.5185,
+      "outcome": "team_b",
+      "sample_count": 14,
+      "path_deviation": 0.473935024820905,
+      "result_surprise": 0.9577039274924471,
+      "reason_cn": "末轮双队都需争胜，后60分钟平局黏性下降；Iraq充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6362146923651553,
+      "probability": 0.03,
+      "probability_percent": 3.0,
+      "outcome": "team_a",
+      "sample_count": 81,
+      "path_deviation": 0.6026026777312862,
+      "result_surprise": 0.755287009063444,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.6537722260599514,
+      "probability": 0.02259259259259259,
+      "probability_percent": 2.2593,
+      "outcome": "team_b",
+      "sample_count": 61,
+      "path_deviation": 0.5814660144033208,
+      "result_surprise": 0.8157099697885196,
+      "reason_cn": "关键球员状态与角色变化；Iraq充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 0.6704072840285914,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.5027934367587129,
+      "result_surprise": 0.9818731117824774,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_01"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.6861229880714905,
+      "probability": 0.013703703703703704,
+      "probability_percent": 1.3704,
+      "outcome": "team_a",
+      "sample_count": 37,
+      "path_deviation": 0.5634263859081435,
+      "result_surprise": 0.8882175226586102,
+      "reason_cn": "关键球员状态与角色变化、末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "6-0",
+      "deviation": 0.7172434065569868,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_a",
+      "sample_count": 8,
+      "path_deviation": 0.5364541284331588,
+      "result_surprise": 0.9758308157099698,
+      "reason_cn": "紧凑防守对进攻空间的压缩、当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_01",
+        "H_04"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.7454450979826096,
+      "probability": 0.0044444444444444444,
+      "probability_percent": 0.4444,
+      "outcome": "team_b",
+      "sample_count": 12,
+      "path_deviation": 0.5612704391465527,
+      "result_surprise": 0.9637462235649547,
+      "reason_cn": "末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.7777218008064622,
+      "probability": 0.012962962962962963,
+      "probability_percent": 1.2963,
+      "outcome": "team_b",
+      "sample_count": 35,
+      "path_deviation": 0.619641014546532,
+      "result_surprise": 0.8942598187311178,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价、紧凑防守对进攻空间的压缩；Iraq充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_04",
+        "H_01"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.788679571544889,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "draw",
+      "sample_count": 18,
+      "path_deviation": 0.5990999409646284,
+      "result_surprise": 0.945619335347432,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_01"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 0.8032741426873671,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.5841735105229884,
+      "result_surprise": 0.9909365558912386,
+      "reason_cn": "关键球员状态与角色变化、末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.8445804606961219,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.6126173468544762,
+      "result_surprise": 0.9879154078549849,
+      "reason_cn": "关键球员状态与角色变化、末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "7-1",
+      "deviation": 0.8533068304391808,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.6150291738746505,
+      "result_surprise": 0.9939577039274925,
+      "reason_cn": "紧凑防守对进攻空间的压缩、末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_01",
+        "H_02"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.8812214856129281,
+      "probability": 0.013703703703703704,
+      "probability_percent": 1.3704,
+      "outcome": "team_b",
+      "sample_count": 37,
+      "path_deviation": 0.69008906629103,
+      "result_surprise": 0.8882175226586102,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.8917226171731035,
+      "probability": 0.008518518518518519,
+      "probability_percent": 0.8519,
+      "outcome": "team_a",
+      "sample_count": 23,
+      "path_deviation": 0.6741318475288078,
+      "result_surprise": 0.9305135951661632,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.9109963249801455,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.6606164541706391,
+      "result_surprise": 0.9788519637462235,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04",
+        "H_01"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.9477019297426643,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_a",
+      "sample_count": 22,
+      "path_deviation": 0.7088482040592438,
+      "result_surprise": 0.9335347432024169,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 1.0,
+      "probability": 0.007037037037037037,
+      "probability_percent": 0.7037,
+      "outcome": "team_a",
+      "sample_count": 19,
+      "path_deviation": 0.7379210646838561,
+      "result_surprise": 0.9425981873111783,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.794006696060278,
+      "result_surprise": 0.9879154078549849,
+      "reason_cn": "末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_02"
+      ]
+    },
+    {
+      "score": "6-3",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_a",
+      "sample_count": 4,
+      "path_deviation": 0.7242717003597617,
+      "result_surprise": 0.9879154078549849,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "draw",
+      "sample_count": 2,
+      "path_deviation": 0.945968436491811,
+      "result_surprise": 0.9939577039274925,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04",
+        "H_01"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.8492444840303881,
+      "result_surprise": 0.9939577039274925,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04",
+        "H_01"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9969788519637462,
+      "reason_cn": "关键球员状态与角色变化、末轮双队都需争胜，后60分钟平局黏性下降；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_03",
+        "H_02"
+      ]
+    },
+    {
+      "score": "7-4",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.945968436491811,
+      "result_surprise": 0.9969788519637462,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04",
+        "H_01"
+      ]
+    },
+    {
+      "score": "8-0",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.945968436491811,
+      "result_surprise": 0.9969788519637462,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04",
+        "H_01"
+      ]
+    },
+    {
+      "score": "8-1",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.945968436491811,
+      "result_surprise": 0.9969788519637462,
+      "reason_cn": "当前赛事过程面仍偏向塞内加尔，不能只按两连败表象定价、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_04",
+        "H_01"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

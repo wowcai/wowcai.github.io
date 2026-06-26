@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T07:34:30.230282Z",
+  "prediction_generated_at_local": "2026-06-26T15:34:30.230282+08:00",
+  "quality_label": "usable",
+  "match_id": "M63",
+  "team_a": "Uruguay",
+  "team_b": "Spain",
+  "axis_note_cn": "纵轴为Uruguay进球数，横轴为Spain进球数；5+表示至少5球。",
+  "row_axis": {
+    "team": "Uruguay",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "column_axis": {
+    "team": "Spain",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "matrix": [
+    [
+      0.0637037037037037,
+      0.11333333333333333,
+      0.09814814814814815,
+      0.05074074074074074,
+      0.017037037037037038,
+      0.012592592592592593
+    ],
+    [
+      0.06851851851851852,
+      0.11333333333333333,
+      0.10333333333333333,
+      0.052222222222222225,
+      0.023703703703703703,
+      0.012962962962962964
+    ],
+    [
+      0.025185185185185185,
+      0.05851851851851852,
+      0.04703703703703704,
+      0.025555555555555557,
+      0.015185185185185185,
+      0.01074074074074074
+    ],
+    [
+      0.008888888888888889,
+      0.020370370370370372,
+      0.021111111111111112,
+      0.011111111111111112,
+      0.004074074074074074,
+      0.0029629629629629632
+    ],
+    [
+      0.0025925925925925925,
+      0.0022222222222222222,
+      0.006296296296296296,
+      0.0033333333333333335,
+      0.0014814814814814814,
+      0.0
+    ],
+    [
+      0.0,
+      0.0011111111111111111,
+      0.0011111111111111111,
+      0.00037037037037037035,
+      0.0007407407407407407,
+      0.00037037037037037035
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "0",
+      "probability": 0.0637037037037037,
+      "probability_percent": 6.3704
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "1",
+      "probability": 0.11333333333333333,
+      "probability_percent": 11.3333
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "2",
+      "probability": 0.09814814814814815,
+      "probability_percent": 9.8148
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "3",
+      "probability": 0.05074074074074074,
+      "probability_percent": 5.0741
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "4",
+      "probability": 0.017037037037037038,
+      "probability_percent": 1.7037
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "5+",
+      "probability": 0.012592592592592593,
+      "probability_percent": 1.2593
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "0",
+      "probability": 0.06851851851851852,
+      "probability_percent": 6.8519
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "1",
+      "probability": 0.11333333333333333,
+      "probability_percent": 11.3333
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "2",
+      "probability": 0.10333333333333333,
+      "probability_percent": 10.3333
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "3",
+      "probability": 0.052222222222222225,
+      "probability_percent": 5.2222
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "4",
+      "probability": 0.023703703703703703,
+      "probability_percent": 2.3704
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "5+",
+      "probability": 0.012962962962962964,
+      "probability_percent": 1.2963
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "0",
+      "probability": 0.025185185185185185,
+      "probability_percent": 2.5185
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "1",
+      "probability": 0.05851851851851852,
+      "probability_percent": 5.8519
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "2",
+      "probability": 0.04703703703703704,
+      "probability_percent": 4.7037
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "3",
+      "probability": 0.025555555555555557,
+      "probability_percent": 2.5556
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "4",
+      "probability": 0.015185185185185185,
+      "probability_percent": 1.5185
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "5+",
+      "probability": 0.01074074074074074,
+      "probability_percent": 1.0741
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "0",
+      "probability": 0.008888888888888889,
+      "probability_percent": 0.8889
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "1",
+      "probability": 0.020370370370370372,
+      "probability_percent": 2.037
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "2",
+      "probability": 0.021111111111111112,
+      "probability_percent": 2.1111
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "3",
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "4",
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "5+",
+      "probability": 0.0029629629629629632,
+      "probability_percent": 0.2963
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "0",
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "1",
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "2",
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "3",
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "4",
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "5+",
+      "probability": 0.0,
+      "probability_percent": 0.0
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "1",
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "2",
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "3",
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "4",
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "5+",
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037
+    }
+  ],
+  "probability_sum": 1.0,
+  "source": "state_conditioned_monte_carlo",
+  "sample_count": 2700
+}

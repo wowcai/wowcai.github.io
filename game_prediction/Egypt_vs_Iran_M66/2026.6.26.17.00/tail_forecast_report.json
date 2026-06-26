@@ -1,0 +1,836 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-26T09:15:00.133228Z",
+  "status": "partial_audit",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Egypt_vs_Iran_M66\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "e0ef9217eb8981855c8a521ff001495fcb6e26174a7dd2e49fd219e03be7ad6b",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-26T08:18:53.950583+00:00"
+  },
+  "match": {
+    "match_id": "M66",
+    "team_a": "Egypt",
+    "team_b": "Iran",
+    "kickoff_utc": "2026-06-27T03:00:00Z",
+    "venue": "Lumen Field, Seattle",
+    "stage": "group",
+    "group": "G",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 99,
+      "usable_evidence": 99,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 2,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.42074074074074075,
+    "draw": 0.30074074074074075,
+    "team_b_win": 0.2785185185185185,
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.14333333333333334
+      },
+      {
+        "score": "1-0",
+        "probability": 0.13148148148148148
+      },
+      {
+        "score": "0-0",
+        "probability": 0.11
+      },
+      {
+        "score": "0-1",
+        "probability": 0.10592592592592592
+      },
+      {
+        "score": "2-1",
+        "probability": 0.08592592592592592
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999998
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_a",
+    "favorite_team": "Egypt",
+    "underdog_side": "team_b",
+    "underdog_team": "Iran",
+    "team_a_win": 0.42074074074074075,
+    "draw": 0.30074074074074075,
+    "team_b_win": 0.2785185185185185,
+    "win_probability_gap": 0.14222222222222225,
+    "underdog_win_probability": 0.2785185185185185,
+    "favorite_fail_to_win_probability": 0.5792592592592593,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "已对 high_scoring（开放／大比分，总进球≥4）情景进行独立审计。提案引用的证据（伊朗两度扳平2-2、埃及3-1胜新西兰及1.96 xG、Fathi伤缺、出线形势）均真实存在于证据池，无过期或幻觉证据。所选比分全部取自原候选池，未改变情景总概率。审计保留4个候选，但下调情景证据强度并补充关键反向约束：本情景基础概率仅0.183，主预测与9条推演的代表比分以低进球（0-0最常见）为主，且三条被接受机制(H_072c07e3c1/H_7b3bd18b06/H_ENV_MATERIAL)的total_goals方向均为down或neutral，没有任何机制实质支持高进球。提案并未把情景机械压回单一最低达标比分：在保留高概率的2-2、3-1之外，确实纳入了3-2、4-1等更开放路径，分级(2/2/1/1)与条件概率排序一致，属诚实排序而非偷懒压缩。4-1为最激进项，因伊朗防守是其最强属性(low_block 0.74、GK 0.73、defence 0.67)、攻击与终结偏弱(0.54/0.47)，埃及打入4球属强尾部，故维持grade 1并加注谨慎。未纳入伊朗式开放大胜(1-3/2-3)是正确的：伊朗攻击端机制不支持其单场打入3球，尽管模型条件概率偏高。；未调用LLM，输出确定性高偏离候选基线。；未调用LLM，输出确定性高偏离候选基线。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.1833333333333334,
+      "attention_level": "low",
+      "evidence_strength": 0.45,
+      "rationale_cn": "高进球为低概率尾部情景(base_event_probability=0.183)，且与主预测低进球倾向(xG_a≈1.26、xG_b≈0.98)和推演代表比分(0-0最常见)相悖。三条被接受机制的total_goals方向均为down/neutral，无机制支持开放对攻，因此本情景整体可信度有限。在此前提下，证据可支持的开放路径以总进球4-5、埃及占优为主：2-2为伊朗具备两度扳平韧性的开放平局，3-1与埃及上一场实际比分及攻强守弱结构吻合，二者为情景内条件概率最高项；3-2、4-1作为更高净进球的认真比较项保留，但分级反映其有限支持。未纳入伊朗开放大胜(1-3/2-3)，因伊朗攻击/终结偏弱，机制不支持其单场3球。",
+      "supporting_evidence_ids": [
+        "E_7cf540390dce",
+        "E_45a2918fc8f6",
+        "E_0dd0f559bdb5",
+        "E_399ae93ef2a8",
+        "E_544c15074e97",
+        "E_4fb199a3fbeb"
+      ],
+      "counter_evidence_ids": [
+        "E_cb5bd365f9fb",
+        "E_c2818093ed41",
+        "E_b1c79089b21c",
+        "E_ec5396c3a514"
+      ],
+      "caution_cn": "本情景为低概率尾部，仅在比赛偏离主预测、转为开放对攻时成立。关键反向约束：伊朗防守韧性(连续0-0比利时、2-2新西兰)、强门将与74低位紧凑度，使任一方打入≥4球(尤其4-1)的可能性受限；同时无任何被接受机制支持高总进球，机制方向反而压低进球。所有分级均应被视为条件性、非主线判断，不可据此抬高对大比分的总体权重。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "2-2",
+          "base_probability": 0.04148148148148148,
+          "base_conditional_probability": 0.22626262626262617,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.11919191919191914,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.044444444444444425,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.18181818181818174,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.10303030303030299,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.06868686868686866,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.06464646464646462,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.044444444444444425,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.04148148148148148,
+          "base_conditional_probability": 0.22626262626262617,
+          "tail_focus_conditional_probability": 0.246041156166838,
+          "tail_focus_implied_overall_probability": 0.04510754529725365,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "上下半场互有攻守，伊朗在落后或拉锯中依靠转换与定位球追平，埃及凭萨拉赫/马尔穆什再下一城，全场呈开放对攻型平局。",
+          "rationale_cn": "开放对攻型平局，情景内条件概率最高(≈0.226)。伊朗曾两度从落后扳平新西兰至2-2(E_0dd0f559bdb5、E_399ae93ef2a8)，具备追分韧性；埃及进攻更强但中场Fathi缺阵(E_4fb199a3fbeb)削弱防守平衡，双方均有得分点。rollout_1代表比分即为2-2。证据真实且方向一致，维持grade 2。",
+          "evidence_ids": [
+            "E_0dd0f559bdb5",
+            "E_399ae93ef2a8",
+            "E_4fb199a3fbeb"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.18181818181818174,
+          "tail_focus_conditional_probability": 0.19771164334835198,
+          "tail_focus_implied_overall_probability": 0.03624713461386454,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "埃及通过萨拉赫与边路单挑及快速转换多点取分，伊朗为求胜上压后被反击打穿，仅由塔雷米保留一粒回追球。",
+          "rationale_cn": "埃及主导的开放4球局，条件概率次高(≈0.182)，与其上一场3-1胜新西兰及1.96 xG表现一致(E_7cf540390dce、E_45a2918fc8f6)，并契合transition 0.64、wing_isolation 0.69的攻强结构。注意此处部分依赖对过往单场比分的锚定，但有xG与攻击属性支撑，维持grade 2。",
+          "evidence_ids": [
+            "E_7cf540390dce",
+            "E_45a2918fc8f6"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.11919191919191914,
+          "tail_focus_conditional_probability": 0.1282507311674967,
+          "tail_focus_implied_overall_probability": 0.0235126340473744,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "末轮博弈下伊朗为争胜上压，比赛节奏拉开，埃及略占火力优势但伊朗两度回追，形成高强度5球对攻。",
+          "rationale_cn": "埃及微弱占优的5球路径(条件概率≈0.119)。伊朗末轮需赢球争取主动(E_544c15074e97对侧效应)，上压会抬高净进球；伊朗具备追分韧性故能进两球。比2-2更开放但仍属合理，证据为有限支持，维持grade 1。",
+          "evidence_ids": [
+            "E_544c15074e97",
+            "E_7cf540390dce"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.06868686868686866,
+          "tail_focus_conditional_probability": 0.07390720101177775,
+          "tail_focus_implied_overall_probability": 0.013549653518825927,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "伊朗为出线上压致低位结构松动，埃及在中段集中爆发连续得分至4球，伊朗仅由塔雷米取得一粒安慰球。",
+          "rationale_cn": "埃及偏一边倒的5球路径，为本情景最激进项(条件概率≈0.069)。推演出现埃及连续进球的4-0、3-0剧本(rollout_4、rollout_9)，显示其30-60分钟段集中得分的可行性。但伊朗防守是其最强属性(low_block 0.74、GK 0.73)，埃及打入4球属强尾部，故仅作认真比较项，维持grade 1并加注谨慎。",
+          "evidence_ids": [
+            "E_45a2918fc8f6",
+            "E_7cf540390dce"
+          ],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "2-2",
+          "main_base_probability": 0.04148148148148148,
+          "base_conditional_probability": 0.22626262626262617,
+          "tail_focus_conditional_probability": 0.246041156166838,
+          "tail_focus_implied_overall_probability": 0.04510754529725365,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.18181818181818174,
+          "tail_focus_conditional_probability": 0.19771164334835198,
+          "tail_focus_implied_overall_probability": 0.03624713461386454,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.02185185185185185,
+          "base_conditional_probability": 0.11919191919191914,
+          "tail_focus_conditional_probability": 0.1282507311674967,
+          "tail_focus_implied_overall_probability": 0.0235126340473744,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.10303030303030299,
+          "tail_focus_conditional_probability": 0.07726661923958585,
+          "tail_focus_implied_overall_probability": 0.014165546860590744,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.06868686868686866,
+          "tail_focus_conditional_probability": 0.07390720101177775,
+          "tail_focus_implied_overall_probability": 0.013549653518825927,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.06464646464646462,
+          "tail_focus_conditional_probability": 0.0579664321661002,
+          "tail_focus_implied_overall_probability": 0.010627179230451707,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.044444444444444425,
+          "tail_focus_conditional_probability": 0.044199404526651394,
+          "tail_focus_implied_overall_probability": 0.008103224163219425,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.044444444444444425,
+          "tail_focus_conditional_probability": 0.03333069849550761,
+          "tail_focus_implied_overall_probability": 0.006110628057509731,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.005555555555555556,
+          "base_conditional_probability": 0.030303030303030293,
+          "tail_focus_conditional_probability": 0.03013595763180777,
+          "tail_focus_implied_overall_probability": 0.005524925565831427,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.020202020202020193,
+          "tail_focus_conditional_probability": 0.018114510051906313,
+          "tail_focus_implied_overall_probability": 0.003320993509516159,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000004
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.08703703703703704,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "3-0",
+          "base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.3829787234042553,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-1",
+          "base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.14468085106382977,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-0",
+          "base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.09361702127659574,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.20425531914893616,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.0425531914893617,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "5-1",
+          "base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.02553191489361702,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "5-0",
+          "base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.02127659574468085,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.01702127659574468,
+          "total_goals": 6,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.3829787234042553,
+          "tail_focus_conditional_probability": 0.359985600575977,
+          "tail_focus_implied_overall_probability": 0.031332080050131335,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.14468085106382977,
+          "tail_focus_conditional_probability": 0.1468741250349986,
+          "tail_focus_implied_overall_probability": 0.012783488660453583,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.09361702127659574,
+          "tail_focus_conditional_probability": 0.10449582016719329,
+          "tail_focus_implied_overall_probability": 0.009095006570107565,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "3-0",
+          "main_base_probability": 0.03333333333333333,
+          "base_conditional_probability": 0.3829787234042553,
+          "tail_focus_conditional_probability": 0.359985600575977,
+          "tail_focus_implied_overall_probability": 0.031332080050131335,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.20425531914893616,
+          "tail_focus_conditional_probability": 0.19199232030718774,
+          "tail_focus_implied_overall_probability": 0.01671044269340338,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.012592592592592593,
+          "base_conditional_probability": 0.14468085106382977,
+          "tail_focus_conditional_probability": 0.1468741250349986,
+          "tail_focus_implied_overall_probability": 0.012783488660453583,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.008148148148148147,
+          "base_conditional_probability": 0.09361702127659574,
+          "tail_focus_conditional_probability": 0.10449582016719329,
+          "tail_focus_implied_overall_probability": 0.009095006570107565,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.0425531914893617,
+          "tail_focus_conditional_probability": 0.043198272069117236,
+          "tail_focus_implied_overall_probability": 0.0037598496060157593,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "5-1",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.02553191489361702,
+          "tail_focus_conditional_probability": 0.030778768849246033,
+          "tail_focus_implied_overall_probability": 0.0026788928442862286,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "5-0",
+          "main_base_probability": 0.001851851851851852,
+          "base_conditional_probability": 0.02127659574468085,
+          "tail_focus_conditional_probability": 0.025648974041038365,
+          "tail_focus_implied_overall_probability": 0.0022324107035718577,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.01702127659574468,
+          "tail_focus_conditional_probability": 0.020519179232830687,
+          "tail_focus_implied_overall_probability": 0.0017859285628574857,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.01702127659574468,
+          "tail_focus_conditional_probability": 0.01899924003039878,
+          "tail_focus_implied_overall_probability": 0.0016536375582013754,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.0007407407407407407,
+          "base_conditional_probability": 0.00851063829787234,
+          "tail_focus_conditional_probability": 0.010259589616415344,
+          "tail_focus_implied_overall_probability": 0.0008929642814287428,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999998
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Iran 获胜。",
+      "applicable": true,
+      "status": "accepted",
+      "base_event_probability": 0.27851851851851844,
+      "attention_level": "medium",
+      "evidence_strength": 0.0,
+      "rationale_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+      "audit_note_cn": "未执行LLM审计。",
+      "candidate_pool": [
+        {
+          "score": "0-1",
+          "base_probability": 0.10592592592592592,
+          "base_conditional_probability": 0.3803191489361703,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-2",
+          "base_probability": 0.07111111111111111,
+          "base_conditional_probability": 0.2553191489361703,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "0-2",
+          "base_probability": 0.04,
+          "base_conditional_probability": 0.14361702127659579,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "1-3",
+          "base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.06781914893617023,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "0-3",
+          "base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06382978723404258,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.042553191489361715,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.013297872340425535,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010638297872340429,
+          "total_goals": 6,
+          "winning_margin": 2
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.10592592592592592,
+          "base_conditional_probability": 0.3803191489361703,
+          "tail_focus_conditional_probability": 0.3803191489361703,
+          "tail_focus_implied_overall_probability": 0.10592592592592592,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.07111111111111111,
+          "base_conditional_probability": 0.2553191489361703,
+          "tail_focus_conditional_probability": 0.2553191489361703,
+          "tail_focus_implied_overall_probability": 0.07111111111111111,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.04,
+          "base_conditional_probability": 0.14361702127659579,
+          "tail_focus_conditional_probability": 0.14361702127659579,
+          "tail_focus_implied_overall_probability": 0.04,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。",
+          "rationale_cn": "确定性候选池基线。",
+          "evidence_ids": [],
+          "mechanism_ids": []
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-1",
+          "main_base_probability": 0.10592592592592592,
+          "base_conditional_probability": 0.3803191489361703,
+          "tail_focus_conditional_probability": 0.3803191489361703,
+          "tail_focus_implied_overall_probability": 0.10592592592592592,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-2",
+          "main_base_probability": 0.07111111111111111,
+          "base_conditional_probability": 0.2553191489361703,
+          "tail_focus_conditional_probability": 0.2553191489361703,
+          "tail_focus_implied_overall_probability": 0.07111111111111111,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-2",
+          "main_base_probability": 0.04,
+          "base_conditional_probability": 0.14361702127659579,
+          "tail_focus_conditional_probability": 0.14361702127659579,
+          "tail_focus_implied_overall_probability": 0.04,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-3",
+          "main_base_probability": 0.01888888888888889,
+          "base_conditional_probability": 0.06781914893617023,
+          "tail_focus_conditional_probability": 0.06781914893617023,
+          "tail_focus_implied_overall_probability": 0.01888888888888889,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-3",
+          "main_base_probability": 0.017777777777777778,
+          "base_conditional_probability": 0.06382978723404258,
+          "tail_focus_conditional_probability": 0.06382978723404258,
+          "tail_focus_implied_overall_probability": 0.017777777777777778,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.011851851851851851,
+          "base_conditional_probability": 0.042553191489361715,
+          "tail_focus_conditional_probability": 0.042553191489361715,
+          "tail_focus_implied_overall_probability": 0.011851851851851853,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.013297872340425535,
+          "tail_focus_conditional_probability": 0.013297872340425535,
+          "tail_focus_implied_overall_probability": 0.003703703703703704,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.010638297872340429,
+          "tail_focus_conditional_probability": 0.010638297872340429,
+          "tail_focus_implied_overall_probability": 0.0029629629629629632,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.005319148936170214,
+          "tail_focus_conditional_probability": 0.005319148936170214,
+          "tail_focus_implied_overall_probability": 0.0014814814814814816,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.0014814814814814814,
+          "base_conditional_probability": 0.005319148936170214,
+          "tail_focus_conditional_probability": 0.005319148936170214,
+          "tail_focus_implied_overall_probability": 0.0014814814814814816,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 1.0000000000000004
+    }
+  ],
+  "llm": {
+    "proposer_model": "claude-opus-4-8",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "partial",
+    "auditor_status": "partial",
+    "cache_enabled": true,
+    "errors": [
+      "blowout Proposer失败：RuntimeError: LLM 调用失败（claude-opus-4-8 / tail_forecast_proposer_v744_blowout）：BUSINESS_VALIDATION_FAILED: blowout must select 1-4 candidate scores",
+      "upset Proposer失败：RuntimeError: LLM 调用失败（claude-opus-4-8 / tail_forecast_proposer_v744_upset）：BUSINESS_VALIDATION_FAILED: missing scenarios: ['upset']"
+    ]
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999998,
+    "source_hash": "e0ef9217eb8981855c8a521ff001495fcb6e26174a7dd2e49fd219e03be7ad6b"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Egypt_vs_Iran_M66\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\web_delivery\\Egypt_vs_Iran_M66\\2026.6.27.11\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Egypt_vs_Iran_M66\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\web_delivery\\Egypt_vs_Iran_M66\\2026.6.27.11\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

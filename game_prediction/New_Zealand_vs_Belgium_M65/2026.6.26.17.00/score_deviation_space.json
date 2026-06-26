@@ -1,0 +1,551 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T08:04:18.383645Z",
+  "prediction_generated_at_local": "2026-06-26T16:04:18.383645+08:00",
+  "quality_label": "usable",
+  "match_id": "M65",
+  "team_a": "New Zealand",
+  "team_b": "Belgium",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "0-1",
+      "deviation": 0.0,
+      "probability": 0.18037037037037038,
+      "probability_percent": 18.037,
+      "outcome": "team_b",
+      "sample_count": 487,
+      "path_deviation": 0.5911652289242105,
+      "result_surprise": 0.0,
+      "reason_cn": "Belgium通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-7",
+      "deviation": 0.21215501691843905,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.1937235181473679,
+      "result_surprise": 0.9958932238193019,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2d31786687",
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.21222706583355022,
+      "probability": 0.1425925925925926,
+      "probability_percent": 14.2593,
+      "outcome": "team_b",
+      "sample_count": 385,
+      "path_deviation": 0.6172424636124009,
+      "result_surprise": 0.20944558521560575,
+      "reason_cn": "Belgium充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.2609985114664769,
+      "probability": 0.12037037037037036,
+      "probability_percent": 12.037,
+      "outcome": "draw",
+      "sample_count": 325,
+      "path_deviation": 0.5828123459886483,
+      "result_surprise": 0.33264887063655035,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.3323132817298319,
+      "probability": 0.11037037037037037,
+      "probability_percent": 11.037,
+      "outcome": "draw",
+      "sample_count": 298,
+      "path_deviation": 0.5996189699959031,
+      "result_surprise": 0.3880903490759754,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.4340975790821877,
+      "probability": 0.08074074074074074,
+      "probability_percent": 8.0741,
+      "outcome": "team_b",
+      "sample_count": 218,
+      "path_deviation": 0.5777606163764699,
+      "result_surprise": 0.5523613963039015,
+      "reason_cn": "Belgium通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.5091385995955308,
+      "probability": 0.07592592592592592,
+      "probability_percent": 7.5926,
+      "outcome": "team_a",
+      "sample_count": 205,
+      "path_deviation": 0.6124846333093269,
+      "result_surprise": 0.5790554414784395,
+      "reason_cn": "New Zealand在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.5216327176536311,
+      "probability": 0.06111111111111111,
+      "probability_percent": 6.1111,
+      "outcome": "team_b",
+      "sample_count": 165,
+      "path_deviation": 0.5764324469266874,
+      "result_surprise": 0.6611909650924025,
+      "reason_cn": "Belgium充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.6424477925132317,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.4785718828858787,
+      "result_surprise": 0.9897330595482546,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.647230085376244,
+      "probability": 0.03481481481481481,
+      "probability_percent": 3.4815,
+      "outcome": "team_a",
+      "sample_count": 94,
+      "path_deviation": 0.5801055101540452,
+      "result_surprise": 0.8069815195071869,
+      "reason_cn": "紧凑防守对进攻空间的压缩；New Zealand在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.6701475309781517,
+      "probability": 0.03888888888888889,
+      "probability_percent": 3.8889,
+      "outcome": "team_b",
+      "sample_count": 105,
+      "path_deviation": 0.6072622799049779,
+      "result_surprise": 0.784394250513347,
+      "reason_cn": "Belgium充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.6785145257080879,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.49995823343283635,
+      "result_surprise": 0.9938398357289527,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.7085455164753265,
+      "probability": 0.017037037037037038,
+      "probability_percent": 1.7037,
+      "outcome": "team_a",
+      "sample_count": 46,
+      "path_deviation": 0.5671506998551701,
+      "result_surprise": 0.9055441478439425,
+      "reason_cn": "紧凑防守对进攻空间的压缩；New Zealand打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.7162735319754904,
+      "probability": 0.020370370370370372,
+      "probability_percent": 2.037,
+      "outcome": "team_b",
+      "sample_count": 55,
+      "path_deviation": 0.5821580095803814,
+      "result_surprise": 0.8870636550308009,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.7220856352866694,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.5284658778465118,
+      "result_surprise": 0.9938398357289527,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.7279590546474718,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_a",
+      "sample_count": 8,
+      "path_deviation": 0.5378370829722333,
+      "result_surprise": 0.9835728952772074,
+      "reason_cn": "关键球员状态与角色变化；New Zealand打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "0-9",
+      "deviation": 0.742987191753894,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.5399299778516934,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.7501800539968843,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome": "team_a",
+      "sample_count": 21,
+      "path_deviation": 0.5667495238670713,
+      "result_surprise": 0.9568788501026694,
+      "reason_cn": "紧凑防守对进攻空间的压缩；New Zealand打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_490a3696e7"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.7637662965299183,
+      "probability": 0.023333333333333334,
+      "probability_percent": 2.3333,
+      "outcome": "draw",
+      "sample_count": 63,
+      "path_deviation": 0.6220768729882734,
+      "result_surprise": 0.8706365503080082,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": [
+        "H_490a3696e7"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.7662160963092384,
+      "probability": 0.017777777777777778,
+      "probability_percent": 1.7778,
+      "outcome": "team_b",
+      "sample_count": 48,
+      "path_deviation": 0.6070946668962479,
+      "result_surprise": 0.9014373716632443,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.7684291471153005,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_a",
+      "sample_count": 22,
+      "path_deviation": 0.5797951854062597,
+      "result_surprise": 0.9548254620123203,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.7825172568397512,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome": "team_b",
+      "sample_count": 18,
+      "path_deviation": 0.5845900520203373,
+      "result_surprise": 0.9630390143737166,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.7972216227326897,
+      "probability": 0.02185185185185185,
+      "probability_percent": 2.1852,
+      "outcome": "team_b",
+      "sample_count": 59,
+      "path_deviation": 0.6395432948137441,
+      "result_surprise": 0.8788501026694046,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；Belgium充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_2d31786687",
+        "H_490a3696e7"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.8659472202268544,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.6236971042107694,
+      "result_surprise": 0.9917864476386037,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.8683218857312331,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_b",
+      "sample_count": 6,
+      "path_deviation": 0.6274621380439976,
+      "result_surprise": 0.9876796714579056,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.9463316024958977,
+      "probability": 0.005925925925925926,
+      "probability_percent": 0.5926,
+      "outcome": "team_b",
+      "sample_count": 16,
+      "path_deviation": 0.6895589311272906,
+      "result_surprise": 0.9671457905544147,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 1.0,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_b",
+      "sample_count": 22,
+      "path_deviation": 0.7313070379722938,
+      "result_surprise": 0.9548254620123203,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 1.0,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "draw",
+      "sample_count": 4,
+      "path_deviation": 0.8576374853639831,
+      "result_surprise": 0.9917864476386037,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-7",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.7446295921835465,
+      "result_surprise": 0.9958932238193019,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2d31786687",
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.7423681106489599,
+      "result_surprise": 0.9958932238193019,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "0-10",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8101833138186442,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8101833138186442,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "2-7",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.724660380577618,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "2-8",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7446295921835465,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2d31786687",
+        "H_6d47daccae"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "4-0",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.724660380577618,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；New Zealand打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_490a3696e7",
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "5-0",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2d31786687"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.997946611909651,
+      "reason_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_2d31786687"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

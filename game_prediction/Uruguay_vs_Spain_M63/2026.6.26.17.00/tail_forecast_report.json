@@ -1,0 +1,938 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "7.4.4-tail-single-scenario-hotfix",
+  "generated_at": "2026-06-26T07:36:54.009451Z",
+  "status": "ready",
+  "source": {
+    "path": "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Uruguay_vs_Spain_M63\\latest_state_v7.json",
+    "filename": "latest_state_v7.json",
+    "sha256": "01b5c8f254c11e0acbc10006d45b1374d1d3287ef6f9485ec127df7ca65c93ac",
+    "prediction_version": "7.3.7-production-reliability",
+    "prediction_generated_at": "2026-06-26T07:34:30.230282+00:00"
+  },
+  "match": {
+    "match_id": "M63",
+    "team_a": "Uruguay",
+    "team_b": "Spain",
+    "kickoff_utc": "2026-06-27T00:00:00Z",
+    "venue": "Estadio Akron, Guadalajara",
+    "stage": "group",
+    "group": "H",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "method": {
+    "name": "evidence_grounded_tail_forecast_postprocessing",
+    "main_pipeline_frozen": true,
+    "event_probabilities_source": "original_joint_score_matrix",
+    "candidate_selection_source": "diversified_probability_cells_within_each_tail_event",
+    "proposer_role": "independent_parallel_scenario_selection_and_support_grading",
+    "auditor_role": "independent_evidence_and_mechanism_consistency_audit",
+    "support_multipliers": {
+      "-2": 0.7,
+      "-1": 0.85,
+      "0": 1.0,
+      "1": 1.2,
+      "2": 1.45
+    },
+    "scenario_focus_multipliers": {
+      "high_scoring": {
+        "total_goals_4": 0.92,
+        "total_goals_5": 1.1,
+        "total_goals_6_plus": 1.22
+      },
+      "blowout": {
+        "margin_3": 0.96,
+        "margin_4_plus": 1.14,
+        "total_goals_5_plus": 1.08
+      },
+      "upset": {}
+    },
+    "evidence_quality_filter": {
+      "total_raw_evidence": 90,
+      "usable_evidence": 90,
+      "rejected_evidence": 0,
+      "low_confidence_but_usable": 2,
+      "rejected_examples": []
+    },
+    "scenario_overlap_warning": true
+  },
+  "frozen_main_prediction": {
+    "team_a_win": 0.22037037037037038,
+    "draw": 0.23703703703703705,
+    "team_b_win": 0.5425925925925926,
+    "top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.11333333333333333
+      },
+      {
+        "score": "1-1",
+        "probability": 0.11333333333333333
+      },
+      {
+        "score": "1-2",
+        "probability": 0.10333333333333333
+      },
+      {
+        "score": "0-2",
+        "probability": 0.09814814814814815
+      },
+      {
+        "score": "1-0",
+        "probability": 0.06851851851851852
+      }
+    ],
+    "score_matrix_probability_sum": 0.9999999999999996
+  },
+  "favorite_assessment": {
+    "threshold": 0.08,
+    "favorite_side": "team_b",
+    "favorite_team": "Spain",
+    "underdog_side": "team_a",
+    "underdog_team": "Uruguay",
+    "team_a_win": 0.22037037037037038,
+    "draw": 0.23703703703703705,
+    "team_b_win": 0.5425925925925926,
+    "win_probability_gap": 0.32222222222222224,
+    "underdog_win_probability": 0.22037037037037038,
+    "favorite_fail_to_win_probability": 0.45740740740740743,
+    "is_balanced": false
+  },
+  "overall_summary_cn": "西班牙整体实力显著强于乌拉圭（strength 0.83 vs 0.63），乌拉圭核心后卫Araujo与前场组织核心De Arrascaeta双双确认缺阵，The Athletic指出乌拉圭转换防守存在系统性漏洞，西班牙本届赛前有4-0大胜沙特的实力背书。崩盘情景有真实机制支撑，但需警惕过度极端：西班牙赛前战略容错大（平局即可头名），不具强烈动机持续扩大比分；乌拉圭仍有Valverde/Nunez等进攻支点，且必须争胜动机强，完全被压制零封的概率有限。综合来看，0-3是机制与rollout最直接支持的锚定比分，1-4次之，0-4作弱保留，0-5证据链不足以支撑保留。",
+  "scenarios": [
+    {
+      "scenario_id": "high_scoring",
+      "label_cn": "开放／大比分",
+      "definition_cn": "总进球至少4球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.29629629629629634,
+      "attention_level": "medium",
+      "evidence_strength": 0.58,
+      "rationale_cn": "证据链真实且可追溯：西班牙4-0大胜沙特（E_bdad281070e1/E_48d996f02374）、Araujo+De Arrascaeta伤缺（E_ee6f0c02829d/E_641dbd2aca23）、乌拉圭高压体系暴露空间（E_737e0cb515f9）、场地条件利于快速出球（E_8928308f3138/E_a1725e969c0a）均为真实引用。机制H_a1c2be1709（Araujo缺阵）outcome_direction总进球为'down'，与高比分情景存在方向性张力，但该机制主要影响防线稳定性而非直接压制总进球上限，不足以否定开放场景。乌拉圭出线压力（E_d2760bf47584）迫使其主动，降低低节奏僵局概率，支持进入开放态。整体证据中等偏强，候选池合理，无过度极端化问题。2-2作为support_grade 0的最低达标保底存疑，但其base_conditional_probability（0.159）在候选池中排第二，且乌拉圭出线需求提供平局博弈机制，保留合理。1-4相对1-3的额外一球缺乏西班牙'必须追打'的动机支撑，降级。",
+      "supporting_evidence_ids": [
+        "E_bdad281070e1",
+        "E_48d996f02374",
+        "E_737e0cb515f9",
+        "E_ee6f0c02829d",
+        "E_641dbd2aca23",
+        "E_d2760bf47584",
+        "E_8928308f3138",
+        "E_a1725e969c0a"
+      ],
+      "counter_evidence_ids": [
+        "E_55e367bbee4e",
+        "E_99289c710c90"
+      ],
+      "caution_cn": "H_a1c2be1709机制标注总进球方向为down，与高比分情景存在轻度矛盾，需注意该情景概率天花板。西班牙战略容错（平局即晋级）可能抑制其主动扩大比分的意愿，削弱极端大比分（如1-4、2-4）的可信度。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-3",
+          "base_probability": 0.052222222222222225,
+          "base_conditional_probability": 0.17625,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-3",
+          "base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.08625,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-4",
+          "base_probability": 0.015185185185185185,
+          "base_conditional_probability": 0.05124999999999999,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "2-2",
+          "base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.15874999999999997,
+          "total_goals": 4,
+          "winning_margin": 0
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.07999999999999999,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.07125,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.06874999999999999,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.057499999999999996,
+          "total_goals": 4,
+          "winning_margin": 4
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.052222222222222225,
+          "base_conditional_probability": 0.17625,
+          "tail_focus_conditional_probability": 0.2013677600039397,
+          "tail_focus_implied_overall_probability": 0.05966452148264881,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "主路径。西班牙进攻参数全面优于乌拉圭（attack 0.82 vs 0.61，finishing_state 0.77 vs 0.52），4-0大胜沙特证实高效率多球输出能力；Araujo缺阵直接削弱乌拉圭防线；高压体系暴露空间有明确证据；乌拉圭出线压力驱使其主动前压，反而为西班牙身后反击创造条件。该比分在主比分矩阵中排名第三（base_probability 0.052），在候选池内conditional概率最高（0.176），剧本连贯、证据真实。",
+          "evidence_ids": [
+            "E_bdad281070e1",
+            "E_48d996f02374",
+            "E_737e0cb515f9",
+            "E_ee6f0c02829d",
+            "E_641dbd2aca23",
+            "E_d2760bf47584",
+            "E_8928308f3138",
+            "E_a1725e969c0a"
+          ],
+          "mechanism_ids": [
+            "H_a1c2be1709"
+          ]
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.15874999999999997,
+          "tail_focus_conditional_probability": 0.1501024535319169,
+          "tail_focus_implied_overall_probability": 0.0444748010464939,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92,
+          "script_cn": "",
+          "rationale_cn": "平局型大比分。候选池内base_conditional_probability第二高（0.159），乌拉圭出线压力提供了'必须追平/追胜'的博弈机制，西班牙在领先后可能降低强度（平局即出线），为乌拉圭追分创造空间。原提案给support_grade 0理由为'证据更偏西班牙优势'，但在高比分情景内，不能以总体胜负倾向否定具体开放平局路径。上调至1，不做强推。",
+          "evidence_ids": [
+            "E_d2760bf47584",
+            "E_55e367bbee4e",
+            "E_737e0cb515f9",
+            "E_e33f909d605a",
+            "E_8928308f3138",
+            "E_a1725e969c0a"
+          ],
+          "mechanism_ids": [
+            "H_ENV_MATERIAL"
+          ]
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.08625,
+          "tail_focus_conditional_probability": 0.09750749934159957,
+          "tail_focus_implied_overall_probability": 0.028891110916029503,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "",
+          "rationale_cn": "次要路径。在乌拉圭必须主动争胜、比赛进入来回转换的前提下，乌拉圭多打进一球的剧本有合理机制：Darwin Nunez与Maximiliano Araujo的冲击力（E_3f6dbd192137/E_67f6d017d49f）、高压直接风格提升正面对抗频率。但西班牙控场能力（possession 0.86，Rodri坐镇）可能限制比赛节奏失控程度，该比分所需的'双方均持续创造机会'条件支撑弱于1-3。",
+          "evidence_ids": [
+            "E_d2760bf47584",
+            "E_737e0cb515f9",
+            "E_bdad281070e1",
+            "E_641dbd2aca23",
+            "E_8928308f3138",
+            "E_a1725e969c0a"
+          ],
+          "mechanism_ids": [
+            "H_a1c2be1709",
+            "H_ENV_MATERIAL"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.07999999999999999,
+          "tail_focus_conditional_probability": 0.07536811543312043,
+          "tail_focus_implied_overall_probability": 0.022331293461665316,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1,
+          "script_cn": "",
+          "rationale_cn": "保留但降至最低支持。西班牙进攻能力理论上支持4球输出，但'战略容错'（平局即晋级，E_55e367bbee4e/E_99289c710c90）缺乏西班牙追打第四球的刚性动机。该比分所需西班牙主动追求大胜的证据不充分，更多是统计尾部可能性而非有机制支撑的路径。base_conditional_probability（0.080）也低于1-3和2-2。",
+          "evidence_ids": [
+            "E_bdad281070e1",
+            "E_737e0cb515f9",
+            "E_ee6f0c02829d",
+            "E_55e367bbee4e",
+            "E_99289c710c90"
+          ],
+          "mechanism_ids": [
+            "H_a1c2be1709"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-3",
+          "main_base_probability": 0.052222222222222225,
+          "base_conditional_probability": 0.17625,
+          "tail_focus_conditional_probability": 0.2013677600039397,
+          "tail_focus_implied_overall_probability": 0.05966452148264881,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-2",
+          "main_base_probability": 0.04703703703703704,
+          "base_conditional_probability": 0.15874999999999997,
+          "tail_focus_conditional_probability": 0.1501024535319169,
+          "tail_focus_implied_overall_probability": 0.0444748010464939,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-3",
+          "main_base_probability": 0.025555555555555557,
+          "base_conditional_probability": 0.08625,
+          "tail_focus_conditional_probability": 0.09750749934159957,
+          "tail_focus_implied_overall_probability": 0.028891110916029503,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.07999999999999999,
+          "tail_focus_conditional_probability": 0.07536811543312043,
+          "tail_focus_implied_overall_probability": 0.022331293461665316,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.07125,
+          "tail_focus_conditional_probability": 0.06712472780762288,
+          "tail_focus_implied_overall_probability": 0.01988880823929567,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.1
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.06874999999999999,
+          "tail_focus_conditional_probability": 0.05417083296755531,
+          "tail_focus_implied_overall_probability": 0.016050617175571946,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "2-4",
+          "main_base_probability": 0.015185185185185185,
+          "base_conditional_probability": 0.05124999999999999,
+          "tail_focus_conditional_probability": 0.053549902471089254,
+          "tail_focus_implied_overall_probability": 0.01586663776921163,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.057499999999999996,
+          "tail_focus_conditional_probability": 0.04530651484559172,
+          "tail_focus_implied_overall_probability": 0.013424152546841994,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.92
+        },
+        {
+          "score": "3-3",
+          "main_base_probability": 0.011111111111111112,
+          "base_conditional_probability": 0.0375,
+          "tail_focus_conditional_probability": 0.03918285546665068,
+          "tail_focus_implied_overall_probability": 0.011609734953081685,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.026249999999999996,
+          "tail_focus_conditional_probability": 0.027427998826655472,
+          "tail_focus_implied_overall_probability": 0.008126814467157177,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.22
+        }
+      ],
+      "conditional_probability_sum": 1.0
+    },
+    {
+      "scenario_id": "blowout",
+      "label_cn": "一边倒／崩盘",
+      "definition_cn": "任一方净胜至少3球。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.14481481481481479,
+      "attention_level": "medium",
+      "evidence_strength": 0.58,
+      "rationale_cn": "真实存在的实力差距、双核缺阵、系统性转换漏洞共同构成崩盘情景的真实机制基础。rollout_5直接产出0-3且事件链贴合，rollout_1产出1-5说明高进球崩盘路径亦有模型支撑。主要限制因素是西班牙战略容错大（不需要大比分），以及乌拉圭必须争胜可能带来短暂主动性，使极端零封路径概率受压。",
+      "supporting_evidence_ids": [
+        "E_ee6f0c02829d",
+        "E_641dbd2aca23",
+        "E_737e0cb515f9",
+        "E_bdad281070e1",
+        "E_48d996f02374"
+      ],
+      "counter_evidence_ids": [
+        "E_55e367bbee4e",
+        "E_99289c710c90",
+        "E_d2760bf47584"
+      ],
+      "caution_cn": "西班牙平局即可出线头名，主动追求大比分动机不强；不应将崩盘路径机械压回2-2/3-1等最低达标比分，但也不应无证据推向0-5/0-6等极端路径。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "0-3",
+          "base_probability": 0.05074074074074074,
+          "base_conditional_probability": 0.350383631713555,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "1-4",
+          "base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.1636828644501279,
+          "total_goals": 5,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-4",
+          "base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.11764705882352944,
+          "total_goals": 4,
+          "winning_margin": 4
+        },
+        {
+          "score": "0-5",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.05370843989769822,
+          "total_goals": 5,
+          "winning_margin": 5
+        },
+        {
+          "score": "1-5",
+          "base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.05370843989769822,
+          "total_goals": 6,
+          "winning_margin": 4
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.06138107416879797,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "2-5",
+          "base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.051150895140664975,
+          "total_goals": 7,
+          "winning_margin": 3
+        },
+        {
+          "score": "0-6",
+          "base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.025575447570332487,
+          "total_goals": 6,
+          "winning_margin": 6
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.05074074074074074,
+          "base_conditional_probability": 0.350383631713555,
+          "tail_focus_conditional_probability": 0.3834190790800644,
+          "tail_focus_implied_overall_probability": 0.05552476293344635,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96,
+          "script_cn": "西班牙早段建立领先，乌拉圭高压体系在传失或回追失败时被对方快速反击利用，30-60分钟再拉开至0-3；乌拉圭追分心态让空间进一步暴露但未能破门。",
+          "rationale_cn": "rollout_5直接产出0-3，事件链与西班牙先手+中段扩大差距+乌拉圭被迫提高风险高度吻合。Araujo缺阵削弱后防核心，The Athletic指出的转换漏洞机制直接对接西班牙控球+边路突击。证据链完整，机制真实，为崩盘池内最强支撑比分。",
+          "evidence_ids": [
+            "E_ee6f0c02829d",
+            "E_641dbd2aca23",
+            "E_737e0cb515f9",
+            "E_bdad281070e1"
+          ],
+          "mechanism_ids": [
+            "H_a1c2be1709"
+          ]
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.1636828644501279,
+          "tail_focus_conditional_probability": 0.16009218270937256,
+          "tail_focus_implied_overall_probability": 0.023183719792357282,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368,
+          "script_cn": "乌拉圭依靠Valverde/Nunez的直线冲击在追分阶段偷进1球，但整体已处于劣势崩溃态，西班牙边路单挑和中路推进持续制造威胁，最终扩大至4球。",
+          "rationale_cn": "rollout_1直接产出1-5，说明'乌拉圭追到1球但仍被大比分压制'的脚本有模型支撑。乌拉圭进攻端并未完全失能（Valverde/Nunez均在），在必须争胜语境下偶有反击得分有真实依据。1-4比0-3更极端但仍在合理崩盘区间，机制支撑真实。",
+          "evidence_ids": [
+            "E_ee6f0c02829d",
+            "E_641dbd2aca23",
+            "E_737e0cb515f9",
+            "E_48d996f02374"
+          ],
+          "mechanism_ids": [
+            "H_a1c2be1709"
+          ]
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.11764705882352944,
+          "tail_focus_conditional_probability": 0.12651961053963365,
+          "tail_focus_implied_overall_probability": 0.018321913970739536,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14,
+          "script_cn": "西班牙较早建立2球优势后，乌拉圭无Araujo的后防线在高强度持续承压下继续失位，坚实顺畅的球场加速了西班牙的传控节奏，最终扩大至0-4。",
+          "rationale_cn": "机制链真实：Araujo缺阵+转换漏洞+球场条件利于西班牙传控三者叠加，且0-4在候选池内（base_probability 0.017）。主要限制是西班牙战略容错大，主动持续追求第4球的动机弱，故support_grade保持1而非2。",
+          "evidence_ids": [
+            "E_ee6f0c02829d",
+            "E_737e0cb515f9",
+            "E_a1725e969c0a",
+            "E_8928308f3138"
+          ],
+          "mechanism_ids": [
+            "H_a1c2be1709",
+            "H_ENV_MATERIAL"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "0-3",
+          "main_base_probability": 0.05074074074074074,
+          "base_conditional_probability": 0.350383631713555,
+          "tail_focus_conditional_probability": 0.3834190790800644,
+          "tail_focus_implied_overall_probability": 0.05552476293344635,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "1-4",
+          "main_base_probability": 0.023703703703703703,
+          "base_conditional_probability": 0.1636828644501279,
+          "tail_focus_conditional_probability": 0.16009218270937256,
+          "tail_focus_implied_overall_probability": 0.023183719792357282,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-4",
+          "main_base_probability": 0.017037037037037038,
+          "base_conditional_probability": 0.11764705882352944,
+          "tail_focus_conditional_probability": 0.12651961053963365,
+          "tail_focus_implied_overall_probability": 0.018321913970739536,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.14
+        },
+        {
+          "score": "0-5",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.05370843989769822,
+          "tail_focus_conditional_probability": 0.05198305737389295,
+          "tail_focus_implied_overall_probability": 0.0075279168271082,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-5",
+          "main_base_probability": 0.0077777777777777776,
+          "base_conditional_probability": 0.05370843989769822,
+          "tail_focus_conditional_probability": 0.05198305737389295,
+          "tail_focus_implied_overall_probability": 0.0075279168271082,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.06138107416879797,
+          "tail_focus_conditional_probability": 0.04632296953396198,
+          "tail_focus_implied_overall_probability": 0.006708252254733011,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 0.96
+        },
+        {
+          "score": "2-5",
+          "main_base_probability": 0.007407407407407408,
+          "base_conditional_probability": 0.051150895140664975,
+          "tail_focus_conditional_probability": 0.041690672580565774,
+          "tail_focus_implied_overall_probability": 0.006037427029259709,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0368
+        },
+        {
+          "score": "0-6",
+          "main_base_probability": 0.003703703703703704,
+          "base_conditional_probability": 0.025575447570332487,
+          "tail_focus_conditional_probability": 0.024753836844710934,
+          "tail_focus_implied_overall_probability": 0.003584722298622953,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "1-6",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.02301790281329924,
+          "tail_focus_conditional_probability": 0.022278453160239842,
+          "tail_focus_implied_overall_probability": 0.003226250068760658,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        },
+        {
+          "score": "2-6",
+          "main_base_probability": 0.002962962962962963,
+          "base_conditional_probability": 0.020460358056265986,
+          "tail_focus_conditional_probability": 0.019803069475768743,
+          "tail_focus_implied_overall_probability": 0.002867777838898362,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.2312
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999998
+    },
+    {
+      "scenario_id": "upset",
+      "label_cn": "爆冷",
+      "definition_cn": "非热门方 Uruguay 获胜。",
+      "applicable": true,
+      "status": "revised",
+      "base_event_probability": 0.22037037037037038,
+      "attention_level": "low",
+      "evidence_strength": 0.5,
+      "rationale_cn": "爆冷情景成立基础：乌拉圭两连平后必须争胜（FIFA/Reuters实证），强动机可转化为比赛开放度；西班牙知晓平局即出线，可能降低强度。主要压制因素：阿劳霍+德阿拉斯卡埃塔缺阵（双来源确认），西班牙4-0大胜沙特显示进攻状态在线，整体实力差距约0.20。候选比分均为候选池内原有比分，无改动总情景概率。",
+      "supporting_evidence_ids": [
+        "E_d2760bf47584",
+        "E_2ce367204ab2",
+        "E_6bc1e9c87deb",
+        "E_55e367bbee4e"
+      ],
+      "counter_evidence_ids": [
+        "E_ee6f0c02829d",
+        "E_641dbd2aca23",
+        "E_bdad281070e1",
+        "E_48d996f02374"
+      ],
+      "caution_cn": "阿劳霍缺阵削弱防线，西班牙进攻质量高（attack 0.82），零封西班牙剧本均需额外谨慎。3-2等高进球数比分在爆冷概率基础上属于双重尾部，支持强度不应高估。",
+      "audit_note_cn": "",
+      "candidate_pool": [
+        {
+          "score": "1-0",
+          "base_probability": 0.06851851851851852,
+          "base_conditional_probability": 0.31092436974789917,
+          "total_goals": 1,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-1",
+          "base_probability": 0.05851851851851852,
+          "base_conditional_probability": 0.26554621848739496,
+          "total_goals": 3,
+          "winning_margin": 1
+        },
+        {
+          "score": "2-0",
+          "base_probability": 0.025185185185185185,
+          "base_conditional_probability": 0.11428571428571428,
+          "total_goals": 2,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-2",
+          "base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.09579831932773109,
+          "total_goals": 5,
+          "winning_margin": 1
+        },
+        {
+          "score": "3-1",
+          "base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.09243697478991597,
+          "total_goals": 4,
+          "winning_margin": 2
+        },
+        {
+          "score": "3-0",
+          "base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.04033613445378151,
+          "total_goals": 3,
+          "winning_margin": 3
+        },
+        {
+          "score": "4-2",
+          "base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.02857142857142857,
+          "total_goals": 6,
+          "winning_margin": 2
+        },
+        {
+          "score": "4-3",
+          "base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.015126050420168067,
+          "total_goals": 7,
+          "winning_margin": 1
+        }
+      ],
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.06851851851851852,
+          "base_conditional_probability": 0.31092436974789917,
+          "tail_focus_conditional_probability": 0.37789673874762275,
+          "tail_focus_implied_overall_probability": 0.08327724427956872,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "",
+          "rationale_cn": "最高条件概率（31.1%），且有直接rollout（rollout_8）激活。乌拉圭争胜动机最强时段往往压低比赛开放度后转为防守反击，西班牙降低强度给偷球空间。证据链：必须争胜（E_d2760bf47584/E_2ce367204ab2）+ 西班牙平局即出线动机分散（E_55e367bbee4e）。阿劳霍缺阵限制防线但不直接阻止1球优势维持，故support_grade升至2。",
+          "evidence_ids": [
+            "E_d2760bf47584",
+            "E_2ce367204ab2",
+            "E_55e367bbee4e"
+          ],
+          "mechanism_ids": []
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.05851851851851852,
+          "base_conditional_probability": 0.26554621848739496,
+          "tail_focus_conditional_probability": 0.2670986828203141,
+          "tail_focus_implied_overall_probability": 0.05886063565855071,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "",
+          "rationale_cn": "条件概率第二（26.6%），rollout_4/rollout_8路径均可延伸至此。乌拉圭主动提升比赛风险+场地顺畅利于转换（E_8928308f3138/E_a1725e969c0a），但西班牙也可进球，符合双方均有威胁的开放型爆冷。证据链完整，保留support_grade 1。",
+          "evidence_ids": [
+            "E_d2760bf47584",
+            "E_2ce367204ab2",
+            "E_8928308f3138",
+            "E_a1725e969c0a"
+          ],
+          "mechanism_ids": [
+            "H_ENV_MATERIAL"
+          ]
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.025185185185185185,
+          "base_conditional_probability": 0.11428571428571428,
+          "tail_focus_conditional_probability": 0.09579488624357257,
+          "tail_focus_implied_overall_probability": 0.021110354561083587,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "",
+          "rationale_cn": "候选池内合法比分，但零封西班牙所需条件（防线稳定+西班牙进攻哑火）与阿劳霍缺阵（E_ee6f0c02829d/E_641dbd2aca23）及西班牙近期4-0大胜（E_bdad281070e1）形成直接矛盾。作为尾部保留，support_grade维持0，不升级。",
+          "evidence_ids": [
+            "E_ee6f0c02829d",
+            "E_641dbd2aca23",
+            "E_bdad281070e1"
+          ],
+          "mechanism_ids": [
+            "H_a1c2be1709"
+          ]
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.09579831932773109,
+          "tail_focus_conditional_probability": 0.0802986546453476,
+          "tail_focus_implied_overall_probability": 0.017695444264437712,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0,
+          "script_cn": "",
+          "rationale_cn": "rollout_4明确出现3-2，机制链可以成立（高开放度+双方均进球），故保留在候选中。但此为双重尾部（爆冷×高进球），条件概率仅9.6%，且在阿劳霍缺阵削弱防线的基础上乌拉圭维持3球攻击输出要求较高。The Athletic关于乌拉圭暴露空间的证据（E_737e0cb515f9）在此场景下同样适用于反方向。support_grade维持0，不升级。",
+          "evidence_ids": [
+            "E_d2760bf47584",
+            "E_737e0cb515f9",
+            "E_8928308f3138",
+            "E_a1725e969c0a"
+          ],
+          "mechanism_ids": [
+            "H_ENV_MATERIAL"
+          ]
+        }
+      ],
+      "tail_focus_distribution_top10": [
+        {
+          "score": "1-0",
+          "main_base_probability": 0.06851851851851852,
+          "base_conditional_probability": 0.31092436974789917,
+          "tail_focus_conditional_probability": 0.37789673874762275,
+          "tail_focus_implied_overall_probability": 0.08327724427956872,
+          "support_grade": 2,
+          "multiplier": 1.45,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-1",
+          "main_base_probability": 0.05851851851851852,
+          "base_conditional_probability": 0.26554621848739496,
+          "tail_focus_conditional_probability": 0.2670986828203141,
+          "tail_focus_implied_overall_probability": 0.05886063565855071,
+          "support_grade": 1,
+          "multiplier": 1.2,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "2-0",
+          "main_base_probability": 0.025185185185185185,
+          "base_conditional_probability": 0.11428571428571428,
+          "tail_focus_conditional_probability": 0.09579488624357257,
+          "tail_focus_implied_overall_probability": 0.021110354561083587,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-2",
+          "main_base_probability": 0.021111111111111112,
+          "base_conditional_probability": 0.09579831932773109,
+          "tail_focus_conditional_probability": 0.0802986546453476,
+          "tail_focus_implied_overall_probability": 0.017695444264437712,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-1",
+          "main_base_probability": 0.020370370370370372,
+          "base_conditional_probability": 0.09243697478991597,
+          "tail_focus_conditional_probability": 0.07748115799112489,
+          "tail_focus_implied_overall_probability": 0.017074551483229373,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "3-0",
+          "main_base_probability": 0.008888888888888889,
+          "base_conditional_probability": 0.04033613445378151,
+          "tail_focus_conditional_probability": 0.03380995985067268,
+          "tail_focus_implied_overall_probability": 0.007450713374500091,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-2",
+          "main_base_probability": 0.006296296296296296,
+          "base_conditional_probability": 0.02857142857142857,
+          "tail_focus_conditional_probability": 0.023948721560893144,
+          "tail_focus_implied_overall_probability": 0.005277588640270897,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-3",
+          "main_base_probability": 0.0033333333333333335,
+          "base_conditional_probability": 0.015126050420168067,
+          "tail_focus_conditional_probability": 0.012678734944002254,
+          "tail_focus_implied_overall_probability": 0.002794017515437534,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-0",
+          "main_base_probability": 0.0025925925925925925,
+          "base_conditional_probability": 0.011764705882352941,
+          "tail_focus_conditional_probability": 0.00986123828977953,
+          "tail_focus_implied_overall_probability": 0.002173124734229193,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        },
+        {
+          "score": "4-1",
+          "main_base_probability": 0.0022222222222222222,
+          "base_conditional_probability": 0.010084033613445377,
+          "tail_focus_conditional_probability": 0.00845248996266817,
+          "tail_focus_implied_overall_probability": 0.0018626783436250227,
+          "support_grade": 0,
+          "multiplier": 1.0,
+          "scenario_focus_multiplier": 1.0
+        }
+      ],
+      "conditional_probability_sum": 0.9999999999999999
+    }
+  ],
+  "llm": {
+    "proposer_model": "gpt-5.4",
+    "auditor_model": "claude-opus-4-8",
+    "proposer_status": "success",
+    "auditor_status": "success",
+    "cache_enabled": true,
+    "errors": []
+  },
+  "integrity": {
+    "main_distribution_modified": false,
+    "main_prediction_values_modified": false,
+    "main_output_files_modified": true,
+    "brief_files_augmented": true,
+    "event_probabilities_modified_by_llm": false,
+    "score_matrix_probability_sum": 0.9999999999999996,
+    "source_hash": "01b5c8f254c11e0acbc10006d45b1374d1d3287ef6f9485ec127df7ca65c93ac"
+  },
+  "brief_integration": {
+    "version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "updated_markdown": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Uruguay_vs_Spain_M63\\web_export\\prediction_brief.md",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\web_delivery\\Uruguay_vs_Spain_M63\\2026.6.27.08\\prediction_brief.md"
+    ],
+    "updated_json": [
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\reports_Uruguay_vs_Spain_M63\\web_export\\prediction_brief.json",
+      "C:\\Users\\PC\\Desktop\\世界杯预测项目\\世界杯预测_正式版\\predictions_2026_06_27_v746_skills\\web_delivery\\Uruguay_vs_Spain_M63\\2026.6.27.08\\prediction_brief.json"
+    ],
+    "skipped": []
+  }
+}

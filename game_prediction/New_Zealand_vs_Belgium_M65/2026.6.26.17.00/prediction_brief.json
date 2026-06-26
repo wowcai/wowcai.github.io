@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T08:04:18.383645Z",
+  "prediction_generated_at_local": "2026-06-26T16:04:18.383645+08:00",
+  "match": {
+    "match_id": "M65",
+    "team_a": "New Zealand",
+    "team_b": "Belgium",
+    "kickoff_utc": "2026-06-27T03:00:00Z",
+    "venue": "BC Place, Vancouver",
+    "stage": "group",
+    "group": "G",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.4",
+    "world_state_fallback_field_count": 2,
+    "world_state_fallback_ratio": 0.05405405405405406,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": true,
+    "reasons": [],
+    "warnings": [
+      "World State有2个字段使用局部回退。",
+      "委员会审计使用了确定性备用路径。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.15,
+    "draw": 0.25555555555555554,
+    "team_b_win": 0.5944444444444444
+  },
+  "most_likely_outcome": {
+    "label": "Belgium胜",
+    "probability": 0.5944444444444444
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.18037037037037038
+    },
+    {
+      "score": "0-2",
+      "probability": 0.1425925925925926
+    },
+    {
+      "score": "0-0",
+      "probability": 0.12037037037037036
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "比利时前两场1平1平，ESPN称其仍列G组第三，末轮抢分出线动机明确。",
+      "text_en": "Belgium are third in Group G after draws with Egypt and Iran, so the final group match carries clear qualification pressure and incentive to chase points",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_4bf09bbab09c",
+        "E_3d8a626f3981"
+      ],
+      "source_names": [
+        "ESPN",
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "卢卡库赛前被多家媒体指尚未适合首发，主帅也明确称他“还不能首发”，削弱比利时前段破门把握。",
+      "text_en": "Multiple reports said Romelu Lukaku was not ready to start, and coach Rudi Garcia explicitly said he cannot start yet, which can reduce Belgium’s early finishing edge",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_94984264b175",
+        "E_60b0b79bcf8f",
+        "E_F_45b3b4078c88",
+        "E_F_973ce687a8f7"
+      ],
+      "source_names": [
+        "BBC",
+        "Yahoo Sports",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "赛前观点预计新西兰会以紧凑有序防线应战，并更多依靠边路反击寻找机会。",
+      "text_en": "Pre-match coverage expects New Zealand to defend in a compact, organized shape and look for openings through counter-attacking wide players",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_0a42d8b03873"
+      ],
+      "source_names": [
+        "TikTok"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "新西兰已在小组赛1比3负于埃及，官方与队方报道都提到防线出现无人盯防的失位。",
+      "text_en": "New Zealand already lost 3-1 to Egypt, and both FIFA and team reporting pointed to a defensive lapse that left a scorer unmarked",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_db50b6cdb579",
+        "E_80eb0f7cec8d"
+      ],
+      "source_names": [
+        "FIFA",
+        "New Zealand Football"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在温哥华BC Place进行，FIFA与The Athletic信息都指向室内闭顶环境，天气干扰较小。",
+      "text_en": "The match is at BC Place in Vancouver, and FIFA plus The Athletic both indicate a closed indoor setting, limiting weather-related disruption",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_e913d8aa66bc",
+        "E_356cb2e574ce",
+        "E_3c5f87d87c84"
+      ],
+      "source_names": [
+        "FIFA",
+        "Facebook / FIFA post",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.4"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-26T09:10:27.535932Z",
+    "source_state_sha256": "9791a3503a82675e305841feb1e59104b7ede850a81f8a80025259fd7ad313ac",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "已对 high_scoring（总进球≥4）情景做独立复核。提案引用的证据（E_4e7918677913、E_794b8816b8e2、E_db50b6cdb579、E_80eb0f7cec8d、E_4bf09bbab09c）均真实存在且未过期，未发现幻觉证据。提案的一个优点是没有把开放大比分机械压回 2-2 这类最低达标的开放平局（候选池中 2-2 存在但未被强行纳入）。核心问题在于：本场三条被接受的机制（H_6d47daccae、…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.1737037037037038,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.42,
+        "summary_cn": "开放/大比分情景有真实但有限的证据基础：新西兰末轮必须取胜否则出局（E_4e7918677913、E_794b8816b8e2），将被迫压上并暴露已被验证的防线失位（1-3 负埃及、无人盯防头球，E_db50b6cdb579、E_80eb0f7cec8d），而比利时实力、转换与边路单挑质量明显占优（strength 0.72、transition 0.71…",
+        "caution_cn": "注意：本场三条被接受机制（H_6d47daccae、H_2d31786687、H_490a3696e7）均判定 total_goals 下行，故 high_scoring 与主推演方向相反，属低注意度尾部情景。任何依赖比利时打入 4 球以上的比分都与比利时偏弱的终结状态及破局功能受限相冲突，应保持…",
+        "top_scores": [
+          {
+            "score": "1-3",
+            "base_probability": 0.03888888888888889,
+            "tail_focus_conditional_probability": 0.2618473445123662,
+            "support_grade": 2,
+            "script_cn": "新西兰为求胜整体压上，比利时利用被打开的中路与肋部空间通过快速转换和边路单挑（Doku/De Bruyne）多次完成反击破门取得 3 球；新西兰则借 Chris Wood 支点与定位球/空中威胁扳回 1 球。"
+          },
+          {
+            "score": "2-3",
+            "base_probability": 0.020370370370370372,
+            "tail_focus_conditional_probability": 0.13571869216533008,
+            "support_grade": 1,
+            "script_cn": "双方均需取胜、相互压上，比赛被彻底打开；新西兰借空中/定位球与边路反击拿下 2 球，比利时以质量优势取得 3 球，形成 5 球对攻。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.12888888888888894,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.55,
+        "summary_cn": "blowout方向证据真实且收敛于Belgium净胜：强弱差显著(0.72 vs 0.36)、team_b_win0.594、eg_b1.53，NZ防线在1-3负埃及时出现盯防失位(E_db50b6cdb579/E_80eb0f7cec8d)。但Belgium终结不稳(finishing_state0.44，本届1-1/0-0且进球为乌龙E_8129e6d…",
+        "caution_cn": "Belgium终结薄弱(0.44)且本届两场低进球，崩盘更依赖NZ防线持续失位而非Belgium批量终结，因此净胜不宜外推至5球及以上；0-3为最可支持路径，0-4为合理的更深净胜比较项，更高净胜仅作记录性评估。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.06111111111111111,
+            "tail_focus_conditional_probability": 0.5151500960052451,
+            "support_grade": 2,
+            "script_cn": "NZ低位防守但defence仅0.45，Belgium借De Bruyne中路组织与Doku/Trossard边路单挑(wing_isolation0.76、dribble0.78、transition0.71)逐步打开；如对埃及般出现无人盯防失位，Belgium在中后段连续得手净胜3球，而其终结效率有限使总进球不外溢，落在0-3。"
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.02185185185185185,
+            "tail_focus_conditional_probability": 0.1810292343642256,
+            "support_grade": 1,
+            "script_cn": "若NZ防线如对埃及般反复失位且体能在末段下滑，Belgium边路单挑与转换威胁把净胜从3扩大到4；属合理的更深净胜路径，但受限于Belgium终结不稳。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.15000000000000005,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.5,
+        "summary_cn": "Belgium 为明显热门（strength 0.72 vs 0.36，team_b_win 0.594，base_event_probability 仅 0.15），故 attention 维持 low。爆冷成立的核心路径有真实证据与已激活机制支撑：Lukaku 受限只能替补（E_F_45b3b4078c88、E_F_973ce687a8f7、E_949…",
+        "caution_cn": "upset 总概率仅 0.15，且 New Zealand 此前 2-2 平伊朗、1-3 负埃及并暴露后防失位（E_db50b6cdb579、E_80eb0f7cec8d），Belgium 控场与 xG 仍占优、末轮抢分动机明确（E_4bf09bbab09c、E_F_56dbd2116288）。所…",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.07592592592592592,
+            "tail_focus_conditional_probability": 0.5659209900047595,
+            "support_grade": 2,
+            "script_cn": "前中段拉锯、低总进球节奏，Belgium 控球难转化为高质量机会；New Zealand 凭一次定位球或反击由 Wood 区域破门，随后回收紧凑防线零封保住一球小胜。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.03481481481481481,
+            "tail_focus_conditional_probability": 0.2147548786292241,
+            "support_grade": 1,
+            "script_cn": "New Zealand 必须取胜，比赛转为开放对攻；Belgium 后段借 Lukaku 替补或边路单挑偶发扳回一球，但 New Zealand 通过反击/定位球再下一城保住净胜一球。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

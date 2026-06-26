@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T08:59:53.094582Z",
+  "prediction_generated_at_local": "2026-06-26T16:59:53.094582+08:00",
+  "match": {
+    "match_id": "M62",
+    "team_a": "Senegal",
+    "team_b": "Iraq",
+    "kickoff_utc": "2026-06-26T19:00:00Z",
+    "venue": "BMO Field, Toronto",
+    "stage": "group",
+    "group": "I",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.4",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.8888888888888888,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率88.9%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5825925925925926,
+    "draw": 0.24296296296296296,
+    "team_b_win": 0.17444444444444446
+  },
+  "most_likely_outcome": {
+    "label": "Senegal胜",
+    "probability": 0.5825925925925926
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.12259259259259259
+    },
+    {
+      "score": "1-1",
+      "probability": 0.11851851851851852
+    },
+    {
+      "score": "2-0",
+      "probability": 0.10777777777777778
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "塞内加尔主帅表态会把这场对伊拉克的比赛“当决赛来踢”，求胜姿态非常明确。",
+      "text_en": "Senegal coach Pape Bouna Thiaw said his side would approach the Iraq match like a final, making their win-first intent unusually explicit",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_34feab936ccc"
+      ],
+      "source_names": [
+        "Channel News Asia"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "这是小组末轮生死战，FIFA与多家预览都指向双方基本都要赢球才还有晋级希望。",
+      "text_en": "This is effectively a last-round survival game, with FIFA and multiple previews indicating both teams largely need a win to keep qualification hopes alive",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_b78ca4cd58cc",
+        "E_d7ad98831cf5",
+        "E_1b1eb261b9ff"
+      ],
+      "source_names": [
+        "FIFA",
+        "Action Network",
+        "MLSsoccer.com"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "RotoWire预览称塞内加尔会主导控球，并让Sadio Mane、Ismaila Sarr持续冲击伊拉克边后卫。",
+      "text_en": "RotoWire expects Senegal to control possession and repeatedly send Sadio Mane and Ismaila Sarr at Iraq’s full-backs",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_c1423782fbcc"
+      ],
+      "source_names": [
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "塞内加尔确认主力门将Edouard Mendy因膝伤缺席，这直接削弱后场稳定性与门前保障。",
+      "text_en": "Senegal have confirmed first-choice goalkeeper Edouard Mendy is out with a knee injury, directly reducing stability and security at the back",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_b2c8009d9027",
+        "E_9f21b26ae94d"
+      ],
+      "source_names": [
+        "ESPN",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "伊拉克前两场已先后1比4负挪威、0比3负法国，当前赛事防线承压纪录不理想。",
+      "text_en": "Iraq have already lost 4-1 to Norway and 3-0 to France in this tournament, leaving a clear record of defensive strain",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_79fc5e6ddec7",
+        "E_4ed206bc8f0c",
+        "E_51ad74cb4ac5"
+      ],
+      "source_names": [
+        "FIFA",
+        "Al Jazeera"
+      ],
+      "generated_by": "gpt-5.4"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "partial_audit",
+    "source_report_generated_at": "2026-06-26T09:01:59.617018Z",
+    "source_state_sha256": "767f820f55527c463f966b00d5c22af3260fd3652291da90d99671c3eaffb23e",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "high_scoring 情景具备真实机制支撑，双方必须争胜的末轮背景（H_02）与塞内加尔边路压制（H_01）是核心驱动，Mendy缺阵（H_03）同步提升伊拉克有限但真实的反扑入口。保留3-1/4-1/3-2三条主线，用2-3替换无rollout支持且被H_03明确反向削弱的4-0。；未调用LLM，输出确定性高偏离候选基线。；伊拉克爆冷成立，但路径高度集中于低进球、一球领先后低位守住的模式。证据与机制对伊拉克多球能力支撑极弱，0-…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2892592592592592,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.62,
+        "summary_cn": "H_01（边路压制，E_c1423782fbcc/E_0e4e58302a22）与H_02（末轮平局黏性下降，E_b78ca4cd58cc/E_34feab936ccc/E_d7ad98831cf5）共同驱动塞内加尔进攻主导；H_03（Mendy缺阵，E_b2c8009d9027/E_9f21b26ae94d + 高位防线暴露）为伊拉克定位球/反击进球提供…",
+        "caution_cn": "伊拉克 attack 属性仅0.39，低位防守 low_block_compactness 0.65，实际进攻质量偏弱；塞内加尔 finishing_state 0.48偏低，边路压制优势未必直接转化为高效率进球。4球以上路径依赖后段伊拉克防线系统性崩溃，需结合比分状态谨慎看待。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.06444444444444444,
+            "tail_focus_conditional_probability": 0.2525811337836897,
+            "support_grade": 2,
+            "script_cn": "塞内加尔通过Mane/Sarr边路持续冲击（H_01）在前60分钟积累2球优势，H_02驱动后段双方降低保守性，塞内加尔追加第3球；伊拉克凭借Mendy缺阵背景下的定位球或反击机会（H_03，set_piece 0.58）收获1球。rollout_6（3-2节奏）与此剧本高度相近，候选池基础概率最高（0.0644），机制覆盖最密集。"
+          },
+          {
+            "score": "3-2",
+            "base_probability": 0.03,
+            "tail_focus_conditional_probability": 0.11634689045198135,
+            "support_grade": 1,
+            "script_cn": "H_02驱动比赛在中后段反复开放，伊拉克凭借高位防线暴露和定位球（H_03，set_piece 0.58）拿到2球；塞内加尔edge压制维持净胜1球。rollout_6直接代表3-2，rollout_4（2-3）印证5球对攻模式可行。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.1503703703703704,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.05296296296296296,
+            "tail_focus_conditional_probability": 0.3188139230276175,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.026296296296296297,
+            "tail_focus_conditional_probability": 0.18797202017668532,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.17444444444444443,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.45,
+        "summary_cn": "爆冷路径存在，但伊拉克进攻能力（attack=0.39, finishing_state=0.38）和锋线减员（Muhannad Ali出局）共同限制其多球上限。有效机制入口为：H_03 Mendy缺阵降低塞内加尔门前容错 + 塞内加尔高位压迫拉长防线留下反击/定位球窗口 + 伊拉克低位紧凑收缩能力（0.65）支持一球领先后守住。H_01和H_04机制方向…",
+        "caution_cn": "伊拉克finishing_state=0.38为候选池中最低值，锋线减员进一步压缩进攻上限；rollout中0-3代表比分的出现源于极端尾部采样，不代表机制支撑，已删除。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.06222222222222222,
+            "tail_focus_conditional_probability": 0.3995243757431629,
+            "support_grade": 1,
+            "script_cn": "伊拉克在0-30分钟内通过定位球或快速反击率先破门（rollout_1/rollout_9均有此序列），随后全队退至低位紧凑阵型（low_block_compactness=0.65）。塞内加尔在Mendy缺阵（H_03）和必须争胜（H_02）双重压力下不断前压，但替补门将（Mory Diaw, goalkeeper_state=0.43偏低）面对常规冲击尚可应对。伊拉克靠结构性低位和单球优势撑到终场。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.04814814814814815,
+            "tail_focus_conditional_probability": 0.2576298057867618,
+            "support_grade": 0,
+            "script_cn": "塞内加尔前半段依靠边路压制取得领先（H_01激活），但比赛因双方都需争胜而进入开放对攻状态（H_02）。伊拉克在Mendy缺阵带来的门前不稳窗口（H_03）中先追平再反超，最终以2球完成逆转。路径需要塞内加尔先进球后失去结构性控制，属于串联偶发事件的低概率变体。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

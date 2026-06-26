@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T07:49:50.495309Z",
+  "prediction_generated_at_local": "2026-06-26T15:49:50.495309+08:00",
+  "match": {
+    "match_id": "M64",
+    "team_a": "Cape Verde",
+    "team_b": "Saudi Arabia",
+    "kickoff_utc": "2026-06-27T00:00:00Z",
+    "venue": "NRG Stadium, Houston",
+    "stage": "group",
+    "group": "H",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.4",
+    "world_state_fallback_field_count": 2,
+    "world_state_fallback_ratio": 0.05405405405405406,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": true,
+    "reasons": [],
+    "warnings": [
+      "World State有2个字段使用局部回退。",
+      "委员会审计使用了确定性备用路径。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.45185185185185184,
+    "draw": 0.33,
+    "team_b_win": 0.21814814814814815
+  },
+  "most_likely_outcome": {
+    "label": "Cape Verde胜",
+    "probability": 0.45185185185185184
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.1674074074074074
+    },
+    {
+      "score": "0-0",
+      "probability": 0.15481481481481482
+    },
+    {
+      "score": "1-1",
+      "probability": 0.14037037037037037
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "佛得角前两场世界杯先后0比0逼平西班牙、2比2战平乌拉圭，连续两战不败，赛会状态更稳。",
+      "text_en": "Cape Verde entered this match unbeaten after a 0-0 draw with Spain and a 2-2 draw with Uruguay, giving them the steadier tournament form",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_cddd1f8788ae",
+        "E_eb2d913150da"
+      ],
+      "source_names": [
+        "FIFA",
+        "USA Today"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "虽然0比0战平西班牙，但西班牙该场传球734比205、前场传球593比22，说明佛得角更依赖低位收缩与防守韧性。",
+      "text_en": "Even in the 0-0 draw with Spain, Cape Verde were heavily outpassed, suggesting a deep-block approach built more on compact defending than sustained control",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_b39ceac65b90",
+        "E_cddd1f8788ae"
+      ],
+      "source_names": [
+        "ESPN",
+        "FIFA"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "沙特此前0比4负于西班牙，且西班牙前65分钟就在其禁区内形成21次射门，防线承压迹象明显。",
+      "text_en": "Saudi Arabia lost 4-0 to Spain, and Spain produced 21 shots inside the box within 65 minutes, a clear sign of serious defensive pressure",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_7badaa2e47f9",
+        "E_2f450db1bf45"
+      ],
+      "source_names": [
+        "ESPN",
+        "AS"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "这是小组末轮直接竞争出线的比赛；路透与美联社均指出，两队都把取胜晋级32强作为明确目标。",
+      "text_en": "This was a direct final-group-stage qualification battle, with both teams openly targeting a win to reach the round of 32",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_24400ac54ab2",
+        "E_22361519a0c9",
+        "E_fd1598636c2f"
+      ],
+      "source_names": [
+        "Reuters",
+        "ABC News / AP",
+        "Asharq Al-Awsat"
+      ],
+      "generated_by": "gpt-5.4"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在休斯敦NRG球场进行，场馆可开合顶棚，且多方报道世界杯期间顶棚保持关闭，外部高温湿热影响被削弱。",
+      "text_en": "The match was at Houston's NRG Stadium, where the retractable roof was expected to stay closed during the World Cup, reducing the impact of outside heat and humidity",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_3ee85bf67deb",
+        "E_3b9239e6b955",
+        "E_9f78a254f9e2"
+      ],
+      "source_names": [
+        "NRG Park",
+        "Houston Public Media",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.4"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "partial_audit",
+    "source_report_generated_at": "2026-06-26T09:06:18.748606Z",
+    "source_state_sha256": "0a67efe730d4331d91cc74b7c4037f35621722e60b710a0fc7bd26b7f0c32833",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；独立审计：blowout情景仅审一项。提案方向（佛得角净胜≥3）与世界状态及主预测一致，沙特防线已被西班牙0-4+前65分钟21次禁区射门暴露，佛得角防守0.72/门将0.72对位沙特进攻0.46且其采5-4-1低位反击，反向大比分（0-3）证据弱、合理剔除。所引证据E_7badaa2e47f9、E_2f450db1bf45、E_cddd1f8788ae、E_eb2d913150da、E_30…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.13592592592592592,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.0337037037037037,
+            "tail_focus_conditional_probability": 0.22705576046864823,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "3-2",
+            "base_probability": 0.01074074074074074,
+            "tail_focus_conditional_probability": 0.08651551312649162,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.06629629629629628,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.48,
+        "summary_cn": "在已进入崩盘状态条件下，证据明确指向佛得角一侧大比分而非沙特：佛得角连续两战不败（0-0平西班牙、2-2平乌拉圭，PF_01），沙特0-4负西班牙、前65分钟禁区内被射21次（PF_03），战力面佛得角防守0.72/门将0.72显著优于沙特防守0.44。反向（沙特净胜≥3）与世界状态相悖：沙特进攻0.46、5-4-1低位反击难破佛得角强韧低位。幅度判断上佛…",
+        "caution_cn": "佛得角进攻产出有限（xG≈1.18、终结0.5），4球级别（4-0/4-1）属明显尾部，仅以弱支持保留；切勿据此误读为高开放对攻，本场两队均偏控速与低位。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.03333333333333333,
+            "tail_focus_conditional_probability": 0.5379624209545639,
+            "support_grade": 2,
+            "script_cn": "佛得角控节奏压制，沙特5-4-1低位在西班牙战已暴露的防线再度被打穿，佛得角中后段连续扩大优势取得净胜3球的中等幅度大胜。"
+          },
+          {
+            "score": "4-1",
+            "base_probability": 0.01,
+            "tail_focus_conditional_probability": 0.14424813052905822,
+            "support_grade": 1,
+            "script_cn": "佛得角大幅领先，沙特凭Al-Dawsari反击扳回一球但无碍净胜3球的崩盘结局。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.21814814814814817,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.45,
+        "summary_cn": "爆冷整体证据偏弱：沙特strength 0.5、attack 0.46、finishing 0.42、xG 0.75，且0比4负西班牙暴露的是防守而非进攻能力，多数证据其实指向沙特处于下风。可支撑爆冷的结构性理由有限但真实——沙特transition 0.71的反击身份配合队长Al-Dawsari（E_e56639ee75cb），以及末轮佛得角需取胜锁定前…",
+        "caution_cn": "爆冷为低注意度尾部情景：证据主体指向沙特偏弱，0-1之外的比分支撑度迅速下降；沙特预计5-4-1降速踢法与“多次进球”存在张力，1-2/0-2仅作低权重路径，不应据此抬高整体爆冷预期。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.10407407407407407,
+            "tail_focus_conditional_probability": 0.522628642281463,
+            "support_grade": 1,
+            "script_cn": "佛得角为争胜适度压上，沙特凭借Al-Dawsari领衔的单次快速转换在中前段或下半场打入一球，随后双方收缩、沙特以5-4-1低位护住领先，佛得角面对密集防线难以扳平。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.048518518518518516,
+            "tail_focus_conditional_probability": 0.20303781773093613,
+            "support_grade": 0,
+            "script_cn": "佛得角通过Mendes/Monteiro边中推进先取得或扳平进球，但沙特利用其压上后的身后空间两度反击得手完成逆转。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,588 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-26T07:34:30.230282Z",
+  "prediction_generated_at_local": "2026-06-26T15:34:30.230282+08:00",
+  "quality_label": "usable",
+  "match_id": "M63",
+  "team_a": "Uruguay",
+  "team_b": "Spain",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "0-1",
+      "deviation": 0.0,
+      "probability": 0.11333333333333333,
+      "probability_percent": 11.3333,
+      "outcome": "team_b",
+      "sample_count": 306,
+      "path_deviation": 0.519214214880759,
+      "result_surprise": 0.0,
+      "reason_cn": "Spain通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.0312893886089859,
+      "probability": 0.11333333333333333,
+      "probability_percent": 11.3333,
+      "outcome": "draw",
+      "sample_count": 306,
+      "path_deviation": 0.5417636095122964,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.11321449883296357,
+      "probability": 0.10333333333333333,
+      "probability_percent": 10.3333,
+      "outcome": "team_b",
+      "sample_count": 279,
+      "path_deviation": 0.5532934522297218,
+      "result_surprise": 0.08823529411764697,
+      "reason_cn": "Spain通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.11997765120421383,
+      "probability": 0.09814814814814815,
+      "probability_percent": 9.8148,
+      "outcome": "team_b",
+      "sample_count": 265,
+      "path_deviation": 0.5335319733595336,
+      "result_surprise": 0.13398692810457513,
+      "reason_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-0",
+      "deviation": 0.28765618029424617,
+      "probability": 0.06851851851851852,
+      "probability_percent": 6.8519,
+      "outcome": "team_a",
+      "sample_count": 185,
+      "path_deviation": 0.513598980676499,
+      "result_surprise": 0.3954248366013071,
+      "reason_cn": "Uruguay在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.30821910679627307,
+      "probability": 0.05851851851851852,
+      "probability_percent": 5.8519,
+      "outcome": "team_a",
+      "sample_count": 158,
+      "path_deviation": 0.48090679932402003,
+      "result_surprise": 0.4836601307189542,
+      "reason_cn": "Uruguay在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.3361174685900555,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_b",
+      "sample_count": 11,
+      "path_deviation": 0.2423396751229701,
+      "result_surprise": 0.9640522875816994,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.3574958683970939,
+      "probability": 0.0637037037037037,
+      "probability_percent": 6.3704,
+      "outcome": "draw",
+      "sample_count": 172,
+      "path_deviation": 0.5410546900562389,
+      "result_surprise": 0.43790849673202614,
+      "reason_cn": "天气与场地条件；双方防守结构有效，机会转化不足。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.4322278555057911,
+      "probability": 0.04703703703703704,
+      "probability_percent": 4.7037,
+      "outcome": "draw",
+      "sample_count": 127,
+      "path_deviation": 0.5157264402843488,
+      "result_surprise": 0.5849673202614378,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.4411185196312626,
+      "probability": 0.052222222222222225,
+      "probability_percent": 5.2222,
+      "outcome": "team_b",
+      "sample_count": 141,
+      "path_deviation": 0.5467691905812619,
+      "result_surprise": 0.5392156862745098,
+      "reason_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-5",
+      "deviation": 0.48185570192325705,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "draw",
+      "sample_count": 1,
+      "path_deviation": 0.3297723958700918,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.48517693731623884,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "draw",
+      "sample_count": 4,
+      "path_deviation": 0.33744495280181686,
+      "result_surprise": 0.9869281045751634,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.4980885773484055,
+      "probability": 0.05074074074074074,
+      "probability_percent": 5.0741,
+      "outcome": "team_b",
+      "sample_count": 137,
+      "path_deviation": 0.5807872183239106,
+      "result_surprise": 0.5522875816993464,
+      "reason_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-8",
+      "deviation": 0.5559164031420346,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.38490556756615857,
+      "result_surprise": 0.9934640522875817,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.5806932351280221,
+      "probability": 0.025185185185185185,
+      "probability_percent": 2.5185,
+      "outcome": "team_a",
+      "sample_count": 68,
+      "path_deviation": 0.5189003064478106,
+      "result_surprise": 0.7777777777777778,
+      "reason_cn": "Uruguay打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.5873966362957025,
+      "probability": 0.025555555555555557,
+      "probability_percent": 2.5556,
+      "outcome": "team_b",
+      "sample_count": 69,
+      "path_deviation": 0.5254909399962686,
+      "result_surprise": 0.7745098039215685,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.5938885841730568,
+      "probability": 0.011111111111111112,
+      "probability_percent": 1.1111,
+      "outcome": "draw",
+      "sample_count": 30,
+      "path_deviation": 0.4615420558118985,
+      "result_surprise": 0.9019607843137255,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-6",
+      "deviation": 0.5980205072798211,
+      "probability": 0.003703703703703704,
+      "probability_percent": 0.3704,
+      "outcome": "team_b",
+      "sample_count": 10,
+      "path_deviation": 0.4293262536002658,
+      "result_surprise": 0.9673202614379085,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.5987007819802755,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.4245374740202354,
+      "result_surprise": 0.9771241830065359,
+      "reason_cn": "Uruguay打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.6015317174504732,
+      "probability": 0.021111111111111112,
+      "probability_percent": 2.1111,
+      "outcome": "team_a",
+      "sample_count": 57,
+      "path_deviation": 0.5145615622174704,
+      "result_surprise": 0.8137254901960784,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.607102878984968,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "team_a",
+      "sample_count": 6,
+      "path_deviation": 0.4288329540884874,
+      "result_surprise": 0.9803921568627451,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.6123195575144562,
+      "probability": 0.020370370370370372,
+      "probability_percent": 2.037,
+      "outcome": "team_a",
+      "sample_count": 55,
+      "path_deviation": 0.5188167029152104,
+      "result_surprise": 0.8202614379084967,
+      "reason_cn": "Uruguay打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.6475013445804214,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.4509082949638849,
+      "result_surprise": 0.9934640522875817,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.6638222263904278,
+      "probability": 0.006296296296296296,
+      "probability_percent": 0.6296,
+      "outcome": "team_a",
+      "sample_count": 17,
+      "path_deviation": 0.48906547531637456,
+      "result_surprise": 0.9444444444444444,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-6",
+      "deviation": 0.6685061697881594,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_b",
+      "sample_count": 9,
+      "path_deviation": 0.4783636375826313,
+      "result_surprise": 0.9705882352941176,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-6",
+      "deviation": 0.6702588907595799,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.46906870559746544,
+      "result_surprise": 0.9901960784313726,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.6703098085120269,
+      "probability": 0.023703703703703703,
+      "probability_percent": 2.3704,
+      "outcome": "team_b",
+      "sample_count": 64,
+      "path_deviation": 0.5764457726558221,
+      "result_surprise": 0.7908496732026143,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-5",
+      "deviation": 0.6738233227688323,
+      "probability": 0.007407407407407408,
+      "probability_percent": 0.7407,
+      "outcome": "team_b",
+      "sample_count": 20,
+      "path_deviation": 0.5015520228097705,
+      "result_surprise": 0.934640522875817,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.6972143650807561,
+      "probability": 0.017037037037037038,
+      "probability_percent": 1.7037,
+      "outcome": "team_b",
+      "sample_count": 46,
+      "path_deviation": 0.5641609322943438,
+      "result_surprise": 0.8496732026143791,
+      "reason_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-4",
+      "deviation": 0.7127237574907693,
+      "probability": 0.015185185185185185,
+      "probability_percent": 1.5185,
+      "outcome": "team_b",
+      "sample_count": 41,
+      "path_deviation": 0.5665397301357143,
+      "result_surprise": 0.8660130718954249,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.7462201854018374,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_a",
+      "sample_count": 9,
+      "path_deviation": 0.5343699734165956,
+      "result_surprise": 0.9705882352941176,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.7994793257769384,
+      "probability": 0.008888888888888889,
+      "probability_percent": 0.8889,
+      "outcome": "team_a",
+      "sample_count": 24,
+      "path_deviation": 0.5991475323196228,
+      "result_surprise": 0.9215686274509804,
+      "reason_cn": "天气与场地条件；Uruguay打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.8086343622926163,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_b",
+      "sample_count": 5,
+      "path_deviation": 0.5723114268676066,
+      "result_surprise": 0.9836601307189542,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.8168486688285744,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome": "team_b",
+      "sample_count": 21,
+      "path_deviation": 0.6063861014675067,
+      "result_surprise": 0.9313725490196079,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.8276503903070656,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.5789770379709175,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-7",
+      "deviation": 0.8379749871455745,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.5899370450441057,
+      "result_surprise": 0.9901960784313726,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 0.8766515046443675,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome": "team_b",
+      "sample_count": 21,
+      "path_deviation": 0.6494843467463576,
+      "result_surprise": 0.9313725490196079,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.896447475987084,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.6320765461526926,
+      "result_surprise": 0.9901960784313726,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "0-7",
+      "deviation": 0.9351409457000268,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6582021784704887,
+      "result_surprise": 0.9934640522875817,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 1.0,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.7155023695699401,
+      "result_surprise": 0.9738562091503268,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.8518015291980991,
+      "result_surprise": 0.9934640522875817,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "0-8",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "2-7",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.7698111351323171,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "天气与场地条件；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ENV_MATERIAL"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 0.7036030583961982,
+      "result_surprise": 0.9967320261437909,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}
