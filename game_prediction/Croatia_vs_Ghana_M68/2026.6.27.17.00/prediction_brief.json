@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-27T07:21:44.716667Z",
+  "prediction_generated_at_local": "2026-06-27T15:21:44.716667+08:00",
+  "match": {
+    "match_id": "M68",
+    "team_a": "Croatia",
+    "team_b": "Ghana",
+    "kickoff_utc": "2026-06-27T21:00:00Z",
+    "venue": "Philadelphia Stadium",
+    "stage": "group",
+    "group": "L",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.44592592592592595,
+    "draw": 0.2940740740740741,
+    "team_b_win": 0.26
+  },
+  "most_likely_outcome": {
+    "label": "Croatia胜",
+    "probability": 0.44592592592592595
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.13148148148148148
+    },
+    {
+      "score": "1-0",
+      "probability": 0.12296296296296297
+    },
+    {
+      "score": "0-0",
+      "probability": 0.10148148148148148
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "加纳只要战平克罗地亚即可确保第二出线，守平收益明确。",
+      "text_en": "Ghana are reported to secure second place with at least a draw against Croatia, giving them a clear incentive to protect a level score",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_75119d2a43ee",
+        "E_cafef8ff5c09"
+      ],
+      "source_names": [
+        "ESPN",
+        "NBC DFW"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "克罗地亚被报道称必须取胜，莫德里奇、科瓦契奇预计承担推进。",
+      "text_en": "Croatia are reported to need a win, while Modric and Kovacic are projected among the midfield options to drive possession and progression",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_d856e2b760de",
+        "E_9c04b970cfed",
+        "E_4f92bca4c13c"
+      ],
+      "source_names": [
+        "Total Football Analysis",
+        "TNT Sports",
+        "RotoWire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "加纳0-0逼平英格兰被CAF称为防守杰作，低位韧性有赛例。",
+      "text_en": "Ghana’s 0-0 draw with England was described by CAF as a disciplined defensive masterclass, providing recent evidence of their resilience",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_65e5e6696f9e",
+        "E_c8b2d86830df",
+        "E_4d999aab8c54"
+      ],
+      "source_names": [
+        "CAF Online",
+        "England Football",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "克罗地亚曾4-2负英格兰、随后1-0胜巴拿马，小组状态有起伏。",
+      "text_en": "Croatia’s group form has been mixed: they opened with a 4-2 loss to England, then followed it with a 1-0 win over Panama",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_23b203714027",
+        "E_3b1a927f25b9",
+        "E_7de8168bd442"
+      ],
+      "source_names": [
+        "England Football",
+        "Yahoo Sports",
+        "FOX Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "Goal.com称加纳边路转换依靠Jordan Ayew与Antoine Semenyo。",
+      "text_en": "Goal.com highlighted Jordan Ayew on the left and Antoine Semenyo on the right as Ghana’s wide transition outlets against Croatia",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_cbe2a369a76d"
+      ],
+      "source_names": [
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在费城17:00开球；该球场此前曾因8英里内14次闪电中断。",
+      "text_en": "The match is scheduled for 17:00 local time in Philadelphia; the venue previously had a World Cup delay after 14 lightning strikes within eight miles",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_3cdb45d26cac",
+        "E_4dc46ecd993c",
+        "E_88223d92a1f9"
+      ],
+      "source_names": [
+        "ESPN",
+        "Lincoln Financial Field",
+        "AccuWeather"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "partial_audit",
+    "source_report_generated_at": "2026-06-27T07:25:06.718393Z",
+    "source_state_sha256": "37d1357dd20e756d32248697605b42bab2a6fdacd62beadaa33044863c0f491f",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；对 upset（加纳获胜）情景独立复核：候选全部来自原候选池，机制引用与提案基本一致，未发现幻觉或过期证据。爆冷的核心证据链真实存在（加纳0-0逼平英格兰的防守样本、平局即可出线的低风险动机、边路转换出口、克罗地亚需取胜被迫压上）。提案没有把开放比分机械压回单一最低达标比分，保留了0-2/0-3两个更高偏离尾部，处理方向正确。主要修正：补全空缺的证据与脚本字段；保持0-1为主支撑（联合矩阵与机…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.23629629629629623,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.48,
+        "summary_cn": "Ghana的出线激励（平局即可晋级）和对英格兰0-0的防守样本是强证据，整体指向低进球、低开放性比赛基调。high_scoring情景本身有客观概率基础（base_event_probability≈0.236），但需要多个机制叠加触发：克罗地亚必须取胜的压力（evidence可靠）、门将更替带来的定位球脆弱性（B/C层证据，中等置信）、加纳转换端的反击能…",
+        "caution_cn": "Ghana平局即可出线是可靠证据，其防守画像强、进攻转化弱，整体抑制开放性。门将不确定性证据层级偏低（B/C层），不可过度放大。3-3因证据不足删除，不在候选池保留。",
+        "top_scores": [
+          {
+            "score": "3-2",
+            "base_probability": 0.025555555555555557,
+            "tail_focus_conditional_probability": 0.15199056472183745,
+            "support_grade": 2,
+            "script_cn": ""
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.04962962962962963,
+            "tail_focus_conditional_probability": 0.20430581239098397,
+            "support_grade": 1,
+            "script_cn": ""
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.1011111111111111,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.03259259259259259,
+            "tail_focus_conditional_probability": 0.2958231784183546,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.015185185185185185,
+            "tail_focus_conditional_probability": 0.1636692159004959,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.25999999999999995,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.52,
+        "summary_cn": "加纳获胜属于真实存在但非主线的偏离情景。证据支持其防守韧性与守平动机（守平即可第二出线），但其主动进攻产出证据偏弱（attack 0.53、finishing_state 0.5），因此爆冷主要依赖克罗地亚后段压上后的转换/定位球后续，而非加纳开放对攻。最可信路径是低比分爆冷(0-1)，更高比分需要加纳多次兑现机会，证据支持递减。",
+        "caution_cn": "加纳首发与门将信息多为B/C层预测，非官方确认；其大比分获胜（0-3）缺乏强进攻证据，主要由高波动rollout与克罗地亚崩盘假设支撑，应作为尾部而非主线对待。克罗地亚纸面实力与Elo明显更高，早球会直接瓦解爆冷路径。",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.09259259259259259,
+            "tail_focus_conditional_probability": 0.41490214032276534,
+            "support_grade": 2,
+            "script_cn": "加纳维持低位紧凑、保护门将暴露面；克罗地亚控球推进但被压缩中路，久攻不下后段压上，加纳通过一次边路转换或定位球后续完成致命一击，守住1-0客观比分(0-1)。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.06407407407407407,
+            "tail_focus_conditional_probability": 0.23761016367174093,
+            "support_grade": 1,
+            "script_cn": "比赛后段克罗地亚因必须取胜推高风险，中场推进与边路传中制造一球，但站位前压拉大回追距离，加纳依靠Ayew/Semenyo的边路转换两次兑现，最终1-2爆冷。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

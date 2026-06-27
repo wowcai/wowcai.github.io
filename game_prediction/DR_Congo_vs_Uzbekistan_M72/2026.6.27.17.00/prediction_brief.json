@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-27T08:18:41.036680Z",
+  "prediction_generated_at_local": "2026-06-27T16:18:41.036680+08:00",
+  "match": {
+    "match_id": "M72",
+    "team_a": "DR Congo",
+    "team_b": "Uzbekistan",
+    "kickoff_utc": "2026-06-27T23:30:00Z",
+    "venue": "Atlanta Stadium",
+    "stage": "group",
+    "group": "K",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.8888888888888888,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 8,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.037037037037037035,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率88.9%）。",
+      "Rollout有8/216个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5040740740740741,
+    "draw": 0.2840740740740741,
+    "team_b_win": 0.21185185185185185
+  },
+  "most_likely_outcome": {
+    "label": "DR Congo胜",
+    "probability": 0.5040740740740741
+  },
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.1437037037037037
+    },
+    {
+      "score": "1-1",
+      "probability": 0.12518518518518518
+    },
+    {
+      "score": "0-0",
+      "probability": 0.10851851851851851
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "路透称民主刚果赢球即可到4分并锁定晋级，末轮目标清晰。",
+      "text_en": "Reuters reports that a DR Congo win would take them to four points and secure knockout-stage progress, giving them a clear final-round objective",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_20d617d3ef03",
+        "E_d2d8d52e8861"
+      ],
+      "source_names": [
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "乌兹别克斯坦小组已连负哥伦比亚和葡萄牙，近两战共丢8球。",
+      "text_en": "Uzbekistan have already lost to Colombia and Portugal in the group, conceding eight goals across those two matches",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_6bb628d901a7",
+        "E_99fcdcbd0556",
+        "E_91e8b18f863e"
+      ],
+      "source_names": [
+        "The Guardian",
+        "ESPN",
+        "Reuters"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "Goal.com称民主刚果第2轮使用保护性5-3-2，先稳防再反击。",
+      "text_en": "Goal.com said DR Congo used a highly protective 5-3-2 on Matchday 2, pointing to a defend-first, transition-based approach",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_58094ab05675",
+        "E_07324828f9da"
+      ],
+      "source_names": [
+        "Goal.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "Wissa被列为民主刚果关键前锋，Khusanov则是乌兹别克防线支点。",
+      "text_en": "Yoane Wissa is listed as a key DR Congo forward, while Abdukodir Khusanov is identified as a central pillar of Uzbekistan’s defence",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_604293010762",
+        "E_01fd06930be5",
+        "E_F_aace27d947a1"
+      ],
+      "source_names": [
+        "Goal.com",
+        "MLSsoccer.com"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "AFC称乌兹别克斯坦末轮仍为保留竞争资格而战，并非无欲无求。",
+      "text_en": "The AFC preview says Uzbekistan are still playing to keep their qualification hopes alive in the final group match",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_F_c93a1e83e392",
+        "E_908757c79192"
+      ],
+      "source_names": [
+        "AFC",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "FIFA与FOX均列本场在亚特兰大进行，开球为美国东部晚间。",
+      "text_en": "FIFA and FOX list the match in Atlanta, with kickoff scheduled for the evening in U.S. Eastern time",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_410494f875d3",
+        "E_ecaeb790ec21"
+      ],
+      "source_names": [
+        "FIFA",
+        "FOX"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-27T08:22:45.124135Z",
+    "source_state_sha256": "cd494322e4eddc4a126a108b419292b2af0c51d7dd120b0b0e1552454c4680f6",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "已对 high_scoring（开放／大比分，总进球≥4）情景进行独立审计。提案引用的全部证据ID均真实存在于输入证据池，未发现幻觉、过期或被错误偏离引用的证据，rationale 中对 rollout_4(4-0)、rollout_5(3-1) 及机制激活的描述与原始数据一致。提案没有把开放大比分机械压回 2-2 等最低达标平局或一边倒最低比分：它在保留主导方向的同时纳入了真实的大比分(4-0)与对攻交换(3-2)，结构合理。审计保…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2070370370370371,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.5,
+        "summary_cn": "本场期望总进球约2.29(xG_a≈1.44, xG_b≈0.85)，4球以上属尾部，但情景内事件概率0.207并不可忽略，且存在明确的不对称证据：乌兹别克斯坦小组赛连负哥伦比亚(1-3)与葡萄牙(0-5)、近两战共丢8球，防线承压证据强；民主刚果末轮赢球即锁定晋级、具直接转换威胁。机制 H1(稳守反击后段扩大优势)在8/9条推演中激活，H2(Wissa-…",
+        "caution_cn": "高比分为尾部情景：主预测期望总进球远低于4，0-0/1-0/1-1占据主导，4+球需要乌兹别克斯坦防线在末轮明显失稳或比赛后段转向开放，不能因证据方向一致就高估。E_14299223c8bf 显示 Cannavaro 执教初期仅7场丢5球、并非结构性崩盘，叠加 Khusanov 作为防守支点(E_…",
+        "top_scores": [
+          {
+            "score": "3-1",
+            "base_probability": 0.046296296296296294,
+            "tail_focus_conditional_probability": 0.2618849433825956,
+            "support_grade": 2,
+            "script_cn": "民主刚果以五后卫/3-5-2控制失球风险，先取得领先；乌兹别克斯坦为保留出线可能在中后段加大投入，中卫身前与边翼卫身后留空，Wissa/Bakambu 通过纵向转换再下两球，乌兹别克斯坦获得一次反击或定位球还以颜色，定格4球达标的民主刚果主导比分。"
+          },
+          {
+            "score": "4-1",
+            "base_probability": 0.017407407407407406,
+            "tail_focus_conditional_probability": 0.09743533365790844,
+            "support_grade": 1,
+            "script_cn": "双方末轮均有现实目标，比赛走向开放交换：民主刚果凭转换与对位优势多点开花，Shomurodov 作为单箭头在追分阶段获得一次反击或禁区终结机会，最终民主刚果以4-1取大优势。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.1033333333333333,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.48,
+        "summary_cn": "崩盘事件基础概率仅约0.103，主预测最常见为1-0/1-1/0-0，故 attention 维持 low。但乌兹别克斯坦近两战连负哥伦比亚(1-3)、葡萄牙(0-5)共丢8球，Cannavaro 早期七场失分压力(E_14299223c8bf)，叠加民主刚果赢球即锁定晋级的强动机(E_20d617d3ef03/E_d2d8d52e8861)与 H1 在…",
+        "caution_cn": "关键修正点：民主刚果的战术底色是保护性5-3-2/3-5-2且 attack 仅0.57，不是葡萄牙级攻击资源，因此把对葡萄牙的0-5惨败直接外推为民主刚果可复制的大比分是证据错配——该证据只支持乌兹别克斯坦防线可被打穿，不支持民主刚果具备同等终结能力。AFC/ESPN 证据(E_F_c93a1e…",
+        "top_scores": [
+          {
+            "score": "3-0",
+            "base_probability": 0.043333333333333335,
+            "tail_focus_conditional_probability": 0.4514225197705233,
+            "support_grade": 2,
+            "script_cn": "民主刚果以五后卫结构先稳住失球风险，凭借赢球即出线的动机控制中段节奏；乌兹别克斯坦为追分前压后，其边翼卫身后与中卫身前空间被打开，民主刚果通过直接转换与 Wissa 纵深跑动连续制造禁区机会，最终以三球净胜锁定崩盘。"
+          },
+          {
+            "score": "4-0",
+            "base_probability": 0.016666666666666666,
+            "tail_focus_conditional_probability": 0.1706305280299723,
+            "support_grade": 1,
+            "script_cn": "民主刚果较早领先后,乌兹别克斯坦被迫提高边翼卫与中前场投入,中场保护断裂使民主刚果的直接出球与第二前锋/翼卫后插上连续兑现,在保持零封的同时把比分扩大到四球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.21185185185185185,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.42,
+        "summary_cn": "upset 是真实但弱支撑的尾部情景。三条已接受/试探机制无一指向乌兹别克斯坦取胜,H1 明确判定 team_b 下行,H2/H3 对 team_b 中性。唯一可被引用的偏向证据是 AFC/ESPN 关于乌兹别克斯坦仍为保留竞争资格而战(E_F_c93a1e83e392/E_908757c79192)以及无重大伤停(E_7be77bbb39c3),配合民主…",
+        "caution_cn": "该情景整体证据偏弱,不应被赋予高关注度。注意:0-1 之所以为低比分,源于乌兹别克斯坦攻击端疲弱与民主刚果低位防守这一真实证据链,而非把开放大比分机械压回最低达标比分;现有证据池中没有任何机制或来源支撑乌兹别克斯坦打出开放型大比分取胜,因此严禁臆造 2-3/0-3/2-4 等高比分爆冷剧本。所有比…",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "base_probability": 0.09296296296296297,
+            "tail_focus_conditional_probability": 0.4840887174541948,
+            "support_grade": 1,
+            "script_cn": "民主刚果延续保护性 5-3-2/五后卫,优先控制失球风险;其进攻端因谨慎出球、第一脚向前传递质量不足或 Wissa 被 Khusanov 限制而效率下降,比赛进入低比分拉锯。乌兹别克斯坦在中后段为保留出线资格主动投入,以 Shomurodov 为前场支点,通过一次反击或定位球偷到唯一进球并守住。"
+          },
+          {
+            "score": "1-2",
+            "base_probability": 0.047407407407407405,
+            "tail_focus_conditional_probability": 0.20572163291546125,
+            "support_grade": 0,
+            "script_cn": "上半场比分接近,末轮压力使比赛在下半场转向开放;乌兹别克斯坦在民主刚果扳回或提速后仍能依靠反击两度破门并最终领先取胜。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

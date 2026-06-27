@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-27T07:49:45.490001Z",
+  "prediction_generated_at_local": "2026-06-27T15:49:45.490001+08:00",
+  "match": {
+    "match_id": "M71",
+    "team_a": "Colombia",
+    "team_b": "Portugal",
+    "kickoff_utc": "2026-06-27T23:30:00Z",
+    "venue": "Miami Stadium",
+    "stage": "group",
+    "group": "K",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 16,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.07407407407407407,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "Rollout有16/216个动作使用确定性回退。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.3337037037037037,
+    "draw": 0.27925925925925926,
+    "team_b_win": 0.387037037037037
+  },
+  "most_likely_outcome": {
+    "label": "Portugal胜",
+    "probability": 0.387037037037037
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.13407407407407407
+    },
+    {
+      "score": "1-2",
+      "probability": 0.08925925925925926
+    },
+    {
+      "score": "0-1",
+      "probability": 0.08555555555555555
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "哥伦比亚两战6分已出线，战平葡萄牙即可锁定K组头名。",
+      "text_en": "Colombia already have six points and are qualified; a draw against Portugal would be enough to secure first place in Group K",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_8d2d2b92e6ca",
+        "E_9c042734c4a2",
+        "E_d82ac1bbe5ed"
+      ],
+      "source_names": [
+        "Reuters",
+        "Yahoo Sports",
+        "AS"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "葡萄牙4分基本出线，但需击败哥伦比亚才可争夺小组第一。",
+      "text_en": "Portugal sit on four points and are described as nearly through, but they need a win over Colombia to chase top spot",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_8d2d2b92e6ca",
+        "E_9c042734c4a2",
+        "E_f8adb76b5577"
+      ],
+      "source_names": [
+        "Reuters",
+        "Yahoo Sports",
+        "ESPN UK"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "迈阿密赛时预报87°F、体感96°F，并有52%分散雷暴概率。",
+      "text_en": "The Miami forecast calls for 87°F, a 96°F feels-like temperature, and a 52% chance of scattered thunderstorms at match time",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_64ea4dc9874c",
+        "E_5ebd7348390d",
+        "E_cc7476766b75"
+      ],
+      "source_names": [
+        "Miami Herald",
+        "AccuWeather",
+        "USA Today"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "葡萄牙预计沿用迪奥戈·科斯塔、坎塞洛、迪亚斯、B席、B费和C罗骨架。",
+      "text_en": "Portugal are projected with a strong core including Diogo Costa, Cancelo, Ruben Dias, Bernardo Silva, Bruno Fernandes and Ronaldo",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_1df2c868d746",
+        "E_eafdb574c2bd",
+        "E_e6604954eada"
+      ],
+      "source_names": [
+        "Yahoo Sports / confirmed team news",
+        "Racing Post",
+        "Sports Illustrated"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "哥伦比亚预计4-3-3，J罗、路易斯·迪亚斯和路易斯·苏亚雷斯领衔前场。",
+      "text_en": "Colombia are expected to line up in a 4-3-3, with James Rodríguez, Luis Díaz and Luis Suárez leading the attack",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_9ee72d6243a0"
+      ],
+      "source_names": [
+        "talkSPORT"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "哥伦比亚无人确定缺阵，但路易斯·苏亚雷斯肩伤被列为疑问。",
+      "text_en": "Colombia have no confirmed ruled-out players, but Luis Suárez is listed as doubtful while managing a shoulder issue",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_2ac3a3935b75",
+        "E_b58d3126efd8"
+      ],
+      "source_names": [
+        "Sports Mole",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-27T07:52:45.261118Z",
+    "source_state_sha256": "f7b095d445ffea90edc03a69c80e065c4817485119355531cd6a8ac8d28bd11d",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "对 high_scoring（总进球≥4）单情景完成独立审计。原提案四个候选所有 evidence_ids/mechanism_ids 均为空，未真实挂接任何证据，需补齐并核验。证据层面葡萄牙才是开放局面的主要进球驱动方（FIFA 确认 5-0 胜乌兹别克、C罗进球、对阵亚美尼亚 9-1 中布鲁诺与内维斯帽子戏法、马丁内斯明言本场只为击败哥伦比亚必须取胜），而哥伦比亚以转换威胁为主且苏亚雷斯肩伤存疑、禁区终结点受限。基于此：保留 2-…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.31444444444444436,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.47,
+        "summary_cn": "高偏离情景，主线机制（H_group_state_low_tempo_portugal_chase，置信0.66，8/9世界激活）实际把中心拉向低进球与平局，9条推演代表比分最常见为0-0/1-1，因此本情景整体为尾部、attention 维持 low。但一旦进入开放局面，方向性明确：葡萄牙为争小组第一必须取胜、攻击与终结资源更强、近期 5-0 且 C罗进…",
+        "caution_cn": "审计调整：1) 原提案所有候选 evidence/mechanism 字段为空，未真实引用证据，已补齐并逐条核验存在性。2) 删除 3-2——哥伦比亚在开放局打入3球缺乏证据支撑（苏亚雷斯存疑、防线证据反指、提案自承主线偏葡萄牙），属为对称而保留的弱候选。3) 补入 1-4——这是被原提案忽略、却…",
+        "top_scores": [
+          {
+            "score": "2-3",
+            "base_probability": 0.034074074074074076,
+            "tail_focus_conditional_probability": 0.14882232192842249,
+            "support_grade": 2,
+            "script_cn": "葡萄牙为争头名主动压上，边后卫坎塞洛/门德斯前插制造宽度与传中，禁区终结与定位球持续施压；哥伦比亚借迪亚斯纵深与詹姆斯第一脚分配在转换中两度得手，但葡萄牙凭更强终结与尾段进攻替补在高温尾段再下一城，5球开放局以葡萄牙险胜收尾。"
+          },
+          {
+            "score": "2-2",
+            "base_probability": 0.06185185185185185,
+            "tail_focus_conditional_probability": 0.18698428410317153,
+            "support_grade": 1,
+            "script_cn": "双方在高温下互有攻守，葡萄牙凭终结与定位球两度领先或追平，哥伦比亚以迪亚斯/詹姆斯转换两度回应；葡萄牙虽全力争胜却未能在尾段取得制胜球，开放局以平局收场。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.11185185185185184,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.48,
+        "summary_cn": "blowout为真实但低权重尾部。葡萄牙拥有更强攻击画像(attack 0.85、finishing 0.86)与5-0近况，且必须赢球争头名，故崩盘方向偏向葡萄牙(条件概率合计约0.52 vs 哥伦比亚约0.34)。但主导机制H_group_state_low_tempo推动总进球下降、平局上升，9条推演代表比分最常见为0-0，因此任何大比分都需附加触发…",
+        "caution_cn": "宏观最可能为低分/平局结构，blowout属尾部，勿据此提高整体方差。0-4虽为葡萄牙方向机制闭环最强且有rollout_9直接支撑，但其条件概率(0.103)低于未入选的0-3(0.199)，二者均依赖葡萄牙保持高效终结，使用时应视为同一簇。2-5为最极端脚本(7球)，仅在双方互爆高节奏下成立…",
+        "top_scores": [
+          {
+            "score": "0-4",
+            "base_probability": 0.011481481481481481,
+            "tail_focus_conditional_probability": 0.14367066823809166,
+            "support_grade": 2,
+            "script_cn": "哥伦比亚长期守平争平局，葡萄牙在高温下分段施压，前60分钟由禁区终结与边路传中先取2球；哥伦比亚失去结构后回追与防线集中度下降，葡萄牙尾段再扩大至4球，哥伦比亚反击因苏亚雷斯接应受限未能兑现。"
+          },
+          {
+            "score": "3-0",
+            "base_probability": 0.01925925925925926,
+            "tail_focus_conditional_probability": 0.16795362703461242,
+            "support_grade": 1,
+            "script_cn": "葡萄牙为争头名让坎塞洛、门德斯与中场持续压上，开局控球无效且丢球后反抢失败，被迪亚斯、詹姆斯领衔的快速转换在身后空间反复打穿，哥伦比亚以三球净胜。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": false,
+        "status": "not_applicable",
+        "base_event_probability": 0.0,
+        "attention_level": "not_applicable",
+        "attention_label_cn": "不适用",
+        "evidence_strength": 0.0,
+        "summary_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+        "caution_cn": "该情景没有满足预设适用条件。",
+        "top_scores": [],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

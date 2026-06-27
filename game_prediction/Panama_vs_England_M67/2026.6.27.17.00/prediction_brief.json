@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-27T06:56:23.364491Z",
+  "prediction_generated_at_local": "2026-06-27T14:56:23.364491+08:00",
+  "match": {
+    "match_id": "M67",
+    "team_a": "Panama",
+    "team_b": "England",
+    "kickoff_utc": "2026-06-27T21:00:00Z",
+    "venue": "New York New Jersey Stadium",
+    "stage": "group",
+    "group": "L",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.05814814814814815,
+    "draw": 0.18592592592592594,
+    "team_b_win": 0.7559259259259259
+  },
+  "most_likely_outcome": {
+    "label": "England胜",
+    "probability": 0.7559259259259259
+  },
+  "top_scores": [
+    {
+      "score": "0-2",
+      "probability": 0.17444444444444446
+    },
+    {
+      "score": "0-1",
+      "probability": 0.16777777777777778
+    },
+    {
+      "score": "0-3",
+      "probability": 0.11407407407407408
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "巴拿马预计以深位5-4-1落位，对克罗地亚防守宽度仅38米。",
+      "text_en": "Panama are expected to sit in a deep 5-4-1, and their defensive width against Croatia was reported at just 38 meters",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_9aba8b442f55",
+        "E_c8623d7a10ab"
+      ],
+      "source_names": [
+        "The Sun",
+        "The Times"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "英格兰赛前重点演练破低位，控球4-2-3-1可由两边卫前压制造重载。",
+      "text_en": "England have been working on how to break a low block, with a 4-2-3-1 build-up that can push both full-backs into midfield overloads",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_18858cac642d",
+        "E_3370ab92ee09",
+        "E_ac079eaae438"
+      ],
+      "source_names": [
+        "The Guardian",
+        "Rotowire"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "英格兰打平即可出线，取胜可锁定L组第一，末轮仍有争胜动机。",
+      "text_en": "England qualify with a draw, but a win would secure first place in Group L, keeping a clear incentive to push for victory",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_bd782b59eebe",
+        "E_cc156ae10619",
+        "E_c4baff90f129"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "AS",
+        "Sports Illustrated"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "巴拿马小组两场均0-1失利，ESPN列其本届进球和助攻均为0。",
+      "text_en": "Panama have lost both group matches 1-0, and ESPN lists them with zero goals and zero assists at this World Cup",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_d2c114460eaf",
+        "E_613bb22af832",
+        "E_26453c4fda9a"
+      ],
+      "source_names": [
+        "FIFA",
+        "NBC News",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "里斯·詹姆斯因伤被报将缺席，赖斯也曾缺席赛前倒数第二练。",
+      "text_en": "Reece James has been reported out with injury, while Declan Rice also missed England’s penultimate training session before the match",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_229506436f50",
+        "E_0eec407ab437"
+      ],
+      "source_names": [
+        "BBC",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "纽约新泽西球场已换天然草，但有球员称草皮偏干、比赛难踢。",
+      "text_en": "The New York New Jersey venue has been converted to natural grass, yet players have described the pitch as dry and difficult to play on",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_cd52040d0e24",
+        "E_f13c2fced01c"
+      ],
+      "source_names": [
+        "New York Post",
+        "The Athletic"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-27T07:01:04.349537Z",
+    "source_state_sha256": "e741d7338ff823cc450aa723ced6fba6e6c6ce0751f671d687f562f5045176fe",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "对 high_scoring（总进球≥4）情景完成独立审计。提案未把开放大比分机械压回 2-2 等最低达标比分，选择集中在条件概率最高的四个候选（0-4、1-3、0-5、1-4），方向与基本面（英格兰单边放大、巴拿马进攻产出极弱）一致，未引用过期或幻觉证据。主要修正：将 1-3 由 grade 1 上调为 grade 2，因为它在该情景内条件概率第二高（0.207），且是唯一拥有直接宏观推演支撑（rollout_9 代表比分=1-3）…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.2396296296296296,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.52,
+        "summary_cn": "该情景基础事件概率约0.24，并非边缘事件，但其内部结构高度偏向英格兰单边放大而非真正的对攻开放。英格兰进攻证据强（4-2胜克罗地亚、凯恩梅开二度、贝林厄姆与拉什福德均破门），破低位有专门准备；巴拿马本届两场0进球、ESPN列进球助攻均为0，被零封路径强。因此英格兰大比分（0-4/0-5/1-3/1-4）构成该情景主体。反向约束是巴拿马两场均仅1-0小负…",
+        "caution_cn": "该情景实为英格兰单边放大，不应被读成双方对攻；巴拿马进球支撑很弱（本届0进球），1-3/1-4中巴拿马的1球依赖防线失误或定位球反击，属低频高杠杆事件，不能据此抬高grade。0-4/0-5受巴拿马每场仅失1球的低位韧性约束，属条件内上尾，禁止进一步上调。",
+        "top_scores": [
+          {
+            "score": "0-4",
+            "base_probability": 0.05555555555555555,
+            "tail_focus_conditional_probability": 0.24521578008274336,
+            "support_grade": 2,
+            "script_cn": "巴拿马维持深位5-4-1低block主动降速，英格兰前60分钟以控球与边路一对一施压；下半场55-70分钟换上速度型边锋与第二中锋后，通过边路拉扯、传中与倒三角在禁区肋部与后点连续制造机会，凯恩、贝林厄姆与替补完成多点得分，巴拿马全场无有效终结，最终0-4。"
+          },
+          {
+            "score": "1-3",
+            "base_probability": 0.04962962962962963,
+            "tail_focus_conditional_probability": 0.2190594302072508,
+            "support_grade": 2,
+            "script_cn": "英格兰中前段压上破低位，詹姆斯缺席与赖斯状态疑问使一侧攻守转换变弱，巴拿马通过长传争第二落点或定位球取得1球；但英格兰整体质量更高，凭借边路与后段换人取得3球，最终1-3。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.26222222222222225,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.45,
+        "summary_cn": "一边倒情景成立但属真实尾部：base_event_probability≈0.262，9条宏观推演代表比分集中在0-1/0-0/1-2，几乎没有干净的净胜3球以上结果，说明崩盘是机制可支撑但非主线的低关注尾部。支撑方向真实：英格兰4-2击败克罗地亚、凯恩梅开二度、贝林厄姆与拉什福德进球（E_aec1e16ca7a5、E_34e4974b2c44），巴拿马两…",
+        "caution_cn": "崩盘为低关注尾部，锚点为0-3而非0-4。巴拿马两场仅1-0小负，防守韧性有证据支撑，4球以上尤其5球需要英格兰早段破局并后段连续转化才成立，不应据此把尾部抬到中等强度。英格兰防线被多源指出存在失误（E_287538601161）且里斯·詹姆斯缺阵、赖斯状态曾不确定，使净胜方向仍可能掺入巴拿马偷得…",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.11407407407407408,
+            "tail_focus_conditional_probability": 0.4626912447648081,
+            "support_grade": 2,
+            "script_cn": "巴拿马以5-4-1深位紧凑开局拖慢前段节奏，英格兰通过边路一对一、外线重叠与倒三角在禁区肋部制造高质量机会，约半场至下半场初打破僵局；随后凭进攻深度与55-70分钟替补增压再添进球，巴拿马低产出无法回应，全场零封净胜3球。"
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.05555555555555555,
+            "tail_focus_conditional_probability": 0.22145153060563755,
+            "support_grade": 1,
+            "script_cn": "英格兰先破低位后，巴拿马被迫小幅改变结构，英格兰借核心攻击手状态与末轮争胜动机在后段连续加分，体能与盯人压力累积下再下两城，仍保持零封。"
+          }
+        ],
+        "display_mode": "compact"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.05814814814814815,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.46,
+        "summary_cn": "爆冷=Panama 取胜。可用机制中真正指向 Panama 得分的只有 H_england_injury_transition_risk（tentative, 0.4454）与 H_panama_camp_disruption（tentative, 0.3518），两者都只是低杠杆修正项，且 counter_evidence 明确指出 Panama 前两场…",
+        "caution_cn": "Panama 本届 0 进球、0 助攻、GD -2，任何要求其打进 2 球以上的爆冷比分都缺乏直接进攻证据支撑，只能给弱支持或负支持。1-0 是唯一获得机制与基础条件概率双重支撑的爆冷路径（base_conditional 0.56），不得据此再向上扩展到 3-1/3-2 等更激进比分。",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.03259259259259259,
+            "tail_focus_conditional_probability": 0.6143106457242583,
+            "support_grade": 1,
+            "script_cn": "Panama 落位深位 5-4-1/紧凑低位，主动降速保护中路；England 控球占优但破低位效率不足，受干涩草皮影响中路渗透容错下降。比赛长期处于低节奏围攻，Panama 凭借一次反击、定位球或 England 一侧（右路 James 缺阵）转换失误抓住唯一高杠杆机会取得 1-0，并以经验型低位防守保住比分。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.012962962962962963,
+            "tail_focus_conditional_probability": 0.20360674810936596,
+            "support_grade": 0,
+            "script_cn": "England 长时间压上，右路 James 缺阵与后腰保护不稳留出转换空间；Panama 在两次低频反击/定位球中实现罕见高效转化，而 England 凭进攻质量扳回一球但未能逆转，Panama 以 2-1 完成爆冷。"
+          }
+        ],
+        "display_mode": "expanded"
+      }
+    ]
+  }
+}

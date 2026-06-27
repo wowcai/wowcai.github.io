@@ -6665,7 +6665,35 @@ body.modal-open {
 }
 
 .gaokao-province-card {
+  display: flex;
+  flex-direction: column;
   width: min(560px, 100%);
+}
+
+.gaokao-province-body {
+  display: flex;
+  max-height: calc(100vh - 92px);
+  min-height: 0;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 6px;
+  scrollbar-color: rgba(246, 214, 143, 0.46) rgba(255, 255, 255, 0.07);
+  scrollbar-width: thin;
+}
+
+.gaokao-province-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gaokao-province-body::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.gaokao-province-body::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(246, 214, 143, 0.46);
 }
 
 .gaokao-province-head {

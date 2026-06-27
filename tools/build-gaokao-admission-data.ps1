@@ -474,6 +474,14 @@ foreach ($file in $jsonFiles) {
       $rankRange = @($rankLow, $rankHigh)
     }
 
+    $scoreRangeObject = Get-PropValue $item "score_range"
+    $scoreLow = To-NullableNumber (Get-PropValue $scoreRangeObject "low")
+    $scoreHigh = To-NullableNumber (Get-PropValue $scoreRangeObject "high")
+    $scoreRange = @()
+    if ($null -ne $scoreLow -and $null -ne $scoreHigh) {
+      $scoreRange = @($scoreLow, $scoreHigh)
+    }
+
     $reasonRaw = Get-PropValue $item "prediction_reason"
     $reasonSections = New-Object System.Collections.Generic.List[object]
     $reasonSummary = ""
@@ -498,6 +506,7 @@ foreach ($file in $jsonFiles) {
     }
 
     $predictedRank = To-NullableNumber (Get-PropValue $item "predicted_rank")
+    $predictedScore = To-NullableNumber (Get-PropValue $item "predicted_score")
     $majorTierRecommendation = Get-PropValue $item "major_tier_recommendation"
 
     $record = [ordered]@{
@@ -511,9 +520,9 @@ foreach ($file in $jsonFiles) {
       history = $history.ToArray()
       prediction = [ordered]@{
         year = 2026
-        predictedScore = ""
+        predictedScore = $predictedScore
         predictedRank = $predictedRank
-        scoreRange = @()
+        scoreRange = $scoreRange
         rankRange = $rankRange
         changeFromLastYear = $null
         confidence = "medium"

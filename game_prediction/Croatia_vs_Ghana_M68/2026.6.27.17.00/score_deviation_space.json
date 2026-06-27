@@ -1,0 +1,602 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-27T07:21:44.716667Z",
+  "prediction_generated_at_local": "2026-06-27T15:21:44.716667+08:00",
+  "quality_label": "ready",
+  "match_id": "M68",
+  "team_a": "Croatia",
+  "team_b": "Ghana",
+  "x_axis": {
+    "field": "deviation",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "label_cn": "比分偏离度（越大越激进）"
+  },
+  "y_axis": {
+    "field": "probability",
+    "label_cn": "最终概率"
+  },
+  "points": [
+    {
+      "score": "1-0",
+      "deviation": 0.0,
+      "probability": 0.12296296296296297,
+      "probability_percent": 12.2963,
+      "outcome": "team_a",
+      "sample_count": 332,
+      "path_deviation": 0.5921967356299344,
+      "result_surprise": 0.06478873239436611,
+      "reason_cn": "Croatia在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-1",
+      "deviation": 0.011740918218675662,
+      "probability": 0.13148148148148148,
+      "probability_percent": 13.1481,
+      "outcome": "draw",
+      "sample_count": 355,
+      "path_deviation": 0.6353231425408813,
+      "result_surprise": 0.0,
+      "reason_cn": "双方各有得分机会，但都难以形成持续优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-1",
+      "deviation": 0.21561143493204687,
+      "probability": 0.09518518518518519,
+      "probability_percent": 9.5185,
+      "outcome": "team_a",
+      "sample_count": 257,
+      "path_deviation": 0.6297605224340858,
+      "result_surprise": 0.276056338028169,
+      "reason_cn": "Croatia在关键对位中略占上风，以一球优势收束比赛。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-0",
+      "deviation": 0.22992734884212604,
+      "probability": 0.10148148148148148,
+      "probability_percent": 10.1481,
+      "outcome": "draw",
+      "sample_count": 274,
+      "path_deviation": 0.6655933884554979,
+      "result_surprise": 0.22816901408450707,
+      "reason_cn": "双方防守结构有效，机会转化不足。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-1",
+      "deviation": 0.25170293962150253,
+      "probability": 0.09259259259259259,
+      "probability_percent": 9.2593,
+      "outcome": "team_b",
+      "sample_count": 250,
+      "path_deviation": 0.6444731877739399,
+      "result_surprise": 0.295774647887324,
+      "reason_cn": "Ghana通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-0",
+      "deviation": 0.3222101562416205,
+      "probability": 0.07777777777777778,
+      "probability_percent": 7.7778,
+      "outcome": "team_a",
+      "sample_count": 210,
+      "path_deviation": 0.6332857717142707,
+      "result_surprise": 0.4084507042253521,
+      "reason_cn": "关键球员状态与角色变化；Croatia打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk"
+      ]
+    },
+    {
+      "score": "5-4",
+      "deviation": 0.32999977812223363,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.3232598293428224,
+      "result_surprise": 0.9943661971830986,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk",
+        "H_croatia_central_to_wide_routes"
+      ]
+    },
+    {
+      "score": "6-2",
+      "deviation": 0.4647622606325258,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_a",
+      "sample_count": 3,
+      "path_deviation": 0.41935740889030354,
+      "result_surprise": 0.9915492957746479,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk",
+        "H_croatia_central_to_wide_routes"
+      ]
+    },
+    {
+      "score": "1-2",
+      "deviation": 0.47946818931893315,
+      "probability": 0.06407407407407407,
+      "probability_percent": 6.4074,
+      "outcome": "team_b",
+      "sample_count": 173,
+      "path_deviation": 0.687533339348023,
+      "result_surprise": 0.5126760563380282,
+      "reason_cn": "Ghana通过压迫或转换取得一球优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-2",
+      "deviation": 0.4915146130758286,
+      "probability": 0.04962962962962963,
+      "probability_percent": 4.963,
+      "outcome": "draw",
+      "sample_count": 134,
+      "path_deviation": 0.6368329900958225,
+      "result_surprise": 0.6225352112676057,
+      "reason_cn": "比赛进入开放往返，双方进攻均有兑现。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "3-0",
+      "deviation": 0.5105334698855232,
+      "probability": 0.03259259259259259,
+      "probability_percent": 3.2593,
+      "outcome": "team_a",
+      "sample_count": 88,
+      "path_deviation": 0.5804085744930174,
+      "result_surprise": 0.752112676056338,
+      "reason_cn": "末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛、紧凑防守对进攻空间的压缩；Croatia打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_qual_asym_lowblock",
+        "H_croatia_central_to_wide_routes"
+      ]
+    },
+    {
+      "score": "4-4",
+      "deviation": 0.5422208502091491,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome": "draw",
+      "sample_count": 6,
+      "path_deviation": 0.4782707991093627,
+      "result_surprise": 0.9830985915492958,
+      "reason_cn": "关键球员状态与角色变化、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk",
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "3-2",
+      "deviation": 0.5822311536928425,
+      "probability": 0.025555555555555557,
+      "probability_percent": 2.5556,
+      "outcome": "team_a",
+      "sample_count": 69,
+      "path_deviation": 0.6019093222356179,
+      "result_surprise": 0.8056338028169014,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "0-2",
+      "deviation": 0.5836296131506762,
+      "probability": 0.03259259259259259,
+      "probability_percent": 3.2593,
+      "outcome": "team_b",
+      "sample_count": 88,
+      "path_deviation": 0.6317098757898878,
+      "result_surprise": 0.752112676056338,
+      "reason_cn": "抢断后的快速转换；Ghana充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_late_transition_tail"
+      ]
+    },
+    {
+      "score": "5-1",
+      "deviation": 0.5845940356608204,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_a",
+      "sample_count": 11,
+      "path_deviation": 0.5155936734528171,
+      "result_surprise": 0.9690140845070423,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk",
+        "H_croatia_central_to_wide_routes"
+      ]
+    },
+    {
+      "score": "4-1",
+      "deviation": 0.5912584966485113,
+      "probability": 0.014444444444444444,
+      "probability_percent": 1.4444,
+      "outcome": "team_a",
+      "sample_count": 39,
+      "path_deviation": 0.5627412193904632,
+      "result_surprise": 0.8901408450704226,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk",
+        "H_croatia_central_to_wide_routes"
+      ]
+    },
+    {
+      "score": "5-2",
+      "deviation": 0.5987451175108895,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome": "team_a",
+      "sample_count": 9,
+      "path_deviation": 0.522491786603783,
+      "result_surprise": 0.9746478873239437,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_croatia_central_to_wide_routes",
+        "H_ghana_keeper_setpiece_risk"
+      ]
+    },
+    {
+      "score": "6-1",
+      "deviation": 0.5989436805688328,
+      "probability": 0.001851851851851852,
+      "probability_percent": 0.1852,
+      "outcome": "team_a",
+      "sample_count": 5,
+      "path_deviation": 0.5165639724889408,
+      "result_surprise": 0.9859154929577465,
+      "reason_cn": "紧凑防守对进攻空间的压缩、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_croatia_central_to_wide_routes",
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "3-1",
+      "deviation": 0.6217729199419313,
+      "probability": 0.03518518518518519,
+      "probability_percent": 3.5185,
+      "outcome": "team_a",
+      "sample_count": 95,
+      "path_deviation": 0.6690976669224594,
+      "result_surprise": 0.732394366197183,
+      "reason_cn": "Croatia打破对方防守后扩大领先优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-0",
+      "deviation": 0.6356041012870802,
+      "probability": 0.015185185185185185,
+      "probability_percent": 1.5185,
+      "outcome": "team_a",
+      "sample_count": 41,
+      "path_deviation": 0.5968980238366728,
+      "result_surprise": 0.8845070422535212,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；Croatia打破对方防守后扩大领先优势。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk",
+        "H_croatia_central_to_wide_routes"
+      ]
+    },
+    {
+      "score": "3-3",
+      "deviation": 0.6886615464202203,
+      "probability": 0.009259259259259259,
+      "probability_percent": 0.9259,
+      "outcome": "draw",
+      "sample_count": 25,
+      "path_deviation": 0.6098668121239005,
+      "result_surprise": 0.9295774647887324,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_croatia_central_to_wide_routes",
+        "H_ghana_keeper_setpiece_risk"
+      ]
+    },
+    {
+      "score": "2-3",
+      "deviation": 0.7151644735371503,
+      "probability": 0.017407407407407406,
+      "probability_percent": 1.7407,
+      "outcome": "team_b",
+      "sample_count": 47,
+      "path_deviation": 0.6618368941468037,
+      "result_surprise": 0.8676056338028169,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "1-3",
+      "deviation": 0.7246103520805228,
+      "probability": 0.022222222222222223,
+      "probability_percent": 2.2222,
+      "outcome": "team_b",
+      "sample_count": 60,
+      "path_deviation": 0.6881846353209513,
+      "result_surprise": 0.8309859154929577,
+      "reason_cn": "Ghana充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "5-0",
+      "deviation": 0.7258913094024008,
+      "probability": 0.0025925925925925925,
+      "probability_percent": 0.2593,
+      "outcome": "team_a",
+      "sample_count": 7,
+      "path_deviation": 0.6086936212148729,
+      "result_surprise": 0.9802816901408451,
+      "reason_cn": "紧凑防守对进攻空间的压缩、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_croatia_central_to_wide_routes",
+        "H_ghana_keeper_setpiece_risk"
+      ]
+    },
+    {
+      "score": "0-3",
+      "deviation": 0.7346180127884463,
+      "probability": 0.012962962962962963,
+      "probability_percent": 1.2963,
+      "outcome": "team_b",
+      "sample_count": 35,
+      "path_deviation": 0.6572885173668988,
+      "result_surprise": 0.9014084507042254,
+      "reason_cn": "Ghana充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "4-2",
+      "deviation": 0.763239826759771,
+      "probability": 0.008148148148148147,
+      "probability_percent": 0.8148,
+      "outcome": "team_a",
+      "sample_count": 22,
+      "path_deviation": 0.6576579472518174,
+      "result_surprise": 0.9380281690140845,
+      "reason_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail"
+      ]
+    },
+    {
+      "score": "3-5",
+      "deviation": 0.7898194237594097,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 0.6459765299693322,
+      "result_surprise": 0.9943661971830986,
+      "reason_cn": "紧凑防守对进攻空间的压缩、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_croatia_central_to_wide_routes",
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "2-6",
+      "deviation": 0.7927544825964185,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.6465196586856448,
+      "result_surprise": 0.9971830985915493,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk",
+        "H_croatia_central_to_wide_routes"
+      ]
+    },
+    {
+      "score": "1-5",
+      "deviation": 0.8501196445857546,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.6898140209367956,
+      "result_surprise": 0.9915492957746479,
+      "reason_cn": "关键球员状态与角色变化、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_ghana_keeper_setpiece_risk",
+        "H_croatia_central_to_wide_routes"
+      ]
+    },
+    {
+      "score": "4-3",
+      "deviation": 0.8541287289794243,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_a",
+      "sample_count": 11,
+      "path_deviation": 0.7047620740582861,
+      "result_surprise": 0.9690140845070423,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_ghana_keeper_setpiece_risk"
+      ]
+    },
+    {
+      "score": "0-4",
+      "deviation": 0.9043006020806157,
+      "probability": 0.004074074074074074,
+      "probability_percent": 0.4074,
+      "outcome": "team_b",
+      "sample_count": 11,
+      "path_deviation": 0.7399743611040733,
+      "result_surprise": 0.9690140845070423,
+      "reason_cn": "抢断后的快速转换、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；Ghana充分兑现反击或进攻效率并扩大优势。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "1-4",
+      "deviation": 0.9046779613281473,
+      "probability": 0.0044444444444444444,
+      "probability_percent": 0.4444,
+      "outcome": "team_b",
+      "sample_count": 12,
+      "path_deviation": 0.7417559974244027,
+      "result_surprise": 0.9661971830985916,
+      "reason_cn": "末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "3-4",
+      "deviation": 0.9303257745547988,
+      "probability": 0.0014814814814814814,
+      "probability_percent": 0.1481,
+      "outcome": "team_b",
+      "sample_count": 4,
+      "path_deviation": 0.747622140133075,
+      "result_surprise": 0.9887323943661972,
+      "reason_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": []
+    },
+    {
+      "score": "2-4",
+      "deviation": 1.0,
+      "probability": 0.002962962962962963,
+      "probability_percent": 0.2963,
+      "outcome": "team_b",
+      "sample_count": 8,
+      "path_deviation": 0.8025889981062158,
+      "result_surprise": 0.9774647887323944,
+      "reason_cn": "抢断后的快速转换、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "2-5",
+      "deviation": 1.0,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome": "team_b",
+      "sample_count": 3,
+      "path_deviation": 0.8763431720983451,
+      "result_surprise": 0.9915492957746479,
+      "reason_cn": "末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_qual_asym_lowblock",
+        "H_late_transition_tail"
+      ]
+    },
+    {
+      "score": "0-5",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_b",
+      "sample_count": 2,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9943661971830986,
+      "reason_cn": "抢断后的快速转换、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "5-3",
+      "deviation": 1.0,
+      "probability": 0.0007407407407407407,
+      "probability_percent": 0.0741,
+      "outcome": "team_a",
+      "sample_count": 2,
+      "path_deviation": 0.8016753127531369,
+      "result_surprise": 0.9943661971830986,
+      "reason_cn": "抢断后的快速转换、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "1-6",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9971830985915493,
+      "reason_cn": "抢断后的快速转换、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_qual_asym_lowblock"
+      ]
+    },
+    {
+      "score": "2-7",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8113698361394763,
+      "result_surprise": 0.9971830985915493,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_ghana_keeper_setpiece_risk"
+      ]
+    },
+    {
+      "score": "4-5",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_b",
+      "sample_count": 1,
+      "path_deviation": 0.8113698361394763,
+      "result_surprise": 0.9971830985915493,
+      "reason_cn": "抢断后的快速转换、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_ghana_keeper_setpiece_risk"
+      ]
+    },
+    {
+      "score": "6-3",
+      "deviation": 1.0,
+      "probability": 0.00037037037037037035,
+      "probability_percent": 0.037,
+      "outcome": "team_a",
+      "sample_count": 1,
+      "path_deviation": 1.0,
+      "result_surprise": 0.9971830985915493,
+      "reason_cn": "抢断后的快速转换、末轮资格激励形成克罗地亚主动进攻、加纳守平的非对称比赛；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+      "mechanism_ids": [
+        "H_late_transition_tail",
+        "H_qual_asym_lowblock"
+      ]
+    }
+  ],
+  "recommended_encoding": {
+    "x": "deviation",
+    "y": "probability",
+    "label": "score",
+    "color": "outcome",
+    "size": "probability"
+  }
+}

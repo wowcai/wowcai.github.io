@@ -5040,6 +5040,7 @@ function openGaokaoProvinceModal(locationProvince, data, state, refs) {
   refs.provinceModal.classList.add("is-open");
   refs.provinceModal.setAttribute("aria-hidden", "false");
   refs.provinceModal.scrollTop = 0;
+  refs.provinceBody.scrollTop = 0;
   const card = refs.provinceModal.querySelector(".gaokao-province-card");
 
   if (card) {
@@ -5067,9 +5068,7 @@ function closeGaokaoProvinceModal() {
 }
 
 function renderGaokaoProvincePanel(locationProvince, entries, state) {
-  const sorted = entries.slice().sort(
-    (a, b) => (b.prediction?.predictedScore || 0) - (a.prediction?.predictedScore || 0)
-  );
+  const sorted = entries.slice().sort(compareGaokaoEntriesByPredictedRank);
   const provinceName = gkProvinceText(locationProvince);
   const sourceProvinceText = state.province ? gkProvinceText(state.province) : "";
   const subjText = state.subjectType ? gkSubjectText(state.subjectType) : "";
@@ -5105,6 +5104,30 @@ function renderGaokaoProvincePanel(locationProvince, entries, state) {
     <p class="gaokao-province-tip">${escapeHtml(L("点击任意高校，查看 2021-2026 年分数 / 位次趋势、关键依据拆解与专业档位建议。", "Tap any university to view its 2021-2026 score / rank trend, evidence breakdown, and major-tier advice."))}</p>
     <div class="gaokao-province-school-list">${items}</div>
   `;
+}
+
+function compareGaokaoEntriesByPredictedRank(a, b) {
+  const rankA = nullableNumber(a?.prediction?.predictedRank);
+  const rankB = nullableNumber(b?.prediction?.predictedRank);
+  const hasRankA = Number.isFinite(rankA);
+  const hasRankB = Number.isFinite(rankB);
+
+  if (hasRankA && hasRankB && rankA !== rankB) {
+    return rankA - rankB;
+  }
+
+  if (hasRankA !== hasRankB) {
+    return hasRankA ? -1 : 1;
+  }
+
+  const scoreA = nullableNumber(a?.prediction?.predictedScore);
+  const scoreB = nullableNumber(b?.prediction?.predictedScore);
+
+  if (Number.isFinite(scoreA) && Number.isFinite(scoreB) && scoreA !== scoreB) {
+    return scoreB - scoreA;
+  }
+
+  return gkUniversityName(a).localeCompare(gkUniversityName(b), "zh-CN");
 }
 
 function openGaokaoUniversityDetail(entry, state, refs) {

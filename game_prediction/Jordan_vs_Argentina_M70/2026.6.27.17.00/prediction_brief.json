@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-27T09:13:02.189496Z",
+  "prediction_generated_at_local": "2026-06-27T17:13:02.189496+08:00",
+  "match": {
+    "match_id": "M70",
+    "team_a": "Jordan",
+    "team_b": "Argentina",
+    "kickoff_utc": "2026-06-28T02:00:00Z",
+    "venue": "Dallas Stadium",
+    "stage": "group",
+    "group": "J",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "final",
+  "quality_label": "ready",
+  "quality_assessment": {
+    "label": "ready",
+    "label_cn": "可正式使用",
+    "publish_recommendation_cn": "核心状态、检索覆盖与推演完整性均达到正式发布标准。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 1.0,
+    "critical_research_complete": true,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 171,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": []
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.06,
+    "draw": 0.19111111111111112,
+    "team_b_win": 0.7488888888888889
+  },
+  "most_likely_outcome": {
+    "label": "Argentina胜",
+    "probability": 0.7488888888888889
+  },
+  "top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.2051851851851852
+    },
+    {
+      "score": "0-2",
+      "probability": 0.1862962962962963
+    },
+    {
+      "score": "0-3",
+      "probability": 0.11259259259259259
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "斯卡洛尼确认梅西替补，阿根廷已锁头名后预计轮换首发。",
+      "text_en": "Scaloni has confirmed Messi will start on the bench, and Argentina are expected to rotate after already sealing top spot",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_0333093d988f",
+        "E_d57563a7e837",
+        "E_55203453c04c"
+      ],
+      "source_names": [
+        "Yahoo Sports",
+        "Buenos Aires Times",
+        "India Today"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "阿根廷前两战3-0、2-0且零封，防守端未给出高质量机会。",
+      "text_en": "Argentina opened with 3-0 and 2-0 wins, kept clean sheets, and have not allowed a high-value shot attempt in the tournament",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_f974bbe553ca",
+        "E_6c69c56b96a7",
+        "E_0646bd0b149b"
+      ],
+      "source_names": [
+        "FIFA",
+        "The Athletic / New York Times",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "约旦预计三中卫低位收缩，重点压缩中路并用塔马里反击。",
+      "text_en": "Jordan are expected to defend deep with a back three, stay compact through the middle, and look for counterattacks through Tamari",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_deceba0c7807",
+        "E_32b86054d5ec"
+      ],
+      "source_names": [
+        "RotoWire",
+        "World Soccer Talk"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "阿根廷6分已晋级，约旦0分且已出局，末轮出线压力较低。",
+      "text_en": "Argentina already have six points and have advanced, while Jordan are on zero points and eliminated, reducing qualification pressure in this final group match",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_4ba691562009",
+        "E_ec6805cc35aa",
+        "E_e03fe3cc6e5e"
+      ],
+      "source_names": [
+        "NBC Sports",
+        "ESPN",
+        "AS"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "比赛在阿灵顿AT&T体育场进行，该球场具备可伸缩屋顶。",
+      "text_en": "The match is scheduled for AT&T Stadium in Arlington, a World Cup venue listed as having a retractable roof",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_c6be3fc51ec8",
+        "E_d14dc46baf46",
+        "E_05e3e07df120"
+      ],
+      "source_names": [
+        "AT&T Stadium",
+        "ESPN",
+        "Yahoo Sports"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "partial_audit",
+    "source_report_generated_at": "2026-06-27T09:15:56.186878Z",
+    "source_state_sha256": "93afad124050d245001bf9830dda8336f2b0521d6c6d87ddf2ed7d7a69e6efb7",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "未调用LLM，输出确定性高偏离候选基线。；独立审计仅针对blowout情景。所有候选引用的证据ID均真实存在于证据池，未发现幻觉或过期证据；阿根廷3-0、2-0且零封、梅西替补与重度轮换、约旦已出局低位收缩等关键事实引用准确。主要问题在于提案把0-4置于0-3之上并给出更高support_grade，这与机制结构和条件概率相悖：本场是重度轮换、梅西替补、提前锁头名、双向低出线压力的管理型大胜语境，最高置信机制(H_rotation_l…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "accepted",
+        "base_event_probability": 0.18629629629629632,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.0,
+        "summary_cn": "这是未调用LLM时的确定性候选池基线，不代表证据增强判断。",
+        "caution_cn": "请勿将该基线误认为LLM后处理结果。",
+        "top_scores": [
+          {
+            "score": "0-4",
+            "base_probability": 0.052222222222222225,
+            "tail_focus_conditional_probability": 0.2515806213878438,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          },
+          {
+            "score": "1-4",
+            "base_probability": 0.02148148148148148,
+            "tail_focus_conditional_probability": 0.12373453318335209,
+            "support_grade": 0,
+            "script_cn": "未完成LLM证据后处理，按原矩阵在该情景内的概率排序保留。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.23296296296296296,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.45,
+        "summary_cn": "blowout基础事件概率仅0.233，且本场为阿根廷重度轮换、梅西替补、提前晋级、双方均无出线压力的管理型语境。阿根廷实力与防守端数据(两战零封、未让出0.15 xG以上射门)确实支撑约旦被压制到零进球的大胜路径，但已锁头名后的控节奏、保护球员与梅西受控出场限制了向更大比分的持续追击。因此blowout成立但应以管理型大胜(0-3)为核心，更大比分仅作有…",
+        "caution_cn": "阿根廷已晋级且重度轮换，领先后倾向控节奏与保护球员，blowout并非开放对攻情景；不应将0-4/0-5等更大比分抬高到0-3之上。约旦零进球依赖阿根廷防守稳定，但罗梅罗伤情与后防轮换为反击尾部留有限空间，故非零封比分应保留但仅作低支持。",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.11259259259259259,
+            "tail_focus_conditional_probability": 0.5093877928358673,
+            "support_grade": 2,
+            "script_cn": "阿根廷以轮换阵容逐步压制约旦低位，凭借实力差与定位球/个人能力打开局面，全场零封并以净胜三球完成管理型大胜，下半场未无谓追击。"
+          },
+          {
+            "score": "0-4",
+            "base_probability": 0.052222222222222225,
+            "tail_focus_conditional_probability": 0.2321886167775559,
+            "support_grade": 1,
+            "script_cn": "阿根廷上半场建立优势，下半场通过替补深度与创造点(含梅西或阿尔瓦雷斯/劳塔罗)提升机会密度，将比分扩大到四球同时保持零封。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.060000000000000005,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.42,
+        "summary_cn": "约旦取胜本质为低频尾部事件。被接受的核心机制中，H_rotation_low_block_early_drag 主要指向平局而非约旦取胜，H_argentina_depth_late_transition 与 H_group_late_low_stakes_management 反而压低约旦得分；唯一明确支持 team_a 取胜的是 tentative 级…",
+        "caution_cn": "upset 不是被机械压缩的开放大比分，而是真实尾部，故集中于低比分是合理而非保守失真。已删除原提案的 2-0：约旦同时打入 2 球并对阿根廷零封缺乏机制支撑（罗梅罗缺阵机制只支持约旦尾部反击进球，不支持封锁阿根廷攻击，阿根廷本届尚未丢球且攻击力强）。3-2/3-1 未纳入，因约旦打入 3 球无证…",
+        "top_scores": [
+          {
+            "score": "1-0",
+            "base_probability": 0.03518518518518519,
+            "tail_focus_conditional_probability": 0.6298342541436464,
+            "support_grade": 1,
+            "script_cn": "约旦长时间低位压缩中路，把比赛拖入低节奏；阿根廷轮换且梅西替补导致前段破密效率下降，约旦依靠塔马里/奥尔万的转换或定位球取得单球领先，并在后续依靠紧凑防守守住优势。"
+          },
+          {
+            "score": "2-1",
+            "base_probability": 0.015925925925925927,
+            "tail_focus_conditional_probability": 0.23756906077348064,
+            "support_grade": 0,
+            "script_cn": "约旦先通过低位反击或阿根廷后防轮换默契不足取得进球，阿根廷凭阵容深度追回一球；但比赛低出线压力和阿根廷管理型节奏使其未能持续压垮约旦，约旦再利用转换或定位球打入制胜球。"
+          }
+        ],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}

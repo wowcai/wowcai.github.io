@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-27T08:49:22.961311Z",
+  "prediction_generated_at_local": "2026-06-27T16:49:22.961311+08:00",
+  "match": {
+    "match_id": "M69",
+    "team_a": "Algeria",
+    "team_b": "Austria",
+    "kickoff_utc": "2026-06-28T02:00:00Z",
+    "venue": "Kansas City Stadium",
+    "stage": "group",
+    "group": "J",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "status": "provisional",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.8888888888888888,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 189,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率88.9%）。"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.33185185185185184,
+    "draw": 0.3025925925925926,
+    "team_b_win": 0.3655555555555556
+  },
+  "most_likely_outcome": {
+    "label": "Austria胜",
+    "probability": 0.3655555555555556
+  },
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.1374074074074074
+    },
+    {
+      "score": "0-1",
+      "probability": 0.11666666666666667
+    },
+    {
+      "score": "0-0",
+      "probability": 0.0962962962962963
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PF_01",
+      "text_cn": "奥地利同积3分但靠净胜球第二，打平即可保住小组第二。",
+      "text_en": "Austria enter level on three points but second on goal difference, and multiple reports say a draw is enough to retain second place",
+      "direction": "draw",
+      "evidence_ids": [
+        "E_a9f48edf5892",
+        "E_a49fd3d90f4e",
+        "E_cafc4bdbf98e"
+      ],
+      "source_names": [
+        "ESPN",
+        "AS",
+        "The Analyst"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_02",
+      "text_cn": "阿尔及利亚若要直接拿第二必须赢球，佩特科维奇称会争胜。",
+      "text_en": "Algeria need a win to take second place directly, and Vladimir Petkovic has publicly said his side will play to win",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_be074c66d0b4",
+        "E_d4a6b957b2a6"
+      ],
+      "source_names": [
+        "WhoScored",
+        "ESPN"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_03",
+      "text_cn": "阿穆拉腿筋伤预计继续缺阵，是阿尔及利亚唯一明确伤病点。",
+      "text_en": "Mohamed Amoura is expected to miss out again with a hamstring injury, described as Algeria's only clear injury concern",
+      "direction": "team_b",
+      "evidence_ids": [
+        "E_af3e64e4bb07",
+        "E_F_95f68da1552d",
+        "E_aa117af0ff1f"
+      ],
+      "source_names": [
+        "Reuters",
+        "Sports Illustrated",
+        "Sports Mole"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_04",
+      "text_cn": "阿尔及利亚上轮2比1逆转约旦，马赫雷斯将继续担任队长。",
+      "text_en": "Algeria came from behind to beat Jordan 2-1, and ESPN reports Riyad Mahrez will captain them against Austria",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_c16a79c84fa0",
+        "E_F_611bc453b328",
+        "E_a0778b7cb73c"
+      ],
+      "source_names": [
+        "FIFA",
+        "ESPN",
+        "Sofascore"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_05",
+      "text_cn": "奥地利3比1约旦一战，约旦机会11比10、射正4比2占优。",
+      "text_en": "In Austria's 3-1 match against Jordan, Jordan had more total chances and more shots on target, highlighting defensive exposure",
+      "direction": "team_a",
+      "evidence_ids": [
+        "E_6ebb5ac27c5b"
+      ],
+      "source_names": [
+        "The Guardian"
+      ],
+      "generated_by": "gpt-5.5"
+    },
+    {
+      "factor_id": "PF_06",
+      "text_cn": "比赛在堪萨斯城箭头体育场进行，场地约95%为天然草。",
+      "text_en": "The match is scheduled at Arrowhead Stadium in Kansas City, on a FIFA-required hybrid pitch with about 95% natural grass",
+      "direction": "neutral",
+      "evidence_ids": [
+        "E_83f8ea4fbf26",
+        "E_ec33eace52dc",
+        "E_3ed292245f5d"
+      ],
+      "source_names": [
+        "The Kansas City Star",
+        "KSHB",
+        "Knox News"
+      ],
+      "generated_by": "gpt-5.5"
+    }
+  ],
+  "tail_forecast_summary": {
+    "schema_version": "1.0",
+    "integration_version": "7.4.6-tail-brief-support-first-schema-safe-v1",
+    "source_tool_version": "7.4.4-tail-single-scenario-hotfix",
+    "source_report_status": "ready",
+    "source_report_generated_at": "2026-06-27T08:53:41.589872Z",
+    "source_state_sha256": "90b062312b6bbc08bee032d47a3907ddf9c321b2adc0641fe728d94e90f5a46d",
+    "method": "evidence_grounded_tail_postprocessing",
+    "main_prediction_modified": false,
+    "event_probabilities_modified_by_llm": false,
+    "overall_summary_cn": "对 high_scoring 情景进行独立审计。证据真实存在且未发现幻觉，但原提案在候选选择上存在方向性偏差:同时纳入 1-3、2-3 两个奥地利占优的开放比分,却完全排除了与之同等基础概率(0.1306)且更受 rollout 直接支撑的 3-1(阿尔及利亚取胜的开放比分)。rollout 集合中真正出现的大比分世界是 4-0、3-0、2-2,均偏向阿尔及利亚进球,加之阿尔及利亚必须取胜、佩特科维奇公开争胜、马赫雷斯任队长,3-1…",
+    "scenarios": [
+      {
+        "scenario_id": "high_scoring",
+        "label_cn": "开放／大比分",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.23814814814814822,
+        "attention_level": "medium",
+        "attention_label_cn": "中",
+        "evidence_strength": 0.5,
+        "summary_cn": "high_scoring 基础事件概率约0.238,非边缘尾部,但主预测前排比分(1-1/0-1/0-0)均为低进球,故为可信但非主导模式。机制层面 H3(奥地利高压与肋部/边后卫身后空间并存)支持双向进球,H1(末轮出线结构前稳后开)指向后段波动上升,H2(阿穆拉缺阵削弱纵深转换)压低阿尔及利亚进球上限并抬高奥地利。证据均真实且时效新鲜(多条为赛前数小时…",
+        "caution_cn": "奥地利打平即可锁定小组第二(E_a49fd3d90f4e/E_cafc4bdbf98e),若其主动降低压迫高度则全局开放度与3球端上限会被抑制;主预测整体偏低进球(xG约1.2:1.26,前排为0/1球比分),high_scoring 仍属偏离主线的情景。阿穆拉缺阵会进一步压低阿尔及利亚把空间转化…",
+        "top_scores": [
+          {
+            "score": "2-2",
+            "base_probability": 0.055185185185185184,
+            "tail_focus_conditional_probability": 0.25382008382092663,
+            "support_grade": 2,
+            "script_cn": "前段拉锯无进球;阿尔及利亚通过马赫雷斯、马扎在边路与两线间制造威胁先入,奥地利凭借高强度压迫与二次进攻、定位球扳平并反超后再被追平,后段双方均压上形成对攻,终场2-2。"
+          },
+          {
+            "score": "3-1",
+            "base_probability": 0.03111111111111111,
+            "tail_focus_conditional_probability": 0.1430932016171667,
+            "support_grade": 2,
+            "script_cn": "阿尔及利亚为争小组第二全场主动施压,马赫雷斯边路隔离与马扎中路串联制造多次机会,奥地利在打平已足够的背景下后段降低风险,阿尔及利亚扩大比分至3-1。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "blowout",
+        "label_cn": "一边倒／崩盘",
+        "applicable": true,
+        "status": "revised",
+        "base_event_probability": 0.09259259259259256,
+        "attention_level": "low",
+        "attention_label_cn": "低",
+        "evidence_strength": 0.46,
+        "summary_cn": "blowout 事件总概率约0.093，整体为低关注尾部情景。证据呈现方向张力：联合矩阵的条件概率偏奥地利方向（0-3=0.312，0-4=0.088），但9条宏观推演中唯一出现的净胜≥3球比分是 4-0(rollout_4) 与 3-0(rollout_9)，全部为阿尔及利亚方向，无任何奥地利方向的≥3球推演被实现。因此本情景必须双向覆盖，且不能把阿尔及…",
+        "caution_cn": "两点须警惕：其一，奥地利打平即可锁定小组第二（E_a49fd3d90f4e/E_cafc4bdbf98e），缺乏继续扩大比分到净胜4球的动机，故 0-4、1-4 这类深度奥地利大胜属于低支持尾部，不应给到与 3-0 同级或更高的分级；其二，阿尔及利亚防守评分较高(0.82)且世界排名第15、刚逆转…",
+        "top_scores": [
+          {
+            "score": "0-3",
+            "base_probability": 0.028888888888888888,
+            "tail_focus_conditional_probability": 0.3575408397942007,
+            "support_grade": 2,
+            "script_cn": "开局拉锯，阿尔及利亚因争第二而逐步压上；阿穆拉缺阵使其失去最直接的纵深冲刺点，奥地利凭压迫与中场结构在阿尔及利亚出球受压时持续反咬，下半场连续利用反击与定位球将比分拉开至三球。"
+          },
+          {
+            "score": "3-0",
+            "base_probability": 0.02185185185185185,
+            "tail_focus_conditional_probability": 0.22381866894278873,
+            "support_grade": 1,
+            "script_cn": "阿尔及利亚必须取胜，通过马赫雷斯、马扎在两线之间反复摆脱奥地利第一压迫线；奥地利对约旦时已暴露被越过压迫后肋部与边后卫身后空间的问题，阿尔及利亚阵地战与转换叠加，奥地利退守不及，比分被拉开至三球。"
+          }
+        ],
+        "display_mode": "expanded"
+      },
+      {
+        "scenario_id": "upset",
+        "label_cn": "爆冷",
+        "applicable": false,
+        "status": "not_applicable",
+        "base_event_probability": 0.0,
+        "attention_level": "not_applicable",
+        "attention_label_cn": "不适用",
+        "evidence_strength": 0.0,
+        "summary_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+        "caution_cn": "该情景没有满足预设适用条件。",
+        "top_scores": [],
+        "display_mode": "compact"
+      }
+    ]
+  }
+}
