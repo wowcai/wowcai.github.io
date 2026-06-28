@@ -2910,6 +2910,18 @@ button.group-result-line:hover {
   height: clamp(16px, 1.55vw, 23px);
 }
 
+.route-team-pair {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.route-team-pair .route-flag {
+  width: clamp(25px, 2.35vw, 36px);
+  height: clamp(18px, 1.65vw, 24px);
+}
+
 .route-flag.empty-slot {
   display: none;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -3191,6 +3203,191 @@ button.group-result-line:hover {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.latest-match-card.knockout-latest-card {
+  min-height: 0;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 14px;
+  background: linear-gradient(180deg, #ffffff, #fbfdfc);
+  color: #0b231b;
+}
+
+.knockout-card-matchline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #17352b;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.knockout-card-matchline strong {
+  color: #0d7a56;
+  font-size: 12px;
+}
+
+.knockout-card-teams {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.knockout-card-team {
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+
+.knockout-card-team strong {
+  max-width: 100%;
+  color: #10251d;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.knockout-card-vs {
+  color: #0b221b;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.knockout-card-section {
+  display: grid;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(6, 63, 44, 0.08);
+  text-align: center;
+}
+
+.knockout-card-section > span {
+  color: #5f716b;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.knockout-advancement-row {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.knockout-advancement-row strong {
+  font-size: 23px;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.knockout-advancement-row .team-a {
+  color: #0a8f63;
+}
+
+.knockout-advancement-row .team-b {
+  color: #ef3440;
+}
+
+.knockout-advancement-row i {
+  height: 22px;
+  background: rgba(6, 63, 44, 0.14);
+}
+
+.knockout-resolution-wrap {
+  display: grid;
+  gap: 5px;
+}
+
+.knockout-resolution-bar {
+  height: 15px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 3px;
+  background: rgba(15, 46, 36, 0.08);
+}
+
+.knockout-resolution-bar i {
+  min-width: 2px;
+}
+
+.knockout-resolution-bar .normal {
+  background: #139a68;
+}
+
+.knockout-resolution-bar .extra {
+  background: #1683a5;
+}
+
+.knockout-resolution-bar .penalty {
+  background: #6d5bd0;
+}
+
+.knockout-resolution-labels,
+.knockout-resolution-captions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.knockout-resolution-labels {
+  margin-top: -19px;
+  padding: 0 4px;
+  pointer-events: none;
+}
+
+.knockout-resolution-labels span {
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 900;
+  min-width: 0;
+  text-align: center;
+}
+
+.knockout-resolution-captions span {
+  color: #20372f;
+  font-size: 10px;
+  font-weight: 900;
+  min-width: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.knockout-score-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.knockout-score-row strong {
+  min-height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(6, 63, 44, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f2e24;
+  font-size: 15px;
+  font-weight: 950;
+}
+
+.knockout-entry-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  color: #4e615a;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.knockout-entry-row strong {
+  margin-left: 4px;
+  color: #f59e0b;
+  font-size: 14px;
 }
 
 .summary-grid {
@@ -3511,26 +3708,6 @@ button.group-result-line:hover {
   padding-right: 96px;
 }
 
-.match-modal-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px;
-}
-
-.modal-update-time {
-  min-height: 28px;
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid rgba(246, 196, 83, 0.34);
-  border-radius: 999px;
-  padding: 0 11px;
-  background: rgba(246, 196, 83, 0.14);
-  color: #ffe8a3;
-  font-size: 12px;
-  font-weight: 900;
-}
-
 .match-modal-kicker {
   color: var(--stadium-gold);
   font-size: 12px;
@@ -3648,6 +3825,526 @@ button.group-result-line:hover {
 .tournament-modal-hero strong {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1rem;
+}
+
+.match-prediction-modal.is-knockout-prediction .match-modal-card {
+  width: min(1540px, calc(100vw - 12px));
+  max-height: min(96vh, 960px);
+  border: 1px solid rgba(6, 63, 44, 0.14);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.36);
+}
+
+.match-prediction-modal.is-knockout-prediction .match-modal-close {
+  top: 12px;
+  right: 12px;
+  border-color: rgba(6, 63, 44, 0.16);
+  color: #0f2e24;
+}
+
+.match-prediction-modal.is-knockout-prediction .match-modal-header {
+  padding: 12px 64px 10px 22px;
+  border-bottom: 1px solid rgba(6, 63, 44, 0.1);
+  background: #ffffff;
+  color: #0f2e24;
+}
+
+.knockout-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.knockout-modal-teams {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 44px);
+}
+
+.knockout-modal-teams .modal-team {
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-items: start;
+  gap: 10px;
+}
+
+.knockout-modal-teams .modal-team strong {
+  color: #0f2e24;
+  font-size: clamp(16px, 1.4vw, 22px);
+}
+
+.knockout-modal-teams .modal-versus {
+  background: transparent;
+  color: #0b221b;
+  font-size: 17px;
+}
+
+.modal-share-button {
+  min-height: 34px;
+  border: 1px solid rgba(6, 63, 44, 0.1);
+  border-radius: 8px;
+  padding: 0 13px;
+  background: #ffffff;
+  color: #0f2e24;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.match-prediction-modal.is-knockout-prediction .match-modal-body {
+  padding: 0 22px 12px;
+  background: #ffffff;
+}
+
+.knockout-report-shell {
+  display: grid;
+  gap: 10px;
+}
+
+.knockout-modal-tabs {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-height: 44px;
+  border-bottom: 1px solid rgba(6, 63, 44, 0.08);
+}
+
+.knockout-modal-tabs button {
+  height: 44px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: #293f37;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.knockout-modal-tabs button.is-active {
+  border-bottom-color: #0d9b67;
+  color: #0a8f63;
+}
+
+.knockout-report-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.knockout-path-panel,
+.knockout-metric-panel,
+.knockout-chart-card,
+.knockout-factors-card {
+  min-width: 0;
+  border: 1px solid rgba(6, 63, 44, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 7px 24px rgba(6, 63, 44, 0.04);
+}
+
+.knockout-path-panel {
+  position: sticky;
+  top: 0;
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.knockout-panel-head span,
+.knockout-card-head span {
+  display: block;
+  color: #0d7a56;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.05em;
+}
+
+.knockout-panel-head h3,
+.knockout-metric-panel h4,
+.knockout-card-head h4,
+.knockout-factors-card h4 {
+  margin: 0;
+  color: #0f2e24;
+  font-size: 15px;
+}
+
+.knockout-path-list {
+  display: grid;
+  gap: 10px;
+}
+
+.knockout-path-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(6, 63, 44, 0.08);
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(6, 63, 44, 0.03);
+}
+
+.knockout-path-card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.knockout-path-card div span {
+  min-width: 28px;
+  min-height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #073c2b;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.knockout-path-card div strong,
+.knockout-path-card em {
+  color: #0d7a56;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 950;
+}
+
+.knockout-path-card p {
+  margin: 0;
+  color: #283d35;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.knockout-phase-report {
+  display: grid;
+  gap: 10px;
+}
+
+.knockout-top-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.knockout-metric-panel,
+.knockout-chart-card,
+.knockout-factors-card {
+  padding: 13px 14px;
+}
+
+.score-matrix-card .knockout-card-head {
+  margin-bottom: 12px;
+}
+
+.knockout-donut-wrap {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.knockout-donut {
+  width: 88px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  justify-self: center;
+}
+
+.knockout-donut::after {
+  content: "";
+  position: absolute;
+  inset: 25px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(6, 63, 44, 0.08);
+}
+
+.knockout-donut-legend {
+  display: grid;
+  gap: 7px;
+}
+
+.knockout-donut-legend span {
+  display: grid;
+  grid-template-columns: 11px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  color: #2f443c;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.knockout-donut-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--legend-color);
+}
+
+.knockout-donut-legend strong {
+  color: #0f2e24;
+}
+
+.knockout-modal-score-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.knockout-modal-score-row span {
+  min-height: 82px;
+  display: grid;
+  place-items: center;
+  gap: 7px;
+  border: 1px solid rgba(6, 63, 44, 0.08);
+  border-radius: 8px;
+  background: #fbfdfc;
+}
+
+.knockout-modal-score-row strong {
+  color: #0f2e24;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.knockout-modal-score-row em {
+  color: #4c5f58;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.knockout-resolution-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.knockout-resolution-metrics span {
+  display: grid;
+  gap: 4px;
+  min-height: 54px;
+  place-items: center;
+  color: #344c43;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.knockout-resolution-metrics strong {
+  color: #0a8f63;
+  font-size: 20px;
+  font-weight: 950;
+}
+
+.knockout-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.knockout-matrix-wrap {
+  margin-top: 8px;
+}
+
+.knockout-axis-summary {
+  margin: 0 0 6px;
+}
+
+.knockout-score-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.knockout-score-list span {
+  min-height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  padding: 0 10px;
+  background: rgba(6, 63, 44, 0.04);
+}
+
+.knockout-score-list strong,
+.knockout-score-list em {
+  color: #0f2e24;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 950;
+}
+
+.knockout-deviation-plot {
+  position: relative;
+  height: 100%;
+  min-height: 176px;
+  margin-top: 10px;
+  border-left: 1px solid rgba(6, 63, 44, 0.14);
+  border-bottom: 1px solid rgba(6, 63, 44, 0.14);
+  background:
+    linear-gradient(rgba(6, 63, 44, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 63, 44, 0.06) 1px, transparent 1px);
+  background-size: 100% 25%, 20% 100%;
+}
+
+.knockout-deviation-plot > span:not(.knockout-deviation-axis-label) {
+  position: absolute;
+  transform: translate(-50%, 50%);
+}
+
+.knockout-deviation-axis-label {
+  position: absolute;
+  z-index: 2;
+  border-radius: 6px;
+  padding: 3px 6px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #40524b;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.knockout-deviation-axis-label.y-axis {
+  top: 6px;
+  left: 6px;
+}
+
+.knockout-deviation-axis-label.x-axis {
+  right: 8px;
+  bottom: 8px;
+}
+
+.knockout-deviation-plot i {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+  background: #0d7a56;
+  box-shadow: 0 0 0 3px rgba(13, 122, 86, 0.12);
+}
+
+.knockout-deviation-plot span.is-tail i {
+  background: #ef3440;
+  box-shadow: 0 0 0 3px rgba(239, 52, 64, 0.12);
+}
+
+.knockout-deviation-plot em {
+  position: absolute;
+  left: 50%;
+  top: -22px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  padding: 2px 5px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f2e24;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.knockout-tail-list {
+  display: grid;
+  grid-auto-rows: minmax(66px, auto);
+  align-self: start;
+  align-content: start;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.knockout-tail-list article {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 6px;
+  min-height: 64px;
+  border: 1px solid rgba(6, 63, 44, 0.08);
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: #fbfdfc;
+}
+
+.knockout-tail-list article div {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.knockout-tail-list article span {
+  min-height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #073c2b;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.knockout-tail-list article strong {
+  color: #0f2e24;
+  font-size: 12px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.knockout-tail-list article em {
+  color: #0d7a56;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 950;
+}
+
+.knockout-tail-list article b {
+  min-height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: rgba(6, 63, 44, 0.06);
+  color: #0f2e24;
+  font-size: 13px;
+}
+
+.knockout-factors-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 28px;
+  margin: 11px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.knockout-factors-card li {
+  position: relative;
+  break-inside: avoid;
+  min-height: 24px;
+  margin: 0;
+  padding-left: 16px;
+  color: #314940;
+  font-size: 13px;
+  line-height: 1.58;
+}
+
+.knockout-factors-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0d7a56;
 }
 
 .tournament-report-layout {
@@ -4752,6 +5449,58 @@ button.group-result-line:hover {
   font-size: 11px;
 }
 
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-card,
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .knockout-chart-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-card {
+  grid-template-rows: auto auto minmax(0, 1fr);
+}
+
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-wrap {
+  grid-template-columns: minmax(42px, 0.75fr) repeat(var(--matrix-data-cols), minmax(30px, 1fr));
+  gap: 4px;
+  overflow: hidden;
+  align-content: start;
+  align-self: stretch;
+}
+
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .matrix-axis-corner,
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .matrix-axis-label,
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .matrix-cell {
+  min-height: 30px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 9px;
+  line-height: 1.12;
+}
+
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .matrix-cell strong {
+  font-size: 9px;
+}
+
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-card.is-penalties .score-matrix-wrap {
+  gap: 4px;
+}
+
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-card.is-penalties .matrix-axis-corner,
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-card.is-penalties .matrix-axis-label,
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-card.is-penalties .matrix-cell {
+  min-height: 28px;
+  padding: 2px 4px;
+  font-size: 9px;
+}
+
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-card.is-penalties .matrix-cell strong {
+  font-size: 9px;
+}
+
+.match-prediction-modal.is-knockout-prediction.is-game-prediction .score-matrix-card p {
+  display: block;
+}
+
 .game-chart-card p,
 .game-factor-card p {
   margin: 10px 0 0;
@@ -5040,6 +5789,20 @@ body.modal-open {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .knockout-report-layout,
+  .knockout-top-metrics,
+  .knockout-chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .knockout-path-panel {
+    position: static;
+  }
+
+  .knockout-path-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .schedule-record-card {
     grid-template-columns: 120px minmax(180px, 1fr) repeat(2, minmax(130px, 0.8fr));
   }
@@ -5157,6 +5920,62 @@ body.modal-open {
     grid-template-columns: 1fr;
   }
 
+  .match-prediction-modal.is-knockout-prediction .match-modal-card {
+    width: calc(100vw - 12px);
+    max-height: 94vh;
+  }
+
+  .match-prediction-modal.is-knockout-prediction .match-modal-header {
+    padding: 12px 48px 12px 14px;
+  }
+
+  .match-prediction-modal.is-knockout-prediction .match-modal-body {
+    padding: 0 14px 14px;
+  }
+
+  .knockout-modal-head {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .knockout-modal-teams {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .knockout-modal-teams .modal-team {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .knockout-modal-tabs {
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .knockout-modal-tabs button {
+    flex: 0 0 auto;
+    font-size: 13px;
+  }
+
+  .knockout-path-list,
+  .knockout-resolution-metrics,
+  .knockout-modal-score-row {
+    grid-template-columns: 1fr;
+  }
+
+  .knockout-donut-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .knockout-factors-card ul {
+    columns: 1;
+  }
+
   .tournament-report-layout {
     grid-template-columns: 1fr;
   }
@@ -5165,10 +5984,6 @@ body.modal-open {
     align-items: flex-start;
     flex-direction: column;
     padding-right: 44px;
-  }
-
-  .match-modal-actions {
-    justify-content: flex-start;
   }
 
   .prediction-current-card,
@@ -5205,8 +6020,7 @@ body.modal-open {
     height: 1px;
   }
 
-  .report-version-title,
-  .match-modal-actions {
+  .report-version-title {
     align-items: flex-start;
     flex-direction: column;
   }

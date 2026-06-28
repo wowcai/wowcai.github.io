@@ -1,0 +1,658 @@
+{
+  "schema_version": "2.1",
+  "display_contract": "knockout_detail_unified_tabs_v6_1",
+  "match": {
+    "match_id": "M73",
+    "team_a": "South Africa",
+    "team_b": "Canada",
+    "kickoff_utc": "2026-06-28T19:00:00Z",
+    "venue": "Los Angeles Stadium",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.2913262867178952,
+      "team_b": 0.7086737132821048,
+      "favorite": "Canada"
+    },
+    "resolution": {
+      "normal_time": 0.7255555555555555,
+      "extra_time": 0.14841385865629386,
+      "penalties": 0.12603058578815063
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.16333333333333333,
+        "goals_a": 0,
+        "goals_b": 1
+      },
+      {
+        "score": "0-2",
+        "probability": 0.12777777777777777,
+        "goals_a": 0,
+        "goals_b": 2
+      },
+      {
+        "score": "1-1",
+        "probability": 0.1274074074074074,
+        "goals_a": 1,
+        "goals_b": 1
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Canada常规时间晋级。",
+        "summary_cn": "90分钟0-1，Canada常规时间晋级。",
+        "probability": 0.16333333333333339,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "N_0-1_B"
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+        "probability": 0.03567512161699214,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "ET_1-1_0-1_B"
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+        "probability": 0.007686254501160979,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "South Africa",
+        "path_id": "P_1-1_0-0_4-3_team_a"
+      }
+    ],
+    "favorite": "Canada",
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Canada常规时间晋级。",
+        "summary_cn": "90分钟0-1，Canada常规时间晋级。",
+        "probability": 0.16333333333333339,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "N_0-1_B"
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+        "probability": 0.03567512161699214,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "ET_1-1_0-1_B"
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+        "probability": 0.007686254501160979,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "South Africa",
+        "path_id": "P_1-1_0-0_4-3_team_a"
+      }
+    ],
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.12603058578815063,
+        "probability_band": "12.6%",
+        "representative_paths": [
+          {
+            "path_id": "P_1-1_0-0_4-3_team_a",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "4-3",
+            "penalty_winner": "team_a",
+            "advancer_side": "team_a",
+            "advancer_team": "South Africa",
+            "probability": 0.007686254501160979,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+            "path_probability": 0.007686254501160979
+          },
+          {
+            "path_id": "P_0-0_0-0_4-3_team_a",
+            "resolution_type": "penalties",
+            "normal_time_score": "0-0",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "0-0",
+            "extra_time_result": "draw",
+            "penalty_score": "4-3",
+            "penalty_winner": "team_a",
+            "advancer_side": "team_a",
+            "advancer_team": "South Africa",
+            "probability": 0.006770160214685397,
+            "summary_cn": "90分钟0-0、加时0-0后仍平，South Africa点球晋级。",
+            "path_probability": 0.006770160214685397
+          },
+          {
+            "path_id": "P_1-1_0-0_3-4_team_b",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "advancer_side": "team_b",
+            "advancer_team": "Canada",
+            "probability": 0.006329856648014924,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Canada点球晋级。",
+            "path_probability": 0.006329856648014924
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。"
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.14841385865629386,
+        "probability_band": "14.8%",
+        "representative_paths": [
+          {
+            "path_id": "ET_1-1_0-1_B",
+            "resolution_type": "extra_time",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-1",
+            "after_extra_time_score": "1-2",
+            "extra_time_result": "team_b",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Canada",
+            "probability": 0.03567512161699214,
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+            "path_probability": 0.03567512161699214
+          },
+          {
+            "path_id": "ET_0-0_0-1_B",
+            "resolution_type": "extra_time",
+            "normal_time_score": "0-0",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-1",
+            "after_extra_time_score": "0-1",
+            "extra_time_result": "team_b",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Canada",
+            "probability": 0.03142314491264134,
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Canada加时晋级。",
+            "path_probability": 0.03142314491264134
+          },
+          {
+            "path_id": "ET_1-1_1-0_A",
+            "resolution_type": "extra_time",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "1-0",
+            "after_extra_time_score": "2-1",
+            "extra_time_result": "team_a",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "South Africa",
+            "probability": 0.02006725590955808,
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，South Africa加时晋级。",
+            "path_probability": 0.02006725590955808
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。"
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2039475479425984,
+        "probability_band": "20.4%",
+        "representative_paths": [
+          {
+            "path_id": "N_1-0_A",
+            "resolution_type": "normal_time",
+            "normal_time_score": "1-0",
+            "normal_time_result": "team_a",
+            "extra_time_increment": null,
+            "after_extra_time_score": "1-0",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "South Africa",
+            "probability": 0.0792592592592593,
+            "summary_cn": "90分钟1-0，South Africa常规时间晋级。",
+            "path_probability": 0.0792592592592593
+          },
+          {
+            "path_id": "N_2-1_A",
+            "resolution_type": "normal_time",
+            "normal_time_score": "2-1",
+            "normal_time_result": "team_a",
+            "extra_time_increment": null,
+            "after_extra_time_score": "2-1",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "South Africa",
+            "probability": 0.040000000000000015,
+            "summary_cn": "90分钟2-1，South Africa常规时间晋级。",
+            "path_probability": 0.040000000000000015
+          },
+          {
+            "path_id": "N_2-0_A",
+            "resolution_type": "normal_time",
+            "normal_time_score": "2-0",
+            "normal_time_result": "team_a",
+            "extra_time_increment": null,
+            "after_extra_time_score": "2-0",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "South Africa",
+            "probability": 0.02333333333333334,
+            "summary_cn": "90分钟2-0，South Africa常规时间晋级。",
+            "path_probability": 0.02333333333333334
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。"
+      }
+    ],
+    "path_distribution": {
+      "path_count": 275,
+      "raw_top_paths": [
+        {
+          "path_id": "N_0-1_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-1",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-1",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Canada",
+          "probability": 0.16333333333333339,
+          "summary_cn": "90分钟0-1，Canada常规时间晋级。",
+          "path_probability": 0.16333333333333339
+        },
+        {
+          "path_id": "N_0-2_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-2",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-2",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Canada",
+          "probability": 0.12777777777777782,
+          "summary_cn": "90分钟0-2，Canada常规时间晋级。",
+          "path_probability": 0.12777777777777782
+        },
+        {
+          "path_id": "N_1-2_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-2",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-2",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Canada",
+          "probability": 0.08518518518518521,
+          "summary_cn": "90分钟1-2，Canada常规时间晋级。",
+          "path_probability": 0.08518518518518521
+        },
+        {
+          "path_id": "N_1-0_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "South Africa",
+          "probability": 0.0792592592592593,
+          "summary_cn": "90分钟1-0，South Africa常规时间晋级。",
+          "path_probability": 0.0792592592592593
+        },
+        {
+          "path_id": "N_0-3_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-3",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-3",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Canada",
+          "probability": 0.052222222222222246,
+          "summary_cn": "90分钟0-3，Canada常规时间晋级。",
+          "path_probability": 0.052222222222222246
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟0-1，Canada常规时间晋级。",
+          "summary_cn": "90分钟0-1，Canada常规时间晋级。",
+          "probability": 0.16333333333333339,
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-1",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-1",
+          "penalty_score": null,
+          "advancer_team": "Canada",
+          "path_id": "N_0-1_B"
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+          "probability": 0.03567512161699214,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-1",
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "Canada",
+          "path_id": "ET_1-1_0-1_B"
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+          "probability": 0.007686254501160979,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-3",
+          "advancer_team": "South Africa",
+          "path_id": "P_1-1_0-0_4-3_team_a"
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Canada常规时间晋级。",
+        "summary_cn": "90分钟0-1，Canada常规时间晋级。",
+        "probability": 0.16333333333333339,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "N_0-1_B"
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+        "probability": 0.03567512161699214,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "ET_1-1_0-1_B"
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+        "probability": 0.007686254501160979,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "South Africa",
+        "path_id": "P_1-1_0-0_4-3_team_a"
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json"
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2744444444444445,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "label": "南非开放加时二次偷袭，2-1增量胜出",
+          "score": "2-1",
+          "probability": 0.013670886075949372,
+          "joint_probability": 0.0037518987341772173,
+          "deviation_score": 0.7,
+          "category": "extra_time_breakout",
+          "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。"
+        },
+        {
+          "rank": 2,
+          "label": "南非先偷一个，加拿大追平并反超",
+          "score": "1-2",
+          "probability": 0.013670886075949372,
+          "joint_probability": 0.0037518987341772173,
+          "deviation_score": 0.7,
+          "category": "extra_time_breakout",
+          "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。"
+        },
+        {
+          "rank": 3,
+          "label": "红牌或门将失误触发南非3-0极端胜出",
+          "score": "3-0",
+          "probability": 0.004101265822784812,
+          "joint_probability": 0.0011255696202531653,
+          "deviation_score": 1.0,
+          "category": "extra_time_breakout",
+          "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。"
+        },
+        {
+          "rank": 4,
+          "label": "南非体能或结构崩盘，加拿大加时三球拉开",
+          "score": "0-3",
+          "probability": 0.004101265822784812,
+          "joint_probability": 0.0011255696202531653,
+          "deviation_score": 1.0,
+          "category": "extra_time_breakout",
+          "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。"
+        },
+        {
+          "rank": 5,
+          "label": "比赛完全拉开，南非3-1高波动胜出",
+          "score": "3-1",
+          "probability": 0.003417721518987343,
+          "joint_probability": 0.0009379746835443043,
+          "deviation_score": 1.0,
+          "category": "extra_time_breakout",
+          "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。"
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。"
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.12603058578815063,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "label": "加拿大低轮次压制，南非前三罚崩盘",
+          "scenario_id": "PSO-TAIL-01-CAN-0-3-early-shutout",
+          "score": "0-3",
+          "winner_side": "Canada",
+          "probability": 0.015,
+          "probability_band": "极低概率 / 极高偏离",
+          "deviation_score": 0.96,
+          "category": "penalty_tail_scenario",
+          "rationale_cn": "按矩阵口径，比分为南非-加拿大。该路径要求加拿大前几名高质量候选如David、Larin、Buchanan或Davies稳定命中，同时南非前三到四名主罚手连续失准，比赛可在低轮次提前结束。它明显偏离南非拥有Williams点球门将优势的基线，也要求南非主罚顺序和心理执行同时暴露，因此只能作为加拿大上限尾部保留。"
+        },
+        {
+          "rank": 2,
+          "label": "Williams极端压制，加拿大点球零封",
+          "scenario_id": "PSO-TAIL-02-SA-3-0-williams-lockdown",
+          "score": "3-0",
+          "winner_side": "South Africa",
+          "probability": 0.006,
+          "probability_band": "极端尾部 / 极高偏离",
+          "deviation_score": 0.99,
+          "category": "penalty_tail_scenario",
+          "rationale_cn": "这是南非最极端的门将压制脚本，需要Ronwen Williams早段连续扑点或其声誉迫使加拿大核心罚手射偏、击中门框，同时南非前三到四罚足够稳定。Williams确有强点球扑救证据，但加拿大潜在主罚质量高，零封式点球比分对异常低命中率依赖极强，因此概率极低。"
+        },
+        {
+          "rank": 3,
+          "label": "南非强门将压力下3-1提前收束",
+          "scenario_id": "PSO-TAIL-03-SA-3-1-keeper-pressure",
+          "score": "3-1",
+          "winner_side": "South Africa",
+          "probability": 0.014,
+          "probability_band": "极低概率 / 高偏离",
+          "deviation_score": 0.93,
+          "category": "penalty_tail_scenario",
+          "rationale_cn": "该路径比3-0略现实，但仍要求加拿大在前四轮左右仅命中一球，通常意味着三次未进，其中至少一次来自Williams实质扑救，另一次或更多来自追求死角导致射偏或门框。南非只需命中三球即可提前收束。它符合Williams门将优势方向，但加拿大主罚资源较强，低到1球命中仍属高偏离。"
+        },
+        {
+          "rank": 4,
+          "label": "加拿大前五轮内清晰胜出，Williams影响被抵消",
+          "scenario_id": "PSO-TAIL-04-CAN-2-4-clear-win",
+          "score": "2-4",
+          "winner_side": "Canada",
+          "probability": 0.02,
+          "probability_band": "低概率 / 高偏离",
+          "deviation_score": 0.88,
+          "category": "penalty_tail_scenario",
+          "rationale_cn": "该情景要求Williams未能转化关键扑救，加拿大核心罚手执行稳定，而南非中后顺位或压力罚手出现两次失误。它与加拿大主罚资源质量相符，但偏离南非点球分支小幅优势和Williams历史扑点证据，因此属于高偏离的加拿大清晰胜出路径。"
+        },
+        {
+          "rank": 5,
+          "label": "南非高命中率两球差胜出",
+          "scenario_id": "PSO-TAIL-05-SA-5-3-two-goal-edge",
+          "score": "5-3",
+          "winner_side": "South Africa",
+          "probability": 0.035,
+          "probability_band": "低概率 / 中高偏离",
+          "deviation_score": 0.82,
+          "category": "penalty_tail_scenario",
+          "rationale_cn": "该路径需要南非自身前五罚高度稳定，同时Williams在早段或中段制造一次实质优势，加拿大追赶过程中再出现一次失误。它比4-3、5-4等一球差南非主路径更偏南非，需要门将优势、南非主罚稳定和加拿大二次失误叠加，因此作为尾部而非主推。"
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。"
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "ready",
+    "penalty_condition_calibrator": "ready",
+    "full_path_tail": "ready"
+  },
+  "updated_at": "2026-06-28T08:42:12.982557Z",
+  "method_cn": "统一淘汰赛长路径pipeline：一次证据收集、一次MAS路径讨论、完整0-90/90-120/点球路径分布，再派生常规时间、加时和点球视图。",
+  "architecture_cn": "加时和点球不再是独立后处理输出，而是完整淘汰赛路径分布中的条件分支；前端三Tab只是同一分布的不同切片。"
+}

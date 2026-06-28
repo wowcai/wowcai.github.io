@@ -424,7 +424,18 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M55", "M56", "M57", "M58", "M59", "M60"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M73"];
+
+window.WORLD_CUP_KNOCKOUT_PROGRESS = {
+  rounds: {
+    round32: {
+      M73: {
+        status: "scheduled",
+        teams: ["RSA", "CAN"]
+      }
+    }
+  }
+};
 
 window.WORLD_CUP_ROUTE_DATA = {
   leftBracket: {

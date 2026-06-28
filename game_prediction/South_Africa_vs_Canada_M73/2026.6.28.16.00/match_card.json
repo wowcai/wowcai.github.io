@@ -1,0 +1,180 @@
+{
+  "schema_version": "2.1",
+  "display_contract": "knockout_card_unified_v6_1",
+  "stage": "knockout",
+  "match_id": "M73",
+  "round_label": "knockout",
+  "team_a": "South Africa",
+  "team_b": "Canada",
+  "kickoff_utc": "2026-06-28T19:00:00Z",
+  "venue": "Los Angeles Stadium",
+  "advancement": {
+    "team_a": 0.2913262867178952,
+    "team_b": 0.7086737132821048,
+    "favorite": "Canada"
+  },
+  "resolution": {
+    "normal_time": 0.7255555555555555,
+    "extra_time": 0.14841385865629386,
+    "penalties": 0.12603058578815063
+  },
+  "normal_time_top_scores": [
+    {
+      "score": "0-1",
+      "probability": 0.16333333333333333,
+      "goals_a": 0,
+      "goals_b": 1
+    },
+    {
+      "score": "0-2",
+      "probability": 0.12777777777777777,
+      "goals_a": 0,
+      "goals_b": 2
+    },
+    {
+      "score": "1-1",
+      "probability": 0.1274074074074074,
+      "goals_a": 1,
+      "goals_b": 1
+    }
+  ],
+  "entry_probability": {
+    "extra_time": 0.2744444444444445,
+    "penalties": 0.12603058578815063
+  },
+  "path_top": [
+    {
+      "rank": 1,
+      "display_slot": "normal_time",
+      "display_slot_cn": "90分钟解决",
+      "label": "90分钟0-1，Canada常规时间晋级。",
+      "summary_cn": "90分钟0-1，Canada常规时间晋级。",
+      "probability": 0.16333333333333339,
+      "resolution_type": "normal_time",
+      "normal_time_score": "0-1",
+      "extra_time_increment": null,
+      "after_extra_time_score": "0-1",
+      "penalty_score": null,
+      "advancer_team": "Canada",
+      "path_id": "N_0-1_B"
+    },
+    {
+      "rank": 2,
+      "display_slot": "extra_time",
+      "display_slot_cn": "加时解决",
+      "label": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+      "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+      "probability": 0.03567512161699214,
+      "resolution_type": "extra_time",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-1",
+      "after_extra_time_score": "1-2",
+      "penalty_score": null,
+      "advancer_team": "Canada",
+      "path_id": "ET_1-1_0-1_B"
+    },
+    {
+      "rank": 3,
+      "display_slot": "penalties",
+      "display_slot_cn": "点球解决",
+      "label": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+      "summary_cn": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+      "probability": 0.007686254501160979,
+      "resolution_type": "penalties",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-0",
+      "after_extra_time_score": "1-1",
+      "penalty_score": "4-3",
+      "advancer_team": "South Africa",
+      "path_id": "P_1-1_0-0_4-3_team_a"
+    }
+  ],
+  "updated_at": "2026-06-28T08:42:12.982557Z",
+  "method": "unified_knockout_path_distribution",
+  "path_distribution_source": "knockout_path_distribution",
+  "display_path_top3": [
+    {
+      "rank": 1,
+      "display_slot": "normal_time",
+      "display_slot_cn": "90分钟解决",
+      "label": "90分钟0-1，Canada常规时间晋级。",
+      "summary_cn": "90分钟0-1，Canada常规时间晋级。",
+      "probability": 0.16333333333333339,
+      "resolution_type": "normal_time",
+      "normal_time_score": "0-1",
+      "extra_time_increment": null,
+      "after_extra_time_score": "0-1",
+      "penalty_score": null,
+      "advancer_team": "Canada",
+      "path_id": "N_0-1_B"
+    },
+    {
+      "rank": 2,
+      "display_slot": "extra_time",
+      "display_slot_cn": "加时解决",
+      "label": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+      "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Canada加时晋级。",
+      "probability": 0.03567512161699214,
+      "resolution_type": "extra_time",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-1",
+      "after_extra_time_score": "1-2",
+      "penalty_score": null,
+      "advancer_team": "Canada",
+      "path_id": "ET_1-1_0-1_B"
+    },
+    {
+      "rank": 3,
+      "display_slot": "penalties",
+      "display_slot_cn": "点球解决",
+      "label": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+      "summary_cn": "90分钟1-1、加时0-0后仍平，South Africa点球晋级。",
+      "probability": 0.007686254501160979,
+      "resolution_type": "penalties",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-0",
+      "after_extra_time_score": "1-1",
+      "penalty_score": "4-3",
+      "advancer_team": "South Africa",
+      "path_id": "P_1-1_0-0_4-3_team_a"
+    }
+  ],
+  "raw_path_top": [
+    {
+      "rank": 1,
+      "label": "90分钟0-1，Canada常规时间晋级。",
+      "probability": 0.16333333333333339,
+      "resolution_type": "normal_time"
+    },
+    {
+      "rank": 2,
+      "label": "90分钟0-2，Canada常规时间晋级。",
+      "probability": 0.12777777777777782,
+      "resolution_type": "normal_time"
+    },
+    {
+      "rank": 3,
+      "label": "90分钟1-2，Canada常规时间晋级。",
+      "probability": 0.08518518518518521,
+      "resolution_type": "normal_time"
+    },
+    {
+      "rank": 4,
+      "label": "90分钟1-0，South Africa常规时间晋级。",
+      "probability": 0.0792592592592593,
+      "resolution_type": "normal_time"
+    },
+    {
+      "rank": 5,
+      "label": "90分钟0-3，Canada常规时间晋级。",
+      "probability": 0.052222222222222246,
+      "resolution_type": "normal_time"
+    },
+    {
+      "rank": 6,
+      "label": "90分钟2-1，South Africa常规时间晋级。",
+      "probability": 0.040000000000000015,
+      "resolution_type": "normal_time"
+    }
+  ]
+}

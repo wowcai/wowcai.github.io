@@ -22,10 +22,12 @@ const worldCupTournamentPredictionSpecs = window.WORLD_CUP_TOURNAMENT_PREDICTION
 const worldCupGamePredictionDir = window.WORLD_CUP_GAME_PREDICTION_DIR || "game_prediction";
 const worldCupGamePredictionManifest = window.WORLD_CUP_GAME_PREDICTION_MANIFEST || [];
 const worldCupLatestGamePredictions = window.WORLD_CUP_LATEST_GAME_PREDICTIONS || [];
+const worldCupKnockoutProgressDir = `${worldCupGamePredictionDir}/knockout_progress`;
 const worldCupTeams = window.WORLD_CUP_TEAMS;
 const worldCupGroups = window.WORLD_CUP_GROUPS;
 const worldCupRouteData = window.WORLD_CUP_ROUTE_DATA;
 const worldCupRouteRounds = window.WORLD_CUP_ROUTE_ROUNDS;
+const worldCupKnockoutProgress = window.WORLD_CUP_KNOCKOUT_PROGRESS || {};
 const worldCupLatestMatchIds = window.WORLD_CUP_LATEST_MATCH_IDS;
 const worldCupPredictionReports = window.WORLD_CUP_PREDICTION_REPORTS;
 const WORLD_CUP_LATEST_MATCH_LIMIT = 6;
@@ -808,7 +810,10 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
   }
 
   try {
-    const specs = await discoverGamePredictionSpecs();
+    const [specs, knockoutProgress] = await Promise.all([
+      discoverGamePredictionSpecs(),
+      loadKnockoutProgressData()
+    ]);
 
     if (!specs.length) {
       return;
@@ -841,7 +846,7 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
     const sortedMatches = getLatestLoadedGamePredictionMatches(loadedMatches, specs);
     latestMatches.innerHTML = renderLatestMatchPredictions(sortedMatches.slice(0, WORLD_CUP_LATEST_MATCH_LIMIT));
     if (routeMap && (worldCupRouteData || worldCupRouteRounds) && worldCupTeams) {
-      routeMap.innerHTML = renderTournamentRouteMap(worldCupRouteData || worldCupRouteRounds, merged);
+      routeMap.innerHTML = renderTournamentRouteMap(worldCupRouteData || worldCupRouteRounds, merged, knockoutProgress);
     }
     if (matchSummary) {
       const predictedMatches = merged.filter((match) => match.predictionStatus === "predicted");
@@ -1184,6 +1189,10 @@ async function loadGamePredictionMatch(spec, baseMatches = worldCupMatches || []
   }
 
   const latest = validVersions[validVersions.length - 1];
+  if (latest.structured) {
+    return buildStructuredGamePredictionMatch(spec, validVersions, baseMatches);
+  }
+
   const inferred = inferGamePredictionTeams(spec.matchFolder, latest.brief);
   const baseMatch = findBaseMatchForPrediction(inferred.homeName, inferred.awayName, baseMatches);
   const homeTeam = findTeamByEnglishName(inferred.homeName) || getWorldCupTeam(baseMatch?.homeTeamId);
@@ -1227,8 +1236,69 @@ async function loadGamePredictionMatch(spec, baseMatches = worldCupMatches || []
   };
 }
 
+async function loadKnockoutProgressData() {
+  const stageFiles = [
+    "32强/teams.json",
+    "16强/teams.json",
+    "4强/teams.json",
+    "决赛/teams.json"
+  ];
+
+  const files = await Promise.all(stageFiles.map((fileName) => (
+    fetchJsonFile(joinGamePredictionPath(worldCupKnockoutProgressDir, fileName)).catch(() => null)
+  )));
+  const loadedProgress = files.filter(Boolean).reduce((acc, file) => mergeKnockoutProgressFile(acc, file), { rounds: {} });
+
+  return mergeKnockoutProgressObjects(worldCupKnockoutProgress, loadedProgress);
+}
+
+function mergeKnockoutProgressFile(progress, file) {
+  const round = file?.round;
+
+  if (!round || !Array.isArray(file.matches)) {
+    return progress;
+  }
+
+  progress.rounds[round] = progress.rounds[round] || {};
+  file.matches.forEach((match) => {
+    if (!match?.matchNo) {
+      return;
+    }
+
+    progress.rounds[round][match.matchNo] = {
+      status: match.status || "scheduled",
+      teams: Array.isArray(match.teams) ? match.teams : [],
+      source: match.source || ""
+    };
+  });
+
+  return progress;
+}
+
+function mergeKnockoutProgressObjects(base = {}, override = {}) {
+  const result = { rounds: {} };
+  const mergeInto = (source) => {
+    Object.entries(source?.rounds || {}).forEach(([round, matches]) => {
+      result.rounds[round] = {
+        ...(result.rounds[round] || {}),
+        ...(matches || {})
+      };
+    });
+  };
+
+  mergeInto(base);
+  mergeInto(override);
+  return result;
+}
+
 async function loadGamePredictionVersion(matchFolder, versionFolder) {
   const basePath = `${worldCupGamePredictionDir}/${encodeURIComponent(matchFolder)}/${encodeURIComponent(versionFolder)}`;
+  const structuredVersion = await loadStructuredGamePredictionVersion(basePath, versionFolder);
+
+  if (structuredVersion) {
+    return structuredVersion;
+  }
+
   const [briefJson, briefMarkdown, matrixCsv, matrixJson, deviationCsv, deviationJson] = await Promise.all([
     fetchJsonFile(`${basePath}/prediction_brief.json`).catch(() => null),
     fetchTextFile(`${basePath}/prediction_brief.md`).catch(() => ""),
@@ -1256,6 +1326,210 @@ async function loadGamePredictionVersion(matchFolder, versionFolder) {
     deviationSpace: parseScoreDeviationCsv(deviationCsv) || deviationJson,
     keyFactors: normalizeGamePredictionKeyFactors(briefJson, briefMarkdown)
   };
+}
+
+async function loadStructuredGamePredictionVersion(basePath, versionFolder) {
+  const matchCardPath = joinGamePredictionPath(basePath, "match_card.json");
+  const matchDetailPath = joinGamePredictionPath(basePath, "match_detail.json");
+  const [matchCard, matchDetail] = await Promise.all([
+    fetchJsonFile(matchCardPath).catch(() => null),
+    fetchJsonFile(matchDetailPath).catch(() => null)
+  ]);
+
+  if (!matchCard || !matchDetail) {
+    return null;
+  }
+
+  const files = matchDetail.files || {};
+  const tabs = matchDetail.tabs || {};
+  const normalTimeConfig = tabs.normal_time || {};
+  const extraTimeConfig = tabs.extra_time || {};
+  const penaltyConfig = tabs.penalties || {};
+  const [
+    normalTimeMatrix,
+    normalTimeDeviation,
+    extraTimeMatrix,
+    extraTimeDeviation,
+    penaltyMatrix,
+    penaltyDeviation
+  ] = await Promise.all([
+    fetchJsonFile(joinGamePredictionPath(basePath, files.normal_time_matrix || normalTimeConfig.matrix_file || "normal_time_matrix.json")).catch(() => null),
+    fetchJsonFile(joinGamePredictionPath(basePath, files.normal_time_deviation || normalTimeConfig.deviation_file || "normal_time_deviation.json")).catch(() => null),
+    fetchJsonFile(joinGamePredictionPath(basePath, files.extra_time_matrix || extraTimeConfig.matrix_file || "extra_time_matrix.json")).catch(() => null),
+    fetchJsonFile(joinGamePredictionPath(basePath, files.extra_time_deviation || extraTimeConfig.deviation_file || "extra_time_deviation.json")).catch(() => null),
+    fetchJsonFile(joinGamePredictionPath(basePath, files.penalty_matrix || penaltyConfig.matrix_file || "penalty_matrix.json")).catch(() => null),
+    fetchJsonFile(joinGamePredictionPath(basePath, files.penalty_deviation || penaltyConfig.deviation_file || "penalty_deviation.json")).catch(() => null)
+  ]);
+
+  return {
+    structured: true,
+    versionFolder,
+    time: formatGamePredictionVersionTime(versionFolder),
+    timeLabel: formatGamePredictionVersionTime(versionFolder),
+    label: "姣旇禌棰勬祴鐗堟湰",
+    matchCard,
+    matchDetail,
+    phaseData: {
+      normal_time: {
+        config: normalTimeConfig,
+        matrix: normalTimeMatrix,
+        deviation: normalTimeDeviation
+      },
+      extra_time: {
+        config: extraTimeConfig,
+        matrix: extraTimeMatrix,
+        deviation: extraTimeDeviation
+      },
+      penalties: {
+        config: penaltyConfig,
+        matrix: penaltyMatrix,
+        deviation: penaltyDeviation
+      }
+    }
+  };
+}
+
+function buildStructuredGamePredictionMatch(spec, validVersions, baseMatches = worldCupMatches || []) {
+  const latest = validVersions[validVersions.length - 1];
+  const card = latest.matchCard || {};
+  const detail = latest.matchDetail || {};
+  const matchData = detail.match || {};
+  const homeName = card.team_a || matchData.team_a || "";
+  const awayName = card.team_b || matchData.team_b || "";
+  const baseMatch = findBaseMatchForPrediction(homeName, awayName, baseMatches)
+    || (card.match_id ? (baseMatches || []).find((match) => String(match.id) === String(card.match_id) || String(match.matchNo) === String(card.match_id)) : null)
+    || null;
+  const homeTeam = findTeamByEnglishName(homeName) || getWorldCupTeam(baseMatch?.homeTeamId);
+  const awayTeam = findTeamByEnglishName(awayName) || getWorldCupTeam(baseMatch?.awayTeamId);
+  const advancement = card.advancement || detail.summary?.advancement || {};
+  const resolution = card.resolution || detail.summary?.resolution || {};
+  const topScores = normalizeLatestScoreItems(card.normal_time_top_scores || detail.summary?.normal_time_top_scores || []).slice(0, 3);
+  const displayPathTop3 = detail.summary?.display_path_top3 || detail.left_panel?.path_focus_top3 || [];
+  const updatedAt = formatStructuredPredictionTimestamp(card.updated_at || detail.updated_at) || latest.timeLabel;
+  const favoriteSide = getAdvancementFavoriteSide(advancement, homeName, awayName);
+  const favoriteProbability = favoriteSide === "team_a"
+    ? normalizeProbabilityToPercent(advancement.team_a)
+    : normalizeProbabilityToPercent(advancement.team_b);
+  const winReference = {
+    zh: advancement.favorite
+      ? `${advancement.favorite} ${formatProbabilityValue(favoriteProbability || 0)}`
+      : (homeTeam?.nameZh || homeName || "寰呴娴?"),
+    en: advancement.favorite
+      ? `${advancement.favorite} ${formatProbabilityValue(favoriteProbability || 0)}`
+      : (homeTeam?.nameEn || homeName || "Pending")
+  };
+
+  return {
+    ...(baseMatch || {}),
+    structured: true,
+    id: card.match_id || baseMatch?.id || buildMatchPairKey(homeName, awayName),
+    matchNo: card.match_id || baseMatch?.matchNo || card.match_id || baseMatch?.id || "",
+    homeTeamId: homeTeam?.id || baseMatch?.homeTeamId || "",
+    awayTeamId: awayTeam?.id || baseMatch?.awayTeamId || "",
+    homeTeam: homeTeam?.nameZh || homeName,
+    awayTeam: awayTeam?.nameZh || awayName,
+    stage: formatGamePredictionStage(card.stage || matchData.stage, baseMatch?.stage),
+    group: baseMatch?.group || matchData.group || "",
+    round: baseMatch?.round || card.round_label || "绗?杞?",
+    matchTime: formatKickoffTime(card.kickoff_utc || matchData.kickoff_utc) || baseMatch?.matchTime || "鏃堕棿寰呭畾",
+    venue: baseMatch?.venue || card.venue || matchData.venue || "鍦洪寰呭畾",
+    predictionStatus: "predicted",
+    matchStatus: baseMatch?.matchStatus || "upcoming",
+    predictedScore: topScores[0]?.score || baseMatch?.predictedScore || "寰呴娴?",
+    winReference,
+    predictionSummary: {
+      zh: buildStructuredPredictionSummaryZh(card, detail, homeTeam, awayTeam),
+      en: buildStructuredPredictionSummaryEn(card, detail, homeTeam, awayTeam)
+    },
+    updatedAt,
+    kickoffUtc: card.kickoff_utc || matchData.kickoff_utc || "",
+    matchCard: card,
+    matchDetail: detail,
+    structuredPaths: displayPathTop3,
+    predictionHistory: validVersions.map((version, index) => ({
+      ...version,
+      isLatest: index === validVersions.length - 1,
+      predictedScore: topScores[0]?.score || "寰呴娴?",
+      winReference,
+      summary: {
+        zh: buildStructuredPredictionSummaryZh(card, detail, homeTeam, awayTeam),
+        en: buildStructuredPredictionSummaryEn(card, detail, homeTeam, awayTeam)
+      }
+    })),
+    gamePredictionSource: {
+      matchFolder: spec.matchFolder,
+      versions: validVersions,
+      structured: true
+    }
+  };
+}
+
+function buildStructuredPredictionSummaryZh(card, detail, homeTeam, awayTeam) {
+  const advancement = card.advancement || detail.summary?.advancement || {};
+  const topScore = normalizeLatestScoreItems(card.normal_time_top_scores || detail.summary?.normal_time_top_scores || [])[0]?.score || "寰呴娴?";
+  const favorite = advancement.favorite || awayTeam?.nameZh || card.team_b || "寰呴娴?";
+  const favoriteSide = getAdvancementFavoriteSide(advancement, card.team_a || homeTeam?.nameEn || homeTeam?.nameZh, card.team_b || awayTeam?.nameEn || awayTeam?.nameZh);
+  const favoriteValue = favoriteSide === "team_a"
+    ? formatProbabilityValue(normalizeProbabilityToPercent(advancement.team_a) || 0)
+    : formatProbabilityValue(normalizeProbabilityToPercent(advancement.team_b) || 0);
+
+  return `最终晋级更看好 ${favorite} ${favoriteValue}，90分钟最可能比分 ${topScore}。`;
+}
+
+function buildStructuredPredictionSummaryEn(card, detail, homeTeam, awayTeam) {
+  const advancement = card.advancement || detail.summary?.advancement || {};
+  const topScore = normalizeLatestScoreItems(card.normal_time_top_scores || detail.summary?.normal_time_top_scores || [])[0]?.score || "Pending";
+  const favorite = advancement.favorite || awayTeam?.nameEn || card.team_b || "Pending";
+  const favoriteSide = getAdvancementFavoriteSide(advancement, card.team_a || homeTeam?.nameEn || homeTeam?.nameZh, card.team_b || awayTeam?.nameEn || awayTeam?.nameZh);
+  const favoriteValue = favoriteSide === "team_a"
+    ? formatProbabilityValue(normalizeProbabilityToPercent(advancement.team_a) || 0)
+    : formatProbabilityValue(normalizeProbabilityToPercent(advancement.team_b) || 0);
+
+  return `The favorite to advance is ${favorite} at ${favoriteValue}, with ${topScore} as the most likely 90-minute score.`;
+}
+
+function getAdvancementFavoriteSide(advancement, teamAName, teamBName) {
+  const favorite = String(advancement?.favorite || "").trim().toLowerCase();
+  const teamA = String(teamAName || "").trim().toLowerCase();
+  const teamB = String(teamBName || "").trim().toLowerCase();
+
+  if (favorite && teamA && favorite === teamA) {
+    return "team_a";
+  }
+
+  if (favorite && teamB && favorite === teamB) {
+    return "team_b";
+  }
+
+  const teamAValue = normalizeProbabilityToPercent(advancement?.team_a) || 0;
+  const teamBValue = normalizeProbabilityToPercent(advancement?.team_b) || 0;
+
+  return teamAValue >= teamBValue ? "team_a" : "team_b";
+}
+
+function joinGamePredictionPath(basePath, relativePath) {
+  return `${basePath}/${String(relativePath || "").split("/").filter(Boolean).map((segment) => encodeURIComponent(segment)).join("/")}`;
+}
+
+function formatStructuredPredictionTimestamp(value) {
+  if (!value) {
+    return "";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  const chinaTime = new Date(date.getTime() + 8 * 60 * 60 * 1000);
+  const year = chinaTime.getUTCFullYear();
+  const month = String(chinaTime.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(chinaTime.getUTCDate()).padStart(2, "0");
+  const hour = String(chinaTime.getUTCHours()).padStart(2, "0");
+  const minute = String(chinaTime.getUTCMinutes()).padStart(2, "0");
+
+  return `${year}-${month}-${day} ${hour}:${minute}`;
 }
 
 async function fetchJsonFile(url) {
@@ -1749,27 +2023,104 @@ function getLatestWorldCupMatches(matches) {
   return matches.filter((match) => match.predictionStatus === "predicted").slice(0, WORLD_CUP_LATEST_MATCH_LIMIT);
 }
 
-function renderTournamentRouteMap(routeData, matches = worldCupMatches || []) {
+function renderTournamentRouteMap(routeData, matches = worldCupMatches || [], knockoutProgress = worldCupKnockoutProgress) {
   if (Array.isArray(routeData)) {
     return renderLegacyTournamentRouteMap(routeData, matches);
   }
 
+  const enrichedRouteData = enrichTournamentRouteData(routeData, knockoutProgress);
+
   return `
     <div class="route-map-shell">
       ${renderWorldCupFormatBar()}
-      ${renderGroupStageSnapshot(worldCupGroups || [], matches)}
       <div class="route-stage-transition">
         ${bi("小组赛", "Group Stage")}
         ${bi("小组前二 + 8 个最佳第三名晋级", "Top 2 + 8 best third-placed teams advance")}
         ${bi("淘汰赛", "Knockout Stage")}
       </div>
       <div class="bidirectional-route-map">
-        ${renderBracketSidePanel(routeData.leftBracket, matches)}
-        ${renderFinalChampionPanel(routeData.final, routeData.champion, matches)}
-        ${renderBracketSidePanel(routeData.rightBracket, matches)}
+        ${renderBracketSidePanel(enrichedRouteData.leftBracket, matches)}
+        ${renderFinalChampionPanel(enrichedRouteData.final, enrichedRouteData.champion, matches)}
+        ${renderBracketSidePanel(enrichedRouteData.rightBracket, matches)}
       </div>
+      ${renderGroupStageSnapshot(worldCupGroups || [], matches)}
     </div>
   `;
+}
+
+function enrichTournamentRouteData(routeData, progress = {}) {
+  if (!routeData || Array.isArray(routeData)) {
+    return routeData;
+  }
+
+  const cloneNode = (node) => ({ ...(node || {}) });
+  const progressByMatch = buildKnockoutProgressMatchMap(progress);
+  const enrichNode = (node) => enrichRouteNodeFromProgress(cloneNode(node), progressByMatch);
+
+  return {
+    ...routeData,
+    leftBracket: {
+      ...(routeData.leftBracket || {}),
+      rounds: (routeData.leftBracket?.rounds || []).map((round) => ({
+        ...round,
+        nodes: (round.nodes || []).map(enrichNode)
+      }))
+    },
+    rightBracket: {
+      ...(routeData.rightBracket || {}),
+      rounds: (routeData.rightBracket?.rounds || []).map((round) => ({
+        ...round,
+        nodes: (round.nodes || []).map(enrichNode)
+      }))
+    },
+    final: {
+      ...(routeData.final || {}),
+      teams: (routeData.final?.teams || []).map(enrichNode)
+    },
+    champion: enrichNode(routeData.champion)
+  };
+}
+
+function buildKnockoutProgressMatchMap(progress = {}) {
+  const rounds = progress.rounds || {};
+  const map = new Map();
+
+  Object.values(rounds).forEach((round) => {
+    Object.entries(round || {}).forEach(([matchNo, value]) => {
+      map.set(matchNo, value || {});
+    });
+  });
+
+  return map;
+}
+
+function enrichRouteNodeFromProgress(node, progressByMatch) {
+  const progress = progressByMatch.get(node.matchNo || node.matchId);
+
+  if (!progress) {
+    return node;
+  }
+
+  const teams = Array.isArray(progress.teams) ? progress.teams.filter(Boolean) : [];
+
+  if (!teams.length) {
+    return {
+      ...node,
+      status: progress.status || node.status
+    };
+  }
+
+  const teamNames = teams
+    .map((teamId) => teamPair(getWorldCupTeam(teamId), teamId))
+    .map((team) => pairText(team))
+    .filter(Boolean);
+
+  return {
+    ...node,
+    status: progress.status || "qualified",
+    teamIds: teams,
+    slotLabel: teamNames.length ? teamNames.join(" vs ") : node.slotLabel
+  };
 }
 
 function renderWorldCupFormatBar() {
@@ -1960,6 +2311,9 @@ function slotTextEn(value) {
 
 function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
   const team = getWorldCupTeam(node.teamId);
+  const nodeTeams = Array.isArray(node.teamIds)
+    ? node.teamIds.map((teamId) => getWorldCupTeam(teamId)).filter(Boolean)
+    : [];
   const match = findWorldCupMatchByNo(node.matchNo || node.matchId, matches);
   const nodeStatusZh = {
     empty: "未确定",
@@ -1973,14 +2327,21 @@ function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
     champion: "冠军待定"
   }[node.status] || "待定";
   const isSourceSlot = !team && node.status === "scheduled";
-  const nodeLabel = team
+  const nodeLabel = nodeTeams.length
+    ? {
+        zh: nodeTeams.map((item) => item.nameZh).join(" vs "),
+        en: nodeTeams.map((item) => item.nameEn || item.nameZh).join(" vs ")
+      }
+    : team
     ? { zh: team.nameZh, en: team.nameEn || team.nameZh }
     : { zh: node.slotLabel || "待定", en: slotTextEn(node.slotLabel || "待定") };
-  const stateRawZh = team ? nodeStatusZh : (node.descriptionZh || node.sourceLabel || nodeStatusZh);
+  const stateRawZh = team || nodeTeams.length ? nodeStatusZh : (node.descriptionZh || node.sourceLabel || nodeStatusZh);
   const stateLabel = team
     ? { zh: nodeStatusZh, en: wcEn(nodeStatusZh) }
+    : nodeTeams.length
+      ? { zh: nodeStatusZh, en: wcEn(nodeStatusZh) }
     : { zh: stateRawZh, en: slotTextEn(stateRawZh) };
-  const metaLabel = team
+  const metaLabel = team || nodeTeams.length
     ? (node.sourceLabel || node.matchNo || node.matchId || "")
     : (node.matchNo || node.matchId || "");
   const teams = getRouteMatchTeamsText(match, node);
@@ -1990,7 +2351,9 @@ function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
 
   return `
     <article class="team-route-card ${node.status} ${side}">
-      ${team ? renderTeamFlag(team, "route-flag") : `<span class="slot-type-badge" ${biAttrs(isSourceSlot ? "席位来源" : "待定席位")}>${L(isSourceSlot ? "席位来源" : "待定席位")}</span>`}
+      ${nodeTeams.length
+        ? `<span class="route-team-pair">${nodeTeams.map((item) => renderTeamFlag(item, "route-flag")).join("")}</span>`
+        : team ? renderTeamFlag(team, "route-flag") : `<span class="slot-type-badge" ${biAttrs(isSourceSlot ? "席位来源" : "待定席位")}>${L(isSourceSlot ? "席位来源" : "待定席位")}</span>`}
       <strong ${biAttrs(nodeLabel.zh, nodeLabel.en)}>${escapeHtml(pairText(nodeLabel))}</strong>
       <span ${biAttrs(stateLabel.zh, stateLabel.en)}>${escapeHtml(pairText(stateLabel))}</span>
       ${metaLabel ? `<small class="route-match-badge">${escapeHtml(metaLabel)}</small>` : ""}
@@ -2086,6 +2449,10 @@ function getMatchStartDate(match) {
 
 function renderLatestMatchPredictions(matches) {
   return matches.map((match) => {
+    if (isStructuredKnockoutPrediction(match)) {
+      return renderLatestKnockoutPredictionCard(match);
+    }
+
     const homeTeam = getWorldCupTeam(match.homeTeamId);
     const awayTeam = getWorldCupTeam(match.awayTeamId);
     const statusZh = match.predictionStatus === "predicted" ? "已预测" : "待预测";
@@ -2115,6 +2482,134 @@ function renderLatestMatchPredictions(matches) {
       </button>
     `;
   }).join("");
+}
+
+function renderLatestKnockoutPredictionCard(match) {
+  const homeTeam = getWorldCupTeam(match.homeTeamId);
+  const awayTeam = getWorldCupTeam(match.awayTeamId);
+  const card = getStructuredMatchCard(match);
+  const stage = matchStagePair(match);
+  const homeName = teamPair(homeTeam, match.homeTeam || card.team_a);
+  const awayName = teamPair(awayTeam, match.awayTeam || card.team_b);
+  const advancement = getStructuredAdvancement(match);
+  const resolution = getStructuredResolution(match);
+  const entry = getStructuredEntryProbability(match);
+  const topScores = normalizeLatestScoreItems(card.normal_time_top_scores || match.matchDetail?.summary?.normal_time_top_scores || []).slice(0, 3);
+  const homeAdvance = normalizeProbabilityToPercent(advancement.team_a) || 0;
+  const awayAdvance = normalizeProbabilityToPercent(advancement.team_b) || 0;
+  const normalValue = normalizeProbabilityToPercent(resolution.normal_time) || 0;
+  const extraValue = normalizeProbabilityToPercent(resolution.extra_time) || 0;
+  const penaltyValue = normalizeProbabilityToPercent(resolution.penalties) || 0;
+  const extraEntry = normalizeProbabilityToPercent(entry.extra_time) || 0;
+  const penaltyEntry = normalizeProbabilityToPercent(entry.penalties) || 0;
+
+  return `
+    <button class="latest-match-card knockout-latest-card" type="button" data-open-match-modal data-match-id="${match.id}" data-zh-aria="查看 ${escapeHtml(homeName.zh)} 对 ${escapeHtml(awayName.zh)} 的淘汰赛预测详情" data-en-aria="${escapeHtml(homeName.en)} vs ${escapeHtml(awayName.en)} knockout prediction details" aria-label="${escapeHtml(L(`查看 ${homeName.zh} 对 ${awayName.zh} 的淘汰赛预测详情`, `${homeName.en} vs ${awayName.en} knockout prediction details`))}">
+      <div class="knockout-card-matchline">
+        <span ${biAttrs(stage.zh, stage.en)}>${escapeHtml(pairText(stage))}</span>
+        <strong>${escapeHtml(match.matchNo || match.id || "")}</strong>
+      </div>
+      <div class="knockout-card-teams">
+        ${renderKnockoutCardTeam(homeTeam, match.homeTeam || card.team_a)}
+        <span class="knockout-card-vs">VS</span>
+        ${renderKnockoutCardTeam(awayTeam, match.awayTeam || card.team_b)}
+      </div>
+      <div class="knockout-card-section advancement">
+        <span ${biAttrs("最终晋级概率", "Final advancement probability")}>${L("最终晋级概率", "Final advancement probability")}</span>
+        <div class="knockout-advancement-row">
+          <strong class="team-a">${escapeHtml(formatProbabilityValue(homeAdvance))}</strong>
+          <i aria-hidden="true"></i>
+          <strong class="team-b">${escapeHtml(formatProbabilityValue(awayAdvance))}</strong>
+        </div>
+      </div>
+      <div class="knockout-card-section">
+        <span ${biAttrs("最可能解决方式", "Most likely resolution")}>${L("最可能解决方式", "Most likely resolution")}</span>
+        ${renderKnockoutResolutionBar(normalValue, extraValue, penaltyValue)}
+      </div>
+      <div class="knockout-card-section top-scores">
+        <span ${biAttrs("90分钟比分 Top 3", "90-minute score Top 3")}>${L("90分钟比分 Top 3", "90-minute score Top 3")}</span>
+        <div class="knockout-score-row">
+          ${topScores.length ? topScores.map((item) => `<strong>${escapeHtml(item.score)}</strong>`).join("") : `<em>${escapeHtml(L("待补充", "Pending"))}</em>`}
+        </div>
+      </div>
+      <div class="knockout-entry-row">
+        <span>${bi("进入加时", "Extra time")} <strong>${escapeHtml(formatProbabilityValue(extraEntry))}</strong></span>
+        <span>${bi("进入点球", "Penalties")} <strong>${escapeHtml(formatProbabilityValue(penaltyEntry))}</strong></span>
+      </div>
+    </button>
+  `;
+}
+
+function renderKnockoutCardTeam(team, fallbackName) {
+  const name = teamPair(team, fallbackName);
+
+  return `
+    <div class="knockout-card-team">
+      ${renderTeamFlag(team, "match-flag")}
+      <strong ${biAttrs(name.zh, name.en)}>${escapeHtml(pairText(name))}</strong>
+    </div>
+  `;
+}
+
+function renderKnockoutResolutionBar(normalValue, extraValue, penaltyValue) {
+  const total = normalValue + extraValue + penaltyValue || 1;
+  const normalWidth = Math.max(0, normalValue / total * 100);
+  const extraWidth = Math.max(0, extraValue / total * 100);
+  const penaltyWidth = Math.max(0, penaltyValue / total * 100);
+  const resolutionGridTemplate = `grid-template-columns:${normalWidth.toFixed(2)}fr ${extraWidth.toFixed(2)}fr ${penaltyWidth.toFixed(2)}fr`;
+
+  return `
+    <div class="knockout-resolution-wrap">
+      <div class="knockout-resolution-bar" aria-hidden="true">
+        <i class="normal" style="width:${normalWidth.toFixed(2)}%"></i>
+        <i class="extra" style="width:${extraWidth.toFixed(2)}%"></i>
+        <i class="penalty" style="width:${penaltyWidth.toFixed(2)}%"></i>
+      </div>
+      <div class="knockout-resolution-labels" style="${resolutionGridTemplate}">
+        <span>${escapeHtml(formatProbabilityValue(normalValue))}</span>
+        <span>${escapeHtml(formatProbabilityValue(extraValue))}</span>
+        <span>${escapeHtml(formatProbabilityValue(penaltyValue))}</span>
+      </div>
+      <div class="knockout-resolution-captions" style="${resolutionGridTemplate}">
+        <span>${bi("90分钟解决", "90 min")}</span>
+        <span>${bi("进入加时", "Extra time")}</span>
+        <span>${bi("进入点球", "Penalties")}</span>
+      </div>
+    </div>
+  `;
+}
+
+function isStructuredKnockoutPrediction(match) {
+  return Boolean(match?.structured || match?.matchCard || getLatestMatchPredictionVersion(match)?.structured);
+}
+
+function getStructuredMatchCard(match) {
+  return match?.matchCard || getLatestMatchPredictionVersion(match)?.matchCard || {};
+}
+
+function getStructuredMatchDetail(match) {
+  return match?.matchDetail || getLatestMatchPredictionVersion(match)?.matchDetail || {};
+}
+
+function getStructuredAdvancement(match) {
+  const card = getStructuredMatchCard(match);
+  const detail = getStructuredMatchDetail(match);
+  return card.advancement || detail.summary?.advancement || {};
+}
+
+function getStructuredResolution(match) {
+  const card = getStructuredMatchCard(match);
+  const detail = getStructuredMatchDetail(match);
+  return card.resolution || detail.summary?.resolution || {};
+}
+
+function getStructuredEntryProbability(match) {
+  const card = getStructuredMatchCard(match);
+  const detail = getStructuredMatchDetail(match);
+  return card.entry_probability || {
+    extra_time: detail.tabs?.extra_time?.entry_probability,
+    penalties: detail.tabs?.penalties?.entry_probability
+  };
 }
 
 function renderLatestScoreForecast(match) {
@@ -2156,8 +2651,8 @@ function getLatestMatchPredictionVersion(match) {
 function normalizeLatestScoreItems(scores = []) {
   return (Array.isArray(scores) ? scores : [])
     .map((item) => ({
-      score: String(item?.score || "").trim(),
-      probability: normalizeProbabilityToPercent(item?.probability ?? item?.base_probability ?? item?.tail_focus_conditional_probability)
+      score: String(item?.score || item?.increment || item?.extra_time_increment || item?.penalty_score || item?.after_extra_time_score || "").trim(),
+      probability: normalizeProbabilityToPercent(item?.probability ?? item?.conditional_probability ?? item?.extra_time_increment_probability ?? item?.joint_branch_probability ?? item?.base_probability ?? item?.tail_focus_conditional_probability)
     }))
     .filter((item) => item.score);
 }
@@ -2788,6 +3283,11 @@ function openMatchPredictionModal(matchId) {
     return;
   }
 
+  if (isStructuredKnockoutPrediction(match)) {
+    openStructuredKnockoutPredictionModal(modal, header, body, match);
+    return;
+  }
+
   const homeTeam = getWorldCupTeam(match.homeTeamId);
   const awayTeam = getWorldCupTeam(match.awayTeamId);
   const report = worldCupPredictionReports?.[match.id];
@@ -2799,9 +3299,6 @@ function openMatchPredictionModal(matchId) {
   header.innerHTML = `
     <div class="match-modal-titlebar">
       <span class="match-modal-kicker" id="match-modal-title">MATCH PREDICTION REPORT</span>
-      <div class="match-modal-actions">
-        <span class="modal-update-time" ${biAttrs(`预测更新时间：${updatedAtText.zh}`, `Updated: ${updatedAtText.en}`)}>${escapeHtml(L(`预测更新时间：${updatedAtText.zh}`, `Updated: ${updatedAtText.en}`))}</span>
-      </div>
     </div>
     <div class="match-modal-teams">
       ${renderModalTeam(homeTeam, match.homeTeam)}
@@ -2853,6 +3350,863 @@ function openMatchPredictionModal(matchId) {
   document.body.classList.add("modal-open");
 }
 
+function openStructuredKnockoutPredictionModal(modal, header, body, match) {
+  const homeTeam = getWorldCupTeam(match.homeTeamId);
+  const awayTeam = getWorldCupTeam(match.awayTeamId);
+  const homeName = teamPair(homeTeam, match.homeTeam);
+  const awayName = teamPair(awayTeam, match.awayTeam);
+  const versions = getPredictionVersions(match, worldCupPredictionReports?.[match.id]);
+  const structuredVersion = getLatestMatchPredictionVersion(match);
+  const latestVersion = versions.find((version) => version.structured && version.phaseData)
+    || structuredVersion
+    || versions.find((version) => version.isLatest)
+    || versions[versions.length - 1];
+  const updatedAt = match.updatedAt || latestVersion?.timeLabel || latestVersion?.time || "待更新";
+  const updatedAtText = updatedAt === "待更新" ? { zh: "待更新", en: "Pending" } : { zh: updatedAt, en: updatedAt };
+
+  header.innerHTML = `
+    <div class="knockout-modal-head">
+      <div class="knockout-modal-teams">
+        ${renderStructuredModalTeam(homeTeam, match.homeTeam)}
+        <span class="modal-versus">VS</span>
+        ${renderStructuredModalTeam(awayTeam, match.awayTeam)}
+      </div>
+    </div>
+  `;
+
+  body.innerHTML = `
+    <div class="knockout-report-shell">
+      ${renderKnockoutModalTabs("normal_time")}
+      <div class="knockout-report-layout">
+        <section class="knockout-tab-panel" data-knockout-tab-panel>
+          ${renderKnockoutPhaseReport(latestVersion, match, "normal_time")}
+        </section>
+      </div>
+    </div>
+  `;
+
+  body.querySelectorAll("[data-knockout-tab]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const phase = button.dataset.knockoutTab || "normal_time";
+      const reportNode = body.querySelector("[data-knockout-tab-panel]");
+
+      body.querySelectorAll("[data-knockout-tab]").forEach((item) => {
+        item.classList.toggle("is-active", item === button);
+      });
+
+      if (reportNode) {
+        reportNode.innerHTML = renderKnockoutPhaseReport(latestVersion, match, phase);
+      }
+    });
+  });
+
+  modal.classList.add("is-game-prediction", "is-knockout-prediction");
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+}
+
+function renderStructuredModalTeam(team, fallbackName) {
+  const name = teamPair(team, fallbackName);
+
+  return `
+    <div class="modal-team">
+      ${renderTeamFlag(team, "modal-flag")}
+      <strong ${biAttrs(name.zh, name.en)}>${escapeHtml(pairText(name))}</strong>
+    </div>
+  `;
+}
+
+function renderKnockoutModalTabs(activePhase) {
+  const tabs = [
+    { key: "normal_time", zh: "常规时间（90分钟）", en: "Normal time (90 min)" },
+    { key: "extra_time", zh: "加时赛（如进入）", en: "Extra time (if needed)" },
+    { key: "penalties", zh: "点球大战（如进入）", en: "Penalties (if needed)" }
+  ];
+
+  return `
+    <div class="knockout-modal-tabs">
+      ${tabs.map((tab) => `
+        <button type="button" class="${tab.key === activePhase ? "is-active" : ""}" data-knockout-tab="${tab.key}" ${biAttrs(tab.zh, tab.en)}>
+          ${escapeHtml(pairText(tab))}
+        </button>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderKnockoutPathPanel(match) {
+  const detail = getStructuredMatchDetail(match);
+  const paths = detail.left_panel?.path_focus_top3 || detail.summary?.display_path_top3 || match.structuredPaths || [];
+
+  return `
+    <aside class="knockout-path-panel">
+      <div class="knockout-panel-head">
+        <span>ADVANCEMENT PATH</span>
+        <h3 ${biAttrs("晋级路径 Top 3", "Top advancement paths")}>${L("晋级路径 Top 3", "Top advancement paths")}</h3>
+      </div>
+      <div class="knockout-path-list">
+        ${(paths || []).slice(0, 3).map((path, index) => renderKnockoutPathCard(path, index)).join("") || `<p class="empty-state">${escapeHtml(L("晋级路径待补充。", "Advancement paths pending."))}</p>`}
+      </div>
+    </aside>
+  `;
+}
+
+function renderKnockoutPathCard(path, index) {
+  const phase = getKnockoutPhaseLabel(path.resolution_type || path.display_slot);
+  const label = path.summary_cn || path.label || buildKnockoutPathLabel(path);
+  const probability = normalizeProbabilityToPercent(path.probability ?? path.path_probability);
+
+  return `
+    <article class="knockout-path-card ${escapeHtml(path.resolution_type || path.display_slot || "")}">
+      <div>
+        <span>${String(path.rank || index + 1).padStart(2, "0")}</span>
+        <strong ${biAttrs(phase.zh, phase.en)}>${escapeHtml(pairText(phase))}</strong>
+      </div>
+      <p>${escapeHtml(label)}</p>
+      ${Number.isFinite(probability) ? `<em>${escapeHtml(formatProbabilityValue(probability))}</em>` : ""}
+    </article>
+  `;
+}
+
+function buildKnockoutPathLabel(path) {
+  const parts = [];
+
+  if (path.normal_time_score) {
+    parts.push(`90分钟 ${path.normal_time_score}`);
+  }
+  if (path.extra_time_increment) {
+    parts.push(`加时 ${path.extra_time_increment}`);
+  }
+  if (path.penalty_score) {
+    parts.push(`点球 ${path.penalty_score}`);
+  }
+  if (path.advancer_team) {
+    parts.push(`${path.advancer_team} 晋级`);
+  }
+
+  return parts.join("，") || "晋级路径待补充";
+}
+
+function renderKnockoutPhaseReport(version, match, phase) {
+  const data = getKnockoutPhaseData(version, phase);
+  const summary = getKnockoutPhaseSummary(match, phase, data);
+  const tailFocus = getKnockoutPhaseTailFocus(version, phase, data);
+  const factors = getKnockoutPhaseFactors(version, phase, match);
+
+  return `
+    <div class="knockout-phase-report">
+      <div class="knockout-top-metrics">
+        ${renderKnockoutPhaseProbabilityPanel(match, version, phase, data)}
+        ${renderKnockoutTopScoresPanel(summary.topScores, getKnockoutTopScoresTitle(phase), phase)}
+        ${renderKnockoutResolutionPanel(match, phase)}
+      </div>
+      <div class="knockout-chart-grid">
+        ${renderKnockoutScoreMatrix(data.matrix, phase, match)}
+        ${renderKnockoutDeviationSpace(data.deviation, phase)}
+        ${renderKnockoutTailFocusPanel(tailFocus, phase)}
+      </div>
+      ${renderKnockoutFactorsPanel(factors, phase)}
+    </div>
+  `;
+}
+
+function getKnockoutPhaseData(version, phase) {
+  const phaseData = version?.phaseData || {};
+  return phaseData[phase] || {};
+}
+
+function getKnockoutPhaseSummary(match, phase, data = {}) {
+  const card = getStructuredMatchCard(match);
+  const detail = getStructuredMatchDetail(match);
+  const phaseMap = {
+    normal_time: card.normal_time_top_scores || detail.summary?.normal_time_top_scores || data.matrix?.rows || [],
+    extra_time: data.matrix?.rows || data.matrix?.after_extra_time_top || detail.tabs?.extra_time?.tail_focus || [],
+    penalties: data.matrix?.rows || detail.tabs?.penalties?.tail_focus || []
+  };
+
+  return {
+    topScores: normalizeLatestScoreItems(phaseMap[phase] || []).slice(0, 3)
+  };
+}
+
+function getKnockoutPhaseTailFocus(version, phase, data) {
+  const detail = version?.matchDetail || {};
+  const configured = detail.tabs?.[phase]?.tail_focus;
+  const fromDeviation = (data.deviation?.points || data.deviation?.rows || [])
+    .filter((item) => item.is_tail_focus);
+  const pathFallback = (detail.summary?.display_path_top3 || detail.left_panel?.path_focus_top3 || [])
+    .filter((item) => phase === "normal_time" ? item.resolution_type === "normal_time" : item.resolution_type === phase);
+  const source = Array.isArray(configured) && configured.length
+    ? configured
+    : fromDeviation.length
+      ? fromDeviation
+      : pathFallback;
+
+  return (source || []).slice(0, 3).map((item, index) => ({
+    rank: item.rank || index + 1,
+    label: item.summary_cn || item.label || item.tail_title_cn || item.scenario_id || item.score || "Tail focus",
+    score: item.score || item.normal_time_score || item.penalty_score || item.increment || "",
+    probability: normalizeProbabilityToPercent(item.probability ?? item.conditional_probability),
+    rationale: item.rationale_cn || ""
+  }));
+}
+
+function getKnockoutPhaseFactors(version, phase, match) {
+  const detail = version?.matchDetail || {};
+  const tab = detail.tabs?.[phase] || {};
+  const data = getKnockoutPhaseData(version, phase);
+  const factors = [];
+
+  addKnockoutFactor(factors, compactKnockoutFactorText(tab.condition_cn));
+
+  if (phase === "normal_time") {
+    addNormalTimeFactors(factors, version, match);
+  } else {
+    const primaryRows = normalizeKnockoutRationaleRows([
+      ...(Array.isArray(data.matrix?.rows) ? data.matrix.rows : []),
+      ...(Array.isArray(data.deviation?.points) ? data.deviation.points : []),
+      ...(Array.isArray(data.deviation?.rows) ? data.deviation.rows : [])
+    ]);
+    const tailRows = normalizeKnockoutRationaleRows([
+      ...(Array.isArray(tab.tail_focus) ? tab.tail_focus : []),
+      ...(Array.isArray(data.deviation?.tail_focus) ? data.deviation.tail_focus : [])
+    ]);
+    const pathRows = normalizeKnockoutRationaleRows(
+      (detail.summary?.full_path_tail || []).filter((item) => item.resolution_type === phase)
+    );
+
+    [...primaryRows, ...tailRows, ...pathRows].forEach((item) => {
+      addKnockoutFactor(factors, buildKnockoutRationaleFactor(item));
+    });
+  }
+
+  if (factors.length < 3) {
+    addKnockoutFactor(factors, compactKnockoutFactorText(tab.workflow_cn));
+  }
+
+  return factors.slice(0, 6);
+}
+
+function addNormalTimeFactors(factors, version, match) {
+  const data = getKnockoutPhaseData(version, "normal_time");
+  const detail = version?.matchDetail || {};
+  const card = version?.matchCard || {};
+  const rows = normalizeKnockoutRows(data.matrix).slice(0, 5);
+  const homeTeam = getWorldCupTeam(match?.homeTeamId);
+  const awayTeam = getWorldCupTeam(match?.awayTeamId);
+  const home = teamPair(homeTeam, card.team_a || detail.match?.team_a || match?.homeTeam);
+  const away = teamPair(awayTeam, card.team_b || detail.match?.team_b || match?.awayTeam);
+  const resolution = card.resolution || detail.summary?.resolution || {};
+  const entry = card.entry_probability || {};
+  const normalResolution = normalizeProbabilityToPercent(resolution.normal_time);
+  const extraEntry = normalizeProbabilityToPercent(entry.extra_time);
+  const topScore = rows[0];
+  const drawScores = rows.filter((item) => {
+    const pair = splitKnockoutScorePair(item.score);
+    return Number.isFinite(pair.a) && pair.a === pair.b;
+  }).slice(0, 2);
+
+  if (topScore) {
+    const pair = splitKnockoutScorePair(topScore.score);
+    const leader = pair.a > pair.b ? home.zh : pair.b > pair.a ? away.zh : "平局";
+    addKnockoutFactor(
+      factors,
+      `${topScore.score} 是最高常规时间比分路径（${formatProbabilityValue(topScore.probability || 0)}），指向${leader === "平局" ? "加时入口" : `${leader}常规时间优势`}。`
+    );
+  }
+
+  if (Number.isFinite(normalResolution)) {
+    addKnockoutFactor(factors, `90分钟解决概率为 ${formatProbabilityValue(normalResolution)}，主预测仍集中在常规时间完成胜负分流。`);
+  }
+
+  if (Number.isFinite(extraEntry) && drawScores.length) {
+    addKnockoutFactor(factors, `进入加时概率为 ${formatProbabilityValue(extraEntry)}，主要由 ${drawScores.map((item) => item.score).join("、")} 等平局比分承接。`);
+  }
+
+  normalizeKnockoutRationaleRows(detail.summary?.full_path_tail || []).forEach((item) => {
+    addKnockoutFactor(factors, buildKnockoutRationaleFactor(item));
+  });
+}
+
+function splitKnockoutScorePair(score) {
+  const match = String(score || "").match(/(\d+)\s*[-:]\s*(\d+)/);
+  return {
+    a: match ? Number(match[1]) : null,
+    b: match ? Number(match[2]) : null
+  };
+}
+
+function normalizeKnockoutRationaleRows(rows) {
+  return (Array.isArray(rows) ? rows : [])
+    .map((item) => ({
+      label: item.tail_title_cn || item.title_cn || item.label || item.summary_cn || item.scenario_id || item.score || item.increment || item.penalty_score || "",
+      score: item.score || item.increment || item.penalty_score || "",
+      probability: normalizeProbabilityToPercent(item.probability ?? item.conditional_probability ?? item.joint_probability),
+      rationale: item.rationale_cn || ""
+    }))
+    .filter((item) => item.label || item.rationale)
+    .sort((a, b) => (b.probability || 0) - (a.probability || 0));
+}
+
+function buildKnockoutRationaleFactor(item) {
+  const label = compactKnockoutFactorText(item.label || item.score);
+  const rationale = compactKnockoutFactorText(item.rationale);
+  const probability = Number.isFinite(item.probability) ? `（${formatProbabilityValue(item.probability)}）` : "";
+
+  if (label && rationale) {
+    return `${label}${probability}：${rationale}`;
+  }
+
+  return `${label || rationale}${probability}`;
+}
+
+function compactKnockoutFactorText(text) {
+  const normalized = String(text || "").replace(/\s+/g, " ").trim();
+
+  if (!normalized) {
+    return "";
+  }
+
+  const sentence = normalized.match(/^(.{1,110}?[。！？!?；;])/u)?.[1] || normalized;
+  return sentence.length > 124 ? `${sentence.slice(0, 122)}...` : sentence;
+}
+
+function addKnockoutFactor(factors, text) {
+  const normalized = String(text || "").trim();
+
+  if (!normalized || factors.includes(normalized)) {
+    return;
+  }
+
+  factors.push(normalized);
+}
+
+function renderKnockoutPhaseProbabilityPanel(match, version, phase, data) {
+  if (phase === "normal_time") {
+    return renderKnockoutWinDrawLossPanel(match, version);
+  }
+
+  if (phase === "extra_time") {
+    return renderKnockoutExtraTimeOutcomePanel(match, data);
+  }
+
+  if (phase === "penalties") {
+    return renderKnockoutPenaltyWinnerPanel(match, data);
+  }
+
+  return "";
+}
+
+function renderKnockoutExtraTimeOutcomePanel(match, data) {
+  const homeTeam = getWorldCupTeam(match.homeTeamId);
+  const awayTeam = getWorldCupTeam(match.awayTeamId);
+  const home = teamPair(homeTeam, match.homeTeam);
+  const away = teamPair(awayTeam, match.awayTeam);
+  const totals = calculateExtraTimeOutcomeTotals(data);
+  const items = [
+    { label: `${home.zh}加时胜`, labelEn: `${home.en} extra-time win`, value: totals.team_a || 0, color: "#0a8f63" },
+    { label: "仍平进点球", labelEn: "Still level", value: totals.draw || 0, color: "#7e8c8b" },
+    { label: `${away.zh}加时胜`, labelEn: `${away.en} extra-time win`, value: totals.team_b || 0, color: "#ef3440" }
+  ];
+
+  return `
+    <section class="knockout-metric-panel knockout-donut-panel">
+      <h4 ${biAttrs("加时阶段结果", "Extra-time outcome")}>${L("加时阶段结果", "Extra-time outcome")}</h4>
+      ${renderKnockoutDonut(items)}
+    </section>
+  `;
+}
+
+function renderKnockoutPenaltyWinnerPanel(match, data) {
+  const homeTeam = getWorldCupTeam(match.homeTeamId);
+  const awayTeam = getWorldCupTeam(match.awayTeamId);
+  const home = teamPair(homeTeam, match.homeTeam);
+  const away = teamPair(awayTeam, match.awayTeam);
+  const totals = calculatePenaltyWinnerTotals(data);
+  const items = [
+    { label: `${home.zh}点球胜`, labelEn: `${home.en} penalty win`, value: totals.team_a || 0, color: "#0a8f63" },
+    { label: `${away.zh}点球胜`, labelEn: `${away.en} penalty win`, value: totals.team_b || 0, color: "#ef3440" }
+  ];
+
+  return `
+    <section class="knockout-metric-panel knockout-donut-panel">
+      <h4 ${biAttrs("点球胜方概率", "Penalty winner probability")}>${L("点球胜方概率", "Penalty winner probability")}</h4>
+      ${renderKnockoutDonut(items)}
+    </section>
+  `;
+}
+
+function calculateExtraTimeOutcomeTotals(data) {
+  const rows = Array.isArray(data?.matrix?.rows) ? data.matrix.rows : Array.isArray(data?.deviation?.points) ? data.deviation.points : [];
+
+  return rows.reduce((acc, item) => {
+    const probability = normalizeProbabilityToPercent(item.conditional_probability ?? item.probability) || 0;
+    const outcome = item.extra_time_outcome || item.outcome;
+
+    if (outcome === "team_a" || outcome === "home") {
+      acc.team_a += probability;
+      return acc;
+    }
+
+    if (outcome === "team_b" || outcome === "away") {
+      acc.team_b += probability;
+      return acc;
+    }
+
+    if (outcome === "draw" || outcome === "penalty_entry") {
+      acc.draw += probability;
+      return acc;
+    }
+
+    const pair = splitKnockoutScorePair(item.increment || item.score);
+    if (pair.a > pair.b) {
+      acc.team_a += probability;
+    } else if (pair.b > pair.a) {
+      acc.team_b += probability;
+    } else {
+      acc.draw += probability;
+    }
+
+    return acc;
+  }, { team_a: 0, draw: 0, team_b: 0 });
+}
+
+function calculatePenaltyWinnerTotals(data) {
+  const winner = data?.matrix?.winner_probability || {};
+  const teamA = normalizeProbabilityToPercent(winner.team_a);
+  const teamB = normalizeProbabilityToPercent(winner.team_b);
+
+  if (Number.isFinite(teamA) || Number.isFinite(teamB)) {
+    return { team_a: teamA || 0, team_b: teamB || 0 };
+  }
+
+  const rows = Array.isArray(data?.matrix?.rows) ? data.matrix.rows : Array.isArray(data?.deviation?.points) ? data.deviation.points : [];
+  return rows.reduce((acc, item) => {
+    const probability = normalizeProbabilityToPercent(item.conditional_probability ?? item.probability) || 0;
+
+    if (item.winner_side === "team_a") {
+      acc.team_a += probability;
+    } else if (item.winner_side === "team_b") {
+      acc.team_b += probability;
+    }
+
+    return acc;
+  }, { team_a: 0, team_b: 0 });
+}
+
+function renderKnockoutWinDrawLossPanel(match, version) {
+  const homeTeam = getWorldCupTeam(match.homeTeamId);
+  const awayTeam = getWorldCupTeam(match.awayTeamId);
+  const home = teamPair(homeTeam, match.homeTeam);
+  const away = teamPair(awayTeam, match.awayTeam);
+  const totals = calculateKnockoutNormalTimeWdl(match, version);
+  const items = [
+    { label: `${home.zh}胜`, labelEn: `${home.en} win`, value: totals.team_a || 0, color: "#0a8f63" },
+    { label: "平局", labelEn: "Draw", value: totals.draw || 0, color: "#7e8c8b" },
+    { label: `${away.zh}胜`, labelEn: `${away.en} win`, value: totals.team_b || 0, color: "#ef3440" }
+  ];
+
+  return `
+    <section class="knockout-metric-panel knockout-donut-panel">
+      <h4 ${biAttrs("胜平负概率（90分钟）", "W/D/L probability (90 min)")}>${L("胜平负概率（90分钟）", "W/D/L probability (90 min)")}</h4>
+      ${renderKnockoutDonut(items)}
+    </section>
+  `;
+}
+
+function calculateKnockoutNormalTimeWdl(match, version) {
+  const advancement = getStructuredAdvancement(match);
+  const entry = getStructuredEntryProbability(match);
+  const finalA = normalizeProbabilityToPercent(advancement.team_a) || 0;
+  const finalB = normalizeProbabilityToPercent(advancement.team_b) || 0;
+  const draw = normalizeProbabilityToPercent(entry.extra_time) || 0;
+  const penaltyEntry = normalizeProbabilityToPercent(entry.penalties) || 0;
+  const extraMatrix = version?.phaseData?.extra_time?.matrix;
+  const penaltyMatrix = version?.phaseData?.penalties?.matrix;
+  const extraConditional = sumExtraTimeAdvanceProbabilities(extraMatrix);
+  const penaltyA = normalizeProbabilityToPercent(penaltyMatrix?.winner_probability?.team_a) || 0;
+  const penaltyB = normalizeProbabilityToPercent(penaltyMatrix?.winner_probability?.team_b) || 0;
+  const extraJointA = draw * extraConditional.team_a / 100;
+  const extraJointB = draw * extraConditional.team_b / 100;
+  const penaltyJointA = penaltyEntry * penaltyA / 100;
+  const penaltyJointB = penaltyEntry * penaltyB / 100;
+  const teamA = Math.max(0, finalA - extraJointA - penaltyJointA);
+  const teamB = Math.max(0, finalB - extraJointB - penaltyJointB);
+
+  if (teamA || teamB || draw) {
+    return { team_a: teamA, draw, team_b: teamB };
+  }
+
+  return { team_a: 0, draw: 0, team_b: 0 };
+}
+
+function sumExtraTimeAdvanceProbabilities(matrixData) {
+  const rows = matrixData?.row_axis?.buckets || [];
+  const columns = matrixData?.column_axis?.buckets || [];
+  const matrix = matrixData?.matrix || [];
+
+  return rows.reduce((acc, row, rowIndex) => {
+    const a = parseGoalBucketValue(row);
+
+    columns.forEach((column, columnIndex) => {
+      const b = parseGoalBucketValue(column);
+      const value = normalizeProbabilityToPercent(matrix[rowIndex]?.[columnIndex]) || 0;
+
+      if (a > b) {
+        acc.team_a += value;
+      } else if (b > a) {
+        acc.team_b += value;
+      }
+    });
+
+    return acc;
+  }, { team_a: 0, team_b: 0 });
+}
+
+function parseGoalBucketValue(value) {
+  const match = String(value || "").match(/\d+/);
+  return match ? Number(match[0]) : 0;
+}
+
+function renderKnockoutDonut(items) {
+  const total = items.reduce((sum, item) => sum + Math.max(0, item.value || 0), 0) || 1;
+  let cursor = 0;
+  const gradient = items.map((item) => {
+    const start = cursor;
+    const end = cursor + (Math.max(0, item.value || 0) / total) * 360;
+    cursor = end;
+    return `${item.color} ${start.toFixed(2)}deg ${end.toFixed(2)}deg`;
+  }).join(", ");
+
+  return `
+    <div class="knockout-donut-wrap">
+      <div class="knockout-donut" style="background: conic-gradient(${gradient});" aria-hidden="true"></div>
+      <div class="knockout-donut-legend">
+        ${items.map((item) => `
+          <span style="--legend-color:${item.color}">
+            <i aria-hidden="true"></i>
+            <b ${biAttrs(item.label, item.labelEn)}>${escapeHtml(L(item.label, item.labelEn))}</b>
+            <strong>${escapeHtml(formatProbabilityValue(item.value || 0))}</strong>
+          </span>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderKnockoutTopScoresPanel(scores, title, phase) {
+  return `
+    <section class="knockout-metric-panel knockout-top-score-panel ${escapeHtml(`is-${phase}`)}">
+      <h4 ${biAttrs(title.zh, title.en)}>${escapeHtml(pairText(title))}</h4>
+      <div class="knockout-modal-score-row">
+        ${scores.length ? scores.map((item) => `
+          <span>
+            <strong>${escapeHtml(item.score)}</strong>
+            ${Number.isFinite(item.probability) ? `<em>${escapeHtml(formatProbabilityValue(item.probability))}</em>` : ""}
+          </span>
+        `).join("") : `<p class="empty-state">${escapeHtml(L("比分待补充。", "Scores pending."))}</p>`}
+      </div>
+    </section>
+  `;
+}
+
+function renderKnockoutResolutionPanel(match, phase) {
+  const resolution = getStructuredResolution(match);
+  const normal = normalizeProbabilityToPercent(resolution.normal_time) || 0;
+  const extra = normalizeProbabilityToPercent(resolution.extra_time) || 0;
+  const penalties = normalizeProbabilityToPercent(resolution.penalties) || 0;
+
+  return `
+    <section class="knockout-metric-panel">
+      <h4 ${biAttrs("解决方式概率", "Resolution probability")}>${L("解决方式概率", "Resolution probability")}</h4>
+      <div class="knockout-resolution-metrics">
+        <span>${bi("90分钟解决", "90 min")}<strong>${escapeHtml(formatProbabilityValue(normal))}</strong></span>
+        <span>${bi("进入加时", "Extra time")}<strong>${escapeHtml(formatProbabilityValue(extra))}</strong></span>
+        <span>${bi("进入点球", "Penalties")}<strong>${escapeHtml(formatProbabilityValue(penalties))}</strong></span>
+      </div>
+    </section>
+  `;
+}
+
+function renderKnockoutScoreMatrix(matrixData, phase, match) {
+  const normalized = normalizeKnockoutMatrix(matrixData);
+  const rows = normalized.rows;
+  const columns = normalized.columns;
+  const matrix = normalized.matrix;
+
+  if (!rows.length || !columns.length || !matrix.length) {
+    return renderKnockoutListMatrix(matrixData, phase);
+  }
+
+  const values = matrix.flat().map(Number).filter(Number.isFinite);
+  const maxValue = Math.max(...values, 0);
+  const axis = getKnockoutMatrixAxisLabels(matrixData, match);
+
+  return `
+    <section class="knockout-chart-card score-matrix-card ${escapeHtml(`is-${phase}`)}">
+      <div class="knockout-card-head">
+        <h4 ${biAttrs("比分矩阵", "Score matrix")}>${L("比分矩阵", "Score matrix")}</h4>
+      </div>
+      <div class="matrix-axis-summary knockout-axis-summary" aria-label="${escapeHtml(L(`${axis.row.zh}，${axis.column.zh}`, `${axis.row.en}, ${axis.column.en}`))}">
+        <span class="matrix-row-axis" ${biAttrs(axis.row.zh, axis.row.en)}>${escapeHtml(L(axis.row.zh, axis.row.en))}</span>
+        <span class="matrix-col-axis" ${biAttrs(axis.column.zh, axis.column.en)}>${escapeHtml(L(axis.column.zh, axis.column.en))}</span>
+      </div>
+      <div class="score-matrix-wrap knockout-matrix-wrap" style="--matrix-cols:${columns.length + 1}; --matrix-data-cols:${columns.length}">
+        <span class="matrix-axis-corner" aria-hidden="true"></span>
+        ${columns.map((column) => `<span class="matrix-axis-label matrix-col-label">${escapeHtml(column)}</span>`).join("")}
+        ${rows.map((row, rowIndex) => `
+          <span class="matrix-axis-label matrix-row-label">${escapeHtml(row)}</span>
+          ${columns.map((column, columnIndex) => {
+            const value = Number(matrix[rowIndex]?.[columnIndex] || 0);
+            const intensity = maxValue ? Math.max(0.08, value / maxValue) : 0;
+            return `
+              <span class="matrix-cell" style="--cell-alpha:${intensity.toFixed(3)}">
+                <strong>${escapeHtml(formatProbabilityValue(normalizeProbabilityToPercent(value) || 0))}</strong>
+              </span>
+            `;
+          }).join("")}
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderKnockoutListMatrix(matrixData, phase) {
+  const rows = normalizeKnockoutRows(matrixData).slice(0, 6);
+
+  return `
+    <section class="knockout-chart-card knockout-deviation-card">
+      <div class="knockout-card-head">
+        <h4 ${biAttrs("比分矩阵", "Score matrix")}>${L("比分矩阵", "Score matrix")}</h4>
+      </div>
+      <div class="knockout-score-list">
+        ${rows.length ? rows.map((item) => `
+          <span>
+            <strong>${escapeHtml(item.score)}</strong>
+            <em>${escapeHtml(formatProbabilityValue(item.probability || 0))}</em>
+          </span>
+        `).join("") : `<p class="empty-state">${escapeHtml(L("矩阵数据待补充。", "Matrix data pending."))}</p>`}
+      </div>
+    </section>
+  `;
+}
+
+function normalizeKnockoutMatrix(matrixData) {
+  const explicitRows = matrixData?.row_axis?.buckets || [];
+  const explicitColumns = matrixData?.column_axis?.buckets || [];
+  const explicitMatrix = matrixData?.matrix || [];
+
+  if (explicitRows.length && explicitColumns.length && explicitMatrix.length) {
+    return { rows: explicitRows, columns: explicitColumns, matrix: explicitMatrix };
+  }
+
+  const sparseRows = Array.isArray(matrixData?.rows) ? matrixData.rows : [];
+  const goalRows = sparseRows
+    .map((item) => getKnockoutMatrixRowValue(item))
+    .filter(Number.isFinite);
+  const goalColumns = sparseRows
+    .map((item) => getKnockoutMatrixColumnValue(item))
+    .filter(Number.isFinite);
+
+  if (!goalRows.length || !goalColumns.length) {
+    return { rows: [], columns: [], matrix: [] };
+  }
+
+  const maxRow = Math.max(...goalRows, 0);
+  const maxColumn = Math.max(...goalColumns, 0);
+  const rows = Array.from({ length: maxRow + 1 }, (_, index) => String(index));
+  const columns = Array.from({ length: maxColumn + 1 }, (_, index) => String(index));
+  const matrix = rows.map(() => columns.map(() => 0));
+
+  sparseRows.forEach((item) => {
+    const row = getKnockoutMatrixRowValue(item);
+    const column = getKnockoutMatrixColumnValue(item);
+    const probability = Number(item.probability ?? item.conditional_probability ?? 0);
+
+    if (Number.isFinite(row) && Number.isFinite(column) && matrix[row] && typeof matrix[row][column] !== "undefined") {
+      matrix[row][column] = probability;
+    }
+  });
+
+  return { rows, columns, matrix };
+}
+
+function getKnockoutMatrixRowValue(item) {
+  const direct = Number(item?.goals_a ?? item?.extra_goals_a ?? item?.team_a_penalties);
+
+  if (Number.isFinite(direct)) {
+    return direct;
+  }
+
+  return splitKnockoutScorePair(item?.penalty_score || item?.score || item?.increment).a;
+}
+
+function getKnockoutMatrixColumnValue(item) {
+  const direct = Number(item?.goals_b ?? item?.extra_goals_b ?? item?.team_b_penalties);
+
+  if (Number.isFinite(direct)) {
+    return direct;
+  }
+
+  return splitKnockoutScorePair(item?.penalty_score || item?.score || item?.increment).b;
+}
+
+function getKnockoutMatrixAxisLabels(matrixData, match) {
+  const homeTeam = getWorldCupTeam(match?.homeTeamId);
+  const awayTeam = getWorldCupTeam(match?.awayTeamId);
+  const rowTeam = matrixData?.row_axis?.team || homeTeam?.nameEn || match?.homeTeam || "Team A";
+  const columnTeam = matrixData?.column_axis?.team || awayTeam?.nameEn || match?.awayTeam || "Team B";
+  const rowPair = teamPair(findTeamByEnglishName(rowTeam) || homeTeam, rowTeam);
+  const columnPair = teamPair(findTeamByEnglishName(columnTeam) || awayTeam, columnTeam);
+  const isPenaltyMatrix = matrixData?.phase === "penalties" || matrixData?.matrix_type === "penalty_score";
+  const rowUnit = isPenaltyMatrix
+    ? { zh: "点球", en: "penalties" }
+    : { zh: "进球", en: "goals" };
+
+  return {
+    row: { zh: `纵向：${rowPair.zh}${rowUnit.zh}`, en: `Vertical: ${rowPair.en} ${rowUnit.en}` },
+    column: { zh: `横向：${columnPair.zh}${rowUnit.zh}`, en: `Horizontal: ${columnPair.en} ${rowUnit.en}` }
+  };
+}
+
+function normalizeKnockoutRows(matrixData) {
+  const rows = Array.isArray(matrixData?.rows) ? matrixData.rows : Array.isArray(matrixData?.points) ? matrixData.points : [];
+
+  return rows.map((item) => ({
+    score: item.score || item.penalty_score || item.increment || "",
+    probability: normalizeProbabilityToPercent(item.probability ?? item.conditional_probability)
+  })).filter((item) => item.score);
+}
+
+function renderKnockoutDeviationSpace(deviationData, phase) {
+  const points = normalizeKnockoutDeviationPoints(deviationData).slice(0, 20);
+
+  if (!points.length) {
+    return `
+      <section class="knockout-chart-card">
+        <div class="knockout-card-head">
+          <h4 ${biAttrs("比分偏差空间", "Deviation space")}>${L("比分偏差空间", "Deviation space")}</h4>
+        </div>
+        <p class="empty-state">${escapeHtml(L("偏差空间数据待补充。", "Deviation data pending."))}</p>
+      </section>
+    `;
+  }
+
+  const probabilities = points.map((point) => point.probability || 0);
+  const minY = Math.min(...probabilities);
+  const maxY = Math.max(...probabilities);
+  const yRange = maxY - minY;
+  const baseYValues = points.map((point) => {
+    const normalizedY = yRange > 0 ? ((point.probability || 0) - minY) / yRange : 0.5;
+    return normalizedY * 46 + 27;
+  });
+  const averageY = baseYValues.reduce((sum, value) => sum + value, 0) / baseYValues.length;
+  const yShift = Math.max(-14, Math.min(14, 50 - averageY));
+
+  return `
+    <section class="knockout-chart-card">
+      <div class="knockout-card-head">
+        <h4 ${biAttrs("比分偏差空间", "Deviation space")}>${L("比分偏差空间", "Deviation space")}</h4>
+      </div>
+      <div class="knockout-deviation-plot">
+        <span class="knockout-deviation-axis-label y-axis" ${biAttrs("发生概率", "Probability")}>${escapeHtml(L("发生概率", "Probability"))}</span>
+        <span class="knockout-deviation-axis-label x-axis" ${biAttrs("偏差指数", "Deviation index")}>${escapeHtml(L("偏差指数", "Deviation index"))}</span>
+        ${points.map((point, index) => {
+          const x = Math.max(3, Math.min(96, (point.deviation || 0) * 92 + 4));
+          const y = Math.max(24, Math.min(76, baseYValues[index] + yShift));
+          return `
+            <span class="${point.isTail ? "is-tail" : ""}" style="left:${x.toFixed(2)}%; bottom:${y.toFixed(2)}%;" title="${escapeHtml(`${point.score} ${formatProbabilityValue(point.probability || 0)}`)}">
+              <i></i><em>${escapeHtml(point.score)}</em>
+            </span>
+          `;
+        }).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function normalizeKnockoutDeviationPoints(deviationData) {
+  const points = Array.isArray(deviationData?.points) ? deviationData.points : Array.isArray(deviationData?.rows) ? deviationData.rows : [];
+
+  return points.map((item, index) => ({
+    score: item.score || item.penalty_score || item.label || "",
+    probability: normalizeProbabilityToPercent(item.probability ?? item.conditional_probability),
+    deviation: getKnockoutDeviationValue(item, index, points.length),
+    isTail: Boolean(item.is_tail_focus)
+  })).filter((item) => item.score && Number.isFinite(item.probability));
+}
+
+function getKnockoutDeviationValue(item, index, total) {
+  const explicitValue = Number(item.deviation_score ?? item.deviation ?? item.x);
+
+  if (Number.isFinite(explicitValue)) {
+    return explicitValue;
+  }
+
+  const goalsA = Number(item.goals_a);
+  const goalsB = Number(item.goals_b);
+
+  if (Number.isFinite(goalsA) && Number.isFinite(goalsB)) {
+    const totalGoals = goalsA + goalsB;
+    const goalGap = Math.abs(goalsA - goalsB);
+    return Math.max(0.06, Math.min(0.94, totalGoals * 0.16 + goalGap * 0.18));
+  }
+
+  if (total > 1) {
+    return 0.12 + (index / (total - 1)) * 0.76;
+  }
+
+  return 0.5;
+}
+
+function renderKnockoutTailFocusPanel(items, phase) {
+  return `
+    <section class="knockout-chart-card knockout-tail-card">
+      <div class="knockout-card-head">
+        <h4 ${biAttrs(`Tail Focus 高偏离聚焦预测（${getKnockoutPhaseLabel(phase).zh}）`, `Tail Focus (${getKnockoutPhaseLabel(phase).en})`)}>${escapeHtml(L(`Tail Focus 高偏离聚焦预测（${getKnockoutPhaseLabel(phase).zh}）`, `Tail Focus (${getKnockoutPhaseLabel(phase).en})`))}</h4>
+      </div>
+      <div class="knockout-tail-list">
+        ${items.length ? items.map((item) => `
+          <article>
+            <div>
+              <span>${String(item.rank).padStart(2, "0")}</span>
+              <strong>${escapeHtml(item.label)}</strong>
+              ${Number.isFinite(item.probability) ? `<em>${escapeHtml(formatProbabilityValue(item.probability))}</em>` : ""}
+            </div>
+            ${item.score ? `<b>${escapeHtml(item.score)}</b>` : ""}
+          </article>
+        `).join("") : `<p class="empty-state">${escapeHtml(L("Tail Focus 待补充。", "Tail Focus pending."))}</p>`}
+      </div>
+    </section>
+  `;
+}
+
+function renderKnockoutFactorsPanel(factors, phase) {
+  return `
+    <section class="knockout-factors-card">
+      <h4 ${biAttrs(`关键因素（${getKnockoutPhaseLabel(phase).zh}）`, `Key factors (${getKnockoutPhaseLabel(phase).en})`)}>${escapeHtml(L(`关键因素（${getKnockoutPhaseLabel(phase).zh}）`, `Key factors (${getKnockoutPhaseLabel(phase).en})`))}</h4>
+      ${factors.length ? `<ul>${factors.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : `<p class="empty-state">${escapeHtml(L("关键因素待补充。", "Key factors pending."))}</p>`}
+    </section>
+  `;
+}
+
+function getKnockoutPhaseLabel(phase) {
+  return {
+    normal_time: { zh: "90分钟", en: "90 min" },
+    extra_time: { zh: "加时", en: "Extra time" },
+    penalties: { zh: "点球", en: "Penalties" }
+  }[phase] || { zh: "淘汰赛", en: "Knockout" };
+}
+
+function getKnockoutTopScoresTitle(phase) {
+  return {
+    normal_time: { zh: "90分钟 Top 3 比分", en: "90-minute Top 3 scores" },
+    extra_time: { zh: "加时赛 Top 3 增量", en: "Extra-time Top 3 increments" },
+    penalties: { zh: "点球大战 Top 3 比分", en: "Penalty Top 3 scores" }
+  }[phase] || { zh: "Top 3 比分", en: "Top 3 scores" };
+}
+
 function closeMatchPredictionModal() {
   const modal = document.querySelector("[data-match-prediction-modal]");
 
@@ -2862,6 +4216,7 @@ function closeMatchPredictionModal() {
 
   modal.classList.remove("is-open");
   modal.classList.remove("is-game-prediction");
+  modal.classList.remove("is-knockout-prediction");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
 }
