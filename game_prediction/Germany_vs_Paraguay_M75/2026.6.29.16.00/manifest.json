@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-06-29T06:46:02.055100Z",
+  "prediction_generated_at_local": "2026-06-29T14:46:02.055100+08:00",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.8571428571428571,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 216,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率85.7%）。"
+    ]
+  },
+  "purpose_cn": "网页最小预测输出：文本结论、比分偏离空间和蒙特卡洛比分矩阵。",
+  "notes_cn": [
+    "web_export/web_delivery只保留前端必需文件；完整报告、Markdown、CSV和path distribution保留在report目录。",
+    "display_path_top3用于页面左侧晋级路径展示，raw path_top不直接用于UI。",
+    "加时为4x4增量矩阵，点球Tail为高偏离情景。"
+  ],
+  "frontend_contract": "knockout_v6_2_2_phase_semantics_bilingual_frontend_contract",
+  "tool_version": "8.5.1-knockout-phase-semantics-frontend-contract-v6.2.1",
+  "frontend_bundle": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json",
+    "frontend_guide": "FRONTEND_IMPLEMENTATION_GUIDE.md"
+  },
+  "knockout_architecture": "single_unified_path_distribution_with_phase_views",
+  "phase_semantics": {
+    "normal_time": "完整90分钟比分矩阵 + 三类常规高偏离情景",
+    "extra_time": "条件加时增量矩阵 + 三类加时尾部情景 + 加时关键因素",
+    "penalties": "条件点球比分矩阵，含6+ bucket + 三类点球尾部情景 + 点球关键因素"
+  },
+  "bilingual_fields": {
+    "enabled": true,
+    "style": "same-object *_cn/*_en fields; key factors also expose text_cn/text_en",
+    "files": [
+      "match_card.json",
+      "match_detail.json",
+      "normal_time_matrix.json",
+      "normal_time_deviation.json",
+      "extra_time_matrix.json",
+      "extra_time_deviation.json",
+      "penalty_matrix.json",
+      "penalty_deviation.json"
+    ],
+    "patched_by": "ChatGPT offline bilingual repair",
+    "note": "English fields were added to match the v6.2.2 frontend contract for today’s already-generated bundles."
+  }
+}

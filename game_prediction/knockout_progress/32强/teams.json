@@ -3,9 +3,35 @@
   "matches": [
     {
       "matchNo": "M73",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["RSA", "CAN"],
+      "matchTime": "6月28日 19:00 UTC",
+      "kickoffUtc": "2026-06-28T19:00:00Z",
       "source": "A2 vs B2"
+    },
+    {
+      "matchNo": "M74",
+      "status": "scheduled",
+      "teams": ["GER", "PAR"],
+      "matchTime": "6月29日 20:30 UTC",
+      "kickoffUtc": "2026-06-29T20:30:00Z",
+      "source": "E1 vs D2"
+    },
+    {
+      "matchNo": "M75",
+      "status": "scheduled",
+      "teams": ["NED", "MAR"],
+      "matchTime": "6月30日 01:00 UTC",
+      "kickoffUtc": "2026-06-30T01:00:00Z",
+      "source": "F1 vs C2"
+    },
+    {
+      "matchNo": "M76",
+      "status": "scheduled",
+      "teams": ["BRA", "JPN"],
+      "matchTime": "6月29日 17:00 UTC",
+      "kickoffUtc": "2026-06-29T17:00:00Z",
+      "source": "C1 vs F2"
     }
   ]
 }

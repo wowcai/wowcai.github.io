@@ -1,0 +1,825 @@
+{
+  "schema_version": "2.0",
+  "phase": "penalties",
+  "matrix_type": "penalty_score_dense_7x7_bucketed_6plus",
+  "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+  "axis_note_cn": "纵轴为team_a点球命中数，横轴为team_b点球命中数；6+表示进入第6轮及之后的延长点球。概率为进入点球大战后的条件概率。",
+  "row_axis": {
+    "team": "Brazil",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6+"
+    ]
+  },
+  "column_axis": {
+    "team": "Japan",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6+"
+    ]
+  },
+  "winner_probability": {
+    "team_a": 0.54,
+    "team_b": 0.46
+  },
+  "matrix": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.012,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.028000000000000004,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.05500000000000001,
+      0.045000000000000005,
+      0.0,
+      0.0
+    ],
+    [
+      0.014999999999999996,
+      0.035000000000000024,
+      0.07000000000000005,
+      0.0,
+      0.13000000000000003,
+      0.02500000000000001,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.06500000000000002,
+      0.15500000000000003,
+      0.0,
+      0.11000000000000001,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.029999999999999992,
+      0.125,
+      0.0,
+      0.05500000000000001
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.045000000000000005,
+      0.0
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "3",
+      "probability": 0.012,
+      "probability_percent": 1.2,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.012
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "3",
+      "probability": 0.028000000000000004,
+      "probability_percent": 2.8,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.028000000000000004
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "3",
+      "probability": 0.05500000000000001,
+      "probability_percent": 5.5,
+      "top_scores": [
+        {
+          "score": "2-3",
+          "probability": 0.05500000000000001
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "4",
+      "probability": 0.045000000000000005,
+      "probability_percent": 4.5,
+      "top_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.045000000000000005
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "0",
+      "probability": 0.014999999999999996,
+      "probability_percent": 1.5,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.014999999999999996
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "1",
+      "probability": 0.035000000000000024,
+      "probability_percent": 3.5,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.035000000000000024
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "2",
+      "probability": 0.07000000000000005,
+      "probability_percent": 7.0,
+      "top_scores": [
+        {
+          "score": "3-2",
+          "probability": 0.07000000000000005
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "3",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "4",
+      "probability": 0.13000000000000003,
+      "probability_percent": 13.0,
+      "top_scores": [
+        {
+          "score": "3-4",
+          "probability": 0.13000000000000003
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "5",
+      "probability": 0.02500000000000001,
+      "probability_percent": 2.5,
+      "top_scores": [
+        {
+          "score": "3-5",
+          "probability": 0.02500000000000001
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "2",
+      "probability": 0.06500000000000002,
+      "probability_percent": 6.5,
+      "top_scores": [
+        {
+          "score": "4-2",
+          "probability": 0.06500000000000002
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "3",
+      "probability": 0.15500000000000003,
+      "probability_percent": 15.5,
+      "top_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.15500000000000003
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "5",
+      "probability": 0.11000000000000001,
+      "probability_percent": 11.0,
+      "top_scores": [
+        {
+          "score": "4-5",
+          "probability": 0.11000000000000001
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "3",
+      "probability": 0.029999999999999992,
+      "probability_percent": 3.0,
+      "top_scores": [
+        {
+          "score": "5-3",
+          "probability": 0.029999999999999992
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "4",
+      "probability": 0.125,
+      "probability_percent": 12.5,
+      "top_scores": [
+        {
+          "score": "5-4",
+          "probability": 0.125
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "6+",
+      "probability": 0.05500000000000001,
+      "probability_percent": 5.5,
+      "top_scores": [
+        {
+          "score": "5-6",
+          "probability": 0.05500000000000001
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "3",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "5",
+      "probability": 0.045000000000000005,
+      "probability_percent": 4.5,
+      "top_scores": [
+        {
+          "score": "6-5",
+          "probability": 0.045000000000000005
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    }
+  ],
+  "rows": [
+    {
+      "penalty_score": "4-3",
+      "score": "4-3",
+      "team_a_penalties": 4,
+      "team_b_penalties": 3,
+      "winner_side": "team_a",
+      "conditional_probability": 0.15500000000000003,
+      "joint_probability": 0.020964738541621373,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.15500000000000003,
+      "rationale_cn": "委员会和rollout共同指向的最高权重之一。五轮内或第五码附近出现一次关键罚失/扑救，Brazil凭Alisson预计首发、门将状态和大赛经验小幅占优，但只是一球差。",
+      "rationale_en": "Rationale for 4-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "3-4",
+      "score": "3-4",
+      "team_a_penalties": 3,
+      "team_b_penalties": 4,
+      "winner_side": "team_b",
+      "conditional_probability": 0.13000000000000003,
+      "joint_probability": 0.017583329099424377,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.13000000000000003,
+      "rationale_cn": "Japan最主要反向胜出路径。若Brazil久攻不下被拖入点球，热门压力可能转移到Brazil；Japan近期曾逆转Brazil的心理反证也支撑其以一球差反胜。",
+      "rationale_en": "Rationale for 3-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "5-4",
+      "score": "5-4",
+      "team_a_penalties": 5,
+      "team_b_penalties": 4,
+      "winner_side": "team_a",
+      "conditional_probability": 0.125,
+      "joint_probability": 0.016907047210984974,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.125,
+      "rationale_cn": "高命中率或短突然死亡的Brazil小胜路径。双方前五轮大多命中，Brazil在第五轮或第六轮凭经验、门将判断或主罚稳定性取得细微边际。",
+      "rationale_en": "Rationale for 5-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "4-5",
+      "score": "4-5",
+      "team_a_penalties": 4,
+      "team_b_penalties": 5,
+      "winner_side": "team_b",
+      "conditional_probability": 0.11000000000000001,
+      "joint_probability": 0.01487820154566678,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.11000000000000001,
+      "rationale_cn": "高命中率或短突然死亡的Japan反胜路径。若双方前五轮执行质量都高，Brazil门将端小优会被稀释，Japan可通过纪律性和一次Brazil关键罚失晋级。",
+      "rationale_en": "Rationale for 4-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "3-2",
+      "score": "3-2",
+      "team_a_penalties": 3,
+      "team_b_penalties": 2,
+      "winner_side": "team_a",
+      "conditional_probability": 0.07000000000000005,
+      "joint_probability": 0.009467946438151591,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.07000000000000005,
+      "rationale_cn": "低命中率门将局的主要Brazil胜出分支。Japan过往点球出局、Alisson预计首发且整体门将状态较高，使Brazil在3-2这类扑救/罚失较多的局面中略有优势。",
+      "rationale_en": "Rationale for 3-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "4-2",
+      "score": "4-2",
+      "team_a_penalties": 4,
+      "team_b_penalties": 2,
+      "winner_side": "team_a",
+      "conditional_probability": 0.06500000000000002,
+      "joint_probability": 0.008791664549712188,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.06500000000000002,
+      "rationale_cn": "Japan前四到五轮出现两次失败、Brazil整体执行较稳的清晰Brazil胜出路径。该比分受Japan历史点球心理压力与Alisson状态优势支持，但仍需避免过度放大。",
+      "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "2-3",
+      "score": "2-3",
+      "team_a_penalties": 2,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.05500000000000001,
+      "joint_probability": 0.00743910077283339,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.05500000000000001,
+      "rationale_cn": "低命中率反向路径。若Brazil关键候选罚手离场、Neymar未能坚持到点球或热门压力导致核心罚手失误，Japan可在小比分局中守住优势。",
+      "rationale_en": "Rationale for 2-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "5-6",
+      "score": "5-6",
+      "team_a_penalties": 5,
+      "team_b_penalties": 6,
+      "winner_side": "team_b",
+      "conditional_probability": 0.05500000000000001,
+      "joint_probability": 0.00743910077283339,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.32,
+      "x": 0.32,
+      "y": 0.05500000000000001,
+      "rationale_cn": "长突然死亡Japan胜出路径。点球越往后，核心罚手优势越被稀释，后备罚手、体能、临场心理和门将随机判断权重上升；Japan的46%条件胜率要求该尾部保持可观。",
+      "rationale_en": "Rationale for 5-6: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "2-4",
+      "score": "2-4",
+      "team_a_penalties": 2,
+      "team_b_penalties": 4,
+      "winner_side": "team_b",
+      "conditional_probability": 0.045000000000000005,
+      "joint_probability": 0.006086536995954591,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.045000000000000005,
+      "rationale_cn": "Japan清晰胜出的对应路径，常见机制是Zion Suzuki临场扑点爆发或Brazil两名主罚手因疲劳、伤情、顺序变化而未能命中。点球随机性使该结果必须保留。",
+      "rationale_en": "Rationale for 2-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "6-5",
+      "score": "6-5",
+      "team_a_penalties": 6,
+      "team_b_penalties": 5,
+      "winner_side": "team_a",
+      "conditional_probability": 0.045000000000000005,
+      "joint_probability": 0.006086536995954591,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.32,
+      "x": 0.32,
+      "y": 0.045000000000000005,
+      "rationale_cn": "长突然死亡Brazil胜出路径，覆盖6轮及以后后备罚手阶段。Brazil阵容深度和大赛经验略优可在后备主罚阶段体现，但主罚顺序未确认，故只保留为中低尾部。",
+      "rationale_en": "Rationale for 6-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "3-1",
+      "score": "3-1",
+      "team_a_penalties": 3,
+      "team_b_penalties": 1,
+      "winner_side": "team_a",
+      "conditional_probability": 0.035000000000000024,
+      "joint_probability": 0.0047339732190757955,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.035000000000000024,
+      "rationale_cn": "Brazil在前四轮左右取得两球差优势的路径，通常需要Alisson至少一次实扑或强干扰，并叠加Japan一脚打偏。Brazil门将状态评分和大赛经验略优，支持该分支高于对称反向。",
+      "rationale_en": "Rationale for 3-1: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "5-3",
+      "score": "5-3",
+      "team_a_penalties": 5,
+      "team_b_penalties": 3,
+      "winner_side": "team_a",
+      "conditional_probability": 0.029999999999999992,
+      "joint_probability": 0.004057691330636393,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.029999999999999992,
+      "rationale_cn": "Brazil执行稳定且Japan出现两次低质量射门或被猜中方向的偏Brazil分支。它要求Brazil主罚池质量维持较好，因此概率低于4-3、5-4、3-2和4-2。",
+      "rationale_en": "Rationale for 5-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "1-3",
+      "score": "1-3",
+      "team_a_penalties": 1,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.028000000000000004,
+      "joint_probability": 0.0037871785752606347,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.028000000000000004,
+      "rationale_cn": "Japan门将或罚手执行突然占优、Brazil早段两次失败的路径。Japan纪律性和拖入点球后的心理收益可支撑反胜，但Zion Suzuki门将状态评分低于Alisson，因此低于Brazil 3-1。",
+      "rationale_en": "Rationale for 1-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "3-5",
+      "score": "3-5",
+      "team_a_penalties": 3,
+      "team_b_penalties": 5,
+      "winner_side": "team_b",
+      "conditional_probability": 0.02500000000000001,
+      "joint_probability": 0.0033814094421969958,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.02500000000000001,
+      "rationale_cn": "Japan五轮内高质量执行、Brazil两次关键罚失的偏Japan路径。Brazil作为热门若在120分钟后心理受挫，该结果存在，但证据不支持赋予过高权重。",
+      "rationale_en": "Rationale for 3-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "3-0",
+      "score": "3-0",
+      "team_a_penalties": 3,
+      "team_b_penalties": 0,
+      "winner_side": "team_a",
+      "conditional_probability": 0.014999999999999996,
+      "joint_probability": 0.0020288456653181964,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.014999999999999996,
+      "rationale_cn": "Brazil三罚或前四罚内快速建立不可追优势的低概率路径。它需要Japan连续罚失或被Alisson早段扑出，虽有Japan过往世界杯点球出局心理负证据支持，但点球大战通常不应高估碾压式比分。",
+      "rationale_en": "Rationale for 3-0: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "penalty_score": "0-3",
+      "score": "0-3",
+      "team_a_penalties": 0,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.012,
+      "joint_probability": 0.0016230765322545575,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.012,
+      "rationale_cn": "Japan早段三罚全中且Brazil连续失误的反向低概率路径。若Brazil被拖到120分钟后热门压力放大、核心主罚手不在场或体能不佳，存在这种快速崩盘可能，但证据只支持小尾部。",
+      "rationale_en": "Rationale for 0-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PEN_KEEPER",
+      "label_cn": "门将扑点能力",
+      "impact_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+      "label_en": "Penalty-saving ability",
+      "impact_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge.",
+      "text_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+      "text_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge."
+    },
+    {
+      "factor_id": "PEN_TAKER_DEPTH",
+      "label_cn": "主罚手深度",
+      "impact_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+      "label_en": "Penalty taker depth",
+      "impact_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties.",
+      "text_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+      "text_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties."
+    },
+    {
+      "factor_id": "PEN_ON_PITCH",
+      "label_cn": "120分钟后人员留存",
+      "impact_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+      "label_en": "Who remains on the pitch after 120 minutes",
+      "impact_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool.",
+      "text_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+      "text_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool."
+    },
+    {
+      "factor_id": "PEN_PRESSURE",
+      "label_cn": "压力承受",
+      "impact_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+      "label_en": "Pressure handling",
+      "impact_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break.",
+      "text_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+      "text_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break."
+    },
+    {
+      "factor_id": "PEN_HISTORY",
+      "label_cn": "点球经验",
+      "impact_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+      "label_en": "Shootout experience",
+      "impact_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition.",
+      "text_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+      "text_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition."
+    },
+    {
+      "factor_id": "PEN_FOOTEDNESS",
+      "label_cn": "左右脚与射门习惯",
+      "impact_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+      "label_en": "Footedness and shooting habits",
+      "impact_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability.",
+      "text_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+      "text_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time. Inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeeper/taker information and pressure factors.",
+  "axis_note_en": "The vertical axis is Team A converted penalties and the horizontal axis is Team B converted penalties; 6+ means sudden-death rounds from the sixth kick onward. Probabilities are conditional on reaching penalties."
+}

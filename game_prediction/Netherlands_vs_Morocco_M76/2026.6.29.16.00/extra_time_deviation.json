@@ -1,0 +1,485 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.41258566978193156,
+      "conditional_probability": 0.41258566978193156,
+      "joint_probability": 0.11277341640706133,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.41258566978193156,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "最高路径。该分支已以90分钟打平为条件，常见起点是1-1、2-2和0-0；其中1-1与0-0占比很高，天然支持加时低增量。摩洛哥紧凑中低位、淘汰赛风险厌恶和布努点球履历提高其接受拖入点球的策略价值；荷兰虽有控球推进优势，但在30分钟短样本内未必能把外围压制转化为高质量进球。",
+      "rationale_en": "Rationale for 0-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.23085150571131882,
+      "conditional_probability": 0.23085150571131882,
+      "joint_probability": 0.06309941156109383,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.23085150571131882,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "第二主线，指荷兰加时净增一球。德容、赫拉芬贝赫、赖因德斯带来的中场推进、二点回收和后段跑动深度，使荷兰在加时仍更可能持续制造阵地压迫。若90分钟起点为0-0或1-1，且摩洛哥后腰横移和禁区弧顶保护下降，荷兰小胜破局最合理。",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Rationale for 1-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.1571754932502597,
+      "conditional_probability": 0.1571754932502597,
+      "joint_probability": 0.04296130148840433,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.1571754932502597,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "摩洛哥加时小胜的活跃尾部。若荷兰为避免点球而提高边后卫和中场站位，身后空间会放大；摩洛哥可通过哈基米、布拉欣或右肋快速出球完成转换偷袭。该路径在90分钟2-2或更高比分平局起点下升权，但整体仍低于荷兰1-0。",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Rationale for 0-1: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.10805815160955354,
+      "conditional_probability": 0.10805815160955354,
+      "joint_probability": 0.029535894773277976,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.10805815160955354,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时双方各进一球后仍平，进入点球。该路径主要来自90分钟已较开放的2-2或3-3以上起点，也可能由体能下降导致压迫质量和回防间距同时变差。荷兰持续推进与摩洛哥反击互换机会，但不是低增量主线。",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Rationale for 1-1: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.02357632398753895,
+      "conditional_probability": 0.02357632398753895,
+      "joint_probability": 0.0064441952232606485,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.02357632398753895,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "荷兰多球加时胜的最主要Other尾部。通常需要荷兰在加时前15分钟先破局，迫使摩洛哥前压，再利用身后空间、二点球或转换追加第二球。因需要早段进球触发，概率明显低于1-0。",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Rationale for 2-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.013752855659397717,
+      "conditional_probability": 0.013752855659397717,
+      "joint_probability": 0.0037591138802353773,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.013752855659397717,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "摩洛哥两球加时胜尾部。触发条件通常是摩洛哥先通过右路转换得手，随后荷兰全面压上，反而再次暴露身后空间。该路径有哈基米和布拉欣转换机制支撑，但需要连续高效率反击兑现，因此低于0-1。",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Rationale for 0-2: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.01367088607594937,
+      "conditional_probability": 0.01367088607594937,
+      "joint_probability": 0.003736708860759496,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.01367088607594937,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Rationale for 2-1: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.01367088607594937,
+      "conditional_probability": 0.01367088607594937,
+      "joint_probability": 0.003736708860759496,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.01367088607594937,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Rationale for 1-2: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.006151898734177215,
+      "conditional_probability": 0.006151898734177215,
+      "joint_probability": 0.0016815189873417727,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.006151898734177215,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Rationale for 2-2: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.004101265822784812,
+      "conditional_probability": 0.004101265822784812,
+      "joint_probability": 0.001121012658227849,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.004101265822784812,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "Rationale for 3-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.004101265822784812,
+      "conditional_probability": 0.004101265822784812,
+      "joint_probability": 0.001121012658227849,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.004101265822784812,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "Rationale for 0-3: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "3-1",
+      "score": "3-1",
+      "increment": "3-1",
+      "probability": 0.0034177215189873426,
+      "conditional_probability": 0.0034177215189873426,
+      "joint_probability": 0.000934177215189874,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0034177215189873426,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "Rationale for 3-1: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "1-3",
+      "score": "1-3",
+      "increment": "1-3",
+      "probability": 0.0034177215189873426,
+      "conditional_probability": 0.0034177215189873426,
+      "joint_probability": 0.000934177215189874,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0034177215189873426,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "Rationale for 1-3: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "3-2",
+      "score": "3-2",
+      "increment": "3-2",
+      "probability": 0.0027341772151898746,
+      "conditional_probability": 0.0027341772151898746,
+      "joint_probability": 0.0007473417721518993,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0027341772151898746,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "Rationale for 3-2: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "label": "2-3",
+      "score": "2-3",
+      "increment": "2-3",
+      "probability": 0.0027341772151898746,
+      "conditional_probability": 0.0027341772151898746,
+      "joint_probability": 0.0007473417721518993,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0027341772151898746,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "Rationale for 2-3: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.23085150571131882,
+      "joint_probability": 0.06309941156109383,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.23085150571131882
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.1571754932502597
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "第二主线，指荷兰加时净增一球。德容、赫拉芬贝赫、赖因德斯带来的中场推进、二点回收和后段跑动深度，使荷兰在加时仍更可能持续制造阵地压迫。若90分钟起点为0-0或1-1，且摩洛哥后腰横移和禁区弧顶保护下降，荷兰小胜破局最合理。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal decision in extra time through a counterattack, set piece, or substitute impact.",
+      "rationale_en": "Rationale for 1-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.10805815160955354,
+      "joint_probability": 0.029535894773277976,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.10805815160955354
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.01367088607594937
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.01367088607594937
+        },
+        {
+          "score": "2-2",
+          "increment": "2-2",
+          "probability": 0.006151898734177215
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时双方各进一球后仍平，进入点球。该路径主要来自90分钟已较开放的2-2或3-3以上起点，也可能由体能下降导致压迫质量和回防间距同时变差。荷兰持续推进与摩洛哥反击互换机会，但不是低增量主线。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both teams score in extra time as a cautious game turns into a more open exchange.",
+      "rationale_en": "Rationale for 1-1: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.02357632398753895,
+      "joint_probability": 0.0064441952232606485,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.02357632398753895
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.013752855659397717
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.01367088607594937
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.01367088607594937
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "0-2",
+        "2-1"
+      ],
+      "rationale_cn": "荷兰多球加时胜的最主要Other尾部。通常需要荷兰在加时前15分钟先破局，迫使摩洛哥前压，再利用身后空间、二点球或转换追加第二球。因需要早段进球触发，概率明显低于1-0。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "An extra-time breakthrough where one side wins by at least two goals or the phase reaches three or more goals.",
+      "rationale_en": "Rationale for 2-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "ET_FATIGUE",
+      "label_cn": "体能消耗",
+      "impact_cn": "90分钟后Netherlands与Morocco的跑动衰减、防线回收和二点保护决定加时是否被打开。",
+      "label_en": "Fatigue load",
+      "impact_en": "After 90 minutes, the running drop-off, defensive recovery and second-ball protection of the Netherlands and Morocco determine whether extra time opens up.",
+      "text_cn": "90分钟后Netherlands与Morocco的跑动衰减、防线回收和二点保护决定加时是否被打开。",
+      "text_en": "After 90 minutes, the running drop-off, defensive recovery and second-ball protection of the Netherlands and Morocco determine whether extra time opens up."
+    },
+    {
+      "factor_id": "ET_BENCH",
+      "label_cn": "替补深度",
+      "impact_cn": "边路、前锋和中场替补能否带来速度与对抗优势，是加时一球决胜的核心变量。",
+      "label_en": "Bench depth",
+      "impact_en": "Whether wide, forward and midfield substitutes can add speed and dueling advantages is a core variable for a one-goal extra-time decision.",
+      "text_cn": "边路、前锋和中场替补能否带来速度与对抗优势，是加时一球决胜的核心变量。",
+      "text_en": "Whether wide, forward and midfield substitutes can add speed and dueling advantages is a core variable for a one-goal extra-time decision."
+    },
+    {
+      "factor_id": "ET_RISK",
+      "label_cn": "教练风险偏好",
+      "impact_cn": "教练是主动在加时解决比赛，还是降低风险拖入点球，会直接改变加时增量矩阵。",
+      "label_en": "Coach risk preference",
+      "impact_en": "Whether the coach tries to settle the match in extra time or lowers risk to reach penalties directly changes the extra-time increment matrix.",
+      "text_cn": "教练是主动在加时解决比赛，还是降低风险拖入点球，会直接改变加时增量矩阵。",
+      "text_en": "Whether the coach tries to settle the match in extra time or lowers risk to reach penalties directly changes the extra-time increment matrix."
+    },
+    {
+      "factor_id": "ET_SET_PIECES",
+      "label_cn": "定位球与二点球",
+      "impact_cn": "体能下降后运动战质量下降，角球、任意球和禁区二点球权重上升。",
+      "label_en": "Set pieces and second balls",
+      "impact_en": "As fatigue reduces open-play quality, corners, free kicks and box second balls gain weight.",
+      "text_cn": "体能下降后运动战质量下降，角球、任意球和禁区二点球权重上升。",
+      "text_en": "As fatigue reduces open-play quality, corners, free kicks and box second balls gain weight."
+    },
+    {
+      "factor_id": "ET_CARD",
+      "label_cn": "牌面与犯规压力",
+      "impact_cn": "黄牌、红牌和犯规风险会改变防守动作尺度，增加加时突然失衡概率。",
+      "label_en": "Cards and foul pressure",
+      "impact_en": "Yellow cards, red cards and foul risk change defensive behavior and increase the probability of a sudden extra-time imbalance.",
+      "text_cn": "黄牌、红牌和犯规风险会改变防守动作尺度，增加加时突然失衡概率。",
+      "text_en": "Yellow cards, red cards and foul risk change defensive behavior and increase the probability of a sudden extra-time imbalance."
+    },
+    {
+      "factor_id": "ET_PENALTY_SHADOW",
+      "label_cn": "点球预期",
+      "impact_cn": "若一方相信点球优势，加时后段可能更保守；若点球劣势明显，则可能提前提速。",
+      "label_en": "Penalty expectation",
+      "impact_en": "If one side believes it has a shootout edge, it may become more conservative late in extra time; if it sees a shootout disadvantage, it may speed up earlier.",
+      "text_cn": "若一方相信点球优势，加时后段可能更保守；若点球劣势明显，则可能提前提速。",
+      "text_en": "If one side believes it has a shootout edge, it may become more conservative late in extra time; if it sees a shootout disadvantage, it may speed up earlier."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw-score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}

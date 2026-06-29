@@ -388,6 +388,57 @@ groupMatches.forEach((match) => {
 });
 
 let nextKnockoutId = groupMatches.length + 1;
+const knockoutScheduleUtc = {
+  M73: "2026-06-28T19:00:00Z",
+  M74: "2026-06-29T20:30:00Z",
+  M75: "2026-06-30T01:00:00Z",
+  M76: "2026-06-29T17:00:00Z",
+  M77: "2026-06-30T21:00:00Z",
+  M78: "2026-06-30T17:00:00Z",
+  M79: "2026-07-01T01:00:00Z",
+  M80: "2026-07-01T16:00:00Z",
+  M81: "2026-07-02T00:00:00Z",
+  M82: "2026-07-01T20:00:00Z",
+  M83: "2026-07-02T23:00:00Z",
+  M84: "2026-07-02T19:00:00Z",
+  M85: "2026-07-03T03:00:00Z",
+  M86: "2026-07-03T22:00:00Z",
+  M87: "2026-07-04T01:30:00Z",
+  M88: "2026-07-03T18:00:00Z",
+  M89: "2026-07-04T21:00:00Z",
+  M90: "2026-07-04T17:00:00Z",
+  M91: "2026-07-05T20:00:00Z",
+  M92: "2026-07-06T00:00:00Z",
+  M93: "2026-07-06T19:00:00Z",
+  M94: "2026-07-07T00:00:00Z",
+  M95: "2026-07-07T16:00:00Z",
+  M96: "2026-07-07T20:00:00Z",
+  M97: "2026-07-09T20:00:00Z",
+  M98: "2026-07-10T19:00:00Z",
+  M99: "2026-07-11T21:00:00Z",
+  M100: "2026-07-12T01:00:00Z",
+  M101: "2026-07-14T19:00:00Z",
+  M102: "2026-07-15T19:00:00Z",
+  M103: "2026-07-18T21:00:00Z",
+  M104: "2026-07-19T19:00:00Z"
+};
+const knockoutMatchStatusByNo = {
+  M73: "finished"
+};
+const formatKnockoutUtcTime = (value) => {
+  const date = new Date(value);
+
+  if (!value || Number.isNaN(date.getTime())) {
+    return "";
+  }
+
+  const month = date.getUTCMonth() + 1;
+  const day = date.getUTCDate();
+  const hour = String(date.getUTCHours()).padStart(2, "0");
+  const minute = String(date.getUTCMinutes()).padStart(2, "0");
+
+  return `${month}月${day}日 ${hour}:${minute} UTC`;
+};
 const knockoutMatches = [
   ["1/16 决赛", 16],
   ["1/8 决赛", 8],
@@ -397,20 +448,23 @@ const knockoutMatches = [
   ["决赛", 1]
 ].flatMap(([stage, count]) => Array.from({ length: count }, () => {
   const matchNo = nextKnockoutId++;
+  const matchId = `M${matchNo}`;
+  const kickoffUtc = knockoutScheduleUtc[matchId] || "";
 
   return {
-    id: `M${matchNo}`,
+    id: matchId,
     stage,
-    round: `M${matchNo}`,
-    matchNo: `M${matchNo}`,
-    matchTime: "",
+    round: matchId,
+    matchNo: matchId,
+    matchTime: formatKnockoutUtcTime(kickoffUtc),
+    kickoffUtc,
     venue: "",
     homeTeam: "",
     awayTeam: "",
     homeTeamId: "",
     awayTeamId: "",
     predictionStatus: "pending",
-    matchStatus: "upcoming",
+    matchStatus: knockoutMatchStatusByNo[matchId] || "upcoming",
     predictedScore: "",
     winReference: "",
     hitStatus: "待预测",
@@ -424,13 +478,13 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M73"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M76", "M74", "M75"];
 
 window.WORLD_CUP_KNOCKOUT_PROGRESS = {
   rounds: {
     round32: {
       M73: {
-        status: "scheduled",
+        status: "finished",
         teams: ["RSA", "CAN"]
       }
     }
@@ -461,8 +515,8 @@ window.WORLD_CUP_ROUTE_DATA = {
         name: "ROUND OF 16",
         nameZh: "16 强",
         nodes: [
-          { id: "left-r16-1", round: "round16", status: "empty", matchNo: "M89", slotLabel: "M73胜者 vs M75胜者", descriptionZh: "16强 · M89" },
-          { id: "left-r16-2", round: "round16", status: "empty", matchNo: "M90", slotLabel: "M74胜者 vs M77胜者", descriptionZh: "16强 · M90" },
+          { id: "left-r16-1", round: "round16", status: "empty", matchNo: "M90", slotLabel: "M73胜者 vs M75胜者", descriptionZh: "16强 · M90" },
+          { id: "left-r16-2", round: "round16", status: "empty", matchNo: "M89", slotLabel: "M74胜者 vs M77胜者", descriptionZh: "16强 · M89" },
           { id: "left-r16-3", round: "round16", status: "empty", matchNo: "M93", slotLabel: "M83胜者 vs M84胜者", descriptionZh: "16强 · M93" },
           { id: "left-r16-4", round: "round16", status: "empty", matchNo: "M94", slotLabel: "M81胜者 vs M82胜者", descriptionZh: "16强 · M94" }
         ]

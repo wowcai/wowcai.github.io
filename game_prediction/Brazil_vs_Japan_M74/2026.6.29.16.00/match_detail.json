@@ -1,0 +1,1413 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "统一淘汰赛长路径pipeline：一次证据收集、一次MAS路径讨论、完整0-90/90-120/点球路径分布，再派生常规时间、加时和点球视图。",
+  "architecture_cn": "加时和点球不再是独立后处理输出，而是完整淘汰赛路径分布中的条件分支；前端三Tab只是同一分布的不同切片。",
+  "match": {
+    "match_id": "M76",
+    "team_a": "Brazil",
+    "team_b": "Japan",
+    "kickoff_utc": "2026-06-29T17:00:00Z",
+    "venue": "",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.6171867270433684,
+      "team_b": 0.38281327295663153,
+      "favorite": "Brazil"
+    },
+    "resolution": {
+      "normal_time": 0.7148148148148153,
+      "extra_time": 0.14992880749730578,
+      "penalties": 0.13525637768787988
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13518518518518519,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.1274074074074074,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09444444444444444,
+        "goals_a": 2,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Brazil常规时间晋级。",
+        "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+        "probability": 0.12740740740740752,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "N_1-0_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time.",
+        "summary_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+        "probability": 0.036915311187476166,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+        "probability": 0.0077653993890798075,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "Brazil",
+        "path_id": "P_1-1_0-0_4-3_team_a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Brazil常规时间晋级。",
+        "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+        "probability": 0.12740740740740752,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "N_1-0_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time.",
+        "summary_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+        "probability": 0.036915311187476166,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+        "probability": 0.0077653993890798075,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "Brazil",
+        "path_id": "P_1-1_0-0_4-3_team_a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties."
+      }
+    ],
+    "favorite": "Brazil",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.13525637768787988,
+        "probability_band": "13.5%",
+        "representative_paths": [
+          {
+            "path_id": "P_1-1_0-0_4-3_team_a",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "4-3",
+            "penalty_winner": "team_a",
+            "advancer_side": "team_a",
+            "advancer_team": "Brazil",
+            "probability": 0.0077653993890798075,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+            "path_probability": 0.0077653993890798075,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties."
+          },
+          {
+            "path_id": "P_1-1_0-0_3-4_team_b",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "advancer_side": "team_b",
+            "advancer_team": "Japan",
+            "probability": 0.006512915616647581,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Japan点球晋级。",
+            "path_probability": 0.006512915616647581,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Japan advances on penalties."
+          },
+          {
+            "path_id": "P_1-1_0-0_5-4_team_a",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "5-4",
+            "penalty_winner": "team_a",
+            "advancer_side": "team_a",
+            "advancer_team": "Brazil",
+            "probability": 0.006262418862161135,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+            "path_probability": 0.006262418862161135,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH PENALTY DRAG candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.14992880749730578,
+        "probability_band": "15.0%",
+        "representative_paths": [
+          {
+            "path_id": "ET_1-1_1-0_A",
+            "resolution_type": "extra_time",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "1-0",
+            "after_extra_time_score": "2-1",
+            "extra_time_result": "team_a",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "Brazil",
+            "probability": 0.036915311187476166,
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+            "path_probability": 0.036915311187476166,
+            "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment."
+          },
+          {
+            "path_id": "ET_0-0_1-0_A",
+            "resolution_type": "extra_time",
+            "normal_time_score": "0-0",
+            "normal_time_result": "draw",
+            "extra_time_increment": "1-0",
+            "after_extra_time_score": "1-0",
+            "extra_time_result": "team_a",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "Brazil",
+            "probability": 0.02528445971744943,
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Brazil加时晋级。",
+            "path_probability": 0.02528445971744943,
+            "summary_en": "After 0-0 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment."
+          },
+          {
+            "path_id": "ET_1-1_0-1_B",
+            "resolution_type": "extra_time",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-1",
+            "after_extra_time_score": "1-2",
+            "extra_time_result": "team_b",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Japan",
+            "probability": 0.023731271477663244,
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Japan加时晋级。",
+            "path_probability": 0.023731271477663244,
+            "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Japan advances with a 0-1 extra-time increment."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH EXTRA TIME DECISION candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2825781596029021,
+        "probability_band": "28.3%",
+        "representative_paths": [
+          {
+            "path_id": "N_0-1_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "0-1",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "0-1",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Japan",
+            "probability": 0.09148148148148155,
+            "summary_cn": "90分钟0-1，Japan常规时间晋级。",
+            "path_probability": 0.09148148148148155,
+            "summary_en": "After a 0-1 scoreline in 90 minutes, Japan advances in normal time."
+          },
+          {
+            "path_id": "N_1-2_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "1-2",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "1-2",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Japan",
+            "probability": 0.0633333333333334,
+            "summary_cn": "90分钟1-2，Japan常规时间晋级。",
+            "path_probability": 0.0633333333333334,
+            "summary_en": "After a 1-2 scoreline in 90 minutes, Japan advances in normal time."
+          },
+          {
+            "path_id": "N_0-2_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "0-2",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "0-2",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Japan",
+            "probability": 0.039259259259259285,
+            "summary_cn": "90分钟0-2，Japan常规时间晋级。",
+            "path_probability": 0.039259259259259285,
+            "summary_en": "After a 0-2 scoreline in 90 minutes, Japan advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH UNDERDOG ADVANCE candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 336,
+      "raw_top_paths": [
+        {
+          "path_id": "N_1-0_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Brazil",
+          "probability": 0.12740740740740752,
+          "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+          "path_probability": 0.12740740740740752,
+          "summary_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time."
+        },
+        {
+          "path_id": "N_2-1_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-1",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-1",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Brazil",
+          "probability": 0.09444444444444451,
+          "summary_cn": "90分钟2-1，Brazil常规时间晋级。",
+          "path_probability": 0.09444444444444451,
+          "summary_en": "After a 2-1 scoreline in 90 minutes, Brazil advances in normal time."
+        },
+        {
+          "path_id": "N_0-1_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-1",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-1",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Japan",
+          "probability": 0.09148148148148155,
+          "summary_cn": "90分钟0-1，Japan常规时间晋级。",
+          "path_probability": 0.09148148148148155,
+          "summary_en": "After a 0-1 scoreline in 90 minutes, Japan advances in normal time."
+        },
+        {
+          "path_id": "N_2-0_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-0",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-0",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Brazil",
+          "probability": 0.07222222222222227,
+          "summary_cn": "90分钟2-0，Brazil常规时间晋级。",
+          "path_probability": 0.07222222222222227,
+          "summary_en": "After a 2-0 scoreline in 90 minutes, Brazil advances in normal time."
+        },
+        {
+          "path_id": "N_1-2_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-2",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-2",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Japan",
+          "probability": 0.0633333333333334,
+          "summary_cn": "90分钟1-2，Japan常规时间晋级。",
+          "path_probability": 0.0633333333333334,
+          "summary_en": "After a 1-2 scoreline in 90 minutes, Japan advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Brazil常规时间晋级。",
+          "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+          "probability": 0.12740740740740752,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Brazil",
+          "path_id": "N_1-0_A",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time.",
+          "summary_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+          "probability": 0.036915311187476166,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Brazil",
+          "path_id": "ET_1-1_1-0_A",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment.",
+          "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+          "probability": 0.0077653993890798075,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-3",
+          "advancer_team": "Brazil",
+          "path_id": "P_1-1_0-0_4-3_team_a",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Brazil常规时间晋级。",
+        "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+        "probability": 0.12740740740740752,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "N_1-0_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time.",
+        "summary_en": "After a 1-0 scoreline in 90 minutes, Brazil advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+        "probability": 0.036915311187476166,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Brazil advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+        "probability": 0.0077653993890798075,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "Brazil",
+        "path_id": "P_1-1_0-0_4-3_team_a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Brazil advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放／大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.23555555555555557,
+          "base_event_probability": 0.23555555555555557,
+          "attention_level": "low",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.05187603406173167,
+              "conditional_probability": 0.2202284464884835,
+              "script_cn": "巴西以维尼修斯左路单挑与库尼亚中路占据制造多次机会先取得领先，日本通过中路压缩后的纵向反击与定位球(镰田大地式后插上)回应；双方在60分钟后互相加码，把1-1/2-1的胶着推成2-2，90分钟战平进入加时。",
+              "rationale_cn": "候选池中条件概率最高的开放比分(0.200)，且双方均两度破门的剧本同时被巴西进攻证据(库尼亚梅开二度、3-0苏格兰)与日本进攻证据(4-0突尼斯上田梅开二度、对荷兰进球)支撑，是开放平局的合理主轴。保留grade 2，但提示其为90分钟平局而非决定性大比分。",
+              "evidence_ids": [
+                "E_584d7c1f2a5a",
+                "E_0287a2826eaa",
+                "E_406b34e11c5a",
+                "E_0fcac8d588c1",
+                "E_d57582b4ec93"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 2-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.04225579749801656,
+              "conditional_probability": 0.17938781956705144,
+              "script_cn": "巴西保持4-3-3中场保护并通过维尼修斯、库尼亚与中场控制取得3球，日本在巴西边后卫压上或后段对攻中通过纵向反击或定位球追回一球，巴西3-1开放取胜。",
+              "rationale_cn": "开放情景中偏巴西的四球路径，基础条件概率较高(0.197)，由巴西近期3-0胜场与战术改善(E_6f70815fc463)支撑，日本一球由其攻击证据兜底。其概率虽高于3-2，但因属偏‘最低达标’的四球比分，提案未让其反超更开放的3-2，符合反压缩原则，维持grade 1。",
+              "evidence_ids": [
+                "E_584d7c1f2a5a",
+                "E_0287a2826eaa",
+                "E_6f70815fc463",
+                "E_406b34e11c5a"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 3-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.030768650808610108,
+              "conditional_probability": 0.13062163079126932,
+              "script_cn": "对攻局面下巴西凭借总体实力、个人攻击质量与内马尔的对日本进球能力多打进一球，但日本在巴西边后卫前压、阵型变薄时通过纵向反击连续回击，最终巴西3-2险胜，全场5球。",
+              "rationale_cn": "真正意义上的开放比分(5球)，比最低达标的3-1更能反映双方证据拉扯：巴西进攻占优(库尼亚、内马尔、3-0胜场)同时日本具备惩罚巴西失误的连续回击路径(2025年3-2逆转)。提案让3-2优先于概率更高的3-1，方向正确，保留grade 2。",
+              "evidence_ids": [
+                "E_584d7c1f2a5a",
+                "E_0287a2826eaa",
+                "E_239c3e3e2fa0",
+                "E_7043812768a3",
+                "E_406b34e11c5a"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 3-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.01576324967534705,
+              "conditional_probability": 0.06691945616892615,
+              "script_cn": "巴西久攻不下或先领先后阵型前压，日本以3-4-2-1/变阵压缩中路并打巴西身后空间，依靠上田绮世的终结与镰田大地的后插上完成连续回击，最终日本2-3带走比赛。",
+              "rationale_cn": "爆冷方向与开放大比分的重叠路径，直接对应rollout_4的代表比分，并由日本本届攻击证据(4-0突尼斯、对荷兰进球)与2025年10月3-2逆转(友谊赛、降权)支撑。基础条件概率较低(0.061)，故维持grade 1，但其证据基础真实，避免了把日本开放取胜机械删除。",
+              "evidence_ids": [
+                "E_7043812768a3",
+                "E_8329d41af6c2",
+                "E_406b34e11c5a",
+                "E_d57582b4ec93",
+                "E_0fcac8d588c1"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 2-3: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-1",
+            "3-2"
+          ],
+          "rationale_cn": "high_scoring 的基础事件概率约0.236，属可成立但非主线的尾部情景：9条宏观推演中仅2条触及4球及以上（2-3、0-4），且这两条都偏向日本而非巴西，提示‘比赛被打开’的机制更可能由日本纵向反击触发，而非巴西单边碾压。候选池条件概率最高的是2-2(0.200)与3-1(0.197)，提案将更开放的3-2(0.099)抬到与2-2并列的最高关注，并未让最低达标的3-1反超3-2，符合反压缩要求。保留四个候选：2-2覆盖双方均两度破门的开放平局，3-2覆盖巴西在对攻中略胜，2-3覆盖日本利用巴西边后卫前压后空间的开放取胜，3-1覆盖巴西占优但日本追回一球的四球路径。注意候选池不含0-4，故rollout_9的日本大胜无法直接映射，只能由2-3/1-3近似。",
+          "caution_cn": "该情景为尾部：9条推演中7条为低比分（0-0/1-1/1-0/2-0/0-1），主预测前排比分亦集中在1-1/1-0/0-0，说明4+球需要比赛被显著打开才成立。2-2虽为候选池内概率最高的开放比分，但其在90分钟为平局并将进入加时，不应被读作决定性的大比分结果。2025年10月日本3-2逆转巴西为友谊赛，作为开放/失控剧本的历史参照需降权，不能等同淘汰赛强度。机制方向(total_goals=neutral)与巴西4-3-3中位保护(E_6f70815fc463)是抑制总进球上行的反向因素。候选池缺少0-4，故偏向日本的开放大胜只能用2-3/3-1近似表达。",
+          "supporting_evidence_ids": [
+            "E_584d7c1f2a5a",
+            "E_0287a2826eaa",
+            "E_0fcac8d588c1",
+            "E_406b34e11c5a",
+            "E_d57582b4ec93",
+            "E_7043812768a3",
+            "E_8329d41af6c2",
+            "E_239c3e3e2fa0",
+            "E_6f70815fc463"
+          ],
+          "counter_evidence_ids": [
+            "E_6f70815fc463",
+            "E_7b4077a2546e",
+            "E_2016565ceed4"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least four total goals.",
+          "rationale_en": "Rationale: this open / high-scoring candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast.",
+          "caution_en": "Caution: this is a open / high-scoring tail scenario. Treat the listed scores as deviation candidates, not as the central prediction, and read them together with the main distribution and counter-evidence."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒／崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.09962962962962962,
+          "base_event_probability": 0.09962962962962962,
+          "attention_level": "low",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.03524897872132992,
+              "conditional_probability": 0.35380015816948246,
+              "script_cn": "巴西保持4-3-3距离，卡塞米罗居中限制日本反抢后的第一脚纵向出球；早段由库尼亚或维尼修斯打破僵局后控场降速，日本在久保受限、远藤缺席下中路创造力不足，巴西零封扩大至三球。",
+              "rationale_cn": "巴西方向最稳固的崩盘路径，条件概率0.316为池中最高。证据真实：本届3-0击败海地(库尼亚梅开二度)与3-0击败苏格兰、4-3-3中位防守与卡塞米罗居中保护改善结构；rollout_5代表比分即为3-0。比5球以上更贴合证据，给予最高支持。",
+              "evidence_ids": [
+                "E_584d7c1f2a5a",
+                "E_0287a2826eaa",
+                "E_6f70815fc463"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 3-0: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.015937972301681733,
+              "conditional_probability": 0.1599722126934598,
+              "script_cn": "巴西领先后比赛被打开，日本前压并通过纵向反击或定位球扳回一球，但巴西攻击端继续做大比分至四球。",
+              "rationale_cn": "条件概率0.160为反向之外第二高，且能同时容纳巴西大胜与日本条件性进球两条机制。巴西攻击个人能力与近期大胜记录支持四球，日本本届进球状态(镰田、上田)支持其拿到一个回应进球。",
+              "evidence_ids": [
+                "E_584d7c1f2a5a",
+                "E_406b34e11c5a"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 4-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.01589421494878629,
+              "conditional_probability": 0.15953301249711146,
+              "script_cn": "在巴西已确立控制后，日本进攻被持续压制、零射正延续，巴西凭借个人质量与定位球将零封扩大到四球。",
+              "rationale_cn": "进入一边倒后的深化零封，条件概率0.145为池中第三。巴西中位防守改善、阿利松与马尔基尼奥斯稳定、日本关键创造点受限提供机制基础；但日本本届仍有进球与反击能力，零封到四球只能给有限正支持。",
+              "evidence_ids": [
+                "E_6f70815fc463",
+                "E_584d7c1f2a5a"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 4-0: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.013155805445689058,
+              "conditional_probability": 0.1320471178563586,
+              "script_cn": "巴西久攻不下后切到更激进结构、边后卫过度前压，中场保护变薄；日本压缩中路后以纵向反击连续惩罚巴西身后空间，完成三球净胜。",
+              "rationale_cn": "替换原提案的0-4：反向崩盘中0-3条件概率0.171远高于0-4的0.022，是更合理、更具代表性的尾部比分。证据链相同(2025年逆转惩罚巴西失误、本届4-0大胜突尼斯、机制卡所述巴西边后卫前压留出反击空间)，但2025为友谊赛须降权且巴西整体实力与交锋史明显占优，故仅给中性支持。原提案机械跳至更极端的0-4、忽略更合理的0-3，已纠正。",
+              "evidence_ids": [
+                "E_7043812768a3",
+                "E_8329d41af6c2",
+                "E_0fcac8d588c1",
+                "E_406b34e11c5a"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 0-3: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-1",
+            "4-0"
+          ],
+          "rationale_cn": "一边倒情景以巴西方向为主：主预测team_a_win=0.456、xg差(1.42 vs 1.04)、交锋史(14战11胜)与本届3-0胜绩共同支撑巴西大胜路径，3-0/4-0/4-1为该方向条件概率最高的三档(0.316/0.145/0.160)，证据与机制一致。反向崩盘客观存在但弱：日本2025年逆转为3-2(并非大胜且为友谊赛已降权)、本届4-0仅对突尼斯，巴西4-3-3中场保护改善与门将中卫稳定性压低了被打崩到3球以上的可能。因此反向只保留统计权重最高、最具代表性的0-3作为低概率尾部，未采纳更极端的0-4。",
+          "caution_cn": "反向比分(0-3)依赖巴西边后卫过度前压与中场失衡的条件链，证据偏弱且2025逆转为友谊赛，须降权；勿将其与巴西方向同级看待。同时避免把巴西大胜机械上推至5球以上，5-x档条件概率显著偏低且无对应机制证据。",
+          "supporting_evidence_ids": [
+            "E_584d7c1f2a5a",
+            "E_0287a2826eaa",
+            "E_6f70815fc463",
+            "E_406b34e11c5a",
+            "E_7043812768a3"
+          ],
+          "counter_evidence_ids": [
+            "E_871427950630",
+            "E_6c47a24d9bc2",
+            "E_d57582b4ec93"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either team wins by at least three goals.",
+          "rationale_en": "Rationale: this one-sided / collapse candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast.",
+          "caution_en": "Caution: this is a one-sided / collapse tail scenario. Treat the listed scores as deviation candidates, not as the central prediction, and read them together with the main distribution and counter-evidence."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷",
+          "definition_cn": "非热门方 Japan 获胜。",
+          "probability": 0.2592592592592593,
+          "base_event_probability": 0.2592592592592593,
+          "attention_level": "medium",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.09840367073304764,
+              "conditional_probability": 0.37955701568461225,
+              "script_cn": "日本保持低位紧凑（low_block 0.82），诱导巴西边路推进后攻击边后卫身后，靠一次高质量纵向反击或定位球取得唯一进球；巴西4-3-3久攻不下，未能在90分钟打开比赛。最贴近upset的主形态，概率最高的爆冷比分。",
+              "rationale_cn": "条件概率0.353为upset内最高，且与日本反击机制、防守紧凑度及多条0-1类rollout（rollout_2、rollout_8）直接吻合，证据与机制双重支撑。",
+              "evidence_ids": [
+                "E_6c47a24d9bc2",
+                "E_225c17db675c",
+                "E_7043812768a3"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 0-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.06812561819980222,
+              "conditional_probability": 0.2627702416278085,
+              "script_cn": "巴西先或后取得一球，但日本通过两次高质量转换或定位球完成反超，攻防转换剧本部分复刻2025年下半场失误被惩罚的模式，镰田/上田类球员完成终结。",
+              "rationale_cn": "条件概率0.244，对应巴西失衡后双方互交进球的开放剧本，直接由逆转证据与纵向反击机制支撑，非机械极端。",
+              "evidence_ids": [
+                "E_7043812768a3",
+                "E_8329d41af6c2",
+                "E_d57582b4ec93"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 1-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.04222991537531598,
+              "conditional_probability": 0.16288681644764733,
+              "script_cn": "日本反击效率高，上田绮世为参照点的前线完成多次终结（参照4-0突尼斯中其梅开二度的能力），巴西压上失衡后被清晰击穿，日本零封取胜。",
+              "rationale_cn": "原提案将此比分降为grade 0缺乏依据：其条件概率0.151为upset内第三高，且日本一场内连入两球及干净零封均有真实战例（E_406b34e11c5a、E_0fcac8d588c1）。这是一个证据完备的一边倒爆冷形态，应恢复为中等支撑，纠正不当压制。",
+              "evidence_ids": [
+                "E_406b34e11c5a",
+                "E_0fcac8d588c1",
+                "E_6c47a24d9bc2"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 0-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.012858555885262121,
+              "conditional_probability": 0.049597286986011034,
+              "script_cn": "开放对攻，双方多次互交进球，最贴近2025年友谊赛0-2落后3-2逆转的高比分剧本；巴西边后卫前压留出转换空间被反复利用，日本以一球之差完成高比分爆冷。",
+              "rationale_cn": "条件概率0.056较低，但机制与逆转证据直接对应，且rollout_4代表比分即为2-3，保留为尾部高比分代表，避免把开放大比分一律压回最低达标比分；因属友谊赛外推且概率有限，给予最低支撑等级。",
+              "evidence_ids": [
+                "E_7043812768a3",
+                "E_8329d41af6c2",
+                "E_225c17db675c"
+              ],
+              "mechanism_ids": [
+                "H_BRA_JPN_001"
+              ],
+              "script_en": "Scenario script for 2-3: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "日本本届状态可观（4-0突尼斯、1-1战平瑞典晋级，上田绮世、镰田大地均有进球记录），战术为3-4-2-1并具备变阵能力，主要机制是中路压缩后的快速纵向反击；预览明确警告巴西边后卫过度前压会让出转换空间。2025年10月日本曾在0-2落后下3-2逆转巴西，被多家媒体反复框定为本场参照。upset 总条件概率0.259并非边缘，证据真实且新鲜，给予中等关注。但巴西通过4-3-3中位防守+卡塞米罗居中已改善结构，历史14次交手11胜，且该次逆转为轮换阵容的友谊赛，外推需降权——故不将本情景推高为高关注。",
+          "caution_cn": "2025年3-2逆转是巴西大幅轮换的友谊赛，不能等同淘汰赛强度，高比分剧本须降权；历史总交锋明显偏向巴西，日本久保受限、远藤伤缺也削弱其中场控制，upset更可能依赖反击效率而非全场压制。",
+          "supporting_evidence_ids": [
+            "E_7043812768a3",
+            "E_8329d41af6c2",
+            "E_225c17db675c",
+            "E_0fcac8d588c1",
+            "E_406b34e11c5a",
+            "E_6c47a24d9bc2",
+            "E_d57582b4ec93"
+          ],
+          "counter_evidence_ids": [
+            "E_6f70815fc463",
+            "E_239c3e3e2fa0",
+            "E_871427950630",
+            "E_0287a2826eaa",
+            "E_584d7c1f2a5a"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "Upset",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale: this upset candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast.",
+          "caution_en": "Caution: this is a upset tail scenario. Treat the listed scores as deviation candidates, not as the central prediction, and read them together with the main distribution and counter-evidence."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "防守",
+          "impact_cn": "FIFA称巴西对海地改用4-3-3中位防守，卡塞米罗居中后结构改善。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_6f70815fc463"
+          ],
+          "source_names": [
+            "FIFA Training Centre"
+          ],
+          "label_en": "Defense",
+          "impact_en": "FIFA reported that Brazil shifted to a 4-3-3 mid-block against Haiti, with the structure improving after Casemiro moved centrally.",
+          "text_cn": "FIFA称巴西对海地改用4-3-3中位防守，卡塞米罗居中后结构改善。",
+          "text_en": "FIFA reported that Brazil shifted to a 4-3-3 mid-block against Haiti, with the structure improving after Casemiro moved centrally."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "防守",
+          "impact_cn": "日本去年曾0-2落后逆转巴西3-2，ESPN称其惩罚了巴西防守失误。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_7043812768a3",
+            "E_8329d41af6c2",
+            "E_225c17db675c"
+          ],
+          "source_names": [
+            "ESPN",
+            "Reuters"
+          ],
+          "label_en": "Defense",
+          "impact_en": "Japan came from 0-2 down to beat Brazil 3-2 last year, with ESPN noting that they punished Brazil defensive mistakes.",
+          "text_cn": "日本去年曾0-2落后逆转巴西3-2，ESPN称其惩罚了巴西防守失误。",
+          "text_en": "Japan came from 0-2 down to beat Brazil 3-2 last year, with ESPN noting that they punished Brazil defensive mistakes."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "证据因素 3",
+          "impact_cn": "日本预期3-4-2-1且试过3-1-4-2，本届又4-0大胜突尼斯。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_6c47a24d9bc2",
+            "E_0fcac8d588c1",
+            "E_406b34e11c5a"
+          ],
+          "source_names": [
+            "The Guardian",
+            "FIFA"
+          ],
+          "label_en": "Evidence factor 3",
+          "impact_en": "Japan are expected to use a 3-4-2-1 and have tested a 3-1-4-2; they also beat Tunisia 4-0 in this tournament.",
+          "text_cn": "日本预期3-4-2-1且试过3-1-4-2，本届又4-0大胜突尼斯。",
+          "text_en": "Japan are expected to use a 3-4-2-1 and have tested a 3-1-4-2; they also beat Tunisia 4-0 in this tournament."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "阵容",
+          "impact_cn": "内马尔小腿伤后已第76分钟替补复出，FIFA称他正准备面对日本。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_5766ad6a6a4b",
+            "E_239c3e3e2fa0"
+          ],
+          "source_names": [
+            "Yahoo Sports",
+            "FIFA"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Neymar returned as a 76th-minute substitute after a calf issue, and FIFA said he is preparing to face Japan.",
+          "text_cn": "内马尔小腿伤后已第76分钟替补复出，FIFA称他正准备面对日本。",
+          "text_en": "Neymar returned as a 76th-minute substitute after a calf issue, and FIFA said he is preparing to face Japan."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "证据因素 5",
+          "impact_cn": "休斯敦赛时预报体感接近105华氏度，但球场每场将关闭伸缩屋顶。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_7b4077a2546e",
+            "E_2016565ceed4"
+          ],
+          "source_names": [
+            "AccuWeather",
+            "Houston Public Media"
+          ],
+          "label_en": "Evidence factor 5",
+          "impact_en": "The Houston match-time forecast had a heat index near 105°F, but the stadium roof is set to be closed for every match.",
+          "text_cn": "休斯敦赛时预报体感接近105华氏度，但球场每场将关闭伸缩屋顶。",
+          "text_en": "The Houston match-time forecast had a heat index near 105°F, but the stadium roof is set to be closed for every match."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "证据因素 6",
+          "impact_cn": "双方14次交手巴西11胜，日本唯一胜利是去年3-2友谊赛逆转。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_871427950630"
+          ],
+          "source_names": [
+            "Yahoo Sports"
+          ],
+          "label_en": "Evidence factor 6",
+          "impact_en": "Brazil have won 11 of 14 meetings; Japan’s only win was last year’s 3-2 friendly comeback.",
+          "text_cn": "双方14次交手巴西11胜，日本唯一胜利是去年3-2友谊赛逆转。",
+          "text_en": "Brazil have won 11 of 14 meetings; Japan’s only win was last year’s 3-2 friendly comeback."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "Main 90-minute prediction for the full match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.28518518518518565,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.27307216494845354,
+          "joint_probability": 0.07787613592974424,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.27307216494845354
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.17554639175257727
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "巴西加时一球解决是有球分支中的最高项。依据包括巴西纸面深度、边路单挑质量、定位球与禁区前造犯规能力，以及内马尔替补复出后可能提供的有限但真实创造增量。卡塞米罗若仍能保护中路，巴西压上时也不至于完全暴露。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal decision in extra time through a counterattack, set piece, or substitute impact.",
+          "rationale_en": "Rationale for 1-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.09752577319587626,
+          "joint_probability": 0.02781290568919437,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.09752577319587626
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.013670886075949362
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.013670886075949362
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.006151898734177212
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "该项主要来自90分钟2-2或更开放的平局入口，也可能来自巴西先破门后日本被迫前压反扑。由于0-0和1-1低比分入口占主导，加时双方各进一球需要比赛已被转换、失误或后段冒险打开，因此保留约一成而不上调为主路径。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both teams score in extra time as a cautious game turns into a more open exchange.",
+          "rationale_en": "Rationale for 1-1: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.015604123711340201,
+          "joint_probability": 0.004450064910271099,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.015604123711340201
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.013670886075949362
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.013670886075949362
+            },
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.013653608247422675
+            }
+          ],
+          "display_scores": [
+            "0-2",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "日本两球加时胜出通常来自巴西全线压上后的连续反击，第一球后巴西进一步冒险，给日本第二次转换或空门扩大的机会。该路径依赖巴西保护失衡、门将或后场失误、体能崩盘等触发器，因此仍是小尾部。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "An extra-time breakthrough where one side wins by at least two goals or the phase reaches three or more goals.",
+          "rationale_en": "Rationale for 0-2: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_FATIGUE",
+          "label_cn": "体能消耗",
+          "impact_cn": "90分钟后Brazil与Japan的跑动衰减、防线回收和二点保护决定加时是否被打开。",
+          "label_en": "Fatigue load",
+          "impact_en": "After 90 minutes, the running drop-off, defensive recovery and second-ball protection of Brazil and Japan determine whether extra time opens up.",
+          "text_cn": "90分钟后Brazil与Japan的跑动衰减、防线回收和二点保护决定加时是否被打开。",
+          "text_en": "After 90 minutes, the running drop-off, defensive recovery and second-ball protection of Brazil and Japan determine whether extra time opens up."
+        },
+        {
+          "factor_id": "ET_BENCH",
+          "label_cn": "替补深度",
+          "impact_cn": "边路、前锋和中场替补能否带来速度与对抗优势，是加时一球决胜的核心变量。",
+          "label_en": "Bench depth",
+          "impact_en": "Whether wide, forward and midfield substitutes can add speed and dueling advantages is a core variable for a one-goal extra-time decision.",
+          "text_cn": "边路、前锋和中场替补能否带来速度与对抗优势，是加时一球决胜的核心变量。",
+          "text_en": "Whether wide, forward and midfield substitutes can add speed and dueling advantages is a core variable for a one-goal extra-time decision."
+        },
+        {
+          "factor_id": "ET_RISK",
+          "label_cn": "教练风险偏好",
+          "impact_cn": "教练是主动在加时解决比赛，还是降低风险拖入点球，会直接改变加时增量矩阵。",
+          "label_en": "Coach risk preference",
+          "impact_en": "Whether the coach tries to settle the match in extra time or lowers risk to reach penalties directly changes the extra-time increment matrix.",
+          "text_cn": "教练是主动在加时解决比赛，还是降低风险拖入点球，会直接改变加时增量矩阵。",
+          "text_en": "Whether the coach tries to settle the match in extra time or lowers risk to reach penalties directly changes the extra-time increment matrix."
+        },
+        {
+          "factor_id": "ET_SET_PIECES",
+          "label_cn": "定位球与二点球",
+          "impact_cn": "体能下降后运动战质量下降，角球、任意球和禁区二点球权重上升。",
+          "label_en": "Set pieces and second balls",
+          "impact_en": "As fatigue reduces open-play quality, corners, free kicks and box second balls gain weight.",
+          "text_cn": "体能下降后运动战质量下降，角球、任意球和禁区二点球权重上升。",
+          "text_en": "As fatigue reduces open-play quality, corners, free kicks and box second balls gain weight."
+        },
+        {
+          "factor_id": "ET_CARD",
+          "label_cn": "牌面与犯规压力",
+          "impact_cn": "黄牌、红牌和犯规风险会改变防守动作尺度，增加加时突然失衡概率。",
+          "label_en": "Cards and foul pressure",
+          "impact_en": "Yellow cards, red cards and foul risk change defensive behavior and increase the probability of a sudden extra-time imbalance.",
+          "text_cn": "黄牌、红牌和犯规风险会改变防守动作尺度，增加加时突然失衡概率。",
+          "text_en": "Yellow cards, red cards and foul risk change defensive behavior and increase the probability of a sudden extra-time imbalance."
+        },
+        {
+          "factor_id": "ET_PENALTY_SHADOW",
+          "label_cn": "点球预期",
+          "impact_cn": "若一方相信点球优势，加时后段可能更保守；若点球劣势明显，则可能提前提速。",
+          "label_en": "Penalty expectation",
+          "impact_en": "If one side believes it has a shootout edge, it may become more conservative late in extra time; if it sees a shootout disadvantage, it may speed up earlier.",
+          "text_cn": "若一方相信点球优势，加时后段可能更保守；若点球劣势明显，则可能提前提速。",
+          "text_en": "If one side believes it has a shootout edge, it may become more conservative late in extra time; if it sees a shootout disadvantage, it may speed up earlier."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw-score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "English summary generated for the corresponding Chinese dashboard field."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.13525637768787988,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.06500000000000002,
+          "probability_band": "low",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.06500000000000002,
+              "winner_side": "team_a",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.045000000000000005,
+              "winner_side": "team_b",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 2-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.035000000000000024,
+              "winner_side": "team_a",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 3-1: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4",
+            "3-1"
+          ],
+          "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.13000000000000003,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.13000000000000003,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 3-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "4-5",
+              "probability": 0.11000000000000001,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 4-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.05500000000000001,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 2-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            }
+          ],
+          "display_scores": [
+            "3-4",
+            "4-5",
+            "2-3"
+          ],
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale for 3-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "5-6",
+          "winner_side": "team_b",
+          "probability": 0.055,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "5-6",
+              "probability": 0.055,
+              "winner_side": "team_b",
+              "rationale_cn": "批准。该情景与矩阵中5-6、team_b、0.055完全一致，且符合点球规则：双方前五轮大多命中后进入第六轮及以后，Brazil先罚未能拉开或在突然死亡中失手，Japan随后命中晋级。证据口径上，核心罚手优势随轮次后移被稀释，后备罚手、体能、心理和门将随机判断权重上升；Japan整体46%点球条件胜率也需要保留这一长序列反胜尾部。",
+              "rationale_en": "Rationale for 5-6: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "6-5",
+              "probability": 0.045,
+              "winner_side": "team_a",
+              "rationale_cn": "批准。该情景与矩阵中6-5、team_a、0.045完全一致，且符合突然死亡规则：前五轮通常为5-5或接近全中，随后Brazil在第六轮或更后轮次命中并等到Japan失手。证据口径上，Brazil阵容深度、大赛经验和Alisson门将端小优可支撑该方向，但主罚顺序、替补状态和120分钟后体能均未确认，因此只能作为尾部而非主路径。",
+              "rationale_en": "Rationale for 6-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            }
+          ],
+          "display_scores": [
+            "5-6",
+            "6-5"
+          ],
+          "rationale_cn": "批准。该情景与矩阵中5-6、team_b、0.055完全一致，且符合点球规则：双方前五轮大多命中后进入第六轮及以后，Brazil先罚未能拉开或在突然死亡中失手，Japan随后命中晋级。证据口径上，核心罚手优势随轮次后移被稀释，后备罚手、体能、心理和门将随机判断权重上升；Japan整体46%点球条件胜率也需要保留这一长序列反胜尾部。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale for 5-6: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_KEEPER",
+          "label_cn": "门将扑点能力",
+          "impact_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+          "label_en": "Penalty-saving ability",
+          "impact_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge.",
+          "text_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+          "text_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge."
+        },
+        {
+          "factor_id": "PEN_TAKER_DEPTH",
+          "label_cn": "主罚手深度",
+          "impact_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+          "label_en": "Penalty taker depth",
+          "impact_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties.",
+          "text_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+          "text_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties."
+        },
+        {
+          "factor_id": "PEN_ON_PITCH",
+          "label_cn": "120分钟后人员留存",
+          "impact_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+          "label_en": "Who remains on the pitch after 120 minutes",
+          "impact_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool.",
+          "text_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+          "text_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool."
+        },
+        {
+          "factor_id": "PEN_PRESSURE",
+          "label_cn": "压力承受",
+          "impact_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+          "label_en": "Pressure handling",
+          "impact_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break.",
+          "text_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+          "text_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break."
+        },
+        {
+          "factor_id": "PEN_HISTORY",
+          "label_cn": "点球经验",
+          "impact_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+          "label_en": "Shootout experience",
+          "impact_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition.",
+          "text_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+          "text_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition."
+        },
+        {
+          "factor_id": "PEN_FOOTEDNESS",
+          "label_cn": "左右脚与射门习惯",
+          "impact_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+          "label_en": "Footedness and shooting habits",
+          "impact_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability.",
+          "text_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+          "text_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time. Inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeeper/taker information and pressure factors.",
+      "workflow_en": "English summary generated for the corresponding Chinese dashboard field."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "ready",
+    "penalty_condition_calibrator": "ready",
+    "full_path_tail": "ready"
+  },
+  "updated_at": "2026-06-29T06:14:19.880525Z",
+  "method_en": "English summary generated for the corresponding Chinese dashboard field.",
+  "architecture_en": "English summary generated for the corresponding Chinese dashboard field."
+}

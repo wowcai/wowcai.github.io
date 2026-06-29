@@ -1,0 +1,1432 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "统一淘汰赛长路径pipeline：一次证据收集、一次MAS路径讨论、完整0-90/90-120/点球路径分布，再派生常规时间、加时和点球视图。",
+  "architecture_cn": "加时和点球不再是独立后处理输出，而是完整淘汰赛路径分布中的条件分支；前端三Tab只是同一分布的不同切片。",
+  "match": {
+    "match_id": "M74",
+    "team_a": "Germany",
+    "team_b": "Paraguay",
+    "kickoff_utc": "2026-06-29T20:30:00Z",
+    "venue": "",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.705802231179125,
+      "team_b": 0.294197768820875,
+      "favorite": "Germany"
+    },
+    "resolution": {
+      "normal_time": 0.7470370370370367,
+      "extra_time": 0.13324568487860658,
+      "penalties": 0.11971727808435623
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.12333333333333334,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "1-1",
+        "probability": 0.11407407407407408,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09703703703703703,
+        "goals_a": 2,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Germany常规时间晋级。",
+        "summary_cn": "90分钟1-0，Germany常规时间晋级。",
+        "probability": 0.12333333333333328,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Germany",
+        "path_id": "N_1-0_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time.",
+        "summary_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+        "probability": 0.03389679978639814,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Germany",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+        "probability": 0.007273919823015599,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "Germany",
+        "path_id": "P_1-1_0-0_4-3_team_a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Germany常规时间晋级。",
+        "summary_cn": "90分钟1-0，Germany常规时间晋级。",
+        "probability": 0.12333333333333328,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Germany",
+        "path_id": "N_1-0_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time.",
+        "summary_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+        "probability": 0.03389679978639814,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Germany",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+        "probability": 0.007273919823015599,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "Germany",
+        "path_id": "P_1-1_0-0_4-3_team_a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties."
+      }
+    ],
+    "favorite": "Germany",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.11971727808435623,
+        "probability_band": "12.0%",
+        "representative_paths": [
+          {
+            "path_id": "P_1-1_0-0_4-3_team_a",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "4-3",
+            "penalty_winner": "team_a",
+            "advancer_side": "team_a",
+            "advancer_team": "Germany",
+            "probability": 0.007273919823015599,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+            "path_probability": 0.007273919823015599,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties."
+          },
+          {
+            "path_id": "P_1-1_0-0_5-4_team_a",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "5-4",
+            "penalty_winner": "team_a",
+            "advancer_side": "team_a",
+            "advancer_team": "Germany",
+            "probability": 0.0063325890223900495,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+            "path_probability": 0.0063325890223900495,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties."
+          },
+          {
+            "path_id": "P_1-1_0-0_3-4_team_b",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "advancer_side": "team_b",
+            "advancer_team": "Paraguay",
+            "probability": 0.005476833749094097,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Paraguay点球晋级。",
+            "path_probability": 0.005476833749094097,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Paraguay advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH PENALTY DRAG candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.13324568487860658,
+        "probability_band": "13.3%",
+        "representative_paths": [
+          {
+            "path_id": "ET_1-1_1-0_A",
+            "resolution_type": "extra_time",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "1-0",
+            "after_extra_time_score": "2-1",
+            "extra_time_result": "team_a",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "Germany",
+            "probability": 0.03389679978639814,
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+            "path_probability": 0.03389679978639814,
+            "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment."
+          },
+          {
+            "path_id": "ET_0-0_1-0_A",
+            "resolution_type": "extra_time",
+            "normal_time_score": "0-0",
+            "normal_time_result": "draw",
+            "extra_time_increment": "1-0",
+            "after_extra_time_score": "1-0",
+            "extra_time_result": "team_a",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "Germany",
+            "probability": 0.021680745317923484,
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Germany加时晋级。",
+            "path_probability": 0.021680745317923484,
+            "summary_en": "After 0-0 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment."
+          },
+          {
+            "path_id": "ET_2-2_1-0_A",
+            "resolution_type": "extra_time",
+            "normal_time_score": "2-2",
+            "normal_time_result": "draw",
+            "extra_time_increment": "1-0",
+            "after_extra_time_score": "3-2",
+            "extra_time_result": "team_a",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "Germany",
+            "probability": 0.016067963535110804,
+            "summary_cn": "90分钟2-2后进入加时，加时增量1-0，Germany加时晋级。",
+            "path_probability": 0.016067963535110804,
+            "summary_en": "After 2-2 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH EXTRA TIME DECISION candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2158813746805507,
+        "probability_band": "21.6%",
+        "representative_paths": [
+          {
+            "path_id": "N_0-1_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "0-1",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "0-1",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Paraguay",
+            "probability": 0.0733333333333333,
+            "summary_cn": "90分钟0-1，Paraguay常规时间晋级。",
+            "path_probability": 0.0733333333333333,
+            "summary_en": "After a 0-1 scoreline in 90 minutes, Paraguay advances in normal time."
+          },
+          {
+            "path_id": "N_1-2_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "1-2",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "1-2",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Paraguay",
+            "probability": 0.05185185185185183,
+            "summary_cn": "90分钟1-2，Paraguay常规时间晋级。",
+            "path_probability": 0.05185185185185183,
+            "summary_en": "After a 1-2 scoreline in 90 minutes, Paraguay advances in normal time."
+          },
+          {
+            "path_id": "N_0-2_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "0-2",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "0-2",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Paraguay",
+            "probability": 0.025185185185185175,
+            "summary_cn": "90分钟0-2，Paraguay常规时间晋级。",
+            "path_probability": 0.025185185185185175,
+            "summary_en": "After a 0-2 scoreline in 90 minutes, Paraguay advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH UNDERDOG ADVANCE candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 396,
+      "raw_top_paths": [
+        {
+          "path_id": "N_1-0_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Germany",
+          "probability": 0.12333333333333328,
+          "summary_cn": "90分钟1-0，Germany常规时间晋级。",
+          "path_probability": 0.12333333333333328,
+          "summary_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time."
+        },
+        {
+          "path_id": "N_2-1_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-1",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-1",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Germany",
+          "probability": 0.09703703703703699,
+          "summary_cn": "90分钟2-1，Germany常规时间晋级。",
+          "path_probability": 0.09703703703703699,
+          "summary_en": "After a 2-1 scoreline in 90 minutes, Germany advances in normal time."
+        },
+        {
+          "path_id": "N_2-0_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-0",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-0",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Germany",
+          "probability": 0.08999999999999996,
+          "summary_cn": "90分钟2-0，Germany常规时间晋级。",
+          "path_probability": 0.08999999999999996,
+          "summary_en": "After a 2-0 scoreline in 90 minutes, Germany advances in normal time."
+        },
+        {
+          "path_id": "N_0-1_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-1",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-1",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Paraguay",
+          "probability": 0.0733333333333333,
+          "summary_cn": "90分钟0-1，Paraguay常规时间晋级。",
+          "path_probability": 0.0733333333333333,
+          "summary_en": "After a 0-1 scoreline in 90 minutes, Paraguay advances in normal time."
+        },
+        {
+          "path_id": "N_3-1_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "3-1",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "3-1",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Germany",
+          "probability": 0.05888888888888886,
+          "summary_cn": "90分钟3-1，Germany常规时间晋级。",
+          "path_probability": 0.05888888888888886,
+          "summary_en": "After a 3-1 scoreline in 90 minutes, Germany advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Germany常规时间晋级。",
+          "summary_cn": "90分钟1-0，Germany常规时间晋级。",
+          "probability": 0.12333333333333328,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Germany",
+          "path_id": "N_1-0_A",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time.",
+          "summary_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+          "probability": 0.03389679978639814,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Germany",
+          "path_id": "ET_1-1_1-0_A",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment.",
+          "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+          "probability": 0.007273919823015599,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-3",
+          "advancer_team": "Germany",
+          "path_id": "P_1-1_0-0_4-3_team_a",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Germany常规时间晋级。",
+        "summary_cn": "90分钟1-0，Germany常规时间晋级。",
+        "probability": 0.12333333333333328,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Germany",
+        "path_id": "N_1-0_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time.",
+        "summary_en": "After a 1-0 scoreline in 90 minutes, Germany advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Germany加时晋级。",
+        "probability": 0.03389679978639814,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Germany",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Germany advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Germany点球晋级。",
+        "probability": 0.007273919823015599,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-3",
+        "advancer_team": "Germany",
+        "path_id": "P_1-1_0-0_4-3_team_a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Germany advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放／大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.2970370370370371,
+          "base_event_probability": 0.2970370370370371,
+          "attention_level": "medium",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0680906636194407,
+              "conditional_probability": 0.22923290744699482,
+              "script_cn": "德国前腰在巴拉圭两线之间持续接球,肋部推进配合禁区前沿连续触球破密;60分钟后投入Undav型终结替补增加禁区人数,巴拉圭低位横移、盯人与二点球保护随时间下降被打穿,德国打入3球,巴拉圭仅凭Almirón方向一次反击或定位球扳回一球。",
+              "rationale_cn": "本情景内条件概率最高(0.198)且机制最对位:H_001德国中路破密直接支撑德国多球,H_003替补后手+巴拉圭体能衰减支撑晚段加分,巴拉圭单球符合其有限但存在的反击威胁(H_002)。作为'4球达标但仍是德国一边倒大胜'的锚点,而非机械压缩结果。",
+              "evidence_ids": [
+                "E_e0cbb3ef3085",
+                "E_8ba0a401c0b7",
+                "E_c4c9c28fda4c",
+                "E_95316f8a23e8",
+                "E_6087467ad434",
+                "E_1829731266d1"
+              ],
+              "mechanism_ids": [
+                "H_001",
+                "H_003",
+                "H_002"
+              ],
+              "script_en": "Scenario script for 3-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0343236577663555,
+              "conditional_probability": 0.11555346130817934,
+              "script_cn": "德国为在90分钟解决比赛而提高边后卫与中场站位,丢球瞬间暴露中卫两侧空间,Almirón回归后制造两次有效转换/定位球,比赛走向开放,德国最终凭个人能力以3-2取胜。",
+              "rationale_cn": "名义条件概率较高(0.101),但巴拉圭打入两球的支持弱于其概率,故从原grade 2降为grade 1。对应H_002(德国冒险站位被反击利用,total_goals up)与H_004开放分支;需以德国仍占优为前提,而非对攻平局。",
+              "evidence_ids": [
+                "E_1829731266d1",
+                "E_bc3093b2a8ad",
+                "E_5cfc90e2b6a2",
+                "E_9d34a66407d4",
+                "E_e0cbb3ef3085"
+              ],
+              "mechanism_ids": [
+                "H_002",
+                "H_004",
+                "H_003"
+              ],
+              "script_en": "Scenario script for 3-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.02542493167878185,
+              "conditional_probability": 0.08559515652457729,
+              "script_cn": "巴拉圭低位更早瓦解,Alderete伤缺削弱禁区协同,德国替补后手与晚段发力样本(对科特迪瓦68分钟+补时)叠加形成连续禁区压力打入4球,巴拉圭保留一次Almirón反击进球。",
+              "rationale_cn": "替代被删除的4-2。这是德国大胜方向更可信的5球分支:德国打4球符合其攻击资源与替补深度(H_001/H_003),巴拉圭仅1球符合其低产攻击(被美国限到1次射正);条件概率0.0748高于4-2的0.0436,且不需双方都大量进球。",
+              "evidence_ids": [
+                "E_e0cbb3ef3085",
+                "E_95316f8a23e8",
+                "E_5ab1f788609f",
+                "E_c4c9c28fda4c",
+                "E_6087467ad434",
+                "E_1829731266d1"
+              ],
+              "mechanism_ids": [
+                "H_001",
+                "H_003",
+                "H_002"
+              ],
+              "script_en": "Scenario script for 4-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.01624370635033285,
+              "conditional_probability": 0.05468579444625771,
+              "script_cn": "巴拉圭把少数反击异常高效地兑现(对应rollout尾部世界0-3/2-3),德国后防伤缺与为追平/扩大而冒险的站位被Almirón方向反复利用,形成巴拉圭爆冷的开放局。",
+              "rationale_cn": "保留为低权尾部。rollout_1/4/9确实出现巴拉圭多球世界,故非幻觉;但与美国把巴拉圭限到1次射正(E_6cd067de8900)及巴拉圭保守低位证据(E_8519c80b4d09)冲突,概率最低之一(0.0574),只能作grade 0尾部,不应放大为一边倒爆冷主线。",
+              "evidence_ids": [
+                "E_1829731266d1",
+                "E_bc3093b2a8ad",
+                "E_5cfc90e2b6a2",
+                "E_9d34a66407d4"
+              ],
+              "mechanism_ids": [
+                "H_002",
+                "H_004"
+              ],
+              "script_en": "Scenario script for 2-3: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "3-2",
+            "4-1"
+          ],
+          "rationale_cn": "本情景base_event_probability=0.297,并非微小尾部,但其概率质量主要集中在3-1(条件0.198)与2-2(条件0.182),真正的大开放比分占比更小,故归为中等关注。证据与机制对'德国一边倒大胜'的支持强于'对攻乱战':德国前场Wirtz/Musiala/Sané支援Havertz(E_e0cbb3ef3085/E_8ba0a401c0b7/E_e8d44fa410cb)、德国对科特迪瓦xG 1.83(E_c4c9c28fda4c)、替补Undav高产(E_95316f8a23e8/E_5ab1f788609f),叠加巴拉圭中卫Alderete膝伤存疑(E_6087467ad434),H_001(中路破密)与H_003(替补后手+巴拉圭低位体能衰减,total_goals up)共同指向德国在60分钟后把比分拉大。巴拉圭打入多球的路径仅来自Almirón回归后的反击(E_1829731266d1/E_bc3093b2a8ad,H_002),而美国曾把巴拉圭限制到仅1次射正(E_6cd067de8900)说明其进攻不稳定,因此巴拉圭连入2-3球属低权尾部而非主线。",
+          "caution_cn": "删除原提案中的4-2:6球对攻与双方画像直接冲突(巴拉圭防守型低位、xG仅0.97、被美国限到1次射正,德国对厄瓜多尔xG仅0.54),且为本池条件概率最低(0.0436)的候选,放在grade 1属于为激进而过度极端,已用更可信的德国大胜4-1替换。同时纠正原提案把5球3-2排在4球3-1之上的次序问题:机制更支持德国多打少丢(3-1),3-2需巴拉圭打入两球,支持度弱于其名义概率,故降级。保留2-3但仅给grade 0,因rollout确有0-3/2-3的巴拉圭爆冷开放世界(rollout_1/4/9),非幻觉但属尾部,不应放大。注意不要把本情景再压回单一最低达标分,3-1作锚点但需与德国大胜分支并列。",
+          "supporting_evidence_ids": [
+            "E_e0cbb3ef3085",
+            "E_8ba0a401c0b7",
+            "E_e8d44fa410cb",
+            "E_c4c9c28fda4c",
+            "E_95316f8a23e8",
+            "E_5ab1f788609f",
+            "E_6087467ad434",
+            "E_1829731266d1",
+            "E_bc3093b2a8ad"
+          ],
+          "counter_evidence_ids": [
+            "E_6cd067de8900",
+            "E_8519c80b4d09",
+            "E_389201be40d9",
+            "E_fd5cc3d8124f",
+            "E_168e25a07fef"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least four total goals.",
+          "rationale_en": "Rationale: this open / high-scoring candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast.",
+          "caution_en": "Caution: this is a open / high-scoring tail scenario. Treat the listed scores as deviation candidates, not as the central prediction, and read them together with the main distribution and counter-evidence."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒／崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.13962962962962963,
+          "base_event_probability": 0.13962962962962963,
+          "attention_level": "low",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.05192080436996247,
+              "conditional_probability": 0.37184660954615034,
+              "script_cn": "德国前场Wirtz、Musiala、Sané支援Havertz持续冲击巴拉圭低位，早段或60分钟后破局；Alderete伤疑削弱禁区协同，巴拉圭低位被连续打穿但反击未兑现，德国净胜3球零封。",
+              "rationale_cn": "德国方向崩盘池中最稳固候选，条件概率0.342为池内最高。德国预计由Wirtz、Musiala、Sané与Havertz组成前场创造链（E_e0cbb3ef3085、E_8ba0a401c0b7、E_e8d44fa410cb），具备持续压迫低位的人员结构；巴拉圭1-4负美国且被限制到仅1次射正（E_dd1b9eaf3dc9、E_6cd067de8900）提供落后下被连续打穿的现实样本；Alderete膝伤出战成疑（E_6087467ad434）进一步削弱低位禁区协同。机制H_001、H_003支持。rollout_6给出3-0代表路径。",
+              "evidence_ids": [
+                "E_e0cbb3ef3085",
+                "E_8ba0a401c0b7",
+                "E_e8d44fa410cb",
+                "E_dd1b9eaf3dc9",
+                "E_6cd067de8900",
+                "E_6087467ad434"
+              ],
+              "mechanism_ids": [
+                "H_001",
+                "H_003"
+              ],
+              "script_en": "Scenario script for 3-0: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.025315035330342562,
+              "conditional_probability": 0.1813013140369361,
+              "script_cn": "德国早段破局后巴拉圭被迫前移，但反击未能兑现，德国在中后段继续加码，净胜4球零封。",
+              "rationale_cn": "代表德国早破局、巴拉圭前移而反击落空的崩盘路径，条件概率0.170。德国中路与肋部创造资源、Alderete伤疑（E_6087467ad434）、巴拉圭对美国时被压制射正（E_6cd067de8900、E_dd1b9eaf3dc9）支持德国把3-0进一步推高。限制因素：巴拉圭防守组织与保守策略证据较强，且Almirón回归增加零封难度，故支持度低于3-0。机制H_001、H_003。",
+              "evidence_ids": [
+                "E_e0cbb3ef3085",
+                "E_6087467ad434",
+                "E_6cd067de8900",
+                "E_dd1b9eaf3dc9"
+              ],
+              "mechanism_ids": [
+                "H_001",
+                "H_003"
+              ],
+              "script_en": "Scenario script for 4-0: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0215843985448184,
+              "conditional_probability": 0.15458322565254556,
+              "script_cn": "德国在开放局面扩大领先，但Almirón回归与德国后防伤缺使其难以零封，巴拉圭凭少数反击或定位球扳回一球，最终德国净胜3球。",
+              "rationale_cn": "在崩盘条件已成立前提下，4-1比纯零封大胜更能吸收巴拉圭反击变量。Almirón停赛后回归（E_1829731266d1、E_bc3093b2a8ad）、Schlotterbeck本届报销削弱德国后防弹性（E_5cfc90e2b6a2、E_9d34a66407d4）、德国击败Côte d'Ivoire时仍失一球（E_5ab1f788609f），均提示大胜路径未必零封；巴拉圭已有1-4负美国的失球样本（E_dd1b9eaf3dc9）。德国优势(H_001)与巴拉圭反击(H_002)两机制共同但有限支持。",
+              "evidence_ids": [
+                "E_1829731266d1",
+                "E_bc3093b2a8ad",
+                "E_5cfc90e2b6a2",
+                "E_9d34a66407d4",
+                "E_5ab1f788609f",
+                "E_dd1b9eaf3dc9"
+              ],
+              "mechanism_ids": [
+                "H_001",
+                "H_002"
+              ],
+              "script_en": "Scenario script for 4-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "5-1",
+              "probability": 0.008187831739657675,
+              "conditional_probability": 0.05863964375882154,
+              "script_cn": "德国早进球后巴拉圭低位结构与体能明显下滑，德国替补继续兑现持续加码，巴拉圭仅凭一次反击进球，德国净胜4球的高端开放尾部。",
+              "rationale_cn": "德国一边倒进一步开放后的高端尾部，而非最低达标选择，条件概率0.061。支持因素：德国前场核心密集、Undav替补高产报道（E_95316f8a23e8）、德国对Côte d'Ivoire晚段进球样本（E_5ab1f788609f）、巴拉圭落后后低位松动机制(H_003)。但需早进球、巴拉圭体能与禁区协同明显下滑、德国替补持续兑现等多条件同时成立，且巴拉圭保守化与淘汰赛风险偏好抑制极端开放，故保留为条件尾部，证据仅中性。",
+              "evidence_ids": [
+                "E_95316f8a23e8",
+                "E_5ab1f788609f",
+                "E_e8d44fa410cb"
+              ],
+              "mechanism_ids": [
+                "H_003",
+                "H_001"
+              ],
+              "script_en": "Scenario script for 5-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-0",
+            "4-1"
+          ],
+          "rationale_cn": "崩盘情景基础事件概率约0.14，属中等尾部。德国为纸面强方且巴拉圭进攻样本疲弱、后防有伤缺，德国方向崩盘有真实证据支撑；3-0为池中条件概率最高（0.342）且rollout_6给出该代表路径。提案保留了4-1/4-0/5-1等开放比分，未把开放大比分压回最低达标比分，方向与极端度均可接受。巴拉圭方向(0-3)虽在rollout中出现，但与全部基础证据相悖，仅为波动产物，不予采纳。",
+          "caution_cn": "德国方向崩盘需早进球并叠加巴拉圭低位松动、替补持续兑现等多重条件，不能机械外推；Nagelsmann称巴拉圭难踢、巴拉圭转保守与德国负于Ecuador的证据均压制极端开放。rollout中出现的0-3/2-3巴拉圭方向崩盘缺乏基础证据（巴拉圭进攻与中路推进偏弱、无对德净进3球样本），判定为高波动噪声，未纳入候选。5-1为高端条件尾部，证据中性。",
+          "supporting_evidence_ids": [
+            "E_e0cbb3ef3085",
+            "E_8ba0a401c0b7",
+            "E_e8d44fa410cb",
+            "E_dd1b9eaf3dc9",
+            "E_6cd067de8900",
+            "E_6087467ad434",
+            "E_1829731266d1",
+            "E_5cfc90e2b6a2",
+            "E_9d34a66407d4",
+            "E_5ab1f788609f",
+            "E_95316f8a23e8"
+          ],
+          "counter_evidence_ids": [
+            "E_fd5cc3d8124f",
+            "E_8519c80b4d09",
+            "E_168e25a07fef",
+            "E_389201be40d9"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either team wins by at least three goals.",
+          "rationale_en": "Rationale: this one-sided / collapse candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast.",
+          "caution_en": "Caution: this is a one-sided / collapse tail scenario. Treat the listed scores as deviation candidates, not as the central prediction, and read them together with the main distribution and counter-evidence."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷",
+          "definition_cn": "非热门方 Paraguay 获胜。",
+          "probability": 0.20074074074074075,
+          "base_event_probability": 0.20074074074074075,
+          "attention_level": "medium",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.08744146057755522,
+              "conditional_probability": 0.4355939918070094,
+              "script_cn": "巴拉圭以低位或中低位防守压缩德国中路空间,德国控球占优但破密效率不足;阿尔米隆回归提供少数反击推进点,巴拉圭通过一次转换、定位球或禁区二点机会取得领先后继续降速守住。",
+              "rationale_cn": "爆冷池条件概率最高(0.365)且机制最自洽:H_002 给出巴拉圭最现实的反击单点威胁,H_001 解释德国破密失败被拖入低比分;巴拉圭防守身份与转保守证据(E_8519c80b4d09)及零封土耳其先例(E_bbd0ef387ee0)支撑其守住一球。",
+              "evidence_ids": [
+                "E_1829731266d1",
+                "E_8519c80b4d09",
+                "E_5cfc90e2b6a2",
+                "E_bbd0ef387ee0"
+              ],
+              "mechanism_ids": [
+                "H_002",
+                "H_001"
+              ],
+              "script_en": "Scenario script for 0-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.0511674168478902,
+              "conditional_probability": 0.2548930359581246,
+              "script_cn": "德国在持续压迫中取得进球或扳平,但为90分钟解决比赛而提高边后卫和中场站位,给巴拉圭转换空间;阿尔米隆回归与德国后防伤缺共同放大少数反击回合的价值,形成一球差爆冷。",
+              "rationale_cn": "由 H_002(德国压上后中卫两侧暴露)与 H_003(德国后段加码、比赛开放、总进球上行)共同支撑,符合淘汰赛追分情境;条件概率次高(0.258),路径合理。",
+              "evidence_ids": [
+                "E_1829731266d1",
+                "E_9d34a66407d4",
+                "E_95316f8a23e8"
+              ],
+              "mechanism_ids": [
+                "H_002",
+                "H_003"
+              ],
+              "script_en": "Scenario script for 1-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.020710621105098418,
+              "conditional_probability": 0.10317099074495521,
+              "script_cn": "巴拉圭先通过转换或定位球领先,德国随后加快节奏并增加进攻风险,但破密失败;巴拉圭在德国压上后的空间中再取得一球。该路径依赖德国进攻效率低与巴拉圭少数机会高转化同时发生。",
+              "rationale_cn": "零封部分有巴拉圭低位防守身份支撑,但需巴拉圭以孱弱进攻(attack 0.57、对美国仅1次射正)打入两球,进攻端缺乏稳定公开证据,且无 rollout 直接落到 0-2,故维持低支撑等级。",
+              "evidence_ids": [
+                "E_8519c80b4d09",
+                "E_5cfc90e2b6a2"
+              ],
+              "mechanism_ids": [
+                "H_002"
+              ],
+              "script_en": "Scenario script for 0-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.006091359148558358,
+              "conditional_probability": 0.030344409042633885,
+              "script_cn": "这是爆冷池中的高偏离版本:巴拉圭早段取得领先,德国被迫高位压迫和提高进攻风险,反而连续给出转换空间。机制上可由阿尔米隆回归、德国后防深度受损和淘汰赛追分压力串联,但公开证据对巴拉圭稳定三球产出支持有限。",
+              "rationale_cn": "保留为开放尾部:MAS 关键发现指出代表比分最常见为 0-3,rollout_1 与 rollout_9 直接落到该比分,故不应压回最低达标比分;但巴拉圭进攻数据与1-4负美国的反向证据使其稳定三球产出可信度低,维持 grade 0 的高方差定位。",
+              "evidence_ids": [
+                "E_1829731266d1",
+                "E_9d34a66407d4",
+                "E_5cfc90e2b6a2"
+              ],
+              "mechanism_ids": [
+                "H_002",
+                "H_003"
+              ],
+              "script_en": "Scenario script for 0-3: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "巴拉圭获胜的现实路径以低位/中低位防守加少数转换或定位球为主,而非持续控球。阿尔米隆停赛归来恢复其反击推进点,施洛特贝克本届报销削弱德国后防轮换与出球弹性,德国小组末战负厄瓜多尔且 xG 偏低,提示其面对纪律性防守可能卡顿。但反向证据明确:巴拉圭1-4负美国、仅1次射正,进攻产出不稳定,德国整体个人能力、门将与替补深度(Undav)占优,故爆冷整体倾向低比分一球差。0-1、1-2 机制扎实;0-2、0-3 进攻端依赖少数高转化,公开证据支撑递减,但 0-3 有 rollout 与 MAS 代表比分支撑,作为开放尾部予以保留而非压回最低分。",
+          "caution_cn": "巴拉圭进攻数据弱(attack 0.57、finishing 0.55,对美国仅1次射正),多球产出(0-2/0-3)缺乏稳定公开证据,只能作为低权重尾部;0-3 虽被 rollout 与 MAS 反复指向,但属高方差路径,不应据此抬升其条件可信度。点球/加时分支(H_004)偏向德国,不构成对爆冷比分的支持。",
+          "supporting_evidence_ids": [
+            "E_1829731266d1",
+            "E_bc3093b2a8ad",
+            "E_5cfc90e2b6a2",
+            "E_9d34a66407d4",
+            "E_8519c80b4d09",
+            "E_389201be40d9",
+            "E_bbd0ef387ee0"
+          ],
+          "counter_evidence_ids": [
+            "E_6cd067de8900",
+            "E_dd1b9eaf3dc9",
+            "E_c4c9c28fda4c",
+            "E_5ab1f788609f",
+            "E_6087467ad434",
+            "E_168e25a07fef"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "Upset",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale: this upset candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast.",
+          "caution_en": "Caution: this is a upset tail scenario. Treat the listed scores as deviation candidates, not as the central prediction, and read them together with the main distribution and counter-evidence."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "证据因素 1",
+          "impact_cn": "Goal与Squawka均预计德国由Wirtz、Musiala、Sané支援Havertz。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_e0cbb3ef3085",
+            "E_8ba0a401c0b7",
+            "E_e8d44fa410cb"
+          ],
+          "source_names": [
+            "Goal.com",
+            "Squawka",
+            "Standard Sport"
+          ],
+          "label_en": "Evidence factor 1",
+          "impact_en": "Goal and Squawka both project Germany with Wirtz, Musiala and Sane supporting Havertz.",
+          "text_cn": "Goal与Squawka均预计德国由Wirtz、Musiala、Sané支援Havertz。",
+          "text_en": "Goal and Squawka both project Germany with Wirtz, Musiala and Sane supporting Havertz."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "防守",
+          "impact_cn": "ESPN称巴拉圭1-4负美国后转保守，战术源记录其深位4-4-2低位防守。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_8519c80b4d09",
+            "E_13bb1735c98b",
+            "E_d9f66a28dbb5"
+          ],
+          "source_names": [
+            "ESPN",
+            "The False 9"
+          ],
+          "label_en": "Defense",
+          "impact_en": "ESPN reported that Paraguay became more conservative after the 1-4 loss to the United States, and tactical sources note their deep 4-4-2 low block.",
+          "text_cn": "ESPN称巴拉圭1-4负美国后转保守，战术源记录其深位4-4-2低位防守。",
+          "text_en": "ESPN reported that Paraguay became more conservative after the 1-4 loss to the United States, and tactical sources note their deep 4-4-2 low block."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "阵容",
+          "impact_cn": "Yahoo称巴拉圭首发中卫Alderete膝伤出战成疑，可能影响禁区盯防。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_6087467ad434"
+          ],
+          "source_names": [
+            "Yahoo Sports"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Yahoo reported that Paraguay starting center-back Alderete is doubtful with a knee issue, which could affect box marking.",
+          "text_cn": "Yahoo称巴拉圭首发中卫Alderete膝伤出战成疑，可能影响禁区盯防。",
+          "text_en": "Yahoo reported that Paraguay starting center-back Alderete is doubtful with a knee issue, which could affect box marking."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "阵容",
+          "impact_cn": "Evening Standard与ESPN称德国后卫Schlotterbeck因伤无缘本届赛事。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_5cfc90e2b6a2",
+            "E_9d34a66407d4"
+          ],
+          "source_names": [
+            "Evening Standard",
+            "ESPN"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Evening Standard and ESPN reported that Germany defender Schlotterbeck is out of the tournament through injury.",
+          "text_cn": "Evening Standard与ESPN称德国后卫Schlotterbeck因伤无缘本届赛事。",
+          "text_en": "Evening Standard and ESPN reported that Germany defender Schlotterbeck is out of the tournament through injury."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "心理",
+          "impact_cn": "本场为世界杯32强淘汰赛；The Athletic称德国世界杯点球大战4战全胜。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_80c4150f0a73",
+            "E_8607f4f71fce"
+          ],
+          "source_names": [
+            "FIFA",
+            "The Athletic"
+          ],
+          "label_en": "Psychology",
+          "impact_en": "This is a World Cup round-of-32 knockout match; The Athletic notes that Germany are 4-for-4 in World Cup penalty shootouts.",
+          "text_cn": "本场为世界杯32强淘汰赛；The Athletic称德国世界杯点球大战4战全胜。",
+          "text_en": "This is a World Cup round-of-32 knockout match; The Athletic notes that Germany are 4-for-4 in World Cup penalty shootouts."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "Main 90-minute prediction for the full match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.25296296296296283,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.29714727085478904,
+          "joint_probability": 0.07516725407178548,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.29714727085478904
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.13639546858908347
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "德国加时内解决比赛的主路径。Wirtz、Musiala、Sané、Havertz的中路与肋部创造力，加上Undav或同类型禁区型替补后手，仍能在巴拉圭低位横移90分钟后制造破口。Alderete伤疑、巴拉圭后防抽筋或黄牌限制对抗时，该路径上调；但淘汰赛风险和德国体能限制使其低于0-0。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal decision in extra time through a counterattack, set piece, or substitute impact.",
+          "rationale_en": "Rationale for 1-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.09255406797116379,
+          "joint_probability": 0.02341275126826105,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.09255406797116379
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.012485549132947981
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.009742533470648823
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.005618497109826586
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "1-2",
+            "2-1"
+          ],
+          "rationale_cn": "开放式加时的主要平局尾部。该路径通常需要德国压上使比赛打开，或一方先破门后另一方被迫反扑。它更适合90分钟2-2、3-3等高比分平局入口；若90分钟是0-0，则该概率应下调。整体低于0-0、1-0和0-1。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both teams score in extra time as a cautious game turns into a more open exchange.",
+          "rationale_en": "Rationale for 1-1: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.03507312049433575,
+          "joint_probability": 0.008872200480604187,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.03507312049433575
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.01716763005780347
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.012485549132947981
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.009742533470648823
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "1-2"
+          ],
+          "rationale_cn": "德国早破局后扩大优势的低概率路径。需要德国先在加时上半场或早段打破低位，然后巴拉圭被迫前压、体能崩盘或Alderete相关防线问题被放大。由于加时只有30分钟且德国也会管理风险，多球德国胜被限制在尾部。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "An extra-time breakthrough where one side wins by at least two goals or the phase reaches three or more goals.",
+          "rationale_en": "Rationale for 2-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_FATIGUE",
+          "label_cn": "体能消耗",
+          "impact_cn": "90分钟后Germany与Paraguay的跑动衰减、防线回收和二点保护决定加时是否被打开。",
+          "label_en": "Fatigue load",
+          "impact_en": "After 90 minutes, the running drop-off, defensive recovery and second-ball protection of Germany and Paraguay determine whether extra time opens up.",
+          "text_cn": "90分钟后Germany与Paraguay的跑动衰减、防线回收和二点保护决定加时是否被打开。",
+          "text_en": "After 90 minutes, the running drop-off, defensive recovery and second-ball protection of Germany and Paraguay determine whether extra time opens up."
+        },
+        {
+          "factor_id": "ET_BENCH",
+          "label_cn": "替补深度",
+          "impact_cn": "边路、前锋和中场替补能否带来速度与对抗优势，是加时一球决胜的核心变量。",
+          "label_en": "Bench depth",
+          "impact_en": "Whether wide, forward and midfield substitutes can add speed and dueling advantages is a core variable for a one-goal extra-time decision.",
+          "text_cn": "边路、前锋和中场替补能否带来速度与对抗优势，是加时一球决胜的核心变量。",
+          "text_en": "Whether wide, forward and midfield substitutes can add speed and dueling advantages is a core variable for a one-goal extra-time decision."
+        },
+        {
+          "factor_id": "ET_RISK",
+          "label_cn": "教练风险偏好",
+          "impact_cn": "教练是主动在加时解决比赛，还是降低风险拖入点球，会直接改变加时增量矩阵。",
+          "label_en": "Coach risk preference",
+          "impact_en": "Whether the coach tries to settle the match in extra time or lowers risk to reach penalties directly changes the extra-time increment matrix.",
+          "text_cn": "教练是主动在加时解决比赛，还是降低风险拖入点球，会直接改变加时增量矩阵。",
+          "text_en": "Whether the coach tries to settle the match in extra time or lowers risk to reach penalties directly changes the extra-time increment matrix."
+        },
+        {
+          "factor_id": "ET_SET_PIECES",
+          "label_cn": "定位球与二点球",
+          "impact_cn": "体能下降后运动战质量下降，角球、任意球和禁区二点球权重上升。",
+          "label_en": "Set pieces and second balls",
+          "impact_en": "As fatigue reduces open-play quality, corners, free kicks and box second balls gain weight.",
+          "text_cn": "体能下降后运动战质量下降，角球、任意球和禁区二点球权重上升。",
+          "text_en": "As fatigue reduces open-play quality, corners, free kicks and box second balls gain weight."
+        },
+        {
+          "factor_id": "ET_CARD",
+          "label_cn": "牌面与犯规压力",
+          "impact_cn": "黄牌、红牌和犯规风险会改变防守动作尺度，增加加时突然失衡概率。",
+          "label_en": "Cards and foul pressure",
+          "impact_en": "Yellow cards, red cards and foul risk change defensive behavior and increase the probability of a sudden extra-time imbalance.",
+          "text_cn": "黄牌、红牌和犯规风险会改变防守动作尺度，增加加时突然失衡概率。",
+          "text_en": "Yellow cards, red cards and foul risk change defensive behavior and increase the probability of a sudden extra-time imbalance."
+        },
+        {
+          "factor_id": "ET_PENALTY_SHADOW",
+          "label_cn": "点球预期",
+          "impact_cn": "若一方相信点球优势，加时后段可能更保守；若点球劣势明显，则可能提前提速。",
+          "label_en": "Penalty expectation",
+          "impact_en": "If one side believes it has a shootout edge, it may become more conservative late in extra time; if it sees a shootout disadvantage, it may speed up earlier.",
+          "text_cn": "若一方相信点球优势，加时后段可能更保守；若点球劣势明显，则可能提前提速。",
+          "text_en": "If one side believes it has a shootout edge, it may become more conservative late in extra time; if it sees a shootout disadvantage, it may speed up earlier."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw-score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "English summary generated for the corresponding Chinese dashboard field."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.11971727808435623,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.10800000000000003,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.10800000000000003,
+              "winner_side": "team_a",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "3-5",
+              "probability": 0.036,
+              "winner_side": "team_b",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 3-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "5-3",
+              "probability": 0.03400000000000001,
+              "winner_side": "team_a",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 5-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "3-5",
+            "5-3"
+          ],
+          "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.128,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.128,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 3-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "4-5",
+              "probability": 0.09999999999999999,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 4-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "5-6",
+              "probability": 0.052000000000000005,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 5-6: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            }
+          ],
+          "display_scores": [
+            "3-4",
+            "4-5",
+            "5-6"
+          ],
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale for 3-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.052000000000000005,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.052000000000000005,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+              "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+            },
+            {
+              "score": "5-6",
+              "probability": 0.052000000000000005,
+              "winner_side": "team_b",
+              "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+              "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+            }
+          ],
+          "display_scores": [
+            "6-5",
+            "5-6"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_KEEPER",
+          "label_cn": "门将扑点能力",
+          "impact_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+          "label_en": "Penalty-saving ability",
+          "impact_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge.",
+          "text_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+          "text_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge."
+        },
+        {
+          "factor_id": "PEN_TAKER_DEPTH",
+          "label_cn": "主罚手深度",
+          "impact_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+          "label_en": "Penalty taker depth",
+          "impact_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties.",
+          "text_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+          "text_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties."
+        },
+        {
+          "factor_id": "PEN_ON_PITCH",
+          "label_cn": "120分钟后人员留存",
+          "impact_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+          "label_en": "Who remains on the pitch after 120 minutes",
+          "impact_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool.",
+          "text_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+          "text_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool."
+        },
+        {
+          "factor_id": "PEN_PRESSURE",
+          "label_cn": "压力承受",
+          "impact_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+          "label_en": "Pressure handling",
+          "impact_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break.",
+          "text_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+          "text_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break."
+        },
+        {
+          "factor_id": "PEN_HISTORY",
+          "label_cn": "点球经验",
+          "impact_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+          "label_en": "Shootout experience",
+          "impact_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition.",
+          "text_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+          "text_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition."
+        },
+        {
+          "factor_id": "PEN_FOOTEDNESS",
+          "label_cn": "左右脚与射门习惯",
+          "impact_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+          "label_en": "Footedness and shooting habits",
+          "impact_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability.",
+          "text_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+          "text_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time. Inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeeper/taker information and pressure factors.",
+      "workflow_en": "English summary generated for the corresponding Chinese dashboard field."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "ready",
+    "penalty_condition_calibrator": "ready",
+    "full_path_tail": "ready"
+  },
+  "updated_at": "2026-06-29T07:11:23.174796Z",
+  "method_en": "English summary generated for the corresponding Chinese dashboard field.",
+  "architecture_en": "English summary generated for the corresponding Chinese dashboard field."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "patched",
+  "bundle_root": "Netherlands_vs_Morocco_M76/2026.6.29.16.05",
+  "frontend_contract": "knockout_v6_2_2_phase_semantics_bilingual_frontend_contract",
+  "patched_files": [
+    "match_card.json",
+    "match_detail.json",
+    "normal_time_matrix.json",
+    "normal_time_deviation.json",
+    "extra_time_matrix.json",
+    "extra_time_deviation.json",
+    "penalty_matrix.json",
+    "penalty_deviation.json",
+    "manifest.json"
+  ],
+  "field_style": "same-object *_cn/*_en fields; key_factors include text_cn/text_en"
+}

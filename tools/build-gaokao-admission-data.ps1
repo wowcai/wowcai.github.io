@@ -1,5 +1,5 @@
 ﻿param(
-  [string]$SourceDir = "D:\Code\Wowcai\高考\gaokao_predict所有省第三版本合并意见",
+  [string]$SourceDir,
   [string]$RawTargetDir,
   [string]$OutputFile
 )
@@ -7,6 +7,9 @@
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
+if (-not $SourceDir) {
+  $SourceDir = Join-Path $RepoRoot "gaokao_prediction"
+}
 if (-not $RawTargetDir) {
   $RawTargetDir = Join-Path $RepoRoot "gaokao_prediction"
 }
@@ -149,6 +152,16 @@ function Test-GaokaoRawFile {
   }
 
   return $KnownProvinceNames -contains $parts[0]
+}
+
+function Get-DisplaySubjectType {
+  param([string]$SubjectType)
+
+  if ($SubjectType -eq "医学") {
+    return "医学类"
+  }
+
+  return $SubjectType
 }
 
 function Import-ExistingAdmissionData {
@@ -423,12 +436,12 @@ foreach ($file in $jsonFiles) {
   }
 
   $universityLocation = $null
-  if ($oldItem -and $oldItem.universityLocation) {
-    $universityLocation = [string]$oldItem.universityLocation
-  } elseif ($UniversityLocations.ContainsKey($universityName)) {
+  if ($UniversityLocations.ContainsKey($universityName)) {
     $universityLocation = $UniversityLocations[$universityName]
   } elseif ($UniversityLocations.ContainsKey($rawUniversityName)) {
     $universityLocation = $UniversityLocations[$rawUniversityName]
+  } elseif ($oldItem -and $oldItem.universityLocation) {
+    $universityLocation = [string]$oldItem.universityLocation
   } else {
     $universityLocation = "所在地待补充"
   }
@@ -445,8 +458,14 @@ foreach ($file in $jsonFiles) {
     $universityNameEn = [string]$oldItem.universityNameEn
   }
 
+  $processedSubjectTypes = @{}
   foreach ($subjectProp in $parsed.PSObject.Properties) {
-    $subjectType = [string]$subjectProp.Name
+    $subjectType = Get-DisplaySubjectType ([string]$subjectProp.Name)
+
+    if ($processedSubjectTypes.ContainsKey($subjectType)) {
+      continue
+    }
+    $processedSubjectTypes[$subjectType] = $true
 
     if ($subjectType -eq "综合" -and ($ComprehensiveSubjectProvinces -notcontains $province)) {
       continue

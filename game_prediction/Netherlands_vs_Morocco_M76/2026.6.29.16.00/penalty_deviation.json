@@ -1,0 +1,505 @@
+{
+  "schema_version": "2.0",
+  "phase": "penalties",
+  "space_type": "penalty_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+  "points": [
+    {
+      "label": "3-4",
+      "score": "3-4",
+      "penalty_score": "3-4",
+      "probability": 0.178,
+      "conditional_probability": 0.178,
+      "joint_probability": 0.025630367769847232,
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.178,
+      "category": "normal_penalty_win",
+      "winner_side": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "最贴合委员会共识的主线比分。双方前五罚出现1至2次未进，荷兰主罚质量使比分接近，但布努的世界杯点球大战扑救履历和职业扑点记录使摩洛哥更可能通过一次关键扑救、干扰或荷兰罚失以4-3胜出。",
+      "rationale_en": "Rationale for 3-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "4-5",
+      "score": "4-5",
+      "penalty_score": "4-5",
+      "probability": 0.146,
+      "conditional_probability": 0.146,
+      "joint_probability": 0.021022661204481437,
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.146,
+      "category": "normal_penalty_win",
+      "winner_side": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "摩洛哥高命中率主线之一。双方前五轮多数命中，布努优势可能被延后到第五轮或突然死亡阶段体现；荷兰主罚端质量使比分接近，但摩洛哥仍凭门将资产和心理收益小幅优先。",
+      "rationale_en": "Rationale for 4-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "4-3",
+      "score": "4-3",
+      "penalty_score": "4-3",
+      "probability": 0.14399999999999996,
+      "conditional_probability": 0.14399999999999996,
+      "joint_probability": 0.02073467954414607,
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.14399999999999996,
+      "category": "normal_penalty_win",
+      "winner_side": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "PEN_FAVORITE_PRESSURE"
+      ],
+      "tail_title_cn": "热门方压力失误",
+      "rationale_cn": "荷兰标准一球差胜出。若荷兰前五名技术型或经验型主罚稳定，且Verbruggen完成一次有效干扰、扑救或摩洛哥出现心理失误，荷兰可以反向赢下常见4-3比分。该项是荷兰最高单项比分。",
+      "tail_title_en": "Favorite pressure miss",
+      "rationale_en": "Rationale for 4-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "5-4",
+      "score": "5-4",
+      "penalty_score": "5-4",
+      "probability": 0.11299999999999999,
+      "conditional_probability": 0.11299999999999999,
+      "joint_probability": 0.01627096380894796,
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.11299999999999999,
+      "category": "normal_penalty_win",
+      "winner_side": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "PEN_FAVORITE_PRESSURE"
+      ],
+      "tail_title_cn": "热门方压力失误",
+      "rationale_cn": "高命中率点球大战中荷兰经突然死亡或第五轮后胜出。荷兰主罚候选深度和范戴克、德容等经验可把比赛拖入高质量对罚，若布努优势未在关键轮兑现，荷兰可5-4取胜。",
+      "tail_title_en": "Favorite pressure miss",
+      "rationale_en": "Rationale for 5-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "2-4",
+      "score": "2-4",
+      "penalty_score": "2-4",
+      "probability": 0.091,
+      "conditional_probability": 0.091,
+      "joint_probability": 0.013103165545258977,
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.091,
+      "category": "penalty_tail",
+      "winner_side": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "PEN_KEEPER_HERO"
+      ],
+      "tail_title_cn": "门将连续扑点",
+      "rationale_cn": "摩洛哥较早建立门将与心理压迫，布努在前两到三轮完成一次扑救或迫使偏出，荷兰随后因必须追赶再失手。该比分是摩洛哥非一球差胜利中最可信路径，但仍低于4-3和5-4主线。",
+      "tail_title_en": "Goalkeeper heroics",
+      "rationale_en": "Rationale for 2-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "4-2",
+      "score": "4-2",
+      "penalty_score": "4-2",
+      "probability": 0.06999999999999998,
+      "conditional_probability": 0.06999999999999998,
+      "joint_probability": 0.010079358111737673,
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.06999999999999998,
+      "category": "penalty_tail",
+      "winner_side": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "PEN_KEEPER_HERO",
+        "PEN_FAVORITE_PRESSURE"
+      ],
+      "tail_title_cn": "门将连续扑点，热门方压力失误",
+      "rationale_cn": "荷兰前五罚结构稳定，摩洛哥核心或年轻罚手早段失误后追赶压力增加。该路径体现荷兰主罚质量对冲布努优势：德佩、加克波、德容、范戴克、赖因德斯等候选若仍在场且稳定，荷兰可在前五轮较清晰胜出。",
+      "tail_title_en": "Goalkeeper heroics, Favorite pressure miss",
+      "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "3-5",
+      "score": "3-5",
+      "penalty_score": "3-5",
+      "probability": 0.045000000000000005,
+      "conditional_probability": 0.045000000000000005,
+      "joint_probability": 0.0064795873575456495,
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.045000000000000005,
+      "category": "penalty_tail",
+      "winner_side": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "PEN_KEEPER_HERO"
+      ],
+      "tail_title_cn": "门将连续扑点",
+      "rationale_cn": "摩洛哥上行尾部。布努可能连续扑救或连续制造偏出，摩洛哥主罚端整体命中较高，比分被拉开到两球。布努曾有单场点球大战两扑履历，因此该路径比荷兰5-3略高，但仍非主线。",
+      "tail_title_en": "Goalkeeper heroics",
+      "rationale_en": "Rationale for 3-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "2-3",
+      "score": "2-3",
+      "penalty_score": "2-3",
+      "probability": 0.03499999999999999,
+      "conditional_probability": 0.03499999999999999,
+      "joint_probability": 0.0050396790558688365,
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.03499999999999999,
+      "category": "normal_penalty_win",
+      "winner_side": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "低命中率前五轮内摩洛哥小胜。120分钟后的疲劳、淘汰赛压力与布努威慑共同放大失误率，摩洛哥虽也可能罚丢，但凭一次关键扑救或荷兰偏出以3-2收束。",
+      "rationale_en": "Rationale for 2-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "5-3",
+      "score": "5-3",
+      "penalty_score": "5-3",
+      "probability": 0.03499999999999999,
+      "conditional_probability": 0.03499999999999999,
+      "joint_probability": 0.0050396790558688365,
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.03499999999999999,
+      "category": "penalty_tail",
+      "winner_side": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "荷兰在较高命中率路径中先稳住节奏，摩洛哥出现一到两次追赶轮失误。该路径需要布努未能兑现门将优势，同时荷兰经验核心帮助后排罚手保持冷静，属于荷兰上行尾部。",
+      "rationale_en": "Rationale for 5-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "3-2",
+      "score": "3-2",
+      "penalty_score": "3-2",
+      "probability": 0.02999999999999999,
+      "conditional_probability": 0.02999999999999999,
+      "joint_probability": 0.00431972490503043,
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.02999999999999999,
+      "category": "normal_penalty_win",
+      "winner_side": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "低命中率点球大战中荷兰小胜。荷兰技术型与经验型候选主罚手仍能压住部分压力，而摩洛哥主罚端出现多脚未进；但这需要布努没有把低命中率环境转化为摩洛哥优势，所以低于摩洛哥2-3。",
+      "rationale_en": "Rationale for 3-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "1-3",
+      "score": "1-3",
+      "penalty_score": "1-3",
+      "probability": 0.027,
+      "conditional_probability": 0.027,
+      "joint_probability": 0.003887752414527389,
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.027,
+      "category": "penalty_tail",
+      "winner_side": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "摩洛哥依靠布努早段扑救或强干扰建立两球差，荷兰在被拖入布努语境后出现连续心理压力。比分比4-2、4-3更低，需要双方整体命中率偏低且荷兰更差，因此概率低于主线。",
+      "rationale_en": "Rationale for 1-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "3-1",
+      "score": "3-1",
+      "penalty_score": "3-1",
+      "probability": 0.023999999999999997,
+      "conditional_probability": 0.023999999999999997,
+      "joint_probability": 0.0034557799240243453,
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.023999999999999997,
+      "category": "penalty_tail",
+      "winner_side": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "荷兰在前五轮内较早建立优势，Verbruggen或门柱制造摩洛哥两次以上未进，荷兰三次命中即可结束。该路径依赖摩洛哥主罚端明显不稳，例如高压罚失风险被放大；但布努优势和摩洛哥心理收益限制其权重。",
+      "rationale_en": "Rationale for 3-1: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "6-5",
+      "score": "6-5",
+      "penalty_score": "6-5",
+      "probability": 0.019999999999999993,
+      "conditional_probability": 0.019999999999999993,
+      "joint_probability": 0.0028798166033536204,
+      "deviation_score": 0.32,
+      "x": 0.32,
+      "y": 0.019999999999999993,
+      "category": "normal_penalty_win",
+      "winner_side": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "PEN_EXTENDED_DRAMA"
+      ],
+      "tail_title_cn": "延长点球决胜",
+      "rationale_cn": "长轮次突然死亡中荷兰后排罚手保持冷静，摩洛哥后排或年轻罚手最终失手。该路径保留荷兰主罚深度和经验核心的尾部胜法，但长轮次本身概率较低。",
+      "tail_title_en": "Extended shootout decider",
+      "rationale_en": "Rationale for 6-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "5-6",
+      "score": "5-6",
+      "penalty_score": "5-6",
+      "probability": 0.019999999999999993,
+      "conditional_probability": 0.019999999999999993,
+      "joint_probability": 0.0028798166033536204,
+      "deviation_score": 0.32,
+      "x": 0.32,
+      "y": 0.019999999999999993,
+      "category": "normal_penalty_win",
+      "winner_side": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "PEN_EXTENDED_DRAMA"
+      ],
+      "tail_title_cn": "延长点球决胜",
+      "rationale_cn": "长轮次突然死亡中摩洛哥胜出。随着主罚顺序进入后排，单脚稳定性下降，布努读向与心理压迫权重增加；但长轮次本身低频，因此概率与荷兰6-5相近，仅由总体摩洛哥优势轻微支撑。",
+      "tail_title_en": "Extended shootout decider",
+      "rationale_en": "Rationale for 5-6: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "penalty_score": "0-3",
+      "probability": 0.011999999999999999,
+      "conditional_probability": 0.011999999999999999,
+      "joint_probability": 0.0017278899620121726,
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.011999999999999999,
+      "category": "penalty_tail",
+      "winner_side": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "摩洛哥前五罚内三罚命中且荷兰连续早段失手。布努历史点球大战两扑与职业扑点记录使这种低比分压制略比荷兰3-0更可想象，但点球大战三球差仍需多次荷兰罚失或被扑，属于尾部。",
+      "rationale_en": "Rationale for 0-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "penalty_score": "3-0",
+      "probability": 0.009999999999999997,
+      "conditional_probability": 0.009999999999999997,
+      "joint_probability": 0.0014399083016768102,
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.009999999999999997,
+      "category": "penalty_tail",
+      "winner_side": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "荷兰前五罚内三罚命中且摩洛哥连续早段失手的低频路径。需要布努优势完全未兑现，同时摩洛哥主罚端在压力、疲劳或顺位不理想下明显崩盘；与摩洛哥整体小幅点球优势不一致，因此只保留很低概率。",
+      "rationale_en": "Rationale for 3-0: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    }
+  ],
+  "tail_focus_type": "penalty_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "PEN_KEEPER_HERO",
+      "label": "门将连续扑点",
+      "label_cn": "门将连续扑点",
+      "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+      "score": "2-4",
+      "winner_side": "team_b",
+      "probability": 0.091,
+      "probability_band": "low-medium",
+      "deviation_score": 0.72,
+      "category": "penalty_tail_scenario",
+      "selected_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.091,
+          "winner_side": "team_b",
+          "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+          "rationale_en": "Rationale for 2-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "score": "4-2",
+          "probability": 0.06999999999999998,
+          "winner_side": "team_a",
+          "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+          "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "score": "3-5",
+          "probability": 0.045000000000000005,
+          "winner_side": "team_b",
+          "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+          "rationale_en": "Rationale for 3-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        }
+      ],
+      "display_scores": [
+        "2-4",
+        "4-2",
+        "3-5"
+      ],
+      "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+      "label_en": "Goalkeeper heroics",
+      "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+      "rationale_en": "Rationale for 2-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "PEN_FAVORITE_PRESSURE",
+      "label": "热门方压力失误",
+      "label_cn": "热门方压力失误",
+      "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+      "score": "4-3",
+      "winner_side": "team_a",
+      "probability": 0.14399999999999996,
+      "probability_band": "low-medium",
+      "deviation_score": 0.64,
+      "category": "penalty_tail_scenario",
+      "selected_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.14399999999999996,
+          "winner_side": "team_a",
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "rationale_en": "Rationale for 4-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "score": "5-4",
+          "probability": 0.11299999999999999,
+          "winner_side": "team_a",
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "rationale_en": "Rationale for 5-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "score": "4-2",
+          "probability": 0.06999999999999998,
+          "winner_side": "team_a",
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        }
+      ],
+      "display_scores": [
+        "4-3",
+        "5-4",
+        "4-2"
+      ],
+      "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+      "label_en": "Favorite pressure miss",
+      "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+      "rationale_en": "Rationale for 4-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "PEN_EXTENDED_DRAMA",
+      "label": "延长点球决胜",
+      "label_cn": "延长点球决胜",
+      "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+      "score": "6-5",
+      "winner_side": "team_a",
+      "probability": 0.019999999999999993,
+      "probability_band": "low",
+      "deviation_score": 0.58,
+      "category": "penalty_tail_scenario",
+      "selected_scores": [
+        {
+          "score": "6-5",
+          "probability": 0.019999999999999993,
+          "winner_side": "team_a",
+          "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+          "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+        },
+        {
+          "score": "5-6",
+          "probability": 0.019999999999999993,
+          "winner_side": "team_b",
+          "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+          "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+        }
+      ],
+      "display_scores": [
+        "6-5",
+        "5-6"
+      ],
+      "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+      "label_en": "Extended shootout decider",
+      "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+      "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "PEN_KEEPER",
+      "label_cn": "门将扑点能力",
+      "impact_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+      "label_en": "Penalty-saving ability",
+      "impact_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge.",
+      "text_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+      "text_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge."
+    },
+    {
+      "factor_id": "PEN_TAKER_DEPTH",
+      "label_cn": "主罚手深度",
+      "impact_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+      "label_en": "Penalty taker depth",
+      "impact_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties.",
+      "text_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+      "text_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties."
+    },
+    {
+      "factor_id": "PEN_ON_PITCH",
+      "label_cn": "120分钟后人员留存",
+      "impact_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+      "label_en": "Who remains on the pitch after 120 minutes",
+      "impact_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool.",
+      "text_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+      "text_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool."
+    },
+    {
+      "factor_id": "PEN_PRESSURE",
+      "label_cn": "压力承受",
+      "impact_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+      "label_en": "Pressure handling",
+      "impact_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break.",
+      "text_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+      "text_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break."
+    },
+    {
+      "factor_id": "PEN_HISTORY",
+      "label_cn": "点球经验",
+      "impact_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+      "label_en": "Shootout experience",
+      "impact_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition.",
+      "text_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+      "text_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition."
+    },
+    {
+      "factor_id": "PEN_FOOTEDNESS",
+      "label_cn": "左右脚与射门习惯",
+      "impact_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+      "label_en": "Footedness and shooting habits",
+      "impact_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability.",
+      "text_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+      "text_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time. Inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeeper/taker information and pressure factors."
+}

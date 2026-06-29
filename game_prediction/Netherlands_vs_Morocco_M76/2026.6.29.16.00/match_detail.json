@@ -1,0 +1,1339 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "统一淘汰赛长路径pipeline：一次证据收集、一次MAS路径讨论、完整0-90/90-120/点球路径分布，再派生常规时间、加时和点球视图。",
+  "architecture_cn": "加时和点球不再是独立后处理输出，而是完整淘汰赛路径分布中的条件分支；前端三Tab只是同一分布的不同切片。",
+  "match": {
+    "match_id": "M75",
+    "team_a": "Netherlands",
+    "team_b": "Morocco",
+    "kickoff_utc": "2026-06-30T01:00:00Z",
+    "venue": "",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.5295620168047285,
+      "team_b": 0.4704379831952714,
+      "favorite": "Netherlands"
+    },
+    "resolution": {
+      "normal_time": 0.7266666666666669,
+      "extra_time": 0.1293425031656525,
+      "penalties": 0.14399083016768086
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.11925925925925926,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09111111111111111,
+        "goals_a": 2,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.08259259259259259,
+        "goals_a": 1,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Netherlands常规时间晋级。",
+        "summary_cn": "90分钟2-1，Netherlands常规时间晋级。",
+        "probability": 0.09111111111111117,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Netherlands",
+        "path_id": "N_2-1_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time.",
+        "summary_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+        "probability": 0.02753117957001655,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Netherlands",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008758429721933775,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Morocco",
+        "path_id": "P_1-1_0-0_3-4_team_b",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Netherlands常规时间晋级。",
+        "summary_cn": "90分钟2-1，Netherlands常规时间晋级。",
+        "probability": 0.09111111111111117,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Netherlands",
+        "path_id": "N_2-1_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time.",
+        "summary_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+        "probability": 0.02753117957001655,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Netherlands",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008758429721933775,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Morocco",
+        "path_id": "P_1-1_0-0_3-4_team_b",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties."
+      }
+    ],
+    "favorite": "Netherlands",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.14399083016768086,
+        "probability_band": "14.4%",
+        "representative_paths": [
+          {
+            "path_id": "P_1-1_0-0_3-4_team_b",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "probability": 0.008758429721933775,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+            "path_probability": 0.008758429721933775,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties."
+          },
+          {
+            "path_id": "P_1-1_0-0_4-5_team_b",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "probability": 0.0071838805584400625,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+            "path_probability": 0.0071838805584400625,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties."
+          },
+          {
+            "path_id": "P_1-1_0-0_4-3_team_a",
+            "resolution_type": "penalties",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-0",
+            "after_extra_time_score": "1-1",
+            "extra_time_result": "draw",
+            "penalty_score": "4-3",
+            "penalty_winner": "team_a",
+            "advancer_side": "team_a",
+            "advancer_team": "Netherlands",
+            "probability": 0.007085471235721705,
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Netherlands点球晋级。",
+            "path_probability": 0.007085471235721705,
+            "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Netherlands advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH PENALTY DRAG candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.1293425031656525,
+        "probability_band": "12.9%",
+        "representative_paths": [
+          {
+            "path_id": "ET_1-1_1-0_A",
+            "resolution_type": "extra_time",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "1-0",
+            "after_extra_time_score": "2-1",
+            "extra_time_result": "team_a",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "Netherlands",
+            "probability": 0.02753117957001655,
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+            "path_probability": 0.02753117957001655,
+            "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment."
+          },
+          {
+            "path_id": "ET_1-1_0-1_B",
+            "resolution_type": "extra_time",
+            "normal_time_score": "1-1",
+            "normal_time_result": "draw",
+            "extra_time_increment": "0-1",
+            "after_extra_time_score": "1-2",
+            "extra_time_result": "team_b",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "probability": 0.01874463289873468,
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Morocco加时晋级。",
+            "path_probability": 0.01874463289873468,
+            "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Morocco advances with a 0-1 extra-time increment."
+          },
+          {
+            "path_id": "ET_2-2_1-0_A",
+            "resolution_type": "extra_time",
+            "normal_time_score": "2-2",
+            "normal_time_result": "draw",
+            "extra_time_increment": "1-0",
+            "after_extra_time_score": "3-2",
+            "extra_time_result": "team_a",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_a",
+            "advancer_team": "Netherlands",
+            "probability": 0.0164161070728049,
+            "summary_cn": "90分钟2-2后进入加时，加时增量1-0，Netherlands加时晋级。",
+            "path_probability": 0.0164161070728049,
+            "summary_en": "After 2-2 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH EXTRA TIME DECISION candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.3165882235298645,
+        "probability_band": "31.7%",
+        "representative_paths": [
+          {
+            "path_id": "N_1-2_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "1-2",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "1-2",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "probability": 0.08185185185185191,
+            "summary_cn": "90分钟1-2，Morocco常规时间晋级。",
+            "path_probability": 0.08185185185185191,
+            "summary_en": "After a 1-2 scoreline in 90 minutes, Morocco advances in normal time."
+          },
+          {
+            "path_id": "N_0-1_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "0-1",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "0-1",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "probability": 0.07888888888888894,
+            "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+            "path_probability": 0.07888888888888894,
+            "summary_en": "After a 0-1 scoreline in 90 minutes, Morocco advances in normal time."
+          },
+          {
+            "path_id": "N_0-2_B",
+            "resolution_type": "normal_time",
+            "normal_time_score": "0-2",
+            "normal_time_result": "team_b",
+            "extra_time_increment": null,
+            "after_extra_time_score": "0-2",
+            "extra_time_result": "not_needed",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "probability": 0.050740740740740774,
+            "summary_cn": "90分钟0-2，Morocco常规时间晋级。",
+            "path_probability": 0.050740740740740774,
+            "summary_en": "After a 0-2 scoreline in 90 minutes, Morocco advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "English summary generated for the corresponding Chinese dashboard field.",
+        "rationale_en": "Rationale: this FULL PATH UNDERDOG ADVANCE candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 398,
+      "raw_top_paths": [
+        {
+          "path_id": "N_2-1_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-1",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-1",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Netherlands",
+          "probability": 0.09111111111111117,
+          "summary_cn": "90分钟2-1，Netherlands常规时间晋级。",
+          "path_probability": 0.09111111111111117,
+          "summary_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time."
+        },
+        {
+          "path_id": "N_1-0_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Netherlands",
+          "probability": 0.08259259259259265,
+          "summary_cn": "90分钟1-0，Netherlands常规时间晋级。",
+          "path_probability": 0.08259259259259265,
+          "summary_en": "After a 1-0 scoreline in 90 minutes, Netherlands advances in normal time."
+        },
+        {
+          "path_id": "N_1-2_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-2",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-2",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Morocco",
+          "probability": 0.08185185185185191,
+          "summary_cn": "90分钟1-2，Morocco常规时间晋级。",
+          "path_probability": 0.08185185185185191,
+          "summary_en": "After a 1-2 scoreline in 90 minutes, Morocco advances in normal time."
+        },
+        {
+          "path_id": "N_0-1_B",
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-1",
+          "normal_time_result": "team_b",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-1",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_b",
+          "advancer_team": "Morocco",
+          "probability": 0.07888888888888894,
+          "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+          "path_probability": 0.07888888888888894,
+          "summary_en": "After a 0-1 scoreline in 90 minutes, Morocco advances in normal time."
+        },
+        {
+          "path_id": "N_2-0_A",
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-0",
+          "normal_time_result": "team_a",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-0",
+          "extra_time_result": "not_needed",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "advancer_side": "team_a",
+          "advancer_team": "Netherlands",
+          "probability": 0.05555555555555559,
+          "summary_cn": "90分钟2-0，Netherlands常规时间晋级。",
+          "path_probability": 0.05555555555555559,
+          "summary_en": "After a 2-0 scoreline in 90 minutes, Netherlands advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟2-1，Netherlands常规时间晋级。",
+          "summary_cn": "90分钟2-1，Netherlands常规时间晋级。",
+          "probability": 0.09111111111111117,
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-1",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Netherlands",
+          "path_id": "N_2-1_A",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time.",
+          "summary_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+          "probability": 0.02753117957001655,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Netherlands",
+          "path_id": "ET_1-1_1-0_A",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment.",
+          "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+          "probability": 0.008758429721933775,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "3-4",
+          "advancer_team": "Morocco",
+          "path_id": "P_1-1_0-0_3-4_team_b",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Netherlands常规时间晋级。",
+        "summary_cn": "90分钟2-1，Netherlands常规时间晋级。",
+        "probability": 0.09111111111111117,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Netherlands",
+        "path_id": "N_2-1_A",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time.",
+        "summary_en": "After a 2-1 scoreline in 90 minutes, Netherlands advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Netherlands加时晋级。",
+        "probability": 0.02753117957001655,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Netherlands",
+        "path_id": "ET_1-1_1-0_A",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment.",
+        "summary_en": "After 1-1 in 90 minutes, the match goes to extra time; Netherlands advances with a 1-0 extra-time increment."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008758429721933775,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Morocco",
+        "path_id": "P_1-1_0-0_3-4_team_b",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and a 0-0 extra-time increment, the match remains level; Morocco advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放／大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.33444444444444443,
+          "base_event_probability": 0.33444444444444443,
+          "attention_level": "medium",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.06740429157126883,
+              "conditional_probability": 0.20154107114332873,
+              "script_cn": "荷兰中路破局两次得手，摩洛哥两次反击/定位还以颜色，双方均完成两球；摩洛哥淘汰赛耐心与布努门线/点球优势使其接受把比赛拖向加时与点球(H3)，90分钟以开放均势收场。",
+              "rationale_cn": "本池条件概率最高(约0.213)，是双方各进两球的开放均势，命中H1/H2双方进球与H3平局抬升。但其为本情景最低达标总进球(4球平局)，仅作高概率开放均势保留，置最低支持档并在caution中明确不应被当作开放/大比分主线，防止机械压回最低达标比分。",
+              "evidence_ids": [
+                "E_678692b0d5eb",
+                "E_a493c529ff38",
+                "E_5de7f51c6a92",
+                "E_493185c339d3",
+                "E_9e818ddbd580",
+                "E_ac231839ec51",
+                "E_d993b3b095c7"
+              ],
+              "mechanism_ids": [
+                "H1",
+                "H2",
+                "H3"
+              ],
+              "script_en": "Scenario script for 2-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.050719846890178596,
+              "conditional_probability": 0.1516540272463812,
+              "script_cn": "荷兰凭德容带动的中路出球与跑动型中场拉扯摩洛哥紧凑块，前场抓住肋部与禁区二点完成两到三球；荷兰边后卫前压后被哈基米/布拉欣反击链惩罚丢两球，但终结状态更好的荷兰在90分钟内以一球小胜锁定5球开放对攻。",
+              "rationale_cn": "本池条件概率第二高(约0.110)，方向同时命中H1(荷兰破局)与H2(摩洛哥反击)，是双方进球、荷兰微弱占优的最具代表性开放比分，证据全部真实且对位。",
+              "evidence_ids": [
+                "E_678692b0d5eb",
+                "E_a493c529ff38",
+                "E_5de7f51c6a92",
+                "E_eeb4eb135625",
+                "E_9e818ddbd580",
+                "E_40e2f39b54fb",
+                "E_ac231839ec51"
+              ],
+              "mechanism_ids": [
+                "H1",
+                "H2"
+              ],
+              "script_en": "Scenario script for 3-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.025604777878352233,
+              "conditional_probability": 0.07655913651334555,
+              "script_cn": "荷兰高位压上、边后卫站位前移，丢球后边路身后被哈基米纵向冲刺与布拉欣线间接应反复打穿；Timber缺阵削弱荷兰后防轮换，摩洛哥以低控球高威胁转换连入三球，在双方对攻中以一球反超偷下比赛。",
+              "rationale_cn": "完全由H2反击机制主导，并叠加Timber缺阵(E_e5ef7c4d8a3b/E_1608e9c9c138)与摩洛哥淘汰赛核心(E_b71fa67b4912)、无所畏惧口径(E_d4518895dcd0)。条件概率(约0.068)明显低于3-2，故由grade2下调为grade1以匹配机制强度与概率。",
+              "evidence_ids": [
+                "E_9e818ddbd580",
+                "E_40e2f39b54fb",
+                "E_ac231839ec51",
+                "E_b71fa67b4912",
+                "E_d4518895dcd0",
+                "E_e5ef7c4d8a3b",
+                "E_1608e9c9c138"
+              ],
+              "mechanism_ids": [
+                "H2",
+                "H1"
+              ],
+              "script_en": "Scenario script for 2-3: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "4-2",
+              "probability": 0.017225032390891504,
+              "conditional_probability": 0.05150341910897792,
+              "script_cn": "摩洛哥中位块在荷兰持续中场跑动与火力下被反复拉开间距(H1/H4)，荷兰把连续禁区触球转化为四球；荷兰前压留出空间被哈基米反击链回敬两球，形成6球大开大合但荷兰明显占优的剧本。",
+              "rationale_cn": "代表本池真实大比分(6球)，方向命中H1/H4破局与H2反击双方进球，避免把开放情景全部压回低总进球。已剔除原引用的布努扑点证据E_4dfb2812a321(与大胜剧本不相关、属点球分支)，保留荷兰火力与摩洛哥中位块的对位证据。条件概率较低(约0.041),置grade1。",
+              "evidence_ids": [
+                "E_678692b0d5eb",
+                "E_a493c529ff38",
+                "E_5de7f51c6a92",
+                "E_eeb4eb135625",
+                "E_493185c339d3",
+                "E_9e818ddbd580",
+                "E_40e2f39b54fb"
+              ],
+              "mechanism_ids": [
+                "H1",
+                "H2",
+                "H4"
+              ],
+              "script_en": "Scenario script for 4-2: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-2",
+            "2-3"
+          ],
+          "rationale_cn": "高偏离情景定义为总进球至少4球，基础事件概率约0.334并不稀有，xG合计约2.9，开放比分有现实基础。机制结构同时支持荷兰中路破局（H1/H4）与摩洛哥右路反击（H2），意味着双方都可能进球，且鹿特丹式火力（5-1胜瑞典、小组10球）与Timber缺阵削弱后防共同抬高总进球与双方进球概率。保留以双方进球为核心的开放比分：荷兰小胜的5球(3-2)、摩洛哥反击偷分的5球(2-3)、荷兰大胜的6球(4-2)，以及概率最高的开放平局(2-2)。机制H3的点球/耐心逻辑只支撑平局分支不支撑无条件大胜，因此大比分不过度极端，止于本池真实上限4-2。",
+          "caution_cn": "摩洛哥中位块与双后腰保护（E_493185c339d3）会压低荷兰单次机会质量，布努点球履历（E_4dfb2812a321）与淘汰赛耐心（H3）更指向低总进球的平局/点球分支，且两队同积7分实力接近（E_786ba4f99f37），因此本情景整体仍属低于半数权重的偏离分支。2-2为本池最低达标总进球（4球平局），仅作为高概率开放均势保留，不应被当作开放情景主线；候选池上限为4-2，不存在更大比分可选，避免人为外推。",
+          "supporting_evidence_ids": [
+            "E_678692b0d5eb",
+            "E_a493c529ff38",
+            "E_5de7f51c6a92",
+            "E_eeb4eb135625",
+            "E_9e818ddbd580",
+            "E_40e2f39b54fb",
+            "E_ac231839ec51",
+            "E_b71fa67b4912",
+            "E_e5ef7c4d8a3b",
+            "E_1608e9c9c138",
+            "E_493185c339d3"
+          ],
+          "counter_evidence_ids": [
+            "E_493185c339d3",
+            "E_d993b3b095c7",
+            "E_4dfb2812a321",
+            "E_786ba4f99f37"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least four total goals.",
+          "rationale_en": "Rationale: this open / high-scoring candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast.",
+          "caution_en": "Caution: this is a open / high-scoring tail scenario. Treat the listed scores as deviation candidates, not as the central prediction, and read them together with the main distribution and counter-evidence."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒／崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.10777777777777776,
+          "base_event_probability": 0.10777777777777776,
+          "attention_level": "low",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.024388541269138694,
+              "conditional_probability": 0.22628543445592605,
+              "script_cn": "荷兰通过德容主导的中路出球与跑动型中场拉扯摩洛哥紧凑块，前场把连续禁区触球转化为多次得分，摩洛哥未能从反击中扳回，荷兰90分钟内稳定控局完成净胜3球。",
+              "rationale_cn": "候选池基础条件权重最高（0.199）的荷兰崩盘比分，rollout_6直接给出3-0。H1提供最清晰支撑：小组赛10球、5-1瑞典的火力样本，德容推进与较强终结状态；在荷兰一边倒路径中3-0是最稳固落点。保留并给予较高支撑等级。",
+              "evidence_ids": [
+                "E_a493c529ff38",
+                "E_5de7f51c6a92",
+                "E_678692b0d5eb",
+                "E_4b466546c1cc"
+              ],
+              "mechanism_ids": [
+                "H1"
+              ],
+              "script_en": "Scenario script for 3-0: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.018443653088195257,
+              "conditional_probability": 0.17112667813789417,
+              "script_cn": "荷兰主动压上、边后卫高站位后丢球，摩洛哥夺回球后前两脚连续找到哈基米与布拉欣的纵向冲刺，把低控球转化为高质量转换，多次惩罚荷兰身后空间完成净胜3球。",
+              "rationale_cn": "替换原提案中的5-1。0-3为整个候选池基础条件权重第二高（0.182），且是被原提案完全忽略的摩洛哥方向主崩盘落点。H2明确给出哈基米/布拉欣反击链机制，rollout_9（0-4）同方向佐证。相较被删除的5-1（权重仅0.031、6球级别、机制明确否定荷兰无条件大胜），0-3证据与机制支撑都显著更强。",
+              "evidence_ids": [
+                "E_9e818ddbd580",
+                "E_40e2f39b54fb",
+                "E_ac231839ec51",
+                "E_b71fa67b4912",
+                "E_e5ef7c4d8a3b"
+              ],
+              "mechanism_ids": [
+                "H2"
+              ],
+              "script_en": "Scenario script for 0-3: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.017664147750128138,
+              "conditional_probability": 0.16389415438263222,
+              "script_cn": "荷兰在中场推进与前场多点开花下取得领先并扩大优势，摩洛哥依靠哈基米、布拉欣的转换在某一阶段打入安慰球，但无法改变荷兰主导的崩盘走向。",
+              "rationale_cn": "荷兰方向第二高权重（0.162）。同时吸收H1的荷兰火力与H2的摩洛哥反击安慰球，符合荷兰主导但比赛并非完全封闭的剧本。保留。",
+              "evidence_ids": [
+                "E_a493c529ff38",
+                "E_5de7f51c6a92",
+                "E_678692b0d5eb",
+                "E_9e818ddbd580",
+                "E_ac231839ec51"
+              ],
+              "mechanism_ids": [
+                "H1",
+                "H2"
+              ],
+              "script_en": "Scenario script for 4-1: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            },
+            {
+              "score": "0-4",
+              "probability": 0.009091328998662284,
+              "conditional_probability": 0.08435253710099028,
+              "script_cn": "摩洛哥早段利用荷兰前压留出的边路身后空间连续进球，荷兰随后加快节奏追分反而进一步暴露转换空间，哈基米侧反击持续奏效，最终摩洛哥反击型崩盘取胜。",
+              "rationale_cn": "rollout_9直接给出0-4，并描述摩洛哥早段连续进球、荷兰加快节奏后空间继续暴露的链条，与H2高度一致。Timber缺席削弱荷兰后防轮换弹性，强化该路径合理性。代表荷兰追分失败后的反击型崩盘，而非常规控球碾压。保留。",
+              "evidence_ids": [
+                "E_9e818ddbd580",
+                "E_40e2f39b54fb",
+                "E_ac231839ec51",
+                "E_e5ef7c4d8a3b",
+                "E_1608e9c9c138"
+              ],
+              "mechanism_ids": [
+                "H2"
+              ],
+              "script_en": "Scenario script for 0-4: this 90 minutes path follows the listed tail mechanisms, combining attacking pressure, transition chances, set pieces and game-state risk into the displayed scoreline.",
+              "rationale_en": "Rationale: this candidate is supported by the model probability, rollout evidence and listed mechanisms, and should be read together with the main forecast distribution."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "0-3",
+            "4-1"
+          ],
+          "rationale_cn": "blowout基础事件概率约0.108，属低关注但成立的高偏离情景。荷兰一边倒路径有H1（中场推进+近期火力）与rollout_6（3-0）支撑；摩洛哥反击型崩盘有H2（哈基米/布拉欣转换链）与rollout_9（0-4）支撑。两方向均有真实证据，但机制同时给出明确上限：H1指出荷兰单次机会质量被中低位压低、不支持无条件大胜，H2的崩盘依赖荷兰前压失衡而非常规碾压。因此保留中段大比分、剔除6球级别的极端落点。",
+          "caution_cn": "两套机制均自带上限：摩洛哥中低位与双后腰保护会压低荷兰单次机会质量，荷兰领先后可能降速保险；摩洛哥方向崩盘高度依赖荷兰前压后被反击惩罚，并非常规控球碾压。任何6球及以上、净胜4球以上的落点缺乏机制和rollout支撑，已被剔除。点球与门将证据偏摩洛哥，但属平局/淘汰分支，不构成blowout依据。",
+          "supporting_evidence_ids": [
+            "E_a493c529ff38",
+            "E_5de7f51c6a92",
+            "E_678692b0d5eb",
+            "E_4b466546c1cc",
+            "E_9e818ddbd580",
+            "E_40e2f39b54fb",
+            "E_ac231839ec51",
+            "E_e5ef7c4d8a3b",
+            "E_1608e9c9c138"
+          ],
+          "counter_evidence_ids": [
+            "E_493185c339d3",
+            "E_4dfb2812a321",
+            "E_b71fa67b4912",
+            "E_786ba4f99f37"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either team wins by at least three goals.",
+          "rationale_en": "Rationale: this one-sided / collapse candidate is retained because the model probability, rollout evidence and listed mechanisms support it as a plausible tail path rather than the central forecast.",
+          "caution_en": "Caution: this is a one-sided / collapse tail scenario. Treat the listed scores as deviation candidates, not as the central prediction, and read them together with the main distribution and counter-evidence."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷",
+          "definition_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+          "probability": 0,
+          "base_event_probability": 0,
+          "attention_level": "not_applicable",
+          "status": "not_applicable",
+          "selected_scores": [],
+          "display_scores": [],
+          "rationale_cn": "两队胜率差小于 8%，不强行定义爆冷方。",
+          "caution_cn": "该情景没有满足预设适用条件。",
+          "supporting_evidence_ids": [],
+          "counter_evidence_ids": [],
+          "source": "tail_forecast_report",
+          "label_en": "Upset",
+          "definition_en": "The win-probability gap is below 8%, so no forced underdog is defined.",
+          "rationale_en": "The win-probability gap is below 8%, so no forced underdog is defined.",
+          "caution_en": "This scenario does not meet the preset applicability conditions."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "体能",
+          "impact_cn": "FIFA称德佩已恢复，范戴克和德容在荷兰核心名单中。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_4b466546c1cc"
+          ],
+          "source_names": [
+            "FIFA"
+          ],
+          "label_en": "Fitness",
+          "impact_en": "FIFA said Depay has recovered, with Van Dijk and De Jong included among the Netherlands core players.",
+          "text_cn": "FIFA称德佩已恢复，范戴克和德容在荷兰核心名单中。",
+          "text_en": "FIFA said Depay has recovered, with Van Dijk and De Jong included among the Netherlands core players."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "进攻",
+          "impact_cn": "荷兰小组赛7分10球，并有5-1大胜瑞典的火力样本。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_678692b0d5eb",
+            "E_a493c529ff38",
+            "E_5de7f51c6a92"
+          ],
+          "source_names": [
+            "Reuters",
+            "The Athletic / New York Times",
+            "ESPN"
+          ],
+          "label_en": "Attack",
+          "impact_en": "The Netherlands took 7 points and scored 10 goals in the group stage, including a 5-1 attacking sample against Sweden.",
+          "text_cn": "荷兰小组赛7分10球，并有5-1大胜瑞典的火力样本。",
+          "text_en": "The Netherlands took 7 points and scored 10 goals in the group stage, including a 5-1 attacking sample against Sweden."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "防守",
+          "impact_cn": "FIFA技术报告显示，摩洛哥曾用中位防守并在破线时积极压迫。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_493185c339d3"
+          ],
+          "source_names": [
+            "FIFA Training Centre"
+          ],
+          "label_en": "Defense",
+          "impact_en": "FIFA technical reporting showed Morocco using a mid-block and pressing aggressively when the line was broken.",
+          "text_cn": "FIFA技术报告显示，摩洛哥曾用中位防守并在破线时积极压迫。",
+          "text_en": "FIFA technical reporting showed Morocco using a mid-block and pressing aggressively when the line was broken."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "战术",
+          "impact_cn": "摩洛哥预计4-2-3-1含哈基米、布拉欣，右路转换威胁明确。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_9e818ddbd580",
+            "E_40e2f39b54fb",
+            "E_ac231839ec51"
+          ],
+          "source_names": [
+            "Yahoo Sports",
+            "Sports Illustrated"
+          ],
+          "label_en": "Tactics",
+          "impact_en": "Morocco are projected in a 4-2-3-1 with Hakimi and Brahim, giving them a clear right-side transition threat.",
+          "text_cn": "摩洛哥预计4-2-3-1含哈基米、布拉欣，右路转换威胁明确。",
+          "text_en": "Morocco are projected in a 4-2-3-1 with Hakimi and Brahim, giving them a clear right-side transition threat."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "体能",
+          "impact_cn": "淘汰赛若90分钟打平将加时，再平进入点球，后段风险偏好会变化。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_d993b3b095c7"
+          ],
+          "source_names": [
+            "Olympics.com"
+          ],
+          "label_en": "Fitness",
+          "impact_en": "In the knockout stage, a 90-minute draw goes to extra time and then penalties, so late-game risk preferences can change.",
+          "text_cn": "淘汰赛若90分钟打平将加时，再平进入点球，后段风险偏好会变化。",
+          "text_en": "In the knockout stage, a 90-minute draw goes to extra time and then penalties, so late-game risk preferences can change."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "Main 90-minute prediction for the full match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2733333333333333,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.23085150571131882,
+          "joint_probability": 0.06309941156109383,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.23085150571131882
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.1571754932502597
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "第二主线，指荷兰加时净增一球。德容、赫拉芬贝赫、赖因德斯带来的中场推进、二点回收和后段跑动深度，使荷兰在加时仍更可能持续制造阵地压迫。若90分钟起点为0-0或1-1，且摩洛哥后腰横移和禁区弧顶保护下降，荷兰小胜破局最合理。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal decision in extra time through a counterattack, set piece, or substitute impact.",
+          "rationale_en": "Rationale for 1-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.10805815160955354,
+          "joint_probability": 0.029535894773277976,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.10805815160955354
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.01367088607594937
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.01367088607594937
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.006151898734177215
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时双方各进一球后仍平，进入点球。该路径主要来自90分钟已较开放的2-2或3-3以上起点，也可能由体能下降导致压迫质量和回防间距同时变差。荷兰持续推进与摩洛哥反击互换机会，但不是低增量主线。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both teams score in extra time as a cautious game turns into a more open exchange.",
+          "rationale_en": "Rationale for 1-1: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.02357632398753895,
+          "joint_probability": 0.0064441952232606485,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.02357632398753895
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.013752855659397717
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.01367088607594937
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.01367088607594937
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "荷兰多球加时胜的最主要Other尾部。通常需要荷兰在加时前15分钟先破局，迫使摩洛哥前压，再利用身后空间、二点球或转换追加第二球。因需要早段进球触发，概率明显低于1-0。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "An extra-time breakthrough where one side wins by at least two goals or the phase reaches three or more goals.",
+          "rationale_en": "Rationale for 2-0: conditional on reaching extra time, this path reflects fatigue, bench impact, set pieces and risk preference. It should be read as an extra-time conditional path."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_FATIGUE",
+          "label_cn": "体能消耗",
+          "impact_cn": "90分钟后Netherlands与Morocco的跑动衰减、防线回收和二点保护决定加时是否被打开。",
+          "label_en": "Fatigue load",
+          "impact_en": "After 90 minutes, the running drop-off, defensive recovery and second-ball protection of the Netherlands and Morocco determine whether extra time opens up.",
+          "text_cn": "90分钟后Netherlands与Morocco的跑动衰减、防线回收和二点保护决定加时是否被打开。",
+          "text_en": "After 90 minutes, the running drop-off, defensive recovery and second-ball protection of the Netherlands and Morocco determine whether extra time opens up."
+        },
+        {
+          "factor_id": "ET_BENCH",
+          "label_cn": "替补深度",
+          "impact_cn": "边路、前锋和中场替补能否带来速度与对抗优势，是加时一球决胜的核心变量。",
+          "label_en": "Bench depth",
+          "impact_en": "Whether wide, forward and midfield substitutes can add speed and dueling advantages is a core variable for a one-goal extra-time decision.",
+          "text_cn": "边路、前锋和中场替补能否带来速度与对抗优势，是加时一球决胜的核心变量。",
+          "text_en": "Whether wide, forward and midfield substitutes can add speed and dueling advantages is a core variable for a one-goal extra-time decision."
+        },
+        {
+          "factor_id": "ET_RISK",
+          "label_cn": "教练风险偏好",
+          "impact_cn": "教练是主动在加时解决比赛，还是降低风险拖入点球，会直接改变加时增量矩阵。",
+          "label_en": "Coach risk preference",
+          "impact_en": "Whether the coach tries to settle the match in extra time or lowers risk to reach penalties directly changes the extra-time increment matrix.",
+          "text_cn": "教练是主动在加时解决比赛，还是降低风险拖入点球，会直接改变加时增量矩阵。",
+          "text_en": "Whether the coach tries to settle the match in extra time or lowers risk to reach penalties directly changes the extra-time increment matrix."
+        },
+        {
+          "factor_id": "ET_SET_PIECES",
+          "label_cn": "定位球与二点球",
+          "impact_cn": "体能下降后运动战质量下降，角球、任意球和禁区二点球权重上升。",
+          "label_en": "Set pieces and second balls",
+          "impact_en": "As fatigue reduces open-play quality, corners, free kicks and box second balls gain weight.",
+          "text_cn": "体能下降后运动战质量下降，角球、任意球和禁区二点球权重上升。",
+          "text_en": "As fatigue reduces open-play quality, corners, free kicks and box second balls gain weight."
+        },
+        {
+          "factor_id": "ET_CARD",
+          "label_cn": "牌面与犯规压力",
+          "impact_cn": "黄牌、红牌和犯规风险会改变防守动作尺度，增加加时突然失衡概率。",
+          "label_en": "Cards and foul pressure",
+          "impact_en": "Yellow cards, red cards and foul risk change defensive behavior and increase the probability of a sudden extra-time imbalance.",
+          "text_cn": "黄牌、红牌和犯规风险会改变防守动作尺度，增加加时突然失衡概率。",
+          "text_en": "Yellow cards, red cards and foul risk change defensive behavior and increase the probability of a sudden extra-time imbalance."
+        },
+        {
+          "factor_id": "ET_PENALTY_SHADOW",
+          "label_cn": "点球预期",
+          "impact_cn": "若一方相信点球优势，加时后段可能更保守；若点球劣势明显，则可能提前提速。",
+          "label_en": "Penalty expectation",
+          "impact_en": "If one side believes it has a shootout edge, it may become more conservative late in extra time; if it sees a shootout disadvantage, it may speed up earlier.",
+          "text_cn": "若一方相信点球优势，加时后段可能更保守；若点球劣势明显，则可能提前提速。",
+          "text_en": "If one side believes it has a shootout edge, it may become more conservative late in extra time; if it sees a shootout disadvantage, it may speed up earlier."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw-score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "English summary generated for the corresponding Chinese dashboard field."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.14399083016768086,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "2-4",
+          "winner_side": "team_b",
+          "probability": 0.091,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "2-4",
+              "probability": 0.091,
+              "winner_side": "team_b",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 2-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "4-2",
+              "probability": 0.06999999999999998,
+              "winner_side": "team_a",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "3-5",
+              "probability": 0.045000000000000005,
+              "winner_side": "team_b",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "Rationale for 3-5: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            }
+          ],
+          "display_scores": [
+            "2-4",
+            "4-2",
+            "3-5"
+          ],
+          "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale for 2-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "4-3",
+          "winner_side": "team_a",
+          "probability": 0.14399999999999996,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-3",
+              "probability": 0.14399999999999996,
+              "winner_side": "team_a",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 4-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "5-4",
+              "probability": 0.11299999999999999,
+              "winner_side": "team_a",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 5-4: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            },
+            {
+              "score": "4-2",
+              "probability": 0.06999999999999998,
+              "winner_side": "team_a",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "Rationale for 4-2: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+            }
+          ],
+          "display_scores": [
+            "4-3",
+            "5-4",
+            "4-2"
+          ],
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Rationale for 4-3: conditional on reaching penalties, this path reflects the balance of goalkeeper influence, taker depth, pressure and shootout experience. It is a conditional shootout scenario, not a normal-time forecast."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.019999999999999993,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.019999999999999993,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+              "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+            },
+            {
+              "score": "5-6",
+              "probability": 0.019999999999999993,
+              "winner_side": "team_b",
+              "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+              "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+            }
+          ],
+          "display_scores": [
+            "6-5",
+            "5-6"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入突然死亡阶段后才分胜负。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Definition for this displayed scenario in the prediction dashboard.",
+          "rationale_en": "Both teams take the first five rounds well, and the shootout is decided only after sudden death begins."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_KEEPER",
+          "label_cn": "门将扑点能力",
+          "impact_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+          "label_en": "Penalty-saving ability",
+          "impact_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge.",
+          "text_cn": "门将扑点履历、反应覆盖和心理压迫感决定点球大战是否出现连续扑救。",
+          "text_en": "Goalkeeper shootout history, reaction coverage and psychological pressure determine whether repeated penalty saves can emerge."
+        },
+        {
+          "factor_id": "PEN_TAKER_DEPTH",
+          "label_cn": "主罚手深度",
+          "impact_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+          "label_en": "Penalty taker depth",
+          "impact_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties.",
+          "text_cn": "前五轮之后仍有多少稳定主罚手，是是否进入延长点球仍保持质量的关键。",
+          "text_en": "How many reliable takers remain after the first five rounds is key to maintaining quality in extended penalties."
+        },
+        {
+          "factor_id": "PEN_ON_PITCH",
+          "label_cn": "120分钟后人员留存",
+          "impact_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+          "label_en": "Who remains on the pitch after 120 minutes",
+          "impact_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool.",
+          "text_cn": "核心主罚手是否被换下、是否体能透支，会改变真实可用罚手池。",
+          "text_en": "Whether core penalty takers have been substituted or exhausted changes the truly available taker pool."
+        },
+        {
+          "factor_id": "PEN_PRESSURE",
+          "label_cn": "压力承受",
+          "impact_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+          "label_en": "Pressure handling",
+          "impact_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break.",
+          "text_cn": "热门方、年轻球员和关键轮次罚手在高压下的执行稳定性决定爆点。",
+          "text_en": "The execution stability of favorites, young players and key-round takers under pressure determines where the shootout can break."
+        },
+        {
+          "factor_id": "PEN_HISTORY",
+          "label_cn": "点球经验",
+          "impact_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+          "label_en": "Shootout experience",
+          "impact_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition.",
+          "text_cn": "国家队或核心球员过往点球大战经验可作为弱证据，但不能替代当场状态。",
+          "text_en": "Past national-team or core-player shootout experience is weak evidence, but it cannot replace current match condition."
+        },
+        {
+          "factor_id": "PEN_FOOTEDNESS",
+          "label_cn": "左右脚与射门习惯",
+          "impact_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+          "label_en": "Footedness and shooting habits",
+          "impact_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability.",
+          "text_cn": "主罚脚、惯用角度和门将预判资料会影响边际扑救概率。",
+          "text_en": "Preferred foot, usual shooting direction and goalkeeper scouting information affect marginal save probability."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time. Inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeeper/taker information and pressure factors.",
+      "workflow_en": "English summary generated for the corresponding Chinese dashboard field."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "ready",
+    "penalty_condition_calibrator": "ready",
+    "full_path_tail": "ready"
+  },
+  "updated_at": "2026-06-29T08:05:34.259704Z",
+  "method_en": "English summary generated for the corresponding Chinese dashboard field.",
+  "architecture_en": "English summary generated for the corresponding Chinese dashboard field."
+}
