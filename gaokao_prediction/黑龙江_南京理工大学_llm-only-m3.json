@@ -38,6 +38,39 @@
       "tier_2": "无法分档。",
       "tier_3": "无法分档。",
       "overall_advice": "无法给出报考建议。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "Not read; not read."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Not read; data missing, not read; not read."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Not read."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Due to early termination of the session, no data files could be read, and no prediction can be given."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Unable to tier.",
+      "tier_2": "Unable to tier.",
+      "tier_3": "Unable to tier.",
+      "overall_advice": "Unable to provide application advice."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Heilongjiang",
+    "university_name_en": "Nanjing University of Science and Technology"
   }
 }

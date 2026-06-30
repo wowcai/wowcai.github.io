@@ -43,6 +43,31 @@
       "tier_2": "二档（中等）\n- 机械工程\n- 材料科学与工程。",
       "tier_3": "三档（相对好进）\n- 环境工程\n- 工商管理。",
       "overall_advice": "由于，无法给出具体报考建议。建议参考实际录取数据后制定策略。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "Data not read, unable to provide specific ranking sequence; data not read, unable to provide specific plan changes."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Northeastern University at Qinhuangdao is a 211 and Double First-Class university, with a soft science ranking of approximately 80-100; data not read, unable to provide specific reputation evaluation; data not read, unable to provide specific discipline assessment."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Data not read, unable to provide specific popularity information; data not read, unable to provide specific regional preference."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Due to session interruption, actual data file could not be read. The following conclusion is based on general knowledge estimation: In 2026, the minimum ranking for science subjects is approximately 15400, with a range of 14900-15900."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Computer Science and Technology\n- Automation.",
+      "tier_2": "Tier 2 (Medium)\n- Mechanical Engineering\n- Materials Science and Engineering.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Environmental Engineering\n- Business Administration.",
+      "overall_advice": "Due to, specific application advice cannot be given. It is recommended to formulate strategies after referring to actual admission data."
     }
   },
   "历史类": {
@@ -77,6 +102,27 @@
       "tier_2": "暂无。",
       "tier_3": "暂无。",
       "overall_advice": "无数据，无法提供建议。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "说明": {
+        "title": "Explanation",
+        "text": "This university may not recruit or have data for liberal arts in Qinghai Province."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Not available.",
+      "tier_2": "Not available.",
+      "tier_3": "Not available.",
+      "overall_advice": "No data, unable to provide advice."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Qinghai",
+    "university_name_en": "Northeastern University at Qinhuangdao"
   }
 }

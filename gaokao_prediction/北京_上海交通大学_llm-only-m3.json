@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 电子信息类（集成电路英才班）\n- 电子信息类（计算机永强试验班）\n- 电气工程及其自动化（思源试点班）\n- 理科试验班类（物理）。",
       "tier_3": "三档（相对好进）\n- 生物科学类\n- 法学试验班（涉外法治特班）。",
       "overall_advice": "预测位次约1395名，区间1235–1555名。位次在预测区间内建议以二档专业为主攻方向（电子信息类、电气工程等），一档王牌专业（人工智能、机器人工程等）作为冲刺，三档专业（法学试验班、生物科学类）作为保底。位次明显优于区间下限（<1235名）可重点冲击一档A+学科专业；位次接近区间上限（>1555名）则应以三档保底为主。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, the minimum admission rankings for Beijing Comprehensive category were approximately 863, 1071, 838, 569, and 1157 respectively, showing significant fluctuations with no clear monotonic trend; in 2024, the ranking moved forward to 569, the best in recent years, while in 2025 it moved back sharply to 1157, with a fluctuation range of about 588 places in the last two years, and the baseline ranking for 2025 is approximately 1157; the university's enrollment plan for Beijing Comprehensive category: 19 in 2021, 21 in 2022, 12 in 2023, 11 in 2024, and 10 in 2025, showing a decreasing trend year by year; the 2026 plan is to enroll 13 students, an increase of 3 (30% expansion) compared to 2025, which is a significant expansion and will notably alleviate the competitive landscape."
+      },
+      "学校层次与声誉": {
+        "title": "University Tier and Reputation",
+        "text": "Shanghai Jiao Tong University is a 985 Project, 211 Project, and Double First-Class university, consistently ranking 4th in the Soft Science China University Rankings for many years (2021–2026), belonging to the top tier of national universities, strongly attracting high-scoring candidates; the reputation evaluation for the 2026 college entrance examination cycle is slightly negative, mainly involving academic misconduct (high number of retractions) and teacher ethics incidents, which may mildly suppress some candidates' application intentions; Douyin popularity ranks 42nd overall (relatively hot), with comprehensive popularity of about 989,000, indicating moderate to high attention; in 2021, there was an abnormal signal in the admission cutoff line (Henan Science ranked last among the Five Eastern China Universities), but no direct record of admission gaps in recent years; it has 28 A- or above disciplines, including Computer Science and Technology A+, Mechanical Engineering A+, Materials Science and Engineering A+, Biology A+, Clinical Medicine A+, and Business Administration A+, all at the national top level, with strong disciplinary strength, strongly attracting applications to related majors."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Majors such as Computer Science, Electronic Information/Communication, and Electrical Engineering continue to be highly popular and recommended, highly aligned with the university's advantageous disciplines; the total number of Beijing candidates increased from 65,434 in 2025 to 84,900 in 2026 (an increase of about 29.7%), significantly intensifying competition; the university's main campus is located in Shanghai (university_home_province), so Beijing candidates are applying across provinces; the university's enrollment proportion in Beijing is about 1.1%–2.5% (19 in 2021 accounting for 2.54%, 12 in 2023 accounting for 1.19%, 11 in 2024 accounting for 1.45%), a low proportion but with absolute numbers stable in the 10–19 range."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the 2025 baseline ranking of 1157, the ranking backward effect from the 2026 enrollment expansion of 30% (plan 10→13), the intensified competition from a significant increase of about 29.7% in Beijing candidates, and the mild suppression from the slightly negative university reputation; the predicted minimum admission ranking for 2026 is approximately 1395, with a fluctuation range of 1235–1555."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Artificial Intelligence (Top Talent Pilot Class)\n- Electronic Information (TEEE Pilot Class)\n- Embodied Intelligence (Top Talent Pilot Class)\n- Robotics Engineering (Autonomous Intelligent Leading Class).",
+      "tier_2": "Tier 2 (Moderate)\n- Electronic Information (Integrated Circuit Talent Class)\n- Electronic Information (Computer Yongqiang Experimental Class)\n- Electrical Engineering and Automation (Siyuan Pilot Class)\n- Science Experimental Class (Physics).",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Biological Sciences\n- Law Experimental Class (International Rule of Law Special Class).",
+      "overall_advice": "Predicted ranking approximately 1395, range 1235–1555. Candidates with rankings within the predicted range are advised to focus on Tier 2 majors (Electronic Information, Electrical Engineering, etc.) as the main direction, Tier 1 flagship majors (Artificial Intelligence, Robotics Engineering, etc.) as a sprint, and Tier 3 majors (Law Experimental Class, Biological Sciences) as a safety net. Candidates with rankings significantly better than the lower limit (<1235) can focus on sprinting for Tier 1 A+ discipline majors; candidates with rankings near the upper limit (>1555) should mainly rely on Tier 3 safety net majors."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Beijing",
+    "university_name_en": "Shanghai Jiao Tong University"
   }
 }

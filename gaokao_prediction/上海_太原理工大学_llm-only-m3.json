@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 智能感知工程。",
       "tier_3": "三档（相对好进）\n- 机械设计制造及其自动化。",
       "overall_advice": "位次在预测区间（11700–12700名）内，建议以二档智能感知工程为主攻方向、一档数据科学与大数据技术和自动化作为冲刺、三档机械设计制造及其自动化作为保底；位次明显优于区间下限（<11700名）可重点冲刺一档热门专业。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking was approximately 15285 → 14579 → 13663 → 14532 → 12020, showing a fluctuating but overall forward trend (decreasing ranking numbers). In the past 3 years, it has moved forward by about 1643 places. The 2025 baseline is approximately 12020, moving forward by about 2512 places compared to 2024, the highest level in recent years. The university's enrollment plan in Shanghai from 2021 to 2026 is 8 students per year, unchanged for 6 consecutive years, with no expansion or reduction. Against the backdrop of a significant increase in the total number of examinees, relative competition has intensified."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "211 Project, Double First-Class construction university. The Soft Science main ranking has steadily risen from 113th in 2021 to 97th in 2026, showing a continuous improvement in ranking, slightly enhancing its appeal to examinees. In 2022, there was a somewhat negative reputation incident (university management criticized), but no significant negative public opinion in recent years. Douyin heat evaluation is 'average', with moderate exposure on short video platforms, showing no obvious sign of application heat. Chemical Engineering and Technology is an A- discipline, the only A- or above discipline at the university, with limited relevance to enrollment majors such as Automation and Data Science, having a weak pull on overall application heat."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Majors such as Automation (highly recommended in Electrical/Automation category) and Data Science and Big Data Technology (recommended in Computer category) have high social popularity. The total number of examinees in Shanghai for the 2026 college entrance exam is approximately 66,700, an increase of about 35% compared to approximately 49,276 in 2025, significantly intensifying competition. Taiyuan University of Technology is located in Shanxi Province, with very few enrollment places in Shanghai (only 8 per year). Shanghai examinees have relatively low regional preference for 211 universities in central and western provinces outside the province, with limited willingness to apply across provinces."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the fluctuating forward trend of historical rankings, the unchanged enrollment plan for 2026, the significant increase of about 35% in the total number of Shanghai examinees, and the steady rise in university ranking: the surge in examinee numbers intensifies competition, pushing the ranking backward (increasing numbers); the rise in university ranking has a slight positive effect, but the unchanged enrollment plan and limited regional preference mean the positive effect is insufficient to offset the impact of intensified competition. It is predicted that the minimum ranking for 2026 will be approximately 12,200, moving backward by about 180 places compared to 2025, with a range of 11,700–12,700."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Data Science and Big Data Technology\n- Automation.",
+      "tier_2": "Tier 2 (Medium)\n- Intelligent Perception Engineering.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Mechanical Design, Manufacturing and Automation.",
+      "overall_advice": "If your ranking is within the predicted range (11,700–12,700), it is recommended to focus on Tier 2 Intelligent Perception Engineering as the main direction, with Tier 1 Data Science and Big Data Technology and Automation as reach goals, and Tier 3 Mechanical Design, Manufacturing and Automation as safety. If your ranking is significantly better than the lower limit of the range (<11,700), you can focus on reaching for Tier 1 popular majors."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shanghai",
+    "university_name_en": "Taiyuan University of Technology"
   }
 }

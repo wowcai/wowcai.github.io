@@ -42,6 +42,35 @@
       "tier_2": "二档（中等）\n- 土木类\n- 地质工程",
       "tier_3": "三档（相对好进）\n- 机械类\n- 材料类",
       "overall_advice": "由于专业录取位次，无法给出精准分档建议。建议考生参考往年专业录取位次排序，结合自身位次选择冲/稳/保策略。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking of Chang'an University in Hainan Province (Comprehensive Reform) could not be read with specific values."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Chang'an University is a 211 Project and Double First-Class construction university, with advantageous disciplines such as Transportation Engineering (A-), Geological Resources and Geological Engineering (B+), ranking approximately 80–90 on the Soft Science main list; Transportation Engineering is A-, Geological Resources and Geological Engineering is B+, Civil Engineering is B+, which has a certain appeal for related major applications."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Since key data files were not successfully read, this prediction is based on a rough estimate of Chang'an University's 211 level and recent national ranking trends. It is estimated that the minimum ranking for the Comprehensive Reform batch in Hainan Province in 2026 will be approximately 7800, with a range of 7300–8300. This prediction has extremely low reliability, and it is strongly recommended to supplement and read all required files before recalculating."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Road, Bridge and River Crossing Engineering\n- Transportation",
+      "tier_2": "Tier 2 (Medium)\n- Civil Engineering\n- Geological Engineering",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Mechanical Engineering\n- Materials Science and Engineering",
+      "overall_advice": "Due to the major admission rankings, precise tier recommendations cannot be provided. It is recommended that candidates refer to the ranking order of previous years' major admissions and combine their own rankings to choose a strategy of reach/stable/safety."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Hainan",
+    "university_name_en": "Chang'an University"
   }
 }

@@ -39,6 +39,39 @@
       "tier_2": "二档（中等）\n- 中医学\n- 药学\n- 生物技术。",
       "tier_3": "三档（相对好进）\n- 护理学。",
       "overall_advice": "位次在预测区间（11700-12700名）内，建议以二档专业为主攻方向、一档专业为冲刺目标、三档专业为保底选择；位次明显优于区间下限（如低于11700名）可重点冲刺临床医 学等一档王牌专业；位次接近区间上限（如高于12500名）建议优先考虑二档专业并确保三档保底。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "The lowest ranking in 2021 was approximately 9895, in 2023 approximately 10808, in 2024 approximately 11919, and in 2025 approximately 12020, showing a continuous backward trend, with a cumulative backward shift of about 2125 places in the past 3 years; the baseline ranking for 2025 is approximately 12020, and the rate of backward shift has slowed; the university's enrollment plan in Shanghai from 2021 to 2025 has been 25 students, and the 2026 enrollment plan remains 25 students, with no expansion or reduction."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "A 211 Project and Double First-Class construction university, affiliated with the Chinese People's Liberation Army Navy, classified as a military institution; not ranked in the top 200 in the Soft Science Chinese University Rankings, but as a military medical school it has a special positioning; its reputation has been stable in recent years, with no major negative public opinion or enrollment gaps; ranked 9th in Douyin popularity (high heat), with a comprehensive heat of approximately 5.32 million, indicating high attention on short video platforms and rising application interest; subject evaluation data is missing; the university is known for clinical medicine, nursing, pharmacy, etc., with unique advantages in military medical education."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Clinical medicine continues to be highly recommended, nursing is a recommended major, while pharmacy/biotechnology fall under the biochemistry, environmental science, chemical engineering, and materials categories, showing a clear discouraging trend; in 2025, there are approximately 49,276 comprehensive candidates in Shanghai, and in 2026, the total number of regular college entrance exam takers is about 66,700 (comprehensive candidates estimated proportionally at about 66,700), an increase of about 35.4% compared to 2025, significantly intensifying competition; the university's main campus is located in Shanghai, giving it a natural regional preference advantage for local candidates."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous backward trend in historical rankings, the unchanged enrollment plan for 2026, the significant 35.4% increase in the number of candidates in Shanghai, and the rising application interest reflected by high Douyin popularity, competition is expected to further intensify based on the 2025 baseline of 12,020, with rankings continuing to shift backward; the predicted lowest ranking for 2026 is approximately 12,200, with a range of 11,700 to 12,700."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Clinical Medicine\n- Anesthesiology\n- Medical Imaging",
+      "tier_2": "Tier 2 (Moderate)\n- Traditional Chinese Medicine\n- Pharmacy\n- Biotechnology",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Nursing",
+      "overall_advice": "If your ranking falls within the predicted range (11,700-12,700), it is recommended to focus on Tier 2 majors as the main direction, aim for Tier 1 majors as a stretch goal, and use Tier 3 majors as a safety choice; if your ranking is significantly better than the lower limit of the range (e.g., below 11,700), you can focus on aiming for Tier 1 flagship majors like clinical medicine; if your ranking is close to the upper limit of the range (e.g., above 12,500), it is advisable to prioritize Tier 2 majors and ensure Tier 3 as a backup."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shanghai",
+    "university_name_en": "Naval Medical University"
   }
 }

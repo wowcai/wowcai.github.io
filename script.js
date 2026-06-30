@@ -5351,6 +5351,12 @@ function gkSubjectText(zh) {
   return L(String(zh ?? ""), gkSubjectEn(zh));
 }
 
+function gkSubjectTextForEntry(entry) {
+  const zh = String(entry?.subjectType ?? "");
+  const en = entry?.subjectTypeEn || gkSubjectEn(zh);
+  return L(zh, en);
+}
+
 function gkUniversityName(entry) {
   if (!entry) {
     return "";
@@ -5799,12 +5805,14 @@ function normalizeAdmissionPredictionItem(item) {
   const changeFromLastYear = nullableNumber(prediction.changeFromLastYear)
     ?? (Number.isFinite(latest.minScore) && Number.isFinite(predictedScore) ? predictedScore - latest.minScore : null);
 
-  return {
-    province: String(item.province),
-    subjectType: String(item.subjectType || "科类待补充"),
-    universityId: String(item.universityId),
-    universityName: String(item.universityName || item.name || "高校名称待补充"),
-    universityNameEn: item.universityNameEn ? String(item.universityNameEn) : "",
+    return {
+      province: String(item.province),
+      provinceEn: item.provinceEn ? String(item.provinceEn) : "",
+      subjectType: String(item.subjectType || "科类待补充"),
+      subjectTypeEn: item.subjectTypeEn ? String(item.subjectTypeEn) : "",
+      universityId: String(item.universityId),
+      universityName: String(item.universityName || item.name || "高校名称待补充"),
+      universityNameEn: item.universityNameEn ? String(item.universityNameEn) : "",
     universityLocation: String(item.universityLocation || item.location || "所在地待补充"),
     map: item.map || baseSchool?.map || null,
     majorGroup: String(item.majorGroup || item.batch || "专业组待补充"),
@@ -5818,13 +5826,15 @@ function normalizeAdmissionPredictionItem(item) {
       changeFromLastYear,
       confidence: String(prediction.confidence || "medium").toLowerCase()
     },
-    predictionReason: String(item.predictionReason || item.prediction_reason || ""),
-    predictionReasonEn: item.predictionReasonEn ? String(item.predictionReasonEn) : "",
-    predictionReasonSections: normalizeGaokaoReasonSections(item.predictionReasonSections || item.prediction_reason_sections || item.predictionReasonDetail || item.prediction_reason),
-    majorTierRecommendation: normalizeGaokaoTierRecommendation(item.majorTierRecommendation || item.major_tier_recommendation),
-    sourceFile: item.sourceFile ? String(item.sourceFile) : "",
-    sourceNote: String(item.sourceNote || "示例数据，后续替换为官方和模型结果。")
-  };
+      predictionReason: String(item.predictionReason || item.prediction_reason || ""),
+      predictionReasonEn: item.predictionReasonEn ? String(item.predictionReasonEn) : "",
+      predictionReasonSections: normalizeGaokaoReasonSections(item.predictionReasonSections || item.prediction_reason_sections || item.predictionReasonDetail || item.prediction_reason),
+      predictionReasonSectionsEn: normalizeGaokaoReasonSections(item.predictionReasonSectionsEn || item.prediction_reason_sections_en || item.predictionReasonDetailEn || item.prediction_reason_en),
+      majorTierRecommendation: normalizeGaokaoTierRecommendation(item.majorTierRecommendation || item.major_tier_recommendation),
+      majorTierRecommendationEn: normalizeGaokaoTierRecommendation(item.majorTierRecommendationEn || item.major_tier_recommendation_en, "en"),
+      sourceFile: item.sourceFile ? String(item.sourceFile) : "",
+      sourceNote: String(item.sourceNote || "示例数据，后续替换为官方和模型结果。")
+    };
 }
 
 function normalizeGaokaoReasonSections(value) {
@@ -5850,12 +5860,17 @@ function normalizeGaokaoReasonSections(value) {
   return text ? [{ title: "预测依据", text }] : [];
 }
 
-function normalizeGaokaoTierRecommendation(value) {
+function normalizeGaokaoTierRecommendation(value, lang = "zh") {
   if (!value || typeof value !== "object") {
     return [];
   }
 
-  const labels = {
+  const labels = lang === "en" ? {
+    tier_1: "Tier 1",
+    tier_2: "Tier 2",
+    tier_3: "Tier 3",
+    overall_advice: "Overall advice"
+  } : {
     tier_1: "一档",
     tier_2: "二档",
     tier_3: "三档",
@@ -6655,19 +6670,23 @@ function renderUniversityDetail(entry) {
   const rankValues = entry.history.map((row) => row.minRank);
   const years = entry.history.map((row) => row.year);
   const predictionYear = entry.prediction?.year || 2026;
+  const activeLang = getLang();
   const rankChangeFromLastYear = Number.isFinite(nullableNumber(entry.prediction?.predictedRank)) && Number.isFinite(nullableNumber(latest?.minRank))
     ? nullableNumber(entry.prediction.predictedRank) - nullableNumber(latest.minRank)
     : null;
 
-  const latestRankText = getLang() === "en"
+  const latestRankText = activeLang === "en"
     ? `Latest historical rank ${formatRank(latest?.minRank)}`
     : `最新历史位次 ${formatRank(latest?.minRank)}`;
+  const subjectText = gkSubjectTextForEntry(entry);
+  const locationText = gkLocationText(entry);
 
   return `
     <div class="gaokao-detail-header">
       <div>
-        <p class="kicker">UNIVERSITY DETAIL</p>
+        <p class="kicker">${escapeHtml(L("高校预测详情", "UNIVERSITY DETAIL"))}</p>
         <h2 id="gaokao-detail-title">${escapeHtml(gkUniversityName(entry))}</h2>
+        <p>${escapeHtml(`${subjectText} · ${locationText}`)}</p>
       </div>
       <span class="gaokao-detail-score-chip">${formatRank(entry.prediction.predictedRank)}</span>
     </div>
@@ -6716,7 +6735,10 @@ function renderGaokaoDetailInsightGrid(entry) {
 }
 
 function renderGaokaoReasonSections(entry) {
-  const sections = Array.isArray(entry?.predictionReasonSections) ? entry.predictionReasonSections : [];
+  const localizedSections = getLang() === "en" && Array.isArray(entry?.predictionReasonSectionsEn) && entry.predictionReasonSectionsEn.length
+    ? entry.predictionReasonSectionsEn
+    : entry?.predictionReasonSections;
+  const sections = Array.isArray(localizedSections) ? localizedSections : [];
   const visibleSections = sections.filter((section) => section?.title && section?.text).slice(0, 4);
 
   if (!visibleSections.length) {
@@ -6741,7 +6763,10 @@ function renderGaokaoReasonSections(entry) {
 }
 
 function renderGaokaoTierRecommendation(entry) {
-  const tiers = Array.isArray(entry?.majorTierRecommendation) ? entry.majorTierRecommendation : [];
+  const localizedTiers = getLang() === "en" && Array.isArray(entry?.majorTierRecommendationEn) && entry.majorTierRecommendationEn.length
+    ? entry.majorTierRecommendationEn
+    : entry?.majorTierRecommendation;
+  const tiers = Array.isArray(localizedTiers) ? localizedTiers : [];
   const visibleTiers = tiers.filter((item) => item?.title && item?.text);
 
   if (!visibleTiers.length) {

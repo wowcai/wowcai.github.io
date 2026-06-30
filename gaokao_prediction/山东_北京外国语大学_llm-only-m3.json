@@ -42,6 +42,35 @@
       "tier_2": "二档（中等）\n- 法学\n- 外交学\n- 英语\n- 法语\n- 汉语言文学。",
       "tier_3": "三档（相对好进）\n- 金融学（数智金融）\n- 会计学（智能会计）\n- 大数据管理与应用。",
       "overall_advice": "预测位次约19883名，区间19383–20383名。位次在区间内建议以二档为主力（法学、外交学、英语、法语等），一档王牌专业（翻译、联合培养项目）作为冲刺，三档专业（金 融学、会计学、大数据）作为保底。位次明显优于区间下限可重点冲击一档联合培养项目。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rankings for Comprehensive category in Shandong Province were approximately 6105 → 7300 → 32940 → 19436 → 22343. In 2023, there was a clear gap (small language majors cooled off), in 2024 it rebounded significantly to 19436, and in 2025 it slightly shifted back to 22343. Overall, the past two years show a fluctuating and backward trend, with a baseline of about 22343 in 2025. The enrollment plan for Comprehensive category in Shandong Province: 30 in 2021, 34 in 2022, 37 in 2023, 36 in 2024, 34 in 2025, and 27 planned for 2026, a reduction of about 20.6% compared to 2025, which is a significant reduction, theoretically easing competition slightly."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Beijing Foreign Studies University is a 211 Project and Double First-Class university; its Soft Science Chinese University Ranking has been stable around 79–82 in recent years (79th in 2026), making it a top-tier language university with strong national influence. In 2023, its reputation was somewhat negative (admission rankings for small language majors dropped significantly). In 2026, its reputation remains somewhat negative, involving controversies over academic misconduct and teacher ethics. Its Douyin popularity ranking is 39 (relatively hot), with moderate attention. In 2023, there was an abnormal signal in application submission (low attention). Overall, the reputation signal is somewhat negative, potentially suppressing application enthusiasm. Foreign Language and Literature is an A+ discipline (top in the country), its core advantage. The enrollment majors are mainly language-based, supplemented by Law, Diplomacy, Finance, etc., highly correlated with the A+ discipline. In 2024, the popularity assessment for foreign language majors was \"generally wait-and-see,\" with social popularity stable and slightly cold; Law is divided and wait-and-see, Computer Science is highly recommended and hot. The total number of examinees in Shandong Province continues to grow: 544,000 in 2021 → 681,000 in 2025 → about 720,000 in 2026 (+5.7%), intensifying competition."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Beijing Foreign Studies University is located in Beijing, not a local university in Shandong Province. The number of students it enrolls in Shandong Province accounts for a small proportion of its total national enrollment, about 30–37 in recent years, further reduced to 27 in 2026, making it a medium-to-small scale institution for out-of-province enrollment. Considering multiple factors such as the baseline ranking of 22343 in 2025, the significant enrollment reduction (-20.6%) in 2026 causing rankings to move forward, the continuous growth of examinees in Shandong Province (+5.7%) intensifying competition, and the somewhat negative reputation suppressing application enthusiasm, the predicted minimum ranking for 2026 is about 19883, slightly forward (easier to enter) compared to 2025, with a range of 19383–20383. The enrollment reduction is the main driver for the forward shift in rankings, while the increase in examinees and negative reputation partially offset the effect of the reduction."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Translation (Diplomatic and Foreign Affairs Advanced Translation)\n- Spanish (Joint Training with Renmin University of China in International Journalism and Communication)\n- English (Joint Training with China University of Political Science and Law in Foreign-Related Legal Talents).",
+      "tier_2": "Tier 2 (Medium)\n- Law\n- Diplomacy\n- English\n- French\n- Chinese Language and Literature.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Finance (Digital Finance)\n- Accounting (Intelligent Accounting)\n- Big Data Management and Application.",
+      "overall_advice": "Predicted ranking about 19883, range 19383–20383. If ranking is within the range, it is recommended to focus on Tier 2 majors (Law, Diplomacy, English, French, etc.), use Tier 1 flagship majors (Translation, Joint Training Programs) as a sprint, and Tier 3 majors (Finance, Accounting, Big Data) as a safety. If ranking is significantly better than the lower limit of the range, focus on sprinting for Tier 1 joint training programs."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shandong",
+    "university_name_en": "Beijing Foreign Studies University"
   }
 }

@@ -27,6 +27,31 @@
       "tier_2": "暂无。",
       "tier_3": "三档（相对好进）\n- 生态学（免收学费）。",
       "overall_advice": "物理类仅2个招生专业，位次在预测区间内建议以临床医学为主目标（一档冲刺），生态学为保底选项；位次明显优于区间下限（33106名以内）可重点冲刺临床医学。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "In 2025, the minimum ranking for Physics Category is approximately 33556; the enrollment plan for Physics Category in 2025 is 2 students, and the enrollment plan for 2026 remains 2 students (Clinical Medicine 1, Ecology 1). The plan remains unchanged, with no direct impact on the competitive landscape."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Tibet University is a 211 Project and Double First-Class construction university; its Soft Science main ranking is approximately in the 195-200 range, with recent rankings stable around 200, placing it in the middle-to-late segment of 211 universities; Tibet University does not appear in the university reputation document, with no significant reputation signal; Douyin popularity ranking is 30 (relatively hot), with comprehensive popularity around 1.38 million, with some exposure on short video platforms but moderate popularity; no obvious abnormal filing records; Tibet University does not appear in the list of A- or above in the fifth round of discipline evaluation, with no significant advantageous disciplines to attract high-scoring candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Geography",
+        "text": "Tibet University is located in Lhasa, Tibet, extremely far from Heilongjiang Province, with cross-province study geographical preference being a clear negative factor; the university's enrollment proportion in Heilongjiang is very small (only 2 students), with local candidates' willingness to apply greatly affected by geography; the enrollment majors include Clinical Medicine (2024 major popularity assessment as 'recommended', with social popularity relatively hot) and Ecology (belonging to the biology, chemistry, environment, and materials categories, with 2024 assessment as 'generally wait-and-see' but overall cold), with Clinical Medicine's popularity positive but Ecology's popularity negative; the total number of candidates in the province for 2026 is approximately 167,000, with Physics Category estimated at about 117,000, basically unchanged from 2025."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering negative factors such as unchanged enrollment plan, stable candidate scale, no significant advantageous disciplines, and remote geography, along with the positive popularity of Clinical Medicine and the slightly positive attention from Douyin's relative heat, based on the 2025 baseline of 33556, the ranking is expected to shift slightly backward; the predicted minimum ranking is approximately 33606, with a range of 33106-34106."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Clinical Medicine (five-year program).",
+      "tier_2": "None at present.",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- Ecology (tuition-free).",
+      "overall_advice": "Physics Category has only 2 enrollment majors. If the ranking is within the predicted range, it is recommended to target Clinical Medicine as the main goal (Tier 1 sprint), with Ecology as a backup option; if the ranking is significantly better than the lower limit of the range (within 33106), focus on sprinting for Clinical Medicine."
     }
   },
   "历史类": {
@@ -57,6 +82,39 @@
       "tier_2": "暂无。",
       "tier_3": "暂无。",
       "overall_advice": "历史类仅1个招生专业（汉语言文学师范类），位次在预测区间内建议以该专业为主目标；位次明显优于区间下限（2250名以内）可考虑冲刺更高层次院校的同类专业。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "In 2025, the minimum ranking for History Category is approximately 2735; the enrollment plan for History Category in 2025 is 1 person, and the enrollment plan for 2026 remains 1 person, with the plan unchanged, having no direct impact on the competitive landscape."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Tibet University is a 211 Project and Double First-Class construction university; its main ranking on the Soft Science Ranking is approximately in the 195-200 range, with recent rankings stable around 200, placing it in the middle-to-late segment of 211 universities; Tibet University does not appear in the school reputation documents, with no significant reputation signals; its Douyin popularity ranking is 30 (relatively hot), with a comprehensive popularity of about 1.38 million, indicating some exposure on short video platforms but moderate popularity; no obvious abnormal admission records are observed; Tibet University does not appear in the list of A- or above in the fifth round of discipline evaluation, with no significant advantageous disciplines to attract high-scoring students."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The only enrollment major is Chinese Language and Literature (Teacher Training), corresponding to the Teacher Training/Education category, which was assessed as \"differentiated and wait-and-see\" in 2024, with neutral to differentiated social popularity; the total number of candidates in this province for 2026 is approximately 167,000, with History Category estimated at about 54,700, basically unchanged from 2025; Tibet University is located in Lhasa, Tibet, extremely far from Heilongjiang Province, making cross-province study a clearly negative factor in regional preference; the university's enrollment proportion in Heilongjiang is very small (only 1 person), and local candidates' willingness to apply is greatly affected by the region."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the unchanged enrollment plan, stable candidate numbers, no significant advantageous disciplines, remote region and other negative factors, along with the weak positive attention from relatively high Douyin popularity, the ranking is expected to shift slightly backward based on the 2025 baseline of 2735; the predicted minimum ranking is approximately 2750, with a range of 2250-3250."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Chinese Language and Literature (Teacher Training) (Chinese single subject score not lower than 90 points; tuition free).",
+      "tier_2": "None at present.",
+      "tier_3": "None at present.",
+      "overall_advice": "History Category has only 1 enrollment major (Chinese Language and Literature Teacher Training). If the ranking is within the predicted range, it is recommended to take this major as the main target; if the ranking is significantly better than the lower limit of the range (within 2250), consider sprinting for similar majors at higher-level institutions."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Heilongjiang",
+    "university_name_en": "Tibet University"
   }
 }

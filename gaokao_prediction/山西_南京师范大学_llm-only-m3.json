@@ -43,6 +43,31 @@
       "tier_2": "二档（中等）\n- 化学类（化学师范/非师范、应用化学）\n- 能源动力类（能源与动力工程、能源与环境系统工程）。",
       "tier_3": "三档（相对好进）\n- 环境科学与工程类（环境工程、环境科学）\n- 食品科学与工程。",
       "overall_advice": "位次在预测区间 13375–14375 名内，建议以二档专业为主攻方向、一档专业冲刺、三档专业保底；位次优于区间下限（<13375）可重点冲刺数学类、物理学等优势专业。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking for Science/Physics Category was approximately 8744→13611→14898→13719→14075. After a significant drop in 2022, it fluctuated within the range of 13700–14900 in the past three years. The baseline for 2025 is about 14075. The enrollment plan file for §7 could not be read due to data access limitations, so it was processed by fallback rules and not included in the plan_change calculation."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "A 211 and Double First-Class university; ranked approximately 58th in the 2026 Soft Science Main Ranking, with stable rankings in the 52–61 range in recent years. The reputation and popularity files could not be read due to access limitations. It has 5 A- or above disciplines: Education A, Geography A, Marxist Theory A, Chinese Language and Literature A-, Foreign Languages and Literature A-, with prominent normal university characteristics, exerting a stable attraction on candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The major popularity file was not read. In 2026, the number of Physics Category candidates in this province is 167,419, a decrease of about 3.4% compared to 173,347 in 2025, leading to slightly eased competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the fluctuation of historical rankings within the 13700–14900 range, the slight decrease in Physics Category candidates in 2026 (slightly eased competition), and the stable school level, the ranking is expected to move slightly forward based on the 2025 baseline of 14075. The predicted minimum ranking is approximately 13875, with a range of 13375–14375."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Mathematics (Mathematics and Applied Mathematics Normal/Base Class, Information and Computing Science)\n- Physics (Normal, Non-Normal).",
+      "tier_2": "Tier 2 (Moderate)\n- Chemistry (Chemistry Normal/Non-Normal, Applied Chemistry)\n- Energy and Power (Energy and Power Engineering, Energy and Environmental Systems Engineering).",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Environmental Science and Engineering (Environmental Engineering, Environmental Science)\n- Food Science and Engineering.",
+      "overall_advice": "If your ranking is within the predicted range of 13375–14375, it is recommended to focus on Tier 2 majors as the main direction, aim for Tier 1 majors as a stretch, and use Tier 3 majors as safety options. If your ranking is better than the lower limit of the range (<13375), you can focus on aiming for advantageous majors such as Mathematics and Physics."
     }
   },
   "历史类": {
@@ -89,6 +114,39 @@
       "tier_2": "二档（中等）\n- 财务管理\n- 公共管理类（公共事业管理、行政管理）。",
       "tier_3": "三档（相对好进）\n- 学前教育（师范类）。",
       "overall_advice": "位次在预测区间 2172–3126 名内，建议以二档专业为主、一档专业冲刺、三档专业保底；位次优于区间下限（<2172）可重点冲刺中国语言文学类、地理科学类等王牌专业。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "2021–2025 Liberal Arts/History Category minimum rankings approximately 1112→1166→1271→2007→2709, continuously shifting backward, with a cumulative backward shift of about 1438 places in the last 3 years, and a 2025 baseline of approximately 2709; §7 Enrollment plan file could not be read due to data access limitations, handled by fallback rules, not included in plan_change calculation."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "211, Double First-Class university; Soft Science main ranking approximately 58th in 2026, stable in recent years; Reputation and popularity file could not be read due to access limitations; Chinese Language and Literature A-, Education A, Marxist Theory A, Foreign Languages and Literatures A-, Geography A, a total of 5 A- and above disciplines, with prominent advantages in liberal arts, strong appeal to candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Major popularity file not read; This province's 2026 History Category candidates 63113, a significant decrease of about 25.6% compared to 2025's 84879, competition notably eased."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous backward shift trend of historical rankings, the significant decrease in History Category candidates in 2026 (competition notably eased), and the school's prominent liberal arts disciplines, the ranking is expected to move forward based on the 2025 baseline of 2709; predicted minimum ranking approximately 2649, range 2172–3126."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Chinese Language and Literature Category (Chinese Language and Literature Teacher Training/Non-Teacher Training/National Liberal Arts Base/Secretarial Studies)\n- Geographical Sciences Category (Geographical Science Teacher Training/Elite Class, Physical Geography and Resource Environment, Human Geography and Urban-Rural Planning, Geographic Information Science).",
+      "tier_2": "Tier 2 (Moderate)\n- Financial Management\n- Public Administration Category (Public Service Administration, Administrative Management).",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Preschool Education (Teacher Training Category).",
+      "overall_advice": "If ranking is within the predicted range of 2172–3126, it is recommended to focus on Tier 2 majors, with Tier 1 majors as a reach and Tier 3 majors as a safety; if ranking is better than the lower limit of the range (<2172), you can focus on reaching for flagship majors such as Chinese Language and Literature Category and Geographical Sciences Category."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shanxi",
+    "university_name_en": "Nanjing Normal University"
   }
 }

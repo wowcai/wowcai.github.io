@@ -22,6 +22,31 @@
       "tier_2": "二档（中等）\n- 环境科学与工程类",
       "tier_3": "三档（相对好进）\n- 城乡规划",
       "overall_advice": "位次在预测区间内建议以二档为主、一档冲刺、三档保底；电子信息工程和软件工程为当前热门工科专业，竞争可能较激烈；环境科学与工程类与学校优势学科生态学关联，学 科实力较强。"
+    },
+    "subject_type_en": "Science",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, Yunnan University's admission rankings in Tibet Autonomous Region (; 2022 Science plan 5 students; 2026 Science plan 4 students, reduced by 1 student compared to 2022, a reduction of about 20%, competition slightly intensified. Arts 2022 plan 1 student, 2026 plan 3 students, relatively large expansion."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "211, Double First-Class university; Soft Science main ranking rose from 83rd in 2021 to 69th in 2025 and 71st in 2026, overall at the upper-middle level nationally, with high recognition in the Southwest region; 2025 reputation evaluation is somewhat negative, mainly due to employment data issues (Life Sciences College employment rate only 4.63%), which may have a certain negative impact on application psychology; Douyin popularity ranking 62nd, evaluation \"average\", low exposure on short video platforms. No obvious enrollment gaps recorded; Ethnology A+ (top nationally), Ecology A, Statistics A-, strong disciplinary strength in humanities, social sciences, and ecology, with some appeal for related major applications."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "In 2026, the total number of candidates in Tibet Autonomous Region is about 41,000 (data marked as uncertain), no subject-specific data, unable to estimate changes in candidate trends by subject."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the reduction in the 2026 Science enrollment plan (from 5 to 4 students), the stable rise in Yunnan University's Soft Science ranking, and the somewhat negative reputation, in the absence of historical ranking benchmarks, and referencing the admission ranking characteristics of similar 211 universities in Tibet, it is estimated that the minimum admission ranking for Science in 2026 will be around the top 800 in the region, with a range of 700-900."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Electronic Information Engineering\n- Software Engineering",
+      "tier_2": "Tier 2 (Moderate)\n- Environmental Science and Engineering",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Urban and Rural Planning",
+      "overall_advice": "If your ranking is within the predicted range, it is recommended to focus on Tier 2, use Tier 1 as a reach, and Tier 3 as a safety; Electronic Information Engineering and Software Engineering are currently popular engineering majors, competition may be intense; Environmental Science and Engineering is related to the university's advantageous discipline of Ecology, with strong disciplinary strength."
     }
   },
   "文科": {
@@ -47,6 +72,39 @@
       "tier_2": "二档（中等）\n- 民族学",
       "tier_3": "三档（相对好进）\n- 暂无",
       "overall_advice": "位次在预测区间内建议以二档为主、一档冲刺；法学和汉语言文学为文科传统热门专业，竞争可能较激烈；民族学为云南大学A+王牌学科，学科实力全国顶尖，适合对民族学感 兴趣的考生。"
+    },
+    "subject_type_en": "Liberal Arts",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, Yunnan University's liberal arts admission rankings in Tibet Autonomous Region (; 2022 liberal arts plan 1 person; 2026 liberal arts plan 3 persons, relatively large expansion (from 1 person to 3 persons), competitive pressure has eased."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "211, Double First-Class university; ranked 71st on the Soft Science main ranking (2026), with high recognition among comprehensive universities in the Southwest region; 2025 reputation evaluation is somewhat negative, mainly due to employment data issues; Douyin popularity is average, short video platform exposure is not high; Ethnology A+ (top nationally), directly corresponding to the liberal arts enrollment major Ethnology, with outstanding disciplinary strength; Chinese Language and Literature is a traditional liberal arts advantage major."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "In 2026, the total number of examinees in Tibet Autonomous Region is approximately 41,000 (data marked as uncertain), no subject-specific data."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the significant expansion of the 2026 liberal arts enrollment plan (from 1 person to 3 persons), the steady rise in Yunnan University's Soft Science ranking, and the A+ disciplinary advantage in Ethnology, in the absence of historical ranking benchmarks, referencing the liberal arts admission characteristics of similar 211 universities in Tibet, it is predicted that the minimum admission ranking for liberal arts in 2026 will be approximately within the top 500 in the region, with a range of 400-600."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Law\n- Chinese Language and Literature",
+      "tier_2": "Tier 2 (Medium)\n- Ethnology",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- None currently",
+      "overall_advice": "If ranking is within the predicted range, it is recommended to focus on Tier 2 with Tier 1 as a sprint; Law and Chinese Language and Literature are traditional popular liberal arts majors, competition may be intense; Ethnology is Yunnan University's A+ flagship discipline, with top national disciplinary strength, suitable for examinees interested in Ethnology."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Tibet",
+    "university_name_en": "Yunnan University"
   }
 }

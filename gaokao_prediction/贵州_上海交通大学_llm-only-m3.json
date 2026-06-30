@@ -43,6 +43,31 @@
       "tier_2": "二档（中等）\n- 电子信息类（IEEE试点班，含双学士学位项目）\n- 机械类（钱学森工程科学试点班，含双学士学位项目）。",
       "tier_3": "三档（相对好进）\n- 暂无其他招生专业数据。",
       "overall_advice": "。建议考生在预测区间内以二档为主、一档冲刺；位次明显优于区间下限（62名以内）可重点冲击一档王牌专业。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "2021-2025 Science Group (including Physics Category) minimum rankings: approximately 9550 in 2021 (including special batch of Agricultural College), approximately 190 in 2022, approximately 172 in 2023, approximately 171 in 2024, approximately 122 in 2025. Excluding the 2021 Agricultural College batch, the regular batch rankings from 2022 to 2025 stabilized between 122 and 190, and in 2025, the ranking moved forward by about 49 places compared to 2024, indicating an intensifying competition trend; enrollment plans for the Science Group from 2021 to 2025: 13, 9, 9, 9, 7 people, showing a gradual reduction trend."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Shanghai Jiao Tong University is a 985 Project, 211 Project, and Double First-Class construction university. It has consistently ranked 4th in the Soft Science China University Rankings for many years, making it a top national university."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "In 2026, the total number of candidates for the regular college entrance examination in Guizhou Province is approximately 299,000, a slight increase compared to 2025 (Physics Category 207,171 + History Category 90,087 ≈ 297,258), leading to a slight intensification of competition. Regarding the provincial control line, the 2025 Physics Category undergraduate batch score is 387, which has remained stable in recent years."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the forward trend of rankings in 2025 (intensified competition), a slight increase in the total number of candidates in the province in 2026, and the sustained appeal of Shanghai Jiao Tong University as a top 4 national university, it is predicted that the minimum ranking for the Science Group in 2026 will further move forward based on the 2025 benchmark of 122. The predicted minimum ranking is approximately 112, with a range of 62 to 162."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Electronic Information (Computer Yongqiang Pilot Class)\n- Artificial Intelligence (Top Talent Pilot Class).",
+      "tier_2": "Tier 2 (Medium)\n- Electronic Information (IEEE Pilot Class, including dual degree programs)\n- Mechanical (Qian Xuesen Engineering Science Pilot Class, including dual degree programs).",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- No other enrollment major data available.",
+      "overall_advice": "It is recommended that candidates focus on Tier 2 as the main target and use Tier 1 as a sprint within the predicted ranking range; if the ranking is significantly better than the lower limit of the range (within 62), they can focus on sprinting for top-tier majors in Tier 1."
     }
   },
   "历史类": {
@@ -89,6 +114,39 @@
       "tier_2": "二档（中等）\n- 暂无。",
       "tier_3": "三档（相对好进）\n- 暂无。",
       "overall_advice": "文科组仅招生1个专业（法学试验班），分档意义有限。建议位次在预测区间内的考生积极填报。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "2021-2025 Liberal Arts Group (including History Category) minimum rankings: approximately 35 in 2021, 63 in 2022, 37 in 2023, 37 in 2024, 46 in 2025. Overall fluctuation between 35-63, with 2025 shifting about 9 places back compared to 2024, but the fluctuation range is normal; 2021-2025 Liberal Arts Group planned enrollment numbers: 1, 1, 1, 2, 2, expanding to 2 from 2024 onwards."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Shanghai Jiao Tong University is a 985 Project, 211 Project, and Double First-Class construction university, consistently ranking 4th in the Soft Science Chinese University Rankings for many years, making it a top national university."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The total number of candidates for the 2026 Guizhou Province General College Entrance Examination is approximately 299,000, a slight increase from 2025. The Liberal Arts Group enrollment plan is extremely small (only 1-2 people), so ranking fluctuations are greatly affected by individual high-scoring candidates' choices."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the stable historical rankings of the Liberal Arts Group between 35-63, the high volatility due to very few enrollment slots, and the sustained appeal of Shanghai Jiao Tong University as a top institution, it is predicted that the minimum ranking for the 2026 Liberal Arts Group will slightly shift back compared to the 2025 baseline (slightly increased competition). The predicted minimum ranking is approximately 49, with a range of 4–99."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Law Experimental Class (including Dual Bachelor's Degree Program).",
+      "tier_2": "Tier 2 (Moderate)\n- None currently.",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- None currently.",
+      "overall_advice": "The Liberal Arts Group only enrolls one major (Law Experimental Class), making tier classification limited. It is recommended that candidates within the predicted ranking range actively apply."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Guizhou",
+    "university_name_en": "Shanghai Jiao Tong University"
   }
 }

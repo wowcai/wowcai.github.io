@@ -42,6 +42,27 @@
       "tier_2": "二档（中等）\n- 机械类\n- 生物技术\n- 法学\n- 智慧农业。",
       "tier_3": "三档（相对好进）\n- 食品科学与工程类\n- 自然保护与环境生态类。",
       "overall_advice": "位次在预测区间内建议以二档为主、一档冲刺、三档保底；位次明显优于区间下限可重点冲电气工程等热门专业。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking for Physics Category was approximately 9479 → 11773 → 11908 → 19053 → 11200. In 2024, it dropped to 19053 due to the Rongchang campus, but rebounded significantly to 11200 in 2025, showing drastic fluctuations in recent two years. Provincial enrollment plan: 2 in 2021 → 6 in 2022 → 7 in 2023 → 11 in 2024 → 16 in 2025, continuously expanding significantly."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "211, Double First-Class; Soft Science Main Ranking 66th in 2025, rising to 61st in 2026, ranking continuously rising, comprehensive strength enhancing."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the 2025 baseline ranking of 11200, the continuous rise in Soft Science ranking (66→61) reflecting enhanced comprehensive strength, and the continuous expansion of enrollment plan, it is expected that the application popularity in 2026 will slightly increase, with the ranking moving forward slightly; predicted minimum ranking approximately 11150, range 10800-11500."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Electrical Engineering and Automation\n- Chemistry Class.",
+      "tier_2": "Tier 2 (Medium)\n- Mechanical Class\n- Biotechnology\n- Law\n- Smart Agriculture.",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Food Science and Engineering Class\n- Natural Conservation and Environmental Ecology Class.",
+      "overall_advice": "If ranking is within the predicted range, it is recommended to focus on Tier 2, use Tier 1 as a sprint, and Tier 3 as a safety; if ranking is significantly better than the lower limit of the range, focus on sprinting for popular majors like Electrical Engineering."
     }
   },
   "历史类": {
@@ -79,6 +100,35 @@
       "tier_2": "二档（中等）\n- 暂无。",
       "tier_3": "三档（相对好进）\n- 哲学。",
       "overall_advice": "历史类仅招法学和哲学两个专业，法学位次要求高于哲学。位次在预测区间内，法学可冲刺，哲学可保底。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "In 2021, the minimum rank for liberal arts was approximately 3192; in 2024, the history category rank was 2204; in 2025, it was 2215. In recent years, the rank has clearly moved forward, indicating increased competition. The provincial enrollment plan: 2 students in 2021 → 2 in 2024 → 3 in 2025, a slight expansion."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "211 Project, Double First-Class; Soft Science Main Ranking: 66th in 2025, rising to 61st in 2026, with continuous improvement. Reputation data is missing."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the 2025 baseline rank of 2215, the rise in Soft Science ranking, and the recent forward trend in rankings, it is expected that the application heat in 2026 will slightly increase, with the rank moving forward slightly. The predicted minimum rank is approximately 2200, with a range of 2130-2270."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Law.",
+      "tier_2": "Tier 2 (Moderate)\n- None at present.",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Philosophy.",
+      "overall_advice": "The history category only admits two majors: Law and Philosophy. The rank requirement for Law is higher than that for Philosophy. Within the predicted rank range, Law can be a reach, while Philosophy can be a safety option."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Heilongjiang",
+    "university_name_en": "Southwest University"
   }
 }

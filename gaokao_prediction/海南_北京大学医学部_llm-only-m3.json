@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n暂无（该校在海南省仅投放上述两个专业，且位次相同，难以分档）",
       "tier_3": "三档（相对好进）\n暂无（同上，两个专业录取难度一致）",
       "overall_advice": "该校在海南省仅投放临床医学和口腔医学两个八年制本博连读专业，2025年录取位次均为105名，属同一难度层级。预测2026年位次区间88–112名，建议位次在区间内均可大胆报 考，位次优于88名则录取把握较大；两个专业均为顶级医学王牌，可根据个人兴趣选择。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rankings were 24→7→24→30→105 respectively. From 2021 to 2024, rankings fluctuated narrowly within the 7–30 range, but in 2025, they significantly dropped to 105, a shift of about 75 places in one year, indicating a notable abnormal fluctuation. The enrollment plan was 1 person from 2021 to 2022, and expanded to 2 persons from 2023 to 2025. The 2026 enrollment plan data was not fully read from the file, so it is temporarily assumed to be the same as 2025 (2 persons), with no change in plan, having a neutral impact on competition."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "Peking University Health Science Center is a 985, 211, and Double First-Class university, affiliated with Peking University. On the Soft Science main ranking, Peking University ranks 2nd (2026). The Health Science Center is among the top medical schools in China, with an extremely high level, continuously attracting strong interest from candidates. Reputation data was not fully read, but as a top domestic medical school, Peking University Health Science Center maintains a highly positive reputation over the long term, with clinical medicine and stomatology being traditional flagship majors, leading to sustained high application enthusiasm. Clinical medicine and stomatology are core advantageous disciplines of Peking University Health Science Center, expected to be rated A+ (fifth round of discipline evaluation), directly corresponding to the enrollment majors, and the disciplinary strength strongly attracts candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Clinical medicine (eight-year combined bachelor's and doctoral program) and stomatology (eight-year combined bachelor's and doctoral program) are among the most popular medical major directions, with sustained high social heat. Data on changes in the total number of candidates in Hainan Province was not fully read, so it is temporarily unavailable. Peking University Health Science Center is located in Beijing, involving cross-province enrollment. Hainan Province has no medical school of equivalent level locally, so candidates have a strong willingness to apply across provinces, and the regional factor has a neutral to slightly positive impact on rankings."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the abnormal ranking shift in 2025 (possibly due to major name adjustments or psychological fluctuations in application), the unchanged enrollment plan for 2026, the top-tier level of the school, and the sustained high popularity of medical majors, it is predicted that the ranking in 2026 will slightly recover compared to 2025 (competition slightly intensifies), with a predicted minimum ranking of about 100, and a range of 88–112."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Clinical Medicine (Eight-Year Combined Bachelor's and Doctoral Program)\n- Stomatology (Eight-Year Combined Bachelor's and Doctoral Program)",
+      "tier_2": "Tier 2 (Medium)\nNone (The school only offers the above two majors in Hainan Province, and they have the same ranking, making it difficult to tier)",
+      "tier_3": "Tier 3 (Relatively Easy)\nNone (Same as above, the two majors have the same admission difficulty)",
+      "overall_advice": "The school only offers clinical medicine and stomatology, both eight-year combined bachelor's and doctoral programs, in Hainan Province. In 2025, the admission ranking for both was 105, belonging to the same difficulty level. The predicted ranking range for 2026 is 88–112. It is recommended that candidates with rankings within this range can apply boldly; those with rankings better than 88 have a higher chance of admission. Both majors are top-tier medical programs, and candidates can choose based on personal interest."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Hainan",
+    "university_name_en": "Peking University Health Science Center"
   }
 }

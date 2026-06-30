@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 经济学类。",
       "tier_3": "三档（相对好进）\n- 工商管理类。",
       "overall_advice": "预测位次约11190名，区间10690–11690名。位次在区间内建议以二档经济学类为主攻、一档工科专业冲刺、三档工商管理类保底；位次明显优于区间下限（10690以内）可重点冲 刺一档计算机类、人工智能等热门工科专业。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking for Shanghai Comprehensive was approximately 9895 → 10493 → 10565 → 11462 → 12020, showing a gradual backward trend over the years, with a cumulative backward shift of about 2125 positions in the past 4 years; the 2025 baseline is about 12020; the provincial enrollment plan was 20 students each year from 2021 to 2024, increasing to 21 in 2025; the 2026 plan is 18 students, a reduction of about 14.3% compared to 2025, and the decrease in enrollment numbers theoretically eases competition slightly."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "A 211 Project and Double First-Class university; in the 2026 Soft Science China University Rankings, it is approximately 54th, with recent rankings fluctuating between 48 and 55, overall stable; the 2026 reputation evaluation is somewhat negative, involving campus safety incidents (unidentified giant biological activity at Nanhu Campus), which may mildly suppress application psychology; Douyin comprehensive popularity ranking is 98th (average), with low short video exposure; Materials Science and Engineering is rated A, Mechanical Engineering A-, Transportation Engineering A-, showing strong disciplinary strength in materials, transportation, and automotive fields, attracting some science and engineering students."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Geography",
+        "text": "Engineering majors such as Computer Science, Automation, and Artificial Intelligence have consistently high social popularity; the total number of examinees in the province in 2026 is about 66,700, an increase of about 35.4% from 49,276 in 2025, significantly intensifying competition; Wuhan University of Technology is located in Wuhan, Hubei, far from Shanghai, and Shanghai students have a strong preference for local and Yangtze River Delta universities, so cross-province applications face some geographical discount."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous backward trend of historical rankings, the reduction in the 2026 enrollment plan (easing competition), the significant increase in the total number of examinees in the province (intensifying competition), and the negative reputation, the competitive pressure from the surge in examinees outweighs the easing effect of the enrollment reduction. The predicted minimum ranking is approximately 11,190, with a range of 10,690 to 11,690."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Computer Science\n- Automation\n- Artificial Intelligence\n- Electronic Information\n- Mechanical Engineering (Vehicle)\n- Materials Science\n- Digital Economy (Double Degree).",
+      "tier_2": "Tier 2 (Medium)\n- Economics.",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Business Administration.",
+      "overall_advice": "Predicted ranking is about 11,190, with a range of 10,690 to 11,690. If your ranking is within the range, it is recommended to focus on Tier 2 Economics as the main target, aim for Tier 1 engineering majors as a stretch, and use Tier 3 Business Administration as a safety; if your ranking is significantly better than the lower limit of the range (within 10,690), you can focus on aiming for Tier 1 popular engineering majors such as Computer Science and Artificial Intelligence."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shanghai",
+    "university_name_en": "Wuhan University of Technology"
   }
 }

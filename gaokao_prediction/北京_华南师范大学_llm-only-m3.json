@@ -31,6 +31,39 @@
       "tier_2": "二档（中等）\n- 经济学（不限）",
       "tier_3": "三档（相对好进）\n- 传播学（不限）",
       "overall_advice": "位次在预测区间内（13350-14350名）建议以二档经济学为主、一档应用心理学冲刺、三档传播学保底；位次明显优于区间下限（<13350名）可重点冲一档应用心理学王牌专业；位次接近区间上限（>14350名）建议以三档传播学为主。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "The lowest ranking in 2024 was approximately 12614, and in 2025 approximately 13650, shifting backward by about 1036 positions in one year, showing a clear backward trend; the baseline ranking for 2025 is about 13650; the university's enrollment plan in Beijing for 2024 and 2025 was 6 students each, and the 2026 plan remains 6 students, unchanged for three consecutive years, with no expansion to ease competition."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "A 211 Project and Double First-Class construction university; ranked approximately 79th in the 2026 Soft Science China University Main Ranking, with recent rankings stable in the 75-80 range, belonging to the upper-middle level of 211 universities; the reputation evaluation during the 2026 college entrance examination cycle is neutral/mixed, with no major negative public opinion; Douyin comprehensive popularity ranking is 70th, rated as average, with short video exposure at a medium level, showing no clear signs of increased application attention; Psychology is rated A+ (top in the country), Marxist Theory is rated A, Education and Physical Education are rated A-; Psychology is the university's flagship discipline, which has a certain appeal for related majors."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The popularity of the Normal/Education category in 2024 is differentiated and wait-and-see, overall stable; the total number of college entrance examination registrants in Beijing for 2026 is about 84900, an increase of about 29.7% from 65434 in 2025, with a significant increase in the number of candidates, leading to intensified competition; South China Normal University is located in Guangzhou, Guangdong Province, and is a cross-provincial enrollment; the enrollment plan in Beijing is only 6 students, which is a niche choice; the impact of the large increase in the number of candidates on rankings may be diluted, but the overall competitive pressure is still on the rise."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the backward trend of historical rankings, the unchanged enrollment plan for 2026, and the significant increase of about 30% in the total number of candidates in Beijing, competition is expected to intensify slightly based on the 2025 baseline of 13650; the predicted lowest ranking is about 13850, with a range of 13350-14350."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Applied Psychology (Physics Required)",
+      "tier_2": "Tier 2 (Medium)\n- Economics (No Subject Restriction)",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Communication Studies (No Subject Restriction)",
+      "overall_advice": "For rankings within the predicted range (13350-14350), it is recommended to focus on Tier 2 Economics as the main choice, with Tier 1 Applied Psychology as a reach and Tier 3 Communication Studies as a safety; for rankings significantly better than the lower limit (<13350), focus on reaching for the flagship Tier 1 Applied Psychology major; for rankings near the upper limit (>14350), it is recommended to mainly choose Tier 3 Communication Studies."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Beijing",
+    "university_name_en": "South China Normal University"
   }
 }

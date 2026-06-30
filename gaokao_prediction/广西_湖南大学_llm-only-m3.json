@@ -42,6 +42,27 @@
       "tier_2": "二档（中等）\n- 数学类\n- 统计学类。",
       "tier_3": "三档（相对好进）\n- 土木工程\n- 建筑学。",
       "overall_advice": "由于数据不完整，建议参考2025年录取位次及招生计划变化趋势进行报考决策。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, the minimum rankings for Science/Physics Category were approximately 4561 → 8005 → 5859 → 7048 → 7400, with a fluctuation range of 5859-8005 in the past 3 years, and a 2025 baseline of about 7400; enrollment plans from 2021 to 2025 were 260 → 267 → 264 → 278 → 301, showing a continuous expansion trend."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "A 985, 211, Double First-Class comprehensive university."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the 2025 baseline of 7400 and the recent expansion trend, it is expected that the 2026 ranking will slightly shift backward; the predicted minimum ranking is about 7500, with a range of 7000-8000."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Electrical Engineering and Automation\n- Computer Science and Technology.",
+      "tier_2": "Tier 2 (Moderate)\n- Mathematics\n- Statistics.",
+      "tier_3": "Tier 3 (Relatively Easier)\n- Civil Engineering\n- Architecture.",
+      "overall_advice": "Due to incomplete data, it is recommended to refer to the 2025 admission rankings and enrollment plan trends for decision-making."
     }
   },
   "历史类": {
@@ -87,6 +108,35 @@
       "tier_2": "二档（中等）\n- 汉语言文学\n- 经济学类。",
       "tier_3": "三档（相对好进）\n- 金融学\n- 历史学。",
       "overall_advice": "由于数据不完整，建议参考2025年录取位次及招生计划变化趋势进行报考决策。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, the minimum ranking for liberal arts/history category was approximately 673 → 690 → 812 → 838 → 779. In 2025, it rebounded by about 59 places compared to 2024, with a baseline of approximately 779. Enrollment plans from 2021 to 2025 were 24 → 29 → 32 → 32 → 26, with a reduction of 6 students in 2025."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "A comprehensive university with 985, 211, and Double First-Class status."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the 2025 baseline of 779 and the enrollment reduction in 2025, it is expected that the ranking in 2026 will slightly decline. The predicted minimum ranking is approximately 790, with a range of 740-840."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Accounting\n- Law.",
+      "tier_2": "Tier 2 (Moderate)\n- Chinese Language and Literature\n- Economics.",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- Finance\n- History.",
+      "overall_advice": "Due to incomplete data, it is recommended to refer to the 2025 admission rankings and enrollment plan trends when making application decisions."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Guangxi",
+    "university_name_en": "Hunan University"
   }
 }

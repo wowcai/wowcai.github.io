@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 法学类\n- 经济学类\n- 计算机类（含数据科学与大数据技术、人工智能、数字媒体技术）。",
       "tier_3": "三档（相对好进）\n- 化学类（含化学（智能化学）、化学（化学生物交叉班））。",
       "overall_advice": "位次在预测区间14072-15072名内，建议以二档专业为主力报考方向，一档专业可作为冲刺目标（尤其教育学A+实力突出），三档化学类作为保底选择。位次明显优于区间下限（如14000名以内）可重点冲刺一档王牌专业；位次接近区间上限（15000名左右）应以二档计算机类、法学类为主，确保录取稳妥。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "Approximately 7739 in 2021 → 8398 in 2022 → 8329 in 2023 → 10980 in 2024 → 12103 in 2025, showing a continuous backward trend overall, with a significant increase in the magnitude of backward movement in the last two years (2024 moved back about 2651 places compared to 2023, 2025 moved back about 1123 places compared to 2024), with a baseline ranking of about 12103 in 2025; the university's enrollment plan in Beijing was 15 students from 2021 to 2024, increased to 16 in 2025, and is planned to significantly increase to 21 in 2026, an expansion of about 31.3% compared to 2025, which has a mitigating effect on competition for admission."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Central China Normal University is a 211 Project and Double First-Class university, ranking about 53rd in the 2026 Soft Science China University Rankings, with a stable and slightly rising trend in recent years (46th in 2021 → 50th in 2022 → 47th in 2023 → 58th in 2024 → 56th in 2025 → 53rd in 2026), ranking among the top in normal universities; the reputation evaluation in 2026 is slightly positive, mainly due to the lifelong learning story of an 81-year-old doctoral graduate from Central China Normal University attracting positive attention; Douyin popularity ranking is 89th, evaluated as average, with moderate short video exposure; no obvious record of admission gaps; Education A+ (top in the country), Psychology A-, Political Science A-, Chinese History A-, Marxist Theory A-, a total of 5 A- and above disciplines, with Education being the flagship program, strongly attractive to normal university applicants."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The social popularity of normal/education majors shows a differentiated and wait-and-see trend, with publicly-funded normal student policies guaranteeing employment but intense competition; computer and electronic information majors continue to be highly popular, and the university added popular majors such as computer and mathematics in 2026; the total number of Beijing college entrance examination candidates in 2026 is about 84,900, an increase of about 29.7% compared to 65,434 in 2025, significantly intensifying competition; Central China Normal University is located in Wuhan, Hubei, in the central region, which is a cross-province application for Beijing candidates."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the continuous backward trend of historical rankings, the mitigating effect of the significant enrollment expansion of about 31.3% in 2026 on competition, and the intensified competition due to a substantial increase of about 29.7% in the total number of Beijing candidates, using a supply-demand elasticity model, the predicted minimum admission ranking for 2026 is about 14,572, with a range of 14,072 to 15,072."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Political Science\n- Psychology\n- Education (Innovation Experimental Class).",
+      "tier_2": "Tier 2 (Moderate)\n- Law\n- Economics\n- Computer Science (including Data Science and Big Data Technology, Artificial Intelligence, Digital Media Technology).",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Chemistry (including Chemistry (Smart Chemistry), Chemistry (Chemistry-Biology Cross Class)).",
+      "overall_advice": "If your ranking is within the predicted range of 14,072-15,072, it is recommended to focus on Tier 2 majors as the main direction, with Tier 1 majors as a sprint target (especially Education with A+ strength), and Tier 3 Chemistry as a safety choice. If your ranking is significantly better than the lower limit of the range (e.g., within 14,000), you can focus on sprinting for Tier 1 flagship majors; if your ranking is close to the upper limit of the range (around 15,000), you should mainly choose Tier 2 Computer Science and Law to ensure a stable admission."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Beijing",
+    "university_name_en": "Central China Normal University"
   }
 }

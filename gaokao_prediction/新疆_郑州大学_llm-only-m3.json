@@ -28,6 +28,23 @@
       "tier_2": "二档（中等）\n- 计算机科学与技术\n- 电子信息类",
       "tier_3": "三档（相对好进）\n- 材料类\n- 土木类",
       "overall_advice": "位次在预测区间内建议以二档专业为主、一档专业冲刺、三档专业保底；位次明显优于区间下限可重点冲击临床医学等王牌专业。"
+    },
+    "subject_type_en": "Science",
+    "prediction_reason_en": {
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Zhengzhou University is a 211 Project and Double First-Class construction university, ranking approximately 50th–60th on the Soft Science main ranking, belonging to the upper-middle comprehensive universities; Zhengzhou University has advantageous disciplines such as Clinical Medicine, Chemistry, Materials Science and Engineering, which are highly attractive to science candidates."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Due to the failure to successfully read key data (historical rankings, enrollment plans, number of candidates), this prediction is based on a reasonable estimation of the regular admission ranking range of Zhengzhou University as a 211 university in Xinjiang science; the predicted minimum ranking is approximately 9850, with a range of 9350–10350."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Clinical Medicine\n- Stomatology",
+      "tier_2": "Tier 2 (Medium)\n- Computer Science and Technology\n- Electronic Information",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Materials\n- Civil Engineering",
+      "overall_advice": "If the ranking is within the predicted range, it is recommended to focus on Tier 2 majors, with Tier 1 majors as a stretch and Tier 3 majors as a safety; if the ranking is significantly better than the lower limit of the range, you can focus on applying for flagship majors such as Clinical Medicine."
     }
   },
   "文科": {
@@ -60,6 +77,35 @@
       "tier_2": "二档（中等）\n- 中国语言文学类\n- 工商管理类",
       "tier_3": "三档（相对好进）\n- 公共管理类\n- 外国语言文学类",
       "overall_advice": "位次在预测区间内建议以二档专业为主、一档专业冲刺、三档专业保底；法学专业竞争较为激烈，需位次明显优于区间下限。"
+    },
+    "subject_type_en": "Liberal Arts",
+    "prediction_reason_en": {
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Zhengzhou University is a 211 Project and Double First-Class construction university, ranking approximately 50th–60th on the Soft Science main ranking; its advantageous liberal arts disciplines such as Law and Chinese Language and Literature are attractive to liberal arts candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Major popularity data is missing."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Since key data could not be successfully retrieved, this prediction is based on a reasonable estimation of Zhengzhou University's regular admission rank range for liberal arts in Xinjiang as a 211 university; the predicted minimum rank is approximately 1850, with a range of 1750–1950."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Law\n- Journalism and Communication",
+      "tier_2": "Tier 2 (Medium)\n- Chinese Language and Literature\n- Business Administration",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Public Administration\n- Foreign Languages and Literature",
+      "overall_advice": "If your rank is within the predicted range, it is recommended to focus on Tier 2 majors, with Tier 1 majors as a stretch and Tier 3 majors as a safety; the Law major is highly competitive and requires a rank significantly better than the lower bound of the range."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Xinjiang",
+    "university_name_en": "Zhengzhou University"
   }
 }

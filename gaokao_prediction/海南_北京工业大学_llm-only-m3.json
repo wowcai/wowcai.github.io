@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 暂无",
       "tier_3": "三档（相对好进）\n- 材料类（实验班）（含材料科学与工程、纳米材料与技术等）",
       "overall_advice": "该校在海南仅招2个专业共4人，位次在预测区间内（1770–2548名）建议以软件工程（实验班）为主攻目标（一档冲刺），材料类（实验班）作为保底选择（三档）；位次明显优 于区间下限（<1770名）可重点冲刺软件工程实验班。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking was approximately 2772 → 3148 → 2778 → 2294 → 2229, with a continuous forward shift in the last 3 years (easier to enter). In 2024, it shifted forward by about 484 places compared to 2023, and in 2025, it shifted forward by about 65 places compared to 2024. The baseline for 2025 is approximately 2229. The university's comprehensive enrollment plan in Hainan Province was 4 students from 2021 to 2025, and the 2026 plan remains 4 students, consistent with previous years, with no signal of expansion or contraction."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "A 211 Project and Double First-Class university. In the 2026 Soft Science China University Ranking, it is approximately 65th, with a stable ranking in the 60–70 range in recent years, belonging to the upper-middle level of science and engineering universities. The 2026 reputation evaluation is slightly negative, involving an incident where a proposed graduate student made inappropriate remarks and had their qualification revoked, which has a slight negative impact on application psychology. Douyin popularity evaluation is 'relatively hot', ranking 57th overall, with medium-to-high short video exposure. Fifth round discipline evaluation: Environmental Science and Engineering A, Optical Engineering A-, Civil Engineering A-, Materials Science and Engineering A-, Software Engineering A-. Software Engineering (Experimental Class) is one of the majors recruited in Hainan, with strong disciplinary strength."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Software Engineering corresponds to the computer category, with a 2026 major popularity of 'recommended' to 'highly recommended', with high social attention. Materials category corresponds to Materials Science and Engineering, with popularity of 'generally wait-and-see' to 'clearly discouraged'. In 2026, the total number of regular college entrance examination candidates in this province is about 78,000, an increase of about 15.7% compared to 67,408 in 2025, significantly intensifying competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous forward shift trend of historical rankings, the unchanged 2026 enrollment plan, the significant increase in the total number of candidates in the province (intensified competition), and the slightly negative university reputation, it is expected that the minimum ranking in 2026 will continue to shift forward slightly based on the 2025 baseline of 2229. The predicted minimum ranking is approximately 2159, with a range of 1770–2548."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Software Engineering (Experimental Class)",
+      "tier_2": "Tier 2 (Medium)\n- None currently",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Materials Category (Experimental Class) (including Materials Science and Engineering, Nanomaterials and Technology, etc.)",
+      "overall_advice": "This university only recruits 2 majors with a total of 4 students in Hainan. If the ranking is within the predicted range (1770–2548), it is recommended to target Software Engineering (Experimental Class) as the main goal (Tier 1 sprint), and Materials Category (Experimental Class) as a safety choice (Tier 3). If the ranking is significantly better than the lower limit of the range (<1770), focus on sprinting for the Software Engineering Experimental Class."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Hainan",
+    "university_name_en": "Beijing University of Technology"
   }
 }

@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 文科试验班类（文科各专业）（含社会学等专业）。",
       "tier_3": "三档（相对好进）\n- 暂无其他独立招生专业，该校在浙江省综合类仅设3个招生专业大类，各专业录取位次高度集中（2025年均为343名），分档差异极小。",
       "overall_advice": "清华大学在浙江省综合类仅设3个招生专业大类，近年各专业录取位次高度趋同（2025年均为343名），分档意义有限。位次在预测区间（327–411名）内建议以理科试验班和临床医学类为主攻方向；位次明显优于区间下限（<327名）可重点冲刺临床医学类（协和方向）；位次接近区间上限（>411名）需谨慎报考。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, the minimum admission rankings for Tsinghua University in Zhejiang Province's comprehensive category were approximately 93, 83, 266, 331, and 343 respectively. Rankings were extremely high (top 100) in 2021–2022, but shifted significantly backward to 266 in 2023, with a gradual backward shift each subsequent year, reaching a baseline of 343 in 2025. Over the past 3 years, the cumulative backward shift is about 250 positions, showing a continuous backward trend. From 2021 to 2024, the enrollment plan for Zhejiang's comprehensive category was 30, 29, 29, and 29 respectively, increasing to 36 in 2025, and 37 in 2026, a slight expansion of 1 person (+2.8%) compared to 2025, with minimal impact on competition."
+      },
+      "学校层次与声誉": {
+        "title": "Institutional Level and Reputation",
+        "text": "Tsinghua University is a 985 Project, 211 Project, and Double First-Class university, ranking first in the Shanghai Ranking's Chinese University Rankings from 2021 to 2026, making it the top institution in China with undisputed academic strength. During the 2026 college entrance examination cycle, its reputation evaluation is slightly negative (event statistics: positive 0, negative 3, neutral 6), mainly involving general public opinion on campus management, dormitories, and cafeterias, with no serious negative incidents. Its Douyin popularity ranks second overall (high heat), with extremely high short video exposure, reflecting sustained high attention from applicants. Historical admission anomaly records show only low attention signals in 2021 and 2023, with no obvious gaps or crashes. In the fifth round of discipline evaluation, Tsinghua has over 40 disciplines rated A- or above, including Computer Science and Technology (A+), Clinical Medicine (A+), Law (A+), Business Administration (A+), Mathematics (A+), and Physics (A+), with top-tier national discipline strength, strongly attracting high-scoring candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Majors such as Computer Science, Electronic Information/Communication, Electrical Engineering, and Clinical Medicine remain highly popular or recommended, closely aligning with Tsinghua's enrollment majors. In 2026, the total number of general college entrance examination candidates in Zhejiang Province is about 400,000 (a significant increase of about 37.6% from 290,800 in 2025), intensifying competition. Tsinghua University is located in Beijing, and Zhejiang candidates have a very high recognition of top universities in Beijing. The university's enrollment plan in Zhejiang Province accounts for a small proportion (about 30+ people), making it a cross-provincial enrollment with no local preference effect."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous backward shift in historical rankings (from 266 in 2023 to 343 in 2025), the slight expansion of only 1 person (+2.8%) in the 2026 plan, the significant increase of about 37.6% in the total number of Zhejiang candidates (intensifying competition), and the high Douyin heat reflecting strong application interest, the minimum admission ranking in 2026 is expected to continue shifting backward from the 2025 baseline of 343. With a minor adjustment based on the strongest competitive factor of the surge in candidate numbers, the predicted minimum ranking is about 369, with a range of 327–411."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Clinical Medicine (including Clinical Medicine (PUMC) and Clinical Medicine (Outstanding Physician Scientist) majors)\n- Science Experimental Class (Science Majors) (including Cross-disciplinary Engineering and other science majors).",
+      "tier_2": "Tier 2 (Moderate)\n- Liberal Arts Experimental Class (Liberal Arts Majors) (including Sociology and other majors).",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- No other independent enrollment majors currently. The university only offers 3 major categories in Zhejiang's comprehensive category, with highly concentrated admission rankings (all at 343 in 2025), resulting in minimal tier differences.",
+      "overall_advice": "Tsinghua University only offers 3 major categories in Zhejiang's comprehensive category, with highly convergent admission rankings in recent years (all at 343 in 2025), making tier differentiation limited. For rankings within the predicted range (327–411), it is recommended to focus on the Science Experimental Class and Clinical Medicine as primary targets. For rankings significantly better than the lower limit (<327), priority should be given to Clinical Medicine (PUMC direction). For rankings near the upper limit (>411), caution is advised when applying."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Zhejiang",
+    "university_name_en": "Tsinghua University"
   }
 }

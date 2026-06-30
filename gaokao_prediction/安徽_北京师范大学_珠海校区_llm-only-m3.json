@@ -26,6 +26,31 @@
       "tier_2": "二档（中等）\n- 地理科学\n- 心理学\n- 历史学",
       "tier_3": "三档（相对好进）\n- 数据科学与大数据技术\n- 金融科技",
       "overall_advice": "位次在预测区间内建议以二档为主、一档冲刺、三档保底；位次明显优于区间下限可重点冲一档王牌专业。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rank for science was approximately 12500 → 12800 → 13100 → 13300 → 13500, showing a slight year-on-year backward trend, with a baseline of about 13500 in 2025."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "985, 211, Double First-Class; Soft Science main ranking approximately 22nd (BNU main campus), Zhuhai Campus as a branch campus shares brand reputation; BNU Zhuhai Campus has steadily improved its reputation in recent years, with moderate to high popularity on Douyin, no obvious abnormal admission records; Education A+, Psychology A+, Chinese Language and Literature A+, Geography A+, Mathematics A, closely related to the majors offered at Zhuhai Campus."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Social popularity of teacher training and basic science majors is stable; the total number of examinees in Anhui Province in 2026 is expected to increase slightly, leading to slightly intensified competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the historical backward trend of rankings, the increase in total examinees, and the school's brand effect, the ranking is expected to continue to shift slightly backward based on the 2025 baseline of 13500; predicted minimum rank is about 13500, with a range of 13200–13800."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Chinese Language and Literature\n- Mathematics and Applied Mathematics\n- English",
+      "tier_2": "Tier 2 (Medium)\n- Geographical Science\n- Psychology\n- History",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Data Science and Big Data Technology\n- Financial Technology",
+      "overall_advice": "If your rank is within the predicted range, it is recommended to focus on Tier 2, with Tier 1 as a reach and Tier 3 as a safety; if your rank is significantly better than the lower bound of the range, you can focus on reaching for Tier 1 flagship majors."
     }
   },
   "历史类": {
@@ -55,6 +80,39 @@
       "tier_2": "二档（中等）\n- 思想政治教育\n- 英语",
       "tier_3": "三档（相对好进）\n- 传播学\n- 法学",
       "overall_advice": "位次在预测区间内建议以二档为主、一档冲刺、三档保底；位次明显优于区间下限可重点冲一档王牌专业。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rank for liberal arts was approximately 2500 → 2550 → 2600 → 2700 → 2800, showing a gradual backward trend year by year. The baseline for 2025 is about rank 2800."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "985, 211, Double First-Class; Soft Science main ranking approximately 22nd (Beijing Normal University main campus). The Zhuhai Campus, as a satellite campus, shares the brand reputation. In recent years, the reputation of BNU Zhuhai Campus has steadily improved. Douyin popularity is moderately high, with no obvious abnormal filing records. Education A+, Chinese Language and Literature A+, History A+, Philosophy A-, highly matching the liberal arts admission majors."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The social popularity of teacher training and humanities majors is stable. The total number of examinees in Anhui Province in 2026 is expected to increase slightly, leading to slightly intensified competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the historical backward trend of rankings, the increase in total examinees, and the school's brand effect, based on the 2025 baseline of rank 2800, the ranking is expected to continue to shift slightly backward. The predicted minimum rank is about 2800, with a range of 2700–2900."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Chinese Language and Literature\n- History",
+      "tier_2": "Tier 2 (Medium)\n- Ideological and Political Education\n- English",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Communication Studies\n- Law",
+      "overall_advice": "If your rank is within the predicted range, it is recommended to focus on Tier 2, use Tier 1 as a reach, and Tier 3 as a safety. If your rank is significantly better than the lower bound of the range, you can focus on reaching for the top-tier flagship majors in Tier 1."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Anhui",
+    "university_name_en": "Beijing Normal University (Zhuhai Campus)"
   }
 }

@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 食品质量与安全。",
       "tier_3": "三档（相对好进）\n- 茶学。",
       "overall_advice": "位次在预测区间17365–18365内的考生，建议以二档食品质量与安全为主力填报，一档动物医学可冲刺（历年min_rank约14281–16940），三档茶学作为保底选择（历年min_rank 约15485–18065）。位次明显优于区间下限（17365以内）可重点冲刺动物医学王牌专业。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rankings for Shanghai Comprehensive category were approximately 17491 → 15882 → 13919 → 15979 → 18065, showing a \"down-up-down\" fluctuation. In 2024, it shifted back by about 2060 places compared to 2023, and in 2025, it continued to shift back by about 2086 places compared to 2024, with a cumulative shift of about 4146 places over the past two years. The 2025 baseline is approximately 18065. The enrollment plan for Shanghai Comprehensive category was 7 students each year from 2021 to 2025, and remains 7 students in 2026, with the plan unchanged for six consecutive years, providing no buffer from expansion or contraction."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "211 Project and Double First-Class university; Soft Science Chinese University Main Ranking in recent years is approximately 134–162, ranking 134th in 2026, which is at the upper-middle level nationwide. In 2022, reputation was neutral/mixed (signal of declining admission scores year by year), in 2023, it was slightly positive (good cafeteria service, study rooms in dormitories). In 2026, no direct negative records in reputation documents. Douyin total popularity ranking is 86th (average), with stable popularity in recent years and no obvious viral spread. Historical abnormal admission signals were noted in 2022 (admission scores declining year by year since 2018). Fifth round of discipline evaluation: Animal Science A, Crop Science A-, both are advantageous disciplines in agriculture and forestry. Among the enrollment majors, Animal Medicine corresponds to the Veterinary Medicine category (A-), Food Quality and Safety corresponds to Food Science and Engineering, and Tea Science corresponds to Tea Science/Agriculture-related directions."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Animal Medicine belongs to the Veterinary Medicine category, which has been relatively popular and recommended in recent years. Food Quality and Safety belongs to the Food Science and Engineering category, with average social popularity. Tea Science belongs to the Agriculture direction, with overall low popularity. The total number of college entrance exam registrants in this province in 2026 is approximately 66,700 (an increase of about 35.4% compared to 49,276 in 2025), with a significant increase in the number of candidates, leading to intensified competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the trend of declining rankings over the past two years, the unchanged enrollment plan in 2026 providing no buffer, the significant increase of about 35.4% in the number of candidates in this province leading to intensified competition, and the neutral to slightly positive school reputation with average Douyin popularity, competition is expected to intensify slightly based on the 2025 baseline of 18065, with rankings moving slightly forward. The predicted minimum ranking is approximately 17865, with a range of 17365–18365."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Animal Medicine.",
+      "tier_2": "Tier 2 (Moderate)\n- Food Quality and Safety.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Tea Science.",
+      "overall_advice": "For candidates with rankings within the predicted range of 17365–18365, it is recommended to focus on Tier 2 Food Quality and Safety as the main choice, with Tier 1 Animal Medicine as a reach (historical min_rank approximately 14281–16940), and Tier 3 Tea Science as a safety option (historical min_rank approximately 15485–18065). Candidates with rankings significantly better than the lower limit of the range (within 17365) can focus on reaching for the flagship major of Animal Medicine."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shanghai",
+    "university_name_en": "Sichuan Agricultural University"
   }
 }

@@ -30,6 +30,39 @@
       "tier_2": "二档（中等）\n- 生物科学类（生物信息学、生物科学）\n- 海洋技术",
       "tier_3": "三档（相对好进）\n- 智能海洋装备\n- 生物信息学",
       "overall_advice": "预测位次约5874名，区间5374–6374名。位次在区间内建议以二档为主、一档冲刺、三档保底；位次明显优于区间下限（<5374名）可重点冲经济学类和能源化学工程等一档专业；位次接近区间上限（>6374名）建议以三档专业保底。"
+    },
+    "subject_type_en": "Science",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2023 to 2025, the minimum science rankings were approximately 4696 → 3938 → 4437, showing a fluctuating trend of first rising then falling in recent three years; in 2024, the ranking significantly moved forward (3938th), and in 2025 it retreated to 4437th, overall fluctuating within the range of 3900–4700; the baseline ranking for 2025 is about 4437th; the provincial science enrollment plan was 13 in 2023 → 17 in 2024 → 29 in 2025, expanding for three consecutive years; the 2026 plan increases to 44, an expansion of about 51.7% compared to 2025, a relatively large expansion, exerting significant downward pressure on rankings."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "985 Project, 211 Project, Double First-Class construction university; ranked approximately 28th in the main list of Shanghai Ranking's Chinese University Rankings (2024–2026), with a high school level and strong comprehensive strength, continuously attractive to examinees; recent reputation is generally neutral; in 2021, it attracted attention due to a campus safety incident; in 2024, there were abnormal signals in admission cutoffs; Douyin popularity ranking 55th (relatively hot), with moderate attention on short video platforms; no obvious record of admission cutoff gaps; Chemical Engineering and Technology A+ (top in the country), Mechanics A, Civil Engineering A, Business Administration A, Mechanical Engineering A, Management Science and Engineering A, Software Engineering A, etc., with outstanding engineering strength; Panjin Campus offers majors mainly in chemical engineering, biology, and economics, closely related to the advantageous disciplines of the main campus."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Energy Chemical Engineering (Chemical Engineering A+) corresponds to generally wait-and-see popularity; Economics category has socially differentiated wait-and-see popularity; Biological Sciences/Bioinformatics belong to the broad category of biology, chemistry, environment, and materials, with obvious social discouragement; the total number of examinees in the province in 2026 is about 238,000 (including uncertain marks), a significant increase compared to about 52,500 science examinees in 2025, intensifying competition; the university is located in Panjin City, Liaoning Province, not a local university; Xinjiang examinees have a strong willingness to study outside the province, with average acceptance of universities in Northeast China."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the 2025 baseline ranking of 4437th, the significant 51.7% expansion of the 2026 plan (supply-demand elasticity main value approximately 5814th), the notable increase in the number of examinees in the province (intensified competition), and the generally neutral school reputation, a slight upward revision is made on the basis of the supply-demand elasticity main value; the predicted 2026 science minimum ranking is approximately 5874th, with a range of 5374–6374th."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Economics (E-commerce, Economics)\n- Energy Chemical Engineering (including Energy Chemical Engineering, Chemical Engineering and Industrial Bioengineering)",
+      "tier_2": "Tier 2 (Medium)\n- Biological Sciences (Bioinformatics, Biological Sciences)\n- Marine Technology",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Intelligent Marine Equipment\n- Bioinformatics",
+      "overall_advice": "Predicted ranking approximately 5874th, range 5374–6374th. If the ranking is within the range, it is recommended to focus on Tier 2, with Tier 1 as a reach and Tier 3 as a safety; if the ranking is significantly better than the lower limit of the range (<5374th), focus on reaching for Tier 1 majors such as Economics and Energy Chemical Engineering; if the ranking is close to the upper limit of the range (>6374th), it is recommended to use Tier 3 majors as safety."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Xinjiang",
+    "university_name_en": "Dalian University of Technology (Panjin Campus)"
   }
 }

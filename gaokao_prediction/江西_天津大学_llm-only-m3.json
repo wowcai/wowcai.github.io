@@ -41,6 +41,31 @@
       "tier_2": "二档（中等）\n- 暂无。",
       "tier_3": "三档（相对好进）\n- 暂无。",
       "overall_advice": "由于数据文件未成功读取，无法提供可靠的专业分档建议。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "985, 211, Double First-Class; approximately 21st in the Soft Science main ranking."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Since all key data files failed to be read successfully, this prediction is based on general common sense and is unreliable. Predicted minimum rank is approximately 4000, with a range of 3700–4200."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- None at present.",
+      "tier_2": "Tier 2 (Moderate)\n- None at present.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- None at present.",
+      "overall_advice": "Since the data files failed to be read successfully, reliable major tier recommendations cannot be provided."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Jiangxi",
+    "university_name_en": "Tianjin University"
   }
 }

@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 暂无合适专业。",
       "tier_3": "三档（相对好进）\n- 朝鲜语（非朝鲜族）（吉林延吉）。",
       "overall_advice": "位次在预测区间内建议以临床医学为主攻方向、朝鲜语作为保底选择；位次明显优于区间下限（23596名以内）可重点冲刺临床医学专业，位次接近区间上限则建议以朝鲜语为稳妥选择。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking fluctuated significantly: approximately 24173 → 19014 → 21020 → 20086 → 23796. In recent three years, it oscillated between 20000 and 24000. The baseline for 2025 is about 23796. The university's enrollment plan in Beijing from 2021 to 2026 remains constant at 5 students, with no expansion or reduction."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "A 211 Project and Double First-Class university. Its ranking in the Soft Science China University Rankings has steadily risen from 198th in 2021 to 157th in 2026. In recent years, its reputation has been stable with no significant positive or negative public incidents. Its Douyin popularity ranks 79th, with an evaluation of 'average', indicating moderately low attention from applicants. In the fifth round of discipline evaluation, it has no disciplines rated A- or above, and its advantageous disciplines are not prominent."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Geographic Location",
+        "text": "Among its majors, Clinical Medicine is a highly recommended hot major, while Korean (for non-Korean ethnic groups) is a foreign language major with average popularity. The total number of Beijing Gaokao registrants in 2026 is about 84,900, an increase of about 19,466 from 65,434 in 2025, a growth of about 29.7%. This significant increase intensifies competition. The university is located in Yanbian Korean Autonomous Prefecture, Jilin Province, far from Beijing. Beijing applicants generally have weaker geographic preference for universities in Northeast China."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the historical ranking fluctuations, the significant increase in the total number of Beijing examinees in 2026 (intensified competition), the unchanged enrollment plan, and the steadily rising university ranking, it is predicted that the minimum admission ranking in 2026 will slightly shift backward from the 2025 baseline of 23,796. The predicted minimum ranking is approximately 24,096, with a range of 23,596 to 24,596."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Clinical Medicine (Yanji, Jilin).",
+      "tier_2": "Tier 2 (Moderate)\n- No suitable major currently.",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- Korean (for non-Korean ethnic groups) (Yanji, Jilin).",
+      "overall_advice": "If your ranking falls within the predicted range, it is recommended to target Clinical Medicine as the primary choice and Korean as a safe backup. If your ranking is significantly better than the lower bound of the range (within 23,596), you can focus on striving for Clinical Medicine. If your ranking is close to the upper bound, it is advisable to choose Korean as a stable option."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Beijing",
+    "university_name_en": "Yanbian University"
   }
 }

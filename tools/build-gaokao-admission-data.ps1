@@ -95,6 +95,58 @@ function To-NullableNumber {
   return $null
 }
 
+function Convert-PredictionReason {
+  param(
+    [object]$Reason,
+    [string]$DefaultTitle,
+    [string]$ConclusionKey = "预测结论"
+  )
+
+  $sections = New-Object System.Collections.Generic.List[object]
+  $summary = ""
+
+  if ($Reason -is [string]) {
+    $summary = $Reason
+    if (-not [string]::IsNullOrWhiteSpace($Reason)) {
+      $sections.Add([ordered]@{ title = $DefaultTitle; text = $Reason })
+    }
+  } elseif ($null -ne $Reason) {
+    foreach ($reasonProp in $Reason.PSObject.Properties) {
+      $title = [string]$reasonProp.Name
+      $text = ""
+
+      if ($reasonProp.Value -is [string]) {
+        $text = [string]$reasonProp.Value
+      } elseif ($null -ne $reasonProp.Value) {
+        $nestedTitle = Get-PropValue $reasonProp.Value "title"
+        $nestedText = Get-PropValue $reasonProp.Value "text"
+
+        if (-not [string]::IsNullOrWhiteSpace([string]$nestedTitle)) {
+          $title = [string]$nestedTitle
+        }
+        if (-not [string]::IsNullOrWhiteSpace([string]$nestedText)) {
+          $text = [string]$nestedText
+        }
+      }
+
+      if (-not [string]::IsNullOrWhiteSpace($text)) {
+        $sections.Add([ordered]@{ title = $title; text = $text })
+        if ($reasonProp.Name -eq $ConclusionKey) {
+          $summary = $text
+        }
+      }
+    }
+    if ([string]::IsNullOrWhiteSpace($summary) -and $sections.Count -gt 0) {
+      $summary = [string]$sections[$sections.Count - 1].text
+    }
+  }
+
+  return [pscustomobject]@{
+    Summary = $summary
+    Sections = $sections.ToArray()
+  }
+}
+
 function Get-StableHashId {
   param([string]$Name)
 
@@ -413,6 +465,7 @@ foreach ($file in $jsonFiles) {
     $parts = Get-SourceParts $file.Name
     $rawJson = [System.IO.File]::ReadAllText($file.FullName, $Utf8NoBom)
     $parsed = $rawJson | ConvertFrom-Json
+    $translation = Get-PropValue $parsed "_translation"
   } catch {
     $parseErrors.Add("$($file.Name): $($_.Exception.Message)")
     continue
@@ -453,13 +506,18 @@ foreach ($file in $jsonFiles) {
     $map = $oldItem.map
   }
 
-  $universityNameEn = ""
-  if ($oldItem -and $oldItem.universityNameEn) {
+  $universityNameEn = [string](Get-PropValue $translation "university_name_en")
+  if ([string]::IsNullOrWhiteSpace($universityNameEn) -and $oldItem -and $oldItem.universityNameEn) {
     $universityNameEn = [string]$oldItem.universityNameEn
   }
+  $provinceEn = [string](Get-PropValue $translation "province_en")
 
   $processedSubjectTypes = @{}
   foreach ($subjectProp in $parsed.PSObject.Properties) {
+    if ([string]$subjectProp.Name -like "_*") {
+      continue
+    }
+
     $subjectType = Get-DisplaySubjectType ([string]$subjectProp.Name)
 
     if ($processedSubjectTypes.ContainsKey($subjectType)) {
@@ -472,6 +530,7 @@ foreach ($file in $jsonFiles) {
     }
 
     $item = $subjectProp.Value
+    $subjectTypeEn = [string](Get-PropValue $item "subject_type_en")
     $historyObject = Get-PropValue $item "往年"
     $history = New-Object System.Collections.Generic.List[object]
 
@@ -501,36 +560,19 @@ foreach ($file in $jsonFiles) {
       $scoreRange = @($scoreLow, $scoreHigh)
     }
 
-    $reasonRaw = Get-PropValue $item "prediction_reason"
-    $reasonSections = New-Object System.Collections.Generic.List[object]
-    $reasonSummary = ""
-    if ($reasonRaw -is [string]) {
-      $reasonSummary = $reasonRaw
-      if (-not [string]::IsNullOrWhiteSpace($reasonRaw)) {
-        $reasonSections.Add([ordered]@{ title = "预测依据"; text = $reasonRaw })
-      }
-    } elseif ($null -ne $reasonRaw) {
-      foreach ($reasonProp in $reasonRaw.PSObject.Properties) {
-        $text = [string]$reasonProp.Value
-        if (-not [string]::IsNullOrWhiteSpace($text)) {
-          $reasonSections.Add([ordered]@{ title = [string]$reasonProp.Name; text = $text })
-          if ($reasonProp.Name -eq "预测结论") {
-            $reasonSummary = $text
-          }
-        }
-      }
-      if ([string]::IsNullOrWhiteSpace($reasonSummary) -and $reasonSections.Count -gt 0) {
-        $reasonSummary = [string]$reasonSections[$reasonSections.Count - 1].text
-      }
-    }
+    $reasonResult = Convert-PredictionReason (Get-PropValue $item "prediction_reason") "预测依据" "预测结论"
+    $reasonEnResult = Convert-PredictionReason (Get-PropValue $item "prediction_reason_en") "Prediction rationale" "预测结论"
 
     $predictedRank = To-NullableNumber (Get-PropValue $item "predicted_rank")
     $predictedScore = To-NullableNumber (Get-PropValue $item "predicted_score")
     $majorTierRecommendation = Get-PropValue $item "major_tier_recommendation"
+    $majorTierRecommendationEn = Get-PropValue $item "major_tier_recommendation_en"
 
     $record = [ordered]@{
       province = $province
+      provinceEn = $provinceEn
       subjectType = $subjectType
+      subjectTypeEn = $subjectTypeEn
       universityId = $universityId
       universityName = $universityName
       universityNameEn = $universityNameEn
@@ -546,11 +588,14 @@ foreach ($file in $jsonFiles) {
         changeFromLastYear = $null
         confidence = "medium"
       }
-      predictionReason = $reasonSummary
-      predictionReasonSections = $reasonSections.ToArray()
+      predictionReason = $reasonResult.Summary
+      predictionReasonEn = $reasonEnResult.Summary
+      predictionReasonSections = $reasonResult.Sections
+      predictionReasonSectionsEn = $reasonEnResult.Sections
       majorTierRecommendation = $majorTierRecommendation
+      majorTierRecommendationEn = $majorTierRecommendationEn
       sourceFile = $file.Name
-    sourceNote = "$province，来源：gaokao_predict所有省底第5版本完善字段合并意见347个 + gaokao_predict所有省第四版完善字段合并意见545个。"
+      sourceNote = "$province，来源：gaokao_prediction。"
     }
 
     if ($null -ne $map) {

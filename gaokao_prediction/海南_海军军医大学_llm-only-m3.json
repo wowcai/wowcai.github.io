@@ -27,6 +27,39 @@
       "tier_2": "二档（中等）\n- 医学影像学（临床影像医师）\n- 药学（药剂师）",
       "tier_3": "三档（相对好进）\n- 中药学（药剂师）\n- 护理学（护师）",
       "overall_advice": "位次在预测区间12088–13088名内，建议以二档专业为主攻方向，一档临床医学类专业作为冲刺，三档护理学、中药学作为保底。位次优于区间下限（<12088名）可重点冲刺一档 临床医学专业；位次接近区间上限（>13088名）建议以三档为主。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "For Hainan Province, Naval Medical University (Comprehensive category) only has admission data for 2022 available, with the lowest ranking approximately 12,288. Admission data for 2021, 2023, 2024, and 2025 are missing from the data source, making it impossible to obtain a complete ranking trend. The baseline ranking for 2025 cannot be determined, and only the 2022 data is used as a reference starting point. The university's enrollment plan for the Comprehensive category in Hainan Province was 19 in 2022, and the 2026 enrollment plan still shows 19, indicating a stable number. Provincial plans for 2021, 2023, 2024, and 2025 are unavailable, preventing a comparison of the complete plan change trend."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Naval Medical University is a 211 Project and Double First-Class construction university. It is not ranked in the top 200 of the Soft Science China University Main Ranking (outside the top 200). The university type is military, located in Shanghai. As a military medical university, its enrollment of local students without military status has a unique positioning in various provinces. On the Douyin platform, the university ranks 9th in comprehensive popularity (high heat), with 14 videos and a comprehensive popularity of approximately 5.32 million. The main content involves eight-year clinical medicine, military school enrollment, etc., with extremely high social attention. The reputation evaluation file does not include a dedicated entry for this university, and there are no significant negative public opinion signals. The fifth round of discipline evaluation files does not include discipline evaluation data for Naval Medical University, so information on its A-class disciplines cannot be obtained. As a military medical university, clinical medicine and pharmacy are its traditional advantageous fields."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The clinical medicine major has been consistently rated as 'Recommended' to 'Highly Recommended' in the 2024-2026 major popularity analysis, with overall high application heat for medical majors. The total number of examinees in Hainan Province increased from 55,945 in 2022 to 67,408 in 2025, and approximately 78,000 in 2026 (data includes uncertainty markers), indicating continuous expansion of the examinee scale and intensified competition. Slight increase."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the 2022 baseline ranking of approximately 12,288, the 2026 enrollment plan unchanged from 2022 (19 people), and the continuous significant increase in the total number of examinees in Hainan Province (2022 to 2026 growth of about 39.5%), it is judged that competition in 2026 will be significantly more intense than in 2022, and the ranking should move backward. The predicted lowest ranking for 2026 is approximately 12,588, with a range of 12,088 to 13,088."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Clinical Medicine (Advanced Clinical Physician)\n- Clinical Medicine (Clinical Physician)",
+      "tier_2": "Tier 2 (Moderate)\n- Medical Imaging (Clinical Imaging Physician)\n- Pharmacy (Pharmacist)",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Chinese Materia Medica (Pharmacist)\n- Nursing (Nurse)",
+      "overall_advice": "If your ranking is within the predicted range of 12,088 to 13,088, it is recommended to focus on Tier 2 majors as the main direction, with Tier 1 clinical medicine majors as a sprint, and Tier 3 nursing and Chinese materia medica as safety options. If your ranking is better than the lower limit of the range (<12,088), you can focus on sprinting for Tier 1 clinical medicine majors. If your ranking is close to the upper limit of the range (>13,088), it is recommended to mainly consider Tier 3 majors."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Hainan",
+    "university_name_en": "Naval Medical University"
   }
 }

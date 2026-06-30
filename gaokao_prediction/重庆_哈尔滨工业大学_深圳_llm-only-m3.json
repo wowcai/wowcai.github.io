@@ -38,6 +38,31 @@
       "tier_2": "二档（中等）\n- 工科试验班（自主智能）（含人工智能、机器人工程、自动化）",
       "tier_3": "暂无（该校物理类仅设2个专业组，已全部分入一档和二档）",
       "overall_advice": "位次在预测区间660–700名内，建议以二档工科试验班（自主智能）为主攻方向，一档工科试验班（未来信息）作为冲刺；位次明显优于区间上限（<660名）可重点冲刺一档王牌 专业。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking for Physics Category was approximately 1073 → 1119 → 850 → 820 → 693, showing a clear upward trend (decreasing ranking numbers), with a cumulative increase of about 426 places in the last 3 years; the 2025 baseline is about 693; the provincial Physics Category enrollment plan was 42 in 2021–2022, 37 in 2023–2024, 28 in 2025, and 28 in 2026, unchanged from 2025 but significantly reduced compared to 2021, intensifying competition."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "985, 211, Double First-Class; ranked approximately 12th on the Soft Science Main Ranking (2026), belonging to the top tier of national universities; the 2026 reputation evaluation is neutral/mixed, with no significant negative public opinion; ranked 10th in Douyin popularity (high heat), reflecting high application attention and rising competitive psychological expectations; 17 A- or above disciplines including Mechanical Engineering A+, Materials Science and Engineering A+, Environmental Science and Engineering A+, Mechanics A+, Computer Science and Technology A, etc., with top-tier engineering strength, strongly attracting high-scoring candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Core majors such as Computer Science, Electronic Information/Communications continue to have high social popularity, leading to intense competition for related majors; the number of Physics Category candidates in the province in 2026 is about 137,000, slightly down from 139,000 in 2025, slightly easing competitive pressure."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous upward trend in historical rankings, the unchanged enrollment plan for 2026, the high Douyin popularity reflecting increased attention, and the slight decrease in total candidates, competition is expected to continue to intensify slightly based on the 2025 baseline of 693; the predicted minimum ranking is about 680, with a range of 660–700."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Engineering Experimental Class (Future Information) (including Computer Science and Technology, Communication Engineering)",
+      "tier_2": "Tier 2 (Medium)\n- Engineering Experimental Class (Autonomous Intelligence) (including Artificial Intelligence, Robotics Engineering, Automation)",
+      "tier_3": "None (This university's Physics Category only has 2 major groups, all already assigned to Tier 1 and Tier 2)",
+      "overall_advice": "If your ranking is within the predicted range of 660–700, it is recommended to focus on Tier 2 Engineering Experimental Class (Autonomous Intelligence) as the main direction, with Tier 1 Engineering Experimental Class (Future Information) as a stretch goal; if your ranking is significantly better than the upper limit of the range (<660), you can focus on sprinting for the Tier 1 flagship major."
     }
   },
   "历史类": {
@@ -79,6 +104,39 @@
       "tier_2": "暂无（该校历史类仅设1个专业组，已全部分入一档）",
       "tier_3": "暂无",
       "overall_advice": "位次在预测区间420–460名内，建议以经济管理试验班为主攻方向；位次明显优于区间上限（<420名）可大胆报考。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking for History Category fluctuated significantly: 642 → 586 → 604 → 719 → 447, with a sharp rise to 447th in 2025. The provincial enrollment plan for History Category was 2 students from 2021 to 2022, 5 students from 2023 to 2024, and 4 students in 2025."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "985, 211, Double First-Class; approximately 12th in the Soft Science Main Ranking; neutral/mixed reputation evaluation in 2026; ranked 10th in Douyin popularity (high heat), reflecting overall high attention; HIT is primarily engineering-oriented, and its History Category majors (Economic Management Experimental Class, Architecture) are weakly correlated with its strong engineering disciplines."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Social popularity of Economic Management majors is divided and wait-and-see; Architecture major popularity is also divided and wait-and-see; the number of History Category examinees in the province in 2026 is approximately 72,000, slightly down from 73,000 in 2025."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Predicted minimum ranking is approximately 440th, with a range of 420–460."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Economic Management Experimental Class (including Accounting)",
+      "tier_2": "None (This university's History Category has only one major group, all classified into Tier 1)",
+      "tier_3": "None",
+      "overall_advice": "If your ranking is within the predicted range of 420–460, it is recommended to focus on the Economic Management Experimental Class as the main target; if your ranking is significantly better than the upper limit of the range (<420), you can apply boldly."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Chongqing",
+    "university_name_en": "Harbin Institute of Technology (Shenzhen)"
   }
 }

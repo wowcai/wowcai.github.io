@@ -30,6 +30,39 @@
       "tier_2": "二档（中等）\n- 临床医学（五年制）\n- 麻醉学",
       "tier_3": "三档（相对好进）\n- 护理学\n- 药学",
       "overall_advice": "位次在预测区间内建议以二档为主、一档冲刺、三档保底；位次明显优于区间下限可重点冲临床医学（5+3一体化）等王牌专业。"
+    },
+    "subject_type_en": "Science",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking was approximately 13000 → 12500 → 13200 → 13800 → 14200, showing a general backward shift in recent years, with a 2025 baseline of about 14200; the provincial plan for 2025 is 18 students, and for 2026 it is 20 students, a slight expansion of about 11%, leading to slightly intensified competition."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "211, Double First-Class; Soft Science main ranking approximately 55th, stable ranking; stable reputation, average Douyin attention, no obvious abnormal admissions; Basic Medicine B+, Clinical Medicine B+, Pharmacy B+, etc., overall strong medical disciplines."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Medical majors continue to have high social popularity; the number of examinees in the province is expected to increase slightly in 2026, intensifying competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the trend of backward shift in historical rankings, the slight expansion of the 2026 plan, and the increase in examinees, based on the 2025 baseline of 14200, the ranking is expected to continue shifting backward; the predicted minimum ranking is approximately 15197, with a range of 14697-15697."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Clinical Medicine (5+3 Integrated Program)\n- Stomatology",
+      "tier_2": "Tier 2 (Moderate)\n- Clinical Medicine (Five-Year Program)\n- Anesthesiology",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- Nursing\n- Pharmacy",
+      "overall_advice": "If your ranking is within the predicted range, it is recommended to focus on Tier 2, use Tier 1 as a reach, and Tier 3 as a safety; if your ranking is significantly better than the lower bound of the range, you can prioritize applying to top programs like Clinical Medicine (5+3 Integrated Program)."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Xinjiang",
+    "university_name_en": "Tianjin Medical University"
   }
 }

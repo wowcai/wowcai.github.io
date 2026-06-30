@@ -35,6 +35,39 @@
       "tier_2": "二档（中等）\n- 化学工程与工艺",
       "tier_3": "三档（相对好进）\n暂无（该校在海南省仅3个招生专业，已全部分入一、二档）。",
       "overall_advice": "位次在预测区间10974-11974名以内，建议以化学工程与工艺为主攻方向，油气储运工程和人工智能作为冲刺选择；位次明显优于区间下限（接近10974名）可重点冲刺一档专业；位次接近区间上限（11974名）则以化学工程与工艺为稳妥选择。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "In 2023, the minimum ranking was approximately 9323, in 2024 approximately 9934, and in 2025 approximately 8400. The rankings over the past three years show a \"first decline then rise\" trend: 2024 moved back by about 611 places compared to 2023, and 2025 moved forward by about 1534 places compared to 2024, with overall significant fluctuation. The baseline ranking for 2025 is about 8400, the best admission ranking in the past three years. The university's enrollment plan in Hainan Province: 2 students in 2023, 5 students in 2024, and 5 students in 2025. The 2026 enrollment plan document shows an increase to 8 students (Oil and Gas Storage and Transportation Engineering 3, Artificial Intelligence 3, Chemical Engineering and Technology 2), an expansion of 3 students compared to 2025, an increase of 60%. The expansion significantly increases admission slots, but changes in application popularity need to be judged in combination with other factors."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "The university has had no significant negative public opinion incidents in recent years, with low exposure on the Douyin platform, not entering the top 106 of Douyin's university popularity rankings, and overall social attention is average. There are no records of discontinuities or sharp drops in the admission anomaly files, indicating relatively stable application popularity. The discipline evaluation data does not separately list the Karamay Campus information. The main campus has core advantages in petroleum and petrochemical characteristics, with traditional accumulation in disciplines such as Chemical Engineering and Technology. The majors enrolled in Hainan Province, Chemical Engineering and Technology and Oil and Gas Storage and Transportation Engineering, are both backbone petroleum majors, highly aligned with the university's positioning, with clear industry employment directions. China University of Petroleum (Beijing) is a 211 Project and Double First-Class construction university, with the main campus ranking approximately 48-62 in recent years on the Soft Science main ranking. The Karamay Campus shares the same education system as the main campus, benefiting from the 211 and Double First-Class brand effects, but is located in Karamay City, Xinjiang, relatively remote geographically, creating a certain sense of distance for Hainan candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Geography",
+        "text": "Chemical Engineering and Technology belongs to the \"Biology, Chemistry, Environment, Materials\" category, with low social popularity in recent years, and the 2024 major popularity assessment is \"generally wait-and-see\". Oil and Gas Storage and Transportation Engineering is a characteristic major in the petroleum industry, with clear employment directions but strong industry cyclicality. Artificial Intelligence is a new enrollment major in 2026, with high social attention but competitive differentiation. The total number of candidates in Hainan Province continues to grow: from 52,977 in 2021 to 67,408 in 2025, with an estimated 78,000 in 2026, an increase of about 15.7% compared to 2025, and the expansion of the candidate pool intensifies overall admission competition. The university is located in Karamay City, Xinjiang, far from Hainan Province geographically, and regional preferences may affect some candidates' willingness to apply. The university enrolls a small number of students in Hainan Province (only 5 in 2025), making it a small-scale enrollment, and ranking fluctuations are greatly influenced by individual candidate choices."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the 2025 baseline ranking of 8400, the 2026 enrollment plan expansion of 60%, the increase in Hainan Province candidate pool by about 15.7%, and the remote geographical location of the university: the expansion increases admission slots, but the increase in candidate pool and the generally low social popularity of petroleum majors create a counterbalance. The supply-demand elasticity model shows the ranking moving back to approximately 11424, and combined with the intensified competition from the increase in candidate pool, the predicted minimum admission ranking for 2026 is about 11474, with a range of 10974-11974."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Oil and Gas Storage and Transportation Engineering\n- Artificial Intelligence (New in 2026)",
+      "tier_2": "Tier 2 (Medium)\n- Chemical Engineering and Technology",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\nNone currently (the university only has 3 enrollment majors in Hainan Province, all already classified into Tier 1 and Tier 2).",
+      "overall_advice": "If your ranking is within the predicted range of 10974-11974, it is recommended to focus on Chemical Engineering and Technology as the main direction, with Oil and Gas Storage and Transportation Engineering and Artificial Intelligence as sprint choices. If your ranking is significantly better than the lower limit of the range (close to 10974), you can focus on sprinting for Tier 1 majors. If your ranking is close to the upper limit of the range (11974), choose Chemical Engineering and Technology as a safe option."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Hainan",
+    "university_name_en": "China University of Petroleum (Beijing) Karamay Campus"
   }
 }

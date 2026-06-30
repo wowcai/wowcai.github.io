@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 国际经济与贸易\n- 法语。",
       "tier_3": "三档（相对好进）\n- 德语。",
       "overall_advice": "位次在预测区间（22066–23066名）内建议以二档专业为主、一档专业冲刺、三档专业保底；位次明显优于区间下限（即小于22066名）可重点冲刺一档的电气工程及其自动化、数据科学与大数据技术等工科专业；位次接近区间上限（23066名附近）建议以三档专业保底为主。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum admission rankings for Anhui University in Shanghai's comprehensive category were approximately 11175 → 12419 → 12442 → 13276 → 16109, showing a continuous backward trend, with a cumulative backward shift of about 3667 places in the last 3 years; the 2025 baseline is about 16109, a backward shift of 2833 places from 2024, directly related to the significant reduction in the enrollment plan for that year; the enrollment plan for comprehensive category in Shanghai: 16 students from 2021 to 2023, reduced to 14 in 2024, further reduced to 8 in 2025; the 2026 plan is to restore to 15 students, an increase of about 87.5% compared to 2025, with a significant expansion rate, exerting considerable downward pressure on rankings."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "Anhui University is a 211 Project and Double First-Class construction university; its Soft Science Chinese University Ranking in 2026 is about 101st, with recent rankings fluctuating between 90 and 104, indicating a stable overall level, belonging to mid-tier 211 universities; the 2023 reputation evaluation was somewhat negative (involving teacher ethics incidents), with no reputation entry for the university in 2026; Douyin comprehensive popularity ranking is 84th, rated as average, with medium to low exposure on short video platforms; no obvious admission gaps or abnormal admission records; fifth round of discipline evaluation."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "In 2026, the number of ordinary college entrance examination candidates in Shanghai is about 66,700, an increase of about 35.4% from 49,276 in 2025, with significant growth and intensified competition; Shanghai undergraduate batch; Anhui University is located in Hefei, Anhui Province, and is an out-of-province enrollment in Shanghai, with only 8 students admitted in 2025 and restored to 15 in 2026, with a small enrollment scale, limited impact from regional preferences."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous backward trend of historical rankings, the downward pressure on rankings from the significant expansion of the 2026 enrollment plan (87.5%), and the intensified competition effect from the significant increase in the number of candidates in Shanghai (+35.4%), the expansion effect still dominates after offsetting. Based on the 2025 baseline of 16109, the predicted minimum admission ranking for 2026 is about 22566, with a range of 22066–23066."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Electrical Engineering and Automation\n- Data Science and Big Data Technology\n- Electronic Information Engineering.",
+      "tier_2": "Tier 2 (Medium)\n- International Economics and Trade\n- French.",
+      "tier_3": "Tier 3 (Relatively Easy)\n- German.",
+      "overall_advice": "If the ranking is within the predicted range (22066–23066), it is recommended to focus on Tier 2 majors, with Tier 1 majors as a stretch and Tier 3 majors as a safety net; if the ranking is significantly better than the lower limit of the range (i.e., less than 22066), you can focus on Tier 1 engineering majors such as Electrical Engineering and Automation and Data Science and Big Data Technology; if the ranking is close to the upper limit of the range (around 23066), it is recommended to mainly use Tier 3 majors as a safety net."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shanghai",
+    "university_name_en": "Anhui University"
   }
 }

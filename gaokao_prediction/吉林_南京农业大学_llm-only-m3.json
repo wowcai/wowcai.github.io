@@ -41,6 +41,31 @@
       "tier_2": "二档（中等）\n- 农学\n- 动物医学类\n- 食品科学与工程类\n- 金融学。",
       "tier_3": "三档（相对好进）\n- 风景园林\n- 物流工程\n- 工业工程\n- 公共管理类。",
       "overall_advice": "。位次在预测区间内建议以二档为主、一档冲刺、三档保底。建议补充读取优势学科和专业热度数据 后重新评估。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rankings were 11163 → 10395 → 19792 → 14550 → 14328 respectively. In 2023, there was a significant gap (ranking plummeted to about 19792), recovered to 14550 in 2024, and slightly rose to 14328 in 2025, showing a stabilizing and rising trend in the past two years. The baseline ranking for 2025 is about 14328; the provincial enrollment plan was 60 in 2021, 63 in 2022, 65 in 2023, 72 in 2024, and 74 in 2025, showing a continuous expansion trend."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous recovery and stabilization trend from 2024 to 2025 after the 2023 gap, and the continuous expansion of enrollment plans, it is expected that the ranking in 2026 will continue to slightly shift backward based on the 2025 baseline of 14328. The predicted minimum ranking is about 14600, with a range of 14100–15100."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Computer Science and Technology\n- Artificial Intelligence\n- Electronic Information Class.",
+      "tier_2": "Tier 2 (Moderate)\n- Agronomy\n- Veterinary Medicine Class\n- Food Science and Engineering Class\n- Finance.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Landscape Architecture\n- Logistics Engineering\n- Industrial Engineering\n- Public Administration Class.",
+      "overall_advice": "Within the predicted ranking range, it is recommended to focus on Tier 2, use Tier 1 as a reach, and Tier 3 as a safety. It is suggested to supplement with data on advantageous disciplines and professional popularity for re-evaluation."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Jilin",
+    "university_name_en": "Nanjing Agricultural University"
   }
 }

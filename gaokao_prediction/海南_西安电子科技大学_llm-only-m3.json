@@ -41,6 +41,31 @@
       "tier_2": "二档（中等）\n- 电子信息类（电子工程）\n- 电子信息类（集成电路）\n- 计算机类（智能）\n- 计算机类",
       "tier_3": "三档（相对好进）\n- 管理科学与工程类（数字化与商务智能融合培养）",
       "overall_advice": "。建议考生结合自身位次，以二档专业为主力、一档专业为冲刺、三档专业为保底进行志愿填报。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rankings were 1384→1223→1119→1011→1763 respectively. From 2021 to 2024, there was a year-on-year upward trend (decreasing ranking numbers), but in 2025, due to the splitting of major groups, there was a significant drop to 1763. The baseline ranking for 2025 is approximately 1763. From 2021 to 2025, the planned enrollment numbers were 21→20→19→19→21, with 2025 returning to 21."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the baseline of a significant drop to 1763 in 2025 due to major group splitting, and that by 2026, candidates and parents will have a more stable understanding of the major group division, the popularity of Management Science and Engineering (the main major that lowered the ranking in 2025) may slightly recover. It is expected that the ranking will move forward slightly but with limited magnitude. The predicted minimum ranking is approximately 1800, with a range of 1700–1900."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Computer Science (Innovation Experimental Class)\n- Electronic Information (Communication)",
+      "tier_2": "Tier 2 (Medium)\n- Electronic Information (Electronic Engineering)\n- Electronic Information (Integrated Circuits)\n- Computer Science (Intelligence)\n- Computer Science",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Management Science and Engineering (Digitalization and Business Intelligence Integrated Training)",
+      "overall_advice": "It is recommended that candidates, based on their own rankings, take Tier 2 majors as the main focus, Tier 1 majors as a stretch, and Tier 3 majors as a safety net when filling in their preferences."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Hainan",
+    "university_name_en": "Xidian University"
   }
 }

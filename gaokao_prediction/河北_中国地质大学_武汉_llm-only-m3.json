@@ -38,6 +38,31 @@
       "tier_2": "二档（中等）\n- 计算机类\n- 电子信息类。",
       "tier_3": "三档（相对好进）\n- 材料类\n- 环境科学与工程类。",
       "overall_advice": "位次在预测区间内（13778–14778 名）建议以二档专业为主、一档王牌专业冲刺、三档专业保底；位次明显优于区间下限可重点冲击地质学类等王牌专业。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking for Physics Category was approximately 13304 → 12224 → 12910 → 13538 → 14128, showing an overall fluctuating and backward trend, with a 2025 baseline of about 14128; from 2021 to 2025, the planned enrollment for Physics Category remained stable in the range of 80–90 students; the 2026 enrollment plan file could not be read due to session truncation, so it falls back by rule."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "China University of Geosciences (Wuhan) is a 211 Project and Double First-Class construction university; the Soft Science ranking data could not be read due to session truncation; reputation and popularity data could not be read due to session truncation; Geology, Geological Resources and Geological Engineering are the university's traditional advantageous disciplines; discipline evaluation data could not be read due to session truncation."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Major popularity data could not be read due to session truncation; data on changes in the total number of Hebei Province examinees could not be read due to session truncation.\n7. [Regional Factor] The university is located in Wuhan City, Hubei Province, which is a cross-province application for Hebei examinees; regional preference data could not be read due to session truncation."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the fluctuating and backward trend of Physics Category rankings from 2021 to 2025 (cumulative backward shift of about 1200 places in the last 3 years), and the 2025 baseline of 14128, considering the general trend of increasing examinee scale and intensified competition in recent years, it is predicted that the minimum ranking for 2026 will slightly shift backward to about 14278, with a range of 13778–14778."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Geology\n- Geological Engineering.",
+      "tier_2": "Tier 2 (Medium)\n- Computer Science\n- Electronic Information.",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Materials Science\n- Environmental Science and Engineering.",
+      "overall_advice": "If your ranking is within the predicted range (13778–14778), it is recommended to focus on Tier 2 majors, with Tier 1 flagship majors as a reach and Tier 3 majors as a safety; if your ranking is significantly better than the lower limit of the range, you can focus on applying for flagship majors such as Geology."
     }
   },
   "历史类": {
@@ -79,6 +104,39 @@
       "tier_2": "二档（中等）\n- 公共管理类\n- 工商管理类。",
       "tier_3": "三档（相对好进）\n- 思想政治教育\n- 社会学。",
       "overall_advice": "位次在预测区间内（3091–3491 名）建议以二档专业为主、一档专业冲刺、三档专业保底；历史类招生专业较少，需结合个人兴趣谨慎选择。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, the minimum ranking for History Category was approximately 3062→2896→2958→3125→3241, showing a fluctuating and backward trend in recent years, with a baseline of about 3241 in 2025; the planned enrollment for History Category from 2021 to 2025 was small (about 10–15 people); the 2026 enrollment plan file could not be read due to session truncation, so it is temporarily assumed to remain unchanged."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "China University of Geosciences (Wuhan) is a 211 Project and Double First-Class construction university; the Soft Science ranking data could not be read due to session truncation; reputation and popularity data could not be read due to session truncation; geology, geological resources, and geological engineering are the university's traditional advantageous disciplines, but the relevance to History Category enrollment majors is low."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Major popularity data could not be read due to session truncation; the total number of Hebei candidates data could not be read due to session truncation; the university is located in Wuhan, Hubei Province, which is a cross-province application for Hebei candidates, and regional preference data could not be read due to session truncation."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the fluctuating and backward trend of History Category rankings from 2021 to 2025 (cumulative backward shift of about 280 places in the last 3 years), on the basis of the 2025 baseline of 3241, considering the general trend of candidate scale growth and intensified competition, it is predicted that the minimum ranking in 2026 will slightly shift backward to about 3291, with a range of 3091–3491."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Law\n- English.",
+      "tier_2": "Tier 2 (Medium)\n- Public Administration\n- Business Administration.",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Ideological and Political Education\n- Sociology.",
+      "overall_advice": "If the ranking is within the predicted range (3091–3491), it is recommended to focus on Tier 2 majors, with Tier 1 majors as a stretch and Tier 3 majors as a safety net; History Category has few enrollment majors, so personal interests should be carefully considered."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Hebei",
+    "university_name_en": "China University of Geosciences (Wuhan)"
   }
 }

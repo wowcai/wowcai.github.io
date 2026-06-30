@@ -27,6 +27,39 @@
       "tier_2": "二档（中等）\n- 临床医学（临床医师）\n- 中医学（中医临床医师）\n- 中药学（药剂师）。",
       "tier_3": "三档（相对好进）\n- 生物技术\n- 药学（药剂师）\n- 护理学（护师）。",
       "overall_advice": "位次在预测区间20140–21140名内，建议以二档专业为主攻方向、一档专业冲刺、三档专业保底。位次明显优于区间下限（如20000名以内）可重点冲刺临床医学（高级临床医师 ）等王牌专业；位次接近区间上限则优先考虑三档专业确保录取。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "Only the 2023 Zhejiang comprehensive minimum ranking of approximately 20235 is available as the most recent baseline ranking; the 2023 Zhejiang enrollment plan was 24 students, and the 2026 enrollment plan is also 24 students, with the plan remaining unchanged, no expansion or reduction."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "211, Double First-Class university, military academy; not in the top 200 on the Soft Science main ranking, overall level is upper-middle. Ranked 9th in Douyin popularity (high heat), with high exposure on short video platforms, reflecting relatively high application attention; no obvious gaps in admission records; fifth."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Medical majors such as clinical medicine have consistently high social popularity (2024 clinical medicine recommendation, nursing recommendation), overall competition for medical majors is intensifying; the total number of candidates in Zhejiang Province in 2026 is about 400,000 (general college entrance examination), a significant increase of about 37.5% compared to 290,800 in 2025, competition significantly intensifies; Naval Medical University is located in Shanghai, adjacent to Zhejiang Province, regional preference is favorable for Zhejiang candidates to apply."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the 2023 baseline ranking of 20235, unchanged enrollment plan, significant increase in total candidates in Zhejiang Province (intensified competition), sustained high popularity of medical majors, and high Douyin popularity, it is expected that the minimum admission ranking in 2026 will slightly decline. Predicted minimum ranking approximately 20640, range 20140–21140."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Clinical Medicine (Senior Clinical Physician)\n- Anesthesiology (Clinical Anesthesiologist)\n- Medical Imaging (Clinical Imaging Physician).",
+      "tier_2": "Tier 2 (Moderate)\n- Clinical Medicine (Clinical Physician)\n- Traditional Chinese Medicine (TCM Clinical Physician)\n- Chinese Materia Medica (Pharmacist).",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Biotechnology\n- Pharmacy (Pharmacist)\n- Nursing (Nurse).",
+      "overall_advice": "If ranking is within the predicted range of 20140–21140, it is recommended to focus on Tier 2 majors as the main direction, aim for Tier 1 majors as a stretch, and use Tier 3 majors as safety. If ranking is significantly better than the lower limit of the range (e.g., within 20000), focus on aiming for flagship majors like Clinical Medicine (Senior Clinical Physician); if ranking is near the upper limit of the range, prioritize Tier 3 majors to ensure admission."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Zhejiang",
+    "university_name_en": "Naval Medical University"
   }
 }

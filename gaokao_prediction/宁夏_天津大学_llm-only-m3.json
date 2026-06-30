@@ -39,6 +39,39 @@
       "tier_2": "二档（中等）\n- 工科试验班（电气信息类）\n- 工科试验班（国家试点学院精仪与光电信息类）\n- 工科试验班（国家学科培优计划智慧与低碳化工类）。",
       "tier_3": "三档（相对好进）\n- 工科试验班（全国新工科教育创新中心）\n- 工科试验班（合成生物与生物智造类）。",
       "overall_advice": "预测位次约480名，区间425–535名。位次在此区间内建议以二档为主力、一档冲刺、三档保底；位次明显优于区间下限（<425名）可重点冲刺一档王牌专业（未来技术学院、智能与计算类）；位次接近区间上限（>535名）建议以三档为主、二档为辅。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "2022–2025 minimum rankings approximately 670→608→604→607, with narrow fluctuations in the 604–670 range over the past three years, and a 2025 baseline of about 607, showing a slight forward shift then stabilization; the provincial science group plan had 36 in 2022, 35 in 2023, 35 in 2024, and increased to 41 in 2025; the 2026 Physics Category plan is 25, a significant reduction of about 39% compared to 2025, with a notable decrease in enrollment slots, theoretically easing competition pressure."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "985, 211, Double First-Class; ranked 20th in the 2026 Soft Science main list, with stable rankings in the top 20 in recent years, belonging to the top tier of domestic universities; the 2026 reputation evaluation is slightly negative, involving management-level controversies such as PPT disparaging other majors and responses to final exam cheating, but of mild severity; Douyin heat total ranking 66th, rated as 'average', with low attention on short video platforms and no obvious application heat signal; fifth round discipline evaluation: 2 A+ disciplines (Chemical Engineering and Technology, Management Science and Engineering), 8 A-level disciplines, 10 A- level disciplines, totaling 20 A-class disciplines, with strong engineering strength, and top national levels in chemical engineering, architecture, precision instruments, intelligent computing, etc."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Engineering experimental class enrollment covers popular directions such as electrical information, intelligent computing, precision instruments and optoelectronics, intelligent manufacturing, etc., with overall stable major popularity in 2026; the total number of examinees in Ningxia in 2026 is about 66,000, an increase of about 48% compared to 44,491 in the Physics Category in 2025, significantly intensifying competition; Tianjin University is located in Tianjin, not a local university in the province, with no local preference; university_enrol."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Combining the two opposing forces of a significant enrollment reduction in 2026 (forward ranking pressure) and a large increase in the total number of examinees in Ningxia (backward ranking pressure), the increase in examinees far exceeds the reduction in enrollment, coupled with a slightly negative reputation, it is expected that the minimum ranking in 2026 will move forward from the 2025 baseline of 607, with a predicted minimum ranking of about 480, in the range of 425–535."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Engineering Experimental Class (National Future Technology College)\n- Engineering Experimental Class (National Characteristic Demonstration Software College Intelligent Computing Category).",
+      "tier_2": "Tier 2 (Medium)\n- Engineering Experimental Class (Electrical Information Category)\n- Engineering Experimental Class (National Pilot College Precision Instruments and Optoelectronic Information Category)\n- Engineering Experimental Class (National Discipline Excellence Training Plan Smart and Low-Carbon Chemical Engineering Category).",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Engineering Experimental Class (National New Engineering Education Innovation Center)\n- Engineering Experimental Class (Synthetic Biology and Biological Intelligent Manufacturing Category).",
+      "overall_advice": "Predicted ranking about 480, range 425–535. For rankings within this range, it is recommended to focus on Tier 2 as the main force, Tier 1 as a sprint, and Tier 3 as a safety; for rankings significantly better than the lower limit (<425), focus on sprinting for Tier 1 flagship majors (Future Technology College, Intelligent Computing Category); for rankings near the upper limit (>535), it is recommended to mainly use Tier 3 with Tier 2 as a supplement."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Ningxia",
+    "university_name_en": "Tianjin University"
   }
 }

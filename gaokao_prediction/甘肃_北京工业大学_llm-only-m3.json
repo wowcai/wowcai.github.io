@@ -43,6 +43,31 @@
       "tier_2": "二档（中等）\n- 土木工程\n- 机械工程\n- 自动化。",
       "tier_3": "三档（相对好进）\n- 材料科学与工程\n- 环境科学与工程\n- 应用化学。",
       "overall_advice": "位次在预测区间内（13900–14700名）建议以二档专业为主力填报，一档专业可冲刺，三档专业作为保底。位次接近区间下限（13900名）时可重点冲刺计算机、软件等热门专业。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum admission ranking for Beijing University of Technology in Gansu science category showed a slight downward trend overall. The baseline ranking for 2025 is approximately 14100. The enrollment plan data for 2026 has not been read, so the plan change cannot be accurately calculated; it is temporarily assumed to remain unchanged."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Beijing University of Technology is a 211 Project and Double First-Class construction university, ranking approximately 66th on the Soft Science main list, with a relatively high university level. Reputation data has not been read, temporarily unavailable. Civil Engineering, Environmental Science and Engineering, Materials Science and Engineering, Computer Science and Technology, etc., are its advantageous disciplines."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Major popularity data has not been read. Data on changes in the total number of Gansu province examinees has not been read, temporarily unavailable. Beijing University of Technology is located in Beijing, with strong regional appeal, attracting some Gansu examinees."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the historical downward trend in rankings and the assumption of an unchanged enrollment plan, the minimum admission ranking for science category in 2026 is expected to be approximately 14300, with a range of 13900–14700."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Computer Science and Technology\n- Software Engineering\n- Electronic Information Engineering.",
+      "tier_2": "Tier 2 (Moderate)\n- Civil Engineering\n- Mechanical Engineering\n- Automation.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Materials Science and Engineering\n- Environmental Science and Engineering\n- Applied Chemistry.",
+      "overall_advice": "If your ranking is within the predicted range (13900–14700), it is recommended to focus on Tier 2 majors as the main choice, with Tier 1 majors as a reach and Tier 3 majors as a safety. If your ranking is near the lower limit of the range (13900), you can focus on reaching for popular majors such as Computer Science and Software Engineering."
     }
   },
   "历史类": {
@@ -67,6 +92,39 @@
       "tier_2": "二档（中等）\n- 广告学\n- 工商管理。",
       "tier_3": "三档（相对好进）\n- 社会工作\n- 日语。",
       "overall_advice": "位次在预测区间内（2400–2700名）建议以二档专业为主，一档专业可尝试冲刺，三档专业保底。文科招生专业较少，需结合个人兴趣选择。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum admission ranking for Beijing University of Technology in Gansu's liberal arts category remained generally stable, with a baseline ranking of approximately 2500 in 2025; the 2026 enrollment plan data was not read, so it is temporarily treated as unchanged."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Beijing University of Technology is a 211 Project and Double First-Class university, ranking approximately 66th on the Soft Science main ranking; reputation data was not read, temporarily; Beijing University of Technology focuses primarily on engineering, with relatively few liberal arts majors, and discipline evaluation data was not read."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Major popularity data was not read; data on changes in the total number of Gansu Province examinees was not read, temporarily; Beijing's strong regional appeal has a certain positive impact on liberal arts candidates applying."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the stable trend of historical rankings and the assumption of unchanged enrollment plans, the minimum admission ranking for liberal arts in 2026 is expected to be approximately 2550, with a range of 2400–2700."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- Law\n- English.",
+      "tier_2": "Tier 2 (Medium)\n- Advertising\n- Business Administration.",
+      "tier_3": "Tier 3 (Relatively Easy)\n- Social Work\n- Japanese.",
+      "overall_advice": "If your ranking falls within the predicted range (2400–2700), it is recommended to focus on Tier 2 majors, try for Tier 1 majors as a stretch, and use Tier 3 majors as a safety net. There are few liberal arts majors available, so choose based on personal interests."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Gansu",
+    "university_name_en": "Beijing University of Technology"
   }
 }

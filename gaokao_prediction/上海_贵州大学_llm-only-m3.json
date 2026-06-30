@@ -39,6 +39,39 @@
       "tier_2": "二档（中等）\n- 计算机类（含计算机科学与技术、物联网工程、信息安全、数据科学与大数据技术）\n- 财政学类（含财政学、金融学）。",
       "tier_3": "三档（相对好进）\n- 经济与贸易类（含经济学、国际经济与贸易）\n- 法学\n- 英语。",
       "overall_advice": "位次在预测区间13700–14700名内，建议以二档专业为主、一档数据科学与大数据技术冲刺、三档专业保底；位次明显优于区间下限（<13700名）可重点冲刺数据科学与大数据技术；位次接近区间上限（>14700名）建议以三档专业为主。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum ranking was approximately 19970 → 18893 → 19158 → 13763 → about 14000. In 2024, due to adjustments in major groups (changed to Data Science and Big Data Technology requiring Physics and Chemistry), the ranking significantly moved forward by about 5395 places. The 2025 baseline is about 14000. The enrollment plan was 6 in 2021, and 2 from 2022 to 2024."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "211, Double First-Class; Soft Science main ranking has been rising continuously, from about 135th in 2021 to about 85th in 2026. In recent years, the ranking has steadily improved, enhancing the university's overall strength and visibility. In 2026, the reputation is slightly negative, mainly due to a recruitment announcement requiring the spouse to be a current doctoral student, which sparked public controversy. The university has terminated the recruitment and apologized, which has a certain negative impact on application psychology. Douyin attention is average (overall ranking 76), with no obvious enrollment gaps. Plant Protection A- is the only A- or above discipline, consistent with the university's agricultural and forestry characteristics, but the enrollment majors in Shanghai are mainly Data Science and Big Data Technology, which are not highly related to the advantageous disciplines."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Data Science and Big Data Technology belongs to the broader Computer category, which is highly popular and recommended, strongly attracting candidates. In 2026, the total number of candidates in this province is about 66,700, an increase of about 35.4% compared to about 49,276 in 2025, significantly intensifying competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the historical rankings that significantly moved forward in 2024 due to major adjustments and then stabilized, the 2026 enrollment plan remaining unchanged, the continuous rise in Soft Science ranking (positive signal), and the substantial increase of about 35.4% in Shanghai candidates (competition intensification signal) offsetting each other, along with the slightly negative reputation (minor negative impact), competition is expected to slightly intensify based on the 2025 baseline of about 14,000. The predicted minimum ranking is about 14,200, with a range of 13,700 to 14,700."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Data Science and Big Data Technology.",
+      "tier_2": "Tier 2 (Moderate)\n- Computer Category (including Computer Science and Technology, Internet of Things Engineering, Information Security, Data Science and Big Data Technology)\n- Finance and Taxation Category (including Finance, Financial Science).",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- Economics and Trade Category (including Economics, International Economics and Trade)\n- Law\n- English.",
+      "overall_advice": "If your ranking is within the predicted range of 13,700 to 14,700, it is recommended to focus on Tier 2 majors, aim for Tier 1 Data Science and Big Data Technology as a stretch, and use Tier 3 majors as safety. If your ranking is significantly better than the lower limit (<13,700), you can focus on aiming for Data Science and Big Data Technology. If your ranking is close to the upper limit (>14,700), it is recommended to mainly consider Tier 3 majors."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shanghai",
+    "university_name_en": "Guizhou University"
   }
 }

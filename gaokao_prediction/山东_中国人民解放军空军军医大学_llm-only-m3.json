@@ -39,6 +39,39 @@
       "tier_2": "二档（中等）\n- 生物医学工程（无军籍地方生）\n- 药学（无军籍地方生）。",
       "tier_3": "三档（相对好进）\n- 生物技术（无军籍地方生）\n- 护理学（无军籍地方生）。",
       "overall_advice": "位次在预测区间（47003–48003名）内，建议以二档专业为主攻方向、一档王牌专业（口腔/临床）作为冲刺、三档专业作为保底；位次明显优于区间下限（<47003名）可重点冲刺口腔医学和临床医学；位次接近区间上限（>48003名）建议以三档护理学为稳妥选择。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum admission rankings for comprehensive subjects in Shandong Province were approximately 29371 → 33049 → 39755 → 46983, showing a continuous backward trend, with a cumulative backward shift of about 17612 places over the past 4 years, averaging about 4400 places per year; the baseline ranking for 2025 is about 46983; the enrollment plan for comprehensive subjects in Shandong Province remained at 32 students from 2021 to 2025, and the 2026 plan remains 32 students, unchanged for many consecutive years, with no expansion or reduction, providing no direct buffer or intensification to the competitive landscape."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "A 211 Project and Double First-Class construction university, located in Xi'an, Shaanxi Province, belonging to military-type institutions; not ranked in the top 200 in the Soft Science Chinese University Rankings, with overall visibility and comprehensive ranking in the middle to lower segment among 211 universities; no information on this university is included in the discipline evaluation data, making it impossible to directly map admissions majors to discipline levels; however, as a military medical university, clinical medicine, stomatology, and others are traditional advantageous directions with high social recognition."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Analysis of major popularity in 2026 shows that clinical medicine and stomatology continue to be highly recommended, with nursing as recommended; the overall application popularity for medical majors is high; the total number of examinees in Shandong Province in 2026 is about 720,000, an increase of about 39,000 (approximately 5.7%) compared to about 681,000 in 2025, further intensifying competition; the provincial control line (general category first segment) has been stable between 437–444 points in recent years, with no significant fluctuations; the university is located in Xi'an, Shaanxi, not a local university in Shandong Province, with no local enrollment preference; the large number of examinees in Shandong Province means competition for cross-provincial applications to military medical schools is mainly influenced by national medical popularity and the local examinee base."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the continuous backward trend in historical rankings (average annual backward shift of about 4400 places), a significant increase in the total number of examinees in Shandong Province in 2026 (+5.7%), unchanged enrollment plan with no buffer, and persistently high popularity of medical majors, the minimum admission ranking in 2026 is expected to continue moving backward. Based on the 2025 baseline of 46983, and taking into account the intensified competition due to the expanded examinee pool, the predicted minimum ranking is about 47503, with a range of 47003–48003."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Stomatology (Non-military Local Students)\n- Clinical Medicine (Non-military Local Students).",
+      "tier_2": "Tier 2 (Medium)\n- Biomedical Engineering (Non-military Local Students)\n- Pharmacy (Non-military Local Students).",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- Biotechnology (Non-military Local Students)\n- Nursing (Non-military Local Students).",
+      "overall_advice": "If your ranking is within the predicted range (47003–48003), it is recommended to focus on Tier 2 majors as the main direction, aim for Tier 1 flagship majors (Stomatology/Clinical Medicine) as a stretch, and use Tier 3 majors as a safety net; if your ranking is significantly better than the lower limit of the range (<47003), you can focus on aiming for Stomatology and Clinical Medicine; if your ranking is close to the upper limit of the range (>48003), it is recommended to choose Tier 3 Nursing as a stable option."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shandong",
+    "university_name_en": "Air Force Medical University of the Chinese People's Liberation Army"
   }
 }

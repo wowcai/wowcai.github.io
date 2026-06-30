@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 临床医学类（临床医学（协和）、临床医学（卓越医师科学家））。",
       "tier_3": "三档（相对好进）\n- 理科试验班（理科各专业）（交叉工程（等理科各专业））。",
       "overall_advice": "位次在预测区间（135–171名）内，建议以二档临床医学类为主攻方向、一档文科试验班类为冲刺、三档理科试验班类为稳妥保底；位次明显优于区间下限（135名以内）可重点冲刺一档文科试验班类；位次接近区间上限（171名附近）应以三档理科试验班类为主要选择。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, the minimum admission rankings for Tsinghua University in Shandong Province's comprehensive category were approximately 154th, 155th, 148th, 133rd, and 155th, with an overall fluctuation range between 133rd and 155th. The rankings have been highly stable over the past five years, with no significant upward or downward trend. The baseline ranking for 2025 is approximately 155th. The planned enrollment numbers from 2021 to 2024 remained stable between 72 and 74, expanding to 80 in 2025 and further to 83 in 2026, including 72 in Science Experimental Class, 8 in Clinical Medicine, and 3 in Liberal Arts Experimental Class. Two consecutive years of expansion have slightly alleviated competition."
+      },
+      "学校层次与声誉": {
+        "title": "Institutional Level and Reputation",
+        "text": "Tsinghua University is a 985 Project, 211 Project, and Double First-Class construction university. It has ranked first in the Soft Science China University Rankings for many consecutive years, placing it at the top national level and strongly attracting candidates. During the 2026 college entrance examination cycle, its reputation evaluation is slightly negative, but the events are mainly neutral (6 neutral, 3 negative), with no major negative impacts. It ranks second in Douyin popularity (high heat), with extremely high short video exposure and sustained high application attention. Tsinghua University has numerous A+ disciplines, including Computer Science and Technology, Mechanical Engineering, Civil Engineering, Electrical Engineering, Architecture, Business Administration, Law, Physics, Biology, Clinical Medicine, etc., covering science, engineering, medicine, liberal arts, and management, highly matching its enrollment majors."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Majors such as Computer Science, Clinical Medicine, and Electronic Information/Communications continue to be highly popular in society. In 2026, the total number of candidates in Shandong Province is approximately 720,000, an increase of about 5.7% from 681,000 in 2025, intensifying competition. The provincial control line (general category first segment) has remained stable between 437 and 444 points over the past five years, with no significant fluctuations. Tsinghua University is located in Beijing, and Shandong Province is a major source of students. In 2026, the planned enrollment is 83 students, a small proportion but a significant absolute number. There are no similar top-tier universities locally competing, and cross-provincial application willingness is strong."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the highly stable historical rankings, the slight enrollment expansion in 2026 (83 students), the approximately 5.7% increase in candidate numbers, and the school's reputation and popularity, the expansion exerts downward pressure on rankings, while the candidate increase exerts upward pressure, roughly offsetting each other. Based on the 2025 baseline of 155th, the minimum admission ranking for 2026 is expected to be approximately 155th, with a range of 135th to 171st."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Liberal Arts Experimental Class (Liberal Arts Majors) (Sociology (and other majors)).",
+      "tier_2": "Tier 2 (Medium)\n- Clinical Medicine Category (Clinical Medicine (PUMC), Clinical Medicine (Outstanding Physician-Scientist)).",
+      "tier_3": "Tier 3 (Relatively Easier to Enter)\n- Science Experimental Class (Science Majors) (Cross-Disciplinary Engineering (and other science majors)).",
+      "overall_advice": "If your ranking is within the predicted range (135th–171st), it is recommended to focus on Tier 2 Clinical Medicine Category as the main direction, Tier 1 Liberal Arts Experimental Class as a reach, and Tier 3 Science Experimental Class as a safe backup. If your ranking is significantly better than the lower limit (within 135th), you can focus on reaching for Tier 1 Liberal Arts Experimental Class. If your ranking is near the upper limit (around 171st), you should mainly choose Tier 3 Science Experimental Class."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shandong",
+    "university_name_en": "Tsinghua University"
   }
 }

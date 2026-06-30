@@ -31,6 +31,31 @@
       "tier_2": "二档（中等）\n- 经济学\n- 工商管理类（会计学、财务管理）",
       "tier_3": "三档（相对好进）\n- 暂无",
       "overall_advice": "位次在预测区间内建议以二档专业为主、一档冲刺；位次明显优于区间下限（1084名以内）可重点冲刺预防医学等医学相关专业；位次接近区间上限（1806名附近）应以稳妥为 主。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "In 2022, the lowest ranking for Mongolian-taught science was approximately 1371, and in 2023 it was approximately 1415, with a slight downward shift of about 44 places over two years; the enrollment plan for Mongolian-taught science was 8 students in both 2022 and 2023, remaining unchanged."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Qinghai University is a 211 Project and Double First-Class construction university; its main ranking on the Soft Science Ranking has fluctuated around 173-198 in recent years (173rd in 2024, 198th in 2025), with slight fluctuations but overall stability, placing it in the mid-to-late tier of 211 universities; the reputation file does not include Qinghai University, indicating no significant positive or negative public opinion incidents in recent years; its Douyin popularity ranking is 106th, rated as 'average', with low short video exposure, stable application attention, and no abnormal warming or cooling signals."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The university's Mongolian-taught science majors in Inner Mongolia mainly include Business Administration, Finance, Economics, Preventive Medicine, etc., with social popularity diverging among related major categories (Finance/Economics diverging and waiting, Business Administration clearly discouraged); the total number of ordinary college entrance examination candidates in the province in 2026 is approximately 154,000, a significant increase of about 32% compared to 2025 (approximately 116,000), with an estimated 111,000-114,000 science candidates based on historical proportions, indicating a substantial expansion in candidate numbers and intensified competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the downward trend in rankings from 2022 to 2023, the intensified competition due to the significant increase in provincial candidates in 2026, and factors such as stable university reputation and average Douyin popularity, competition is expected to slightly intensify based on the 2023 baseline ranking of 1415; the predicted minimum ranking is approximately 1445, with a range of 1084-1806."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Competitive)\n- Preventive Medicine\n- Finance",
+      "tier_2": "Tier 2 (Moderate)\n- Economics\n- Business Administration (Accounting, Financial Management)",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- None",
+      "overall_advice": "For rankings within the predicted range, it is recommended to focus on Tier 2 majors with Tier 1 as a reach; for rankings significantly better than the lower limit of the range (within 1084), prioritize reaching for medical-related majors such as Preventive Medicine; for rankings near the upper limit of the range (around 1806), prioritize safety."
     }
   },
   "历史类": {
@@ -65,6 +90,39 @@
       "tier_2": "二档（中等）\n- 暂无",
       "tier_3": "三档（相对好进）\n- 暂无",
       "overall_advice": "蒙授文科仅招生国际经济与贸易一个专业，位次在预测区间内均可报考；位次明显优于区间下限（751名以内）录取把握较大；位次接近区间上限（1253名附近）存在一定风险。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "In 2022, the lowest ranking for Mongolian-taught liberal arts was approximately 698, and in 2023 it was approximately 982, with a backward shift of about 284 rankings over two years, indicating a significant decline; the enrollment plan for Mongolian-taught liberal arts was 2 students in both 2022 and 2023, remaining unchanged."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Qinghai University is a 211 Project and Double First-Class construction university; its main ranking on the Soft Science list has been around 173-198 in recent years, placing it in the mid-to-late segment of 211 universities; the reputation file does not include Qinghai University, indicating no significant positive or negative public opinion incidents in recent years; its Douyin popularity ranking is 106th, rated as 'average', with stable application attention."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The university only enrolls the International Economics and Trade major for Mongolian-taught liberal arts in Inner Mongolia, which belongs to the finance/economics/economic category, with socially polarized and wait-and-see popularity; the total number of general college entrance examination takers in the province in 2026 is approximately 154,000, a significant increase from 2025, with an estimated 40,000-43,000 liberal arts candidates based on historical proportions, indicating an expanded candidate pool and intensified competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering the significant backward trend in rankings from 2022 to 2023, the intensified competition due to the notable increase in provincial candidates in 2026, and the stable university reputation, competition is expected to slightly intensify based on the 2023 baseline ranking of 982; the predicted lowest ranking is approximately 1002, with a range of 751-1253."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult)\n- International Economics and Trade",
+      "tier_2": "Tier 2 (Moderate)\n- None",
+      "tier_3": "Tier 3 (Relatively Easy)\n- None",
+      "overall_advice": "Mongolian-taught liberal arts only enrolls the International Economics and Trade major; candidates with rankings within the predicted range can apply; those with rankings significantly better than the lower limit (within 751) have a high chance of admission; those with rankings near the upper limit (around 1253) face some risk."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Inner Mongolia",
+    "university_name_en": "Qinghai University"
   }
 }

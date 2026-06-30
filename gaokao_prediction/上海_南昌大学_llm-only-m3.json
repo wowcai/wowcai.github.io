@@ -43,6 +43,39 @@
       "tier_2": "二档（中等）\n- 金融学。",
       "tier_3": "三档（相对好进）\n- 生物科学。",
       "overall_advice": "位次在预测区间10358–11358名内，建议以二档金融学为主攻方向、一档电气工程及其自动化作为冲刺、三档生物科学作为保底；位次明显优于区间下限（<10358名）可重点冲刺电气工程及其自动化；位次接近区间上限（>11358名）建议以生物科学保底为主。"
+    },
+    "subject_type_en": "Comprehensive",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rankings for Shanghai Comprehensive category were 13526, 12030, 11977, 14026, and 13322 respectively, showing a fluctuating and slightly declining trend; the baseline ranking for 2025 is approximately 13322, which has rebounded compared to 2024 but remains in the mid-range of recent years; the enrollment plan for this university in Shanghai Comprehensive category has gradually decreased from 10 students in 2021 to 6 students in 2024–2025, and further reduced to 4 students in 2026, a reduction of about 33.3% compared to 2025, a significant reduction that theoretically lowers the competition threshold."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "Nanchang University is a 211 Project and Double First-Class construction university; its ranking in the Soft Science China University Rankings is approximately 74th in 2026, with a stable range of 69–78 in recent years, placing it in the mid-to-upper tier of comprehensive universities; the reputation evaluation for 2026 is somewhat positive (men's volleyball team winning championships, proactive university management responses, etc.), with a Douyin popularity ranking of 43rd (relatively popular), and short video exposure mainly focusing on campus environment and sports events, which has a mild positive pull on application interest; Food Science and Engineering is an A+ discipline (fifth round of discipline evaluation), the only discipline rated A- or above at this university; among the enrollment majors, Electrical Engineering and Automation is a popular engineering direction, Finance is a finance and economics direction with divided expectations, and Biological Science is a clearly discouraged direction in the biochemistry and environmental materials fields."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Electrical Engineering and Automation was highly recommended in 2024, Finance/Finance and Economics/Economics are in a wait-and-see state with divided opinions, and Biological Science is a clearly discouraged direction; the total number of examinees in Shanghai in 2026 is approximately 66,700 (an increase of about 35.4% compared to 49,276 in 2025), significantly intensifying competition."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Considering multiple factors such as the significant reduction in the 2026 enrollment plan by 33.3% (lowering the admission threshold), a substantial increase in the total number of examinees in Shanghai by about 35.4% (intensifying competition), a somewhat positive reputation and relatively high Douyin popularity (mild positive pull), the effects of enrollment reduction and examinee growth offset each other, leading to a slightly eased competition; the predicted minimum ranking for 2026 is approximately 10,858, with a range of 10,358–11,358."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Electrical Engineering and Automation.",
+      "tier_2": "Tier 2 (Medium)\n- Finance.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Biological Science.",
+      "overall_advice": "If your ranking is within the predicted range of 10,358–11,358, it is recommended to focus on Tier 2 Finance as the main direction, Tier 1 Electrical Engineering and Automation as a reach, and Tier 3 Biological Science as a safety; if your ranking is significantly better than the lower limit of the range (<10,358), you can focus on reaching for Electrical Engineering and Automation; if your ranking is close to the upper limit of the range (>11,358), it is recommended to mainly use Biological Science as a safety."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Shanghai",
+    "university_name_en": "Nanchang University"
   }
 }

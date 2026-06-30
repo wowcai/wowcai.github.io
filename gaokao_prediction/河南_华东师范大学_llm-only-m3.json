@@ -42,6 +42,27 @@
       "tier_2": "二档（中等）\n- 电子信息科学与技术\n- 软件工程\n- 数学与应用数学",
       "tier_3": "三档（相对好进）\n- 化学\n- 生物科学类\n- 地理科学",
       "overall_advice": "。建议补充读取学科评估、专业热度等文件后重新评估。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, the minimum ranking for Science/Physics Category was approximately 4428→29255→9462→6669→7511. In 2022, there was an abnormal sharp decline followed by a rapid recovery. In the recent 3 years, it has stabilized in the range of 6700-9500. The baseline for 2025 is approximately 7511. From 2021 to 2025, the planned enrollment for Science/Physics Category was 51→55→62→64→85, showing continuous expansion. In 2025, it expanded to 85 students, a relatively large increase."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "985, 211, Double First-Class."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the fluctuation trend of historical rankings and the background of continuous enrollment expansion, the preliminary estimate for the minimum ranking of Physics Category in 2026 is approximately 7700, with a range of 7300-8100. This prediction is an incomplete estimate and requires supplementary data such as enrollment plans, total number of examinees, reputation heat, etc., for recalculation."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Hardest to Enter)\n- Data Science and Big Data Technology\n- Statistics (Double Degree)\n- Computer Science and Technology",
+      "tier_2": "Tier 2 (Medium)\n- Electronic Information Science and Technology\n- Software Engineering\n- Mathematics and Applied Mathematics",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Chemistry\n- Biological Sciences\n- Geographical Science",
+      "overall_advice": "It is recommended to supplement and read files such as discipline evaluation and major popularity for reassessment."
     }
   },
   "历史类": {
@@ -88,6 +109,39 @@
       "tier_2": "二档（中等）\n- 法学\n- 新闻传播学类\n- 金融学类",
       "tier_3": "三档（相对好进）\n- 广播电视编导\n- 汉语国际教育\n- 教育学类（师范）",
       "overall_advice": "。建议补充读取学科评估、专业热度等文件后重新评估。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plans",
+        "text": "From 2021 to 2025, the minimum ranking for liberal arts/history category was approximately 720→883→886→1038→2608. In 2025, the ranking dropped to 2608 due to the Radio and Television Directing major, while the minimum ranking for regular major groups was about 936. From 2021 to 2025, the planned enrollment for liberal arts/history category was 33→29→30→27→19, continuously decreasing, and in 2025 it was reduced to 19 students."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "985, 211, Double First-Class."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Data missing."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the continuous reduction in enrollment plans and the impact of the Radio and Television Directing major lowering the ranking in 2025, it is preliminarily estimated that the minimum ranking for the history category in 2026 will be approximately 2700, with a range of 2500-2900. This prediction is incomplete and requires supplementation with data such as enrollment plans, total number of examinees, reputation popularity, etc., for recalculation."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Chinese Language and Literature\n- Law (Double Degree)\n- Marxist Theory",
+      "tier_2": "Tier 2 (Medium)\n- Law\n- Journalism and Communication Studies\n- Finance",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Radio and Television Directing\n- Teaching Chinese to Speakers of Other Languages\n- Education (Teacher Training)",
+      "overall_advice": ". It is recommended to supplement and read files such as discipline evaluations and major popularity for reassessment."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Henan",
+    "university_name_en": "East China Normal University"
   }
 }

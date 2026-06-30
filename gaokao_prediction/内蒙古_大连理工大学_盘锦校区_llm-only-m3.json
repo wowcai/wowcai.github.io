@@ -38,6 +38,39 @@
       "tier_2": "二档（中等）\n- 经济学类（含电子商务、经济学）\n- 生物信息学。",
       "tier_3": "三档（相对好进）\n- 生物制造。",
       "overall_advice": "位次在预测区间5469–6469名内的考生，建议以二档经济学类为主力填报，一档能源化学工程可冲刺（该专业对应A+学科，历年位次最优），三档生物制造等作为保底。位次明显优于区间下限（<5469名）可重点冲刺一档王牌专业；位次接近区间上限（>6469名）建议以三档为主，谨慎冲二档。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "From 2021 to 2025, the minimum rankings for this subject category were approximately 5950 → 5875 → 7812 → 11329 → 4665. In 2021–2022, it was basically stable around 5900, significantly shifted back to 7812 in 2023, further shifted back to 11329 in 2024, and in 2025, due to the change of exam mode from \"Science\" to \"Physics Category\" and adjustment of enrollment major groups, the ranking moved forward significantly to 4665, with drastic fluctuations. The baseline ranking for 2025 is about 4665; the enrollment plan for this subject category in the province: 20 in 2021, 18 in 2022, 20 in 2023, 32 in 2024, 31 in 2025; the plan for 2026 is 46, an increase of about 48% compared to 2025, a significant expansion, which according to the principle of supply-demand elasticity will cause the minimum admission ranking to shift back noticeably."
+      },
+      "学校层次与声誉": {
+        "title": "School Level and Reputation",
+        "text": "985 Project, 211 Project, Double First-Class construction university; ranked 28th in the 2026 Soft Science China University Rankings (Dalian University of Technology), with stable ranking, belonging to top domestic engineering universities. The Panjin Campus shares the 985 platform with the main campus, but its social recognition is slightly lower than the main campus; the reputation evaluation in 2026 is somewhat negative (involving signals of admission cutoff drops), but mainly targeting the 2023 cutoff drop incident of the Electronic Information Department of the main campus of Dalian University of Technology, with limited direct impact on the Panjin Campus; Douyin popularity evaluation is \"relatively hot\", with a comprehensive popularity ranking of 55, short video exposure at an upper-middle level, and general application attention. In terms of historical admission anomalies, in 2023, the Electronic Information Department of Dalian University of Technology experienced a cutoff drop to 60000, but the Panjin Campus did not show similar extreme signals; Dalian University of Technology has 10 disciplines rated A- or above, including Chemical Engineering and Technology A+, Mechanics A, Civil Engineering A, Business Administration A, Mechanical Engineering A, Management Science and Engineering A, Software Engineering A, etc. Among the majors enrolled at the Panjin Campus, Energy Chemical Engineering corresponds to Chemical Engineering and Technology A+, and Economics category corresponds to Business Administration A, with strong disciplinary strength."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "Engineering majors such as Energy Chemical Engineering and Intelligent Marine Equipment have stable social popularity; the Economics category belongs to the economics and management category, which has seen some cooling in popularity in recent years. The total number of ordinary college entrance examination candidates in the province in 2026 is about 154,000, with an estimated Physics Category proportion of about 72% in recent years, resulting in about 110,800 Physics Category candidates, an increase of about 32% compared to 83,700 in 2025. The significant increase in the number of candidates will intensify competition, exerting pressure for rankings to move forward. Dalian University of Technology is located in Liaoning Province, adjacent to Inner Mongolia Autonomous Region, with strong regional preference; Inner Mongolia candidates have a high acceptance of universities in Northeast China. The university's enrollment plan in Inner Mongolia accounts for a small proportion, with 31 in 2025 and expanding to 46 in 2026, with the proportion increasing after expansion."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Based on the 2025 baseline ranking of 4665, the significant expansion of the 2026 enrollment plan by 48% (pushing rankings back), the increase in Physics Category candidates in the province by about 32% (pushing rankings forward), and stable school reputation, the main value of supply-demand elasticity calculates to about 6019. Considering the intensified competition effect due to the increase in candidate numbers, the predicted minimum admission ranking for 2026 is about 5969, with a range of 5469–6469."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Energy Chemical Engineering (including Energy Chemical Engineering, Chemical Engineering and Industrial Bioengineering)\n- Intelligent Marine Equipment.",
+      "tier_2": "Tier 2 (Medium)\n- Economics Category (including E-commerce, Economics)\n- Bioinformatics.",
+      "tier_3": "Tier 3 (Relatively Easy to Enter)\n- Biomanufacturing.",
+      "overall_advice": "For candidates with rankings within the predicted range of 5469–6469, it is recommended to focus on Tier 2 Economics Category as the main choice, with Tier 1 Energy Chemical Engineering as a reach (this major corresponds to an A+ discipline, with historically optimal rankings), and Tier 3 Biomanufacturing as a safety. Candidates with rankings significantly better than the lower limit of the range (<5469) can focus on reaching for Tier 1 flagship majors; candidates with rankings close to the upper limit of the range (>6469) are advised to mainly choose Tier 3, and cautiously reach for Tier 2."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Inner Mongolia",
+    "university_name_en": "Dalian University of Technology (Panjin Campus)"
   }
 }

@@ -31,6 +31,31 @@
       "tier_2": "暂无（物理类仅有一个招生专业）。",
       "tier_3": "暂无。",
       "overall_advice": "物理类仅电子信息类一个招生专业，位次在预测区间内（2214-3186名）均有录取可能；位次明显优于区间上限可大胆报考，位次接近区间下限需谨慎考虑。"
+    },
+    "subject_type_en": "Physics Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "In 2024, the lowest rank for science was approximately 3293, and in 2025, the lowest rank for physics category was approximately 2670, with a forward shift of about 623 places, indicating a significant increase in popularity among physics category candidates in Ningxia; in 2024, the science enrollment plan was 2, and in 2025, the physics category plan is 3, a slight expansion."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "211 Project, Double First-Class construction university; ranked 53rd in the 2026 Soft Science China University Rankings, with a stable ranking in the 46-58 range in recent years, belonging to the upper-middle level nationwide; the 2026 reputation evaluation is relatively positive, mainly due to the lifelong learning story of an 81-year-old PhD graduate from Central China Normal University, which enhanced the university's social image; Douyin popularity is average (89th overall), with moderate exposure on short video platforms and no obvious negative public opinion; Education A+ (flagship discipline), Chinese History A-, Psychology A-, Political Science A-, Marxist Theory A-, a total of 5 A- and above disciplines, with outstanding strength in teacher training disciplines."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The social popularity of teacher training majors is generally stable; the total number of candidates for the 2026 Ningxia Gaokao is about 66,000, basically the same as in 2025, with about 44,550 physics category candidates, and the competition pattern is stable; Central China Normal University is located in Wuhan, Hubei, in the central region, which has a certain cross-provincial appeal to Ningxia candidates."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Electronic Information Class.",
+      "tier_2": "None currently (physics category has only one enrollment major).",
+      "tier_3": "None currently.",
+      "overall_advice": "Physics category has only one enrollment major, Electronic Information Class, and candidates with rankings within the prediction range (2214-3186) have a chance of admission; those with rankings significantly better than the upper limit can apply boldly, while those with rankings close to the lower limit need to consider carefully."
     }
   },
   "历史类": {
@@ -61,6 +86,39 @@
       "tier_2": "暂无（历史类仅有一个招生专业）。",
       "tier_3": "暂无。",
       "overall_advice": "历史类仅社会学类一个招生专业，位次在预测区间内（941-1353名）均有录取可能；位次明显优于区间上限可大胆报考，位次接近区间下限需谨慎考虑。"
+    },
+    "subject_type_en": "History Category",
+    "prediction_reason_en": {
+      "历年位次与招生计划": {
+        "title": "Historical Rankings and Enrollment Plan",
+        "text": "In 2025, the minimum ranking for History Category is approximately 1127, with only one year of data, making it impossible to determine historical fluctuation trends; the 2025 History Category enrollment plan is 3 students."
+      },
+      "学校层次与声誉": {
+        "title": "University Level and Reputation",
+        "text": "211 Project and Double First-Class construction university; ranked 53rd in the 2026 Soft Science China University Rankings, with stable rankings in recent years, belonging to the upper-middle level nationwide; the reputation evaluation in 2026 is relatively positive, mainly due to the lifelong learning story of an 81-year-old doctoral graduate, which enhanced the university's social image; Douyin popularity is average (overall ranking 89th), with no obvious negative public opinion; Education A+ (flagship discipline), Chinese History A-, Psychology A-, Political Science A-, Marxist Theory A-, with outstanding teacher-training disciplines, strongly attracting liberal arts candidates."
+      },
+      "专业热度与地域": {
+        "title": "Major Popularity and Region",
+        "text": "The social popularity of teacher-training majors is generally stable; the total number of Ningxia Gaokao candidates in 2026 is approximately 66,000, basically the same as in 2025, with about 21,450 History Category candidates, and a stable competitive landscape; Central China Normal University is located in Wuhan, Hubei, in the central region, offering some cross-provincial appeal to Ningxia candidates."
+      },
+      "预测结论": {
+        "title": "Prediction Conclusion",
+        "text": "Since there is only one year of admission data for History Category, fluctuation trends are difficult to determine."
+      }
+    },
+    "major_tier_recommendation_en": {
+      "tier_1": "Tier 1 (Most Difficult to Enter)\n- Sociology.",
+      "tier_2": "None (History Category has only one enrollment major).",
+      "tier_3": "None.",
+      "overall_advice": "History Category has only one enrollment major, Sociology, with rankings within the predicted range (941-1353) all having admission possibilities; rankings significantly above the upper limit can be applied boldly, while rankings near the lower limit require careful consideration."
     }
+  },
+  "_translation": {
+    "language": "en",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "updated_at": "2026-06-29",
+    "province_en": "Ningxia",
+    "university_name_en": "Central China Normal University"
   }
 }
