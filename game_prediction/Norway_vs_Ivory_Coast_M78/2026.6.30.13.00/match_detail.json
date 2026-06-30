@@ -1,0 +1,1411 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M78",
+    "team_a": "Norway",
+    "team_b": "Ivory Coast",
+    "kickoff_utc": "2026-06-30T13:00:00-04:00",
+    "venue": "AT&T Stadium, Arlington, Texas",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.5956730769230769,
+      "team_b": 0.4043269230769231,
+      "favorite": "Norway"
+    },
+    "resolution": {
+      "normal_time": 0.7288461538461537,
+      "extra_time": 0.12980769230769226,
+      "penalties": 0.14134615384615365
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.12520833333333334,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.10229166666666667,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "2-1",
+        "probability": 0.091875,
+        "goals_a": 2,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Norway常规时间晋级。",
+        "summary_cn": "90分钟2-1，Norway常规时间晋级。",
+        "probability": 0.09903846153846153,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Norway",
+        "path_id": "BMC_993c01d5e4c8",
+        "display_slot_en": "Settled in 90 minutes",
+        "label_en": "2-1 after 90 minutes, Norway advance in regulation.",
+        "summary_en": "2-1 after 90 minutes, Norway advance in regulation."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+        "probability": 0.020192307692307693,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Ivory Coast",
+        "path_id": "BMC_c382957d0433",
+        "display_slot_en": "Settled in extra time",
+        "label_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time.",
+        "summary_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Ivory Coast",
+        "path_id": "BMC_60abf348df78",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties.",
+        "summary_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Norway常规时间晋级。",
+        "summary_cn": "90分钟2-1，Norway常规时间晋级。",
+        "probability": 0.09903846153846153,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Norway",
+        "path_id": "BMC_993c01d5e4c8",
+        "display_slot_en": "Settled in 90 minutes",
+        "label_en": "2-1 after 90 minutes, Norway advance in regulation.",
+        "summary_en": "2-1 after 90 minutes, Norway advance in regulation."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+        "probability": 0.020192307692307693,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Ivory Coast",
+        "path_id": "BMC_c382957d0433",
+        "display_slot_en": "Settled in extra time",
+        "label_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time.",
+        "summary_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Ivory Coast",
+        "path_id": "BMC_60abf348df78",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties.",
+        "summary_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties."
+      }
+    ],
+    "favorite": "Norway",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.14134615384615365,
+        "probability_band": "14.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ivory Coast",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009615384615384616,
+            "path_probability": 0.009615384615384616,
+            "path_id": "BMC_60abf348df78",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+            "summary_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "5-3",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.00625,
+            "path_probability": 0.00625,
+            "path_id": "BMC_66b708c71937",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Norway点球晋级。",
+            "summary_en": "0-0 at 90 minutes, still level after 0-0 in extra time, Norway advance on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "5-3",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.0057692307692307696,
+            "path_probability": 0.0057692307692307696,
+            "path_id": "BMC_f5865e2295f5",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+            "summary_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Norway advance on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "No winner after 90 minutes and extra time; the match comes down to penalty randomness and goalkeeper/mental edge."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12980769230769226,
+        "probability_band": "13.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ivory Coast",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.020192307692307693,
+            "path_probability": 0.020192307692307693,
+            "path_id": "BMC_c382957d0433",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+            "summary_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.020192307692307693,
+            "path_probability": 0.020192307692307693,
+            "path_id": "BMC_5979299ea4b3",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Norway加时晋级。",
+            "summary_en": "1-1 at 90 minutes into extra time, extra-time delta 1-0, Norway advance in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "3-2",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "2-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.014903846153846155,
+            "path_probability": 0.014903846153846155,
+            "path_id": "BMC_59d7dc8568f8",
+            "summary_cn": "90分钟2-2后进入加时，加时增量1-0，Norway加时晋级。",
+            "summary_en": "2-2 after 90 minutes and into extra time; extra-time margin 1-0, Norway advance in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time decider path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth, and risk appetite are amplified in extra time, creating a path to a winner."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2923076923076923,
+        "probability_band": "29.2%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ivory Coast",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.0764423076923077,
+            "path_probability": 0.0764423076923077,
+            "path_id": "BMC_72ca9b74b25b",
+            "summary_cn": "90分钟0-1，Ivory Coast常规时间晋级。",
+            "summary_en": "0-1 at 90 minutes, Ivory Coast advance in regulation."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ivory Coast",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.06442307692307692,
+            "path_probability": 0.06442307692307692,
+            "path_id": "BMC_47d7d9b1946a",
+            "summary_cn": "90分钟1-2，Ivory Coast常规时间晋级。",
+            "summary_en": "1-2 after 90 minutes, Ivory Coast advance in regulation."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ivory Coast",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.04038461538461539,
+            "path_probability": 0.04038461538461539,
+            "path_id": "BMC_b32de3acef54",
+            "summary_cn": "90分钟0-2，Ivory Coast常规时间晋级。",
+            "summary_en": "0-2 at 90 minutes, Ivory Coast advance in regulation."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog may advance through a normal-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 163,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Norway",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09903846153846153,
+          "path_probability": 0.09903846153846153,
+          "path_id": "BMC_993c01d5e4c8",
+          "summary_cn": "90分钟2-1，Norway常规时间晋级。",
+          "summary_en": "2-1 after 90 minutes, Norway advance in regulation."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Norway",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08846153846153847,
+          "path_probability": 0.08846153846153847,
+          "path_id": "BMC_f6b833a9c94f",
+          "summary_cn": "90分钟1-0，Norway常规时间晋级。",
+          "summary_en": "1-0 at 90 minutes, Norway advance in regulation."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Ivory Coast",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.0764423076923077,
+          "path_probability": 0.0764423076923077,
+          "path_id": "BMC_72ca9b74b25b",
+          "summary_cn": "90分钟0-1，Ivory Coast常规时间晋级。",
+          "summary_en": "0-1 at 90 minutes, Ivory Coast advance in regulation."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Norway",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.075,
+          "path_probability": 0.075,
+          "path_id": "BMC_b369e2516ab5",
+          "summary_cn": "90分钟2-0，Norway常规时间晋级。",
+          "summary_en": "2-0 after 90 minutes, Norway advance in regulation."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Ivory Coast",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06442307692307692,
+          "path_probability": 0.06442307692307692,
+          "path_id": "BMC_47d7d9b1946a",
+          "summary_cn": "90分钟1-2，Ivory Coast常规时间晋级。",
+          "summary_en": "1-2 after 90 minutes, Ivory Coast advance in regulation."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟2-1，Norway常规时间晋级。",
+          "summary_cn": "90分钟2-1，Norway常规时间晋级。",
+          "probability": 0.09903846153846153,
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-1",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Norway",
+          "path_id": "BMC_993c01d5e4c8",
+          "display_slot_en": "Settled in 90 minutes",
+          "label_en": "2-1 after 90 minutes, Norway advance in regulation.",
+          "summary_en": "2-1 after 90 minutes, Norway advance in regulation."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+          "probability": 0.020192307692307693,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-1",
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "Ivory Coast",
+          "path_id": "BMC_c382957d0433",
+          "display_slot_en": "Settled in extra time",
+          "label_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time.",
+          "summary_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+          "probability": 0.009615384615384616,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Ivory Coast",
+          "path_id": "BMC_60abf348df78",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties.",
+          "summary_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Norway常规时间晋级。",
+        "summary_cn": "90分钟2-1，Norway常规时间晋级。",
+        "probability": 0.09903846153846153,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Norway",
+        "path_id": "BMC_993c01d5e4c8",
+        "display_slot_en": "Settled in 90 minutes",
+        "label_en": "2-1 after 90 minutes, Norway advance in regulation.",
+        "summary_en": "2-1 after 90 minutes, Norway advance in regulation."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+        "probability": 0.020192307692307693,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Ivory Coast",
+        "path_id": "BMC_c382957d0433",
+        "display_slot_en": "Settled in extra time",
+        "label_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time.",
+        "summary_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Ivory Coast",
+        "path_id": "BMC_60abf348df78",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties.",
+        "summary_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放／大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.3135416666666665,
+          "base_event_probability": 0.3135416666666665,
+          "attention_level": "medium",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.05585833957885752,
+              "conditional_probability": 0.17815284383954566,
+              "script_cn": "双方进攻点均兑现但都未出现防线崩盘：挪威靠禁区高点与终结状态打入两球，科特迪瓦凭边路单挑、转换与前场威胁两度回应，形成势均力敌的开放平局。",
+              "rationale_cn": "条件概率 0.1887，是池内最高的开放结果，代表双方均得分、无单边崩盘的开放对攻局，机制上由 H1 与 H2 共同支撑。它是 4 球最低达标的平局比分，故仅给低权重、不作为重心；保留理由是其概率与机制基础真实存在，而非保守惯性。科特迪瓦防守稳定性（E_ac9deede64ef）对更极端失球路径形成约束，也使 2-2 在开放区内具备现实性。",
+              "evidence_ids": [
+                "E_28ada51c26aa",
+                "E_d4c7e50d11f1",
+                "E_ac9deede64ef",
+                "E_45963fba2d67"
+              ],
+              "mechanism_ids": [
+                "H1",
+                "H2"
+              ],
+              "script_en": "Both attacks land without either defense collapsing: Norway scores twice through box targets and finishing quality, while Ivory Coast responds twice through wide one-on-ones, transitions and front-line threat, producing an evenly balanced open draw.",
+              "rationale_en": "With conditional probability 0.1887, this is the highest open result in the pool. It represents an open exchange where both teams score and neither defense collapses, supported by both H1 and H2. As the minimum four-goal draw, it receives only low weight and is not the center of gravity; it is retained because its probability and mechanism basis are real, not because of conservative inertia. Ivory Coast’s defensive stability (E_ac9deede64ef) constrains more extreme concession paths and also makes 2-2 realistic within the open zone."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.047990967807187444,
+              "conditional_probability": 0.15306089400298994,
+              "script_cn": "挪威主力回归后以禁区高点与定位球压迫为主线取得多球优势，科特迪瓦在被压制中仍通过一次边路转换或定位球拿到一个进球窗口，比赛在挪威可控的开放节奏中收于 3-1。",
+              "rationale_cn": "4 球、净胜 2 球，与主导机制 H1（team_a up、draw down、team_b down）方向最一致，条件概率 0.1621（池内次高）。属最低达标的 4 球结果，但因其直接对应被 6/8 rollout 激活的 H1，以低权重保留而非作为重心，不构成机械压低。",
+              "evidence_ids": [
+                "E_a6b7d8902285",
+                "E_28ada51c26aa",
+                "E_4f1fb51fc473",
+                "E_396a7a707b9a"
+              ],
+              "mechanism_ids": [
+                "H1"
+              ],
+              "script_en": "With its starters back, Norway builds a multi-goal lead through box targets and set-piece pressure, while Ivory Coast still finds one scoring window through a wide transition or set piece. The match ends 3-1 in a controlled but open Norway rhythm.",
+              "rationale_en": "4 goals, +2 margin, most aligned with dominant mechanism H1 (team_a up, draw down, team_b down), conditional probability 0.1621 (second highest in pool). It is a minimum-qualifying 4-goal outcome, but since it directly maps to H1 activated by 6/8 rollouts, it is kept at low weight rather than as the focus, not a mechanical suppression."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.04688622205636938,
+              "conditional_probability": 0.14953745240569644,
+              "script_cn": "挪威主力框架首发，前 60 分钟以 Ødegaard 组织、Haaland/Sørloth 禁区高点逐步取得领先并扩大；挪威后程压上争取 90 分钟解决时，科特迪瓦借 Amad/Pépé/Yan Diomande 的边路速度与转换打出回击，最终在双方均兑现进攻点、无单边崩盘的开放局中收于 3-2。",
+              "rationale_cn": "5 球、净胜 1 球，是非最低达标区间内对 H1 与 H2 兼容度最高的比分：既体现挪威机制端的轻微优势（H1 accepted、outcome team_a up），又保留科特迪瓦的回击空间（H2 total up）。比 2-2 更体现挪威机制优势，比 4-2 更少依赖挪威防线/科特迪瓦防线的极端假设。条件概率 0.1096，在开放（非 4 球最低）结果中最高，作为主推合理。",
+              "evidence_ids": [
+                "E_a6b7d8902285",
+                "E_28ada51c26aa",
+                "E_4f1fb51fc473",
+                "E_d4c7e50d11f1",
+                "E_45963fba2d67"
+              ],
+              "mechanism_ids": [
+                "H1",
+                "H2"
+              ],
+              "script_en": "Norway starts its main core and over the first 60 minutes gradually builds and extends a lead through Ødegaard’s creation and Haaland/Sørloth as box targets. When Norway pushes later to settle the match in 90 minutes, Ivory Coast answers with wide speed and transitions from Amad, Pépé and Yan Diomande, producing a 3-2 open match in which both attacks land without a one-sided collapse.",
+              "rationale_en": "5 goals, +1 margin, the score most compatible with both H1 and H2 outside the minimum-qualifying range: it reflects Norway's slight mechanistic edge (H1 accepted, outcome team_a up) while preserving Ivory Coast's room to respond (H2 total up). It shows Norway's mechanistic advantage more than 2-2 and relies less on extreme assumptions about either defense than 4-2. Conditional probability 0.1096, the highest among open (non-minimum 4-goal) outcomes, making it a reasonable top pick."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.026103426448937934,
+              "conditional_probability": 0.08325345312618083,
+              "script_cn": "挪威取得领先或为争取 90 分钟解决而提高边后卫站位后，wide_channel_exposure 上升，科特迪瓦凭边路速度与转换连续打出高质量反击；挪威虽仍有进球，但后场身后空间被反复利用，最终落入 2-3 的科特迪瓦开放胜局。",
+              "rationale_cn": "替换原提案的 4-2。2-3 条件概率 0.0738，高于被删除的 4-2（0.0365），且直接对应 H2（team_b up、total up）与 rollout_4 的代表比分 2-3，与 rollout_1（2-5）所揭示的‘开放尾部由科特迪瓦得分驱动’一致；科特迪瓦 2-1 惜败德国（E_ac6ec1d27404）也提供其在强对手前能多次得分的近期样本。原提案完整忽略科特迪瓦方向的开放比分而保留挪威方向最极端、无 rollout 支撑的 4-2，属方向性偏差，本次予以纠正。因 H2 为 tentative 且部分支撑证据为 C 级，故给低权重。",
+              "evidence_ids": [
+                "E_d4c7e50d11f1",
+                "E_45963fba2d67",
+                "E_9ca10899fafb",
+                "E_ac6ec1d27404"
+              ],
+              "mechanism_ids": [
+                "H2"
+              ],
+              "script_en": "After Norway takes the lead or raises its fullbacks to settle the match in 90 minutes, wide-channel exposure increases. Ivory Coast repeatedly produces high-quality counters through wide speed and transitions; Norway still scores, but space behind the back line is exploited repeatedly, ending in a 2-3 open Ivory Coast win.",
+              "rationale_en": "This replaces the original 4-2 proposal. The conditional probability for 2-3 is 0.0738, higher than the removed 4-2 (0.0365), and it directly matches H2 (Team B up, total up) and rollout_4’s representative score of 2-3. It is also consistent with rollout_1 (2-5), which shows the open tail being driven by Ivory Coast scoring. Ivory Coast’s narrow 2-1 loss to Germany (E_ac6ec1d27404) also gives a recent sample of scoring multiple times against a strong opponent. The original proposal ignored open-scoreline paths in Ivory Coast’s direction while keeping Norway’s most extreme, unsupported 4-2 path; that directional bias is corrected here. Because H2 is tentative and partly supported by C-grade evidence, this receives low weight."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-1",
+            "3-2"
+          ],
+          "rationale_cn": "高分情景需同时反映两条真实机制：H1（挪威主力回归、Haaland 近期高产与定位球高点带来的多球上限，accepted，conf 0.59）和 H2（挪威压上后科特迪瓦边路转换回击，total_goals 上行，tentative，conf 0.47）。在 8 条 rollout 中，落入≥4 球区间的代表比分为 2-5（rollout_1）与 2-3（rollout_4），二者均为科特迪瓦在开放局中多次得分，说明本场大比分尾部并非由挪威单边刷分主导，而是双向兑现、且科特迪瓦回击占可观比重。因此合理的高分候选应在挪威方向、平局方向与科特迪瓦方向之间保持平衡，而不能只覆盖挪威赢球的大比分。原提案的 4-2 是池内条件概率最低（0.0365）的候选，要求挪威打入 4 球，但任何一条 rollout 中挪威最高仅 3-0，缺乏机制和推演支撑，属于向挪威一侧的过度极端，已删除；代之以 2-3，使候选集覆盖科特迪瓦开放得分这一被原提案忽略的更合理路径。3-2 继续作为主推：5 球、同时吸收 H1 与 H2，是非最低达标区间内支撑最完整的开放比分。2-2 与 3-1 虽为 4 球最低达标比分，但分别是池内条件概率最高（0.1887）与次高（0.1621）的开放结果，且 3-1 与主导机制 H1 方向一致，故以低权重保留而非作为重心，未触发‘把开放大比分机械压回最低达标比分’的问题（重心已放在 5 球的 3-2 与 2-3）。",
+          "caution_cn": "两点风险须保留：其一，科特迪瓦小组赛防守数据偏稳（场均失 0.67 球、2 场零封，E_ac9deede64ef），且挪威在前场效率会下降（E_823ef7ceb698），因此≥4 球本身是偏离尾部，整体注意度设为中而非高；其二，驱动科特迪瓦开放得分的 H2 为 tentative，且其边路超载证据含 C 级来源（E_45963fba2d67），故 2-3 仅给中低支撑。所有候选证据均经实存核验，未采用被过滤的 temporal_stale 证据（如 E_2434b95b61f8、E_2b1542eb5ed6 等），亦未引入幻觉证据。",
+          "supporting_evidence_ids": [
+            "E_a6b7d8902285",
+            "E_28ada51c26aa",
+            "E_4f1fb51fc473",
+            "E_396a7a707b9a",
+            "E_d4c7e50d11f1",
+            "E_45963fba2d67",
+            "E_9ca10899fafb",
+            "E_ac6ec1d27404"
+          ],
+          "counter_evidence_ids": [
+            "E_ac9deede64ef",
+            "E_823ef7ceb698"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least four total goals.",
+          "rationale_en": "The high-scoring scenario must reflect two real mechanisms at once: H1 (Norway’s returning starters, Haaland’s recent productivity and aerial/set-piece ceiling, accepted, conf 0.59) and H2 (Ivory Coast wide-transition replies after Norway pushes up, raising total goals, tentative, conf 0.47). Across eight rollouts, the representative scores in the four-plus-goal zone are 2-5 (rollout_1) and 2-3 (rollout_4), both driven by Ivory Coast scoring multiple times in open games. This shows that the high-scoring tail is not only Norway running up the score; it is two-way conversion with a meaningful Ivory Coast reply. Therefore the high-score candidates should balance Norway, draw and Ivory Coast directions, rather than only covering Norway high-scoring wins. The original 4-2 proposal had the lowest conditional probability in the pool (0.0365), required Norway to score four, and had no rollout with Norway scoring more than 3-0, so it lacked mechanism and simulation support and was removed as an over-extreme Norway-side candidate. It was replaced by 2-3, which covers the more reasonable Ivory Coast open-scoring path. 3-2 remains the main pick: it has five goals, absorbs both H1 and H2, and is the best-supported open score outside the minimum threshold. Although 2-2 and 3-1 are four-goal minimum-threshold scores, they are respectively the highest (0.1887) and second-highest (0.1621) open results in the pool, and 3-1 aligns with H1. They are retained at low weight rather than used as the center, so the open high-score scenario is not mechanically pulled back to the minimum threshold.",
+          "caution_en": "Two risks are retained. First, Ivory Coast’s group-stage defensive data is relatively solid (0.67 goals conceded per match and two clean sheets, E_ac9deede64ef), and Norway’s front-line efficiency may decline (E_823ef7ceb698), so a four-plus-goal match is itself a tail event and the attention level is set to medium rather than high. Second, H2, which drives Ivory Coast’s open-game scoring, is tentative and partly supported by C-grade evidence on wide overloads (E_45963fba2d67), so 2-3 receives only medium-low support. All candidate evidence has been existence-checked; filtered temporal-stale evidence such as E_2434b95b61f8 and E_2b1542eb5ed6 was not used, and no hallucinated evidence was introduced."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒／崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.11458333333333331,
+          "base_event_probability": 0.11458333333333331,
+          "attention_level": "low",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.03805701410158131,
+              "conditional_probability": 0.3321339412501642,
+              "script_cn": "挪威排出主力框架，前30分钟控制节奏并以Ødegaard组织、Berge/Aursnes保护身后；中段把球送至边路与禁区，借Haaland、Sørloth禁区占位制造二点球、角球与前场任意球破局。科特迪瓦维持中低位紧凑但在70分钟后被持续定位球压迫击穿，挪威以净胜3球的干净大胜收尾。",
+              "rationale_cn": "本情景内条件概率最高（0.296），且与机制H1及代表比分3-0的宏观推演（rollout_6, claude-opus）一致。挪威进攻状态与定位球路径是直接证据支撑，是blowout中最可信的剧本。",
+              "evidence_ids": [
+                "E_a6b7d8902285",
+                "E_396a7a707b9a",
+                "E_4f1fb51fc473",
+                "E_28ada51c26aa"
+              ],
+              "mechanism_ids": [
+                "H1"
+              ],
+              "script_en": "Norway starts its main core, controls the first 30 minutes through Ødegaard’s organization and Berge/Aursnes protecting behind. In the middle phase, Norway moves the ball wide and into the box, using Haaland and Sørloth’s positioning to create second balls, corners and attacking free kicks. Ivory Coast remains compact in a mid-low block but is broken by sustained set-piece pressure after 70 minutes, and Norway finishes with a clean three-goal win.",
+              "rationale_en": "This scenario has the highest conditional probability in its group (0.296) and aligns with mechanism H1 and the 3-0 representative macro rollout (rollout_6, Claude Opus). Norway’s attacking form and set-piece route provide direct evidence, making it the most credible blowout script."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.01940738648460077,
+              "conditional_probability": 0.16937355477469768,
+              "script_cn": "挪威在主力回归后持续高点压迫并多点开花，但在后程压上时被科特迪瓦利用边路超载与转换（Pépé/Amad/Yan Diomande）打入一球。最终挪威以净胜3球获胜，体现的是挪威大胜叠加科特迪瓦保留一定边路反击威胁的分支。",
+              "rationale_cn": "条件概率0.169，结合H1（挪威进攻重量）与H2（科特迪瓦边路转换反击，4/8世界激活）。比起纯净崩盘，4-1在机制上更自洽，因为科特迪瓦确有被多源确认的边路威胁点。",
+              "evidence_ids": [
+                "E_28ada51c26aa",
+                "E_4f1fb51fc473",
+                "E_45963fba2d67",
+                "E_d4c7e50d11f1"
+              ],
+              "mechanism_ids": [
+                "H1",
+                "H2"
+              ],
+              "script_en": "After its starters return, Norway maintains aerial pressure and scores from multiple sources, but late pushing allows Ivory Coast to use wide overloads and transitions through Pépé, Amad and Yan Diomande for one goal. Norway ultimately wins by three, reflecting a Norway blowout branch that still preserves some Ivory Coast wide-counter threat.",
+              "rationale_en": "With conditional probability 0.169, this combines H1 (Norway attacking weight) and H2 (Ivory Coast wide-transition counters, active in 4 of 8 worlds). Compared with a clean blowout, 4-1 is more mechanism-consistent because Ivory Coast does have wide threats confirmed by multiple sources."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.016291171574899465,
+              "conditional_probability": 0.14217749738094082,
+              "script_cn": "挪威全程压制并在禁区与定位球上形成绝对优势，科特迪瓦防线在体能下降后段连续被击穿，零封落败。该剧本要求科特迪瓦稳健的防守体系（场均失0.67、2场零封）显著瓦解。",
+              "rationale_cn": "条件概率0.129，属可信的挪威方崩盘比分，但与科特迪瓦防守数据形成张力，故评级低于3-0与4-1，保留为净进球更高的尾部分支而非主选。",
+              "evidence_ids": [
+                "E_a6b7d8902285",
+                "E_28ada51c26aa",
+                "E_4f1fb51fc473"
+              ],
+              "mechanism_ids": [
+                "H1"
+              ],
+              "script_en": "Norway controls throughout and creates a clear box and set-piece advantage. Ivory Coast’s defense is repeatedly breached late as fitness declines and is shut out. This script requires Ivory Coast’s solid defensive structure (0.67 goals conceded per match and two clean sheets) to break down significantly.",
+              "rationale_en": "With conditional probability 0.129, this is a credible Norway-side blowout score, but it is in tension with Ivory Coast’s defensive data. It is therefore rated below 3-0 and 4-1 and retained as a higher-net-goal tail branch rather than a main pick."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-1",
+            "4-0"
+          ],
+          "rationale_cn": "blowout 为尾部情景（base_event_probability≈0.1146）。证据方向高度一致偏向挪威：Goal.com列出含Ødegaard、Sørloth、Haaland、Nusa的可能首发；ESPN证实末轮大轮换后主力回归；FIFA与Fox显示Haaland预选赛16球且本届前两场各梅开二度。机制H1（主力回归后以高点与定位球提高90分钟解决倾向，6/8世界激活）支撑挪威方净胜3球以上的剧本，H2（科特迪瓦边路转换反击）为4-1这类挪威大胜但被反击扳回一球的分支提供依据。科特迪瓦方一边倒（0-3/1-4/0-4）缺乏机制支撑（其攻击仅0.64、且为客观弱队），不予纳入。需要约束的反向证据是科特迪瓦防守数据稳健（场均失0.67、2场零封），因此纯净大比分崩盘（4-0、5-x）的可信度应低于带反击的4-1与最常见的3-0。",
+          "caution_cn": "高温高湿（37°C、湿度0.79）与顶棚开闭未确认不应作为崩盘核心触发，仅为体能背景。挪威对法国的大比分输球发生在大轮换背景下，不能外推主力防线脆弱；科特迪瓦小组赛失球少、有零封，故纯净崩盘比分（4-0及以上）须保持低权重。Ødegaard、Ryerson医疗状态未确认及Singo缺阵均为低/中可靠信号，不得作为崩盘强证据。已剔除原提案中无实质支撑的极端候选5-1（grade=0）。",
+          "supporting_evidence_ids": [
+            "E_a6b7d8902285",
+            "E_396a7a707b9a",
+            "E_4f1fb51fc473",
+            "E_28ada51c26aa",
+            "E_45963fba2d67"
+          ],
+          "counter_evidence_ids": [
+            "E_ac9deede64ef",
+            "E_d1fdc9a16eea"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least three goals.",
+          "rationale_en": "blowout is a tail scenario (base_event_probability≈0.1146). The evidence is highly aligned toward Norway: Goal.com lists a possible XI with Ødegaard, Sørloth, Haaland and Nusa; ESPN confirms starters return after heavy final-round rotation; FIFA and Fox show Haaland scored 16 in qualifying and twice in each of his first two matches this tournament. Mechanism H1 (starters return, increasing 90-minute resolution via aerial threats and set pieces; 6/8 worlds active) supports Norway winning by 3+ goals. H2 (Ivory Coast wide transition counters) supports branches such as a 4-1 Norway blowout with one goal conceded on the counter. One-sided Ivory Coast wins (0-3/1-4/0-4) lack mechanism support (attack only 0.64, and objectively the weaker side), so they are excluded. The counter-evidence to constrain this is Ivory Coast's solid defensive data (0.67 conceded per match, 2 clean sheets), so clean heavy collapses (4-0, 5-x) should be less credible than 4-1 with a counterattack goal and the most common 3-0.",
+          "caution_en": "High heat and humidity (37°C, humidity 0.79) and unconfirmed roof status should not be treated as core collapse triggers, only as fitness background. Norway’s heavy loss to France came in the context of major rotation and should not be extrapolated to a weak first-choice defense. Ivory Coast conceded few group-stage goals and kept clean sheets, so clean blowout scores of 4-0 or above must stay low-weight. Unconfirmed Ødegaard and Ryerson medical status and Singo’s absence are low/medium-reliability signals and should not be used as strong collapse evidence. The unsupported extreme 5-1 candidate from the original proposal (grade=0) has been removed."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷",
+          "definition_cn": "非热门方 Ivory Coast 获胜。",
+          "probability": 0.27562499999999995,
+          "base_event_probability": 0.27562499999999995,
+          "attention_level": "medium",
+          "status": "revised",
+          "selected_scores": [
+            {
+              "score": "1-2",
+              "probability": 0.08059907087294726,
+              "conditional_probability": 0.2924229328723711,
+              "script_cn": "挪威主力攻击组（Haaland/Sørloth高点+Ødegaard组织）取得1球，但在为争取90分钟解决而提高压上后，科特迪瓦借Pépé/Amad/Yan Diomande的边路转换与后程空间打入2球完成逆转。",
+              "rationale_cn": "该比分同时容纳挪威主力进攻兑现1球与科特迪瓦两次有效转换，是多球 upset 中条件概率最高、与H2反击分支契合度最好的脚本，且不要求零封挪威这一强反证场景。相对其他多球 upset，1-2吸收Haaland进攻反证的能力最强，列为最高支撑。",
+              "evidence_ids": [
+                "E_d4c7e50d11f1",
+                "E_45963fba2d67",
+                "E_ac9deede64ef",
+                "E_28ada51c26aa"
+              ],
+              "mechanism_ids": [
+                "H2",
+                "H1"
+              ],
+              "script_en": "Norway’s main attacking unit (Haaland/Sørloth as aerial targets plus Ødegaard’s creation) gets one goal, but after Norway pushes higher to settle the match in 90 minutes, Ivory Coast uses wide transitions and late-game space through Pépé, Amad and Yan Diomande to score twice and turn it around.",
+              "rationale_en": "This scoreline allows Norway’s main attack to score once while Ivory Coast converts two effective transitions. It is the highest-conditional-probability multi-goal upset and best aligned with the H2 counterattacking branch, without requiring the strong counterevidence of shutting Norway out. Among multi-goal upsets, 1-2 best absorbs the Haaland attacking counterevidence and is ranked as the strongest supported case."
+            },
+            {
+              "score": "0-1",
+              "probability": 0.07940795159896283,
+              "conditional_probability": 0.28810141169691733,
+              "script_cn": "科特迪瓦以紧凑低位限制挪威中路推进，全场零封，并通过一次边路转换或定位球后的单球优势取胜。",
+              "rationale_cn": "科特迪瓦场均失球低、有2场零封记录且身体对抗强、组织性好，能支撑一场窄幅零封小胜；这也是 upset 候选池中条件概率最高的比分。但挪威主力回归、Haaland状态强使零封支撑有限，故评为有限正向。",
+              "evidence_ids": [
+                "E_ac9deede64ef",
+                "E_d4c7e50d11f1",
+                "E_45963fba2d67"
+              ],
+              "mechanism_ids": [
+                "H2",
+                "H3"
+              ],
+              "script_en": "Ivory Coast keeps a compact low block, limits Norway’s central progression, keeps a clean sheet, and wins by one goal through a wide transition or set-piece sequence.",
+              "rationale_en": "Ivory Coast’s low goals-conceded rate, two clean sheets, physicality and organization can support a narrow clean-sheet win; this is also the highest-probability score in the upset candidate pool. But Norway’s returning starters and Haaland’s strong form limit the clean-sheet case, so it receives limited positive support."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.03035148372227024,
+              "conditional_probability": 0.11011876180415509,
+              "script_cn": "科特迪瓦守住挪威高质量禁区终结并保持零封，依靠转换与定位球再下一城，以两球净胜。",
+              "rationale_cn": "该比分需科特迪瓦既限制挪威禁区终结又攻入2球，符合其防守数据与边路威胁方向，但挪威进攻端证据过强（Haaland、主力回归），无明确净支持；保留仅因其在冻结候选池中条件概率尚可（0.130）且对应H2‘先守住、再利用挪威压上’分支。",
+              "evidence_ids": [
+                "E_ac9deede64ef",
+                "E_45963fba2d67"
+              ],
+              "mechanism_ids": [
+                "H2"
+              ],
+              "script_en": "Ivory Coast holds off Norway’s high-quality box finishing, keeps a clean sheet, and adds another goal through transition or set pieces to win by two.",
+              "rationale_en": "This score requires Ivory Coast both to limit Norway’s box finishing and to score twice. It fits Ivory Coast’s defensive data and wide-threat direction, but Norway’s attacking evidence is too strong (Haaland, returning starters), so there is no clear net support. It is retained only because its conditional probability in the frozen candidate pool is acceptable (0.130) and it matches H2’s 'hold first, then exploit Norway pushing up' branch."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.023504753673293,
+              "conditional_probability": 0.08527801786228754,
+              "script_cn": "挪威主力进攻质量兑现并为90分钟解决加大压上，比赛转为多回合交换；科特迪瓦借边路转换、下半场调整与反击空间在大开大合中以一球之差爆冷。",
+              "rationale_cn": "该开放比分受H2（team_b up、total_goals up）支撑，且rollout_4代表比分恰为2-3，提供宏观推演的直接对应,说明并非机械压回最低比分。但科特迪瓦三球依赖挪威压上失衡与多次转换兑现，条件较多，故评为有限正向而非高支撑。",
+              "evidence_ids": [
+                "E_d4c7e50d11f1",
+                "E_45963fba2d67",
+                "E_ac6ec1d27404"
+              ],
+              "mechanism_ids": [
+                "H2",
+                "H1"
+              ],
+              "script_en": "Norway’s main attacking quality lands and the team pushes higher to settle it in 90 minutes, turning the match into repeated exchanges. Ivory Coast uses wide transitions, second-half adjustments and counterattacking space to steal a one-goal upset in an open game.",
+              "rationale_en": "This open scoreline is supported by H2 (Team B up, total goals up), and rollout_4’s representative score is exactly 2-3, giving a direct macro-simulation match and showing that it is not mechanically pulled back to the minimum scoreline. But three Ivory Coast goals require Norway overcommitting and multiple transitions landing, so it receives limited positive support rather than high support."
+            }
+          ],
+          "display_scores": [
+            "1-2",
+            "0-1",
+            "0-2"
+          ],
+          "rationale_cn": "upset 的合理脚本以科特迪瓦防守稳固+转换/定位球小胜为核心。证据可支撑低比分逆向胜利（0-1、1-2），也通过 H2（挪威后程压上→科特迪瓦边路转换）与 rollout_4（代表比分2-3）支撑一条开放比分路径。但科特迪瓦进攻仅0.64、终结0.64，连续进球依赖较强；挪威主力回归、Haaland本届前两场均梅开二度构成强反证。因此整体证据强度中等偏弱，候选以窄幅小胜为主、保留一条受 rollout 支撑的开放比分。",
+          "caution_cn": "科特迪瓦进攻与终结质量仅中等，多球得分依赖较强假设；边路超载证据为C级、可靠性有限；零封类比分（0-1、0-2）面对Haaland与主力回归的强反证，净支持受限。2-3虽有rollout_4代表比分支撑，但需挪威压上失衡与科特迪瓦三球同时成立，属低概率开放路径，不应外推为常态。",
+          "supporting_evidence_ids": [
+            "E_ac9deede64ef",
+            "E_d4c7e50d11f1",
+            "E_45963fba2d67",
+            "E_caacf349537e",
+            "E_ac6ec1d27404",
+            "E_399064521ff3"
+          ],
+          "counter_evidence_ids": [
+            "E_4f1fb51fc473",
+            "E_28ada51c26aa",
+            "E_396a7a707b9a",
+            "E_a6b7d8902285",
+            "E_823ef7ceb698"
+          ],
+          "source": "tail_forecast_report",
+          "label_en": "Upset",
+          "definition_en": "Underdog Ivory Coast wins.",
+          "rationale_en": "The reasonable upset script centers on solid Ivory Coast defending plus a narrow win via transitions or set pieces. The evidence can support low-scoring reverse wins (0-1, 1-2), and H2 (Norway pushing high late → Ivory Coast wide transitions) plus rollout_4 (representative score 2-3) support one open-score path. But Ivory Coast's attack is only 0.64 and finishing 0.64, so multiple goals require strong assumptions; Norway's starters returning and Haaland scoring twice in each of his first two matches this tournament are strong counter-evidence. Overall evidence strength is medium-low, so candidates are mainly narrow wins, with one rollout-supported open score kept.",
+          "caution_en": "Ivory Coast’s attacking and finishing quality is only moderate, so multiple goals require strong assumptions. The wide-overload evidence is C-grade and limited in reliability. Clean-sheet scores such as 0-1 and 0-2 face strong counterevidence from Haaland and the returning Norway starters, limiting net support. Although 2-3 is supported by rollout_4’s representative score, it requires both Norway overcommitting and Ivory Coast scoring three, making it a low-probability open path that should not be generalized."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "挪威首发攻击线",
+          "impact_cn": "Goal列出挪威可能首发含Ødegaard、Sørloth、Haaland与Nusa。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_a6b7d8902285",
+            "E_3a2290288a05"
+          ],
+          "source_names": [
+            "Goal.com"
+          ],
+          "label_en": "Norway attacking XI",
+          "impact_en": "Goal lists Norway's possible XI with Ødegaard, Sørloth, Haaland and Nusa.",
+          "text_cn": "Goal列出挪威可能首发含Ødegaard、Sørloth、Haaland与Nusa。",
+          "text_en": "Goal lists Norway's possible XI with Ødegaard, Sørloth, Haaland and Nusa."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "轮休与主力回归",
+          "impact_cn": "Solbakken称末轮轮休含Haaland在内10名主力，ESPN称关键球员将回归。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_2434b95b61f8",
+            "E_396a7a707b9a"
+          ],
+          "source_names": [
+            "ESPN"
+          ],
+          "label_en": "Rotation and returning starters",
+          "impact_en": "Solbakken said 10 starters, including Haaland, were rested in the final round; ESPN says key players will return.",
+          "text_cn": "Solbakken称末轮轮休含Haaland在内10名主力，ESPN称关键球员将回归。",
+          "text_en": "Solbakken said 10 starters, including Haaland, were rested in the final round; ESPN says key players will return."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "Haaland进球火力",
+          "impact_cn": "FIFA称Haaland预选赛16球，Fox称他本届前两场世界杯均梅开二度。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_4f1fb51fc473",
+            "E_28ada51c26aa"
+          ],
+          "source_names": [
+            "FIFA",
+            "Fox Sports"
+          ],
+          "label_en": "Haaland scoring form",
+          "impact_en": "FIFA says Haaland scored 16 in qualifying; Fox says he scored twice in each of his first two World Cup matches this tournament.",
+          "text_cn": "FIFA称Haaland预选赛16球，Fox称他本届前两场世界杯均梅开二度。",
+          "text_en": "FIFA says Haaland scored 16 in qualifying; Fox says he scored twice in each of his first two World Cup matches this tournament."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "科特迪瓦防守韧性",
+          "impact_cn": "The Athletic列科特迪瓦场均进1.33球、失0.67球并有2场零封。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_ac9deede64ef"
+          ],
+          "source_names": [
+            "The Athletic"
+          ],
+          "label_en": "Ivory Coast defensive resilience",
+          "impact_en": "The Athletic lists Ivory Coast at 1.33 goals scored per match, 0.67 conceded, and 2 clean sheets.",
+          "text_cn": "The Athletic列科特迪瓦场均进1.33球、失0.67球并有2场零封。",
+          "text_en": "The Athletic lists Ivory Coast at 1.33 goals scored per match, 0.67 conceded, and 2 clean sheets."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "淘汰赛心理背景",
+          "impact_cn": "科特迪瓦队史首次进入世界杯淘汰赛，ABC称其2-0击败库拉索晋级。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_399064521ff3"
+          ],
+          "source_names": [
+            "ABC News"
+          ],
+          "label_en": "Knockout-stage pressure context",
+          "impact_en": "Ivory Coast are in the World Cup knockout stage for the first time; ABC says their 2-0 win over Curaçao secured progression.",
+          "text_cn": "科特迪瓦队史首次进入世界杯淘汰赛，ABC称其2-0击败库拉索晋级。",
+          "text_en": "Ivory Coast are in the World Cup knockout stage for the first time; ABC says their 2-0 win over Curaçao secured progression."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "场地与天气环境",
+          "impact_cn": "AT&T Stadium已铺设天然草，NWS附近观测为79°F、湿度79%、南风14阵23 mph。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_ae958e06767a",
+            "E_0aa7b44ecc32",
+            "E_5a9776ad1c62"
+          ],
+          "source_names": [
+            "AT&T Stadium",
+            "National Weather Service",
+            "Fort Worth Report"
+          ],
+          "label_en": "Pitch and weather conditions",
+          "impact_en": "AT&T Stadium has installed natural grass; nearby NWS observations show 79°F, 79% humidity, and south wind 14 mph gusting to 23 mph.",
+          "text_cn": "AT&T Stadium已铺设天然草，NWS附近观测为79°F、湿度79%、南风14阵23 mph。",
+          "text_en": "AT&T Stadium has installed natural grass; nearby NWS observations show 79°F, 79% humidity, and south wind 14 mph gusting to 23 mph."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2711538461538459,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.1843971631205675,
+          "joint_probability": 0.05,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.1843971631205675
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.16666666666666677
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "挪威加时取胜的主路径。末轮大轮换、Haaland/Sørloth高点、Ødegaard组织、传中、角球、前场任意球和二点球，使挪威在90-105分钟拥有小幅主动权；但科特迪瓦低位紧凑和身体对抗限制其不能被上调到强优势。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal result in 30 minutes of extra time via counters, set pieces, or substitute impact.",
+          "rationale_en": "Norway’s main extra-time win path. Heavy rotation in the final group match, Haaland/Sørloth as aerial targets, Ødegaard’s creation, crosses, corners, attacking free kicks and second balls give Norway a small initiative from 90 to 105 minutes. Ivory Coast’s compact low block and physicality prevent this from becoming a strong advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.04787234042553195,
+          "joint_probability": 0.012980769230769231,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.04787234042553195
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.014184397163120577
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.007092198581560289
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.007092198581560289
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时双方各进一球后仍平，主要来自90分钟2-2或更高比分的开放入口，或加时早段一方先进球后另一方被迫提速。它高于一般多球尾部，但仍明显低于0-0、1-0和0-1，因为淘汰赛加时后段通常降风险。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time as the match shifts from caution into open exchanges.",
+          "rationale_en": "Both teams score once in extra time and it remains level, mainly from open 90-minute entries at 2-2 or higher, or when one side scores early in extra time and the other is forced to raise the tempo. It is higher than a typical high-goal tail, but still clearly below 0-0, 1-0, and 0-1 because knockout extra time usually becomes more risk-averse late on."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.06205673758865254,
+          "joint_probability": 0.01682692307692308,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.06205673758865254
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.03014184397163123
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.014184397163120577
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.007092198581560289
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "挪威两球加时胜的低概率尾部。需要挪威先通过定位球、传中或禁区混战破局，随后科特迪瓦压出留下第二球空间；更可能发生在2-2、3-3等开放入口或科特迪瓦后场体能崩盘时。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A blowout path where one side wins extra time by at least 2 goals, or total goals reach 3 or more.",
+          "rationale_en": "A low-probability two-goal extra-time win for Norway. It requires Norway to break through first via a set piece, cross or box scramble, after which Ivory Coast pushes up and leaves space for a second goal. It is more likely from open entries such as 2-2 or 3-3, or if Ivory Coast’s back line fades physically."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_ROTATION_FITNESS",
+          "label_cn": "挪威轮休后的体能边际",
+          "label_en": "Norway fitness edge after rotation",
+          "direction": "team_a",
+          "impact_cn": "Solbakken末轮轮休含Haaland在内10名主力，关键球员回归使挪威在90分钟后更可能保留冲刺、压迫和高点冲击质量。",
+          "impact_en": "Solbakken rested 10 starters including Haaland in the final group match, so Norway may preserve more pressing, running and aerial quality after 90 minutes.",
+          "text_cn": "Solbakken末轮轮休含Haaland在内10名主力，关键球员回归使挪威在90分钟后更可能保留冲刺、压迫和高点冲击质量。",
+          "text_en": "Solbakken rested 10 starters including Haaland in the final group match, so Norway may preserve more pressing, running and aerial quality after 90 minutes."
+        },
+        {
+          "factor_id": "ET_AERIAL_SET_PIECE",
+          "label_cn": "Haaland/Sørloth高点与Ødegaard组织",
+          "label_en": "Haaland/Sørloth aerial route and Ødegaard creation",
+          "direction": "team_a",
+          "impact_cn": "加时运动战质量下降时，Haaland、Sørloth的禁区高点和Ødegaard的定位球、二点球组织，是挪威1球决胜路径的主要来源。",
+          "impact_en": "When open-play quality drops in extra time, Haaland and Sørloth as box targets plus Ødegaard on set pieces and second balls form Norway’s clearest one-goal route.",
+          "text_cn": "加时运动战质量下降时，Haaland、Sørloth的禁区高点和Ødegaard的定位球、二点球组织，是挪威1球决胜路径的主要来源。",
+          "text_en": "When open-play quality drops in extra time, Haaland and Sørloth as box targets plus Ødegaard on set pieces and second balls form Norway’s clearest one-goal route."
+        },
+        {
+          "factor_id": "ET_IVORY_BLOCK",
+          "label_cn": "科特迪瓦低位防守韧性",
+          "label_en": "Ivory Coast low-block resilience",
+          "direction": "team_b",
+          "impact_cn": "科特迪瓦场均失0.67球且已有2场零封，说明其低位防线和禁区保护不应被低估，这也是加时0-0占比较高的原因。",
+          "impact_en": "Ivory Coast have conceded only 0.67 goals per match with two clean sheets, so their low block and box protection support the high extra-time 0-0 share.",
+          "text_cn": "科特迪瓦场均失0.67球且已有2场零封，说明其低位防线和禁区保护不应被低估，这也是加时0-0占比较高的原因。",
+          "text_en": "Ivory Coast have conceded only 0.67 goals per match with two clean sheets, so their low block and box protection support the high extra-time 0-0 share."
+        },
+        {
+          "factor_id": "ET_IVORY_TRANSITION",
+          "label_cn": "科特迪瓦边路反击窗口",
+          "label_en": "Ivory Coast wide-transition window",
+          "direction": "team_b",
+          "impact_cn": "若挪威为避免点球而在加时压上，科特迪瓦可通过Amad、Pépé、Yan Diomande等边路速度点寻找反击和二次进攻机会。",
+          "impact_en": "If Norway push forward to avoid penalties, Ivory Coast can use wide speed from players such as Amad, Pépé and Yan Diomande to find transition chances.",
+          "text_cn": "若挪威为避免点球而在加时压上，科特迪瓦可通过Amad、Pépé、Yan Diomande等边路速度点寻找反击和二次进攻机会。",
+          "text_en": "If Norway push forward to avoid penalties, Ivory Coast can use wide speed from players such as Amad, Pépé and Yan Diomande to find transition chances."
+        },
+        {
+          "factor_id": "ET_RISK_DROP_105",
+          "label_cn": "105分钟后风险收缩",
+          "label_en": "Risk reduction after 105 minutes",
+          "direction": "neutral",
+          "impact_cn": "如果加时上半场仍未分胜负，双方都会更清楚点球临近，后15分钟的冒险意愿下降，使加时继续低比分的概率上升。",
+          "impact_en": "If the match is still level after the first extra-time period, both teams become more aware that penalties are near, reducing late risk-taking and supporting low-scoring outcomes.",
+          "text_cn": "如果加时上半场仍未分胜负，双方都会更清楚点球临近，后15分钟的冒险意愿下降，使加时继续低比分的概率上升。",
+          "text_en": "If the match is still level after the first extra-time period, both teams become more aware that penalties are near, reducing late risk-taking and supporting low-scoring outcomes."
+        },
+        {
+          "factor_id": "ET_PENALTY_SHADOW",
+          "label_cn": "点球预期牵制加时选择",
+          "label_en": "Penalty expectation shapes extra-time choices",
+          "direction": "neutral",
+          "impact_cn": "点球优势并不明显时，两队都不会无条件押宝点球；但在体能下降后，点球预期仍会限制加时后段的进攻投入。",
+          "impact_en": "With no clear shootout edge, neither side can simply rely on penalties, but the expectation of a shootout still limits late extra-time attacking commitment as fatigue rises.",
+          "text_cn": "点球优势并不明显时，两队都不会无条件押宝点球；但在体能下降后，点球预期仍会限制加时后段的进攻投入。",
+          "text_en": "With no clear shootout edge, neither side can simply rely on penalties, but the expectation of a shootout still limits late extra-time attacking commitment as fatigue rises."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is drawn after 90 minutes. Inputs include the full 90-minute forecast, draw-score distribution, knockout evidence, normal-time tails and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → 4 expert agents → expert committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.14134615384615365,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "5-3",
+          "winner_side": "team_a",
+          "probability": 0.12244897959183675,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "5-3",
+              "probability": 0.12244897959183675,
+              "winner_side": "team_a",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "One goalkeeper saves multiple penalties in a row, or the opponent misses several straight, quickly widening the score."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.07482993197278916,
+              "winner_side": "team_a",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "One goalkeeper saves multiple penalties in a row, or the opponent misses several straight, quickly widening the score."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.06462585034013608,
+              "winner_side": "team_b",
+              "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+              "rationale_en": "One goalkeeper saves multiple penalties in a row, or the opponent misses several straight, quickly widening the score."
+            }
+          ],
+          "display_scores": [
+            "5-3",
+            "4-1",
+            "2-4"
+          ],
+          "rationale_cn": "一方门将连续扑点或对手连续罚丢，比分被迅速拉开。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive saves, or the opponent misses repeatedly, causing the shootout score to widen quickly.",
+          "rationale_en": "One goalkeeper saves multiple penalties in a row, or the opponent misses several straight, quickly widening the score."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "4-5",
+          "winner_side": "team_b",
+          "probability": 0.13265306122448983,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-5",
+              "probability": 0.13265306122448983,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, allowing the underdog to advance on penalties."
+            },
+            {
+              "score": "3-4",
+              "probability": 0.0884353741496599,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, allowing the underdog to advance on penalties."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.06462585034013608,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, allowing the underdog to advance on penalties."
+            }
+          ],
+          "display_scores": [
+            "4-5",
+            "3-4",
+            "2-4"
+          ],
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, allowing the underdog to advance on penalties.",
+          "rationale_en": "The favored side misses in a key round, allowing the underdog to advance on penalties."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "5-6",
+          "winner_side": "team_b",
+          "probability": 0.021,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "5-6",
+              "probability": 0.021,
+              "winner_side": "team_b",
+              "rationale_cn": "与矩阵一致。该路径通常来自前五轮4-4、第六轮双方继续命中，随后挪威进入后卫、替补或体能受损主罚手时被Fofana扑出或打偏，科特迪瓦命中后胜出。它不是比分极端，但比5-4、4-5更依赖长序列连续命中，因此属于突然死亡长尾。",
+              "rationale_en": "Consistent with the matrix. This path usually starts from 4-4 after five rounds, with both sides converting in round six. Norway then reaches defenders, substitutes or fatigued takers, one of whom is saved by Fofana or misses, before Ivory Coast converts to win. It is not an extreme score, but it depends more on a long sequence of conversions than 5-4 or 4-5, so it is a sudden-death tail path."
+            },
+            {
+              "score": "6-5",
+              "probability": 0.017,
+              "winner_side": "team_a",
+              "rationale_cn": "与矩阵一致。该路径需要双方前五轮大多稳定，常规五轮后通常为4-4且第六轮继续互中，直到后续主罚深度或压力波动决定胜负。挪威主罚名气和深度略有支撑，但没有系统命中率和扑点率证据，且长突然死亡本身要求多轮连续兑现，因此偏离度高于常规5-4。",
+              "rationale_en": "Consistent with the matrix. This path requires both teams to be mostly stable through five rounds, usually reaching 4-4, then both converting in round six until later taker depth or pressure decides it. Norway’s taker reputation and depth offer slight support, but there is no systematic conversion-rate or save-rate evidence; because long sudden death itself requires many consecutive conversions, its deviation is higher than a standard 5-4."
+            }
+          ],
+          "display_scores": [
+            "5-6",
+            "6-5"
+          ],
+          "rationale_cn": "与矩阵一致。该路径通常来自前五轮4-4、第六轮双方继续命中，随后挪威进入后卫、替补或体能受损主罚手时被Fofana扑出或打偏，科特迪瓦命中后胜出。它不是比分极端，但比5-4、4-5更依赖长序列连续命中，因此属于突然死亡长尾。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides are strong through the first five rounds, and the winner is decided only after sudden death from round six onward.",
+          "rationale_en": "Consistent with the matrix. This path usually starts from 4-4 after five rounds, with both sides converting in round six. Norway then reaches defenders, substitutes or fatigued takers, one of whom is saved by Fofana or misses, before Ivory Coast converts to win. It is not an extreme score, but it depends more on a long sequence of conversions than 5-4 or 4-5, so it is a sudden-death tail path."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_NORWAY_TAKER_CORE",
+          "label_cn": "挪威前五轮主罚核心",
+          "label_en": "Norway first-five taker core",
+          "direction": "team_a",
+          "impact_cn": "若Haaland、Ødegaard、Sørloth仍在场，挪威前五轮主罚手名气和进攻端稳定性略占优势。",
+          "impact_en": "If Haaland, Ødegaard and Sørloth are still on the pitch, Norway have a slight edge in name value and attacking reliability among the first five takers.",
+          "text_cn": "若Haaland、Ødegaard、Sørloth仍在场，挪威前五轮主罚手名气和进攻端稳定性略占优势。",
+          "text_en": "If Haaland, Ødegaard and Sørloth are still on the pitch, Norway have a slight edge in name value and attacking reliability among the first five takers."
+        },
+        {
+          "factor_id": "PEN_NORWAY_NEGATIVE_SAMPLE",
+          "label_cn": "挪威优势受负面样本削弱",
+          "label_en": "Negative sample tempers Norway’s edge",
+          "direction": "team_b",
+          "impact_cn": "Jørgen Strand Larsen近期点球被扑，提醒挪威主罚深度并非无风险；因此点球胜率只应是小幅倾斜而非明显优势。",
+          "impact_en": "Jørgen Strand Larsen’s recent saved penalty is a warning that Norway’s taker depth is not risk-free, so any shootout edge should remain slight rather than decisive.",
+          "text_cn": "Jørgen Strand Larsen近期点球被扑，提醒挪威主罚深度并非无风险；因此点球胜率只应是小幅倾斜而非明显优势。",
+          "text_en": "Jørgen Strand Larsen’s recent saved penalty is a warning that Norway’s taker depth is not risk-free, so any shootout edge should remain slight rather than decisive."
+        },
+        {
+          "factor_id": "PEN_KEEPER_EVIDENCE_GAP",
+          "label_cn": "门将扑点证据不足",
+          "label_en": "Limited goalkeeper shootout evidence",
+          "direction": "neutral",
+          "impact_cn": "Nyland和Yahia Fofana都缺少足够可靠的扑点率证据，门将因素难以支持任何一方获得大幅点球优势。",
+          "impact_en": "Neither Nyland nor Yahia Fofana has enough reliable penalty-saving evidence to justify a large shootout advantage for either side.",
+          "text_cn": "Nyland和Yahia Fofana都缺少足够可靠的扑点率证据，门将因素难以支持任何一方获得大幅点球优势。",
+          "text_en": "Neither Nyland nor Yahia Fofana has enough reliable penalty-saving evidence to justify a large shootout advantage for either side."
+        },
+        {
+          "factor_id": "PEN_IVORY_TAKER_POOL",
+          "label_cn": "科特迪瓦候选主罚池",
+          "label_en": "Ivory Coast candidate taker pool",
+          "direction": "team_b",
+          "impact_cn": "Pépé、Kessié、Amad等人可以支撑科特迪瓦前几轮主罚质量，使其即使作为相对弱势方也不会在点球阶段明显下风。",
+          "impact_en": "Players such as Pépé, Kessié and Amad give Ivory Coast enough early-round taker quality to avoid being clearly inferior in a shootout.",
+          "text_cn": "Pépé、Kessié、Amad等人可以支撑科特迪瓦前几轮主罚质量，使其即使作为相对弱势方也不会在点球阶段明显下风。",
+          "text_en": "Players such as Pépé, Kessié and Amad give Ivory Coast enough early-round taker quality to avoid being clearly inferior in a shootout."
+        },
+        {
+          "factor_id": "PEN_PRESSURE_BALANCE",
+          "label_cn": "双方心理压力大致抵消",
+          "label_en": "Pressure profiles broadly offset",
+          "direction": "neutral",
+          "impact_cn": "科特迪瓦首次进入世界杯淘汰赛带来压力，但挪威作为拥有明星锋线的一方也承担更高晋级期待，心理项更接近相互抵消。",
+          "impact_en": "Ivory Coast face pressure as first-time World Cup knockout participants, but Norway also carry higher expectations through their star attack, making the pressure factor broadly offsetting.",
+          "text_cn": "科特迪瓦首次进入世界杯淘汰赛带来压力，但挪威作为拥有明星锋线的一方也承担更高晋级期待，心理项更接近相互抵消。",
+          "text_en": "Ivory Coast face pressure as first-time World Cup knockout participants, but Norway also carry higher expectations through their star attack, making the pressure factor broadly offsetting."
+        },
+        {
+          "factor_id": "PEN_SUDDEN_DEATH_DEPTH",
+          "label_cn": "延长点球轮次的不确定性",
+          "label_en": "Sudden-death depth uncertainty",
+          "direction": "neutral",
+          "impact_cn": "前五轮之后主罚质量会快速受换人、体能和非专职主罚手影响，因此延长点球更应被视为高随机分支。",
+          "impact_en": "After the first five rounds, taker quality becomes more sensitive to substitutions, fatigue and non-specialist takers, so sudden death should be treated as a high-randomness branch.",
+          "text_cn": "前五轮之后主罚质量会快速受换人、体能和非专职主罚手影响，因此延长点球更应被视为高随机分支。",
+          "text_en": "After the first five rounds, taker quality becomes more sensitive to substitutions, fatigue and non-specialist takers, so sudden death should be treated as a high-randomness branch."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is drawn after 90 minutes and remains level after extra time. Inputs include the 90-minute forecast, extra-time mini-pipeline output, penalty evidence, and goalkeeper/taker/pressure factors.",
+      "workflow_en": "Penalty-specific flow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollouts → shootout score matrix → penalty-tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "ready",
+    "penalty_condition_calibrator": "ready",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-06-29T14:30:19.971446Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-stage mechanisms; MAS rollout provides conditional paths for 90 minutes, extra time if level, and penalties if still level; Monte Carlo samples the full path tree.",
+  "architecture_en": "Extra time and penalties are no longer separate post-processing outputs; both are driven by the same MAS conditional rollout. The three frontend tabs are just different slices of the same full path distribution, with the JSON structure kept compatible with v6.2.2."
+}

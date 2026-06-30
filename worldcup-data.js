@@ -478,7 +478,7 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M76", "M74", "M75"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M78", "M77", "M79"];
 
 window.WORLD_CUP_KNOCKOUT_PROGRESS = {
   rounds: {
@@ -486,6 +486,48 @@ window.WORLD_CUP_KNOCKOUT_PROGRESS = {
       M73: {
         status: "finished",
         teams: ["RSA", "CAN"]
+      },
+      M74: {
+        status: "scheduled",
+        teams: ["GER", "PAR"],
+        matchTime: "6月29日 20:30 UTC",
+        kickoffUtc: "2026-06-29T20:30:00Z",
+        source: "E1 vs D2"
+      },
+      M75: {
+        status: "scheduled",
+        teams: ["NED", "MAR"],
+        matchTime: "6月30日 01:00 UTC",
+        kickoffUtc: "2026-06-30T01:00:00Z",
+        source: "F1 vs C2"
+      },
+      M76: {
+        status: "scheduled",
+        teams: ["BRA", "JPN"],
+        matchTime: "6月29日 17:00 UTC",
+        kickoffUtc: "2026-06-29T17:00:00Z",
+        source: "C1 vs F2"
+      },
+      M77: {
+        status: "scheduled",
+        teams: ["FRA", "SWE"],
+        matchTime: "6月30日 21:00 UTC",
+        kickoffUtc: "2026-06-30T21:00:00Z",
+        source: "I1 vs F3"
+      },
+      M78: {
+        status: "scheduled",
+        teams: ["NOR", "CIV"],
+        matchTime: "6月30日 17:00 UTC",
+        kickoffUtc: "2026-06-30T17:00:00Z",
+        source: "I2 vs E2"
+      },
+      M79: {
+        status: "scheduled",
+        teams: ["MEX", "ECU"],
+        matchTime: "7月1日 01:00 UTC",
+        kickoffUtc: "2026-07-01T01:00:00Z",
+        source: "A1 vs E3"
       }
     }
   }

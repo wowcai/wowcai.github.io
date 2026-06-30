@@ -1,0 +1,204 @@
+{
+  "schema_version": "2.1",
+  "display_contract": "knockout_card_unified_v6_1",
+  "stage": "knockout",
+  "match_id": "M78",
+  "round_label": "knockout",
+  "team_a": "Norway",
+  "team_b": "Ivory Coast",
+  "kickoff_utc": "2026-06-30T13:00:00-04:00",
+  "venue": "AT&T Stadium, Arlington, Texas",
+  "advancement": {
+    "team_a": 0.5956730769230769,
+    "team_b": 0.4043269230769231,
+    "favorite": "Norway"
+  },
+  "resolution": {
+    "normal_time": 0.7288461538461537,
+    "extra_time": 0.12980769230769226,
+    "penalties": 0.14134615384615365
+  },
+  "normal_time_top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.12520833333333334,
+      "goals_a": 1,
+      "goals_b": 1
+    },
+    {
+      "score": "1-0",
+      "probability": 0.10229166666666667,
+      "goals_a": 1,
+      "goals_b": 0
+    },
+    {
+      "score": "2-1",
+      "probability": 0.091875,
+      "goals_a": 2,
+      "goals_b": 1
+    }
+  ],
+  "entry_probability": {
+    "extra_time": 0.2711538461538459,
+    "penalties": 0.14134615384615365
+  },
+  "path_top": [
+    {
+      "rank": 1,
+      "display_slot": "normal_time",
+      "display_slot_cn": "90分钟解决",
+      "label": "90分钟2-1，Norway常规时间晋级。",
+      "summary_cn": "90分钟2-1，Norway常规时间晋级。",
+      "probability": 0.09903846153846153,
+      "resolution_type": "normal_time",
+      "normal_time_score": "2-1",
+      "extra_time_increment": null,
+      "after_extra_time_score": "2-1",
+      "penalty_score": null,
+      "advancer_team": "Norway",
+      "path_id": "BMC_993c01d5e4c8",
+      "display_slot_en": "Settled in 90 minutes",
+      "label_en": "2-1 after 90 minutes, Norway advance in regulation.",
+      "summary_en": "2-1 after 90 minutes, Norway advance in regulation."
+    },
+    {
+      "rank": 2,
+      "display_slot": "extra_time",
+      "display_slot_cn": "加时解决",
+      "label": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+      "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+      "probability": 0.020192307692307693,
+      "resolution_type": "extra_time",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-1",
+      "after_extra_time_score": "1-2",
+      "penalty_score": null,
+      "advancer_team": "Ivory Coast",
+      "path_id": "BMC_c382957d0433",
+      "display_slot_en": "Settled in extra time",
+      "label_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time.",
+      "summary_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time."
+    },
+    {
+      "rank": 3,
+      "display_slot": "penalties",
+      "display_slot_cn": "点球解决",
+      "label": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+      "summary_cn": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+      "probability": 0.009615384615384616,
+      "resolution_type": "penalties",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-0",
+      "after_extra_time_score": "1-1",
+      "penalty_score": "4-5",
+      "advancer_team": "Ivory Coast",
+      "path_id": "BMC_60abf348df78",
+      "display_slot_en": "Resolved on penalties",
+      "label_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties.",
+      "summary_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties."
+    }
+  ],
+  "updated_at": "2026-06-29T14:30:19.971446Z",
+  "method": "unified_knockout_path_distribution",
+  "path_distribution_source": "knockout_path_distribution",
+  "display_path_top3": [
+    {
+      "rank": 1,
+      "display_slot": "normal_time",
+      "display_slot_cn": "90分钟解决",
+      "label": "90分钟2-1，Norway常规时间晋级。",
+      "summary_cn": "90分钟2-1，Norway常规时间晋级。",
+      "probability": 0.09903846153846153,
+      "resolution_type": "normal_time",
+      "normal_time_score": "2-1",
+      "extra_time_increment": null,
+      "after_extra_time_score": "2-1",
+      "penalty_score": null,
+      "advancer_team": "Norway",
+      "path_id": "BMC_993c01d5e4c8",
+      "display_slot_en": "Settled in 90 minutes",
+      "label_en": "2-1 after 90 minutes, Norway advance in regulation.",
+      "summary_en": "2-1 after 90 minutes, Norway advance in regulation."
+    },
+    {
+      "rank": 2,
+      "display_slot": "extra_time",
+      "display_slot_cn": "加时解决",
+      "label": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+      "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Ivory Coast加时晋级。",
+      "probability": 0.020192307692307693,
+      "resolution_type": "extra_time",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-1",
+      "after_extra_time_score": "1-2",
+      "penalty_score": null,
+      "advancer_team": "Ivory Coast",
+      "path_id": "BMC_c382957d0433",
+      "display_slot_en": "Settled in extra time",
+      "label_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time.",
+      "summary_en": "1-1 at 90 minutes into extra time, extra-time delta 0-1, Ivory Coast advance in extra time."
+    },
+    {
+      "rank": 3,
+      "display_slot": "penalties",
+      "display_slot_cn": "点球解决",
+      "label": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+      "summary_cn": "90分钟1-1、加时0-0后仍平，Ivory Coast点球晋级。",
+      "probability": 0.009615384615384616,
+      "resolution_type": "penalties",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-0",
+      "after_extra_time_score": "1-1",
+      "penalty_score": "4-5",
+      "advancer_team": "Ivory Coast",
+      "path_id": "BMC_60abf348df78",
+      "display_slot_en": "Resolved on penalties",
+      "label_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties.",
+      "summary_en": "1-1 at 90 minutes, still level after 0-0 in extra time, Ivory Coast advance on penalties."
+    }
+  ],
+  "raw_path_top": [
+    {
+      "rank": 1,
+      "label": "90分钟2-1，Norway常规时间晋级。",
+      "probability": 0.09903846153846153,
+      "resolution_type": "normal_time",
+      "label_en": "2-1 after 90 minutes, Norway advance in regulation."
+    },
+    {
+      "rank": 2,
+      "label": "90分钟1-0，Norway常规时间晋级。",
+      "probability": 0.08846153846153847,
+      "resolution_type": "normal_time",
+      "label_en": "1-0 at 90 minutes, Norway advance in regulation."
+    },
+    {
+      "rank": 3,
+      "label": "90分钟0-1，Ivory Coast常规时间晋级。",
+      "probability": 0.0764423076923077,
+      "resolution_type": "normal_time",
+      "label_en": "0-1 at 90 minutes, Ivory Coast advance in regulation."
+    },
+    {
+      "rank": 4,
+      "label": "90分钟2-0，Norway常规时间晋级。",
+      "probability": 0.075,
+      "resolution_type": "normal_time",
+      "label_en": "2-0 after 90 minutes, Norway advance in regulation."
+    },
+    {
+      "rank": 5,
+      "label": "90分钟1-2，Ivory Coast常规时间晋级。",
+      "probability": 0.06442307692307692,
+      "resolution_type": "normal_time",
+      "label_en": "1-2 after 90 minutes, Ivory Coast advance in regulation."
+    },
+    {
+      "rank": 6,
+      "label": "90分钟3-0，Norway常规时间晋级。",
+      "probability": 0.04230769230769231,
+      "resolution_type": "normal_time",
+      "label_en": "3-0 after 90 minutes, Norway advance in regulation."
+    }
+  ]
+}

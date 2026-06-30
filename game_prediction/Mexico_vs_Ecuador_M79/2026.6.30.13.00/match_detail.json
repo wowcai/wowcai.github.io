@@ -1,0 +1,1274 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M79",
+    "team_a": "Mexico",
+    "team_b": "Ecuador",
+    "kickoff_utc": "2026-06-30T19:00:00-06:00",
+    "venue": "Estadio Azteca / Estadio Banorte, Mexico City",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": false,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.5788461538461538,
+      "team_b": 0.42115384615384616,
+      "favorite": "Mexico"
+    },
+    "resolution": {
+      "normal_time": 0.7072115384615383,
+      "extra_time": 0.11490384615384613,
+      "penalties": 0.17788461538461517
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13666666666666666,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.130625,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "0-0",
+        "probability": 0.11791666666666667,
+        "goals_a": 0,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Mexico常规时间晋级。",
+        "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+        "probability": 0.13076923076923078,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Mexico",
+        "path_id": "BMC_2cccc2f2ab3d",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Mexico advances in normal time.",
+        "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Mexico",
+        "path_id": "BMC_9bc19242c322",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+        "summary_cn": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "0-0",
+        "penalty_score": "3-4",
+        "advancer_team": "Ecuador",
+        "path_id": "BMC_a5dfa49d0688",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties.",
+        "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Mexico常规时间晋级。",
+        "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+        "probability": 0.13076923076923078,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Mexico",
+        "path_id": "BMC_2cccc2f2ab3d",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Mexico advances in normal time.",
+        "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Mexico",
+        "path_id": "BMC_9bc19242c322",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+        "summary_cn": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "0-0",
+        "penalty_score": "3-4",
+        "advancer_team": "Ecuador",
+        "path_id": "BMC_a5dfa49d0688",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties.",
+        "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+      }
+    ],
+    "favorite": "Mexico",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.17788461538461517,
+        "probability_band": "17.8%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ecuador",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009615384615384616,
+            "path_probability": 0.009615384615384616,
+            "path_id": "BMC_a5dfa49d0688",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ecuador",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009615384615384616,
+            "path_probability": 0.009615384615384616,
+            "path_id": "BMC_183ee55c669f",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Ecuador点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ecuador",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_33d4cef0d402",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Ecuador点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After neither 90 minutes nor extra time produces a winner, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.11490384615384613,
+        "probability_band": "11.5%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Mexico",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.026442307692307692,
+            "path_probability": 0.026442307692307692,
+            "path_id": "BMC_9bc19242c322",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ecuador",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.016826923076923076,
+            "path_probability": 0.016826923076923076,
+            "path_id": "BMC_809e941c7ac3",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Ecuador加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Ecuador advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ecuador",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.014903846153846155,
+            "path_probability": 0.014903846153846155,
+            "path_id": "BMC_133c3496482d",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Ecuador加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; Ecuador advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk appetite become amplified in extra time and create winner-deciding paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.3019230769230769,
+        "probability_band": "30.2%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ecuador",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.10288461538461538,
+            "path_probability": 0.10288461538461538,
+            "path_id": "BMC_e7c0ab25e10c",
+            "summary_cn": "90分钟0-1，Ecuador常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Ecuador advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ecuador",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.0673076923076923,
+            "path_probability": 0.0673076923076923,
+            "path_id": "BMC_c7eace2bd174",
+            "summary_cn": "90分钟1-2，Ecuador常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Ecuador advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ecuador",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.05096153846153846,
+            "path_probability": 0.05096153846153846,
+            "path_id": "BMC_6ad47803d3d7",
+            "summary_cn": "90分钟0-2，Ecuador常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Ecuador advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog may advance through a normal-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 159,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Mexico",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.13076923076923078,
+          "path_probability": 0.13076923076923078,
+          "path_id": "BMC_2cccc2f2ab3d",
+          "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Ecuador",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10288461538461538,
+          "path_probability": 0.10288461538461538,
+          "path_id": "BMC_e7c0ab25e10c",
+          "summary_cn": "90分钟0-1，Ecuador常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Ecuador advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Mexico",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08173076923076923,
+          "path_probability": 0.08173076923076923,
+          "path_id": "BMC_2ca8e7784725",
+          "summary_cn": "90分钟2-0，Mexico常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Mexico advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Mexico",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08028846153846154,
+          "path_probability": 0.08028846153846154,
+          "path_id": "BMC_37eb5912b1d5",
+          "summary_cn": "90分钟2-1，Mexico常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Mexico advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Ecuador",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.0673076923076923,
+          "path_probability": 0.0673076923076923,
+          "path_id": "BMC_c7eace2bd174",
+          "summary_cn": "90分钟1-2，Ecuador常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Ecuador advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Mexico常规时间晋级。",
+          "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+          "probability": 0.13076923076923078,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Mexico",
+          "path_id": "BMC_2cccc2f2ab3d",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Mexico advances in normal time.",
+          "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+          "probability": 0.026442307692307692,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Mexico",
+          "path_id": "BMC_9bc19242c322",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+          "summary_cn": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+          "probability": 0.009615384615384616,
+          "resolution_type": "penalties",
+          "normal_time_score": "0-0",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "0-0",
+          "penalty_score": "3-4",
+          "advancer_team": "Ecuador",
+          "path_id": "BMC_a5dfa49d0688",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties.",
+          "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Mexico常规时间晋级。",
+        "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+        "probability": 0.13076923076923078,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Mexico",
+        "path_id": "BMC_2cccc2f2ab3d",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Mexico advances in normal time.",
+        "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Mexico",
+        "path_id": "BMC_9bc19242c322",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+        "summary_cn": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "0-0",
+        "penalty_score": "3-4",
+        "advancer_team": "Ecuador",
+        "path_id": "BMC_a5dfa49d0688",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties.",
+        "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.195,
+          "base_event_probability": 0.195,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.043958333333333335,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open back-and-forth game, with both attacks converting."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.034166666666666665,
+              "rationale_cn": "70分钟仍平后的风险偏好分叉：墨西哥更冒险，厄瓜多尔更能、抢断后的快速转换；Mexico打破对方防守后扩大领先优势。",
+              "rationale_en": "If it is still level after 70 minutes, risk appetite diverges: Mexico becomes more adventurous, while Ecuador is better positioned for quick transitions after ball wins; Mexico then breaks the defense and extends the lead."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.01875,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.018125,
+              "rationale_cn": "Ecuador充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Ecuador fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.013958333333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-1",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least four total goals.",
+          "rationale_en": "The match shifts into a more open rhythm; transitions, set pieces or space created after a lead push total goals well above the low-scoring main forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.09020833333333336,
+          "base_event_probability": 0.09020833333333336,
+          "attention_level": "low",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.03333333333333333,
+              "rationale_cn": "70分钟仍平后的风险偏好分叉：墨西哥更冒险，厄瓜多尔更能；Mexico打破对方防守后扩大领先优势。",
+              "rationale_en": "If it is still level after 70 minutes, risk appetite diverges: Mexico becomes more adventurous and Ecuador becomes more transition-oriented; Mexico breaks the defense and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.013333333333333334,
+              "rationale_cn": "抢断后的快速转换、定位球、纪律与点球锚点在加时和末端路径被放大；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Fast transitions after ball wins, set pieces, discipline and the penalty anchor become amplified in extra-time and late-game paths; the match is pulled into a high-risk open rhythm with growing space behind the defense."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.012916666666666667,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；Ecuador充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Compact defending compresses attacking space; Ecuador fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.009791666666666667,
+              "rationale_cn": "70分钟仍平后的风险偏好分叉：墨西哥更冒险，厄瓜多尔更能、抢断后的快速转换；Mexico打破对方防守后扩大领先优势。",
+              "rationale_en": "If it is still level after 70 minutes, risk appetite diverges: Mexico becomes more adventurous, while Ecuador is better positioned for quick transitions after ball wins; Mexico then breaks the defense and extends the lead."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.004166666666666667,
+              "rationale_cn": "70分钟仍平后的风险偏好分叉：墨西哥更冒险，厄瓜多尔更能；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "If it is still level after 70 minutes, risk appetite diverges: Mexico becomes more adventurous and Ecuador becomes more transition-oriented, pulling the match into a high-risk open rhythm with growing space behind the defense."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-1",
+            "0-3"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least three goals.",
+          "rationale_en": "An early goal, card pressure, fatigue or defensive imbalance breaks the match open and one side pulls clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.26395833333333324,
+          "base_event_probability": 0.26395833333333324,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.10583333333333333,
+              "rationale_cn": "Ecuador通过压迫或转换取得一球优势。",
+              "rationale_en": "Ecuador gains a one-goal edge through pressing or transition play."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.060625,
+              "rationale_cn": "Ecuador通过压迫或转换取得一球优势。",
+              "rationale_en": "Ecuador gains a one-goal edge through pressing or transition play."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.036875,
+              "rationale_cn": "Ecuador充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Ecuador fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.018125,
+              "rationale_cn": "Ecuador充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Ecuador fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.013958333333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side that is less favored pre-match or in the main forecast wins within 90 minutes.",
+          "rationale_en": "The underdog changes the result directly within 90 minutes through low-block resilience, counterattacking efficiency, set pieces or a key error by the favored side."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "防守",
+          "impact_cn": "墨西哥小组赛全胜且零失球，并在墨西哥城作战，因此normal_time 0-30：墨西哥更可能用高压和快速组合抢开局，厄瓜多尔优先保持紧凑低位，限制中路渗透。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_c1c0b5c67cf7",
+            "E_990878825a35",
+            "E_f1b15f27d3cf",
+            "E_1a6c584809cf",
+            "E_dd9195992cd6",
+            "E_c41f04427f16",
+            "E_030fdc406d2d",
+            "E_c71dd962f016",
+            "E_83687a243f29",
+            "E_5fc8721bb285"
+          ],
+          "source_names": [
+            "FIFA Training Centre / TikTok",
+            "FIFA Training Centre",
+            "The Athletic"
+          ],
+          "label_en": "Defense",
+          "impact_en": "Mexico won every group match without conceding and will play in Mexico City, so in minutes 0-30 Mexico is more likely to press high and combine quickly, while Ecuador keeps a compact low block and limits central penetration.",
+          "text_cn": "墨西哥小组赛全胜且零失球，并在墨西哥城作战，因此normal_time 0-30：墨西哥更可能用高压和快速组合抢开局，厄瓜多尔优先保持紧凑低位，限制中路渗透。",
+          "text_en": "Mexico won every group match without conceding and will play in Mexico City, so in minutes 0-30 Mexico is more likely to press high and combine quickly, while Ecuador keeps a compact low block and limits central penetration."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "心理",
+          "impact_cn": "墨西哥以主场和小组第一身份进入淘汰赛，外部期待较高，因此normal_time 0-30：淘汰赛开局双方都不必立即失衡，墨西哥主导节奏，厄瓜多尔优先不让比赛开放。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_030fdc406d2d",
+            "E_96747cad89d0",
+            "E_c71dd962f016",
+            "E_a02017970106",
+            "E_c30e0d28611f",
+            "E_b476bbd22814",
+            "E_df2261abf6fb",
+            "E_4b4966785660",
+            "E_e231cc1e7637",
+            "E_c3318b1d9a64"
+          ],
+          "source_names": [
+            "The Athletic",
+            "The Guardian",
+            "Fox Sports"
+          ],
+          "label_en": "Psychology",
+          "impact_en": "Mexico enters the knockout stage at home and as group winner, with high external expectations. In minutes 0-30, neither side needs to lose balance immediately: Mexico should control tempo, while Ecuador prioritizes keeping the match closed.",
+          "text_cn": "墨西哥以主场和小组第一身份进入淘汰赛，外部期待较高，因此normal_time 0-30：淘汰赛开局双方都不必立即失衡，墨西哥主导节奏，厄瓜多尔优先不让比赛开放。",
+          "text_en": "Mexico enters the knockout stage at home and as group winner, with high external expectations. In minutes 0-30, neither side needs to lose balance immediately: Mexico should control tempo, while Ecuador prioritizes keeping the match closed."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "进攻",
+          "impact_cn": "定位球在赛事进球中占有可观比例，低比分淘汰赛中权重会被放大，因此normal_time 0-30：若厄瓜多尔低位限制运动战，墨西哥会更多依赖角球、边路任意球和二点球制造破局点。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_9be0beb2eb36",
+            "E_ea26c933bf16",
+            "E_7aa9f63afbf6",
+            "E_555c08aef9ab",
+            "E_c4d58e26bd28",
+            "E_b5c6a728d8ec",
+            "E_83c31664780a",
+            "E_cfd60bdc5b12",
+            "E_8326503bd839",
+            "E_7e63b2a2ee62",
+            "E_f1b15f27d3cf"
+          ],
+          "source_names": [
+            "FIFA Training Centre",
+            "FIFA",
+            "ESPN"
+          ],
+          "label_en": "Attack",
+          "impact_en": "Set pieces account for a meaningful share of tournament goals and gain weight in low-scoring knockout matches. In minutes 0-30, if Ecuador’s low block limits open play, Mexico will rely more on corners, wide free kicks and second balls to create the breakthrough.",
+          "text_cn": "定位球在赛事进球中占有可观比例，低比分淘汰赛中权重会被放大，因此normal_time 0-30：若厄瓜多尔低位限制运动战，墨西哥会更多依赖角球、边路任意球和二点球制造破局点。",
+          "text_en": "Set pieces account for a meaningful share of tournament goals and gain weight in low-scoring knockout matches. In minutes 0-30, if Ecuador’s low block limits open play, Mexico will rely more on corners, wide free kicks and second balls to create the breakthrough."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "进攻",
+          "impact_cn": "厄瓜多尔进攻端有高而宽的描述，因此normal_time 0-30：若墨西哥高压有效，厄瓜多尔转换机会可能较少，只能通过宽点留人威慑。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_1a6c584809cf",
+            "E_4b4966785660",
+            "E_1bd165610443",
+            "E_e231cc1e7637",
+            "E_c1c0b5c67cf7",
+            "E_dd9195992cd6",
+            "E_009c83a39296"
+          ],
+          "source_names": [
+            "The Athletic",
+            "ESPN",
+            "USA Today"
+          ],
+          "label_en": "Attack",
+          "impact_en": "Ecuador’s attack is described as high and wide, so in minutes 0-30, if Mexico’s press works, Ecuador may have fewer transition chances and may mainly threaten by leaving width high.",
+          "text_cn": "厄瓜多尔进攻端有高而宽的描述，因此normal_time 0-30：若墨西哥高压有效，厄瓜多尔转换机会可能较少，只能通过宽点留人威慑。",
+          "text_en": "Ecuador’s attack is described as high and wide, so in minutes 0-30, if Mexico’s press works, Ecuador may have fewer transition chances and may mainly threaten by leaving width high."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "防守",
+          "impact_cn": "关键证据：厄瓜多尔的防线核心皮耶罗·因卡皮埃（阿森纳）和威廉·帕乔（巴黎圣日耳曼）将于6月1日加入厄瓜多尔的2026世界杯备战，凸显厄瓜多尔以效力欧洲顶级俱乐部的后卫为支柱、防守见长的特点。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_F_6cfd56ca590e"
+          ],
+          "source_names": [
+            "FIFA"
+          ],
+          "label_en": "Defense",
+          "impact_en": "Key evidence: Ecuador defensive anchors Piero Hincapié (Arsenal) and Willian Pacho (Paris Saint-Germain) are set to join Ecuador’s 2026 World Cup preparations on June 1, highlighting a defense built around defenders from top European clubs.",
+          "text_cn": "关键证据：厄瓜多尔的防线核心皮耶罗·因卡皮埃（阿森纳）和威廉·帕乔（巴黎圣日耳曼）将于6月1日加入厄瓜多尔的2026世界杯备战，凸显厄瓜多尔以效力欧洲顶级俱乐部的后卫为支柱、防守见长的特点。",
+          "text_en": "Key evidence: Ecuador defensive anchors Piero Hincapié (Arsenal) and Willian Pacho (Paris Saint-Germain) are set to join Ecuador’s 2026 World Cup preparations on June 1, highlighting a defense built around defenders from top European clubs."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "证据因素 6",
+          "impact_cn": "关键球员：Mexico’s reported starting lineup vs Czechia included goalkeeper Raul Rangel and defenders J…",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_6d23bd3a9593"
+          ],
+          "source_names": [
+            "USA Today"
+          ],
+          "label_en": "Evidence factor 6",
+          "impact_en": "Key players: Mexico’s reported starting lineup against Czechia included goalkeeper Raúl Rangel and defenders J...",
+          "text_cn": "关键球员：Mexico’s reported starting lineup vs Czechia included goalkeeper Raul Rangel and defenders J…",
+          "text_en": "Key players: Mexico’s reported starting lineup against Czechia included goalkeeper Raúl Rangel and defenders J..."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2927884615384613,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.17077175697865365,
+          "joint_probability": 0.05,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.17077175697865365
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.13464696223316922
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "A队凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal extra-time result created by counters, set pieces or substitute impact within the 30-minute period.",
+          "rationale_en": "Team A wins extra time by one goal through fitness, bench impact or pressing advantages."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.052545155993431895,
+          "joint_probability": 0.015384615384615385,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.052545155993431895
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.011494252873563227
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.0032840722495894935
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.0016420361247947467
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time as the match shifts from caution into open exchanges.",
+          "rationale_en": "Extra time opens up and both sides convert one effective chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.042692939244663414,
+          "joint_probability": 0.0125,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.042692939244663414
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.018062397372742213
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.011494252873563227
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.00492610837438424
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "A队在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "An extra-time blow-through path where one side wins by at least two goals, or the extra-time total reaches three or more goals.",
+          "rationale_en": "Team A pulls away after the opponent suffers a fitness or psychological collapse."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_ENTRY",
+          "label_cn": "加时入口状态",
+          "impact_cn": "加时不是独立比赛，而是90分钟平局分支",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Extra-time entry state",
+          "impact_en": "Extra time is not an independent match; it is the branch after a 90-minute draw.",
+          "text_cn": "加时不是独立比赛，而是90分钟平局分支",
+          "text_en": "Extra time is not an independent match; it is the branch after a 90-minute draw."
+        },
+        {
+          "factor_id": "ET_FATIGUE",
+          "label_cn": "体能与主力留存",
+          "impact_cn": "采用常规时间预测、淘汰赛证据块、体能/替补/风险偏好/点球能力/压力因素的后备整合",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Fatigue and key-player availability",
+          "impact_en": "Uses a fallback integration of the normal-time forecast, knockout evidence blocks, fitness, bench depth, risk appetite, penalty ability and pressure factors.",
+          "text_cn": "采用常规时间预测、淘汰赛证据块、体能/替补/风险偏好/点球能力/压力因素的后备整合",
+          "text_en": "Uses a fallback integration of the normal-time forecast, knockout evidence blocks, fitness, bench depth, risk appetite, penalty ability and pressure factors."
+        },
+        {
+          "factor_id": "ET_ATTACK_PATH",
+          "label_cn": "高点与定位球路径",
+          "impact_cn": "未获得足够结构化LLM讨论时，使用保守条件先验",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Aerial and set-piece route",
+          "impact_en": "Uses conservative conditional priors when there is not enough structured LLM discussion.",
+          "text_cn": "未获得足够结构化LLM讨论时，使用保守条件先验",
+          "text_en": "Uses conservative conditional priors when there is not enough structured LLM discussion."
+        },
+        {
+          "factor_id": "ET_COUNTER",
+          "label_cn": "防守与反击窗口",
+          "impact_cn": "核心争议在于强队是否提前冒险避免点球，以及弱队能否靠体能和防守纪律拖入点球",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Defensive and counterattack window",
+          "impact_en": "The key question is whether the stronger side risks more to avoid penalties, and whether the weaker side can use fitness and defensive discipline to drag the match to a shootout.",
+          "text_cn": "核心争议在于强队是否提前冒险避免点球，以及弱队能否靠体能和防守纪律拖入点球",
+          "text_en": "The key question is whether the stronger side risks more to avoid penalties, and whether the weaker side can use fitness and defensive discipline to drag the match to a shootout."
+        },
+        {
+          "factor_id": "ET_RISK",
+          "label_cn": "105分钟后风险偏好",
+          "impact_cn": "加时rollout以0-0保守路径为基础，同时保留强队加时解决和弱队反击偷袭两类分支",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Risk preference after 105 minutes",
+          "impact_en": "The extra-time rollout is anchored by a conservative 0-0 path while retaining two branches: the stronger side settling it in extra time and the weaker side stealing it on the counter.",
+          "text_cn": "加时rollout以0-0保守路径为基础，同时保留强队加时解决和弱队反击偷袭两类分支",
+          "text_en": "The extra-time rollout is anchored by a conservative 0-0 path while retaining two branches: the stronger side settling it in extra time and the weaker side stealing it on the counter."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time-specific flow: evidence integration → four expert agents → committee aggregation → conditional rollouts → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.17788461538461517,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Consecutive goalkeeper saves swing the shootout outcome."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Consecutive goalkeeper saves swing the shootout outcome."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive saves, or the opponent misses repeatedly, causing the shootout score to widen quickly.",
+          "rationale_en": "Consecutive goalkeeper saves swing the shootout outcome."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "A core taker for the favored team misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, allowing the underdog to advance on penalties.",
+          "rationale_en": "A core taker for the favored team misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both teams are strong through the first five kicks, pushing the shootout into sudden death."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides are strong through the first five rounds, and the winner is decided only after sudden death from round six onward.",
+          "rationale_en": "Both teams are strong through the first five kicks, pushing the shootout into sudden death."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_BASELINE",
+          "label_cn": "点球胜率口径",
+          "impact_cn": "采用点球能力、门将状态、淘汰赛经验与压力因素的保守后备整合",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Penalty-win probability framing",
+          "impact_en": "Uses a conservative fallback integration of penalty ability, goalkeeper form, knockout experience and pressure factors.",
+          "text_cn": "采用点球能力、门将状态、淘汰赛经验与压力因素的保守后备整合",
+          "text_en": "Uses a conservative fallback integration of penalty ability, goalkeeper form, knockout experience and pressure factors."
+        },
+        {
+          "factor_id": "PEN_TAKER_DEPTH",
+          "label_cn": "主罚手深度",
+          "impact_cn": "点球大战随机性强，应以门将、主罚手深度、淘汰赛经验和心理压力作小幅条件调整",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Penalty taker depth",
+          "impact_en": "Penalty shootouts are highly random, so only small conditional adjustments should be made for goalkeepers, taker depth, knockout experience and pressure.",
+          "text_cn": "点球大战随机性强，应以门将、主罚手深度、淘汰赛经验和心理压力作小幅条件调整",
+          "text_en": "Penalty shootouts are highly random, so only small conditional adjustments should be made for goalkeepers, taker depth, knockout experience and pressure."
+        },
+        {
+          "factor_id": "PEN_NEGATIVE_SAMPLE",
+          "label_cn": "负面样本与证据缺口",
+          "impact_cn": "公开赛前资料通常无法确认具体点球顺序，点球手只作为经验候选",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Negative samples and evidence gaps",
+          "impact_en": "Public pre-match information usually cannot confirm the exact penalty order, so possible takers are treated only as experience-based candidates.",
+          "text_cn": "公开赛前资料通常无法确认具体点球顺序，点球手只作为经验候选",
+          "text_en": "Public pre-match information usually cannot confirm the exact penalty order, so possible takers are treated only as experience-based candidates."
+        },
+        {
+          "factor_id": "PEN_KEEPER",
+          "label_cn": "门将扑点证据",
+          "impact_cn": "点球rollout以一球差和延长点球为主，保留门将连续扑点和压力失误路径",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper penalty evidence",
+          "impact_en": "The penalty rollouts mainly cluster around one-goal margins and sudden death, while preserving goalkeeper-save and pressure-miss paths.",
+          "text_cn": "点球rollout以一球差和延长点球为主，保留门将连续扑点和压力失误路径",
+          "text_en": "The penalty rollouts mainly cluster around one-goal margins and sudden death, while preserving goalkeeper-save and pressure-miss paths."
+        },
+        {
+          "factor_id": "PEN_PRESSURE",
+          "label_cn": "压力背景",
+          "impact_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Pressure context",
+          "impact_en": "A common penalty-shootout score family, conservatively calibrated using goalkeeper, taker-depth and pressure factors.",
+          "text_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准",
+          "text_en": "A common penalty-shootout score family, conservatively calibrated using goalkeeper, taker-depth and pressure factors."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty-specific flow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollouts → shootout score matrix → penalty-tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-06-30T05:02:04.026281Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline uses pre-match evidence and an expert committee to build cross-stage mechanisms. MAS rollouts produce conditional paths for 90 minutes, extra time if drawn, and penalties if still drawn; Monte Carlo then samples the complete path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same MAS conditional rollouts. The three front-end tabs are different slices of one complete path distribution, while the JSON structure remains v6.2.2-compatible."
+}

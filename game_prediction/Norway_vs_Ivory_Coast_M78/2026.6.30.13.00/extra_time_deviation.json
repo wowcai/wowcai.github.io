@@ -1,0 +1,487 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.46631205673758847,
+      "conditional_probability": 0.46631205673758847,
+      "joint_probability": 0.12644230769230755,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.46631205673758847,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "最高单项分支。90分钟打平后的主要入口是1-1、0-0和2-2，其中0-0与1-1入口都会强化淘汰赛加时的风险控制；若105分钟仍平，双方点球思维增强，挪威虽有定位球和高点优势，但不会无条件持续压上，科特迪瓦也有足够防守结构把比赛拖入点球。",
+      "label_en": "0-0",
+      "rationale_en": "The highest single branch. The main extra-time entries after a 90-minute draw are 1-1, 0-0 and 2-2; 0-0 and 1-1 both reinforce knockout risk control in extra time. If it is still level after 105 minutes, both sides become more penalty-aware. Norway has set-piece and aerial advantages, but will not press recklessly without limit, and Ivory Coast has enough defensive structure to drag the match to penalties."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.1843971631205675,
+      "conditional_probability": 0.1843971631205675,
+      "joint_probability": 0.05,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.1843971631205675,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "挪威加时取胜的主路径。末轮大轮换、Haaland/Sørloth高点、Ødegaard组织、传中、角球、前场任意球和二点球，使挪威在90-105分钟拥有小幅主动权；但科特迪瓦低位紧凑和身体对抗限制其不能被上调到强优势。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Norway’s main extra-time win path. Heavy rotation in the final group match, Haaland/Sørloth as aerial targets, Ødegaard’s creation, crosses, corners, attacking free kicks and second balls give Norway a small initiative from 90 to 105 minutes. Ivory Coast’s compact low block and physicality prevent this from becoming a strong advantage."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.16666666666666677,
+      "conditional_probability": 0.16666666666666677,
+      "joint_probability": 0.04519230769230769,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.16666666666666677,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "科特迪瓦加时取胜的主要反制路径。若挪威为避免点球而边后卫前提，科特迪瓦可通过Amad、Pépé、Yan Diomande等速度点打边路转换或身后空间；该路径真实存在，但依赖速度点留场、体能和第一脚转换质量。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Ivory Coast’s main extra-time counter-path. If Norway pushes its fullbacks higher to avoid penalties, Ivory Coast can attack wide transitions and space behind through pace outlets such as Amad, Pépé and Yan Diomande. The path is real, but depends on those pace threats staying on, fitness, and the quality of the first transition pass."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.06205673758865254,
+      "conditional_probability": 0.06205673758865254,
+      "joint_probability": 0.01682692307692308,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.06205673758865254,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "挪威两球加时胜的低概率尾部。需要挪威先通过定位球、传中或禁区混战破局，随后科特迪瓦压出留下第二球空间；更可能发生在2-2、3-3等开放入口或科特迪瓦后场体能崩盘时。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-probability two-goal extra-time win for Norway. It requires Norway to break through first via a set piece, cross or box scramble, after which Ivory Coast pushes up and leaves space for a second goal. It is more likely from open entries such as 2-2 or 3-3, or if Ivory Coast’s back line fades physically."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.04787234042553195,
+      "conditional_probability": 0.04787234042553195,
+      "joint_probability": 0.012980769230769231,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.04787234042553195,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时双方各进一球后仍平，主要来自90分钟2-2或更高比分的开放入口，或加时早段一方先进球后另一方被迫提速。它高于一般多球尾部，但仍明显低于0-0、1-0和0-1，因为淘汰赛加时后段通常降风险。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Both teams score once in extra time and it remains level, mainly from open 90-minute entries at 2-2 or higher, or when one side scores early in extra time and the other is forced to raise the tempo. It is higher than a typical high-goal tail, but still clearly below 0-0, 1-0, and 0-1 because knockout extra time usually becomes more risk-averse late on."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.03014184397163123,
+      "conditional_probability": 0.03014184397163123,
+      "joint_probability": 0.008173076923076924,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.03014184397163123,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "科特迪瓦两球加时胜属于尾部。需要先由边路转换、定位球二点或挪威失误取得领先，再在挪威全线压上时打出第二次反击；其机制存在，但受限于加时整体低节奏和科特迪瓦未必主动冒险。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A two-goal extra-time win for Ivory Coast is a tail outcome. It requires Ivory Coast to lead first through a wide transition, a set-piece second ball or a Norway error, then strike again as Norway pushes up. The mechanism exists, but is limited by the overall low tempo of extra time and by the fact that Ivory Coast may not proactively take risks."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.014184397163120577,
+      "conditional_probability": 0.014184397163120577,
+      "joint_probability": 0.0038461538461538464,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.014184397163120577,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, fatigue collapse / extra-time blowout",
+      "rationale_en": "A low-frequency, high-deviation path caused by fatigue collapse or open end-to-end play in extra time."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.007092198581560289,
+      "conditional_probability": 0.007092198581560289,
+      "joint_probability": 0.0019230769230769232,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.007092198581560289,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score, fatigue collapse / extra-time blowout",
+      "rationale_en": "A low-frequency, high-deviation path caused by fatigue collapse or open end-to-end play in extra time."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.007092198581560289,
+      "conditional_probability": 0.007092198581560289,
+      "joint_probability": 0.0019230769230769232,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.007092198581560289,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "rationale_en": "A low-frequency, high-deviation path caused by fatigue collapse or open end-to-end play in extra time."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.007092198581560289,
+      "conditional_probability": 0.007092198581560289,
+      "joint_probability": 0.0019230769230769232,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.007092198581560289,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A supplemental path in which both teams score in extra time but still remain level."
+    },
+    {
+      "label": "3-2",
+      "score": "3-2",
+      "increment": "3-2",
+      "probability": 0.0017730496453900722,
+      "conditional_probability": 0.0017730496453900722,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017730496453900722,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-2",
+      "rationale_en": "A low-frequency, high-deviation path caused by fatigue collapse or open end-to-end play in extra time."
+    },
+    {
+      "label": "5-0",
+      "score": "5-0",
+      "increment": "5-0",
+      "probability": 0.0017730496453900722,
+      "conditional_probability": 0.0017730496453900722,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017730496453900722,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "5-0",
+      "rationale_en": "Derived from the unified knockout-path distribution."
+    },
+    {
+      "label": "2-3",
+      "score": "2-3",
+      "increment": "2-3",
+      "probability": 0.0017730496453900722,
+      "conditional_probability": 0.0017730496453900722,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017730496453900722,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-3",
+      "rationale_en": "A low-frequency, high-deviation path caused by fatigue collapse or open end-to-end play in extra time."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.0017730496453900722,
+      "conditional_probability": 0.0017730496453900722,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017730496453900722,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "0-3",
+      "rationale_en": "A low-frequency, high-deviation path caused by fatigue collapse or open end-to-end play in extra time."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.1843971631205675,
+      "joint_probability": 0.05,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.1843971631205675
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.16666666666666677
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "挪威加时取胜的主路径。末轮大轮换、Haaland/Sørloth高点、Ødegaard组织、传中、角球、前场任意球和二点球，使挪威在90-105分钟拥有小幅主动权；但科特迪瓦低位紧凑和身体对抗限制其不能被上调到强优势。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal result in 30 minutes of extra time via counters, set pieces, or substitute impact.",
+      "rationale_en": "Norway’s main extra-time win path. Heavy rotation in the final group match, Haaland/Sørloth as aerial targets, Ødegaard’s creation, crosses, corners, attacking free kicks and second balls give Norway a small initiative from 90 to 105 minutes. Ivory Coast’s compact low block and physicality prevent this from becoming a strong advantage."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.04787234042553195,
+      "joint_probability": 0.012980769230769231,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.04787234042553195
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.014184397163120577
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.007092198581560289
+        },
+        {
+          "score": "2-2",
+          "increment": "2-2",
+          "probability": 0.007092198581560289
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时双方各进一球后仍平，主要来自90分钟2-2或更高比分的开放入口，或加时早段一方先进球后另一方被迫提速。它高于一般多球尾部，但仍明显低于0-0、1-0和0-1，因为淘汰赛加时后段通常降风险。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both sides score in extra time as the match shifts from caution into open exchanges.",
+      "rationale_en": "Both teams score once in extra time and it remains level, mainly from open 90-minute entries at 2-2 or higher, or when one side scores early in extra time and the other is forced to raise the tempo. It is higher than a typical high-goal tail, but still clearly below 0-0, 1-0, and 0-1 because knockout extra time usually becomes more risk-averse late on."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.06205673758865254,
+      "joint_probability": 0.01682692307692308,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.06205673758865254
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.03014184397163123
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.014184397163120577
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.007092198581560289
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "0-2",
+        "2-1"
+      ],
+      "rationale_cn": "挪威两球加时胜的低概率尾部。需要挪威先通过定位球、传中或禁区混战破局，随后科特迪瓦压出留下第二球空间；更可能发生在2-2、3-3等开放入口或科特迪瓦后场体能崩盘时。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A blowout path where one side wins extra time by at least 2 goals, or total goals reach 3 or more.",
+      "rationale_en": "A low-probability two-goal extra-time win for Norway. It requires Norway to break through first via a set piece, cross or box scramble, after which Ivory Coast pushes up and leaves space for a second goal. It is more likely from open entries such as 2-2 or 3-3, or if Ivory Coast’s back line fades physically."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "ET_ROTATION_FITNESS",
+      "label_cn": "挪威轮休后的体能边际",
+      "label_en": "Norway fitness edge after rotation",
+      "direction": "team_a",
+      "impact_cn": "Solbakken末轮轮休含Haaland在内10名主力，关键球员回归使挪威在90分钟后更可能保留冲刺、压迫和高点冲击质量。",
+      "impact_en": "Solbakken rested 10 starters including Haaland in the final group match, so Norway may preserve more pressing, running and aerial quality after 90 minutes.",
+      "text_cn": "Solbakken末轮轮休含Haaland在内10名主力，关键球员回归使挪威在90分钟后更可能保留冲刺、压迫和高点冲击质量。",
+      "text_en": "Solbakken rested 10 starters including Haaland in the final group match, so Norway may preserve more pressing, running and aerial quality after 90 minutes."
+    },
+    {
+      "factor_id": "ET_AERIAL_SET_PIECE",
+      "label_cn": "Haaland/Sørloth高点与Ødegaard组织",
+      "label_en": "Haaland/Sørloth aerial route and Ødegaard creation",
+      "direction": "team_a",
+      "impact_cn": "加时运动战质量下降时，Haaland、Sørloth的禁区高点和Ødegaard的定位球、二点球组织，是挪威1球决胜路径的主要来源。",
+      "impact_en": "When open-play quality drops in extra time, Haaland and Sørloth as box targets plus Ødegaard on set pieces and second balls form Norway’s clearest one-goal route.",
+      "text_cn": "加时运动战质量下降时，Haaland、Sørloth的禁区高点和Ødegaard的定位球、二点球组织，是挪威1球决胜路径的主要来源。",
+      "text_en": "When open-play quality drops in extra time, Haaland and Sørloth as box targets plus Ødegaard on set pieces and second balls form Norway’s clearest one-goal route."
+    },
+    {
+      "factor_id": "ET_IVORY_BLOCK",
+      "label_cn": "科特迪瓦低位防守韧性",
+      "label_en": "Ivory Coast low-block resilience",
+      "direction": "team_b",
+      "impact_cn": "科特迪瓦场均失0.67球且已有2场零封，说明其低位防线和禁区保护不应被低估，这也是加时0-0占比较高的原因。",
+      "impact_en": "Ivory Coast have conceded only 0.67 goals per match with two clean sheets, so their low block and box protection support the high extra-time 0-0 share.",
+      "text_cn": "科特迪瓦场均失0.67球且已有2场零封，说明其低位防线和禁区保护不应被低估，这也是加时0-0占比较高的原因。",
+      "text_en": "Ivory Coast have conceded only 0.67 goals per match with two clean sheets, so their low block and box protection support the high extra-time 0-0 share."
+    },
+    {
+      "factor_id": "ET_IVORY_TRANSITION",
+      "label_cn": "科特迪瓦边路反击窗口",
+      "label_en": "Ivory Coast wide-transition window",
+      "direction": "team_b",
+      "impact_cn": "若挪威为避免点球而在加时压上，科特迪瓦可通过Amad、Pépé、Yan Diomande等边路速度点寻找反击和二次进攻机会。",
+      "impact_en": "If Norway push forward to avoid penalties, Ivory Coast can use wide speed from players such as Amad, Pépé and Yan Diomande to find transition chances.",
+      "text_cn": "若挪威为避免点球而在加时压上，科特迪瓦可通过Amad、Pépé、Yan Diomande等边路速度点寻找反击和二次进攻机会。",
+      "text_en": "If Norway push forward to avoid penalties, Ivory Coast can use wide speed from players such as Amad, Pépé and Yan Diomande to find transition chances."
+    },
+    {
+      "factor_id": "ET_RISK_DROP_105",
+      "label_cn": "105分钟后风险收缩",
+      "label_en": "Risk reduction after 105 minutes",
+      "direction": "neutral",
+      "impact_cn": "如果加时上半场仍未分胜负，双方都会更清楚点球临近，后15分钟的冒险意愿下降，使加时继续低比分的概率上升。",
+      "impact_en": "If the match is still level after the first extra-time period, both teams become more aware that penalties are near, reducing late risk-taking and supporting low-scoring outcomes.",
+      "text_cn": "如果加时上半场仍未分胜负，双方都会更清楚点球临近，后15分钟的冒险意愿下降，使加时继续低比分的概率上升。",
+      "text_en": "If the match is still level after the first extra-time period, both teams become more aware that penalties are near, reducing late risk-taking and supporting low-scoring outcomes."
+    },
+    {
+      "factor_id": "ET_PENALTY_SHADOW",
+      "label_cn": "点球预期牵制加时选择",
+      "label_en": "Penalty expectation shapes extra-time choices",
+      "direction": "neutral",
+      "impact_cn": "点球优势并不明显时，两队都不会无条件押宝点球；但在体能下降后，点球预期仍会限制加时后段的进攻投入。",
+      "impact_en": "With no clear shootout edge, neither side can simply rely on penalties, but the expectation of a shootout still limits late extra-time attacking commitment as fatigue rises.",
+      "text_cn": "点球优势并不明显时，两队都不会无条件押宝点球；但在体能下降后，点球预期仍会限制加时后段的进攻投入。",
+      "text_en": "With no clear shootout edge, neither side can simply rely on penalties, but the expectation of a shootout still limits late extra-time attacking commitment as fatigue rises."
+    }
+  ],
+  "condition_en": "Condition: the match is drawn after 90 minutes. Inputs include the full 90-minute forecast, draw-score distribution, knockout evidence, normal-time tails and MAS conclusions."
+}

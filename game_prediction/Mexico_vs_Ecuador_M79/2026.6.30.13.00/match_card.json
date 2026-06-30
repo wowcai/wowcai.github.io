@@ -1,0 +1,204 @@
+{
+  "schema_version": "2.1",
+  "display_contract": "knockout_card_unified_v6_1",
+  "stage": "knockout",
+  "match_id": "M79",
+  "round_label": "knockout",
+  "team_a": "Mexico",
+  "team_b": "Ecuador",
+  "kickoff_utc": "2026-06-30T19:00:00-06:00",
+  "venue": "Estadio Azteca / Estadio Banorte, Mexico City",
+  "advancement": {
+    "team_a": 0.5788461538461538,
+    "team_b": 0.42115384615384616,
+    "favorite": "Mexico"
+  },
+  "resolution": {
+    "normal_time": 0.7072115384615383,
+    "extra_time": 0.11490384615384613,
+    "penalties": 0.17788461538461517
+  },
+  "normal_time_top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.13666666666666666,
+      "goals_a": 1,
+      "goals_b": 1
+    },
+    {
+      "score": "1-0",
+      "probability": 0.130625,
+      "goals_a": 1,
+      "goals_b": 0
+    },
+    {
+      "score": "0-0",
+      "probability": 0.11791666666666667,
+      "goals_a": 0,
+      "goals_b": 0
+    }
+  ],
+  "entry_probability": {
+    "extra_time": 0.2927884615384613,
+    "penalties": 0.17788461538461517
+  },
+  "path_top": [
+    {
+      "rank": 1,
+      "display_slot": "normal_time",
+      "display_slot_cn": "90分钟解决",
+      "label": "90分钟1-0，Mexico常规时间晋级。",
+      "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+      "probability": 0.13076923076923078,
+      "resolution_type": "normal_time",
+      "normal_time_score": "1-0",
+      "extra_time_increment": null,
+      "after_extra_time_score": "1-0",
+      "penalty_score": null,
+      "advancer_team": "Mexico",
+      "path_id": "BMC_2cccc2f2ab3d",
+      "display_slot_en": "Resolved in 90 minutes",
+      "label_en": "90 minutes 1-0: Mexico advances in normal time.",
+      "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+    },
+    {
+      "rank": 2,
+      "display_slot": "extra_time",
+      "display_slot_cn": "加时解决",
+      "label": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+      "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+      "probability": 0.026442307692307692,
+      "resolution_type": "extra_time",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "1-0",
+      "after_extra_time_score": "2-1",
+      "penalty_score": null,
+      "advancer_team": "Mexico",
+      "path_id": "BMC_9bc19242c322",
+      "display_slot_en": "Resolved in extra time",
+      "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time.",
+      "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time."
+    },
+    {
+      "rank": 3,
+      "display_slot": "penalties",
+      "display_slot_cn": "点球解决",
+      "label": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+      "summary_cn": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+      "probability": 0.009615384615384616,
+      "resolution_type": "penalties",
+      "normal_time_score": "0-0",
+      "extra_time_increment": "0-0",
+      "after_extra_time_score": "0-0",
+      "penalty_score": "3-4",
+      "advancer_team": "Ecuador",
+      "path_id": "BMC_a5dfa49d0688",
+      "display_slot_en": "Resolved on penalties",
+      "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties.",
+      "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+    }
+  ],
+  "updated_at": "2026-06-30T05:02:04.026281Z",
+  "method": "unified_knockout_path_distribution",
+  "path_distribution_source": "knockout_path_distribution",
+  "display_path_top3": [
+    {
+      "rank": 1,
+      "display_slot": "normal_time",
+      "display_slot_cn": "90分钟解决",
+      "label": "90分钟1-0，Mexico常规时间晋级。",
+      "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+      "probability": 0.13076923076923078,
+      "resolution_type": "normal_time",
+      "normal_time_score": "1-0",
+      "extra_time_increment": null,
+      "after_extra_time_score": "1-0",
+      "penalty_score": null,
+      "advancer_team": "Mexico",
+      "path_id": "BMC_2cccc2f2ab3d",
+      "display_slot_en": "Resolved in 90 minutes",
+      "label_en": "90 minutes 1-0: Mexico advances in normal time.",
+      "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+    },
+    {
+      "rank": 2,
+      "display_slot": "extra_time",
+      "display_slot_cn": "加时解决",
+      "label": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+      "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+      "probability": 0.026442307692307692,
+      "resolution_type": "extra_time",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "1-0",
+      "after_extra_time_score": "2-1",
+      "penalty_score": null,
+      "advancer_team": "Mexico",
+      "path_id": "BMC_9bc19242c322",
+      "display_slot_en": "Resolved in extra time",
+      "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time.",
+      "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time."
+    },
+    {
+      "rank": 3,
+      "display_slot": "penalties",
+      "display_slot_cn": "点球解决",
+      "label": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+      "summary_cn": "90分钟0-0、加时0-0后仍平，Ecuador点球晋级。",
+      "probability": 0.009615384615384616,
+      "resolution_type": "penalties",
+      "normal_time_score": "0-0",
+      "extra_time_increment": "0-0",
+      "after_extra_time_score": "0-0",
+      "penalty_score": "3-4",
+      "advancer_team": "Ecuador",
+      "path_id": "BMC_a5dfa49d0688",
+      "display_slot_en": "Resolved on penalties",
+      "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties.",
+      "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ecuador advances on penalties."
+    }
+  ],
+  "raw_path_top": [
+    {
+      "rank": 1,
+      "label": "90分钟1-0，Mexico常规时间晋级。",
+      "probability": 0.13076923076923078,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 1-0: Mexico advances in normal time."
+    },
+    {
+      "rank": 2,
+      "label": "90分钟0-1，Ecuador常规时间晋级。",
+      "probability": 0.10288461538461538,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 0-1: Ecuador advances in normal time."
+    },
+    {
+      "rank": 3,
+      "label": "90分钟2-0，Mexico常规时间晋级。",
+      "probability": 0.08173076923076923,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 2-0: Mexico advances in normal time."
+    },
+    {
+      "rank": 4,
+      "label": "90分钟2-1，Mexico常规时间晋级。",
+      "probability": 0.08028846153846154,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 2-1: Mexico advances in normal time."
+    },
+    {
+      "rank": 5,
+      "label": "90分钟1-2，Ecuador常规时间晋级。",
+      "probability": 0.0673076923076923,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 1-2: Ecuador advances in normal time."
+    },
+    {
+      "rank": 6,
+      "label": "90分钟0-2，Ecuador常规时间晋级。",
+      "probability": 0.05096153846153846,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 0-2: Ecuador advances in normal time."
+    }
+  ]
+}
