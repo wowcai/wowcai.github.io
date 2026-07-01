@@ -397,8 +397,8 @@ const knockoutScheduleUtc = {
   M78: "2026-06-30T17:00:00Z",
   M79: "2026-07-01T01:00:00Z",
   M80: "2026-07-01T16:00:00Z",
-  M81: "2026-07-02T00:00:00Z",
-  M82: "2026-07-01T20:00:00Z",
+  M81: "2026-07-01T20:00:00Z",
+  M82: "2026-07-02T00:00:00Z",
   M83: "2026-07-02T23:00:00Z",
   M84: "2026-07-02T19:00:00Z",
   M85: "2026-07-03T03:00:00Z",
@@ -478,7 +478,7 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M78", "M77", "M79"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M80", "M81", "M82"];
 
 window.WORLD_CUP_KNOCKOUT_PROGRESS = {
   rounds: {
@@ -528,6 +528,27 @@ window.WORLD_CUP_KNOCKOUT_PROGRESS = {
         matchTime: "7月1日 01:00 UTC",
         kickoffUtc: "2026-07-01T01:00:00Z",
         source: "A1 vs E3"
+      },
+      M80: {
+        status: "scheduled",
+        teams: ["ENG", "COD"],
+        matchTime: "7月1日 16:00 UTC",
+        kickoffUtc: "2026-07-01T16:00:00Z",
+        source: "L1 vs K3"
+      },
+      M81: {
+        status: "scheduled",
+        teams: ["BEL", "SEN"],
+        matchTime: "7月1日 20:00 UTC",
+        kickoffUtc: "2026-07-01T20:00:00Z",
+        source: "G1 vs I3"
+      },
+      M82: {
+        status: "scheduled",
+        teams: ["USA", "BIH"],
+        matchTime: "7月2日 00:00 UTC",
+        kickoffUtc: "2026-07-02T00:00:00Z",
+        source: "D1 vs B3"
       }
     }
   }
@@ -548,8 +569,8 @@ window.WORLD_CUP_ROUTE_DATA = {
           { id: "left-r32-4", round: "round32", status: "scheduled", matchNo: "M77", slotLabel: "I1 vs 最佳第三名", descriptionZh: "I组第1 vs C/D/F/G/H 组最佳第三名" },
           { id: "left-r32-5", round: "round32", status: "scheduled", matchNo: "M83", slotLabel: "K2 vs L2", descriptionZh: "K组第2 vs L组第2" },
           { id: "left-r32-6", round: "round32", status: "scheduled", matchNo: "M84", slotLabel: "H1 vs J2", descriptionZh: "H组第1 vs J组第2" },
-          { id: "left-r32-7", round: "round32", status: "scheduled", matchNo: "M81", slotLabel: "D1 vs 最佳第三名", descriptionZh: "D组第1 vs B/E/F/I/J 组最佳第三名" },
-          { id: "left-r32-8", round: "round32", status: "scheduled", matchNo: "M82", slotLabel: "G1 vs 最佳第三名", descriptionZh: "G组第1 vs A/E/H/I/J 组最佳第三名" }
+          { id: "left-r32-7", round: "round32", status: "scheduled", matchNo: "M82", slotLabel: "D1 vs 最佳第三名", descriptionZh: "D组第1 vs B/E/F/I/J 组最佳第三名" },
+          { id: "left-r32-8", round: "round32", status: "scheduled", matchNo: "M81", slotLabel: "G1 vs 最佳第三名", descriptionZh: "G组第1 vs A/E/H/I/J 组最佳第三名" }
         ]
       },
       {

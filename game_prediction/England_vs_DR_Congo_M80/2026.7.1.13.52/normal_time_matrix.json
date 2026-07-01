@@ -1,0 +1,1546 @@
+{
+  "schema_version": "2.0",
+  "phase": "normal_time",
+  "matrix_type": "normal_time_score_dense_6x6_bucketed",
+  "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+  "axis_note_cn": "纵轴为team_a 90分钟进球，横轴为team_b 90分钟进球；5+表示至少5球。概率为90分钟比分的整场概率。",
+  "row_axis": {
+    "team": "England",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "column_axis": {
+    "team": "DR Congo",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.5535416666666667,
+    "draw": 0.26979166666666665,
+    "team_b_win": 0.17666666666666667
+  },
+  "matrix": [
+    [
+      0.10020833333333333,
+      0.0775,
+      0.022708333333333334,
+      0.005208333333333333,
+      0.0010416666666666667,
+      0.00020833333333333335
+    ],
+    [
+      0.15145833333333333,
+      0.12416666666666666,
+      0.045208333333333336,
+      0.010833333333333334,
+      0.00125,
+      0.000625
+    ],
+    [
+      0.10104166666666667,
+      0.09479166666666666,
+      0.036875,
+      0.008541666666666666,
+      0.001875,
+      0.000625
+    ],
+    [
+      0.059166666666666666,
+      0.051458333333333335,
+      0.023333333333333334,
+      0.007916666666666667,
+      0.000625,
+      0.0
+    ],
+    [
+      0.020833333333333332,
+      0.020833333333333332,
+      0.00625,
+      0.003125,
+      0.000625,
+      0.0004166666666666667
+    ],
+    [
+      0.006875,
+      0.008958333333333332,
+      0.0037500000000000003,
+      0.00125,
+      0.00020833333333333335,
+      0.00020833333333333335
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "0",
+      "probability": 0.10020833333333333,
+      "probability_percent": 10.0208,
+      "top_scores": [
+        {
+          "score": "0-0",
+          "probability": 0.10020833333333333,
+          "probability_percent": 10.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "1",
+      "probability": 0.0775,
+      "probability_percent": 7.75,
+      "top_scores": [
+        {
+          "score": "0-1",
+          "probability": 0.0775,
+          "probability_percent": 7.75
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "2",
+      "probability": 0.022708333333333334,
+      "probability_percent": 2.2708,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.022708333333333334,
+          "probability_percent": 2.2708
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "3",
+      "probability": 0.005208333333333333,
+      "probability_percent": 0.5208,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.005208333333333333,
+          "probability_percent": 0.5208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "4",
+      "probability": 0.0010416666666666667,
+      "probability_percent": 0.1042,
+      "top_scores": [
+        {
+          "score": "0-4",
+          "probability": 0.0010416666666666667,
+          "probability_percent": 0.1042
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "5+",
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "top_scores": [
+        {
+          "score": "0-5",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "0",
+      "probability": 0.15145833333333333,
+      "probability_percent": 15.1458,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.15145833333333333,
+          "probability_percent": 15.1458
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "1",
+      "probability": 0.12416666666666666,
+      "probability_percent": 12.4167,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.12416666666666666,
+          "probability_percent": 12.4167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "2",
+      "probability": 0.045208333333333336,
+      "probability_percent": 4.5208,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.045208333333333336,
+          "probability_percent": 4.5208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "3",
+      "probability": 0.010833333333333334,
+      "probability_percent": 1.0833,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.010833333333333334,
+          "probability_percent": 1.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "4",
+      "probability": 0.00125,
+      "probability_percent": 0.125,
+      "top_scores": [
+        {
+          "score": "1-4",
+          "probability": 0.00125,
+          "probability_percent": 0.125
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "5+",
+      "probability": 0.000625,
+      "probability_percent": 0.0625,
+      "top_scores": [
+        {
+          "score": "1-5",
+          "probability": 0.000625,
+          "probability_percent": 0.0625
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "0",
+      "probability": 0.10104166666666667,
+      "probability_percent": 10.1042,
+      "top_scores": [
+        {
+          "score": "2-0",
+          "probability": 0.10104166666666667,
+          "probability_percent": 10.1042
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "1",
+      "probability": 0.09479166666666666,
+      "probability_percent": 9.4792,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.09479166666666666,
+          "probability_percent": 9.4792
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "2",
+      "probability": 0.036875,
+      "probability_percent": 3.6875,
+      "top_scores": [
+        {
+          "score": "2-2",
+          "probability": 0.036875,
+          "probability_percent": 3.6875
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "3",
+      "probability": 0.008541666666666666,
+      "probability_percent": 0.8542,
+      "top_scores": [
+        {
+          "score": "2-3",
+          "probability": 0.008541666666666666,
+          "probability_percent": 0.8542
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "4",
+      "probability": 0.001875,
+      "probability_percent": 0.1875,
+      "top_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.001875,
+          "probability_percent": 0.1875
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "5+",
+      "probability": 0.000625,
+      "probability_percent": 0.0625,
+      "top_scores": [
+        {
+          "score": "2-5",
+          "probability": 0.0004166666666666667,
+          "probability_percent": 0.0417
+        },
+        {
+          "score": "2-6",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "0",
+      "probability": 0.059166666666666666,
+      "probability_percent": 5.9167,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.059166666666666666,
+          "probability_percent": 5.9167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "1",
+      "probability": 0.051458333333333335,
+      "probability_percent": 5.1458,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.051458333333333335,
+          "probability_percent": 5.1458
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "2",
+      "probability": 0.023333333333333334,
+      "probability_percent": 2.3333,
+      "top_scores": [
+        {
+          "score": "3-2",
+          "probability": 0.023333333333333334,
+          "probability_percent": 2.3333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "3",
+      "probability": 0.007916666666666667,
+      "probability_percent": 0.7917,
+      "top_scores": [
+        {
+          "score": "3-3",
+          "probability": 0.007916666666666667,
+          "probability_percent": 0.7917
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "4",
+      "probability": 0.000625,
+      "probability_percent": 0.0625,
+      "top_scores": [
+        {
+          "score": "3-4",
+          "probability": 0.000625,
+          "probability_percent": 0.0625
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "5+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "0",
+      "probability": 0.020833333333333332,
+      "probability_percent": 2.0833,
+      "top_scores": [
+        {
+          "score": "4-0",
+          "probability": 0.020833333333333332,
+          "probability_percent": 2.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "1",
+      "probability": 0.020833333333333332,
+      "probability_percent": 2.0833,
+      "top_scores": [
+        {
+          "score": "4-1",
+          "probability": 0.020833333333333332,
+          "probability_percent": 2.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "2",
+      "probability": 0.00625,
+      "probability_percent": 0.625,
+      "top_scores": [
+        {
+          "score": "4-2",
+          "probability": 0.00625,
+          "probability_percent": 0.625
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "3",
+      "probability": 0.003125,
+      "probability_percent": 0.3125,
+      "top_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.003125,
+          "probability_percent": 0.3125
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "4",
+      "probability": 0.000625,
+      "probability_percent": 0.0625,
+      "top_scores": [
+        {
+          "score": "4-4",
+          "probability": 0.000625,
+          "probability_percent": 0.0625
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "5+",
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "top_scores": [
+        {
+          "score": "4-5",
+          "probability": 0.0004166666666666667,
+          "probability_percent": 0.0417
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "0",
+      "probability": 0.006875,
+      "probability_percent": 0.6875,
+      "top_scores": [
+        {
+          "score": "5-0",
+          "probability": 0.005208333333333333,
+          "probability_percent": 0.5208
+        },
+        {
+          "score": "6-0",
+          "probability": 0.00125,
+          "probability_percent": 0.125
+        },
+        {
+          "score": "7-0",
+          "probability": 0.0004166666666666667,
+          "probability_percent": 0.0417
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "1",
+      "probability": 0.008958333333333332,
+      "probability_percent": 0.8958,
+      "top_scores": [
+        {
+          "score": "5-1",
+          "probability": 0.007083333333333333,
+          "probability_percent": 0.7083
+        },
+        {
+          "score": "6-1",
+          "probability": 0.0014583333333333334,
+          "probability_percent": 0.1458
+        },
+        {
+          "score": "7-1",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        },
+        {
+          "score": "8-1",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "2",
+      "probability": 0.0037500000000000003,
+      "probability_percent": 0.375,
+      "top_scores": [
+        {
+          "score": "5-2",
+          "probability": 0.002916666666666667,
+          "probability_percent": 0.2917
+        },
+        {
+          "score": "6-2",
+          "probability": 0.0008333333333333334,
+          "probability_percent": 0.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "3",
+      "probability": 0.00125,
+      "probability_percent": 0.125,
+      "top_scores": [
+        {
+          "score": "5-3",
+          "probability": 0.0010416666666666667,
+          "probability_percent": 0.1042
+        },
+        {
+          "score": "6-3",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "4",
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "top_scores": [
+        {
+          "score": "6-4",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "5+",
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "top_scores": [
+        {
+          "score": "6-5",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "score": "1-0",
+      "goals_a": 1,
+      "goals_b": 0,
+      "probability": 0.15145833333333333,
+      "probability_percent": 15.1458,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.1,
+      "position": 0.1,
+      "x": 0.1,
+      "y": 0.15145833333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-1",
+      "goals_a": 1,
+      "goals_b": 1,
+      "probability": 0.12416666666666666,
+      "probability_percent": 12.4167,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.25857291666666665,
+      "position": 0.25857291666666665,
+      "x": 0.25857291666666665,
+      "y": 0.12416666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-0",
+      "goals_a": 2,
+      "goals_b": 0,
+      "probability": 0.10104166666666667,
+      "probability_percent": 10.1042,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.38,
+      "position": 0.38,
+      "x": 0.38,
+      "y": 0.10104166666666667,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-0",
+      "goals_a": 0,
+      "goals_b": 0,
+      "probability": 0.10020833333333333,
+      "probability_percent": 10.0208,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.13857291666666668,
+      "position": 0.13857291666666668,
+      "x": 0.13857291666666668,
+      "y": 0.10020833333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-1",
+      "goals_a": 2,
+      "goals_b": 1,
+      "probability": 0.09479166666666666,
+      "probability_percent": 9.4792,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.33999999999999997,
+      "position": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.09479166666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-1",
+      "goals_a": 0,
+      "goals_b": 1,
+      "probability": 0.0775,
+      "probability_percent": 7.75,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.1711666666666667,
+      "position": 0.1711666666666667,
+      "x": 0.1711666666666667,
+      "y": 0.0775,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-0",
+      "goals_a": 3,
+      "goals_b": 0,
+      "probability": 0.059166666666666666,
+      "probability_percent": 5.9167,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6599999999999999,
+      "position": 0.6599999999999999,
+      "x": 0.6599999999999999,
+      "y": 0.059166666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-1",
+      "goals_a": 3,
+      "goals_b": 1,
+      "probability": 0.051458333333333335,
+      "probability_percent": 5.1458,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.62,
+      "position": 0.62,
+      "x": 0.62,
+      "y": 0.051458333333333335,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-2",
+      "goals_a": 1,
+      "goals_b": 2,
+      "probability": 0.045208333333333336,
+      "probability_percent": 4.5208,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.4111666666666666,
+      "position": 0.4111666666666666,
+      "x": 0.4111666666666666,
+      "y": 0.045208333333333336,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-2",
+      "goals_a": 2,
+      "goals_b": 2,
+      "probability": 0.036875,
+      "probability_percent": 3.6875,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.49857291666666664,
+      "position": 0.49857291666666664,
+      "x": 0.49857291666666664,
+      "y": 0.036875,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-2",
+      "goals_a": 3,
+      "goals_b": 2,
+      "probability": 0.023333333333333334,
+      "probability_percent": 2.3333,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.58,
+      "position": 0.58,
+      "x": 0.58,
+      "y": 0.023333333333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-2",
+      "goals_a": 0,
+      "goals_b": 2,
+      "probability": 0.022708333333333334,
+      "probability_percent": 2.2708,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.45116666666666666,
+      "position": 0.45116666666666666,
+      "x": 0.45116666666666666,
+      "y": 0.022708333333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-0",
+      "goals_a": 4,
+      "goals_b": 0,
+      "probability": 0.020833333333333332,
+      "probability_percent": 2.0833,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.94,
+      "position": 0.94,
+      "x": 0.94,
+      "y": 0.020833333333333332,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-1",
+      "goals_a": 4,
+      "goals_b": 1,
+      "probability": 0.020833333333333332,
+      "probability_percent": 2.0833,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8999999999999999,
+      "position": 0.8999999999999999,
+      "x": 0.8999999999999999,
+      "y": 0.020833333333333332,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-3",
+      "goals_a": 1,
+      "goals_b": 3,
+      "probability": 0.010833333333333334,
+      "probability_percent": 1.0833,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6911666666666667,
+      "position": 0.6911666666666667,
+      "x": 0.6911666666666667,
+      "y": 0.010833333333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-3",
+      "goals_a": 2,
+      "goals_b": 3,
+      "probability": 0.008541666666666666,
+      "probability_percent": 0.8542,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6511666666666667,
+      "position": 0.6511666666666667,
+      "x": 0.6511666666666667,
+      "y": 0.008541666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-3",
+      "goals_a": 3,
+      "goals_b": 3,
+      "probability": 0.007916666666666667,
+      "probability_percent": 0.7917,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.7385729166666666,
+      "position": 0.7385729166666666,
+      "x": 0.7385729166666666,
+      "y": 0.007916666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-1",
+      "goals_a": 5,
+      "goals_b": 1,
+      "probability": 0.007083333333333333,
+      "probability_percent": 0.7083,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.007083333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-2",
+      "goals_a": 4,
+      "goals_b": 2,
+      "probability": 0.00625,
+      "probability_percent": 0.625,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.86,
+      "position": 0.86,
+      "x": 0.86,
+      "y": 0.00625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-3",
+      "goals_a": 0,
+      "goals_b": 3,
+      "probability": 0.005208333333333333,
+      "probability_percent": 0.5208,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.7311666666666666,
+      "position": 0.7311666666666666,
+      "x": 0.7311666666666666,
+      "y": 0.005208333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-0",
+      "goals_a": 5,
+      "goals_b": 0,
+      "probability": 0.005208333333333333,
+      "probability_percent": 0.5208,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.005208333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-3",
+      "goals_a": 4,
+      "goals_b": 3,
+      "probability": 0.003125,
+      "probability_percent": 0.3125,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.82,
+      "position": 0.82,
+      "x": 0.82,
+      "y": 0.003125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-2",
+      "goals_a": 5,
+      "goals_b": 2,
+      "probability": 0.002916666666666667,
+      "probability_percent": 0.2917,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.002916666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-4",
+      "goals_a": 2,
+      "goals_b": 4,
+      "probability": 0.001875,
+      "probability_percent": 0.1875,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9311666666666667,
+      "position": 0.9311666666666667,
+      "x": 0.9311666666666667,
+      "y": 0.001875,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-1",
+      "goals_a": 6,
+      "goals_b": 1,
+      "probability": 0.0014583333333333334,
+      "probability_percent": 0.1458,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0014583333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-4",
+      "goals_a": 1,
+      "goals_b": 4,
+      "probability": 0.00125,
+      "probability_percent": 0.125,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9711666666666666,
+      "position": 0.9711666666666666,
+      "x": 0.9711666666666666,
+      "y": 0.00125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-0",
+      "goals_a": 6,
+      "goals_b": 0,
+      "probability": 0.00125,
+      "probability_percent": 0.125,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-4",
+      "goals_a": 0,
+      "goals_b": 4,
+      "probability": 0.0010416666666666667,
+      "probability_percent": 0.1042,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0010416666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-3",
+      "goals_a": 5,
+      "goals_b": 3,
+      "probability": 0.0010416666666666667,
+      "probability_percent": 0.1042,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0010416666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-2",
+      "goals_a": 6,
+      "goals_b": 2,
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0008333333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-5",
+      "goals_a": 1,
+      "goals_b": 5,
+      "probability": 0.000625,
+      "probability_percent": 0.0625,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.000625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-4",
+      "goals_a": 3,
+      "goals_b": 4,
+      "probability": 0.000625,
+      "probability_percent": 0.0625,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8911666666666667,
+      "position": 0.8911666666666667,
+      "x": 0.8911666666666667,
+      "y": 0.000625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-4",
+      "goals_a": 4,
+      "goals_b": 4,
+      "probability": 0.000625,
+      "probability_percent": 0.0625,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9785729166666666,
+      "position": 0.9785729166666666,
+      "x": 0.9785729166666666,
+      "y": 0.000625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-5",
+      "goals_a": 2,
+      "goals_b": 5,
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-5",
+      "goals_a": 4,
+      "goals_b": 5,
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-0",
+      "goals_a": 7,
+      "goals_b": 0,
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-5",
+      "goals_a": 0,
+      "goals_b": 5,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-6",
+      "goals_a": 2,
+      "goals_b": 6,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_b",
+      "outcome_cn": "DR Congo胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "DR Congo win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-3",
+      "goals_a": 6,
+      "goals_b": 3,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-4",
+      "goals_a": 6,
+      "goals_b": 4,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-5",
+      "goals_a": 6,
+      "goals_b": 5,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-1",
+      "goals_a": 7,
+      "goals_b": 1,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "8-1",
+      "goals_a": 8,
+      "goals_b": 1,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    }
+  ],
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.15145833333333333,
+      "goals_a": 1,
+      "goals_b": 0
+    },
+    {
+      "score": "1-1",
+      "probability": 0.12416666666666666,
+      "goals_a": 1,
+      "goals_b": 1
+    },
+    {
+      "score": "2-0",
+      "probability": 0.10104166666666667,
+      "goals_a": 2,
+      "goals_b": 0
+    },
+    {
+      "score": "0-0",
+      "probability": 0.10020833333333333,
+      "goals_a": 0,
+      "goals_b": 0
+    },
+    {
+      "score": "2-1",
+      "probability": 0.09479166666666666,
+      "goals_a": 2,
+      "goals_b": 1
+    },
+    {
+      "score": "0-1",
+      "probability": 0.0775,
+      "goals_a": 0,
+      "goals_b": 1
+    },
+    {
+      "score": "3-0",
+      "probability": 0.059166666666666666,
+      "goals_a": 3,
+      "goals_b": 0
+    },
+    {
+      "score": "3-1",
+      "probability": 0.051458333333333335,
+      "goals_a": 3,
+      "goals_b": 1
+    }
+  ],
+  "source": "latest_state_v7.distribution.score_matrix + score_space_data if available",
+  "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties.",
+  "axis_note_en": "Rows show England 90-minute goals and columns show DR Congo 90-minute goals; 5+ means at least five goals. Probabilities are full-match 90-minute score probabilities."
+}

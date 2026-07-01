@@ -1,0 +1,499 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.48821548821548816,
+      "conditional_probability": 0.48821548821548816,
+      "joint_probability": 0.13942307692307682,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.48821548821548816,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "label_en": "0-0",
+      "rationale_en": "Because extra time is short and knockout risk appetite falls, remaining level is the high-probability baseline branch."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.23737373737373751,
+      "conditional_probability": 0.23737373737373751,
+      "joint_probability": 0.06778846153846153,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.23737373737373751,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "England凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "England wins extra time by one goal through fitness, bench impact or pressing advantage."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.11784511784511792,
+      "conditional_probability": 0.11784511784511792,
+      "joint_probability": 0.03365384615384615,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.11784511784511792,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "DR Congo凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "DR Congo wins extra time by one goal through fitness, bench impact or counterattacking efficiency."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.05387205387205391,
+      "conditional_probability": 0.05387205387205391,
+      "joint_probability": 0.015384615384615385,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.05387205387205391,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Extra time opens up and both teams convert one meaningful chance."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.03535353535353538,
+      "conditional_probability": 0.03535353535353538,
+      "joint_probability": 0.010096153846153847,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.03535353535353538,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "England在对手体能或心理崩盘后拉开比分。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "England pulls away after the opponent shows a physical or psychological drop-off."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.01851851851851853,
+      "conditional_probability": 0.01851851851851853,
+      "joint_probability": 0.005288461538461539,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.01851851851851853,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "加时一球分胜负的补充覆盖路径。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A supplementary coverage path for a one-goal extra-time decider."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.016835016835016845,
+      "conditional_probability": 0.016835016835016845,
+      "joint_probability": 0.004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.016835016835016845,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.011784511784511793,
+      "conditional_probability": 0.011784511784511793,
+      "joint_probability": 0.0033653846153846156,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.011784511784511793,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "England加时领先后仍被对手回应，但最终净胜。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "England takes the lead in extra time, concedes a response, but still wins the segment."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.010101010101010109,
+      "conditional_probability": 0.010101010101010109,
+      "joint_probability": 0.0028846153846153848,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.010101010101010109,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.0033670033670033695,
+      "conditional_probability": 0.0033670033670033695,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.0033670033670033695,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "label": "5-0",
+      "score": "5-0",
+      "increment": "5-0",
+      "probability": 0.0016835016835016847,
+      "conditional_probability": 0.0016835016835016847,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0016835016835016847,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "5-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.0016835016835016847,
+      "conditional_probability": 0.0016835016835016847,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0016835016835016847,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "0-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "4-1",
+      "score": "4-1",
+      "increment": "4-1",
+      "probability": 0.0016835016835016847,
+      "conditional_probability": 0.0016835016835016847,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0016835016835016847,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-1",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "4-0",
+      "score": "4-0",
+      "increment": "4-0",
+      "probability": 0.0016835016835016847,
+      "conditional_probability": 0.0016835016835016847,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0016835016835016847,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.23737373737373751,
+      "joint_probability": 0.06778846153846153,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.23737373737373751
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.11784511784511792
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "England凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal extra-time result is produced through a counterattack, set piece or substitute impact.",
+      "rationale_en": "England wins extra time by one goal through fitness, bench impact or pressing advantage."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.05387205387205391,
+      "joint_probability": 0.015384615384615385,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.05387205387205391
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.011784511784511793
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.010101010101010109
+        },
+        {
+          "score": "2-2",
+          "increment": "2-2",
+          "probability": 0.0033670033670033695
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both teams score in extra time as the match shifts from caution into open exchanges.",
+      "rationale_en": "Extra time opens up and both teams convert one meaningful chance."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.03535353535353538,
+      "joint_probability": 0.010096153846153847,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.03535353535353538
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.01851851851851853
+        },
+        {
+          "score": "3-0",
+          "increment": "3-0",
+          "probability": 0.016835016835016845
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.011784511784511793
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "0-2",
+        "3-0"
+      ],
+      "rationale_cn": "England在对手体能或心理崩盘后拉开比分。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A team wins extra time by at least two goals, or the extra-time segment reaches three or more total goals.",
+      "rationale_en": "England pulls away after the opponent shows a physical or psychological drop-off."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "ET_ENTRY",
+      "label_cn": "90分钟平局后的点球管理",
+      "impact_cn": "若90分钟未分胜负，双方都会开始管理点球路径，加时更可能从谨慎和定位球入手。",
+      "direction": "balanced",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "If level after 90 minutes, penalty-path management becomes central",
+      "impact_en": "If the match is not decided in 90 minutes, both sides begin managing the penalty path, so extra time is more likely to start cautiously and through set pieces.",
+      "text_cn": "若90分钟未分胜负，双方都会开始管理点球路径，加时更可能从谨慎和定位球入手。",
+      "text_en": "If the match is not decided in 90 minutes, both sides begin managing the penalty path, so extra time is more likely to start cautiously and through set pieces."
+    },
+    {
+      "factor_id": "ET_ENG_CONTROL",
+      "label_cn": "英格兰控球与定位球主动权",
+      "impact_cn": "英格兰仍有控球、定位球和二点球主动权，但长时间阵地进攻会降低连续反抢质量。",
+      "direction": "team_a",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "England keeps possession and set-piece initiative",
+      "impact_en": "England still has possession, set-piece and second-ball initiative, but prolonged positional attack can reduce counter-pressing quality.",
+      "text_cn": "英格兰仍有控球、定位球和二点球主动权，但长时间阵地进攻会降低连续反抢质量。",
+      "text_en": "England still has possession, set-piece and second-ball initiative, but prolonged positional attack can reduce counter-pressing quality."
+    },
+    {
+      "factor_id": "ET_RB_RISK",
+      "label_cn": "右后卫伤缺与身后风险",
+      "impact_cn": "Reece James、Jarell Quansah缺阵使英格兰右路替代方案和身后保护成为加时风险点。",
+      "direction": "team_b",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Right-back injuries keep England's recovery lane under watch",
+      "impact_en": "With Reece James and Jarell Quansah out, England's right-back workaround and space behind that flank remain extra-time risk points.",
+      "text_cn": "Reece James、Jarell Quansah缺阵使英格兰右路替代方案和身后保护成为加时风险点。",
+      "text_en": "With Reece James and Jarell Quansah out, England's right-back workaround and space behind that flank remain extra-time risk points."
+    },
+    {
+      "factor_id": "ET_DRC_COUNTER",
+      "label_cn": "Wissa/Mayele后段反击窗口",
+      "impact_cn": "DR Congo更可能低位等待英格兰体能和反抢质量下降后，通过Wissa、Mayele或死球寻找一次性机会。",
+      "direction": "team_b",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Wissa and Mayele keep a late transition window alive",
+      "impact_en": "DR Congo is more likely to sit low and wait for England's fitness or counter-pressing to drop, using Wissa, Mayele or dead balls for one decisive chance.",
+      "text_cn": "DR Congo更可能低位等待英格兰体能和反抢质量下降后，通过Wissa、Mayele或死球寻找一次性机会。",
+      "text_en": "DR Congo is more likely to sit low and wait for England's fitness or counter-pressing to drop, using Wissa, Mayele or dead balls for one decisive chance."
+    },
+    {
+      "factor_id": "ET_105_RISK",
+      "label_cn": "105分钟后冒险受点球准备牵制",
+      "impact_cn": "105分钟仍平时，英格兰未必全员压上，定位球、二点球和有限人数压迫更符合其点球准备优势。",
+      "direction": "team_a",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Risk-taking after 105 minutes is constrained by penalty preparation",
+      "impact_en": "If still level after 105 minutes, England is unlikely to overcommit completely; set pieces, second balls and controlled pressure better fit its penalty-preparation edge.",
+      "text_cn": "105分钟仍平时，英格兰未必全员压上，定位球、二点球和有限人数压迫更符合其点球准备优势。",
+      "text_en": "If still level after 105 minutes, England is unlikely to overcommit completely; set pieces, second balls and controlled pressure better fit its penalty-preparation edge."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}

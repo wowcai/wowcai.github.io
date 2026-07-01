@@ -1,0 +1,497 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.4216524216524219,
+      "conditional_probability": 0.4216524216524219,
+      "joint_probability": 0.11384615384615397,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.4216524216524219,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "label_en": "0-0",
+      "rationale_en": "Because extra time is short and knockout risk appetite falls, remaining level is the high-probability baseline branch."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.18233618233618226,
+      "conditional_probability": 0.18233618233618226,
+      "joint_probability": 0.04923076923076923,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.18233618233618226,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Belgium凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Belgium wins extra time by one goal through fitness, bench impact or pressing advantage."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.1794871794871794,
+      "conditional_probability": 0.1794871794871794,
+      "joint_probability": 0.048461538461538466,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.1794871794871794,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Senegal凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Senegal wins extra time by one goal through fitness, bench impact or counterattacking efficiency."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.0797720797720798,
+      "conditional_probability": 0.0797720797720798,
+      "joint_probability": 0.021538461538461555,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.0797720797720798,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Extra time opens up and both teams convert one meaningful chance."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.04273504273504271,
+      "conditional_probability": 0.04273504273504271,
+      "joint_probability": 0.011538461538461537,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.04273504273504271,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "Belgium在对手体能或心理崩盘后拉开比分。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Belgium pulls away after the opponent shows a physical or psychological drop-off."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.03276353276353275,
+      "conditional_probability": 0.03276353276353275,
+      "joint_probability": 0.008846153846153846,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.03276353276353275,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "Senegal在对手压上后连续制造转换机会。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Senegal creates repeated transition chances after the opponent pushes forward."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.019943019943019932,
+      "conditional_probability": 0.019943019943019932,
+      "joint_probability": 0.005384615384615384,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.019943019943019932,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.017094017094017085,
+      "conditional_probability": 0.017094017094017085,
+      "joint_probability": 0.004615384615384615,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.017094017094017085,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.011396011396011391,
+      "conditional_probability": 0.011396011396011391,
+      "joint_probability": 0.003076923076923077,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.011396011396011391,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.004273504273504271,
+      "conditional_probability": 0.004273504273504271,
+      "joint_probability": 0.0011538461538461537,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.004273504273504271,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "0-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.004273504273504271,
+      "conditional_probability": 0.004273504273504271,
+      "joint_probability": 0.0011538461538461537,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.004273504273504271,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "label": "5-0",
+      "score": "5-0",
+      "increment": "5-0",
+      "probability": 0.001424501424501424,
+      "conditional_probability": 0.001424501424501424,
+      "joint_probability": 0.0003846153846153846,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.001424501424501424,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "5-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "4-1",
+      "score": "4-1",
+      "increment": "4-1",
+      "probability": 0.001424501424501424,
+      "conditional_probability": 0.001424501424501424,
+      "joint_probability": 0.0003846153846153846,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.001424501424501424,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-1",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "4-0",
+      "score": "4-0",
+      "increment": "4-0",
+      "probability": 0.001424501424501424,
+      "conditional_probability": 0.001424501424501424,
+      "joint_probability": 0.0003846153846153846,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.001424501424501424,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.18233618233618226,
+      "joint_probability": 0.04923076923076923,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.18233618233618226
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.1794871794871794
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "Belgium凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal extra-time result is produced through a counterattack, set piece or substitute impact.",
+      "rationale_en": "Belgium wins extra time by one goal through fitness, bench impact or pressing advantage."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.0797720797720798,
+      "joint_probability": 0.021538461538461555,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.0797720797720798
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.019943019943019932
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.017094017094017085
+        },
+        {
+          "score": "2-2",
+          "increment": "2-2",
+          "probability": 0.004273504273504271
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both teams score in extra time as the match shifts from caution into open exchanges.",
+      "rationale_en": "Extra time opens up and both teams convert one meaningful chance."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.04273504273504271,
+      "joint_probability": 0.011538461538461537,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.04273504273504271
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.03276353276353275
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.019943019943019932
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.017094017094017085
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "0-2",
+        "2-1"
+      ],
+      "rationale_cn": "Belgium在对手体能或心理崩盘后拉开比分。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A team wins extra time by at least two goals, or the extra-time segment reaches three or more total goals.",
+      "rationale_en": "Belgium pulls away after the opponent shows a physical or psychological drop-off."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "ET_MENDY_OUT",
+      "label_cn": "Mendy伤缺放大比利时后段优势",
+      "impact_cn": "塞内加尔一门Mendy因膝伤缺席，使比利时在加时的传中、定位球、二点球和门将处理高球环节更值得关注。",
+      "direction": "team_a",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Mendy's absence raises Belgium's late and extra-time edge",
+      "impact_en": "Senegal's first-choice goalkeeper Mendy is out with a knee injury, making Belgium's crosses, set pieces, second balls and aerial-goalkeeping pressure more relevant in extra time.",
+      "text_cn": "塞内加尔一门Mendy因膝伤缺席，使比利时在加时的传中、定位球、二点球和门将处理高球环节更值得关注。",
+      "text_en": "Senegal's first-choice goalkeeper Mendy is out with a knee injury, making Belgium's crosses, set pieces, second balls and aerial-goalkeeping pressure more relevant in extra time."
+    },
+    {
+      "factor_id": "ET_BEL_ATTACK",
+      "label_cn": "比利时前场组织持续施压",
+      "impact_cn": "De Bruyne、Doku、Trossard、Lukaku等关键资源让比利时在加时仍可能保持组织和替补冲击。",
+      "direction": "team_a",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Belgium's attacking structure can keep wearing down Senegal",
+      "impact_en": "De Bruyne, Doku, Trossard, Lukaku and related attacking resources allow Belgium to keep organization and bench impact alive in extra time.",
+      "text_cn": "De Bruyne、Doku、Trossard、Lukaku等关键资源让比利时在加时仍可能保持组织和替补冲击。",
+      "text_en": "De Bruyne, Doku, Trossard, Lukaku and related attacking resources allow Belgium to keep organization and bench impact alive in extra time."
+    },
+    {
+      "factor_id": "ET_SEN_RESILIENCE",
+      "label_cn": "塞内加尔转换与身体对抗",
+      "impact_cn": "塞内加尔有身体对抗、转换和5-0战胜伊拉克的爆发样本，若比利时压上失衡，仍有偷袭窗口。",
+      "direction": "team_b",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Senegal's transition and physicality remain the counter-branch",
+      "impact_en": "Senegal retains physicality, transitions and the 5-0 Iraq sample as a counter-branch; if Belgium overcommits, an extra-time steal remains possible.",
+      "text_cn": "塞内加尔有身体对抗、转换和5-0战胜伊拉克的爆发样本，若比利时压上失衡，仍有偷袭窗口。",
+      "text_en": "Senegal retains physicality, transitions and the 5-0 Iraq sample as a counter-branch; if Belgium overcommits, an extra-time steal remains possible."
+    },
+    {
+      "factor_id": "ET_LOW_BLOCK",
+      "label_cn": "低位防守与纪律风险",
+      "impact_cn": "进入加时后，边路反复冲刺价值下降，定位球、二点球和禁区纪律更可能决定是否被打穿。",
+      "direction": "balanced",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Belgium pressure can turn Senegal's low block into a discipline test",
+      "impact_en": "In extra time, repeated wide sprints matter less; set pieces, second balls and box discipline are more likely to decide whether the block breaks.",
+      "text_cn": "进入加时后，边路反复冲刺价值下降，定位球、二点球和禁区纪律更可能决定是否被打穿。",
+      "text_en": "In extra time, repeated wide sprints matter less; set pieces, second balls and box discipline are more likely to decide whether the block breaks."
+    },
+    {
+      "factor_id": "ET_105_RISK",
+      "label_cn": "105分钟后策略分化",
+      "impact_cn": "105分钟仍平时，塞内加尔若判断点球门将端不利，可能提高反击投入；比利时压上也会增加身后风险。",
+      "direction": "balanced",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "After 105 minutes, both teams face a penalty-path tradeoff",
+      "impact_en": "If still level after 105 minutes, Senegal may attack more if it judges the goalkeeper side of penalties unfavorable; Belgium's pressure also increases space behind.",
+      "text_cn": "105分钟仍平时，塞内加尔若判断点球门将端不利，可能提高反击投入；比利时压上也会增加身后风险。",
+      "text_en": "If still level after 105 minutes, Senegal may attack more if it judges the goalkeeper side of penalties unfavorable; Belgium's pressure also increases space behind."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}

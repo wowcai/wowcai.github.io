@@ -1,0 +1,1244 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M82",
+    "team_a": "United States",
+    "team_b": "Bosnia and Herzegovina",
+    "kickoff_utc": "2026-07-01T17:00:00-07:00",
+    "venue": "Levi's Stadium, Santa Clara",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": false,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.6658653846153847,
+      "team_b": 0.33413461538461536,
+      "favorite": "United States"
+    },
+    "resolution": {
+      "normal_time": 0.7129807692307691,
+      "extra_time": 0.13413461538461532,
+      "penalties": 0.15288461538461526
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.14604166666666665,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12083333333333333,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "2-0",
+        "probability": 0.10104166666666667,
+        "goals_a": 2,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，United States常规时间晋级。",
+        "summary_cn": "90分钟1-0，United States常规时间晋级。",
+        "probability": 0.13990384615384616,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "United States",
+        "path_id": "BMC_19c606377e34",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: United States advances in normal time.",
+        "summary_en": "90 minutes 1-0: United States advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+        "probability": 0.028846153846153848,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "United States",
+        "path_id": "BMC_428de5b44153",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+        "probability": 0.011057692307692308,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Bosnia and Herzegovina",
+        "path_id": "BMC_e484ce921554",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，United States常规时间晋级。",
+        "summary_cn": "90分钟1-0，United States常规时间晋级。",
+        "probability": 0.13990384615384616,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "United States",
+        "path_id": "BMC_19c606377e34",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: United States advances in normal time.",
+        "summary_en": "90 minutes 1-0: United States advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+        "probability": 0.028846153846153848,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "United States",
+        "path_id": "BMC_428de5b44153",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+        "probability": 0.011057692307692308,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Bosnia and Herzegovina",
+        "path_id": "BMC_e484ce921554",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties."
+      }
+    ],
+    "favorite": "United States",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.15288461538461526,
+        "probability_band": "15.3%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Bosnia and Herzegovina",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.011057692307692308,
+            "path_probability": 0.011057692307692308,
+            "path_id": "BMC_e484ce921554",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Bosnia and Herzegovina",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007692307692307693,
+            "path_probability": 0.007692307692307693,
+            "path_id": "BMC_61ffb7ccdb06",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Bosnia and Herzegovina",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007211538461538462,
+            "path_probability": 0.007211538461538462,
+            "path_id": "BMC_782d86905305",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After both 90 minutes and extra time remain level, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.13413461538461532,
+        "probability_band": "13.4%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "United States",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.028846153846153848,
+            "path_probability": 0.028846153846153848,
+            "path_id": "BMC_428de5b44153",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "United States",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.023557692307692307,
+            "path_probability": 0.023557692307692307,
+            "path_id": "BMC_727adbb80713",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，United States加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; United States advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Bosnia and Herzegovina",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.014423076923076924,
+            "path_probability": 0.014423076923076924,
+            "path_id": "BMC_a79fa0271aca",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Bosnia and Herzegovina加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; Bosnia and Herzegovina advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk preference are amplified in extra time and shape the resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.23028846153846155,
+        "probability_band": "23.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Bosnia and Herzegovina",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08413461538461539,
+            "path_probability": 0.08413461538461539,
+            "path_id": "BMC_d1dde62aeaf0",
+            "summary_cn": "90分钟0-1，Bosnia and Herzegovina常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Bosnia and Herzegovina advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Bosnia and Herzegovina",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.055288461538461536,
+            "path_probability": 0.055288461538461536,
+            "path_id": "BMC_de8b32555f9a",
+            "summary_cn": "90分钟1-2，Bosnia and Herzegovina常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Bosnia and Herzegovina advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Bosnia and Herzegovina",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.022596153846153846,
+            "path_probability": 0.022596153846153846,
+            "path_id": "BMC_9b24fcdf459e",
+            "summary_cn": "90分钟0-2，Bosnia and Herzegovina常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Bosnia and Herzegovina advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog may advance through a normal-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 156,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "United States",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.13990384615384616,
+          "path_probability": 0.13990384615384616,
+          "path_id": "BMC_19c606377e34",
+          "summary_cn": "90分钟1-0，United States常规时间晋级。",
+          "summary_en": "90 minutes 1-0: United States advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "United States",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09519230769230769,
+          "path_probability": 0.09519230769230769,
+          "path_id": "BMC_b21baedf16b8",
+          "summary_cn": "90分钟2-1，United States常规时间晋级。",
+          "summary_en": "90 minutes 2-1: United States advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "United States",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09134615384615384,
+          "path_probability": 0.09134615384615384,
+          "path_id": "BMC_0dad5f69c924",
+          "summary_cn": "90分钟2-0，United States常规时间晋级。",
+          "summary_en": "90 minutes 2-0: United States advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Bosnia and Herzegovina",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08413461538461539,
+          "path_probability": 0.08413461538461539,
+          "path_id": "BMC_d1dde62aeaf0",
+          "summary_cn": "90分钟0-1，Bosnia and Herzegovina常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Bosnia and Herzegovina advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Bosnia and Herzegovina",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.055288461538461536,
+          "path_probability": 0.055288461538461536,
+          "path_id": "BMC_de8b32555f9a",
+          "summary_cn": "90分钟1-2，Bosnia and Herzegovina常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Bosnia and Herzegovina advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，United States常规时间晋级。",
+          "summary_cn": "90分钟1-0，United States常规时间晋级。",
+          "probability": 0.13990384615384616,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "United States",
+          "path_id": "BMC_19c606377e34",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: United States advances in normal time.",
+          "summary_en": "90 minutes 1-0: United States advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+          "probability": 0.028846153846153848,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "United States",
+          "path_id": "BMC_428de5b44153",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+          "probability": 0.011057692307692308,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Bosnia and Herzegovina",
+          "path_id": "BMC_e484ce921554",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，United States常规时间晋级。",
+        "summary_cn": "90分钟1-0，United States常规时间晋级。",
+        "probability": 0.13990384615384616,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "United States",
+        "path_id": "BMC_19c606377e34",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: United States advances in normal time.",
+        "summary_en": "90 minutes 1-0: United States advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，United States加时晋级。",
+        "probability": 0.028846153846153848,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "United States",
+        "path_id": "BMC_428de5b44153",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; United States advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Bosnia and Herzegovina点球晋级。",
+        "probability": 0.011057692307692308,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Bosnia and Herzegovina",
+        "path_id": "BMC_e484ce921554",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Bosnia and Herzegovina advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.2266666666666666,
+          "base_event_probability": 0.2266666666666666,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0475,
+              "rationale_cn": "抢断后的快速转换；United States打破对方防守后扩大领先优势。",
+              "rationale_en": "quick transitions after ball recoveries; The United States breaks down the opponent's defense and extends the lead."
+            },
+            {
+              "score": "2-2",
+              "probability": 0.039375,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes open and end-to-end, with both attacks converting chances."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.024166666666666666,
+              "rationale_cn": "淘汰赛风险偏好分化：美国更想90分钟解决，波黑更能接受拖、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Knockout risk preference diverges: the United States wants to settle the match in 90 minutes, while Bosnia and Herzegovina is more willing to extend it; compact defending compresses attacking space; The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.019791666666666666,
+              "rationale_cn": "淘汰赛风险偏好分化：美国更想90分钟解决，波黑更能接受拖、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Knockout risk preference diverges: the United States wants to settle the match in 90 minutes, while Bosnia and Herzegovina is more willing to extend it; changes in key-player form and roles; The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.019375,
+              "rationale_cn": "关键球员状态与角色变化；United States打破对方防守后扩大领先优势。",
+              "rationale_en": "changes in key-player form and roles; The United States breaks down the opponent's defense and extends the lead."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "2-2",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "Total goals reach at least four.",
+          "rationale_en": "The match is pulled into a more open rhythm; transitions, set pieces or space after a lead push total goals above the low-score center of the main forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.12583333333333335,
+          "base_event_probability": 0.12583333333333335,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.05416666666666667,
+              "rationale_cn": "United States打破对方防守后扩大领先优势。",
+              "rationale_en": "The United States breaks down the opponent's defense and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.019791666666666666,
+              "rationale_cn": "淘汰赛风险偏好分化：美国更想90分钟解决，波黑更能接受拖、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Knockout risk preference diverges: the United States wants to settle the match in 90 minutes, while Bosnia and Herzegovina is more willing to extend it; changes in key-player form and roles; The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.019375,
+              "rationale_cn": "关键球员状态与角色变化；United States打破对方防守后扩大领先优势。",
+              "rationale_en": "changes in key-player form and roles; The United States breaks down the opponent's defense and extends the lead."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.006666666666666667,
+              "rationale_cn": "淘汰赛风险偏好分化：美国更想90分钟解决，波黑更能接受拖、紧凑防守对进攻空间的压缩；Bosnia and Herzegovina充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Knockout risk preference diverges: the United States wants to settle the match in 90 minutes, while Bosnia and Herzegovina is more willing to extend it; compact defending compresses attacking space; Bosnia and Herzegovina fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "5-0",
+              "probability": 0.00625,
+              "rationale_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "changes in key-player form and roles; The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-1",
+            "4-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either team wins by at least three goals.",
+          "rationale_en": "An early goal, card pressure, fatigue or defensive imbalance breaks the match open and one side pulls clearly away within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.1983333333333334,
+          "base_event_probability": 0.1983333333333334,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.08041666666666666,
+              "rationale_cn": "Bosnia and Herzegovina通过压迫或转换取得一球优势。",
+              "rationale_en": "Bosnia and Herzegovina gains a one-goal edge through pressing or transition play."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.05291666666666667,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；Bosnia and Herzegovina通过压迫或转换取得一球优势。",
+              "rationale_en": "compact defending compresses attacking space; Bosnia and Herzegovina gains a one-goal edge through pressing or transition play."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.024375,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；Bosnia and Herzegovina充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "compact defending compresses attacking space; Bosnia and Herzegovina fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0125,
+              "rationale_cn": "淘汰赛风险偏好分化：美国更想90分钟解决，波黑更能接受拖；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Knockout risk preference diverges: the United States wants to settle the match in 90 minutes, while Bosnia and Herzegovina is more willing to extend it; The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.010833333333333334,
+              "rationale_cn": "Bosnia and Herzegovina充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Bosnia and Herzegovina fully converts its counterattacking or attacking efficiency and extends the lead."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side rated lower before the match or in the main forecast wins within 90 minutes.",
+          "rationale_en": "The underdog changes the result within 90 minutes through low-block resilience, counterattacking efficiency, set pieces or a key mistake by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "防守",
+          "impact_cn": "SI预计美国4-2-3-1，有利于拉宽并破解低位防守。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_f17e0d520777",
+            "E_d15dcd3be63b"
+          ],
+          "source_names": [
+            "Sports Illustrated"
+          ],
+          "label_en": "Defense",
+          "impact_en": "SI projects the United States in a 4-2-3-1, which supports width and low-block breaking.",
+          "text_cn": "SI预计美国4-2-3-1，有利于拉宽并破解低位防守。",
+          "text_en": "SI projects the United States in a 4-2-3-1, which supports width and low-block breaking."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "防守",
+          "impact_cn": "FIFA多次描述波黑低位紧凑，转守后能较早形成防守块。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_a5b3e401c981",
+            "E_F_7881a86b4b2e",
+            "E_F_884144888130"
+          ],
+          "source_names": [
+            "YouTube / FIFA World Cup",
+            "FIFA Training Centre",
+            "FIFA Training Centre - LinkedIn"
+          ],
+          "label_en": "Defense",
+          "impact_en": "FIFA repeatedly described Bosnia and Herzegovina as compact in a low block, able to form its defensive shape early after turnovers.",
+          "text_cn": "FIFA多次描述波黑低位紧凑，转守后能较早形成防守块。",
+          "text_en": "FIFA repeatedly described Bosnia and Herzegovina as compact in a low block, able to form its defensive shape early after turnovers."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "证据因素 3",
+          "impact_cn": "Fox对Pulisic赛前时间有45/77分钟两种口径，均显示出场有限。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_16828b226a19",
+            "E_e0932a759cd3"
+          ],
+          "source_names": [
+            "Fox Sports"
+          ],
+          "label_en": "Prediction-model rationale based on the corresponding Chinese explanation.",
+          "impact_en": "Fox reported limited pre-match minutes for Pulisic, with 45- and 77-minute references both indicating restrained usage.",
+          "text_cn": "Fox对Pulisic赛前时间有45/77分钟两种口径，均显示出场有限。",
+          "text_en": "Fox reported limited pre-match minutes for Pulisic, with 45- and 77-minute references both indicating restrained usage."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "进攻",
+          "impact_cn": "NBC称波黑三场小组赛预期进球均低于1，且两次控球落后。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_a63d526aaa7d"
+          ],
+          "source_names": [
+            "NBC Sports"
+          ],
+          "label_en": "Attack",
+          "impact_en": "NBC noted that Bosnia and Herzegovina stayed below 1 expected goal in all three group matches and was out-possessed twice.",
+          "text_cn": "NBC称波黑三场小组赛预期进球均低于1，且两次控球落后。",
+          "text_en": "NBC noted that Bosnia and Herzegovina stayed below 1 expected goal in all three group matches and was out-possessed twice."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "证据因素 5",
+          "impact_cn": "美国4-1胜巴拉圭开局，波黑末轮3-1击败卡塔尔。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_9e64d46acb77",
+            "E_d24b1c9357b2"
+          ],
+          "source_names": [
+            "US Soccer"
+          ],
+          "label_en": "Evidence factor 5",
+          "impact_en": "The United States opened with a 4-1 win over Paraguay, while Bosnia and Herzegovina beat Qatar 3-1 in the final group match.",
+          "text_cn": "美国4-1胜巴拉圭开局，波黑末轮3-1击败卡塔尔。",
+          "text_en": "The United States opened with a 4-1 win over Paraguay, while Bosnia and Herzegovina beat Qatar 3-1 in the final group match."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "证据因素 6",
+          "impact_cn": "本场在圣克拉拉Levi's Stadium进行，属32强单败淘汰轮。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_54be83b0ddc7",
+            "E_20ffc692fc42",
+            "E_1b86d9e399b3"
+          ],
+          "source_names": [
+            "Levi's Stadium",
+            "U.S. Soccer"
+          ],
+          "label_en": "Evidence factor 6",
+          "impact_en": "The match is at Levi's Stadium in Santa Clara in the Round of 32 knockout stage.",
+          "text_cn": "本场在圣克拉拉Levi's Stadium进行，属32强单败淘汰轮。",
+          "text_en": "The match is at Levi's Stadium in Santa Clara in the Round of 32 knockout stage."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2870192307692306,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.21440536013400346,
+          "joint_probability": 0.06153846153846154,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.21440536013400346
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.12897822445561144
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "United States凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal extra-time result is produced through a counterattack, set piece or substitute impact.",
+          "rationale_en": "United States wins extra time by one goal through fitness, bench impact or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.045226130653266354,
+          "joint_probability": 0.012980769230769231,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.045226130653266354
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.01675041876046902
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.011725293132328314
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.003350083752093804
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both teams score in extra time as the match shifts from caution into open exchanges.",
+          "rationale_en": "Extra time opens up and both teams convert one meaningful chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.05695142378559466,
+          "joint_probability": 0.016346153846153844,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.05695142378559466
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.01675041876046902
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.015075376884422119
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.013400335008375217
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "2-1",
+            "0-2"
+          ],
+          "rationale_cn": "United States在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A team wins extra time by at least two goals, or the extra-time segment reaches three or more total goals.",
+          "rationale_en": "United States pulls away after the opponent shows a physical or psychological drop-off."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_ENTRY",
+          "label_cn": "加时入口状态",
+          "impact_cn": "加时不是独立比赛，而是90分钟平局分支",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Extra-time entry state",
+          "impact_en": "Extra time is not an independent match; it is the branch that follows a 90-minute draw.",
+          "text_cn": "加时不是独立比赛，而是90分钟平局分支",
+          "text_en": "Extra time is not an independent match; it is the branch that follows a 90-minute draw."
+        },
+        {
+          "factor_id": "ET_FATIGUE",
+          "label_cn": "体能与主力留存",
+          "impact_cn": "采用常规时间预测、淘汰赛证据块、体能/替补/风险偏好/点球能力/压力因素的后备整合",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Fatigue and key-player availability",
+          "impact_en": "A fallback synthesis of the 90-minute forecast, knockout evidence, fitness, bench depth, risk preference, penalty ability and pressure factors.",
+          "text_cn": "采用常规时间预测、淘汰赛证据块、体能/替补/风险偏好/点球能力/压力因素的后备整合",
+          "text_en": "A fallback synthesis of the 90-minute forecast, knockout evidence, fitness, bench depth, risk preference, penalty ability and pressure factors."
+        },
+        {
+          "factor_id": "ET_ATTACK_PATH",
+          "label_cn": "高点与定位球路径",
+          "impact_cn": "未获得足够结构化LLM讨论时，使用保守条件先验",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Aerial and set-piece route",
+          "impact_en": "When structured LLM deliberation is insufficient, a conservative conditional prior is used.",
+          "text_cn": "未获得足够结构化LLM讨论时，使用保守条件先验",
+          "text_en": "When structured LLM deliberation is insufficient, a conservative conditional prior is used."
+        },
+        {
+          "factor_id": "ET_COUNTER",
+          "label_cn": "防守与反击窗口",
+          "impact_cn": "核心争议在于强队是否提前冒险避免点球，以及弱队能否靠体能和防守纪律拖入点球",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Defensive and counterattack window",
+          "impact_en": "The key question is whether the favorite takes earlier risks to avoid penalties, and whether the underdog can use fitness and defensive discipline to drag the match to a shootout.",
+          "text_cn": "核心争议在于强队是否提前冒险避免点球，以及弱队能否靠体能和防守纪律拖入点球",
+          "text_en": "The key question is whether the favorite takes earlier risks to avoid penalties, and whether the underdog can use fitness and defensive discipline to drag the match to a shootout."
+        },
+        {
+          "factor_id": "ET_RISK",
+          "label_cn": "105分钟后风险偏好",
+          "impact_cn": "加时rollout以0-0保守路径为基础，同时保留强队加时解决和弱队反击偷袭两类分支",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Risk preference after 105 minutes",
+          "impact_en": "The extra-time rollout uses a conservative 0-0 path as the baseline, while retaining favorite-resolution and underdog counterattack branches.",
+          "text_cn": "加时rollout以0-0保守路径为基础，同时保留强队加时解决和弱队反击偷袭两类分支",
+          "text_en": "The extra-time rollout uses a conservative 0-0 path as the baseline, while retaining favorite-resolution and underdog counterattack branches."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → four expert agents → committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.15288461538461526,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Consecutive goalkeeper saves can swing the shootout."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Consecutive goalkeeper saves can swing the shootout."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive saves, or the opponent misses repeatedly, causing the shootout score to separate quickly.",
+          "rationale_en": "Consecutive goalkeeper saves can swing the shootout."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "A key taker for the favorite misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The more favored side misses in a key round and the underdog advances on penalties.",
+          "rationale_en": "A key taker for the favorite misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both teams execute the first five rounds well, pushing the shootout into sudden death."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides perform well through the first five rounds, and the result is decided only in 6+ sudden-death rounds.",
+          "rationale_en": "Both teams execute the first five rounds well, pushing the shootout into sudden death."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_BASELINE",
+          "label_cn": "点球胜率口径",
+          "impact_cn": "采用点球能力、门将状态、淘汰赛经验与压力因素的保守后备整合",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Penalty-win probability framing",
+          "impact_en": "A conservative fallback synthesis of penalty ability, goalkeeper form, knockout experience and pressure factors.",
+          "text_cn": "采用点球能力、门将状态、淘汰赛经验与压力因素的保守后备整合",
+          "text_en": "A conservative fallback synthesis of penalty ability, goalkeeper form, knockout experience and pressure factors."
+        },
+        {
+          "factor_id": "PEN_TAKER_DEPTH",
+          "label_cn": "主罚手深度",
+          "impact_cn": "点球大战随机性强，应以门将、主罚手深度、淘汰赛经验和心理压力作小幅条件调整",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Penalty taker depth",
+          "impact_en": "Penalty shootouts are highly random, so goalkeeper quality, taker depth, knockout experience and pressure should only make small conditional adjustments.",
+          "text_cn": "点球大战随机性强，应以门将、主罚手深度、淘汰赛经验和心理压力作小幅条件调整",
+          "text_en": "Penalty shootouts are highly random, so goalkeeper quality, taker depth, knockout experience and pressure should only make small conditional adjustments."
+        },
+        {
+          "factor_id": "PEN_NEGATIVE_SAMPLE",
+          "label_cn": "负面样本与证据缺口",
+          "impact_cn": "公开赛前资料通常无法确认具体点球顺序，点球手只作为经验候选",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Negative samples and evidence gaps",
+          "impact_en": "Public pre-match information usually cannot confirm the exact penalty order, so takers are treated only as experience-based candidates.",
+          "text_cn": "公开赛前资料通常无法确认具体点球顺序，点球手只作为经验候选",
+          "text_en": "Public pre-match information usually cannot confirm the exact penalty order, so takers are treated only as experience-based candidates."
+        },
+        {
+          "factor_id": "PEN_KEEPER",
+          "label_cn": "门将扑点证据",
+          "impact_cn": "点球rollout以一球差和延长点球为主，保留门将连续扑点和压力失误路径",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper penalty evidence",
+          "impact_en": "The penalty rollout centers on one-goal margins and sudden-death extensions, while retaining goalkeeper-save and pressure-miss paths.",
+          "text_cn": "点球rollout以一球差和延长点球为主，保留门将连续扑点和压力失误路径",
+          "text_en": "The penalty rollout centers on one-goal margins and sudden-death extensions, while retaining goalkeeper-save and pressure-miss paths."
+        },
+        {
+          "factor_id": "PEN_PRESSURE",
+          "label_cn": "压力背景",
+          "impact_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Pressure context",
+          "impact_en": "Common penalty-shootout score patterns, conservatively calibrated with goalkeeper, taker depth and psychological pressure.",
+          "text_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准",
+          "text_en": "Common penalty-shootout score patterns, conservatively calibrated with goalkeeper, taker depth and psychological pressure."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollout → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-01T07:41:19.258839Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline uses pre-match evidence and committee mechanisms across phases; MAS rollout generates conditional paths for 90 minutes, extra time if level, and penalties if still level, while Monte Carlo samples the full path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same MAS conditional rollout, and the three frontend tabs are slices of one complete path distribution while preserving the v6.2.2-compatible JSON structure.",
+  "manual_review_note_cn": "前端展示文案与英文翻译已基于完整预测结果人工复核修正；概率、矩阵和路径分布未改动。",
+  "manual_review_note_en": "Frontend display text and English translations were manually reviewed against the full prediction outputs; probabilities, matrices and path distributions were not changed."
+}

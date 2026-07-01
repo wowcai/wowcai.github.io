@@ -1,0 +1,1243 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M80",
+    "team_a": "England",
+    "team_b": "DR Congo",
+    "kickoff_utc": "2026-07-01T12:00:00-04:00",
+    "venue": "Mercedes-Benz Stadium, Atlanta",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.6841346153846154,
+      "team_b": 0.3158653846153846,
+      "favorite": "England"
+    },
+    "resolution": {
+      "normal_time": 0.7144230769230767,
+      "extra_time": 0.12980769230769226,
+      "penalties": 0.15576923076923063
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.15145833333333333,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12416666666666666,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "2-0",
+        "probability": 0.10104166666666667,
+        "goals_a": 2,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，England常规时间晋级。",
+        "summary_cn": "90分钟1-0，England常规时间晋级。",
+        "probability": 0.1326923076923077,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_4707276168fb",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: England advances in normal time.",
+        "summary_en": "90 minutes 1-0: England advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+        "probability": 0.027884615384615386,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_416828dc4222",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+        "probability": 0.009134615384615385,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "DR Congo",
+        "path_id": "BMC_cec412b18b90",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，England常规时间晋级。",
+        "summary_cn": "90分钟1-0，England常规时间晋级。",
+        "probability": 0.1326923076923077,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_4707276168fb",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: England advances in normal time.",
+        "summary_en": "90 minutes 1-0: England advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+        "probability": 0.027884615384615386,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_416828dc4222",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+        "probability": 0.009134615384615385,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "DR Congo",
+        "path_id": "BMC_cec412b18b90",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties."
+      }
+    ],
+    "favorite": "England",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.15576923076923063,
+        "probability_band": "15.6%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "DR Congo",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009134615384615385,
+            "path_probability": 0.009134615384615385,
+            "path_id": "BMC_cec412b18b90",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "DR Congo",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007211538461538462,
+            "path_probability": 0.007211538461538462,
+            "path_id": "BMC_16c892ba1f1f",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，DR Congo点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "DR Congo",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_314a5517c0bd",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After both 90 minutes and extra time remain level, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12980769230769226,
+        "probability_band": "13.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "England",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.027884615384615386,
+            "path_probability": 0.027884615384615386,
+            "path_id": "BMC_416828dc4222",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "England",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.027403846153846154,
+            "path_probability": 0.027403846153846154,
+            "path_id": "BMC_ced9f940c86a",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，England加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; England advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "DR Congo",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.014423076923076924,
+            "path_probability": 0.014423076923076924,
+            "path_id": "BMC_6c39dff7a5e5",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，DR Congo加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; DR Congo advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk preference are amplified in extra time and shape the resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2221153846153846,
+        "probability_band": "22.2%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "DR Congo",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08173076923076923,
+            "path_probability": 0.08173076923076923,
+            "path_id": "BMC_446d944f97a8",
+            "summary_cn": "90分钟0-1，DR Congo常规时间晋级。",
+            "summary_en": "90 minutes 0-1: DR Congo advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "DR Congo",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.05432692307692308,
+            "path_probability": 0.05432692307692308,
+            "path_id": "BMC_550053529b0c",
+            "summary_cn": "90分钟1-2，DR Congo常规时间晋级。",
+            "summary_en": "90 minutes 1-2: DR Congo advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "DR Congo",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.032692307692307694,
+            "path_probability": 0.032692307692307694,
+            "path_id": "BMC_27f7bbf822db",
+            "summary_cn": "90分钟0-2，DR Congo常规时间晋级。",
+            "summary_en": "90 minutes 0-2: DR Congo advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog may advance through a normal-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 149,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "England",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.1326923076923077,
+          "path_probability": 0.1326923076923077,
+          "path_id": "BMC_4707276168fb",
+          "summary_cn": "90分钟1-0，England常规时间晋级。",
+          "summary_en": "90 minutes 1-0: England advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "England",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10865384615384616,
+          "path_probability": 0.10865384615384616,
+          "path_id": "BMC_c692aa79eded",
+          "summary_cn": "90分钟2-0，England常规时间晋级。",
+          "summary_en": "90 minutes 2-0: England advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "England",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09038461538461538,
+          "path_probability": 0.09038461538461538,
+          "path_id": "BMC_38708b134e0a",
+          "summary_cn": "90分钟2-1，England常规时间晋级。",
+          "summary_en": "90 minutes 2-1: England advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "DR Congo",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08173076923076923,
+          "path_probability": 0.08173076923076923,
+          "path_id": "BMC_446d944f97a8",
+          "summary_cn": "90分钟0-1，DR Congo常规时间晋级。",
+          "summary_en": "90 minutes 0-1: DR Congo advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "England",
+          "after_extra_time_score": "3-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.055288461538461536,
+          "path_probability": 0.055288461538461536,
+          "path_id": "BMC_11d83943f864",
+          "summary_cn": "90分钟3-0，England常规时间晋级。",
+          "summary_en": "90 minutes 3-0: England advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，England常规时间晋级。",
+          "summary_cn": "90分钟1-0，England常规时间晋级。",
+          "probability": 0.1326923076923077,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "England",
+          "path_id": "BMC_4707276168fb",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: England advances in normal time.",
+          "summary_en": "90 minutes 1-0: England advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+          "probability": 0.027884615384615386,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "England",
+          "path_id": "BMC_416828dc4222",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+          "probability": 0.009134615384615385,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "3-4",
+          "advancer_team": "DR Congo",
+          "path_id": "BMC_cec412b18b90",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，England常规时间晋级。",
+        "summary_cn": "90分钟1-0，England常规时间晋级。",
+        "probability": 0.1326923076923077,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_4707276168fb",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: England advances in normal time.",
+        "summary_en": "90 minutes 1-0: England advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+        "probability": 0.027884615384615386,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_416828dc4222",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，DR Congo点球晋级。",
+        "probability": 0.009134615384615385,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "DR Congo",
+        "path_id": "BMC_cec412b18b90",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, DR Congo advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.21854166666666672,
+          "base_event_probability": 0.21854166666666672,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.051458333333333335,
+              "rationale_cn": "England打破对方防守后扩大领先优势。",
+              "rationale_en": "England breaks down the opponent's defense and extends the lead."
+            },
+            {
+              "score": "2-2",
+              "probability": 0.036875,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes open and end-to-end, with both attacks converting chances."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.023333333333333334,
+              "rationale_cn": "若90分钟未分胜负，双方都会管理点球路径；英格兰门将与点球准备略优、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Prediction-model rationale based on the corresponding Chinese explanation.; Prediction-model rationale based on the corresponding Chinese explanation.; compact defending compresses attacking space; The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.020833333333333332,
+              "rationale_cn": "England打破对方防守后扩大领先优势。",
+              "rationale_en": "England breaks down the opponent's defense and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.020833333333333332,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "2-2",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "Total goals reach at least four.",
+          "rationale_en": "The match is pulled into a more open rhythm; transitions, set pieces or space after a lead push total goals above the low-score center of the main forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.12958333333333333,
+          "base_event_probability": 0.12958333333333333,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.059166666666666666,
+              "rationale_cn": "England打破对方防守后扩大领先优势。",
+              "rationale_en": "England breaks down the opponent's defense and extends the lead."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.020833333333333332,
+              "rationale_cn": "England打破对方防守后扩大领先优势。",
+              "rationale_en": "England breaks down the opponent's defense and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.020833333333333332,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "5-1",
+              "probability": 0.007083333333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.005208333333333333,
+              "rationale_cn": "DR Congo后段冲击，是英格兰右路高位压迫与对手破压能力、紧凑防守对进攻空间的压缩；DR Congo充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Prediction-model rationale based on the corresponding Chinese explanation.; compact defending compresses attacking space; DR Congo fully converts its counterattacking or attacking efficiency and extends the lead."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-0",
+            "4-1"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either team wins by at least three goals.",
+          "rationale_en": "An early goal, card pressure, fatigue or defensive imbalance breaks the match open and one side pulls clearly away within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.17666666666666664,
+          "base_event_probability": 0.17666666666666664,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.0775,
+              "rationale_cn": "DR Congo通过压迫或转换取得一球优势。",
+              "rationale_en": "DR Congo gains a one-goal edge through pressing or transition play."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.045208333333333336,
+              "rationale_cn": "DR Congo通过压迫或转换取得一球优势。",
+              "rationale_en": "DR Congo gains a one-goal edge through pressing or transition play."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.022708333333333334,
+              "rationale_cn": "DR Congo充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "DR Congo fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.010833333333333334,
+              "rationale_cn": "DR Congo充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "DR Congo fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.008541666666666666,
+              "rationale_cn": "若90分钟未分胜负，双方都会管理点球路径；英格兰门将与点球准备略优；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Prediction-model rationale based on the corresponding Chinese explanation.; Prediction-model rationale based on the corresponding Chinese explanation.; The match is pulled into a high-risk open rhythm, with space behind the defensive line continuing to expand."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side rated lower before the match or in the main forecast wins within 90 minutes.",
+          "rationale_en": "The underdog changes the result within 90 minutes through low-block resilience, counterattacking efficiency, set pieces or a key mistake by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "战术",
+          "impact_cn": "英格兰小组赛平均控球65.3%，明显高于DR Congo的38.5%。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_25bf7b8aae35",
+            "E_5967c7db431c"
+          ],
+          "source_names": [
+            "England Football"
+          ],
+          "label_en": "Tactics",
+          "impact_en": "England averaged 65.3% possession in the group stage, clearly above DR Congo's 38.5%.",
+          "text_cn": "英格兰小组赛平均控球65.3%，明显高于DR Congo的38.5%。",
+          "text_en": "England averaged 65.3% possession in the group stage, clearly above DR Congo's 38.5%."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "防守",
+          "impact_cn": "赛前报道预计英格兰要破解DR Congo低位防守，早段机会质量或受限。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_aa275aa6180d"
+          ],
+          "source_names": [
+            "The Times"
+          ],
+          "label_en": "Defense",
+          "impact_en": "Pre-match reporting expects England to face a low block from DR Congo, so early chance quality may be constrained.",
+          "text_cn": "赛前报道预计英格兰要破解DR Congo低位防守，早段机会质量或受限。",
+          "text_en": "Pre-match reporting expects England to face a low block from DR Congo, so early chance quality may be constrained."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "阵容",
+          "impact_cn": "Tuchel确认Declan Rice首发，他此前对Panama轮休后可回到中场。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_708686b4f7e7",
+            "E_7b9ca6d25d7d"
+          ],
+          "source_names": [
+            "Sky News",
+            "BBC Sport"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Tuchel confirmed Declan Rice is expected to start after being rested against Panama, strengthening midfield circulation.",
+          "text_cn": "Tuchel确认Declan Rice首发，他此前对Panama轮休后可回到中场。",
+          "text_en": "Tuchel confirmed Declan Rice is expected to start after being rested against Panama, strengthening midfield circulation."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "阵容",
+          "impact_cn": "Reece James和Jarell Quansah伤缺，英格兰右后卫位置需由替代方案应对。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_f6529c88c308",
+            "E_b5fc65dd9bd4"
+          ],
+          "source_names": [
+            "BBC",
+            "Sky Sports"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Reece James and Jarell Quansah are out, so England's right-back solution must be validated in the match.",
+          "text_cn": "Reece James和Jarell Quansah伤缺，英格兰右后卫位置需由替代方案应对。",
+          "text_en": "Reece James and Jarell Quansah are out, so England's right-back solution must be validated in the match."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "进攻",
+          "impact_cn": "DR Congo前三场仅让对手获得合计1.8 xG，防守样本支持其抗压能力。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_a48d221498f0"
+          ],
+          "source_names": [
+            "ESPN"
+          ],
+          "label_en": "Attack",
+          "impact_en": "DR Congo allowed only about 1.8 xG across its first three matches, supporting its defensive resilience sample.",
+          "text_cn": "DR Congo前三场仅让对手获得合计1.8 xG，防守样本支持其抗压能力。",
+          "text_en": "DR Congo allowed only about 1.8 xG across its first three matches, supporting its defensive resilience sample."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "证据因素 6",
+          "impact_cn": "比赛在亚特兰大Mercedes-Benz Stadium进行，场地为约95%天然草的混合草皮。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_b55346db442a",
+            "E_841b1e0c54a0",
+            "E_e0a6e70a5ab6"
+          ],
+          "source_names": [
+            "Mercedes-Benz Stadium",
+            "FIFA",
+            "Knox News"
+          ],
+          "label_en": "Evidence factor 6",
+          "impact_en": "The match is at Mercedes-Benz Stadium in Atlanta on a hybrid-grass surface of about 95% natural grass.",
+          "text_cn": "比赛在亚特兰大Mercedes-Benz Stadium进行，场地为约95%天然草的混合草皮。",
+          "text_en": "The match is at Mercedes-Benz Stadium in Atlanta on a hybrid-grass surface of about 95% natural grass."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2855769230769229,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.23737373737373751,
+          "joint_probability": 0.06778846153846153,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.23737373737373751
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.11784511784511792
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "England凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal extra-time result is produced through a counterattack, set piece or substitute impact.",
+          "rationale_en": "England wins extra time by one goal through fitness, bench impact or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.05387205387205391,
+          "joint_probability": 0.015384615384615385,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.05387205387205391
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.011784511784511793
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.010101010101010109
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.0033670033670033695
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both teams score in extra time as the match shifts from caution into open exchanges.",
+          "rationale_en": "Extra time opens up and both teams convert one meaningful chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.03535353535353538,
+          "joint_probability": 0.010096153846153847,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.03535353535353538
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.01851851851851853
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.016835016835016845
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.011784511784511793
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "3-0"
+          ],
+          "rationale_cn": "England在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A team wins extra time by at least two goals, or the extra-time segment reaches three or more total goals.",
+          "rationale_en": "England pulls away after the opponent shows a physical or psychological drop-off."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_ENTRY",
+          "label_cn": "加时入口状态",
+          "impact_cn": "仅在90分钟打平并进入加时赛的条件分支下：常规时间基础分布显示英格兰90分钟胜率55.4%、平局27.0%、DR Congo胜率17.7%，因此加时触发不是主路径，但并非低概率尾部",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Extra-time entry state",
+          "impact_en": "Conditional on the match being level after 90 minutes and entering extra time: the normal-time distribution indicates the extra-time branch is not the main path, but it is still a meaningful scenario rather than a remote tail.",
+          "text_cn": "仅在90分钟打平并进入加时赛的条件分支下：常规时间基础分布显示英格兰90分钟胜率55.4%、平局27.0%、DR Congo胜率17.7%，因此加时触发不是主路径，但并非低概率尾部",
+          "text_en": "Conditional on the match being level after 90 minutes and entering extra time: the normal-time distribution indicates the extra-time branch is not the main path, but it is still a meaningful scenario rather than a remote tail."
+        },
+        {
+          "factor_id": "ET_FATIGUE",
+          "label_cn": "体能与主力留存",
+          "impact_cn": "因此90-105分钟英格兰仍更可能主动寻找破局，105分钟后若仍平，双方更可能降低开放进攻，比赛逐步转向定位球、二点球、体能失误和点球准备管理",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Fatigue and key-player availability",
+          "impact_en": "Therefore, from minutes 90-105 England is still more likely to seek a breakthrough; if the score remains level after 105 minutes, both sides are likely to reduce open attacking risk and shift toward set pieces, second balls, fatigue errors and penalty-path management.",
+          "text_cn": "因此90-105分钟英格兰仍更可能主动寻找破局，105分钟后若仍平，双方更可能降低开放进攻，比赛逐步转向定位球、二点球、体能失误和点球准备管理",
+          "text_en": "Therefore, from minutes 90-105 England is still more likely to seek a breakthrough; if the score remains level after 105 minutes, both sides are likely to reduce open attacking risk and shift toward set pieces, second balls, fatigue errors and penalty-path management."
+        },
+        {
+          "factor_id": "ET_ATTACK_PATH",
+          "label_cn": "高点与定位球路径",
+          "impact_cn": "证据整合后，加时赛的核心不是英格兰完全失去优势，而是英格兰控球和定位球主动权继续存在，同时双方风险偏好下降、点球路径管理权重上升",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Aerial and set-piece route",
+          "impact_en": "After evidence integration, the extra-time question is not whether England loses its edge entirely, but whether its possession and set-piece initiative can survive lower risk appetite and growing penalty-path management.",
+          "text_cn": "证据整合后，加时赛的核心不是英格兰完全失去优势，而是英格兰控球和定位球主动权继续存在，同时双方风险偏好下降、点球路径管理权重上升",
+          "text_en": "After evidence integration, the extra-time question is not whether England loses its edge entirely, but whether its possession and set-piece initiative can survive lower risk appetite and growing penalty-path management."
+        },
+        {
+          "factor_id": "ET_COUNTER",
+          "label_cn": "防守与反击窗口",
+          "impact_cn": "DR Congo则有低位防守、Wissa/Mayele后段反击威胁、Fayulu扑点记录和曾经119分钟换门将准备点球的可验证方案",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Defensive and counterattack window",
+          "impact_en": "DR Congo retains a verifiable counter-path through low-block defending, late Wissa/Mayele transition threat, Fayulu's penalty-save record and the precedent of a 119th-minute goalkeeper change for penalties.",
+          "text_cn": "DR Congo则有低位防守、Wissa/Mayele后段反击威胁、Fayulu扑点记录和曾经119分钟换门将准备点球的可验证方案",
+          "text_en": "DR Congo retains a verifiable counter-path through low-block defending, late Wissa/Mayele transition threat, Fayulu's penalty-save record and the precedent of a 119th-minute goalkeeper change for penalties."
+        },
+        {
+          "factor_id": "ET_RISK",
+          "label_cn": "105分钟后风险偏好",
+          "impact_cn": "英格兰因Pickford扑点记录、公开点球准备和较深的主罚资源略占点球端优势",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Risk preference after 105 minutes",
+          "impact_en": "England holds a slight penalty-side edge through Pickford's save record, public penalty preparation and a deeper likely taker pool.",
+          "text_cn": "英格兰因Pickford扑点记录、公开点球准备和较深的主罚资源略占点球端优势",
+          "text_en": "England holds a slight penalty-side edge through Pickford's save record, public penalty preparation and a deeper likely taker pool."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → four expert agents → committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.15576923076923063,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Consecutive goalkeeper saves can swing the shootout."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Consecutive goalkeeper saves can swing the shootout."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive saves, or the opponent misses repeatedly, causing the shootout score to separate quickly.",
+          "rationale_en": "Consecutive goalkeeper saves can swing the shootout."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "A key taker for the favorite misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The more favored side misses in a key round and the underdog advances on penalties.",
+          "rationale_en": "A key taker for the favorite misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both teams execute the first five rounds well, pushing the shootout into sudden death."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides perform well through the first five rounds, and the result is decided only in 6+ sudden-death rounds.",
+          "rationale_en": "Both teams execute the first five rounds well, pushing the shootout into sudden death."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_BASELINE",
+          "label_cn": "点球胜率口径",
+          "impact_cn": "采用点球能力、门将状态、淘汰赛经验与压力因素的保守后备整合",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Penalty-win probability framing",
+          "impact_en": "A conservative fallback synthesis of penalty ability, goalkeeper form, knockout experience and pressure factors.",
+          "text_cn": "采用点球能力、门将状态、淘汰赛经验与压力因素的保守后备整合",
+          "text_en": "A conservative fallback synthesis of penalty ability, goalkeeper form, knockout experience and pressure factors."
+        },
+        {
+          "factor_id": "PEN_TAKER_DEPTH",
+          "label_cn": "主罚手深度",
+          "impact_cn": "点球大战随机性强，应以门将、主罚手深度、淘汰赛经验和心理压力作小幅条件调整",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Penalty taker depth",
+          "impact_en": "Penalty shootouts are highly random, so goalkeeper quality, taker depth, knockout experience and pressure should only make small conditional adjustments.",
+          "text_cn": "点球大战随机性强，应以门将、主罚手深度、淘汰赛经验和心理压力作小幅条件调整",
+          "text_en": "Penalty shootouts are highly random, so goalkeeper quality, taker depth, knockout experience and pressure should only make small conditional adjustments."
+        },
+        {
+          "factor_id": "PEN_NEGATIVE_SAMPLE",
+          "label_cn": "负面样本与证据缺口",
+          "impact_cn": "公开赛前资料通常无法确认具体点球顺序，点球手只作为经验候选",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Negative samples and evidence gaps",
+          "impact_en": "Public pre-match information usually cannot confirm the exact penalty order, so takers are treated only as experience-based candidates.",
+          "text_cn": "公开赛前资料通常无法确认具体点球顺序，点球手只作为经验候选",
+          "text_en": "Public pre-match information usually cannot confirm the exact penalty order, so takers are treated only as experience-based candidates."
+        },
+        {
+          "factor_id": "PEN_KEEPER",
+          "label_cn": "门将扑点证据",
+          "impact_cn": "点球rollout以一球差和延长点球为主，保留门将连续扑点和压力失误路径",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper penalty evidence",
+          "impact_en": "The penalty rollout centers on one-goal margins and sudden-death extensions, while retaining goalkeeper-save and pressure-miss paths.",
+          "text_cn": "点球rollout以一球差和延长点球为主，保留门将连续扑点和压力失误路径",
+          "text_en": "The penalty rollout centers on one-goal margins and sudden-death extensions, while retaining goalkeeper-save and pressure-miss paths."
+        },
+        {
+          "factor_id": "PEN_PRESSURE",
+          "label_cn": "压力背景",
+          "impact_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalty_mini_pipeline"
+          ],
+          "label_en": "Pressure context",
+          "impact_en": "Common penalty-shootout score patterns, conservatively calibrated with goalkeeper, taker depth and psychological pressure.",
+          "text_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准",
+          "text_en": "Common penalty-shootout score patterns, conservatively calibrated with goalkeeper, taker depth and psychological pressure."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollout → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-01T05:57:40.964189Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline uses pre-match evidence and committee mechanisms across phases; MAS rollout generates conditional paths for 90 minutes, extra time if level, and penalties if still level, while Monte Carlo samples the full path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same MAS conditional rollout, and the three frontend tabs are slices of one complete path distribution while preserving the v6.2.2-compatible JSON structure.",
+  "manual_review_note_cn": "前端展示文案与英文翻译已基于完整预测结果人工复核修正；概率、矩阵和路径分布未改动。",
+  "manual_review_note_en": "Frontend display text and English translations were manually reviewed against the full prediction outputs; probabilities, matrices and path distributions were not changed."
+}

@@ -1,0 +1,499 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.4840871021775544,
+      "conditional_probability": 0.4840871021775544,
+      "joint_probability": 0.13894230769230762,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.4840871021775544,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "label_en": "0-0",
+      "rationale_en": "Because extra time is short and knockout risk appetite falls, remaining level is the high-probability baseline branch."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.21440536013400346,
+      "conditional_probability": 0.21440536013400346,
+      "joint_probability": 0.06153846153846154,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.21440536013400346,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "United States凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "United States wins extra time by one goal through fitness, bench impact or pressing advantage."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.12897822445561144,
+      "conditional_probability": 0.12897822445561144,
+      "joint_probability": 0.03701923076923077,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.12897822445561144,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Bosnia and Herzegovina凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Bosnia and Herzegovina wins extra time by one goal through fitness, bench impact or counterattacking efficiency."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.05695142378559466,
+      "conditional_probability": 0.05695142378559466,
+      "joint_probability": 0.016346153846153844,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.05695142378559466,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "United States在对手体能或心理崩盘后拉开比分。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "United States pulls away after the opponent shows a physical or psychological drop-off."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.045226130653266354,
+      "conditional_probability": 0.045226130653266354,
+      "joint_probability": 0.012980769230769231,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.045226130653266354,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Extra time opens up and both teams convert one meaningful chance."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.01675041876046902,
+      "conditional_probability": 0.01675041876046902,
+      "joint_probability": 0.004807692307692308,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.01675041876046902,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.015075376884422119,
+      "conditional_probability": 0.015075376884422119,
+      "joint_probability": 0.004326923076923077,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.015075376884422119,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "Bosnia and Herzegovina在对手压上后连续制造转换机会。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Bosnia and Herzegovina creates repeated transition chances after the opponent pushes forward."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.013400335008375217,
+      "conditional_probability": 0.013400335008375217,
+      "joint_probability": 0.0038461538461538464,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.013400335008375217,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.011725293132328314,
+      "conditional_probability": 0.011725293132328314,
+      "joint_probability": 0.0033653846153846156,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.011725293132328314,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.003350083752093804,
+      "conditional_probability": 0.003350083752093804,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.003350083752093804,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "0-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "5-0",
+      "score": "5-0",
+      "increment": "5-0",
+      "probability": 0.003350083752093804,
+      "conditional_probability": 0.003350083752093804,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.003350083752093804,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "5-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.003350083752093804,
+      "conditional_probability": 0.003350083752093804,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.003350083752093804,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "label": "4-1",
+      "score": "4-1",
+      "increment": "4-1",
+      "probability": 0.001675041876046902,
+      "conditional_probability": 0.001675041876046902,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.001675041876046902,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-1",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "4-0",
+      "score": "4-0",
+      "increment": "4-0",
+      "probability": 0.001675041876046902,
+      "conditional_probability": 0.001675041876046902,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.001675041876046902,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.21440536013400346,
+      "joint_probability": 0.06153846153846154,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.21440536013400346
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.12897822445561144
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "United States凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal extra-time result is produced through a counterattack, set piece or substitute impact.",
+      "rationale_en": "United States wins extra time by one goal through fitness, bench impact or pressing advantage."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.045226130653266354,
+      "joint_probability": 0.012980769230769231,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.045226130653266354
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.01675041876046902
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.011725293132328314
+        },
+        {
+          "score": "2-2",
+          "increment": "2-2",
+          "probability": 0.003350083752093804
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both teams score in extra time as the match shifts from caution into open exchanges.",
+      "rationale_en": "Extra time opens up and both teams convert one meaningful chance."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.05695142378559466,
+      "joint_probability": 0.016346153846153844,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.05695142378559466
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.01675041876046902
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.015075376884422119
+        },
+        {
+          "score": "3-0",
+          "increment": "3-0",
+          "probability": 0.013400335008375217
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "2-1",
+        "0-2"
+      ],
+      "rationale_cn": "United States在对手体能或心理崩盘后拉开比分。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A team wins extra time by at least two goals, or the extra-time segment reaches three or more total goals.",
+      "rationale_en": "United States pulls away after the opponent shows a physical or psychological drop-off."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "ET_US_WIDTH",
+      "label_cn": "美国边路破低位延续到加时",
+      "impact_cn": "美国若主要边路爆点仍在场，并能保持宽度和禁区回做，加时仍有小幅运动战优势。",
+      "direction": "team_a",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "U.S. width remains the main extra-time route against Bosnia's low block",
+      "impact_en": "If the U.S. still has its main wide threats on the pitch and can keep width plus cutbacks into the box, it retains a slight open-play edge in extra time.",
+      "text_cn": "美国若主要边路爆点仍在场，并能保持宽度和禁区回做，加时仍有小幅运动战优势。",
+      "text_en": "If the U.S. still has its main wide threats on the pitch and can keep width plus cutbacks into the box, it retains a slight open-play edge in extra time."
+    },
+    {
+      "factor_id": "ET_BOSNIA_LOW_BLOCK",
+      "label_cn": "波黑低位与中卫保护",
+      "impact_cn": "波黑中卫群和后腰保护能压缩点球点与六码区之间空间，使美国进攻转向外围循环和传中。",
+      "direction": "team_b",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Bosnia's compact low block can still slow the match",
+      "impact_en": "Bosnia's center-backs and midfield protection can compress the space between the penalty spot and six-yard box, pushing the U.S. toward circulation and crosses.",
+      "text_cn": "波黑中卫群和后腰保护能压缩点球点与六码区之间空间，使美国进攻转向外围循环和传中。",
+      "text_en": "Bosnia's center-backs and midfield protection can compress the space between the penalty spot and six-yard box, pushing the U.S. toward circulation and crosses."
+    },
+    {
+      "factor_id": "ET_DZEKO_SETPIECE",
+      "label_cn": "Džeko支点与定位球威胁",
+      "impact_cn": "若Džeko或另一名高点仍在场，波黑可通过长传、二点球和前场定位球制造低频高杠杆机会。",
+      "direction": "team_b",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Džeko and set pieces remain Bosnia's high-leverage path",
+      "impact_en": "If Džeko or another aerial target remains on the pitch, Bosnia can create low-frequency, high-leverage chances through long balls, second balls and set pieces.",
+      "text_cn": "若Džeko或另一名高点仍在场，波黑可通过长传、二点球和前场定位球制造低频高杠杆机会。",
+      "text_en": "If Džeko or another aerial target remains on the pitch, Bosnia can create low-frequency, high-leverage chances through long balls, second balls and set pieces."
+    },
+    {
+      "factor_id": "ET_RISK_SPLIT",
+      "label_cn": "70分钟后风险偏好分化",
+      "impact_cn": "美国更想在运动战解决，波黑更能接受拖入点球；这会同时提高美国压上和波黑反击空间。",
+      "direction": "balanced",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "The risk split sharpens after 70 minutes and into extra time",
+      "impact_en": "The U.S. would rather resolve the match in open play, while Bosnia is more willing to extend it to penalties; this raises both U.S. pressure and Bosnia's transition space.",
+      "text_cn": "美国更想在运动战解决，波黑更能接受拖入点球；这会同时提高美国压上和波黑反击空间。",
+      "text_en": "The U.S. would rather resolve the match in open play, while Bosnia is more willing to extend it to penalties; this raises both U.S. pressure and Bosnia's transition space."
+    },
+    {
+      "factor_id": "ET_HOME_BENCH",
+      "label_cn": "主场与替补资源",
+      "impact_cn": "美国主场和替补深度支持加时小优，但波黑并无明确体能崩盘证据，因此优势不能放大。",
+      "direction": "team_a",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review_from_full_prediction"
+      ],
+      "label_en": "Home context and bench width give the U.S. only a modest edge",
+      "impact_en": "Home context and bench depth support only a modest U.S. extra-time edge, because there is no clear evidence of a Bosnia fitness collapse.",
+      "text_cn": "美国主场和替补深度支持加时小优，但波黑并无明确体能崩盘证据，因此优势不能放大。",
+      "text_en": "Home context and bench depth support only a modest U.S. extra-time edge, because there is no clear evidence of a Bosnia fitness collapse."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}
