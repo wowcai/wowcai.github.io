@@ -874,6 +874,13 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
 }
 
 function handleWorldCupRouteMapClick(event) {
+  const routeButton = event.target.closest("[data-open-route-match-modal]");
+
+  if (routeButton) {
+    openRoutePredictionModal(routeButton.dataset.matchId);
+    return;
+  }
+
   const button = event.target.closest("[data-open-group-prediction-modal]");
 
   if (!button) {
@@ -899,6 +906,17 @@ async function openGroupPredictionModal(matchId) {
   openMatchPredictionModal(loadedMatch.id);
 }
 
+async function openRoutePredictionModal(matchId) {
+  const match = (currentWorldCupMatches || worldCupMatches || []).find((item) => String(item.id) === String(matchId));
+
+  if (!match) {
+    return;
+  }
+
+  const loadedMatch = await loadGroupPredictionMatch(match);
+  openMatchPredictionModal((loadedMatch || match).id);
+}
+
 async function loadGroupPredictionMatch(match) {
   const configuredSpec = findConfiguredGamePredictionSpec(match);
   const matchFolder = configuredSpec?.matchFolder || buildGamePredictionFolderName(match);
@@ -921,7 +939,7 @@ async function loadGroupPredictionMatch(match) {
       return null;
     }
 
-    const loaded = await loadGamePredictionMatch({ matchFolder, versions: versionFolders }, worldCupMatches || []);
+    const loaded = await loadGamePredictionMatch({ ...configuredSpec, matchFolder, versions: versionFolders }, worldCupMatches || []);
 
     if (!loaded) {
       return null;
@@ -1201,10 +1219,12 @@ async function loadGamePredictionMatch(spec, baseMatches = worldCupMatches || []
   }
 
   const inferred = inferGamePredictionTeams(spec.matchFolder, latest.brief);
-  const baseMatch = findBaseMatchForPrediction(inferred.homeName, inferred.awayName, baseMatches);
+  const configuredMatchNo = spec.matchNo || spec.matchId || "";
+  const baseMatch = (configuredMatchNo ? (baseMatches || []).find((match) => String(match.id) === String(configuredMatchNo) || String(match.matchNo) === String(configuredMatchNo)) : null)
+    || findBaseMatchForPrediction(inferred.homeName, inferred.awayName, baseMatches);
   const homeTeam = findTeamByEnglishName(inferred.homeName) || getWorldCupTeam(baseMatch?.homeTeamId);
   const awayTeam = findTeamByEnglishName(inferred.awayName) || getWorldCupTeam(baseMatch?.awayTeamId);
-  const id = baseMatch?.id || latest.brief?.match?.match_id || buildMatchPairKey(inferred.homeName, inferred.awayName);
+  const id = configuredMatchNo || baseMatch?.id || latest.brief?.match?.match_id || buildMatchPairKey(inferred.homeName, inferred.awayName);
   const predictionSummary = buildGamePredictionSummary(latest, homeTeam, awayTeam);
   const topScore = latest.brief?.top_scores?.[0]?.score || "";
   const winReference = formatOutcomeReference(latest, homeTeam, awayTeam);
@@ -1212,7 +1232,7 @@ async function loadGamePredictionMatch(spec, baseMatches = worldCupMatches || []
   return {
     ...(baseMatch || {}),
     id,
-    matchNo: baseMatch?.matchNo || id,
+    matchNo: configuredMatchNo || baseMatch?.matchNo || id,
     homeTeamId: homeTeam?.id || baseMatch?.homeTeamId || "",
     awayTeamId: awayTeam?.id || baseMatch?.awayTeamId || "",
     homeTeam: homeTeam?.nameZh || inferred.homeName,
@@ -2368,9 +2388,14 @@ function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
   const time = routeMatchTime ? matchTimePair(routeMatchTime) : { zh: "时间待定", en: "Time TBD" };
   const matchStatus = ["finished", "live"].includes(node.status) ? node.status : getMatchStatus(match);
   const statusZh = getMatchStatusLabel(matchStatus);
+  const matchId = String(node.matchNo || node.matchId || match?.id || "");
+  const tagName = matchId ? "button" : "article";
+  const openAttrs = matchId
+    ? `type="button" data-open-route-match-modal data-match-id="${escapeHtml(matchId)}" aria-label="${escapeHtml(`Open ${nodeLabel.en} knockout prediction`)}"`
+    : "";
 
   return `
-    <article class="team-route-card ${node.status} ${side} ${hasConcreteTeams ? "has-teams" : ""}">
+    <${tagName} class="team-route-card ${node.status} ${side} ${hasConcreteTeams ? "has-teams" : ""}" ${openAttrs}>
       ${nodeTeams.length
         ? `<span class="route-team-pair">${nodeTeams.map((item) => renderTeamFlag(item, "route-flag")).join("")}</span>`
         : team ? renderTeamFlag(team, "route-flag") : ""}
@@ -2380,7 +2405,7 @@ function renderRouteNode(node, side = "", matches = worldCupMatches || []) {
         <time ${biAttrs(time.zh, time.en)}>${escapeHtml(pairText(time))}</time>
         <strong class="route-match-status ${matchStatus}" ${biAttrs(statusZh)}>${L(statusZh)}</strong>
       </div>
-    </article>
+    </${tagName}>
   `;
 }
 

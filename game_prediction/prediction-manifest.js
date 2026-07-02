@@ -237,12 +237,12 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
   },
   {
     matchNo: "M64",
-    matchFolder: "Cape_Verde_vs_Saudi_Arabia_M64",
+    matchFolder: "New_Zealand_vs_Belgium_M65",
     versions: ["2026.6.26.17.00"]
   },
   {
     matchNo: "M65",
-    matchFolder: "New_Zealand_vs_Belgium_M65",
+    matchFolder: "Cape_Verde_vs_Saudi_Arabia_M64",
     versions: ["2026.6.26.17.00"]
   },
   {
@@ -299,5 +299,20 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
     matchNo: "M75",
     matchFolder: "Netherlands_vs_Morocco_M76",
     versions: ["2026.6.29.16.00"]
+  },
+  {
+    matchNo: "M77",
+    matchFolder: "France_vs_Sweden_M77",
+    versions: ["2026.6.30.13.00"]
+  },
+  {
+    matchNo: "M78",
+    matchFolder: "Norway_vs_Ivory_Coast_M78",
+    versions: ["2026.6.30.13.00"]
+  },
+  {
+    matchNo: "M79",
+    matchFolder: "Mexico_vs_Ecuador_M79",
+    versions: ["2026.6.30.13.00"]
   }
 ];

@@ -2725,6 +2725,19 @@ button.group-result-line:hover {
   box-shadow: 0 12px 28px rgba(6, 63, 44, 0.08);
 }
 
+button.team-route-card {
+  width: 100%;
+  font: inherit;
+  text-align: center;
+  appearance: none;
+  cursor: pointer;
+}
+
+button.team-route-card:focus-visible {
+  outline: 2px solid rgba(58, 176, 255, 0.82);
+  outline-offset: 3px;
+}
+
 .team-route-card::before {
   content: "";
   position: absolute;
