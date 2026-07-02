@@ -899,11 +899,7 @@ async function openGroupPredictionModal(matchId) {
 
   const loadedMatch = await loadGroupPredictionMatch(match);
 
-  if (!loadedMatch) {
-    return;
-  }
-
-  openMatchPredictionModal(loadedMatch.id);
+  openMatchPredictionModal((loadedMatch || match).id);
 }
 
 async function openRoutePredictionModal(matchId) {
@@ -1044,7 +1040,7 @@ function normalizeGamePredictionFolderSegment(value) {
 function mergeWorldCupMatchPrediction(loadedMatch) {
   const current = currentWorldCupMatches || worldCupMatches || [];
   const next = current.map((match) => (
-    String(match.id) === String(loadedMatch.id) ? { ...match, ...loadedMatch } : match
+    String(match.id) === String(loadedMatch.id) ? mergeLoadedWorldCupMatch(match, loadedMatch) : match
   ));
   const exists = next.some((match) => String(match.id) === String(loadedMatch.id));
 
@@ -1067,6 +1063,23 @@ function mergeWorldCupMatchPrediction(loadedMatch) {
       <div><strong>${finishedMatches.length}</strong>${bi("已结束")}</div>
     `;
   }
+}
+
+function mergeLoadedWorldCupMatch(baseMatch, loadedMatch) {
+  const merged = { ...baseMatch, ...loadedMatch };
+
+  return {
+    ...merged,
+    id: baseMatch.id || loadedMatch.id,
+    matchNo: baseMatch.matchNo || loadedMatch.matchNo,
+    stage: baseMatch.stage || loadedMatch.stage,
+    group: baseMatch.group || loadedMatch.group,
+    round: baseMatch.round || loadedMatch.round,
+    matchTime: baseMatch.matchTime || loadedMatch.matchTime,
+    kickoffUtc: baseMatch.kickoffUtc || loadedMatch.kickoffUtc,
+    venue: baseMatch.venue || loadedMatch.venue,
+    matchStatus: baseMatch.matchStatus || loadedMatch.matchStatus
+  };
 }
 
 async function discoverGamePredictionSpecs() {
@@ -2942,6 +2955,23 @@ function compareWorldCupMatchesByTime(a, b) {
 
 function getWorldCupMatchTimeValue(match) {
   const value = match.matchTime || "";
+  const normalizedParsed = value.match(/(\d+)[^\d]+(\d+)[^\d]+(\d+):(\d+)\s+UTC(?:([+-])(\d{1,2})(?::?(\d{2}))?)?/);
+
+  if (normalizedParsed) {
+    const [, month, day, hour, minute, sign, offsetHour = "0", offsetMinute = "0"] = normalizedParsed;
+    const offsetMinutes = sign
+      ? (sign === "-" ? -1 : 1) * (Number(offsetHour) * 60 + Number(offsetMinute))
+      : 0;
+
+    return Date.UTC(
+      2026,
+      Number(month) - 1,
+      Number(day),
+      Number(hour),
+      Number(minute)
+    ) - offsetMinutes * 60 * 1000;
+  }
+
   const parsed = value.match(/(\d+)月(\d+)日\s+(\d+):(\d+)\s+UTC([+-]\d+)/);
 
   if (!parsed) {

@@ -122,12 +122,12 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
   },
   {
     matchNo: "M41",
-    matchFolder: "France_vs_Iraq_M41",
+    matchFolder: "Norway_vs_Senegal_M42",
     versions: ["2026.6.22.12.00"]
   },
   {
     matchNo: "M42",
-    matchFolder: "Norway_vs_Senegal_M42",
+    matchFolder: "France_vs_Iraq_M41",
     versions: ["2026.6.22.12.00"]
   },
   {
@@ -162,22 +162,22 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
   },
   {
     matchNo: "M49",
-    matchFolder: "Switzerland_vs_Canada_M49",
-    versions: ["2026.6.24.17.00"]
-  },
-  {
-    matchNo: "M50",
-    matchFolder: "Bosnia_and_Herzegovina_vs_Qatar_M50",
-    versions: ["2026.6.24.17.00"]
-  },
-  {
-    matchNo: "M51",
     matchFolder: "Scotland_vs_Brazil_M51",
     versions: ["2026.6.24.17.00"]
   },
   {
-    matchNo: "M52",
+    matchNo: "M50",
     matchFolder: "Morocco_vs_Haiti_M52",
+    versions: ["2026.6.24.17.00"]
+  },
+  {
+    matchNo: "M51",
+    matchFolder: "Switzerland_vs_Canada_M49",
+    versions: ["2026.6.24.17.00"]
+  },
+  {
+    matchNo: "M52",
+    matchFolder: "Bosnia_and_Herzegovina_vs_Qatar_M50",
     versions: ["2026.6.24.17.00"]
   },
   {
@@ -232,7 +232,7 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
   },
   {
     matchNo: "M63",
-    matchFolder: "Uruguay_vs_Spain_M63",
+    matchFolder: "Egypt_vs_Iran_M66",
     versions: ["2026.6.26.17.00"]
   },
   {
@@ -247,7 +247,7 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
   },
   {
     matchNo: "M66",
-    matchFolder: "Egypt_vs_Iran_M66",
+    matchFolder: "Uruguay_vs_Spain_M63",
     versions: ["2026.6.26.17.00"]
   },
   {
