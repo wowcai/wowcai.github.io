@@ -314,5 +314,35 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
     matchNo: "M79",
     matchFolder: "Mexico_vs_Ecuador_M79",
     versions: ["2026.6.30.13.00"]
+  },
+  {
+    matchNo: "M80",
+    matchFolder: "England_vs_DR_Congo_M80",
+    versions: ["2026.7.1.13.52"]
+  },
+  {
+    matchNo: "M81",
+    matchFolder: "Belgium_vs_Senegal_M81",
+    versions: ["2026.7.1.14.48"]
+  },
+  {
+    matchNo: "M82",
+    matchFolder: "United_States_vs_Bosnia_and_Herzegovina_M82",
+    versions: ["2026.7.1.15.41"]
+  },
+  {
+    matchNo: "M83",
+    matchFolder: "Portugal_vs_Croatia_M83",
+    versions: ["2026.7.2.14.00"]
+  },
+  {
+    matchNo: "M84",
+    matchFolder: "Spain_vs_Austria_M84",
+    versions: ["2026.7.2.14.00"]
+  },
+  {
+    matchNo: "M85",
+    matchFolder: "Switzerland_vs_Algeria_M85",
+    versions: ["2026.7.2.14.00"]
   }
 ];

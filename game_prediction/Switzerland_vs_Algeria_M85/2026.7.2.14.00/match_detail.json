@@ -1,0 +1,1210 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M85",
+    "team_a": "Switzerland",
+    "team_b": "Algeria",
+    "kickoff_utc": "2026-07-02T20:00:00-07:00",
+    "venue": "BC Place, Vancouver",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.6144230769230768,
+      "team_b": 0.38557692307692315,
+      "favorite": "Switzerland"
+    },
+    "resolution": {
+      "normal_time": 0.7448717948717948,
+      "extra_time": 0.11794871794871792,
+      "penalties": 0.137179487179487
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.12319444444444444,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.1123611111111111,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09402777777777778,
+        "goals_a": 2,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Switzerland常规时间晋级。",
+        "summary_cn": "90分钟2-1，Switzerland常规时间晋级。",
+        "probability": 0.10576923076923077,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_f700d9b5fa23",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-1: Switzerland advances in normal time.",
+        "summary_en": "90 minutes 2-1: Switzerland advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "probability": 0.01987179487179487,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_8c8a3671ce35",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+        "probability": 0.009935897435897435,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Algeria",
+        "path_id": "BMC_e32ef4349653",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Switzerland常规时间晋级。",
+        "summary_cn": "90分钟2-1，Switzerland常规时间晋级。",
+        "probability": 0.10576923076923077,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_f700d9b5fa23",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-1: Switzerland advances in normal time.",
+        "summary_en": "90 minutes 2-1: Switzerland advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "probability": 0.01987179487179487,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_8c8a3671ce35",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+        "probability": 0.009935897435897435,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Algeria",
+        "path_id": "BMC_e32ef4349653",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties."
+      }
+    ],
+    "favorite": "Switzerland",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.137179487179487,
+        "probability_band": "13.7%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Algeria",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009935897435897435,
+            "path_probability": 0.009935897435897435,
+            "path_id": "BMC_e32ef4349653",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "5-4",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.00641025641025641,
+            "path_probability": 0.00641025641025641,
+            "path_id": "BMC_fa37d88c8d23",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Algeria",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.004807692307692308,
+            "path_probability": 0.004807692307692308,
+            "path_id": "BMC_7d0ec81d9fea",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "If neither 90 minutes nor extra time produces a winner, the match is reduced to penalty randomness, goalkeeper performance and psychological edge."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.11794871794871792,
+        "probability_band": "11.8%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.01987179487179487,
+            "path_probability": 0.01987179487179487,
+            "path_id": "BMC_8c8a3671ce35",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.017948717948717947,
+            "path_probability": 0.017948717948717947,
+            "path_id": "BMC_dff96dbcf9b2",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Switzerland加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Algeria",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.016346153846153847,
+            "path_probability": 0.016346153846153847,
+            "path_id": "BMC_970b3174d6a5",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Algeria加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Algeria advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk preference become amplified in extra time and create the deciding paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.27628205128205136,
+        "probability_band": "27.6%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Algeria",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08173076923076923,
+            "path_probability": 0.08173076923076923,
+            "path_id": "BMC_8d3a9e89bb7a",
+            "summary_cn": "90分钟0-1，Algeria常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Algeria advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Algeria",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.0685897435897436,
+            "path_probability": 0.0685897435897436,
+            "path_id": "BMC_cbe3ecdbac10",
+            "summary_cn": "90分钟1-2，Algeria常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Algeria advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Algeria",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.03878205128205128,
+            "path_probability": 0.03878205128205128,
+            "path_id": "BMC_ca38f0c43180",
+            "summary_cn": "90分钟0-2，Algeria常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Algeria advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can advance through a normal-time steal, an extra-time counterattack, or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 186,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Switzerland",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10576923076923077,
+          "path_probability": 0.10576923076923077,
+          "path_id": "BMC_f700d9b5fa23",
+          "summary_cn": "90分钟2-1，Switzerland常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Switzerland advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Switzerland",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10448717948717949,
+          "path_probability": 0.10448717948717949,
+          "path_id": "BMC_427f80c4fc92",
+          "summary_cn": "90分钟1-0，Switzerland常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Switzerland advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Algeria",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08173076923076923,
+          "path_probability": 0.08173076923076923,
+          "path_id": "BMC_8d3a9e89bb7a",
+          "summary_cn": "90分钟0-1，Algeria常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Algeria advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Switzerland",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08173076923076923,
+          "path_probability": 0.08173076923076923,
+          "path_id": "BMC_6788acd21694",
+          "summary_cn": "90分钟2-0，Switzerland常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Switzerland advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Algeria",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.0685897435897436,
+          "path_probability": 0.0685897435897436,
+          "path_id": "BMC_cbe3ecdbac10",
+          "summary_cn": "90分钟1-2，Algeria常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Algeria advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟2-1，Switzerland常规时间晋级。",
+          "summary_cn": "90分钟2-1，Switzerland常规时间晋级。",
+          "probability": 0.10576923076923077,
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-1",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Switzerland",
+          "path_id": "BMC_f700d9b5fa23",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 2-1: Switzerland advances in normal time.",
+          "summary_en": "90 minutes 2-1: Switzerland advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+          "probability": 0.01987179487179487,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Switzerland",
+          "path_id": "BMC_8c8a3671ce35",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+          "probability": 0.009935897435897435,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Algeria",
+          "path_id": "BMC_e32ef4349653",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，Switzerland常规时间晋级。",
+        "summary_cn": "90分钟2-1，Switzerland常规时间晋级。",
+        "probability": 0.10576923076923077,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_f700d9b5fa23",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-1: Switzerland advances in normal time.",
+        "summary_en": "90 minutes 2-1: Switzerland advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "probability": 0.01987179487179487,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_8c8a3671ce35",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Algeria点球晋级。",
+        "probability": 0.009935897435897435,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Algeria",
+        "path_id": "BMC_e32ef4349653",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Algeria advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.29388888888888887,
+          "base_event_probability": 0.29388888888888887,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.050972222222222224,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match opens up end to end, with both attacks converting chances."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.050694444444444445,
+              "rationale_cn": "Switzerland打破对方防守后扩大领先优势。",
+              "rationale_en": "Switzerland extend the lead after breaking down the opposition defense."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.03333333333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.024583333333333332,
+              "rationale_cn": "Algeria充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Algeria fully convert their counterattacks or attacking efficiency and extend the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.023055555555555555,
+              "rationale_cn": "若拖入点球，门将与主罚深度只能支持瑞士轻微结构倾向；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "If it goes to penalties, goalkeeper and taker depth only support a slight structural lean toward Switzerland; the match is pulled into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-1",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead, pushing total goals well above the main low-score prediction focus."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.1158333333333333,
+          "base_event_probability": 0.1158333333333333,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.034305555555555554,
+              "rationale_cn": "Switzerland打破对方防守后扩大领先优势。",
+              "rationale_en": "Switzerland extend the lead after breaking down the opposition defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.02013888888888889,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to expand."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.017916666666666668,
+              "rationale_cn": "Switzerland打破对方防守后扩大领先优势。",
+              "rationale_en": "Switzerland extend the lead after breaking down the opposition defense."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.011666666666666667,
+              "rationale_cn": "Algeria充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Algeria fully convert their counterattacks or attacking efficiency and extend the lead."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.005694444444444445,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to expand."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-1",
+            "4-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fatigue, or defensive imbalance makes the match uneven, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.25,
+          "base_event_probability": 0.25,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.07569444444444444,
+              "rationale_cn": "Algeria通过压迫或转换取得一球优势。",
+              "rationale_en": "Algeria take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.06111111111111111,
+              "rationale_cn": "Algeria通过压迫或转换取得一球优势。",
+              "rationale_en": "Algeria take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.0325,
+              "rationale_cn": "Algeria充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Algeria fully convert their counterattacks or attacking efficiency and extend the lead."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.024583333333333332,
+              "rationale_cn": "Algeria充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Algeria fully convert their counterattacks or attacking efficiency and extend the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.023055555555555555,
+              "rationale_cn": "若拖入点球，门将与主罚深度只能支持瑞士轻微结构倾向；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "If it goes to penalties, goalkeeper and taker depth only support a slight structural lean toward Switzerland; the match is pulled into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored pre-match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog can change the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "瑞士稳定性",
+          "impact_cn": "瑞士以小组第一进入淘汰赛，整体结构和中场控制更稳定。主预测因此给瑞士小幅到中等优势，但仍保留低比分和被拖入平局的路径。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "match_research",
+            "Reuters"
+          ],
+          "label_en": "Swiss stability",
+          "impact_en": "Switzerland enter the knockout round as group winners and look more stable in structure and midfield control. The main forecast therefore gives Switzerland a slight-to-moderate edge, while still preserving low-score and draw paths.",
+          "text_cn": "瑞士以小组第一进入淘汰赛，整体结构和中场控制更稳定。主预测因此给瑞士小幅到中等优势，但仍保留低比分和被拖入平局的路径。",
+          "text_en": "Switzerland enter the knockout round as group winners and look more stable in structure and midfield control. The main forecast therefore gives Switzerland a slight-to-moderate edge, while still preserving low-score and draw paths."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "熟人战术局",
+          "impact_cn": "阿尔及利亚主帅 Petkovic 曾长期执教瑞士，双方在人员特点和战术习惯上存在较强互知性。这降低了瑞士被视为绝对热门的强度，也提高了僵持和细节决胜的权重。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "Reuters",
+            "match_research"
+          ],
+          "label_en": "Familiar tactical duel",
+          "impact_en": "Algeria coach Vladimir Petkovic previously led Switzerland for years, so both sides have strong mutual familiarity with personnel traits and tactical habits. This reduces the case for Switzerland as a heavy favorite and raises the weight of a tight, detail-driven match.",
+          "text_cn": "阿尔及利亚主帅 Petkovic 曾长期执教瑞士，双方在人员特点和战术习惯上存在较强互知性。这降低了瑞士被视为绝对热门的强度，也提高了僵持和细节决胜的权重。",
+          "text_en": "Algeria coach Vladimir Petkovic previously led Switzerland for years, so both sides have strong mutual familiarity with personnel traits and tactical habits. This reduces the case for Switzerland as a heavy favorite and raises the weight of a tight, detail-driven match."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "阿尔及利亚转换威胁",
+          "impact_cn": "阿尔及利亚具备技术强度和转换进攻威胁，若瑞士压上过深，Mahrez 等前场球员可以把比赛带向反击偷袭或开放比分分支。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "Reuters",
+            "match_research"
+          ],
+          "label_en": "Algeria transition threat",
+          "impact_en": "Algeria have technical quality and transition threat. If Switzerland push too high, front-line players such as Mahrez can pull the match toward counterattack-steal or more open scorelines.",
+          "text_cn": "阿尔及利亚具备技术强度和转换进攻威胁，若瑞士压上过深，Mahrez 等前场球员可以把比赛带向反击偷袭或开放比分分支。",
+          "text_en": "Algeria have technical quality and transition threat. If Switzerland push too high, front-line players such as Mahrez can pull the match toward counterattack-steal or more open scorelines."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "阿尔及利亚防线波动",
+          "impact_cn": "阿尔及利亚小组赛表现有起伏，防守端存在被远射或定位球放大的风险。若瑞士先打破平衡，1球优势继续扩大到2-1、2-0或3-1的路径会变得更现实。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "Reuters",
+            "match_research"
+          ],
+          "label_en": "Algeria defensive volatility",
+          "impact_en": "Algeria’s group-stage form was mixed and their defense can be exposed by long-range shots or set pieces. If Switzerland break the balance first, paths such as 2-1, 2-0 or 3-1 become more realistic.",
+          "text_cn": "阿尔及利亚小组赛表现有起伏，防守端存在被远射或定位球放大的风险。若瑞士先打破平衡，1球优势继续扩大到2-1、2-0或3-1的路径会变得更现实。",
+          "text_en": "Algeria’s group-stage form was mixed and their defense can be exposed by long-range shots or set pieces. If Switzerland break the balance first, paths such as 2-1, 2-0 or 3-1 become more realistic."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "BC Place环境稳定",
+          "impact_cn": "比赛在温哥华 BC Place 进行，封闭球场环境降低了天气变量的不确定性。模型因此更关注双方结构、转换和定位球，而不是极端气候扰动。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "match_research"
+          ],
+          "label_en": "Stable BC Place environment",
+          "impact_en": "The match is played at BC Place in Vancouver, where the controlled stadium environment reduces weather uncertainty. The model therefore focuses more on structure, transitions and set pieces than on extreme climate disruption.",
+          "text_cn": "比赛在温哥华 BC Place 进行，封闭球场环境降低了天气变量的不确定性。模型因此更关注双方结构、转换和定位球，而不是极端气候扰动。",
+          "text_en": "The match is played at BC Place in Vancouver, where the controlled stadium environment reduces weather uncertainty. The model therefore focuses more on structure, transitions and set pieces than on extreme climate disruption."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2551282051282049,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.20351758793969857,
+          "joint_probability": 0.05192307692307692,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.20351758793969857
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.13693467336683424
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "瑞士通过中场压迫、定位球或替补冲击在加时阶段净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "In the 30 minutes of extra time, a counterattack, set piece, or substitute impact decides it by 1 goal.",
+          "rationale_en": "Switzerland win extra time by one goal through midfield pressure, set pieces or substitute impact."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.05527638190954782,
+          "joint_probability": 0.014102564102564117,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.05527638190954782
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.018844221105527647
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.015075376884422117
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.005025125628140706
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, as the match shifts from caution into open attacking play.",
+          "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.0477386934673367,
+          "joint_probability": 0.012179487179487178,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.0477386934673367
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.02889447236180906
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.018844221105527647
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.015075376884422117
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "若阿尔及利亚后段体能下降或被迫压上，瑞士存在加时打穿的低频路径。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A path where one side wins extra time by at least 2 goals, or breaks through with 3+ total goals.",
+          "rationale_en": "If Algeria fade physically or have to push forward late, Switzerland retain a low-frequency extra-time breakthrough path."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "平局基线",
+          "impact_cn": "加时被视为90分钟平局后的条件分支，现有rollout以0-0保守路径为基础；瑞士与阿尔及利亚在淘汰赛风险下降时，继续僵持仍是核心情景。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Stalemate baseline",
+          "impact_en": "Extra time is treated as a conditional branch after a 90-minute draw. The current rollout is based on a conservative 0-0 path; when knockout risk drops, a continued stalemate between Switzerland and Algeria remains the core scenario.",
+          "text_cn": "加时被视为90分钟平局后的条件分支，现有rollout以0-0保守路径为基础；瑞士与阿尔及利亚在淘汰赛风险下降时，继续僵持仍是核心情景。",
+          "text_en": "Extra time is treated as a conditional branch after a 90-minute draw. The current rollout is based on a conservative 0-0 path; when knockout risk drops, a continued stalemate between Switzerland and Algeria remains the core scenario."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "瑞士压迫分支",
+          "impact_cn": "瑞士的加时上限主要来自体能、替补或压迫优势带来的净胜一球分支；但素材未给出具体球员与换人证据，需按保守先验处理。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Switzerland pressing branch",
+          "impact_en": "Switzerland's extra-time ceiling mainly comes from a one-goal winning branch driven by fitness, substitutes, or pressing advantages; but the material gives no specific player or substitution evidence, so it should be handled with a conservative prior.",
+          "text_cn": "瑞士的加时上限主要来自体能、替补或压迫优势带来的净胜一球分支；但素材未给出具体球员与换人证据，需按保守先验处理。",
+          "text_en": "Switzerland's extra-time ceiling mainly comes from a one-goal winning branch driven by fitness, substitutes, or pressing advantages; but the material gives no specific player or substitution evidence, so it should be handled with a conservative prior."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "阿尔及利亚反击",
+          "impact_cn": "阿尔及利亚的加时机会集中在体能、替补或反击效率分支，尤其是瑞士压上后被转换偷袭；但缺少可靠数据支撑具体执行点。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Algeria counterattack",
+          "impact_en": "Algeria’s extra-time chances center on fitness, substitutes, or counterattack efficiency, especially catching Switzerland on the break after they push up; however, there is no reliable data to support specific execution points.",
+          "text_cn": "阿尔及利亚的加时机会集中在体能、替补或反击效率分支，尤其是瑞士压上后被转换偷袭；但缺少可靠数据支撑具体执行点。",
+          "text_en": "Algeria’s extra-time chances center on fitness, substitutes, or counterattack efficiency, especially catching Switzerland on the break after they push up; however, there is no reliable data to support specific execution points."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "点球拉扯",
+          "impact_cn": "委员会争议集中在瑞士是否提前冒险避免点球，以及阿尔及利亚能否靠防守纪律拖入点球；这会直接影响加时开放程度。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Penalty-avoidance tension",
+          "impact_en": "Debate centers on whether Switzerland take early risks to avoid penalties, and whether Algeria can use defensive discipline to force a shootout; this directly affects how open extra time becomes.",
+          "text_cn": "委员会争议集中在瑞士是否提前冒险避免点球，以及阿尔及利亚能否靠防守纪律拖入点球；这会直接影响加时开放程度。",
+          "text_en": "Debate centers on whether Switzerland take early risks to avoid penalties, and whether Algeria can use defensive discipline to force a shootout; this directly affects how open extra time becomes."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "崩盘尾部",
+          "impact_cn": "加时尾部存在一方体能崩盘或连续换人失效被打穿的路径，也存在双方都不愿点球导致互相进球；但缺少可靠球员级证据。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Collapse tail",
+          "impact_en": "Late in extra time, one side may collapse physically or be exposed after ineffective substitutions; both sides may also trade goals to avoid penalties, but there is no reliable player-level evidence.",
+          "text_cn": "加时尾部存在一方体能崩盘或连续换人失效被打穿的路径，也存在双方都不愿点球导致互相进球；但缺少可靠球员级证据。",
+          "text_en": "Late in extra time, one side may collapse physically or be exposed after ineffective substitutions; both sides may also trade goals to avoid penalties, but there is no reliable player-level evidence."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → four expert agents → expert-committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.137179487179487,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Goalkeeper makes consecutive penalty saves to change the result."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Goalkeeper makes consecutive penalty saves to change the result."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One keeper makes consecutive penalty saves, or the opponent misses multiple penalties, quickly widening the shootout score.",
+          "rationale_en": "Goalkeeper makes consecutive penalty saves to change the result."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "A key taker for the favored team misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The more favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "A key taker for the favored team misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides are strong through the first five rounds, sending the shootout into extra penalties."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides are strong through the first five rounds, with the winner decided only after sudden death in round 6+.",
+          "rationale_en": "Both sides are strong through the first five rounds, sending the shootout into extra penalties."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "点球顺序缺口",
+          "impact_cn": "瑞士与阿尔及利亚的公开赛前资料无法确认具体点球顺序，主罚手只能作为经验候选处理，前端展示应标注“缺少可靠数据”，避免把候选人包装成确定名单。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty order data gap",
+          "impact_en": "Public pre-match information for Switzerland and Algeria cannot confirm the exact penalty order. Takers should only be treated as experience-based candidates, and the frontend should label this as “lacking reliable data” rather than presenting candidates as a confirmed list.",
+          "text_cn": "瑞士与阿尔及利亚的公开赛前资料无法确认具体点球顺序，主罚手只能作为经验候选处理，前端展示应标注“缺少可靠数据”，避免把候选人包装成确定名单。",
+          "text_en": "Public pre-match information for Switzerland and Algeria cannot confirm the exact penalty order. Takers should only be treated as experience-based candidates, and the frontend should label this as “lacking reliable data” rather than presenting candidates as a confirmed list."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "门将波动路径",
+          "impact_cn": "点球大战评估保留了瑞士或阿尔及利亚门将连续扑点改变胜负的路径，但现有素材未给出具体门将状态证据，因此只能作为小幅条件因素展示。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper volatility path",
+          "impact_en": "The penalty shootout assessment keeps open the path where the Switzerland or Algeria goalkeeper makes consecutive saves to swing the result, but current material provides no specific evidence on goalkeeper form, so it should only be shown as a minor conditional factor.",
+          "text_cn": "点球大战评估保留了瑞士或阿尔及利亚门将连续扑点改变胜负的路径，但现有素材未给出具体门将状态证据，因此只能作为小幅条件因素展示。",
+          "text_en": "The penalty shootout assessment keeps open the path where the Switzerland or Algeria goalkeeper makes consecutive saves to swing the result, but current material provides no specific evidence on goalkeeper form, so it should only be shown as a minor conditional factor."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差主形态",
+          "impact_cn": "rollout 聚合显示点球大战以一球差和延长点球为主要比分形态，瑞士与阿尔及利亚若进入前五轮后段，单次扑救或失误会被显著放大。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Main pattern: one-goal margin",
+          "impact_en": "rollout aggregation shows penalty shootouts mainly come down to a one-goal margin or extended penalties; if Switzerland and Algeria reach the late stages of the first five rounds, a single save or miss is greatly amplified.",
+          "text_cn": "rollout 聚合显示点球大战以一球差和延长点球为主要比分形态，瑞士与阿尔及利亚若进入前五轮后段，单次扑救或失误会被显著放大。",
+          "text_en": "rollout aggregation shows penalty shootouts mainly come down to a one-goal margin or extended penalties; if Switzerland and Algeria reach the late stages of the first five rounds, a single save or miss is greatly amplified."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "压力失误风险",
+          "impact_cn": "尾部分支保留了热门球队压力下核心罚手失误的情形，但素材没有明确哪一方为热门或具体核心罚手，瑞士与阿尔及利亚均只能按心理压力小幅校准。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Risk of pressure errors",
+          "impact_en": "The final branch allows for a key penalty taker on the favored side missing under pressure, but the material does not specify which side is favored or the specific taker, so Switzerland and Algeria are only slightly adjusted for psychological pressure.",
+          "text_cn": "尾部分支保留了热门球队压力下核心罚手失误的情形，但素材没有明确哪一方为热门或具体核心罚手，瑞士与阿尔及利亚均只能按心理压力小幅校准。",
+          "text_en": "The final branch allows for a key penalty taker on the favored side missing under pressure, but the material does not specify which side is favored or the specific taker, so Switzerland and Algeria are only slightly adjusted for psychological pressure."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "延长点球可能",
+          "impact_cn": "现有模拟保留双方前五轮质量较高并进入延长点球的路径，瑞士与阿尔及利亚的主罚深度会变得更关键，但缺少可靠数据支撑具体替补罚手排序。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Possible extended shootout",
+          "impact_en": "Current simulations allow for both teams to maintain high quality through the first five rounds and move into sudden death, where Switzerland and Algeria’s penalty-taking depth becomes more important, but there is no reliable data to support a specific backup taker order.",
+          "text_cn": "现有模拟保留双方前五轮质量较高并进入延长点球的路径，瑞士与阿尔及利亚的主罚深度会变得更关键，但缺少可靠数据支撑具体替补罚手排序。",
+          "text_en": "Current simulations allow for both teams to maintain high quality through the first five rounds and move into sudden death, where Switzerland and Algeria’s penalty-taking depth becomes more important, but there is no reliable data to support a specific backup taker order."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → four expert agents → expert-committee aggregation → penalty-sequence rollout → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-02T05:30:58.105004Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-phase mechanisms; MAS rollout simultaneously models the 90-minute path, the extra-time path if level, and the penalty path if still level, with Monte Carlo sampling over the complete path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same conditional MAS rollout. The three frontend tabs are different slices of one complete path distribution, while the JSON structure remains compatible with v6.2.2."
+}

@@ -1,0 +1,1220 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M83",
+    "team_a": "Portugal",
+    "team_b": "Croatia",
+    "kickoff_utc": "2026-07-02T19:00:00-04:00",
+    "venue": "BMO Field, Toronto",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.614423076923077,
+      "team_b": 0.38557692307692304,
+      "favorite": "Portugal"
+    },
+    "resolution": {
+      "normal_time": 0.7216346153846153,
+      "extra_time": 0.10913461538461536,
+      "penalties": 0.16923076923076902
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.12208333333333334,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12166666666666667,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09958333333333333,
+        "goals_a": 2,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，葡萄牙常规时间晋级。",
+        "summary_cn": "90分钟1-0，葡萄牙常规时间晋级。",
+        "probability": 0.10961538461538461,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Portugal",
+        "path_id": "BMC_5b4ff00a2e11",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Portugal advances in normal time.",
+        "summary_en": "90 minutes 1-0: Portugal advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+        "probability": 0.023557692307692307,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Portugal",
+        "path_id": "BMC_0df6e39d13d7",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+        "probability": 0.010096153846153847,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Croatia",
+        "path_id": "BMC_aa26f1f160c2",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，葡萄牙常规时间晋级。",
+        "summary_cn": "90分钟1-0，葡萄牙常规时间晋级。",
+        "probability": 0.10961538461538461,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Portugal",
+        "path_id": "BMC_5b4ff00a2e11",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Portugal advances in normal time.",
+        "summary_en": "90 minutes 1-0: Portugal advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+        "probability": 0.023557692307692307,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Portugal",
+        "path_id": "BMC_0df6e39d13d7",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+        "probability": 0.010096153846153847,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Croatia",
+        "path_id": "BMC_aa26f1f160c2",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties."
+      }
+    ],
+    "favorite": "Portugal",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.16923076923076902,
+        "probability_band": "16.9%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Croatia",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.010096153846153847,
+            "path_probability": 0.010096153846153847,
+            "path_id": "BMC_aa26f1f160c2",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Croatia",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009134615384615385,
+            "path_probability": 0.009134615384615385,
+            "path_id": "BMC_9f082939b026",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Croatia",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007211538461538462,
+            "path_probability": 0.007211538461538462,
+            "path_id": "BMC_9e4adae51e03",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After no separation in 90 minutes or extra time, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.10913461538461536,
+        "probability_band": "10.9%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Portugal",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.023557692307692307,
+            "path_probability": 0.023557692307692307,
+            "path_id": "BMC_0df6e39d13d7",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Portugal",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.014903846153846155,
+            "path_probability": 0.014903846153846155,
+            "path_id": "BMC_871aa9556722",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Portugal加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Croatia",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.013461538461538462,
+            "path_probability": 0.013461538461538462,
+            "path_id": "BMC_cb6ac03026c3",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Croatia加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Croatia advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fatigue, bench depth and risk preference become amplified in extra time and create separation paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2658653846153846,
+        "probability_band": "26.6%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Croatia",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08701923076923077,
+            "path_probability": 0.08701923076923077,
+            "path_id": "BMC_4e4cd7e82c6c",
+            "summary_cn": "90分钟0-1，Croatia常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Croatia advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Croatia",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.05673076923076923,
+            "path_probability": 0.05673076923076923,
+            "path_id": "BMC_59126d15977e",
+            "summary_cn": "90分钟1-2，Croatia常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Croatia advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Croatia",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.040865384615384616,
+            "path_probability": 0.040865384615384616,
+            "path_id": "BMC_bf024460a130",
+            "summary_cn": "90分钟0-2，Croatia常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Croatia advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog could advance through a regular-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 167,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Portugal",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10961538461538461,
+          "path_probability": 0.10961538461538461,
+          "path_id": "BMC_5b4ff00a2e11",
+          "summary_cn": "90分钟1-0，葡萄牙常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Portugal advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Portugal",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.0985576923076923,
+          "path_probability": 0.0985576923076923,
+          "path_id": "BMC_9c8bb0505b62",
+          "summary_cn": "90分钟2-0，葡萄牙常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Portugal advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Croatia",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08701923076923077,
+          "path_probability": 0.08701923076923077,
+          "path_id": "BMC_4e4cd7e82c6c",
+          "summary_cn": "90分钟0-1，Croatia常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Croatia advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Portugal",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08413461538461539,
+          "path_probability": 0.08413461538461539,
+          "path_id": "BMC_ab667541f475",
+          "summary_cn": "90分钟2-1，葡萄牙常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Portugal advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Croatia",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.05673076923076923,
+          "path_probability": 0.05673076923076923,
+          "path_id": "BMC_59126d15977e",
+          "summary_cn": "90分钟1-2，Croatia常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Croatia advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，葡萄牙常规时间晋级。",
+          "summary_cn": "90分钟1-0，葡萄牙常规时间晋级。",
+          "probability": 0.10961538461538461,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Portugal",
+          "path_id": "BMC_5b4ff00a2e11",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Portugal advances in normal time.",
+          "summary_en": "90 minutes 1-0: Portugal advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+          "probability": 0.023557692307692307,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Portugal",
+          "path_id": "BMC_0df6e39d13d7",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+          "probability": 0.010096153846153847,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Croatia",
+          "path_id": "BMC_aa26f1f160c2",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，葡萄牙常规时间晋级。",
+        "summary_cn": "90分钟1-0，葡萄牙常规时间晋级。",
+        "probability": 0.10961538461538461,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Portugal",
+        "path_id": "BMC_5b4ff00a2e11",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Portugal advances in normal time.",
+        "summary_en": "90 minutes 1-0: Portugal advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+        "probability": 0.023557692307692307,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Portugal",
+        "path_id": "BMC_0df6e39d13d7",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Croatia点球晋级。",
+        "probability": 0.010096153846153847,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Croatia",
+        "path_id": "BMC_aa26f1f160c2",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Croatia advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.24458333333333335,
+          "base_event_probability": 0.24458333333333335,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.048541666666666664,
+              "rationale_cn": "抢断后的快速转换；比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "Fast transitions after ball recoveries; the match turns into an open exchange, with both attacks finding a payoff."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.04583333333333333,
+              "rationale_cn": "若下半场降雨，比赛后段更依赖定位球、二点球和纪律控制、葡萄牙常规时间主动破局；70分钟仍平时克罗地亚更愿意拖长；葡萄牙打破对方防守后扩大领先优势。",
+              "rationale_en": "If second-half rain arrives, the later phase becomes more dependent on set pieces, second balls and discipline; Portugal tries to settle it in regular time, while Croatia is more willing to extend the match if it remains level around 70 minutes; Portugal can then break the defense and extend the lead."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.025416666666666667,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The game is pulled into a high-risk open rhythm, with space behind the defensive lines continuing to grow."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.02125,
+              "rationale_cn": "抢断后的快速转换；克罗地亚充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Fast transitions after ball recoveries; Croatia fully converts counterattacking or attacking efficiency and extends the advantage."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0175,
+              "rationale_cn": "点球分支不是单边优势：双门将强，葡萄牙主罚深度略有加分、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The penalty branch is not one-sided: both goalkeepers are strong, Portugal's taker depth adds a slight edge, and fast transitions after recoveries can pull the match into a high-risk open rhythm with growing space behind the back lines."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-1",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least four total goals.",
+          "rationale_en": "The game shifts into a more open rhythm; transitions, set pieces or space after one side leads push total goals well above the low-score center of the main forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.10500000000000001,
+          "base_event_probability": 0.10500000000000001,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.03791666666666667,
+              "rationale_cn": "葡萄牙打破对方防守后扩大领先优势。",
+              "rationale_en": "Portugal breaks down the opposing defense and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.017083333333333332,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The game is pulled into a high-risk open rhythm, with space behind the defensive lines continuing to grow."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.012291666666666666,
+              "rationale_cn": "葡萄牙常规时间主动破局；70分钟仍平时克罗地亚更愿意拖长；葡萄牙打破对方防守后扩大领先优势。",
+              "rationale_en": "Portugal takes the initiative to break through in regular time; if it is still level around 70 minutes, Croatia is more willing to extend the match; Portugal then breaks down the defense and extends the lead."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.011666666666666667,
+              "rationale_cn": "抢断后的快速转换、点球分支不是单边优势：双门将强，葡萄牙主罚深度略有加分；克罗地亚充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Evidence-based explanation generated from the match forecast."
+            },
+            {
+              "score": "5-1",
+              "probability": 0.005833333333333334,
+              "rationale_cn": "若下半场降雨，比赛后段更依赖定位球、二点球和纪律控制、葡萄牙常规时间主动破局；70分钟仍平时克罗地亚更愿意拖长；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "If second-half rain arrives, the later phase becomes more dependent on set pieces, second balls and discipline; Portugal tries to settle it in regular time, while Croatia is more willing to extend the match if it remains level around 70 minutes; the game can be pulled into a high-risk open rhythm with growing space behind the back lines."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-1",
+            "4-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least three goals.",
+          "rationale_en": "An early goal, card pressure, fatigue or defensive imbalance breaks the match open, allowing one side to pull clearly away within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.250625,
+          "base_event_probability": 0.250625,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.08916666666666667,
+              "rationale_cn": "克罗地亚通过压迫或转换取得一球优势。",
+              "rationale_en": "Croatia gains a one-goal edge through pressing or transition."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.05979166666666667,
+              "rationale_cn": "克罗地亚通过压迫或转换取得一球优势。",
+              "rationale_en": "Croatia gains a one-goal edge through pressing or transition."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.035,
+              "rationale_cn": "克罗地亚充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Croatia fully converts counterattacking or attacking efficiency and extends the advantage."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.02125,
+              "rationale_cn": "抢断后的快速转换；克罗地亚充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Fast transitions after ball recoveries; Croatia fully converts counterattacking or attacking efficiency and extends the advantage."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0175,
+              "rationale_cn": "点球分支不是单边优势：双门将强，葡萄牙主罚深度略有加分、抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The penalty branch is not one-sided: both goalkeepers are strong, Portugal's taker depth adds a slight edge, and fast transitions after recoveries can pull the match into a high-risk open rhythm with growing space behind the back lines."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The less-favored side before the match or in the main forecast wins within 90 minutes.",
+          "rationale_en": "The underdog changes the result within 90 minutes through low-block resilience, counterattacking efficiency, set pieces or a major favorite-side mistake."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "葡萄牙宽度与中路创造",
+          "impact_cn": "葡萄牙的4-3-3/4-2-3-1结构提供边路宽度和中路创造；若边路能持续制造1v1或2v1，克罗地亚防线会被横向拉扯。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Portugal width and central creation",
+          "impact_en": "Portugal's 4-3-3 or 4-2-3-1 structure gives them width and central creation; if wide players keep creating 1v1s or 2v1s, Croatia's defense can be stretched horizontally.",
+          "text_cn": "葡萄牙的4-3-3/4-2-3-1结构提供边路宽度和中路创造；若边路能持续制造1v1或2v1，克罗地亚防线会被横向拉扯。",
+          "text_en": "Portugal's 4-3-3 or 4-2-3-1 structure gives them width and central creation; if wide players keep creating 1v1s or 2v1s, Croatia's defense can be stretched horizontally."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "克罗地亚中场经验",
+          "impact_cn": "克罗地亚的比赛管理和中场经验会压低早段开放程度；若比赛70分钟仍平，他们更有能力把节奏拖向加时或点球。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Croatia midfield experience",
+          "impact_en": "Croatia's game management and midfield experience can keep the opening phase controlled; if the match is still level around 70 minutes, they are well suited to drag it toward extra time or penalties.",
+          "text_cn": "克罗地亚的比赛管理和中场经验会压低早段开放程度；若比赛70分钟仍平，他们更有能力把节奏拖向加时或点球。",
+          "text_en": "Croatia's game management and midfield experience can keep the opening phase controlled; if the match is still level around 70 minutes, they are well suited to drag it toward extra time or penalties."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "葡萄牙替补与后程冲击",
+          "impact_cn": "葡萄牙赛前有较广泛轮换和出场时间分配，若前段不急于高强度冲刺，后程替补和边路冲击会成为破局资源。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Portugal bench and late impact",
+          "impact_en": "Portugal have evidence of broad rotation and minutes management; if they avoid all-out early intensity, late substitutes and wide pressure become their main resources to break the match open.",
+          "text_cn": "葡萄牙赛前有较广泛轮换和出场时间分配，若前段不急于高强度冲刺，后程替补和边路冲击会成为破局资源。",
+          "text_en": "Portugal have evidence of broad rotation and minutes management; if they avoid all-out early intensity, late substitutes and wide pressure become their main resources to break the match open."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "多伦多晚场天气变量",
+          "impact_cn": "若下半场出现降雨，比赛后段会更依赖定位球、二点球和纪律控制，也会提高大比分和偷袭分支的不确定性。",
+          "direction": "draw",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Toronto late-weather variable",
+          "impact_en": "If rain arrives in the second half, the late phase becomes more dependent on set pieces, second balls and discipline, increasing uncertainty in both high-score and steal branches.",
+          "text_cn": "若下半场出现降雨，比赛后段会更依赖定位球、二点球和纪律控制，也会提高大比分和偷袭分支的不确定性。",
+          "text_en": "If rain arrives in the second half, the late phase becomes more dependent on set pieces, second balls and discipline, increasing uncertainty in both high-score and steal branches."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "门将与点球兜底",
+          "impact_cn": "葡萄牙门将有关键扑点证据，但克罗地亚也有淘汰赛和点球经验；双方都知道后程存在点球兜底，开局风险偏好不会自动升高。",
+          "direction": "draw",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Goalkeepers and penalty fallback",
+          "impact_en": "Portugal's goalkeeper has key penalty-save evidence, but Croatia also carry knockout and shootout experience; both sides know penalties are a credible fallback, so opening risk appetite should not rise automatically.",
+          "text_cn": "葡萄牙门将有关键扑点证据，但克罗地亚也有淘汰赛和点球经验；双方都知道后程存在点球兜底，开局风险偏好不会自动升高。",
+          "text_en": "Portugal's goalkeeper has key penalty-save evidence, but Croatia also carry knockout and shootout experience; both sides know penalties are a credible fallback, so opening risk appetite should not rise automatically."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "老将压力与淘汰赛情绪",
+          "impact_cn": "C罗与莫德里奇的世界杯叙事会放大情绪和压力变量，但模型仍把核心机制放在中场控制、转换效率和后程执行上。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Veteran pressure and knockout emotion",
+          "impact_en": "The Ronaldo-Modrić World Cup storyline amplifies emotion and pressure, but the model still anchors the match in midfield control, transition efficiency and late-game execution.",
+          "text_cn": "C罗与莫德里奇的世界杯叙事会放大情绪和压力变量，但模型仍把核心机制放在中场控制、转换效率和后程执行上。",
+          "text_en": "The Ronaldo-Modrić World Cup storyline amplifies emotion and pressure, but the model still anchors the match in midfield control, transition efficiency and late-game execution."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2783653846153844,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.17789291882556146,
+          "joint_probability": 0.049519230769230774,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.17789291882556146
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.11398963730569957
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "葡萄牙凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal extra-time decider created through counters, set pieces or substitute impact.",
+          "rationale_en": "Evidence-based explanation generated from the match forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.062176165803108835,
+          "joint_probability": 0.0173076923076923,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.062176165803108835
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.015544041450777214
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.00863557858376512
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.005181347150259072
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time as a cautious game turns into an open exchange.",
+          "rationale_en": "The game opens up in extra time, with both sides converting one effective chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.041450777202072575,
+          "joint_probability": 0.011538461538461539,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.041450777202072575
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.01727115716753024
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.015544041450777214
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.012089810017271167
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "葡萄牙在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A team wins extra time by at least two goals, or the period reaches three or more goals through a breakaway path.",
+          "rationale_en": "Evidence-based explanation generated from the match forecast."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_ENTRY",
+          "label_cn": "加时来自1-1和0-0分支",
+          "impact_cn": "葡萄牙对克罗地亚的平局入口较高，1-1和0-0是主要加时来源；加时不会重新打开为完全独立比赛。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Extra time comes from 1-1 and 0-0 branches",
+          "impact_en": "Portugal-Croatia has a relatively high draw entry, with 1-1 and 0-0 as the main paths into extra time; the period should not be treated as a standalone match.",
+          "text_cn": "葡萄牙对克罗地亚的平局入口较高，1-1和0-0是主要加时来源；加时不会重新打开为完全独立比赛。",
+          "text_en": "Portugal-Croatia has a relatively high draw entry, with 1-1 and 0-0 as the main paths into extra time; the period should not be treated as a standalone match."
+        },
+        {
+          "factor_id": "ET_MIDFIELD",
+          "label_cn": "中场控制权之争",
+          "impact_cn": "葡萄牙的Vitinha、João Neves、Bruno Fernandes与克罗地亚的Modrić、Baturina、Sučić之间的中场对抗，会决定加时是否继续低节奏。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Midfield control battle",
+          "impact_en": "The midfield battle between Portugal's Vitinha, João Neves and Bruno Fernandes and Croatia's Modrić, Baturina and Sučić will decide whether extra time remains low-tempo.",
+          "text_cn": "葡萄牙的Vitinha、João Neves、Bruno Fernandes与克罗地亚的Modrić、Baturina、Sučić之间的中场对抗，会决定加时是否继续低节奏。",
+          "text_en": "The midfield battle between Portugal's Vitinha, João Neves and Bruno Fernandes and Croatia's Modrić, Baturina and Sučić will decide whether extra time remains low-tempo."
+        },
+        {
+          "factor_id": "ET_WIDTH",
+          "label_cn": "葡萄牙边路与禁区接应",
+          "impact_cn": "若葡萄牙边路持续形成1v1或2v1，并让禁区内有多点接应，加时阶段更可能出现1-0或2-0解决路径。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Portugal width and box presence",
+          "impact_en": "If Portugal keep creating wide 1v1 or 2v1 situations with multiple box targets, extra time is more likely to produce a 1-0 or 2-0 Portugal path.",
+          "text_cn": "若葡萄牙边路持续形成1v1或2v1，并让禁区内有多点接应，加时阶段更可能出现1-0或2-0解决路径。",
+          "text_en": "If Portugal keep creating wide 1v1 or 2v1 situations with multiple box targets, extra time is more likely to produce a 1-0 or 2-0 Portugal path."
+        },
+        {
+          "factor_id": "ET_CROATIA_DRAG",
+          "label_cn": "克罗地亚拖长比赛能力",
+          "impact_cn": "克罗地亚更有经验把比赛拖入低节奏、少失误的结构中；若70分钟后仍平，加时拖入点球的权重会上升。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Croatia's ability to extend the match",
+          "impact_en": "Croatia have the experience to slow the game into a low-error structure; if it remains level late, the weight of a penalty-drag path increases.",
+          "text_cn": "克罗地亚更有经验把比赛拖入低节奏、少失误的结构中；若70分钟后仍平，加时拖入点球的权重会上升。",
+          "text_en": "Croatia have the experience to slow the game into a low-error structure; if it remains level late, the weight of a penalty-drag path increases."
+        },
+        {
+          "factor_id": "ET_WEATHER_SETPIECE",
+          "label_cn": "晚场天气与定位球变量",
+          "impact_cn": "多伦多晚场若出现降雨，后段会更依赖定位球、二点球和纪律控制，开放比分与偷袭分支都会被放大。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Late weather and set-piece variable",
+          "impact_en": "If rain affects the late Toronto game, set pieces, second balls and discipline become more important, increasing both open-score and steal branches.",
+          "text_cn": "多伦多晚场若出现降雨，后段会更依赖定位球、二点球和纪律控制，开放比分与偷袭分支都会被放大。",
+          "text_en": "If rain affects the late Toronto game, set pieces, second balls and discipline become more important, increasing both open-score and steal branches."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → four expert agents → committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.16923076923076902,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Goalkeeper heroics or repeated saves swing the shootout."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Goalkeeper heroics or repeated saves swing the shootout."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes repeated saves, or the opponent misses several penalties, causing the shootout score to widen quickly.",
+          "rationale_en": "Goalkeeper heroics or repeated saves swing the shootout."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "A key taker for the favored team misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round and the underdog advances on penalties.",
+          "rationale_en": "A key taker for the favored team misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides perform well across the first five rounds, pushing the shootout into sudden death."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides convert well through the first five rounds and the shootout is decided only after six or more rounds.",
+          "rationale_en": "Both sides perform well across the first five rounds, pushing the shootout into sudden death."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_BASELINE",
+          "label_cn": "点球几乎五五开",
+          "impact_cn": "点球条件下葡萄牙约50.9%、克罗地亚约49.1%，差距极小，胜负更多取决于临场执行。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Shootout is nearly 50-50",
+          "impact_en": "In the penalty branch Portugal are around 50.9% and Croatia around 49.1%, so the result depends mainly on execution.",
+          "text_cn": "点球条件下葡萄牙约50.9%、克罗地亚约49.1%，差距极小，胜负更多取决于临场执行。",
+          "text_en": "In the penalty branch Portugal are around 50.9% and Croatia around 49.1%, so the result depends mainly on execution."
+        },
+        {
+          "factor_id": "PEN_KEEPER_DUEL",
+          "label_cn": "双门将都有加分点",
+          "impact_cn": "葡萄牙门将有关键扑点证据，克罗地亚门将与球队也有淘汰赛点球经验；门将因素不构成单边优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Both goalkeepers add value",
+          "impact_en": "Portugal's goalkeeper has key penalty-save evidence, while Croatia also bring goalkeeper and tournament shootout experience; this is not a one-sided goalkeeper edge.",
+          "text_cn": "葡萄牙门将有关键扑点证据，克罗地亚门将与球队也有淘汰赛点球经验；门将因素不构成单边优势。",
+          "text_en": "Portugal's goalkeeper has key penalty-save evidence, while Croatia also bring goalkeeper and tournament shootout experience; this is not a one-sided goalkeeper edge."
+        },
+        {
+          "factor_id": "PEN_TAKER_DEPTH",
+          "label_cn": "主罚手深度与老将经验",
+          "impact_cn": "葡萄牙主罚深度略有加分，但克罗地亚的老将经验和比赛管理能力会抵消部分优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Taker depth and veteran experience",
+          "impact_en": "Portugal's taker depth adds a slight edge, but Croatia's veteran experience and game management offset part of it.",
+          "text_cn": "葡萄牙主罚深度略有加分，但克罗地亚的老将经验和比赛管理能力会抵消部分优势。",
+          "text_en": "Portugal's taker depth adds a slight edge, but Croatia's veteran experience and game management offset part of it."
+        },
+        {
+          "factor_id": "PEN_PRESSURE",
+          "label_cn": "C罗与莫德里奇的压力背景",
+          "impact_cn": "两队核心老将都承受强烈淘汰赛压力，关键轮次失误可能直接改变胜负。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Ronaldo-Modrić pressure context",
+          "impact_en": "Both teams' veteran stars carry heavy knockout pressure, and one key-round miss could swing the shootout.",
+          "text_cn": "两队核心老将都承受强烈淘汰赛压力，关键轮次失误可能直接改变胜负。",
+          "text_en": "Both teams' veteran stars carry heavy knockout pressure, and one key-round miss could swing the shootout."
+        },
+        {
+          "factor_id": "PEN_EXTENDED",
+          "label_cn": "延长点球概率不低",
+          "impact_cn": "双方前五轮质量若较高，比赛可能进入6轮以后突然死亡，模型因此保留多组4-5、5-4、6-5等比分族。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Extended shootout risk",
+          "impact_en": "If both sides convert well through the first five rounds, the shootout may move into sudden death, so the model retains score families such as 4-5, 5-4 and 6-5.",
+          "text_cn": "双方前五轮质量若较高，比赛可能进入6轮以后突然死亡，模型因此保留多组4-5、5-4、6-5等比分族。",
+          "text_en": "If both sides convert well through the first five rounds, the shootout may move into sudden death, so the model retains score families such as 4-5, 5-4 and 6-5."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollout → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-01T05:07:50.937479Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline uses pre-match evidence and the expert committee to build cross-stage mechanisms; MAS rollouts generate conditional paths for 90 minutes, extra time if level, and penalties if still level, while Monte Carlo samples the complete path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same MAS conditional rollout, and the three frontend tabs are slices of one complete path distribution while keeping the JSON structure compatible with v6.2.2."
+}

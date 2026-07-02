@@ -1,0 +1,1220 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M84",
+    "team_a": "Spain",
+    "team_b": "Austria",
+    "kickoff_utc": "2026-07-02T12:00:00-07:00",
+    "venue": "SoFi Stadium, Inglewood, California",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.6850000000000006,
+      "team_b": 0.31499999999999934,
+      "favorite": "Spain"
+    },
+    "resolution": {
+      "normal_time": 0.7380769230769235,
+      "extra_time": 0.12115384615384615,
+      "penalties": 0.14076923076923037
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.121,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "1-1",
+        "probability": 0.115,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "2-1",
+        "probability": 0.10733333333333334,
+        "goals_a": 2,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，西班牙常规时间晋级。",
+        "summary_cn": "90分钟1-0，西班牙常规时间晋级。",
+        "probability": 0.11115384615384616,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_3f557cac71a5",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-0: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_0510b1e9acfe",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Austria",
+        "path_id": "BMC_cd6e0191ba88",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，西班牙常规时间晋级。",
+        "summary_cn": "90分钟1-0，西班牙常规时间晋级。",
+        "probability": 0.11115384615384616,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_3f557cac71a5",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-0: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_0510b1e9acfe",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Austria",
+        "path_id": "BMC_cd6e0191ba88",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties."
+      }
+    ],
+    "favorite": "Spain",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.14076923076923037,
+        "probability_band": "14.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Austria",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009615384615384616,
+            "path_probability": 0.009615384615384616,
+            "path_id": "BMC_cd6e0191ba88",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Austria",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006538461538461538,
+            "path_probability": 0.006538461538461538,
+            "path_id": "BMC_b1af38d1360b",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Austria点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Austria advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "5-3",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.006153846153846154,
+            "path_probability": 0.006153846153846154,
+            "path_id": "BMC_bb4f2825605c",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After no separation in 90 minutes or extra time, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12115384615384615,
+        "probability_band": "12.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.023076923076923078,
+            "path_probability": 0.023076923076923078,
+            "path_id": "BMC_0510b1e9acfe",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Austria",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.01730769230769231,
+            "path_probability": 0.01730769230769231,
+            "path_id": "BMC_423bbc26f4e4",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Austria加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Austria advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.012307692307692308,
+            "path_probability": 0.012307692307692308,
+            "path_id": "BMC_c948578347af",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Spain加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fatigue, bench depth and risk preference become amplified in extra time and create separation paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.21576923076923074,
+        "probability_band": "21.6%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Austria",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.06923076923076923,
+            "path_probability": 0.06923076923076923,
+            "path_id": "BMC_b646ac8cb93c",
+            "summary_cn": "90分钟0-1，Austria常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Austria advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Austria",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.05076923076923077,
+            "path_probability": 0.05076923076923077,
+            "path_id": "BMC_940c6181ec47",
+            "summary_cn": "90分钟1-2，Austria常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Austria advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Austria",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.02923076923076923,
+            "path_probability": 0.02923076923076923,
+            "path_id": "BMC_8b86bec399bf",
+            "summary_cn": "90分钟0-2，Austria常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Austria advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog could advance through a regular-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 160,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.11115384615384616,
+          "path_probability": 0.11115384615384616,
+          "path_id": "BMC_3f557cac71a5",
+          "summary_cn": "90分钟1-0，西班牙常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10038461538461538,
+          "path_probability": 0.10038461538461538,
+          "path_id": "BMC_99ba9dd286ca",
+          "summary_cn": "90分钟2-1，西班牙常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09076923076923077,
+          "path_probability": 0.09076923076923077,
+          "path_id": "BMC_f1455ffc145f",
+          "summary_cn": "90分钟2-0，西班牙常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Austria",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06923076923076923,
+          "path_probability": 0.06923076923076923,
+          "path_id": "BMC_b646ac8cb93c",
+          "summary_cn": "90分钟0-1，Austria常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Austria advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "3-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.05846153846153846,
+          "path_probability": 0.05846153846153846,
+          "path_id": "BMC_1b8fd450e23a",
+          "summary_cn": "90分钟3-0，西班牙常规时间晋级。",
+          "summary_en": "90 minutes 3-0: Spain advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，西班牙常规时间晋级。",
+          "summary_cn": "90分钟1-0，西班牙常规时间晋级。",
+          "probability": 0.11115384615384616,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Spain",
+          "path_id": "BMC_3f557cac71a5",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Spain advances in normal time.",
+          "summary_en": "90 minutes 1-0: Spain advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+          "probability": 0.023076923076923078,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Spain",
+          "path_id": "BMC_0510b1e9acfe",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+          "probability": 0.009615384615384616,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "3-4",
+          "advancer_team": "Austria",
+          "path_id": "BMC_cd6e0191ba88",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，西班牙常规时间晋级。",
+        "summary_cn": "90分钟1-0，西班牙常规时间晋级。",
+        "probability": 0.11115384615384616,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_3f557cac71a5",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-0: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_0510b1e9acfe",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Austria点球晋级。",
+        "probability": 0.009615384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Austria",
+        "path_id": "BMC_cd6e0191ba88",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Austria advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.28883333333333344,
+          "base_event_probability": 0.28883333333333344,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.059666666666666666,
+              "rationale_cn": "西班牙打破对方防守后扩大领先优势。",
+              "rationale_en": "Spain breaks down the opposing defense and extends the lead."
+            },
+            {
+              "score": "2-2",
+              "probability": 0.04816666666666667,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match turns into an open exchange, with both attacks finding a payoff."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.030166666666666668,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The game is pulled into a high-risk open rhythm, with space behind the defensive lines continuing to grow."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.024333333333333332,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The game is pulled into a high-risk open rhythm, with space behind the defensive lines continuing to grow."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.021333333333333333,
+              "rationale_cn": "淘汰赛后段定位球与纪律风险会放大弱势方晋级路径；西班牙打破对方防守后扩大领先优势。",
+              "rationale_en": "Late knockout set pieces and discipline risks can widen underdog advancement paths, but Spain breaks down the opposing defense and extends the lead."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "2-2",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least four total goals.",
+          "rationale_en": "The game shifts into a more open rhythm; transitions, set pieces or space after one side leads push total goals well above the low-score center of the main forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.13899999999999996,
+          "base_event_probability": 0.13899999999999996,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.052,
+              "rationale_cn": "西班牙打破对方防守后扩大领先优势。",
+              "rationale_en": "Spain breaks down the opposing defense and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.024333333333333332,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The game is pulled into a high-risk open rhythm, with space behind the defensive lines continuing to grow."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.021333333333333333,
+              "rationale_cn": "淘汰赛后段定位球与纪律风险会放大弱势方晋级路径；西班牙打破对方防守后扩大领先优势。",
+              "rationale_en": "Late knockout set pieces and discipline risks can widen underdog advancement paths, but Spain breaks down the opposing defense and extends the lead."
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0085,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The game is pulled into a high-risk open rhythm, with space behind the defensive lines continuing to grow."
+            },
+            {
+              "score": "5-0",
+              "probability": 0.007166666666666667,
+              "rationale_cn": "淘汰赛后段定位球与纪律风险会放大弱势方晋级路径；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Late knockout set pieces and discipline risks can widen underdog advancement paths; the game is pulled into a high-risk open rhythm, with space behind the defensive lines continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-1",
+            "4-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least three goals.",
+          "rationale_en": "An early goal, card pressure, fatigue or defensive imbalance breaks the match open, allowing one side to pull clearly away within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.17466666666666672,
+          "base_event_probability": 0.17466666666666672,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.057166666666666664,
+              "rationale_cn": "点球分支：西班牙主罚深度与近期经历略优，门将优势证据不足；奥地利通过压迫或转换取得一球优势。",
+              "rationale_en": "Penalty branch: Spain has a slight edge in taker depth and recent experience, but goalkeeper superiority is not strongly evidenced; Austria gains a one-goal edge through pressing or transition."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.04833333333333333,
+              "rationale_cn": "奥地利通过压迫或转换取得一球优势。",
+              "rationale_en": "Austria gains a one-goal edge through pressing or transition."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.022333333333333334,
+              "rationale_cn": "淘汰赛后段定位球与纪律风险会放大弱势方晋级路径、关键球员状态与角色变化；奥地利充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Late knockout set pieces, discipline risks, key-player condition and role changes can widen underdog advancement paths; Austria fully converts counterattacking or attacking efficiency and extends the advantage."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.016,
+              "rationale_cn": "点球分支：西班牙主罚深度与近期经历略优，门将优势证据不足、关键球员状态与角色变化；奥地利充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Penalty branch: Spain's taker depth and recent experience are slightly better, but goalkeeper superiority is not strongly evidenced; key-player condition and role changes allow Austria to fully convert counterattacking or attacking efficiency and extend the advantage."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.014,
+              "rationale_cn": "点球分支：西班牙主罚深度与近期经历略优，门将优势证据不足、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Penalty branch: Spain's taker depth and recent experience are slightly better, but goalkeeper superiority is not strongly evidenced; key-player condition and role changes pull the match into a high-risk open rhythm with growing space behind the back lines."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The less-favored side before the match or in the main forecast wins within 90 minutes.",
+          "rationale_en": "The underdog changes the result within 90 minutes through low-block resilience, counterattacking efficiency, set pieces or a major favorite-side mistake."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "西班牙控球转化效率",
+          "impact_cn": "西班牙仍是主导方，但关键在于能否把控球转化为禁区内机会；若前30分钟只形成外围控制，奥地利低位与高压切换仍能把比赛拖入低比分。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Spain possession-to-chance conversion",
+          "impact_en": "Spain remain the controlling side, but the key is whether possession becomes box entries; if the first 30 minutes are only territorial control, Austria can still keep the game low-scoring through compact defending and pressing switches.",
+          "text_cn": "西班牙仍是主导方，但关键在于能否把控球转化为禁区内机会；若前30分钟只形成外围控制，奥地利低位与高压切换仍能把比赛拖入低比分。",
+          "text_en": "Spain remain the controlling side, but the key is whether possession becomes box entries; if the first 30 minutes are only territorial control, Austria can still keep the game low-scoring through compact defending and pressing switches."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "西班牙边路伤缺与亚马尔负荷",
+          "impact_cn": "尼科·威廉姆斯、耶雷米·皮诺等边路伤缺削弱西班牙持续冲击；亚马尔若仍需控制出场负荷，西班牙更可能先用控球和中路组织消耗奥地利。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Spain winger injuries and Yamal workload",
+          "impact_en": "Spain's wide-player injuries reduce sustained wing pressure; if Yamal's minutes are still managed, Spain are more likely to wear Austria down through possession and central creation.",
+          "text_cn": "尼科·威廉姆斯、耶雷米·皮诺等边路伤缺削弱西班牙持续冲击；亚马尔若仍需控制出场负荷，西班牙更可能先用控球和中路组织消耗奥地利。",
+          "text_en": "Spain's wide-player injuries reduce sustained wing pressure; if Yamal's minutes are still managed, Spain are more likely to wear Austria down through possession and central creation."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "奥地利高压与反击窗口",
+          "impact_cn": "奥地利不只是被动防守，阿拉巴、萨比策等核心支撑的高压和反击，仍可能在西班牙压上时制造一球偷袭路径。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Austria pressing and counter window",
+          "impact_en": "Austria are not only a passive defensive side; the pressing and counterattacking structure led by core players such as Alaba and Sabitzer can still create a one-goal steal if Spain push too high.",
+          "text_cn": "奥地利不只是被动防守，阿拉巴、萨比策等核心支撑的高压和反击，仍可能在西班牙压上时制造一球偷袭路径。",
+          "text_en": "Austria are not only a passive defensive side; the pressing and counterattacking structure led by core players such as Alaba and Sabitzer can still create a one-goal steal if Spain push too high."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "点球锚点与弱势方策略",
+          "impact_cn": "西班牙点球分支略优但不稳，奥地利知道拖到后程会提高随机性，因此比赛中段可能更重视纪律和防线完整。",
+          "direction": "draw",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Penalty anchor and underdog strategy",
+          "impact_en": "Spain have only a slight shootout edge, so Austria know that extending the match increases randomness; the middle phase may therefore emphasize discipline and defensive structure.",
+          "text_cn": "西班牙点球分支略优但不稳，奥地利知道拖到后程会提高随机性，因此比赛中段可能更重视纪律和防线完整。",
+          "text_en": "Spain have only a slight shootout edge, so Austria know that extending the match increases randomness; the middle phase may therefore emphasize discipline and defensive structure."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "定位球与纪律风险",
+          "impact_cn": "淘汰赛中定位球、禁区前犯规和VAR介入会被放大；若奥地利能制造死球机会，西班牙的低比分优势会被削弱。",
+          "direction": "draw",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "Set-piece and discipline risk",
+          "impact_en": "Set pieces, fouls around the box and VAR interventions matter more in knockout matches; if Austria generate dead-ball chances, Spain's low-score edge is weakened.",
+          "text_cn": "淘汰赛中定位球、禁区前犯规和VAR介入会被放大；若奥地利能制造死球机会，西班牙的低比分优势会被削弱。",
+          "text_en": "Set pieces, fouls around the box and VAR interventions matter more in knockout matches; if Austria generate dead-ball chances, Spain's low-score edge is weakened."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "SoFi封闭场地环境",
+          "impact_cn": "SoFi Stadium 的场地环境降低天气变量影响，比赛更可能回到技战术质量、控球效率和临场执行本身。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_from_full_prediction_and_team_news"
+          ],
+          "label_en": "SoFi venue environment",
+          "impact_en": "SoFi Stadium reduces weather uncertainty, so the match is more likely to be decided by tactical quality, possession efficiency and execution.",
+          "text_cn": "SoFi Stadium 的场地环境降低天气变量影响，比赛更可能回到技战术质量、控球效率和临场执行本身。",
+          "text_en": "SoFi Stadium reduces weather uncertainty, so the match is more likely to be decided by tactical quality, possession efficiency and execution."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.26192307692307654,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.18649045521292218,
+          "joint_probability": 0.04884615384615385,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.18649045521292218
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.13215859030837004
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "西班牙凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal extra-time decider created through counters, set pieces or substitute impact.",
+          "rationale_en": "Evidence-based explanation generated from the match forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.04552129221732745,
+          "joint_probability": 0.011923076923076922,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.04552129221732745
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.023494860499265784
+            },
+            {
+              "score": "3-1",
+              "increment": "3-1",
+              "probability": 0.005873715124816446
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.005873715124816446
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "3-1"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time as a cautious game turns into an open exchange.",
+          "rationale_en": "The game opens up in extra time, with both sides converting one effective chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.06461086637298091,
+          "joint_probability": 0.016923076923076923,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.06461086637298091
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.024963289280469897
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.023494860499265784
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.014684287812041117
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "西班牙在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A team wins extra time by at least two goals, or the period reaches three or more goals through a breakaway path.",
+          "rationale_en": "Evidence-based explanation generated from the match forecast."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "ET_ENTRY",
+          "label_cn": "加时来自低比分平局分支",
+          "impact_cn": "加时主要来自1-1、0-0等低比分平局分支；西班牙仍略占控球和推进优势，但优势会被时间压缩。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Extra time comes from low-score draw branches",
+          "impact_en": "Extra time mainly comes from 1-1 or 0-0 draw branches; Spain still hold a slight edge in possession and progression, but the shorter period compresses that advantage.",
+          "text_cn": "加时主要来自1-1、0-0等低比分平局分支；西班牙仍略占控球和推进优势，但优势会被时间压缩。",
+          "text_en": "Extra time mainly comes from 1-1 or 0-0 draw branches; Spain still hold a slight edge in possession and progression, but the shorter period compresses that advantage."
+        },
+        {
+          "factor_id": "ET_WIDTH_LOAD",
+          "label_cn": "西班牙边路伤缺与亚马尔负荷",
+          "impact_cn": "尼科·威廉姆斯、耶雷米·皮诺等边路伤缺会削弱西班牙持续冲击；亚马尔若出场时间受控，加时阶段更依赖控球和中路组织。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Spain winger injuries and Yamal workload",
+          "impact_en": "Spain's wing injuries reduce sustained wide impact; if Yamal's minutes are managed, extra time relies more on possession and central creation.",
+          "text_cn": "尼科·威廉姆斯、耶雷米·皮诺等边路伤缺会削弱西班牙持续冲击；亚马尔若出场时间受控，加时阶段更依赖控球和中路组织。",
+          "text_en": "Spain's wing injuries reduce sustained wide impact; if Yamal's minutes are managed, extra time relies more on possession and central creation."
+        },
+        {
+          "factor_id": "ET_PRESS_COUNTER",
+          "label_cn": "奥地利高压与反击窗口",
+          "impact_cn": "奥地利若用阿拉巴、萨比策等核心维持中前场压迫，仍有通过抢断后快速转换偷袭的窗口。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Austria pressing and counter window",
+          "impact_en": "If Austria maintain pressure through core players such as Alaba and Sabitzer, they still have a window to steal the game through turnovers and quick transitions.",
+          "text_cn": "奥地利若用阿拉巴、萨比策等核心维持中前场压迫，仍有通过抢断后快速转换偷袭的窗口。",
+          "text_en": "If Austria maintain pressure through core players such as Alaba and Sabitzer, they still have a window to steal the game through turnovers and quick transitions."
+        },
+        {
+          "factor_id": "ET_FATIGUE",
+          "label_cn": "体能与替补深度",
+          "impact_cn": "西班牙阵容深度和控球能力有利于加时控节奏；奥地利的高压若消耗过大，105分钟后防线横移和二点保护风险会增大。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Fatigue and bench depth",
+          "impact_en": "Spain's depth and possession help control extra-time rhythm; if Austria's pressing load becomes too high, their lateral defending and second-ball coverage become riskier after 105 minutes.",
+          "text_cn": "西班牙阵容深度和控球能力有利于加时控节奏；奥地利的高压若消耗过大，105分钟后防线横移和二点保护风险会增大。",
+          "text_en": "Spain's depth and possession help control extra-time rhythm; if Austria's pressing load becomes too high, their lateral defending and second-ball coverage become riskier after 105 minutes."
+        },
+        {
+          "factor_id": "ET_PENALTY_ANCHOR",
+          "label_cn": "点球锚点牵制冒险程度",
+          "impact_cn": "点球分支接近均势，西班牙略优但不稳；这会让双方在加时前半段仍保持谨慎，后半段才更可能冒险。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "et_manual_from_full_prediction"
+          ],
+          "label_en": "Penalty anchor limits risk-taking",
+          "impact_en": "The penalty branch is close to balanced, with only a slight Spain edge; this keeps both sides cautious early in extra time before risks rise later.",
+          "text_cn": "点球分支接近均势，西班牙略优但不稳；这会让双方在加时前半段仍保持谨慎，后半段才更可能冒险。",
+          "text_en": "The penalty branch is close to balanced, with only a slight Spain edge; this keeps both sides cautious early in extra time before risks rise later."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → four expert agents → committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.14076923076923037,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Goalkeeper heroics or repeated saves swing the shootout."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Goalkeeper heroics or repeated saves swing the shootout."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes repeated saves, or the opponent misses several penalties, causing the shootout score to widen quickly.",
+          "rationale_en": "Goalkeeper heroics or repeated saves swing the shootout."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "A key taker for the favored team misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round and the underdog advances on penalties.",
+          "rationale_en": "A key taker for the favored team misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides perform well across the first five rounds, pushing the shootout into sudden death."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides convert well through the first five rounds and the shootout is decided only after six or more rounds.",
+          "rationale_en": "Both sides perform well across the first five rounds, pushing the shootout into sudden death."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PEN_BASELINE",
+          "label_cn": "点球胜率接近均势",
+          "impact_cn": "点球条件下西班牙约52.5%、奥地利约47.5%，只是轻微优势，不应被解读为单边强势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Shootout is close to even",
+          "impact_en": "In the penalty branch Spain are around 52.5% and Austria around 47.5%, a slight edge rather than a one-sided advantage.",
+          "text_cn": "点球条件下西班牙约52.5%、奥地利约47.5%，只是轻微优势，不应被解读为单边强势。",
+          "text_en": "In the penalty branch Spain are around 52.5% and Austria around 47.5%, a slight edge rather than a one-sided advantage."
+        },
+        {
+          "factor_id": "PEN_TAKER_DEPTH",
+          "label_cn": "西班牙主罚深度略优",
+          "impact_cn": "西班牙技术型球员和近期点球经历带来小幅加分，但公开信息不足以确认具体主罚顺序。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Spain's taker depth is slightly better",
+          "impact_en": "Spain's technical player pool and recent shootout experience add a small edge, but public information does not confirm the exact taker order.",
+          "text_cn": "西班牙技术型球员和近期点球经历带来小幅加分，但公开信息不足以确认具体主罚顺序。",
+          "text_en": "Spain's technical player pool and recent shootout experience add a small edge, but public information does not confirm the exact taker order."
+        },
+        {
+          "factor_id": "PEN_KEEPER",
+          "label_cn": "门将优势证据不足",
+          "impact_cn": "现有证据不足以证明任一门将在点球中有决定性优势，因此模型保持接近50%的保守校准。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "No clear goalkeeper edge",
+          "impact_en": "The available evidence does not establish a decisive goalkeeper edge, so the model keeps the shootout close to 50%.",
+          "text_cn": "现有证据不足以证明任一门将在点球中有决定性优势，因此模型保持接近50%的保守校准。",
+          "text_en": "The available evidence does not establish a decisive goalkeeper edge, so the model keeps the shootout close to 50%."
+        },
+        {
+          "factor_id": "PEN_PRESSURE",
+          "label_cn": "热门方压力",
+          "impact_cn": "西班牙作为热门承受更高心理压力；若前五轮出现核心罚手失误，奥地利点球爆冷路径会被放大。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Favorite-side pressure",
+          "impact_en": "Spain carry more pressure as the favorite; if a key taker misses in the first five rounds, Austria's upset route expands.",
+          "text_cn": "西班牙作为热门承受更高心理压力；若前五轮出现核心罚手失误，奥地利点球爆冷路径会被放大。",
+          "text_en": "Spain carry more pressure as the favorite; if a key taker misses in the first five rounds, Austria's upset route expands."
+        },
+        {
+          "factor_id": "PEN_EXTENDED",
+          "label_cn": "延长点球随机性",
+          "impact_cn": "双方若前五轮质量较高，比赛会进入6轮以后突然死亡，此时随机性明显高于常规战术优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "pen_manual_from_full_prediction"
+          ],
+          "label_en": "Sudden-death randomness",
+          "impact_en": "If both sides convert well through the first five rounds, the shootout moves into sudden death, where randomness outweighs normal tactical edges.",
+          "text_cn": "双方若前五轮质量较高，比赛会进入6轮以后突然死亡，此时随机性明显高于常规战术优势。",
+          "text_en": "If both sides convert well through the first five rounds, the shootout moves into sudden death, where randomness outweighs normal tactical edges."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollout → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-01T04:25:33.121085Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline uses pre-match evidence and the expert committee to build cross-stage mechanisms; MAS rollouts generate conditional paths for 90 minutes, extra time if level, and penalties if still level, while Monte Carlo samples the complete path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same MAS conditional rollout, and the three frontend tabs are slices of one complete path distribution while keeping the JSON structure compatible with v6.2.2."
+}

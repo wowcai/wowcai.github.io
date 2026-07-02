@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "prediction_generated_at_utc": "2026-07-01T05:07:49.221407Z",
+  "prediction_generated_at_local": "2026-07-01T13:07:49.221407+08:00",
+  "quality_label": "usable",
+  "quality_assessment": {
+    "label": "usable",
+    "label_cn": "可用但需注明不确定性",
+    "publish_recommendation_cn": "World State已成功编译，结果可以使用；发布时应同时展示证据或推演缺口。",
+    "world_state_compiled": true,
+    "world_state_model": "gpt-5.5",
+    "world_state_fallback_field_count": 0,
+    "world_state_fallback_ratio": 0.0,
+    "research_completion_ratio": 0.75,
+    "critical_research_complete": false,
+    "rollout_fallback_action_count": 0,
+    "rollout_total_action_count": 192,
+    "rollout_fallback_ratio": 0.0,
+    "committee_fallback_used": false,
+    "reasons": [],
+    "warnings": [
+      "关键检索维度未完全覆盖（完成率75.0%）。"
+    ]
+  },
+  "purpose_cn": "网页最小预测输出：文本结论、比分偏离空间和蒙特卡洛比分矩阵。",
+  "notes_cn": [
+    "v6.2修复常规时间矩阵过度简化问题：normal_time_matrix为6x6 dense bucket，normal_time_deviation包含完整points。",
+    "前端高偏离卡片必须读取tail_focus，不要从Top比分或普通points中自行拼接。",
+    "每个Tab都提供key_factors；关键因素与比分解释分离。",
+    "点球矩阵包含6+ bucket，用于展示突然死亡延长点球。",
+    "v6.2.2在同一JSON对象内补充*_en字段；前端中文读*_cn，英文读*_en。",
+    "v6.3内部升级为branch-aware knockout rollout + conditional Monte Carlo；前端JSON结构保持v6.2.2不变。",
+    "v6.3.2统一常规时间/加时/点球高偏离为同一棵条件Tail树；报告层负责组织解释，前端JSON结构保持v6.2.2不变。"
+  ],
+  "frontend_contract": "knockout_v6_2_2_phase_semantics_bilingual_frontend_contract",
+  "tool_version": "8.6.2-unified-tail-tree-report-cleanup-v6.3.2",
+  "frontend_bundle": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json",
+    "frontend_guide": "FRONTEND_IMPLEMENTATION_GUIDE.md"
+  },
+  "knockout_architecture": "v6_3_branch_aware_rollout_mc_with_v6_2_2_frontend_views",
+  "phase_semantics": {
+    "normal_time": "完整90分钟比分矩阵 + 三类常规高偏离情景",
+    "extra_time": "条件加时增量矩阵 + 三类加时尾部情景 + 加时关键因素",
+    "penalties": "条件点球比分矩阵，含6+ bucket + 三类点球尾部情景 + 点球关键因素"
+  },
+  "bilingual_fields": {
+    "enabled": true,
+    "style": "same-object *_cn/*_en fields",
+    "source": "utils.frontend_bilingual.apply_bilingual_fields"
+  },
+  "tail_tree": {
+    "enabled": true,
+    "source": "backend_report.tail_tree",
+    "frontend_contract_changed": false,
+    "note_cn": "三阶段高偏离已统一到同一棵淘汰赛条件Tail树；前端仍读取原有tail_focus字段。"
+  }
+}

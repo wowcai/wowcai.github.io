@@ -1,0 +1,480 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.5405872193436959,
+      "conditional_probability": 0.5405872193436959,
+      "joint_probability": 0.15048076923076908,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.5405872193436959,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "label_en": "0-0",
+      "rationale_en": "Extra time is short and knockout risk appetite usually drops, so another draw remains the baseline high-probability branch."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.17789291882556146,
+      "conditional_probability": 0.17789291882556146,
+      "joint_probability": 0.049519230769230774,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.17789291882556146,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "葡萄牙凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Evidence-based explanation generated from the match forecast."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.11398963730569957,
+      "conditional_probability": 0.11398963730569957,
+      "joint_probability": 0.03173076923076923,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.11398963730569957,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "克罗地亚凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Evidence-based explanation generated from the match forecast."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.062176165803108835,
+      "conditional_probability": 0.062176165803108835,
+      "joint_probability": 0.0173076923076923,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.062176165803108835,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "The game opens up in extra time, with both sides converting one effective chance."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.041450777202072575,
+      "conditional_probability": 0.041450777202072575,
+      "joint_probability": 0.011538461538461539,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.041450777202072575,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "葡萄牙在对手体能或心理崩盘后拉开比分。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Evidence-based explanation generated from the match forecast."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.01727115716753024,
+      "conditional_probability": 0.01727115716753024,
+      "joint_probability": 0.004807692307692308,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.01727115716753024,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "克罗地亚在对手压上后连续制造转换机会。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Evidence-based explanation generated from the match forecast."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.015544041450777214,
+      "conditional_probability": 0.015544041450777214,
+      "joint_probability": 0.004326923076923077,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.015544041450777214,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.012089810017271167,
+      "conditional_probability": 0.012089810017271167,
+      "joint_probability": 0.0033653846153846156,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.012089810017271167,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.00863557858376512,
+      "conditional_probability": 0.00863557858376512,
+      "joint_probability": 0.002403846153846154,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.00863557858376512,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.005181347150259072,
+      "conditional_probability": 0.005181347150259072,
+      "joint_probability": 0.0014423076923076924,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.005181347150259072,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "label": "1-4",
+      "score": "1-4",
+      "increment": "1-4",
+      "probability": 0.0017271157167530239,
+      "conditional_probability": 0.0017271157167530239,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017271157167530239,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "1-4",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "3-1",
+      "score": "3-1",
+      "increment": "3-1",
+      "probability": 0.0017271157167530239,
+      "conditional_probability": 0.0017271157167530239,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017271157167530239,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-1",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.0017271157167530239,
+      "conditional_probability": 0.0017271157167530239,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017271157167530239,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "0-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.17789291882556146,
+      "joint_probability": 0.049519230769230774,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.17789291882556146
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.11398963730569957
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "葡萄牙凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal extra-time decider created through counters, set pieces or substitute impact.",
+      "rationale_en": "Evidence-based explanation generated from the match forecast."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.062176165803108835,
+      "joint_probability": 0.0173076923076923,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.062176165803108835
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.015544041450777214
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.00863557858376512
+        },
+        {
+          "score": "2-2",
+          "increment": "2-2",
+          "probability": 0.005181347150259072
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both sides score in extra time as a cautious game turns into an open exchange.",
+      "rationale_en": "The game opens up in extra time, with both sides converting one effective chance."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.041450777202072575,
+      "joint_probability": 0.011538461538461539,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.041450777202072575
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.01727115716753024
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.015544041450777214
+        },
+        {
+          "score": "3-0",
+          "increment": "3-0",
+          "probability": 0.012089810017271167
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "0-2",
+        "2-1"
+      ],
+      "rationale_cn": "葡萄牙在对手体能或心理崩盘后拉开比分。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A team wins extra time by at least two goals, or the period reaches three or more goals through a breakaway path.",
+      "rationale_en": "Evidence-based explanation generated from the match forecast."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "ET_ENTRY",
+      "label_cn": "加时来自1-1和0-0分支",
+      "impact_cn": "葡萄牙对克罗地亚的平局入口较高，1-1和0-0是主要加时来源；加时不会重新打开为完全独立比赛。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "et_manual_from_full_prediction"
+      ],
+      "label_en": "Extra time comes from 1-1 and 0-0 branches",
+      "impact_en": "Portugal-Croatia has a relatively high draw entry, with 1-1 and 0-0 as the main paths into extra time; the period should not be treated as a standalone match.",
+      "text_cn": "葡萄牙对克罗地亚的平局入口较高，1-1和0-0是主要加时来源；加时不会重新打开为完全独立比赛。",
+      "text_en": "Portugal-Croatia has a relatively high draw entry, with 1-1 and 0-0 as the main paths into extra time; the period should not be treated as a standalone match."
+    },
+    {
+      "factor_id": "ET_MIDFIELD",
+      "label_cn": "中场控制权之争",
+      "impact_cn": "葡萄牙的Vitinha、João Neves、Bruno Fernandes与克罗地亚的Modrić、Baturina、Sučić之间的中场对抗，会决定加时是否继续低节奏。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "et_manual_from_full_prediction"
+      ],
+      "label_en": "Midfield control battle",
+      "impact_en": "The midfield battle between Portugal's Vitinha, João Neves and Bruno Fernandes and Croatia's Modrić, Baturina and Sučić will decide whether extra time remains low-tempo.",
+      "text_cn": "葡萄牙的Vitinha、João Neves、Bruno Fernandes与克罗地亚的Modrić、Baturina、Sučić之间的中场对抗，会决定加时是否继续低节奏。",
+      "text_en": "The midfield battle between Portugal's Vitinha, João Neves and Bruno Fernandes and Croatia's Modrić, Baturina and Sučić will decide whether extra time remains low-tempo."
+    },
+    {
+      "factor_id": "ET_WIDTH",
+      "label_cn": "葡萄牙边路与禁区接应",
+      "impact_cn": "若葡萄牙边路持续形成1v1或2v1，并让禁区内有多点接应，加时阶段更可能出现1-0或2-0解决路径。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "et_manual_from_full_prediction"
+      ],
+      "label_en": "Portugal width and box presence",
+      "impact_en": "If Portugal keep creating wide 1v1 or 2v1 situations with multiple box targets, extra time is more likely to produce a 1-0 or 2-0 Portugal path.",
+      "text_cn": "若葡萄牙边路持续形成1v1或2v1，并让禁区内有多点接应，加时阶段更可能出现1-0或2-0解决路径。",
+      "text_en": "If Portugal keep creating wide 1v1 or 2v1 situations with multiple box targets, extra time is more likely to produce a 1-0 or 2-0 Portugal path."
+    },
+    {
+      "factor_id": "ET_CROATIA_DRAG",
+      "label_cn": "克罗地亚拖长比赛能力",
+      "impact_cn": "克罗地亚更有经验把比赛拖入低节奏、少失误的结构中；若70分钟后仍平，加时拖入点球的权重会上升。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "et_manual_from_full_prediction"
+      ],
+      "label_en": "Croatia's ability to extend the match",
+      "impact_en": "Croatia have the experience to slow the game into a low-error structure; if it remains level late, the weight of a penalty-drag path increases.",
+      "text_cn": "克罗地亚更有经验把比赛拖入低节奏、少失误的结构中；若70分钟后仍平，加时拖入点球的权重会上升。",
+      "text_en": "Croatia have the experience to slow the game into a low-error structure; if it remains level late, the weight of a penalty-drag path increases."
+    },
+    {
+      "factor_id": "ET_WEATHER_SETPIECE",
+      "label_cn": "晚场天气与定位球变量",
+      "impact_cn": "多伦多晚场若出现降雨，后段会更依赖定位球、二点球和纪律控制，开放比分与偷袭分支都会被放大。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "et_manual_from_full_prediction"
+      ],
+      "label_en": "Late weather and set-piece variable",
+      "impact_en": "If rain affects the late Toronto game, set pieces, second balls and discipline become more important, increasing both open-score and steal branches.",
+      "text_cn": "多伦多晚场若出现降雨，后段会更依赖定位球、二点球和纪律控制，开放比分与偷袭分支都会被放大。",
+      "text_en": "If rain affects the late Toronto game, set pieces, second balls and discipline become more important, increasing both open-score and steal branches."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}
