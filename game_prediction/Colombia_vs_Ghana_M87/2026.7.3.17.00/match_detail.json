@@ -1,0 +1,1259 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M87",
+    "team_a": "Colombia",
+    "team_b": "Ghana",
+    "kickoff_utc": "2026-07-03T20:30:00-05:00",
+    "venue": "Kansas City Stadium, Kansas City",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.7634615384615384,
+      "team_b": 0.23653846153846153,
+      "favorite": "Colombia"
+    },
+    "resolution": {
+      "normal_time": 0.7466346153846154,
+      "extra_time": 0.11298076923076923,
+      "penalties": 0.14038461538461525
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.16833333333333333,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "2-0",
+        "probability": 0.13854166666666667,
+        "goals_a": 2,
+        "goals_b": 0
+      },
+      {
+        "score": "1-1",
+        "probability": 0.119375,
+        "goals_a": 1,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Colombia常规时间晋级。",
+        "summary_cn": "90分钟1-0，Colombia常规时间晋级。",
+        "probability": 0.15625,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_dca16e187c9d",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Colombia advances in normal time.",
+        "summary_en": "90 minutes 1-0: Colombia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_5f5386654971",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+        "probability": 0.008173076923076924,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Ghana",
+        "path_id": "BMC_e495cc20f8af",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Colombia常规时间晋级。",
+        "summary_cn": "90分钟1-0，Colombia常规时间晋级。",
+        "probability": 0.15625,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_dca16e187c9d",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Colombia advances in normal time.",
+        "summary_en": "90 minutes 1-0: Colombia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_5f5386654971",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+        "probability": 0.008173076923076924,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Ghana",
+        "path_id": "BMC_e495cc20f8af",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties."
+      }
+    ],
+    "favorite": "Colombia",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.14038461538461525,
+        "probability_band": "14.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ghana",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008173076923076924,
+            "path_probability": 0.008173076923076924,
+            "path_id": "BMC_e495cc20f8af",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ghana",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007692307692307693,
+            "path_probability": 0.007692307692307693,
+            "path_id": "BMC_b026c09dce94",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Ghana点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Ghana advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ghana",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_f2375b00b0f3",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After both 90 minutes and extra time remain level, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.11298076923076923,
+        "probability_band": "11.3%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Colombia",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.026442307692307692,
+            "path_probability": 0.026442307692307692,
+            "path_id": "BMC_5f5386654971",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Colombia",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.023557692307692307,
+            "path_probability": 0.023557692307692307,
+            "path_id": "BMC_348c31a2ed3a",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Colombia加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ghana",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.01201923076923077,
+            "path_probability": 0.01201923076923077,
+            "path_id": "BMC_5c2f20184ddd",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Ghana加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; Ghana advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk appetite become amplified in extra time and create resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.16298076923076923,
+        "probability_band": "16.3%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ghana",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.06923076923076923,
+            "path_probability": 0.06923076923076923,
+            "path_id": "BMC_39bb0d7f308e",
+            "summary_cn": "90分钟0-1，Ghana常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Ghana advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ghana",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.03173076923076923,
+            "path_probability": 0.03173076923076923,
+            "path_id": "BMC_60a60154a141",
+            "summary_cn": "90分钟1-2，Ghana常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Ghana advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Ghana",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.017788461538461538,
+            "path_probability": 0.017788461538461538,
+            "path_id": "BMC_263aec148bc4",
+            "summary_cn": "90分钟0-2，Ghana常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Ghana advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can advance through a normal-time ambush, extra-time counters or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 128,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Colombia",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.15625,
+          "path_probability": 0.15625,
+          "path_id": "BMC_dca16e187c9d",
+          "summary_cn": "90分钟1-0，Colombia常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Colombia advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Colombia",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.13125,
+          "path_probability": 0.13125,
+          "path_id": "BMC_4f6ebebf2155",
+          "summary_cn": "90分钟2-0，Colombia常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Colombia advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Colombia",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09182692307692308,
+          "path_probability": 0.09182692307692308,
+          "path_id": "BMC_dfa47a79234f",
+          "summary_cn": "90分钟2-1，Colombia常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Colombia advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Colombia",
+          "after_extra_time_score": "3-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07692307692307693,
+          "path_probability": 0.07692307692307693,
+          "path_id": "BMC_daf9a4b41eea",
+          "summary_cn": "90分钟3-0，Colombia常规时间晋级。",
+          "summary_en": "90 minutes 3-0: Colombia advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Ghana",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06923076923076923,
+          "path_probability": 0.06923076923076923,
+          "path_id": "BMC_39bb0d7f308e",
+          "summary_cn": "90分钟0-1，Ghana常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Ghana advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Colombia常规时间晋级。",
+          "summary_cn": "90分钟1-0，Colombia常规时间晋级。",
+          "probability": 0.15625,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Colombia",
+          "path_id": "BMC_dca16e187c9d",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Colombia advances in normal time.",
+          "summary_en": "90 minutes 1-0: Colombia advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+          "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+          "probability": 0.026442307692307692,
+          "resolution_type": "extra_time",
+          "normal_time_score": "0-0",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Colombia",
+          "path_id": "BMC_5f5386654971",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time.",
+          "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+          "probability": 0.008173076923076924,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "3-4",
+          "advancer_team": "Ghana",
+          "path_id": "BMC_e495cc20f8af",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Colombia常规时间晋级。",
+        "summary_cn": "90分钟1-0，Colombia常规时间晋级。",
+        "probability": 0.15625,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_dca16e187c9d",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Colombia advances in normal time.",
+        "summary_en": "90 minutes 1-0: Colombia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Colombia加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_5f5386654971",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Colombia advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Ghana点球晋级。",
+        "probability": 0.008173076923076924,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Ghana",
+        "path_id": "BMC_e495cc20f8af",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Ghana advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.19708333333333333,
+          "base_event_probability": 0.19708333333333333,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.04583333333333333,
+              "rationale_cn": "Colombia打破对方防守后扩大领先优势。",
+              "rationale_en": "Colombia extends its lead after breaking through the opponent's defense."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.028125,
+              "rationale_cn": "Colombia打破对方防守后扩大领先优势。",
+              "rationale_en": "Colombia extends its lead after breaking through the opponent's defense."
+            },
+            {
+              "score": "2-2",
+              "probability": 0.02666666666666667,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "Compact defending limits attacking space; if the match becomes open and end-to-end, both attacks can convert."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.022708333333333334,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defenses continuing to grow."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.016041666666666666,
+              "rationale_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Fast transitions after tackles; the match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "4-0",
+            "2-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or extra space after a lead pushing total goals well above the main low-score expectation."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.16416666666666668,
+          "base_event_probability": 0.16416666666666668,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.078125,
+              "rationale_cn": "Colombia打破对方防守后扩大领先优势。",
+              "rationale_en": "Colombia extends its lead after breaking through the opponent's defense."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.028125,
+              "rationale_cn": "Colombia打破对方防守后扩大领先优势。",
+              "rationale_en": "Colombia extends its lead after breaking through the opponent's defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.022708333333333334,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defenses continuing to grow."
+            },
+            {
+              "score": "5-0",
+              "probability": 0.01125,
+              "rationale_cn": "抢断后的快速转换、定位球与纪律风险在后段和加时被放大，但方向只能轻度偏向哥；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Fast transitions after tackles, set pieces, and discipline risks are amplified late and in extra time, but the lean is only slightly toward Colombia; the match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "5-1",
+              "probability": 0.007083333333333333,
+              "rationale_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Fast transitions after tackles; the match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-0",
+            "4-1"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "Early goals, card pressure, fitness issues, or defensive imbalance make the match lose balance, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.11812500000000001,
+          "base_event_probability": 0.11812500000000001,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.054375,
+              "rationale_cn": "Ghana通过压迫或转换取得一球优势。",
+              "rationale_en": "Ghana take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.03229166666666667,
+              "rationale_cn": "Ghana通过压迫或转换取得一球优势。",
+              "rationale_en": "Ghana take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.013333333333333334,
+              "rationale_cn": "Ghana充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Ghana fully capitalize on counterattacks or attacking efficiency and extend their lead."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.00625,
+              "rationale_cn": "Ghana充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Ghana fully capitalize on counterattacks or attacking efficiency and extend their lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.005208333333333333,
+              "rationale_cn": "定位球与纪律风险在后段和加时被放大，但方向只能轻度偏向哥、紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Set-piece and discipline risks grow late on and in extra time, but the lean is only slightly toward Colombia; compact defending compresses attacking space. The match is pulled into a high-risk, open rhythm, with space behind the back line continuing to expand."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side rated less likely before the match or in the main prediction wins within 90 minutes.",
+          "rationale_en": "The underdog can change the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key errors by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "证据因素 1",
+          "impact_cn": "两家预览均列哥伦比亚4-3-3，詹姆斯、迪亚斯、苏亚雷斯同在前场。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_533cdb14dec3",
+            "E_02004d4b995b"
+          ],
+          "source_names": [
+            "RotoWire",
+            "Racing Post"
+          ],
+          "label_en": "Evidence factor 1",
+          "impact_en": "Both previews list Colombia in a 4-3-3, with James, Díaz, and Suárez together in the front line.",
+          "text_cn": "两家预览均列哥伦比亚4-3-3，詹姆斯、迪亚斯、苏亚雷斯同在前场。",
+          "text_en": "Both previews list Colombia in a 4-3-3, with James, Díaz, and Suárez together in the front line."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "战术",
+          "impact_cn": "预览将加纳应对哥伦比亚边路轮转列为关键，哥伦比亚对葡萄牙曾24射0球。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_467d989268ea",
+            "E_4dd5e7ee2626",
+            "E_e09ee6cb6196"
+          ],
+          "source_names": [
+            "Goal.com",
+            "WhoScored",
+            "Al Jazeera"
+          ],
+          "label_en": "Tactics",
+          "impact_en": "The preview identifies Ghana’s response to Colombia’s wide rotations as key; Colombia had 24 shots and 0 goals against Portugal.",
+          "text_cn": "预览将加纳应对哥伦比亚边路轮转列为关键，哥伦比亚对葡萄牙曾24射0球。",
+          "text_en": "The preview identifies Ghana’s response to Colombia’s wide rotations as key; Colombia had 24 shots and 0 goals against Portugal."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "防守",
+          "impact_cn": "加纳被描述为防守反击型，英格兰官方也称其0-0逼平英格兰时很顽强。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_7dfd09a6bf6a",
+            "E_f5bc4070d8b2"
+          ],
+          "source_names": [
+            "KansasCity.com",
+            "England Football"
+          ],
+          "label_en": "Defense",
+          "impact_en": "Ghana are described as a defensive counterattacking side, and England officials also called them resilient in their 0-0 draw with England.",
+          "text_cn": "加纳被描述为防守反击型，英格兰官方也称其0-0逼平英格兰时很顽强。",
+          "text_en": "Ghana are described as a defensive counterattacking side, and England officials also called them resilient in their 0-0 draw with England."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "阵容",
+          "impact_cn": "哥伦比亚赛前无新增伤停，路易斯·苏亚雷斯也已摆脱轻微身体疑虑。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_4edea3c67a21",
+            "E_d431a1909636"
+          ],
+          "source_names": [
+            "Goal.com"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Colombia had no new injuries or suspensions before the match, and Luis Suárez has also shaken off minor fitness concerns.",
+          "text_cn": "哥伦比亚赛前无新增伤停，路易斯·苏亚雷斯也已摆脱轻微身体疑虑。",
+          "text_en": "Colombia had no new injuries or suspensions before the match, and Luis Suárez has also shaken off minor fitness concerns."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "阵容",
+          "impact_cn": "ESPN称加纳本届赛前已无库杜斯，前场人员选择受到伤病背景影响。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_50b336299296"
+          ],
+          "source_names": [
+            "ESPN"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "ESPN says Ghana were already without Kudus before this tournament, with attacking selection affected by the injury situation.",
+          "text_cn": "ESPN称加纳本届赛前已无库杜斯，前场人员选择受到伤病背景影响。",
+          "text_en": "ESPN says Ghana were already without Kudus before this tournament, with attacking selection affected by the injury situation."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "证据因素 6",
+          "impact_cn": "比赛在堪萨斯城进行，球场为世界杯重铺百慕大草并拓宽比赛区域。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_9b2ff4af7fe6",
+            "E_5c8009649b5c"
+          ],
+          "source_names": [
+            "KMBC",
+            "ESPN"
+          ],
+          "label_en": "Evidence factor 6",
+          "impact_en": "The match is in Kansas City, where the stadium has been resurfaced with Bermuda grass for the World Cup and the playing area widened.",
+          "text_cn": "比赛在堪萨斯城进行，球场为世界杯重铺百慕大草并拓宽比赛区域。",
+          "text_en": "The match is in Kansas City, where the stadium has been resurfaced with Bermuda grass for the World Cup and the playing area widened."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2533653846153845,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.22770398481973447,
+          "joint_probability": 0.057692307692307696,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.22770398481973447
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.10056925996204938
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "Colombia凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "In the 30 minutes of extra time, the match is decided by one goal from a counterattack, set piece, or substitute impact.",
+          "rationale_en": "Colombia wins extra time by one goal through fitness, bench depth, or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.03605313092979129,
+          "joint_probability": 0.009134615384615385,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.03605313092979129
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.007590132827324483
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.0037950664136622413
+            },
+            {
+              "score": "3-1",
+              "increment": "3-1",
+              "probability": 0.0037950664136622413
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "1-2",
+            "2-1"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, as the match shifts from caution into open attacking play.",
+          "rationale_en": "The game opens up in extra time, with each side converting one clear chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.07779886148007595,
+          "joint_probability": 0.019711538461538464,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.07779886148007595
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.011385199240986724
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.009487666034155602
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.007590132827324483
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "3-0",
+            "0-2"
+          ],
+          "rationale_cn": "Colombia在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "In extra time, one side wins by at least 2 goals, or the total reaches over 3 goals in a clear cover path.",
+          "rationale_en": "Colombia pulls away after the opponent breaks down physically or mentally."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "哥伦比亚边路续压",
+          "label_en": "Colombia sustained wide pressure",
+          "impact_cn": "若90分钟后仍平，哥伦比亚仍可能通过边路轮转、定位球、二点球和边路疲劳错位制造加时优势。",
+          "impact_en": "If it remains level after 90 minutes, Colombia can still create an extra-time edge through wide rotations, set pieces, second balls and tired wide mismatches.",
+          "text_cn": "若90分钟后仍平，哥伦比亚仍可能通过边路轮转、定位球、二点球和边路疲劳错位制造加时优势。",
+          "text_en": "If it remains level after 90 minutes, Colombia can still create an extra-time edge through wide rotations, set pieces, second balls and tired wide mismatches.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "加纳转换链条",
+          "label_en": "Ghana transition chain",
+          "impact_cn": "加纳进入加时意味着低比分守平路径奏效，但Kudus缺阵削弱从推进到高质量射门的上限，Semenyo、Ayew和Sulemana的体能会很关键。",
+          "impact_en": "Ghana reaching extra time means the low-scoring containment path has worked, but Kudus’ absence lowers the ceiling from progression to high-quality shots. Semenyo, Ayew and Sulemana’s remaining legs are key.",
+          "text_cn": "加纳进入加时意味着低比分守平路径奏效，但Kudus缺阵削弱从推进到高质量射门的上限，Semenyo、Ayew和Sulemana的体能会很关键。",
+          "text_en": "Ghana reaching extra time means the low-scoring containment path has worked, but Kudus’ absence lowers the ceiling from progression to high-quality shots. Semenyo, Ayew and Sulemana’s remaining legs are key.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "低位韧性",
+          "label_en": "Low-block resilience",
+          "impact_cn": "加纳低位防守具备拖住比赛的韧性；若105分钟仍平，加纳更可能继续压低风险并接受点球路径。",
+          "impact_en": "Ghana’s low block has the resilience to keep the match close. If it remains level at 105 minutes, Ghana are more likely to keep risk low and accept the penalty route.",
+          "text_cn": "加纳低位防守具备拖住比赛的韧性；若105分钟仍平，加纳更可能继续压低风险并接受点球路径。",
+          "text_en": "Ghana’s low block has the resilience to keep the match close. If it remains level at 105 minutes, Ghana are more likely to keep risk low and accept the penalty route.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "哥伦比亚效率缺口",
+          "label_en": "Colombia efficiency gap",
+          "impact_cn": "哥伦比亚可以制造压力，但高射门量并不必然转化为进球；若加时继续久攻不下，心理压力会向热门方累积。",
+          "impact_en": "Colombia can generate pressure, but high shot volume does not automatically become goals. If extra-time pressure does not convert, psychological pressure can build on the favorite.",
+          "text_cn": "哥伦比亚可以制造压力，但高射门量并不必然转化为进球；若加时继续久攻不下，心理压力会向热门方累积。",
+          "text_en": "Colombia can generate pressure, but high shot volume does not automatically become goals. If extra-time pressure does not convert, psychological pressure can build on the favorite.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "换人与核心体能",
+          "label_en": "Substitutions and core fitness",
+          "impact_cn": "缺少官方首发、实时换人和球员分钟负荷数据，无法确认Díaz、James、Suárez、Partey等关键球员是否仍在场及状态。",
+          "impact_en": "Official lineups, live substitutions and minute-load data are missing, so it is unclear whether key players such as Díaz, James, Suárez and Partey are still on the pitch and in what condition.",
+          "text_cn": "缺少官方首发、实时换人和球员分钟负荷数据，无法确认Díaz、James、Suárez、Partey等关键球员是否仍在场及状态。",
+          "text_en": "Official lineups, live substitutions and minute-load data are missing, so it is unclear whether key players such as Díaz, James, Suárez and Partey are still on the pitch and in what condition.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "尾段证据缺口",
+          "label_en": "Late-tail evidence gap",
+          "impact_cn": "缺少90分钟末段红黄牌、伤病、换人耗尽、压迫强度下降和门将表现等现场数据，因此加时犯规风险与体能差只能保守处理。",
+          "impact_en": "Live data on late cards, injuries, used-up substitutions, declining pressing intensity and goalkeeper performance is missing, so extra-time foul risk and fitness gaps must be treated conservatively.",
+          "text_cn": "缺少90分钟末段红黄牌、伤病、换人耗尽、压迫强度下降和门将表现等现场数据，因此加时犯规风险与体能差只能保守处理。",
+          "text_en": "Live data on late cards, injuries, used-up substitutions, declining pressing intensity and goalkeeper performance is missing, so extra-time foul risk and fitness gaps must be treated conservatively.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → four expert agents → committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.14038461538461525,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.06664605873261206,
+          "probability_band": "low",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.06664605873261206,
+              "winner_side": "team_a",
+              "rationale_cn": "比分与矩阵中的4-2、Colombia胜一致；该比分通常对应一方在前五轮内建立两球优势并提前结束，门将关键扑救或对手罚失可解释该尾部走向。",
+              "rationale_en": "The score matches 4-2 in the matrix, with Colombia winning; this score usually means one side built a two-goal lead within the first five rounds and ended it early, explained by a key goalkeeper save or an opponent miss."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.05700154559505408,
+              "winner_side": "team_b",
+              "rationale_cn": "比分与矩阵中的2-4、Ghana胜一致；该比分符合点球大战可提前结束的规则，通常由Ghana门将扑点或Colombia连续失误形成两球差。",
+              "rationale_en": "The score matches 2-4 in the matrix, with Ghana winning; this score fits the rule that a shootout can end early, usually when Ghana’s goalkeeper saves a penalty or Colombia makes consecutive errors to create a two-goal gap."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "比分与矩阵中的4-2、Colombia胜一致；该比分通常对应一方在前五轮内建立两球优势并提前结束，门将关键扑救或对手罚失可解释该尾部走向。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive saves or the opponent misses multiple penalties, quickly widening the shootout score.",
+          "rationale_en": "The score matches 4-2 in the matrix, with Colombia winning; this score usually means one side built a two-goal lead within the first five rounds and ended it early, explained by a key goalkeeper save or an opponent miss."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.1282534775888717,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.1282534775888717,
+              "winner_side": "team_b",
+              "rationale_cn": "比分与矩阵中的3-4、Ghana胜一致；原提案中的“热门球队”缺少外部证据支撑，修正为Colombia在常规五轮内出现一次关键失误，Ghana以常见比分族险胜。",
+              "rationale_en": "The score matches 3-4 in the matrix, with Ghana winning; the “favored team” in the original proposal lacks external evidence, so it is revised to Colombia making one key error in the first five rounds, with Ghana narrowly winning by a common scoreline."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "比分与矩阵中的3-4、Ghana胜一致；原提案中的“热门球队”缺少外部证据支撑，修正为Colombia在常规五轮内出现一次关键失误，Ghana以常见比分族险胜。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side missed in a key round, and the underdog advanced on penalties.",
+          "rationale_en": "The score matches 3-4 in the matrix, with Ghana winning; the “favored team” in the original proposal lacks external evidence, so it is revised to Colombia making one key error in the first five rounds, with Ghana narrowly winning by a common scoreline."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.03332302936630603,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.03332302936630603,
+              "winner_side": "team_a",
+              "rationale_cn": "比分与矩阵中的6-5、Colombia胜一致；该比分必须进入延长点球阶段，符合双方前五轮接近且随后由Colombia在同轮比较中胜出的规则。",
+              "rationale_en": "The score matches 6-5 in the matrix, with Colombia winning; this score requires sudden-death penalties, fitting the rule that the first five rounds were close before Colombia won in the same-round comparison."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "比分与矩阵中的6-5、Colombia胜一致；该比分必须进入延长点球阶段，符合双方前五轮接近且随后由Colombia在同轮比较中胜出的规则。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides were strong through the first five rounds, with the match decided only after entering 6+ round sudden death.",
+          "rationale_en": "The score matches 6-5 in the matrix, with Colombia winning; this score requires sudden-death penalties, fitting the rule that the first five rounds were close before Colombia won in the same-round comparison."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "主罚顺序证据缺口",
+          "label_en": "Penalty-order evidence gap",
+          "impact_cn": "公开赛前资料无法确认Colombia与Ghana的具体点球顺序，点球手只能作为经验候选处理，前端不宜展示固定名单。",
+          "impact_en": "Public pre-match information cannot confirm Colombia and Ghana’s exact penalty order, so takers should only be treated as experience-based candidates, not fixed lists.",
+          "text_cn": "公开赛前资料无法确认Colombia与Ghana的具体点球顺序，点球手只能作为经验候选处理，前端不宜展示固定名单。",
+          "text_en": "Public pre-match information cannot confirm Colombia and Ghana’s exact penalty order, so takers should only be treated as experience-based candidates, not fixed lists.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "门将小幅调整",
+          "label_en": "Minor goalkeeper adjustment",
+          "impact_cn": "点球大战随机性强，只能围绕门将状态做小幅条件调整；连续扑点或连续罚失才会迅速制造两球差。",
+          "impact_en": "Shootouts are highly random, so goalkeeper form should only make a small conditional adjustment. Consecutive saves or misses are what can quickly create a two-goal gap.",
+          "text_cn": "点球大战随机性强，只能围绕门将状态做小幅条件调整；连续扑点或连续罚失才会迅速制造两球差。",
+          "text_en": "Shootouts are highly random, so goalkeeper form should only make a small conditional adjustment. Consecutive saves or misses are what can quickly create a two-goal gap.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差主线",
+          "label_en": "One-goal margin baseline",
+          "impact_cn": "rollout显示点球路径以一球差和延长点球为主，说明双方更可能在前五轮接近，而不是早早拉开差距。",
+          "impact_en": "The rollout shows penalty paths mainly decided by one goal or sudden death, suggesting the sides are more likely to stay close through the first five rounds than separate early.",
+          "text_cn": "rollout显示点球路径以一球差和延长点球为主，说明双方更可能在前五轮接近，而不是早早拉开差距。",
+          "text_en": "The rollout shows penalty paths mainly decided by one goal or sudden death, suggesting the sides are more likely to stay close through the first five rounds than separate early.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "热门方压力",
+          "label_en": "Favorite-side pressure",
+          "impact_cn": "哥伦比亚作为热门承担更高心理压力；Ghana的点球机会主要来自哥伦比亚关键轮次失误和自身主罚稳定性。",
+          "impact_en": "As the favorite, Colombia carry more psychological pressure. Ghana’s penalty route mainly comes from a Colombian mistake in a key round plus their own taker stability.",
+          "text_cn": "哥伦比亚作为热门承担更高心理压力；Ghana的点球机会主要来自哥伦比亚关键轮次失误和自身主罚稳定性。",
+          "text_en": "As the favorite, Colombia carry more psychological pressure. Ghana’s penalty route mainly comes from a Colombian mistake in a key round plus their own taker stability.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "延长点球路径",
+          "label_en": "Sudden-death path",
+          "impact_cn": "6-5类比分意味着前五轮接近后进入突然死亡，再由同轮比较中一方罚进而另一方失手决定胜负。",
+          "impact_en": "A 6-5 type score means the first five rounds stay close, then sudden death decides the match when one side scores and the other misses in the same round.",
+          "text_cn": "6-5类比分意味着前五轮接近后进入突然死亡，再由同轮比较中一方罚进而另一方失手决定胜负。",
+          "text_en": "A 6-5 type score means the first five rounds stay close, then sudden death decides the match when one side scores and the other misses in the same round.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollout → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-03T08:41:13.481559Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-phase mechanisms; MAS rollout provides conditional paths for 90 minutes, extra time if level, and penalties if still level; Monte Carlo samples the full path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same MAS conditional rollout. The three frontend tabs are different slices of one full path distribution, while keeping the JSON structure compatible with v6.2.2.",
+  "manual_review_note_cn": "前端展示文案与英文翻译已基于完整预测结果人工复核修正；概率、矩阵和路径分布未改动。",
+  "manual_review_note_en": "Frontend display text and English translations were manually reviewed against the full prediction outputs; probabilities, matrices and path distributions were not changed."
+}

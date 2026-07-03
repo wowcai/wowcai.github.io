@@ -1,0 +1,1240 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M88",
+    "team_a": "Australia",
+    "team_b": "Egypt",
+    "kickoff_utc": "2026-07-03T13:00:00-05:00",
+    "venue": "Dallas Stadium, Arlington",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.49576923076923046,
+      "team_b": 0.5042307692307695,
+      "favorite": "Egypt"
+    },
+    "resolution": {
+      "normal_time": 0.7053846153846156,
+      "extra_time": 0.1253846153846154,
+      "penalties": 0.16923076923076852
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13516666666666666,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "0-1",
+        "probability": 0.11533333333333333,
+        "goals_a": 0,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.1065,
+        "goals_a": 1,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Australia常规时间晋级。",
+        "summary_cn": "90分钟1-0，Australia常规时间晋级。",
+        "probability": 0.10615384615384615,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Australia",
+        "path_id": "BMC_d3d225d90d13",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Australia advances in normal time.",
+        "summary_en": "90 minutes 1-0: Australia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+        "probability": 0.025384615384615384,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Australia",
+        "path_id": "BMC_287d5ccb8458",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "probability": 0.01,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Egypt",
+        "path_id": "BMC_049b5790b664",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Australia常规时间晋级。",
+        "summary_cn": "90分钟1-0，Australia常规时间晋级。",
+        "probability": 0.10615384615384615,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Australia",
+        "path_id": "BMC_d3d225d90d13",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Australia advances in normal time.",
+        "summary_en": "90 minutes 1-0: Australia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+        "probability": 0.025384615384615384,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Australia",
+        "path_id": "BMC_287d5ccb8458",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "probability": 0.01,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Egypt",
+        "path_id": "BMC_049b5790b664",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+      }
+    ],
+    "favorite": "Egypt",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.16923076923076852,
+        "probability_band": "16.9%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.01,
+            "path_probability": 0.01,
+            "path_id": "BMC_049b5790b664",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008846153846153846,
+            "path_probability": 0.008846153846153846,
+            "path_id": "BMC_134d556c3d31",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Egypt点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007307692307692308,
+            "path_probability": 0.007307692307692308,
+            "path_id": "BMC_d8da10794021",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After both 90 minutes and extra time remain level, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.1253846153846154,
+        "probability_band": "12.5%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Australia",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.025384615384615384,
+            "path_probability": 0.025384615384615384,
+            "path_id": "BMC_287d5ccb8458",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.022307692307692306,
+            "path_probability": 0.022307692307692306,
+            "path_id": "BMC_f6aa9e2f84ad",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Egypt加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Egypt advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.015384615384615385,
+            "path_probability": 0.015384615384615385,
+            "path_id": "BMC_a438fd1a0baf",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Egypt加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; Egypt advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk appetite become amplified in extra time and create resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.3507692307692307,
+        "probability_band": "35.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Australia",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "1-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.10615384615384615,
+            "path_probability": 0.10615384615384615,
+            "path_id": "BMC_d3d225d90d13",
+            "summary_cn": "90分钟1-0，Australia常规时间晋级。",
+            "summary_en": "90 minutes 1-0: Australia advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Australia",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07423076923076923,
+            "path_probability": 0.07423076923076923,
+            "path_id": "BMC_01090e505ba4",
+            "summary_cn": "90分钟2-1，Australia常规时间晋级。",
+            "summary_en": "90 minutes 2-1: Australia advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Australia",
+            "after_extra_time_score": "2-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.06192307692307692,
+            "path_probability": 0.06192307692307692,
+            "path_id": "BMC_1dfb6a595b10",
+            "summary_cn": "90分钟2-0，Australia常规时间晋级。",
+            "summary_en": "90 minutes 2-0: Australia advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can advance through a normal-time ambush, extra-time counters or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 176,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Australia",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10615384615384615,
+          "path_probability": 0.10615384615384615,
+          "path_id": "BMC_d3d225d90d13",
+          "summary_cn": "90分钟1-0，Australia常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Australia advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Egypt",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09961538461538462,
+          "path_probability": 0.09961538461538462,
+          "path_id": "BMC_04f8948ce453",
+          "summary_cn": "90分钟0-1，Egypt常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Egypt advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Egypt",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08269230769230769,
+          "path_probability": 0.08269230769230769,
+          "path_id": "BMC_475ed8fc6676",
+          "summary_cn": "90分钟1-2，Egypt常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Egypt advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Australia",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07423076923076923,
+          "path_probability": 0.07423076923076923,
+          "path_id": "BMC_01090e505ba4",
+          "summary_cn": "90分钟2-1，Australia常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Australia advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Egypt",
+          "after_extra_time_score": "0-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06961538461538462,
+          "path_probability": 0.06961538461538462,
+          "path_id": "BMC_45fb3fe8b6c8",
+          "summary_cn": "90分钟0-2，Egypt常规时间晋级。",
+          "summary_en": "90 minutes 0-2: Egypt advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Australia常规时间晋级。",
+          "summary_cn": "90分钟1-0，Australia常规时间晋级。",
+          "probability": 0.10615384615384615,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Australia",
+          "path_id": "BMC_d3d225d90d13",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Australia advances in normal time.",
+          "summary_en": "90 minutes 1-0: Australia advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+          "probability": 0.025384615384615384,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Australia",
+          "path_id": "BMC_287d5ccb8458",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+          "probability": 0.01,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Egypt",
+          "path_id": "BMC_049b5790b664",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Australia常规时间晋级。",
+        "summary_cn": "90分钟1-0，Australia常规时间晋级。",
+        "probability": 0.10615384615384615,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Australia",
+        "path_id": "BMC_d3d225d90d13",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Australia advances in normal time.",
+        "summary_en": "90 minutes 1-0: Australia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Australia加时晋级。",
+        "probability": 0.025384615384615384,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Australia",
+        "path_id": "BMC_287d5ccb8458",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Australia advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "probability": 0.01,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Egypt",
+        "path_id": "BMC_049b5790b664",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.21916666666666668,
+          "base_event_probability": 0.21916666666666668,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.050166666666666665,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match opens up end to end, with both attacks converting chances."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.03266666666666666,
+              "rationale_cn": "Egypt充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Egypt fully converts its counterattack or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.029333333333333333,
+              "rationale_cn": "Australia打破对方防守后扩大领先优势。",
+              "rationale_en": "Australia extend their lead after breaking through the opposition defense."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.019333333333333334,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.018333333333333333,
+              "rationale_cn": "后段与加时澳大利亚定位球权重上升，但不能夸大为空中绝对优；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "In the later stages and extra time, Australia’s set-piece weight increased, but it should not be overstated as absolute aerial dominance; the match moved into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "1-3",
+            "3-1"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead pushing total goals well above the main low-score forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.0865,
+          "base_event_probability": 0.0865,
+          "attention_level": "low",
+          "selected_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.024333333333333332,
+              "rationale_cn": "Egypt充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Egypt fully converts its counterattack or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "3-0",
+              "probability": 0.020833333333333332,
+              "rationale_cn": "Australia打破对方防守后扩大领先优势。",
+              "rationale_en": "Australia extend their lead after breaking through the opposition defense."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.009833333333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "0-4",
+              "probability": 0.007833333333333333,
+              "rationale_cn": "点球分支澳大利亚有准备优势，但门将和实战经验不支持强结论；Egypt充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "In the penalty branch, Australia have a preparation edge, but goalkeeper and match-experience factors do not support a strong conclusion; Egypt fully convert counterattacks or attacking efficiency and extend the lead."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.006666666666666667,
+              "rationale_cn": "边路突破与肋部防守对位、点球分支澳大利亚有准备优势，但门将和实战经验不支持强结论；Australia打破对方防守后扩大领先优势。",
+              "rationale_en": "Australia has a preparation edge in wide breakthroughs, half-space defensive matchups, and the penalty branch, but goalkeeping and match experience do not support a firm conclusion; Australia extends the lead after breaking down the opponent's defense."
+            }
+          ],
+          "display_scores": [
+            "0-3",
+            "3-0",
+            "1-4"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fatigue, or defensive imbalance makes the match one-sided, with one team pulling clear within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.33866666666666656,
+          "base_event_probability": 0.33866666666666656,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "probability": 0.1065,
+              "rationale_cn": "Australia在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Australia have a slight edge in key matchups and close the match with a one-goal margin."
+            },
+            {
+              "score": "2-1",
+              "probability": 0.07616666666666666,
+              "rationale_cn": "后段与加时澳大利亚定位球权重上升，但不能夸大为空中绝对优、边路突破与肋部防守对位；Australia在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "In the later stages and extra time, Australia’s set-piece weight increased, but it should not be overstated as absolute aerial dominance; wide breakthroughs and half-space defensive matchups mattered. Australia edged the key matchups and closed the match with a one-goal advantage."
+            },
+            {
+              "score": "2-0",
+              "probability": 0.058666666666666666,
+              "rationale_cn": "Australia打破对方防守后扩大领先优势。",
+              "rationale_en": "Australia extend their lead after breaking through the opposition defense."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.029333333333333333,
+              "rationale_cn": "Australia打破对方防守后扩大领先优势。",
+              "rationale_en": "Australia extend their lead after breaking through the opposition defense."
+            },
+            {
+              "score": "3-0",
+              "probability": 0.020833333333333332,
+              "rationale_cn": "Australia打破对方防守后扩大领先优势。",
+              "rationale_en": "Australia extend their lead after breaking through the opposition defense."
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "2-1",
+            "2-0"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored pre-match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog can change the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "进攻",
+          "impact_cn": "The Analyst称澳大利亚能由低位防守快速转入进攻，反击角色清晰。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_c54b0edb971b"
+          ],
+          "source_names": [
+            "The Analyst"
+          ],
+          "label_en": "Attack",
+          "impact_en": "The Analyst says Australia can quickly switch from a low block to attack, with clear counterattacking roles.",
+          "text_cn": "The Analyst称澳大利亚能由低位防守快速转入进攻，反击角色清晰。",
+          "text_en": "The Analyst says Australia can quickly switch from a low block to attack, with clear counterattacking roles."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "进攻",
+          "impact_cn": "ESPN称澳大利亚小组赛只让对手获得一次超过0.2 xG的射门。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_159d92573ff3"
+          ],
+          "source_names": [
+            "ESPN"
+          ],
+          "label_en": "Attack",
+          "impact_en": "ESPN says Australia allowed opponents only one shot above 0.2 xG in the group stage.",
+          "text_cn": "ESPN称澳大利亚小组赛只让对手获得一次超过0.2 xG的射门。",
+          "text_en": "ESPN says Australia allowed opponents only one shot above 0.2 xG in the group stage."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "防守",
+          "impact_cn": "Goal.com称埃及关键考验是破解低位防守，同时避免阵型完全暴露。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_4bcbe851e60e"
+          ],
+          "source_names": [
+            "Goal.com"
+          ],
+          "label_en": "Defense",
+          "impact_en": "Goal.com says Egypt’s key test is breaking down a low block while avoiding fully exposing its shape.",
+          "text_cn": "Goal.com称埃及关键考验是破解低位防守，同时避免阵型完全暴露。",
+          "text_en": "Goal.com says Egypt’s key test is breaking down a low block while avoiding fully exposing its shape."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "阵容",
+          "impact_cn": "萨拉赫腿筋伤后，The Athletic称埃及主帅确认他可某种程度出战。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_fb4a515f799e",
+            "E_aa91d0af514f"
+          ],
+          "source_names": [
+            "The Athletic",
+            "ESPN"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "After Salah's hamstring injury, The Athletic said Egypt's coach confirmed he can play to some extent.",
+          "text_cn": "萨拉赫腿筋伤后，The Athletic称埃及主帅确认他可某种程度出战。",
+          "text_en": "After Salah's hamstring injury, The Athletic said Egypt's coach confirmed he can play to some extent."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "证据因素 5",
+          "impact_cn": "BBC称萨拉赫对新西兰一传一射，帮助埃及3-1拿到世界杯首胜。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_4d9d71a3f748"
+          ],
+          "source_names": [
+            "BBC Sport"
+          ],
+          "label_en": "Evidence Factor 5",
+          "impact_en": "BBC says Salah had a goal and an assist against New Zealand, helping Egypt earn a 3-1 first World Cup win.",
+          "text_cn": "BBC称萨拉赫对新西兰一传一射，帮助埃及3-1拿到世界杯首胜。",
+          "text_en": "BBC says Salah had a goal and an assist against New Zealand, helping Egypt earn a 3-1 first World Cup win."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "证据因素 6",
+          "impact_cn": "官方与媒体信息显示，本场在阿灵顿Dallas Stadium于7月3日进行。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_3e3275202bb7",
+            "E_bf85ff864b58",
+            "E_fbe4fe919ed3"
+          ],
+          "source_names": [
+            "AT&T Stadium",
+            "Dallas News",
+            "Olympics.com"
+          ],
+          "label_en": "Evidence Factor 6",
+          "impact_en": "Official and media information show this match will be played at Dallas Stadium in Arlington on July 3.",
+          "text_cn": "官方与媒体信息显示，本场在阿灵顿Dallas Stadium于7月3日进行。",
+          "text_en": "Official and media information show this match will be played at Dallas Stadium in Arlington on July 3."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.29461538461538395,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.1671018276762405,
+          "joint_probability": 0.04923076923076923,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.1671018276762405
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.15926892950391672
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "Australia凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "In 30 minutes of extra time, a counterattack, set piece, or substitute impact decides the match by 1 goal.",
+          "rationale_en": "Australia win extra time by one goal through fitness, substitutes, or pressing advantages."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.053524804177545765,
+          "joint_probability": 0.015769230769230765,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.053524804177545765
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.01174934725848566
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.007832898172323775
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.006527415143603145
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides scored in extra time, as the match shifted from caution into open exchanges.",
+          "rationale_en": "The match opened up in extra time, with each side converting one clear chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.0365535248041776,
+          "joint_probability": 0.010769230769230769,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.0365535248041776
+            },
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.03002610966057447
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.01174934725848566
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.007832898172323775
+            }
+          ],
+          "display_scores": [
+            "0-2",
+            "2-0",
+            "2-1"
+          ],
+          "rationale_cn": "Egypt在对手压上后连续制造转换机会。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "In extra time, one side wins by at least 2 goals, or the match is broken open with total goals reaching over 3.",
+          "rationale_en": "Egypt created repeated transition chances after the opponent pushed up."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "平局入口",
+          "label_en": "Low-score entry",
+          "impact_cn": "加时只发生在90分钟打平分支；这场最主要入口是1-1、0-0和低比分僵局，因此加时不是重新开赛，而是双方谨慎博弈的延续。",
+          "impact_en": "Extra time only occurs after a 90-minute draw. The main entry points are 1-1, 0-0 and other low-score stalemates, so extra time is not a reset but a continuation of a cautious tactical contest.",
+          "text_cn": "加时只发生在90分钟打平分支；这场最主要入口是1-1、0-0和低比分僵局，因此加时不是重新开赛，而是双方谨慎博弈的延续。",
+          "text_en": "Extra time only occurs after a 90-minute draw. The main entry points are 1-1, 0-0 and other low-score stalemates, so extra time is not a reset but a continuation of a cautious tactical contest.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "Salah状态变量",
+          "label_en": "Salah availability variable",
+          "impact_cn": "埃及的加时上限高度依赖Salah是否仍在场、是否具备冲刺能力；若他被保护性换下，埃及更可能转向低位和点球路径。",
+          "impact_en": "Egypt’s extra-time ceiling depends heavily on whether Salah is still on the pitch and able to sprint. If he is managed or substituted, Egypt are more likely to drop lower and accept the penalty route.",
+          "text_cn": "埃及的加时上限高度依赖Salah是否仍在场、是否具备冲刺能力；若他被保护性换下，埃及更可能转向低位和点球路径。",
+          "text_en": "Egypt’s extra-time ceiling depends heavily on whether Salah is still on the pitch and able to sprint. If he is managed or substituted, Egypt are more likely to drop lower and accept the penalty route.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "澳大利亚体能压迫",
+          "label_en": "Australia fitness pressure",
+          "impact_cn": "澳大利亚的一球加时路径来自身体对抗、二点球、边路冲击和定位球压力；但缺少实时换人与跑动数据，优势只能作为条件分支。",
+          "impact_en": "Australia’s one-goal extra-time path comes from physical duels, second balls, wide pressure and set pieces. Because live substitution and running data are missing, this edge should remain a conditional branch.",
+          "text_cn": "澳大利亚的一球加时路径来自身体对抗、二点球、边路冲击和定位球压力；但缺少实时换人与跑动数据，优势只能作为条件分支。",
+          "text_en": "Australia’s one-goal extra-time path comes from physical duels, second balls, wide pressure and set pieces. Because live substitution and running data are missing, this edge should remain a conditional branch.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "埃及转换窗口",
+          "label_en": "Egypt transition window",
+          "impact_cn": "若澳大利亚在105分钟后主动压上，埃及可通过快速转换和身后空间制造反击机会，这也是埃及不只依赖点球的主要后程路径。",
+          "impact_en": "If Australia push higher after 105 minutes, Egypt can use quick transitions and space behind the line, making this the main late route that does not rely purely on penalties.",
+          "text_cn": "若澳大利亚在105分钟后主动压上，埃及可通过快速转换和身后空间制造反击机会，这也是埃及不只依赖点球的主要后程路径。",
+          "text_en": "If Australia push higher after 105 minutes, Egypt can use quick transitions and space behind the line, making this the main late route that does not rely purely on penalties.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "点球前风险管理",
+          "label_en": "Risk management before penalties",
+          "impact_cn": "双方接近五五开会降低加时末段冒险幅度；若最后15分钟仍平，比赛更可能被管理到点球，而不是无序拉开。",
+          "impact_en": "Because the matchup is close to even, both sides have incentives to limit late extra-time risk. If it remains level in the final 15 minutes, the match is more likely to be managed toward penalties than to open up chaotically.",
+          "text_cn": "双方接近五五开会降低加时末段冒险幅度；若最后15分钟仍平，比赛更可能被管理到点球，而不是无序拉开。",
+          "text_en": "Because the matchup is close to even, both sides have incentives to limit late extra-time risk. If it remains level in the final 15 minutes, the match is more likely to be managed toward penalties than to open up chaotically.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → four expert agents → committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.16923076923076852,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Goalkeeper's consecutive penalty saves change the result."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Goalkeeper's consecutive penalty saves change the result."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive penalty saves or the opponent misses several in a row, quickly widening the shootout score.",
+          "rationale_en": "Goalkeeper's consecutive penalty saves change the result."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "Key taker for the favored team misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "Key taker for the favored team misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides were strong through the first five rounds, sending the shootout into extra penalties."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides were strong through the first five rounds, with the winner decided only after sudden death from round 6 onward.",
+          "rationale_en": "Both sides were strong through the first five rounds, sending the shootout into extra penalties."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "主罚顺序缺口",
+          "label_en": "Penalty order gap",
+          "impact_cn": "公开赛前资料无法确认Australia与Egypt的固定主罚顺序，点球手只能按经验候选处理，前端不应展示为确定名单。",
+          "impact_en": "Public pre-match information does not confirm fixed penalty orders for Australia and Egypt, so takers should only be treated as experience-based candidates rather than confirmed lists.",
+          "text_cn": "公开赛前资料无法确认Australia与Egypt的固定主罚顺序，点球手只能按经验候选处理，前端不应展示为确定名单。",
+          "text_en": "Public pre-match information does not confirm fixed penalty orders for Australia and Egypt, so takers should only be treated as experience-based candidates rather than confirmed lists.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "门将扑点波动",
+          "label_en": "Goalkeeper-save volatility",
+          "impact_cn": "点球大战的胜负主要由门将扑救和单轮失误触发；若出现4-2或2-4类比分，应解释为连续扑点或连续罚失导致的提前结束。",
+          "impact_en": "Shootout outcomes are mainly triggered by goalkeeper saves and single-round mistakes. A 4-2 or 2-4 type score should be explained as an early finish caused by consecutive saves or misses.",
+          "text_cn": "点球大战的胜负主要由门将扑救和单轮失误触发；若出现4-2或2-4类比分，应解释为连续扑点或连续罚失导致的提前结束。",
+          "text_en": "Shootout outcomes are mainly triggered by goalkeeper saves and single-round mistakes. A 4-2 or 2-4 type score should be explained as an early finish caused by consecutive saves or misses.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差主线",
+          "label_en": "One-goal margin baseline",
+          "impact_cn": "模型显示点球路径更集中在一球差和延长点球，这意味着双方前五轮大概率接近，而不是一方迅速建立确定优势。",
+          "impact_en": "The model concentrates penalty paths around one-goal margins and sudden death, implying the first five rounds are more likely to stay close than to produce a decisive early gap.",
+          "text_cn": "模型显示点球路径更集中在一球差和延长点球，这意味着双方前五轮大概率接近，而不是一方迅速建立确定优势。",
+          "text_en": "The model concentrates penalty paths around one-goal margins and sudden death, implying the first five rounds are more likely to stay close than to produce a decisive early gap.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "核心罚手压力",
+          "label_en": "Key-taker pressure",
+          "impact_cn": "澳大利亚与埃及都缺少可验证的完整点球名单，因此“核心罚手失误”只能作为压力场景，而不能指向具体球员。",
+          "impact_en": "Neither side has a verified full penalty list, so a “key taker mistake” should be shown as a pressure scenario, not attributed to a specific player.",
+          "text_cn": "澳大利亚与埃及都缺少可验证的完整点球名单，因此“核心罚手失误”只能作为压力场景，而不能指向具体球员。",
+          "text_en": "Neither side has a verified full penalty list, so a “key taker mistake” should be shown as a pressure scenario, not attributed to a specific player.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "五五开下的随机性",
+          "label_en": "Randomness in a near-even match",
+          "impact_cn": "这场本身接近五五开，点球不应被写成某一方显著优势；更适合展示为门将、经验和心理压力的高随机分支。",
+          "impact_en": "Because the matchup is close to even, penalties should not be framed as a strong edge for either side. They are better shown as a high-randomness branch shaped by goalkeepers, experience and pressure.",
+          "text_cn": "这场本身接近五五开，点球不应被写成某一方显著优势；更适合展示为门将、经验和心理压力的高随机分支。",
+          "text_en": "Because the matchup is close to even, penalties should not be framed as a strong edge for either side. They are better shown as a high-randomness branch shaped by goalkeepers, experience and pressure.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollout → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-03T07:10:48.773934Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-phase mechanisms; MAS rollout provides conditional paths for 90 minutes, extra time if level, and penalties if still level; Monte Carlo samples the full path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same MAS conditional rollout. The three frontend tabs are different slices of one full path distribution, while keeping the JSON structure compatible with v6.2.2.",
+  "manual_review_note_cn": "前端展示文案与英文翻译已基于完整预测结果人工复核修正；概率、矩阵和路径分布未改动。",
+  "manual_review_note_en": "Frontend display text and English translations were manually reviewed against the full prediction outputs; probabilities, matrices and path distributions were not changed."
+}

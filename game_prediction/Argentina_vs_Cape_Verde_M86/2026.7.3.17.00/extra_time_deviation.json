@@ -1,0 +1,473 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.5086580086580085,
+      "conditional_probability": 0.5086580086580085,
+      "joint_probability": 0.11298076923076916,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.5086580086580085,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "label_en": "0-0",
+      "rationale_en": "Extra time is short and knockout risk appetite drops, so remaining level is the baseline high-probability branch."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.2575757575757576,
+      "conditional_probability": 0.2575757575757576,
+      "joint_probability": 0.05721153846153846,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.2575757575757576,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Argentina凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Argentina win extra time by one goal through fitness, substitutes, or pressing advantage."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.08008658008658011,
+      "conditional_probability": 0.08008658008658011,
+      "joint_probability": 0.017788461538461538,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.08008658008658011,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Cape Verde凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Cape Verde wins extra time by one goal through fitness, bench depth or counterattack efficiency."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.0562770562770563,
+      "conditional_probability": 0.0562770562770563,
+      "joint_probability": 0.0125,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.0562770562770563,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "Argentina在对手体能或心理崩盘后拉开比分。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Argentina pull away after the opponent collapses physically or mentally."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.0432900432900433,
+      "conditional_probability": 0.0432900432900433,
+      "joint_probability": 0.009615384615384616,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.0432900432900433,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.019480519480519487,
+      "conditional_probability": 0.019480519480519487,
+      "joint_probability": 0.004326923076923077,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.019480519480519487,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.008658008658008661,
+      "conditional_probability": 0.008658008658008661,
+      "joint_probability": 0.0019230769230769232,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.008658008658008661,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "Argentina加时领先后仍被对手回应，但最终净胜。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Argentina leads in extra time, concedes a response, but still wins by one overall."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.008658008658008661,
+      "conditional_probability": 0.008658008658008661,
+      "joint_probability": 0.0019230769230769232,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.008658008658008661,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.006493506493506496,
+      "conditional_probability": 0.006493506493506496,
+      "joint_probability": 0.0014423076923076924,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.006493506493506496,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时一球分胜负的补充覆盖路径。",
+      "label_en": "0-2",
+      "rationale_en": "Supplementary one-goal extra-time resolution path."
+    },
+    {
+      "label": "3-1",
+      "score": "3-1",
+      "increment": "3-1",
+      "probability": 0.004329004329004331,
+      "conditional_probability": 0.004329004329004331,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.004329004329004331,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.004329004329004331,
+      "conditional_probability": 0.004329004329004331,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.004329004329004331,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "label": "4-0",
+      "score": "4-0",
+      "increment": "4-0",
+      "probability": 0.0021645021645021654,
+      "conditional_probability": 0.0021645021645021654,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0021645021645021654,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.2575757575757576,
+      "joint_probability": 0.05721153846153846,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.2575757575757576
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.08008658008658011
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "Argentina凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal decider in 30 minutes of extra time via a counterattack, set piece, or substitute impact.",
+      "rationale_en": "Argentina win extra time by one goal through fitness, substitutes, or pressing advantage."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.0432900432900433,
+      "joint_probability": 0.009615384615384616,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.0432900432900433
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.008658008658008661
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.008658008658008661
+        },
+        {
+          "score": "3-1",
+          "increment": "3-1",
+          "probability": 0.004329004329004331
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both sides score in extra time, as the match shifts from cautious to open end-to-end play.",
+      "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.0562770562770563,
+      "joint_probability": 0.0125,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.0562770562770563
+        },
+        {
+          "score": "3-0",
+          "increment": "3-0",
+          "probability": 0.019480519480519487
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.008658008658008661
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.008658008658008661
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "3-0",
+        "2-1"
+      ],
+      "rationale_cn": "Argentina在对手体能或心理崩盘后拉开比分。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A side covers by winning extra time by at least 2 goals, or with total goals reaching 3+.",
+      "rationale_en": "Argentina pull away after the opponent collapses physically or mentally."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "低比分入口",
+      "label_en": "Low-score entry",
+      "impact_cn": "加时入口主要来自0-0或1-1；若佛得角用4-5-1把比赛拖住，阿根廷仍有控球和二次进攻优势，但破局节奏会被压慢。",
+      "impact_en": "The main extra-time entry comes from 0-0 or 1-1. If Cape Verde’s 4-5-1 keeps the match contained, Argentina still have possession and second-phase attacking advantages, but the breakthrough tempo slows.",
+      "text_cn": "加时入口主要来自0-0或1-1；若佛得角用4-5-1把比赛拖住，阿根廷仍有控球和二次进攻优势，但破局节奏会被压慢。",
+      "text_en": "The main extra-time entry comes from 0-0 or 1-1. If Cape Verde’s 4-5-1 keeps the match contained, Argentina still have possession and second-phase attacking advantages, but the breakthrough tempo slows.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "阿根廷阵容深度",
+      "label_en": "Argentina squad depth",
+      "impact_cn": "阿根廷的加时优势来自主力休整、阵容深度和持续压迫；若梅西、劳塔罗、德保罗、麦卡利斯特或恩佐仍在场，优势会更明显。",
+      "impact_en": "Argentina’s extra-time edge comes from rested starters, squad depth and sustained pressure. It becomes stronger if Messi, Lautaro, De Paul, Mac Allister or Enzo remain on the pitch.",
+      "text_cn": "阿根廷的加时优势来自主力休整、阵容深度和持续压迫；若梅西、劳塔罗、德保罗、麦卡利斯特或恩佐仍在场，优势会更明显。",
+      "text_en": "Argentina’s extra-time edge comes from rested starters, squad depth and sustained pressure. It becomes stronger if Messi, Lautaro, De Paul, Mac Allister or Enzo remain on the pitch.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "佛得角定位球冷门口",
+      "label_en": "Cape Verde set-piece upset path",
+      "impact_cn": "佛得角加时的主要机会不在长期控球，而是前场定位球、低频反击和阿根廷尾段纪律风险；这是冷门路径的核心接口。",
+      "impact_en": "Cape Verde’s main extra-time route is not sustained possession, but attacking set pieces, rare counters and Argentina’s late discipline risk. This is the core interface for an upset path.",
+      "text_cn": "佛得角加时的主要机会不在长期控球，而是前场定位球、低频反击和阿根廷尾段纪律风险；这是冷门路径的核心接口。",
+      "text_en": "Cape Verde’s main extra-time route is not sustained possession, but attacking set pieces, rare counters and Argentina’s late discipline risk. This is the core interface for an upset path.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "核心在场性",
+      "label_en": "Core players on pitch",
+      "impact_cn": "缺少官方首发与实时换人计划，无法确认阿根廷核心是否踢满；若关键组织者提前下场，加时优势需要下调。",
+      "impact_en": "Official lineups and live substitution plans are unavailable, so it is unclear whether Argentina’s core players last into extra time. If key creators are substituted early, the extra-time edge should be reduced.",
+      "text_cn": "缺少官方首发与实时换人计划，无法确认阿根廷核心是否踢满；若关键组织者提前下场，加时优势需要下调。",
+      "text_en": "Official lineups and live substitution plans are unavailable, so it is unclear whether Argentina’s core players last into extra time. If key creators are substituted early, the extra-time edge should be reduced.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "低位体能检验",
+      "label_en": "Low-block fitness test",
+      "impact_cn": "佛得角能否把低位防守维持到105分钟后，是加时阶段最大的现场验证点；抽筋、犯规和禁区解围质量会决定尾部风险。",
+      "impact_en": "Whether Cape Verde can maintain the low block beyond 105 minutes is the main live test in extra time. Cramps, fouls and box-clearance quality will determine the late-tail risk.",
+      "text_cn": "佛得角能否把低位防守维持到105分钟后，是加时阶段最大的现场验证点；抽筋、犯规和禁区解围质量会决定尾部风险。",
+      "text_en": "Whether Cape Verde can maintain the low block beyond 105 minutes is the main live test in extra time. Cramps, fouls and box-clearance quality will determine the late-tail risk.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "裁判与牌面",
+      "label_en": "Refereeing and card state",
+      "impact_cn": "Drew Fischer的吹罚尺度和双方背牌状态会影响阿根廷反抢强度，也会影响佛得角通过定位球偷袭的机会。",
+      "impact_en": "Drew Fischer’s refereeing standard and each side’s card state can affect Argentina’s counter-pressing intensity and Cape Verde’s chance to create set-piece ambushes.",
+      "text_cn": "Drew Fischer的吹罚尺度和双方背牌状态会影响阿根廷反抢强度，也会影响佛得角通过定位球偷袭的机会。",
+      "text_en": "Drew Fischer’s refereeing standard and each side’s card state can affect Argentina’s counter-pressing intensity and Cape Verde’s chance to create set-piece ambushes.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}

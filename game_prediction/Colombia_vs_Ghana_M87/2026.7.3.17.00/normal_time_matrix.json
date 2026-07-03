@@ -1,0 +1,1412 @@
+{
+  "schema_version": "2.0",
+  "phase": "normal_time",
+  "matrix_type": "normal_time_score_dense_6x6_bucketed",
+  "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+  "axis_note_cn": "纵轴为team_a 90分钟进球，横轴为team_b 90分钟进球；5+表示至少5球。概率为90分钟比分的整场概率。",
+  "row_axis": {
+    "team": "Colombia",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "column_axis": {
+    "team": "Ghana",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.623125,
+    "draw": 0.25875,
+    "team_b_win": 0.118125
+  },
+  "matrix": [
+    [
+      0.108125,
+      0.054375,
+      0.013333333333333334,
+      0.0033333333333333335,
+      0.0008333333333333334,
+      0.00020833333333333335
+    ],
+    [
+      0.16833333333333333,
+      0.119375,
+      0.03229166666666667,
+      0.00625,
+      0.0008333333333333334,
+      0.00020833333333333335
+    ],
+    [
+      0.13854166666666667,
+      0.08708333333333333,
+      0.02666666666666667,
+      0.005208333333333333,
+      0.0008333333333333334,
+      0.0
+    ],
+    [
+      0.078125,
+      0.04583333333333333,
+      0.016041666666666666,
+      0.004166666666666667,
+      0.0004166666666666667,
+      0.0
+    ],
+    [
+      0.028125,
+      0.022708333333333334,
+      0.005833333333333334,
+      0.0020833333333333333,
+      0.0004166666666666667,
+      0.0
+    ],
+    [
+      0.014374999999999999,
+      0.010833333333333334,
+      0.004375,
+      0.0008333333333333334,
+      0.0,
+      0.0
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "0",
+      "probability": 0.108125,
+      "probability_percent": 10.8125,
+      "top_scores": [
+        {
+          "score": "0-0",
+          "probability": 0.108125,
+          "probability_percent": 10.8125
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "1",
+      "probability": 0.054375,
+      "probability_percent": 5.4375,
+      "top_scores": [
+        {
+          "score": "0-1",
+          "probability": 0.054375,
+          "probability_percent": 5.4375
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "2",
+      "probability": 0.013333333333333334,
+      "probability_percent": 1.3333,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.013333333333333334,
+          "probability_percent": 1.3333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "3",
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.0033333333333333335,
+          "probability_percent": 0.3333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "4",
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "top_scores": [
+        {
+          "score": "0-4",
+          "probability": 0.0008333333333333334,
+          "probability_percent": 0.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "5+",
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "top_scores": [
+        {
+          "score": "0-6",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "0",
+      "probability": 0.16833333333333333,
+      "probability_percent": 16.8333,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.16833333333333333,
+          "probability_percent": 16.8333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "1",
+      "probability": 0.119375,
+      "probability_percent": 11.9375,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.119375,
+          "probability_percent": 11.9375
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "2",
+      "probability": 0.03229166666666667,
+      "probability_percent": 3.2292,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.03229166666666667,
+          "probability_percent": 3.2292
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "3",
+      "probability": 0.00625,
+      "probability_percent": 0.625,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.00625,
+          "probability_percent": 0.625
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "4",
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "top_scores": [
+        {
+          "score": "1-4",
+          "probability": 0.0008333333333333334,
+          "probability_percent": 0.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "5+",
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "top_scores": [
+        {
+          "score": "1-5",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "0",
+      "probability": 0.13854166666666667,
+      "probability_percent": 13.8542,
+      "top_scores": [
+        {
+          "score": "2-0",
+          "probability": 0.13854166666666667,
+          "probability_percent": 13.8542
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "1",
+      "probability": 0.08708333333333333,
+      "probability_percent": 8.7083,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.08708333333333333,
+          "probability_percent": 8.7083
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "2",
+      "probability": 0.02666666666666667,
+      "probability_percent": 2.6667,
+      "top_scores": [
+        {
+          "score": "2-2",
+          "probability": 0.02666666666666667,
+          "probability_percent": 2.6667
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "3",
+      "probability": 0.005208333333333333,
+      "probability_percent": 0.5208,
+      "top_scores": [
+        {
+          "score": "2-3",
+          "probability": 0.005208333333333333,
+          "probability_percent": 0.5208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "4",
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "top_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.0008333333333333334,
+          "probability_percent": 0.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "5+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "0",
+      "probability": 0.078125,
+      "probability_percent": 7.8125,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.078125,
+          "probability_percent": 7.8125
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "1",
+      "probability": 0.04583333333333333,
+      "probability_percent": 4.5833,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.04583333333333333,
+          "probability_percent": 4.5833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "2",
+      "probability": 0.016041666666666666,
+      "probability_percent": 1.6042,
+      "top_scores": [
+        {
+          "score": "3-2",
+          "probability": 0.016041666666666666,
+          "probability_percent": 1.6042
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "3",
+      "probability": 0.004166666666666667,
+      "probability_percent": 0.4167,
+      "top_scores": [
+        {
+          "score": "3-3",
+          "probability": 0.004166666666666667,
+          "probability_percent": 0.4167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "4",
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "top_scores": [
+        {
+          "score": "3-4",
+          "probability": 0.0004166666666666667,
+          "probability_percent": 0.0417
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "5+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "0",
+      "probability": 0.028125,
+      "probability_percent": 2.8125,
+      "top_scores": [
+        {
+          "score": "4-0",
+          "probability": 0.028125,
+          "probability_percent": 2.8125
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "1",
+      "probability": 0.022708333333333334,
+      "probability_percent": 2.2708,
+      "top_scores": [
+        {
+          "score": "4-1",
+          "probability": 0.022708333333333334,
+          "probability_percent": 2.2708
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "2",
+      "probability": 0.005833333333333334,
+      "probability_percent": 0.5833,
+      "top_scores": [
+        {
+          "score": "4-2",
+          "probability": 0.005833333333333334,
+          "probability_percent": 0.5833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "3",
+      "probability": 0.0020833333333333333,
+      "probability_percent": 0.2083,
+      "top_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.0020833333333333333,
+          "probability_percent": 0.2083
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "4",
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "top_scores": [
+        {
+          "score": "4-4",
+          "probability": 0.0004166666666666667,
+          "probability_percent": 0.0417
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "5+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "0",
+      "probability": 0.014374999999999999,
+      "probability_percent": 1.4375,
+      "top_scores": [
+        {
+          "score": "5-0",
+          "probability": 0.01125,
+          "probability_percent": 1.125
+        },
+        {
+          "score": "6-0",
+          "probability": 0.0027083333333333334,
+          "probability_percent": 0.2708
+        },
+        {
+          "score": "7-0",
+          "probability": 0.0004166666666666667,
+          "probability_percent": 0.0417
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "1",
+      "probability": 0.010833333333333334,
+      "probability_percent": 1.0833,
+      "top_scores": [
+        {
+          "score": "5-1",
+          "probability": 0.007083333333333333,
+          "probability_percent": 0.7083
+        },
+        {
+          "score": "6-1",
+          "probability": 0.0027083333333333334,
+          "probability_percent": 0.2708
+        },
+        {
+          "score": "7-1",
+          "probability": 0.0008333333333333334,
+          "probability_percent": 0.0833
+        },
+        {
+          "score": "8-1",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "2",
+      "probability": 0.004375,
+      "probability_percent": 0.4375,
+      "top_scores": [
+        {
+          "score": "5-2",
+          "probability": 0.003125,
+          "probability_percent": 0.3125
+        },
+        {
+          "score": "6-2",
+          "probability": 0.00125,
+          "probability_percent": 0.125
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "3",
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "top_scores": [
+        {
+          "score": "5-3",
+          "probability": 0.000625,
+          "probability_percent": 0.0625
+        },
+        {
+          "score": "6-3",
+          "probability": 0.00020833333333333335,
+          "probability_percent": 0.0208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "5+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    }
+  ],
+  "rows": [
+    {
+      "score": "1-0",
+      "goals_a": 1,
+      "goals_b": 0,
+      "probability": 0.16833333333333333,
+      "probability_percent": 16.8333,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.1,
+      "position": 0.1,
+      "x": 0.1,
+      "y": 0.16833333333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-0",
+      "goals_a": 2,
+      "goals_b": 0,
+      "probability": 0.13854166666666667,
+      "probability_percent": 13.8542,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.38,
+      "position": 0.38,
+      "x": 0.38,
+      "y": 0.13854166666666667,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-1",
+      "goals_a": 1,
+      "goals_b": 1,
+      "probability": 0.119375,
+      "probability_percent": 11.9375,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.2624375,
+      "position": 0.2624375,
+      "x": 0.2624375,
+      "y": 0.119375,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-0",
+      "goals_a": 0,
+      "goals_b": 0,
+      "probability": 0.108125,
+      "probability_percent": 10.8125,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.1424375,
+      "position": 0.1424375,
+      "x": 0.1424375,
+      "y": 0.108125,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-1",
+      "goals_a": 2,
+      "goals_b": 1,
+      "probability": 0.08708333333333333,
+      "probability_percent": 8.7083,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.33999999999999997,
+      "position": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.08708333333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-0",
+      "goals_a": 3,
+      "goals_b": 0,
+      "probability": 0.078125,
+      "probability_percent": 7.8125,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6599999999999999,
+      "position": 0.6599999999999999,
+      "x": 0.6599999999999999,
+      "y": 0.078125,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-1",
+      "goals_a": 0,
+      "goals_b": 1,
+      "probability": 0.054375,
+      "probability_percent": 5.4375,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.19165625000000003,
+      "position": 0.19165625000000003,
+      "x": 0.19165625000000003,
+      "y": 0.054375,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-1",
+      "goals_a": 3,
+      "goals_b": 1,
+      "probability": 0.04583333333333333,
+      "probability_percent": 4.5833,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.62,
+      "position": 0.62,
+      "x": 0.62,
+      "y": 0.04583333333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-2",
+      "goals_a": 1,
+      "goals_b": 2,
+      "probability": 0.03229166666666667,
+      "probability_percent": 3.2292,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.43165624999999996,
+      "position": 0.43165624999999996,
+      "x": 0.43165624999999996,
+      "y": 0.03229166666666667,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-0",
+      "goals_a": 4,
+      "goals_b": 0,
+      "probability": 0.028125,
+      "probability_percent": 2.8125,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.94,
+      "position": 0.94,
+      "x": 0.94,
+      "y": 0.028125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-2",
+      "goals_a": 2,
+      "goals_b": 2,
+      "probability": 0.02666666666666667,
+      "probability_percent": 2.6667,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.5024375,
+      "position": 0.5024375,
+      "x": 0.5024375,
+      "y": 0.02666666666666667,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-1",
+      "goals_a": 4,
+      "goals_b": 1,
+      "probability": 0.022708333333333334,
+      "probability_percent": 2.2708,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8999999999999999,
+      "position": 0.8999999999999999,
+      "x": 0.8999999999999999,
+      "y": 0.022708333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-2",
+      "goals_a": 3,
+      "goals_b": 2,
+      "probability": 0.016041666666666666,
+      "probability_percent": 1.6042,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.58,
+      "position": 0.58,
+      "x": 0.58,
+      "y": 0.016041666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-2",
+      "goals_a": 0,
+      "goals_b": 2,
+      "probability": 0.013333333333333334,
+      "probability_percent": 1.3333,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.47165625,
+      "position": 0.47165625,
+      "x": 0.47165625,
+      "y": 0.013333333333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-0",
+      "goals_a": 5,
+      "goals_b": 0,
+      "probability": 0.01125,
+      "probability_percent": 1.125,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.01125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-1",
+      "goals_a": 5,
+      "goals_b": 1,
+      "probability": 0.007083333333333333,
+      "probability_percent": 0.7083,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.007083333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-3",
+      "goals_a": 1,
+      "goals_b": 3,
+      "probability": 0.00625,
+      "probability_percent": 0.625,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.71165625,
+      "position": 0.71165625,
+      "x": 0.71165625,
+      "y": 0.00625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-2",
+      "goals_a": 4,
+      "goals_b": 2,
+      "probability": 0.005833333333333334,
+      "probability_percent": 0.5833,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.86,
+      "position": 0.86,
+      "x": 0.86,
+      "y": 0.005833333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-3",
+      "goals_a": 2,
+      "goals_b": 3,
+      "probability": 0.005208333333333333,
+      "probability_percent": 0.5208,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.67165625,
+      "position": 0.67165625,
+      "x": 0.67165625,
+      "y": 0.005208333333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-3",
+      "goals_a": 3,
+      "goals_b": 3,
+      "probability": 0.004166666666666667,
+      "probability_percent": 0.4167,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.7424375,
+      "position": 0.7424375,
+      "x": 0.7424375,
+      "y": 0.004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-3",
+      "goals_a": 0,
+      "goals_b": 3,
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.7516562499999999,
+      "position": 0.7516562499999999,
+      "x": 0.7516562499999999,
+      "y": 0.0033333333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-2",
+      "goals_a": 5,
+      "goals_b": 2,
+      "probability": 0.003125,
+      "probability_percent": 0.3125,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.003125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-0",
+      "goals_a": 6,
+      "goals_b": 0,
+      "probability": 0.0027083333333333334,
+      "probability_percent": 0.2708,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0027083333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-1",
+      "goals_a": 6,
+      "goals_b": 1,
+      "probability": 0.0027083333333333334,
+      "probability_percent": 0.2708,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0027083333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-3",
+      "goals_a": 4,
+      "goals_b": 3,
+      "probability": 0.0020833333333333333,
+      "probability_percent": 0.2083,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.82,
+      "position": 0.82,
+      "x": 0.82,
+      "y": 0.0020833333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-2",
+      "goals_a": 6,
+      "goals_b": 2,
+      "probability": 0.00125,
+      "probability_percent": 0.125,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-4",
+      "goals_a": 0,
+      "goals_b": 4,
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0008333333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-4",
+      "goals_a": 1,
+      "goals_b": 4,
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9916562499999999,
+      "position": 0.9916562499999999,
+      "x": 0.9916562499999999,
+      "y": 0.0008333333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-4",
+      "goals_a": 2,
+      "goals_b": 4,
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.95165625,
+      "position": 0.95165625,
+      "x": 0.95165625,
+      "y": 0.0008333333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-1",
+      "goals_a": 7,
+      "goals_b": 1,
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0008333333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-3",
+      "goals_a": 5,
+      "goals_b": 3,
+      "probability": 0.000625,
+      "probability_percent": 0.0625,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.000625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-4",
+      "goals_a": 3,
+      "goals_b": 4,
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.91165625,
+      "position": 0.91165625,
+      "x": 0.91165625,
+      "y": 0.0004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-4",
+      "goals_a": 4,
+      "goals_b": 4,
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9824375,
+      "position": 0.9824375,
+      "x": 0.9824375,
+      "y": 0.0004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-0",
+      "goals_a": 7,
+      "goals_b": 0,
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-6",
+      "goals_a": 0,
+      "goals_b": 6,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-5",
+      "goals_a": 1,
+      "goals_b": 5,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_b",
+      "outcome_cn": "Ghana胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Ghana win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-3",
+      "goals_a": 6,
+      "goals_b": 3,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "8-1",
+      "goals_a": 8,
+      "goals_b": 1,
+      "probability": 0.00020833333333333335,
+      "probability_percent": 0.0208,
+      "outcome_key": "team_a",
+      "outcome_cn": "Colombia胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00020833333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Colombia win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    }
+  ],
+  "top_scores": [
+    {
+      "score": "1-0",
+      "probability": 0.16833333333333333,
+      "goals_a": 1,
+      "goals_b": 0
+    },
+    {
+      "score": "2-0",
+      "probability": 0.13854166666666667,
+      "goals_a": 2,
+      "goals_b": 0
+    },
+    {
+      "score": "1-1",
+      "probability": 0.119375,
+      "goals_a": 1,
+      "goals_b": 1
+    },
+    {
+      "score": "0-0",
+      "probability": 0.108125,
+      "goals_a": 0,
+      "goals_b": 0
+    },
+    {
+      "score": "2-1",
+      "probability": 0.08708333333333333,
+      "goals_a": 2,
+      "goals_b": 1
+    },
+    {
+      "score": "3-0",
+      "probability": 0.078125,
+      "goals_a": 3,
+      "goals_b": 0
+    },
+    {
+      "score": "0-1",
+      "probability": 0.054375,
+      "goals_a": 0,
+      "goals_b": 1
+    },
+    {
+      "score": "3-1",
+      "probability": 0.04583333333333333,
+      "goals_a": 3,
+      "goals_b": 1
+    }
+  ],
+  "source": "latest_state_v7.distribution.score_matrix + score_space_data if available",
+  "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties.",
+  "axis_note_en": "Rows show Colombia 90-minute goals and columns show Ghana 90-minute goals; 5+ means at least five goals. Probabilities are full-match 90-minute score probabilities."
+}

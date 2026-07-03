@@ -1,17 +1,17 @@
 window.WORLD_CUP_LATEST_GAME_PREDICTIONS = [
   {
-    matchNo: "M83",
-    matchFolder: "Portugal_vs_Croatia_M83",
-    versions: ["2026.7.2.14.00"]
+    matchNo: "M86",
+    matchFolder: "Argentina_vs_Cape_Verde_M86",
+    versions: ["2026.7.3.17.00"]
   },
   {
-    matchNo: "M84",
-    matchFolder: "Spain_vs_Austria_M84",
-    versions: ["2026.7.2.14.00"]
+    matchNo: "M87",
+    matchFolder: "Colombia_vs_Ghana_M87",
+    versions: ["2026.7.3.17.00"]
   },
   {
-    matchNo: "M85",
-    matchFolder: "Switzerland_vs_Algeria_M85",
-    versions: ["2026.7.2.14.00"]
+    matchNo: "M88",
+    matchFolder: "Australia_vs_Egypt_M88",
+    versions: ["2026.7.3.17.00"]
   }
 ];

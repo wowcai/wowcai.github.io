@@ -1,0 +1,475 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.5161290322580644,
+      "conditional_probability": 0.5161290322580644,
+      "joint_probability": 0.13076923076923067,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.5161290322580644,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "label_en": "0-0",
+      "rationale_en": "Extra time is short and knockout risk appetite drops, so remaining level is the baseline high-probability branch."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.22770398481973447,
+      "conditional_probability": 0.22770398481973447,
+      "joint_probability": 0.057692307692307696,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.22770398481973447,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Colombia凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Colombia wins extra time by one goal through fitness, bench depth, or pressing advantage."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.10056925996204938,
+      "conditional_probability": 0.10056925996204938,
+      "joint_probability": 0.02548076923076923,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.10056925996204938,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Ghana凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Ghana wins extra time by one goal through fitness, bench depth or counterattack efficiency."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.07779886148007595,
+      "conditional_probability": 0.07779886148007595,
+      "joint_probability": 0.019711538461538464,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.07779886148007595,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "Colombia在对手体能或心理崩盘后拉开比分。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Colombia pulls away after the opponent breaks down physically or mentally."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.03605313092979129,
+      "conditional_probability": 0.03605313092979129,
+      "joint_probability": 0.009134615384615385,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.03605313092979129,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "The game opens up in extra time, with each side converting one clear chance."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.011385199240986724,
+      "conditional_probability": 0.011385199240986724,
+      "joint_probability": 0.0028846153846153848,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.011385199240986724,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.009487666034155602,
+      "conditional_probability": 0.009487666034155602,
+      "joint_probability": 0.002403846153846154,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.009487666034155602,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "加时一球分胜负的补充覆盖路径。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Supplementary one-goal extra-time resolution path."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.007590132827324483,
+      "conditional_probability": 0.007590132827324483,
+      "joint_probability": 0.0019230769230769232,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.007590132827324483,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.0037950664136622413,
+      "conditional_probability": 0.0037950664136622413,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.0037950664136622413,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "Colombia加时领先后仍被对手回应，但最终净胜。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Colombia leads in extra time, concedes a response, but still wins by one overall."
+    },
+    {
+      "label": "3-1",
+      "score": "3-1",
+      "increment": "3-1",
+      "probability": 0.0037950664136622413,
+      "conditional_probability": 0.0037950664136622413,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0037950664136622413,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "4-0",
+      "score": "4-0",
+      "increment": "4-0",
+      "probability": 0.0037950664136622413,
+      "conditional_probability": 0.0037950664136622413,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0037950664136622413,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.0018975332068311207,
+      "conditional_probability": 0.0018975332068311207,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.0018975332068311207,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.22770398481973447,
+      "joint_probability": 0.057692307692307696,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.22770398481973447
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.10056925996204938
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "Colombia凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "In the 30 minutes of extra time, the match is decided by one goal from a counterattack, set piece, or substitute impact.",
+      "rationale_en": "Colombia wins extra time by one goal through fitness, bench depth, or pressing advantage."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.03605313092979129,
+      "joint_probability": 0.009134615384615385,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.03605313092979129
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.007590132827324483
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.0037950664136622413
+        },
+        {
+          "score": "3-1",
+          "increment": "3-1",
+          "probability": 0.0037950664136622413
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "1-2",
+        "2-1"
+      ],
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both sides score in extra time, as the match shifts from caution into open attacking play.",
+      "rationale_en": "The game opens up in extra time, with each side converting one clear chance."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.07779886148007595,
+      "joint_probability": 0.019711538461538464,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.07779886148007595
+        },
+        {
+          "score": "3-0",
+          "increment": "3-0",
+          "probability": 0.011385199240986724
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.009487666034155602
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.007590132827324483
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "3-0",
+        "0-2"
+      ],
+      "rationale_cn": "Colombia在对手体能或心理崩盘后拉开比分。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "In extra time, one side wins by at least 2 goals, or the total reaches over 3 goals in a clear cover path.",
+      "rationale_en": "Colombia pulls away after the opponent breaks down physically or mentally."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "哥伦比亚边路续压",
+      "label_en": "Colombia sustained wide pressure",
+      "impact_cn": "若90分钟后仍平，哥伦比亚仍可能通过边路轮转、定位球、二点球和边路疲劳错位制造加时优势。",
+      "impact_en": "If it remains level after 90 minutes, Colombia can still create an extra-time edge through wide rotations, set pieces, second balls and tired wide mismatches.",
+      "text_cn": "若90分钟后仍平，哥伦比亚仍可能通过边路轮转、定位球、二点球和边路疲劳错位制造加时优势。",
+      "text_en": "If it remains level after 90 minutes, Colombia can still create an extra-time edge through wide rotations, set pieces, second balls and tired wide mismatches.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "加纳转换链条",
+      "label_en": "Ghana transition chain",
+      "impact_cn": "加纳进入加时意味着低比分守平路径奏效，但Kudus缺阵削弱从推进到高质量射门的上限，Semenyo、Ayew和Sulemana的体能会很关键。",
+      "impact_en": "Ghana reaching extra time means the low-scoring containment path has worked, but Kudus’ absence lowers the ceiling from progression to high-quality shots. Semenyo, Ayew and Sulemana’s remaining legs are key.",
+      "text_cn": "加纳进入加时意味着低比分守平路径奏效，但Kudus缺阵削弱从推进到高质量射门的上限，Semenyo、Ayew和Sulemana的体能会很关键。",
+      "text_en": "Ghana reaching extra time means the low-scoring containment path has worked, but Kudus’ absence lowers the ceiling from progression to high-quality shots. Semenyo, Ayew and Sulemana’s remaining legs are key.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "低位韧性",
+      "label_en": "Low-block resilience",
+      "impact_cn": "加纳低位防守具备拖住比赛的韧性；若105分钟仍平，加纳更可能继续压低风险并接受点球路径。",
+      "impact_en": "Ghana’s low block has the resilience to keep the match close. If it remains level at 105 minutes, Ghana are more likely to keep risk low and accept the penalty route.",
+      "text_cn": "加纳低位防守具备拖住比赛的韧性；若105分钟仍平，加纳更可能继续压低风险并接受点球路径。",
+      "text_en": "Ghana’s low block has the resilience to keep the match close. If it remains level at 105 minutes, Ghana are more likely to keep risk low and accept the penalty route.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "哥伦比亚效率缺口",
+      "label_en": "Colombia efficiency gap",
+      "impact_cn": "哥伦比亚可以制造压力，但高射门量并不必然转化为进球；若加时继续久攻不下，心理压力会向热门方累积。",
+      "impact_en": "Colombia can generate pressure, but high shot volume does not automatically become goals. If extra-time pressure does not convert, psychological pressure can build on the favorite.",
+      "text_cn": "哥伦比亚可以制造压力，但高射门量并不必然转化为进球；若加时继续久攻不下，心理压力会向热门方累积。",
+      "text_en": "Colombia can generate pressure, but high shot volume does not automatically become goals. If extra-time pressure does not convert, psychological pressure can build on the favorite.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "换人与核心体能",
+      "label_en": "Substitutions and core fitness",
+      "impact_cn": "缺少官方首发、实时换人和球员分钟负荷数据，无法确认Díaz、James、Suárez、Partey等关键球员是否仍在场及状态。",
+      "impact_en": "Official lineups, live substitutions and minute-load data are missing, so it is unclear whether key players such as Díaz, James, Suárez and Partey are still on the pitch and in what condition.",
+      "text_cn": "缺少官方首发、实时换人和球员分钟负荷数据，无法确认Díaz、James、Suárez、Partey等关键球员是否仍在场及状态。",
+      "text_en": "Official lineups, live substitutions and minute-load data are missing, so it is unclear whether key players such as Díaz, James, Suárez and Partey are still on the pitch and in what condition.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "尾段证据缺口",
+      "label_en": "Late-tail evidence gap",
+      "impact_cn": "缺少90分钟末段红黄牌、伤病、换人耗尽、压迫强度下降和门将表现等现场数据，因此加时犯规风险与体能差只能保守处理。",
+      "impact_en": "Live data on late cards, injuries, used-up substitutions, declining pressing intensity and goalkeeper performance is missing, so extra-time foul risk and fitness gaps must be treated conservatively.",
+      "text_cn": "缺少90分钟末段红黄牌、伤病、换人耗尽、压迫强度下降和门将表现等现场数据，因此加时犯规风险与体能差只能保守处理。",
+      "text_en": "Live data on late cards, injuries, used-up substitutions, declining pressing intensity and goalkeeper performance is missing, so extra-time foul risk and fitness gaps must be treated conservatively.",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_review"
+      ]
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}

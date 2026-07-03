@@ -1,0 +1,1242 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M86",
+    "team_a": "Argentina",
+    "team_b": "Cape Verde",
+    "kickoff_utc": "2026-07-03T18:00:00-04:00",
+    "venue": "Miami Stadium, Miami Gardens",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.85625,
+      "team_b": 0.14375000000000002,
+      "favorite": "Argentina"
+    },
+    "resolution": {
+      "normal_time": 0.7778846153846153,
+      "extra_time": 0.09855769230769226,
+      "penalties": 0.1235576923076922
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.17125,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "2-0",
+        "probability": 0.15375,
+        "goals_a": 2,
+        "goals_b": 0
+      },
+      {
+        "score": "3-0",
+        "probability": 0.09833333333333333,
+        "goals_a": 3,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟2-0，Argentina常规时间晋级。",
+        "probability": 0.16442307692307692,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_6b985ab1778b",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 2-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_015e1dc9bf31",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+        "summary_cn": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "0-0",
+        "penalty_score": "4-2",
+        "advancer_team": "Argentina",
+        "path_id": "BMC_04487b8a1bdb",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties.",
+        "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟2-0，Argentina常规时间晋级。",
+        "probability": 0.16442307692307692,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_6b985ab1778b",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 2-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_015e1dc9bf31",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+        "summary_cn": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "0-0",
+        "penalty_score": "4-2",
+        "advancer_team": "Argentina",
+        "path_id": "BMC_04487b8a1bdb",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties.",
+        "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+      }
+    ],
+    "favorite": "Argentina",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.1235576923076922,
+        "probability_band": "12.4%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "4-2",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.007211538461538462,
+            "path_probability": 0.007211538461538462,
+            "path_id": "BMC_04487b8a1bdb",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Cape Verde",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_a91aea2679fc",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Cape Verde点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Cape Verde advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "5-3",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_fbb9f394739e",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After both 90 minutes and extra time remain level, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.09855769230769226,
+        "probability_band": "9.9%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.026442307692307692,
+            "path_probability": 0.026442307692307692,
+            "path_id": "BMC_015e1dc9bf31",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.025961538461538463,
+            "path_probability": 0.025961538461538463,
+            "path_id": "BMC_0be11dd42952",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Cape Verde",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.008173076923076924,
+            "path_probability": 0.008173076923076924,
+            "path_id": "BMC_5930fc7f4a6c",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Cape Verde加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Cape Verde advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk appetite become amplified in extra time and create resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.10048076923076923,
+        "probability_band": "10.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Cape Verde",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.04375,
+            "path_probability": 0.04375,
+            "path_id": "BMC_1431d0754818",
+            "summary_cn": "90分钟0-1，Cape Verde常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Cape Verde advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Cape Verde",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.01971153846153846,
+            "path_probability": 0.01971153846153846,
+            "path_id": "BMC_5a168d7ee813",
+            "summary_cn": "90分钟1-2，Cape Verde常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Cape Verde advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Cape Verde",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.008173076923076924,
+            "path_probability": 0.008173076923076924,
+            "path_id": "BMC_5930fc7f4a6c",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Cape Verde加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Cape Verde advances in extra time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can advance through a normal-time ambush, extra-time counters or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 132,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.16442307692307692,
+          "path_probability": 0.16442307692307692,
+          "path_id": "BMC_6b985ab1778b",
+          "summary_cn": "90分钟2-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.15625,
+          "path_probability": 0.15625,
+          "path_id": "BMC_f9a10f649da1",
+          "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "3-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09086538461538461,
+          "path_probability": 0.09086538461538461,
+          "path_id": "BMC_9205e47b5725",
+          "summary_cn": "90分钟3-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 3-0: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08413461538461539,
+          "path_probability": 0.08413461538461539,
+          "path_id": "BMC_92c9b56d23ed",
+          "summary_cn": "90分钟2-1，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "3-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.058173076923076925,
+          "path_probability": 0.058173076923076925,
+          "path_id": "BMC_010dc1ba4d43",
+          "summary_cn": "90分钟3-1，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 3-1: Argentina advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟2-0，Argentina常规时间晋级。",
+          "summary_cn": "90分钟2-0，Argentina常规时间晋级。",
+          "probability": 0.16442307692307692,
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-0",
+          "penalty_score": null,
+          "advancer_team": "Argentina",
+          "path_id": "BMC_6b985ab1778b",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 2-0: Argentina advances in normal time.",
+          "summary_en": "90 minutes 2-0: Argentina advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+          "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+          "probability": 0.026442307692307692,
+          "resolution_type": "extra_time",
+          "normal_time_score": "0-0",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Argentina",
+          "path_id": "BMC_015e1dc9bf31",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+          "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+          "summary_cn": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+          "probability": 0.007211538461538462,
+          "resolution_type": "penalties",
+          "normal_time_score": "0-0",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "0-0",
+          "penalty_score": "4-2",
+          "advancer_team": "Argentina",
+          "path_id": "BMC_04487b8a1bdb",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties.",
+          "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟2-0，Argentina常规时间晋级。",
+        "probability": 0.16442307692307692,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_6b985ab1778b",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 2-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.026442307692307692,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_015e1dc9bf31",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+        "summary_cn": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "0-0",
+        "penalty_score": "4-2",
+        "advancer_team": "Argentina",
+        "path_id": "BMC_04487b8a1bdb",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties.",
+        "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.24770833333333334,
+          "base_event_probability": 0.24770833333333334,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.057291666666666664,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0525,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.026458333333333334,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "2-2",
+              "probability": 0.024791666666666667,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open back-and-forth, with both attacks converting chances."
+            },
+            {
+              "score": "5-0",
+              "probability": 0.019166666666666665,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defense continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "4-0",
+            "4-1"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead driving total goals well above the main low-score forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.23104166666666667,
+          "base_event_probability": 0.23104166666666667,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.09833333333333333,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0525,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.026458333333333334,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "5-0",
+              "probability": 0.019166666666666665,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0125,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Compact defending compresses attacking space; the match is pulled into a high-risk open tempo, with space behind the back line continuing to expand."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-0",
+            "4-1"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "Early goals, card pressure, fatigue, or defensive imbalance disrupt the match, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.07333333333333333,
+          "base_event_probability": 0.07333333333333333,
+          "attention_level": "low",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.036041666666666666,
+              "rationale_cn": "关键球员状态与角色变化；Cape Verde通过压迫或转换取得一球优势。",
+              "rationale_en": "Key player fitness and role changes; Cape Verde take a one-goal lead through pressing or transition."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.018958333333333334,
+              "rationale_cn": "关键球员状态与角色变化、70分钟仍平时，阿根廷更需要冒险，佛得角更能接受加时或点；Cape Verde通过压迫或转换取得一球优势。",
+              "rationale_en": "Key player fitness and role changes; if it is still level after 70 minutes, Argentina need to take more risks, while Cape Verde can better accept extra time or penalties; Cape Verde take a one-goal lead through pressing or transition."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.009375,
+              "rationale_cn": "70分钟仍平时，阿根廷更需要冒险，佛得角更能接受加时或点、若仍平进入点球，阿根廷门将、主罚深度和大赛心理韧性更占优；Cape Verde充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "If still level at 70 minutes, Argentina need to take more risks, while Cape Verde can better accept extra time or penalties. If it remains level and goes to penalties, Argentina have the edge in goalkeeper, taker depth, and big-match mental resilience; Cape Verde fully convert counterattacking or attacking efficiency and extend the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.003958333333333334,
+              "rationale_cn": "70分钟仍平时，阿根廷更需要冒险，佛得角更能接受加时或点、若仍平进入点球，阿根廷门将、主罚深度和大赛心理韧性更占优；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "If still level at 70 minutes, Argentina need to take more risks, while Cape Verde can better accept extra time or penalties. If it remains level and goes to penalties, Argentina have the edge in goalkeeper, taker depth, and big-match mental resilience; the match shifts into a high-risk open tempo, with space behind the defensive lines continuing to grow."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0035416666666666665,
+              "rationale_cn": "70分钟仍平时，阿根廷更需要冒险，佛得角更能接受加时或点、若仍平进入点球，阿根廷门将、主罚深度和大赛心理韧性更占优；Cape Verde充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "If still level at 70 minutes, Argentina need to take more risks, while Cape Verde can better accept extra time or penalties. If it remains level and goes to penalties, Argentina have the edge in goalkeeper, taker depth, and big-match mental resilience; Cape Verde fully convert counterattacking or attacking efficiency and extend the lead."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored pre-match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog can directly swing the result in 90 minutes through deep defensive resilience, counterattack efficiency, set pieces, or key errors by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "证据因素 1",
+          "impact_cn": "马丁内斯为阿根廷面对24个点球仅丢12球，点球分支有硬证据。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_fb1a3f6f508e",
+            "E_3d1b81a4f69a"
+          ],
+          "source_names": [
+            "Yahoo Sports",
+            "Reuters"
+          ],
+          "label_en": "Evidence Factor 1",
+          "impact_en": "Martínez has faced 24 penalties for Argentina and conceded only 12, giving the penalty branch solid evidence.",
+          "text_cn": "马丁内斯为阿根廷面对24个点球仅丢12球，点球分支有硬证据。",
+          "text_en": "Martínez has faced 24 penalties for Argentina and conceded only 12, giving the penalty branch solid evidence."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "证据因素 2",
+          "impact_cn": "佛得角小组赛三连平并用4-5-1，曾0-0零封西班牙。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_efa41be58bed",
+            "E_c858a7541f0e",
+            "E_bd2a8918ea9a"
+          ],
+          "source_names": [
+            "The Athletic / New York Times",
+            "FIFA",
+            "BBC Sport"
+          ],
+          "label_en": "Evidence Factor 2",
+          "impact_en": "Cape Verde drew all three group matches in a 4-5-1 and held Spain to a 0-0 clean sheet.",
+          "text_cn": "佛得角小组赛三连平并用4-5-1，曾0-0零封西班牙。",
+          "text_en": "Cape Verde drew all three group matches in a 4-5-1 and held Spain to a 0-0 clean sheet."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "阵容",
+          "impact_cn": "阿根廷是卫冕冠军且末轮让最强阵容休整，梅西此前梅开二度。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_f3c1f2c26cfb",
+            "E_313d53d7b073"
+          ],
+          "source_names": [
+            "ABC News",
+            "Sports Illustrated"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Argentina are the defending champions and rested their strongest lineup in the final round; Messi had scored twice earlier.",
+          "text_cn": "阿根廷是卫冕冠军且末轮让最强阵容休整，梅西此前梅开二度。",
+          "text_en": "Argentina are the defending champions and rested their strongest lineup in the final round; Messi had scored twice earlier."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "阵容",
+          "impact_cn": "佛得角中场Telmo Arcanjo腿伤五五开，周三未随队合练。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_d0805eb481ba"
+          ],
+          "source_names": [
+            "Reuters"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Cape Verde midfielder Telmo Arcanjo is 50-50 with a leg injury and did not train with the team on Wednesday.",
+          "text_cn": "佛得角中场Telmo Arcanjo腿伤五五开，周三未随队合练。",
+          "text_en": "Cape Verde midfielder Telmo Arcanjo is 50-50 with a leg injury and did not train with the team on Wednesday."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "证据因素 5",
+          "impact_cn": "比赛在迈阿密体育场当地周五18点开球，裁判为Drew Fischer。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_0f88331c0279",
+            "E_02e211e745d4"
+          ],
+          "source_names": [
+            "FIFA",
+            "WSVN"
+          ],
+          "label_en": "Evidence Factor 5",
+          "impact_en": "The match kicks off at Miami Stadium on Friday at 18:00 local time, with Drew Fischer as referee.",
+          "text_cn": "比赛在迈阿密体育场当地周五18点开球，裁判为Drew Fischer。",
+          "text_en": "The match kicks off at Miami Stadium on Friday at 18:00 local time, with Drew Fischer as referee."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.22211538461538446,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.2575757575757576,
+          "joint_probability": 0.05721153846153846,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.2575757575757576
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.08008658008658011
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "Argentina凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal decider in 30 minutes of extra time via a counterattack, set piece, or substitute impact.",
+          "rationale_en": "Argentina win extra time by one goal through fitness, substitutes, or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.0432900432900433,
+          "joint_probability": 0.009615384615384616,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.0432900432900433
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.008658008658008661
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.008658008658008661
+            },
+            {
+              "score": "3-1",
+              "increment": "3-1",
+              "probability": 0.004329004329004331
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, as the match shifts from cautious to open end-to-end play.",
+          "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.0562770562770563,
+          "joint_probability": 0.0125,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.0562770562770563
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.019480519480519487
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.008658008658008661
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.008658008658008661
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "3-0",
+            "2-1"
+          ],
+          "rationale_cn": "Argentina在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A side covers by winning extra time by at least 2 goals, or with total goals reaching 3+.",
+          "rationale_en": "Argentina pull away after the opponent collapses physically or mentally."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "低比分入口",
+          "label_en": "Low-score entry",
+          "impact_cn": "加时入口主要来自0-0或1-1；若佛得角用4-5-1把比赛拖住，阿根廷仍有控球和二次进攻优势，但破局节奏会被压慢。",
+          "impact_en": "The main extra-time entry comes from 0-0 or 1-1. If Cape Verde’s 4-5-1 keeps the match contained, Argentina still have possession and second-phase attacking advantages, but the breakthrough tempo slows.",
+          "text_cn": "加时入口主要来自0-0或1-1；若佛得角用4-5-1把比赛拖住，阿根廷仍有控球和二次进攻优势，但破局节奏会被压慢。",
+          "text_en": "The main extra-time entry comes from 0-0 or 1-1. If Cape Verde’s 4-5-1 keeps the match contained, Argentina still have possession and second-phase attacking advantages, but the breakthrough tempo slows.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "阿根廷阵容深度",
+          "label_en": "Argentina squad depth",
+          "impact_cn": "阿根廷的加时优势来自主力休整、阵容深度和持续压迫；若梅西、劳塔罗、德保罗、麦卡利斯特或恩佐仍在场，优势会更明显。",
+          "impact_en": "Argentina’s extra-time edge comes from rested starters, squad depth and sustained pressure. It becomes stronger if Messi, Lautaro, De Paul, Mac Allister or Enzo remain on the pitch.",
+          "text_cn": "阿根廷的加时优势来自主力休整、阵容深度和持续压迫；若梅西、劳塔罗、德保罗、麦卡利斯特或恩佐仍在场，优势会更明显。",
+          "text_en": "Argentina’s extra-time edge comes from rested starters, squad depth and sustained pressure. It becomes stronger if Messi, Lautaro, De Paul, Mac Allister or Enzo remain on the pitch.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "佛得角定位球冷门口",
+          "label_en": "Cape Verde set-piece upset path",
+          "impact_cn": "佛得角加时的主要机会不在长期控球，而是前场定位球、低频反击和阿根廷尾段纪律风险；这是冷门路径的核心接口。",
+          "impact_en": "Cape Verde’s main extra-time route is not sustained possession, but attacking set pieces, rare counters and Argentina’s late discipline risk. This is the core interface for an upset path.",
+          "text_cn": "佛得角加时的主要机会不在长期控球，而是前场定位球、低频反击和阿根廷尾段纪律风险；这是冷门路径的核心接口。",
+          "text_en": "Cape Verde’s main extra-time route is not sustained possession, but attacking set pieces, rare counters and Argentina’s late discipline risk. This is the core interface for an upset path.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "核心在场性",
+          "label_en": "Core players on pitch",
+          "impact_cn": "缺少官方首发与实时换人计划，无法确认阿根廷核心是否踢满；若关键组织者提前下场，加时优势需要下调。",
+          "impact_en": "Official lineups and live substitution plans are unavailable, so it is unclear whether Argentina’s core players last into extra time. If key creators are substituted early, the extra-time edge should be reduced.",
+          "text_cn": "缺少官方首发与实时换人计划，无法确认阿根廷核心是否踢满；若关键组织者提前下场，加时优势需要下调。",
+          "text_en": "Official lineups and live substitution plans are unavailable, so it is unclear whether Argentina’s core players last into extra time. If key creators are substituted early, the extra-time edge should be reduced.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "低位体能检验",
+          "label_en": "Low-block fitness test",
+          "impact_cn": "佛得角能否把低位防守维持到105分钟后，是加时阶段最大的现场验证点；抽筋、犯规和禁区解围质量会决定尾部风险。",
+          "impact_en": "Whether Cape Verde can maintain the low block beyond 105 minutes is the main live test in extra time. Cramps, fouls and box-clearance quality will determine the late-tail risk.",
+          "text_cn": "佛得角能否把低位防守维持到105分钟后，是加时阶段最大的现场验证点；抽筋、犯规和禁区解围质量会决定尾部风险。",
+          "text_en": "Whether Cape Verde can maintain the low block beyond 105 minutes is the main live test in extra time. Cramps, fouls and box-clearance quality will determine the late-tail risk.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "裁判与牌面",
+          "label_en": "Refereeing and card state",
+          "impact_cn": "Drew Fischer的吹罚尺度和双方背牌状态会影响阿根廷反抢强度，也会影响佛得角通过定位球偷袭的机会。",
+          "impact_en": "Drew Fischer’s refereeing standard and each side’s card state can affect Argentina’s counter-pressing intensity and Cape Verde’s chance to create set-piece ambushes.",
+          "text_cn": "Drew Fischer的吹罚尺度和双方背牌状态会影响阿根廷反抢强度，也会影响佛得角通过定位球偷袭的机会。",
+          "text_en": "Drew Fischer’s refereeing standard and each side’s card state can affect Argentina’s counter-pressing intensity and Cape Verde’s chance to create set-piece ambushes.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → four expert agents → committee aggregation → conditional rollout → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.1235576923076922,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.06580525502318392,
+          "probability_band": "low",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.06580525502318392,
+              "winner_side": "team_a",
+              "rationale_cn": "比分与胜方在矩阵中对应为Argentina4-2获胜，属于点球大战中相对低频但合规的提前结束比分。叙事可保留为Argentina门将或Cape Verde罚手连续失误导致差距被拉开，但概率需按矩阵校准。",
+              "rationale_en": "In the matrix, the score and winner correspond to Argentina winning 4-2, a relatively low-frequency but valid early-ending shootout score. The narrative can remain that Argentina’s goalkeeper or repeated misses by Cape Verde’s takers widened the gap, but the probability must be calibrated to the matrix."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.05784234930448222,
+              "winner_side": "team_b",
+              "rationale_cn": "比分与胜方在矩阵中对应为Cape Verde4-2获胜，点球规则下可在前五轮内提前结束，合规。原始概率偏高，已按矩阵下调；叙事应限定为门将表现与主罚失误共同造成的低频胜出路径。",
+              "rationale_en": "The score and winner map to Cape Verde winning 4-2 in the matrix. Under penalty rules, it can end early within the first five rounds, so it is valid. The original probability was too high and has been reduced per the matrix; the narrative should be limited to a low-frequency win path caused by both goalkeeper performance and missed kicks."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "比分与胜方在矩阵中对应为Argentina4-2获胜，属于点球大战中相对低频但合规的提前结束比分。叙事可保留为Argentina门将或Cape Verde罚手连续失误导致差距被拉开，但概率需按矩阵校准。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive penalty saves or the opponent misses consecutive penalties, quickly widening the shootout score.",
+          "rationale_en": "In the matrix, the score and winner correspond to Argentina winning 4-2, a relatively low-frequency but valid early-ending shootout score. The narrative can remain that Argentina’s goalkeeper or repeated misses by Cape Verde’s takers widened the gap, but the probability must be calibrated to the matrix."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.130145285935085,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.130145285935085,
+              "winner_side": "team_b",
+              "rationale_cn": "3-4且Cape Verde获胜是矩阵中的高位常见比分族，不宜标为低概率尾部。可保留“热门球队压力失误”的叙事，但概率、概率档位和偏离度需回归矩阵口径，视为常见决胜路径而非强尾部情形。",
+              "rationale_en": "A 3-4 Cape Verde win is a high-ranking common scoreline group in the matrix and should not be labeled as a low-probability tail. The “favorite under pressure makes mistakes” narrative can remain, but probability, probability tier, and deviation should align with the matrix and be treated as a common deciding path rather than a strong tail scenario."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "3-4且Cape Verde获胜是矩阵中的高位常见比分族，不宜标为低概率尾部。可保留“热门球队压力失误”的叙事，但概率、概率档位和偏离度需回归矩阵口径，视为常见决胜路径而非强尾部情形。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "A 3-4 Cape Verde win is a high-ranking common scoreline group in the matrix and should not be labeled as a low-probability tail. The “favorite under pressure makes mistakes” narrative can remain, but probability, probability tier, and deviation should align with the matrix and be treated as a common deciding path rather than a strong tail scenario."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.03290262751159196,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.03290262751159196,
+              "winner_side": "team_a",
+              "rationale_cn": "6-5且Argentina获胜要求前五轮战平后进入突然死亡，并由Argentina在延长轮次建立一球优势，符合点球大战规则。原始概率偏高，已按矩阵下调；该情形可作为低概率延长点球尾部场景保留。",
+              "rationale_en": "A 6-5 Argentina win requires the first five rounds to be tied, then sudden death, with Argentina gaining a one-goal edge in extra rounds, which fits penalty shootout rules. The original probability was too high and has been reduced per the matrix; this can remain as a low-probability extended-penalty tail scenario."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "6-5且Argentina获胜要求前五轮战平后进入突然死亡，并由Argentina在延长轮次建立一球优势，符合点球大战规则。原始概率偏高，已按矩阵下调；该情形可作为低概率延长点球尾部场景保留。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides perform well in the first five rounds, with the winner decided only after 6+ rounds of sudden death.",
+          "rationale_en": "A 6-5 Argentina win requires the first five rounds to be tied, then sudden death, with Argentina gaining a one-goal edge in extra rounds, which fits penalty shootout rules. The original probability was too high and has been reduced per the matrix; this can remain as a low-probability extended-penalty tail scenario."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "主罚顺序缺口",
+          "label_en": "Penalty order gap",
+          "impact_cn": "公开资料无法确认Argentina与Cape Verde的具体点球顺序，主罚手只能按经验候选处理，不能把假定名单当成确定证据。",
+          "impact_en": "Public information cannot confirm Argentina and Cape Verde’s exact penalty order, so takers should only be treated as experience-based candidates, not confirmed evidence.",
+          "text_cn": "公开资料无法确认Argentina与Cape Verde的具体点球顺序，主罚手只能按经验候选处理，不能把假定名单当成确定证据。",
+          "text_en": "Public information cannot confirm Argentina and Cape Verde’s exact penalty order, so takers should only be treated as experience-based candidates, not confirmed evidence.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "马丁内斯门将优势",
+          "label_en": "Martínez goalkeeper edge",
+          "impact_cn": "阿根廷有更明确的门将点球叙事和经验优势，但点球随机性很强，只适合做小幅加权，而不是把胜负写成确定。",
+          "impact_en": "Argentina have a clearer goalkeeper narrative and experience edge through Martínez, but shootout randomness is high, so this should be a modest adjustment rather than a deterministic claim.",
+          "text_cn": "阿根廷有更明确的门将点球叙事和经验优势，但点球随机性很强，只适合做小幅加权，而不是把胜负写成确定。",
+          "text_en": "Argentina have a clearer goalkeeper narrative and experience edge through Martínez, but shootout randomness is high, so this should be a modest adjustment rather than a deterministic claim.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差主轴",
+          "label_en": "One-goal margin axis",
+          "impact_cn": "矩阵显示点球路径主要围绕一球差和延长点球展开，说明Cape Verde若拖到点球，比赛会明显进入高随机区。",
+          "impact_en": "The matrix centers penalty paths around one-goal margins and sudden death, meaning that if Cape Verde reach penalties, the match moves into a much higher-randomness zone.",
+          "text_cn": "矩阵显示点球路径主要围绕一球差和延长点球展开，说明Cape Verde若拖到点球，比赛会明显进入高随机区。",
+          "text_en": "The matrix centers penalty paths around one-goal margins and sudden death, meaning that if Cape Verde reach penalties, the match moves into a much higher-randomness zone.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "压力失误路径",
+          "label_en": "Pressure-mistake path",
+          "impact_cn": "阿根廷是明显热门，点球压力更集中在“不能犯错”；Cape Verde的机会来自热门方单轮失误和自身前五轮稳定性。",
+          "impact_en": "Argentina are the clear favorite, so shootout pressure is concentrated around “must not miss.” Cape Verde’s chance comes from a favorite-side single-round mistake plus their own stability in the first five rounds.",
+          "text_cn": "阿根廷是明显热门，点球压力更集中在“不能犯错”；Cape Verde的机会来自热门方单轮失误和自身前五轮稳定性。",
+          "text_en": "Argentina are the clear favorite, so shootout pressure is concentrated around “must not miss.” Cape Verde’s chance comes from a favorite-side single-round mistake plus their own stability in the first five rounds.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "延长点球尾部",
+          "label_en": "Sudden-death tail",
+          "impact_cn": "6-5类比分意味着前五轮接近并进入突然死亡；这是合规但偏尾部的场景，前端应作为风险提示而非主预测。",
+          "impact_en": "A 6-5 type score means the first five rounds stay close and the shootout reaches sudden death. It is valid but tail-heavy, so the frontend should show it as a risk branch rather than the main prediction.",
+          "text_cn": "6-5类比分意味着前五轮接近并进入突然死亡；这是合规但偏尾部的场景，前端应作为风险提示而非主预测。",
+          "text_en": "A 6-5 type score means the first five rounds stay close and the shootout reaches sudden death. It is valid but tail-heavy, so the frontend should show it as a risk branch rather than the main prediction.",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_review"
+          ]
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → four expert agents → committee aggregation → penalty-sequence rollout → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-03T07:54:29.472864Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-phase mechanisms; MAS rollout provides conditional paths for 90 minutes, extra time if level, and penalties if still level; Monte Carlo samples the full path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same MAS conditional rollout. The three frontend tabs are different slices of one full path distribution, while keeping the JSON structure compatible with v6.2.2.",
+  "manual_review_note_cn": "前端展示文案与英文翻译已基于完整预测结果人工复核修正；概率、矩阵和路径分布未改动。",
+  "manual_review_note_en": "Frontend display text and English translations were manually reviewed against the full prediction outputs; probabilities, matrices and path distributions were not changed."
+}
