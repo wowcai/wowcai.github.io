@@ -1,0 +1,1572 @@
+{
+  "schema_version": "2.0",
+  "phase": "normal_time",
+  "matrix_type": "normal_time_score_dense_6x6_bucketed",
+  "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+  "axis_note_cn": "纵轴为team_a 90分钟进球，横轴为team_b 90分钟进球；5+表示至少5球。概率为90分钟比分的整场概率。",
+  "row_axis": {
+    "team": "Canada",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "column_axis": {
+    "team": "Morocco",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.3447222222222222,
+    "draw": 0.3088888888888889,
+    "team_b_win": 0.3463888888888889
+  },
+  "matrix": [
+    [
+      0.10472222222222222,
+      0.10972222222222222,
+      0.05875,
+      0.02236111111111111,
+      0.0077777777777777776,
+      0.0011111111111111111
+    ],
+    [
+      0.10972222222222222,
+      0.14083333333333334,
+      0.07833333333333334,
+      0.02861111111111111,
+      0.006666666666666667,
+      0.002916666666666667
+    ],
+    [
+      0.060833333333333336,
+      0.07666666666666666,
+      0.05486111111111111,
+      0.019166666666666665,
+      0.00625,
+      0.0022222222222222222
+    ],
+    [
+      0.01861111111111111,
+      0.02861111111111111,
+      0.01972222222222222,
+      0.007916666666666667,
+      0.00125,
+      0.0006944444444444445
+    ],
+    [
+      0.006111111111111111,
+      0.007916666666666667,
+      0.0059722222222222225,
+      0.0025,
+      0.0005555555555555556,
+      0.0005555555555555556
+    ],
+    [
+      0.0030555555555555557,
+      0.002638888888888889,
+      0.001388888888888889,
+      0.0008333333333333334,
+      0.0001388888888888889,
+      0.0
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "0",
+      "probability": 0.10472222222222222,
+      "probability_percent": 10.4722,
+      "top_scores": [
+        {
+          "score": "0-0",
+          "probability": 0.10472222222222222,
+          "probability_percent": 10.4722
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "1",
+      "probability": 0.10972222222222222,
+      "probability_percent": 10.9722,
+      "top_scores": [
+        {
+          "score": "0-1",
+          "probability": 0.10972222222222222,
+          "probability_percent": 10.9722
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "2",
+      "probability": 0.05875,
+      "probability_percent": 5.875,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.05875,
+          "probability_percent": 5.875
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "3",
+      "probability": 0.02236111111111111,
+      "probability_percent": 2.2361,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.02236111111111111,
+          "probability_percent": 2.2361
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "4",
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "top_scores": [
+        {
+          "score": "0-4",
+          "probability": 0.0077777777777777776,
+          "probability_percent": 0.7778
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "5+",
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "top_scores": [
+        {
+          "score": "0-5",
+          "probability": 0.0008333333333333334,
+          "probability_percent": 0.0833
+        },
+        {
+          "score": "0-6",
+          "probability": 0.0002777777777777778,
+          "probability_percent": 0.0278
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "0",
+      "probability": 0.10972222222222222,
+      "probability_percent": 10.9722,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.10972222222222222,
+          "probability_percent": 10.9722
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "1",
+      "probability": 0.14083333333333334,
+      "probability_percent": 14.0833,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.14083333333333334,
+          "probability_percent": 14.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "2",
+      "probability": 0.07833333333333334,
+      "probability_percent": 7.8333,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.07833333333333334,
+          "probability_percent": 7.8333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "3",
+      "probability": 0.02861111111111111,
+      "probability_percent": 2.8611,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.02861111111111111,
+          "probability_percent": 2.8611
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "4",
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "top_scores": [
+        {
+          "score": "1-4",
+          "probability": 0.006666666666666667,
+          "probability_percent": 0.6667
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "5+",
+      "probability": 0.002916666666666667,
+      "probability_percent": 0.2917,
+      "top_scores": [
+        {
+          "score": "1-5",
+          "probability": 0.0020833333333333333,
+          "probability_percent": 0.2083
+        },
+        {
+          "score": "1-6",
+          "probability": 0.0004166666666666667,
+          "probability_percent": 0.0417
+        },
+        {
+          "score": "1-8",
+          "probability": 0.0002777777777777778,
+          "probability_percent": 0.0278
+        },
+        {
+          "score": "1-7",
+          "probability": 0.0001388888888888889,
+          "probability_percent": 0.0139
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "0",
+      "probability": 0.060833333333333336,
+      "probability_percent": 6.0833,
+      "top_scores": [
+        {
+          "score": "2-0",
+          "probability": 0.060833333333333336,
+          "probability_percent": 6.0833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "1",
+      "probability": 0.07666666666666666,
+      "probability_percent": 7.6667,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.07666666666666666,
+          "probability_percent": 7.6667
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "2",
+      "probability": 0.05486111111111111,
+      "probability_percent": 5.4861,
+      "top_scores": [
+        {
+          "score": "2-2",
+          "probability": 0.05486111111111111,
+          "probability_percent": 5.4861
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "3",
+      "probability": 0.019166666666666665,
+      "probability_percent": 1.9167,
+      "top_scores": [
+        {
+          "score": "2-3",
+          "probability": 0.019166666666666665,
+          "probability_percent": 1.9167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "4",
+      "probability": 0.00625,
+      "probability_percent": 0.625,
+      "top_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.00625,
+          "probability_percent": 0.625
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "5+",
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "top_scores": [
+        {
+          "score": "2-5",
+          "probability": 0.0016666666666666668,
+          "probability_percent": 0.1667
+        },
+        {
+          "score": "2-6",
+          "probability": 0.0005555555555555556,
+          "probability_percent": 0.0556
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "0",
+      "probability": 0.01861111111111111,
+      "probability_percent": 1.8611,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.01861111111111111,
+          "probability_percent": 1.8611
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "1",
+      "probability": 0.02861111111111111,
+      "probability_percent": 2.8611,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.02861111111111111,
+          "probability_percent": 2.8611
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "2",
+      "probability": 0.01972222222222222,
+      "probability_percent": 1.9722,
+      "top_scores": [
+        {
+          "score": "3-2",
+          "probability": 0.01972222222222222,
+          "probability_percent": 1.9722
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "3",
+      "probability": 0.007916666666666667,
+      "probability_percent": 0.7917,
+      "top_scores": [
+        {
+          "score": "3-3",
+          "probability": 0.007916666666666667,
+          "probability_percent": 0.7917
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "4",
+      "probability": 0.00125,
+      "probability_percent": 0.125,
+      "top_scores": [
+        {
+          "score": "3-4",
+          "probability": 0.00125,
+          "probability_percent": 0.125
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "5+",
+      "probability": 0.0006944444444444445,
+      "probability_percent": 0.0694,
+      "top_scores": [
+        {
+          "score": "3-5",
+          "probability": 0.0006944444444444445,
+          "probability_percent": 0.0694
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "0",
+      "probability": 0.006111111111111111,
+      "probability_percent": 0.6111,
+      "top_scores": [
+        {
+          "score": "4-0",
+          "probability": 0.006111111111111111,
+          "probability_percent": 0.6111
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "1",
+      "probability": 0.007916666666666667,
+      "probability_percent": 0.7917,
+      "top_scores": [
+        {
+          "score": "4-1",
+          "probability": 0.007916666666666667,
+          "probability_percent": 0.7917
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "2",
+      "probability": 0.0059722222222222225,
+      "probability_percent": 0.5972,
+      "top_scores": [
+        {
+          "score": "4-2",
+          "probability": 0.0059722222222222225,
+          "probability_percent": 0.5972
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "3",
+      "probability": 0.0025,
+      "probability_percent": 0.25,
+      "top_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.0025,
+          "probability_percent": 0.25
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "4",
+      "probability": 0.0005555555555555556,
+      "probability_percent": 0.0556,
+      "top_scores": [
+        {
+          "score": "4-4",
+          "probability": 0.0005555555555555556,
+          "probability_percent": 0.0556
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "5+",
+      "probability": 0.0005555555555555556,
+      "probability_percent": 0.0556,
+      "top_scores": [
+        {
+          "score": "4-5",
+          "probability": 0.0005555555555555556,
+          "probability_percent": 0.0556
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "0",
+      "probability": 0.0030555555555555557,
+      "probability_percent": 0.3056,
+      "top_scores": [
+        {
+          "score": "5-0",
+          "probability": 0.002777777777777778,
+          "probability_percent": 0.2778
+        },
+        {
+          "score": "6-0",
+          "probability": 0.0002777777777777778,
+          "probability_percent": 0.0278
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "1",
+      "probability": 0.002638888888888889,
+      "probability_percent": 0.2639,
+      "top_scores": [
+        {
+          "score": "5-1",
+          "probability": 0.0022222222222222222,
+          "probability_percent": 0.2222
+        },
+        {
+          "score": "6-1",
+          "probability": 0.0004166666666666667,
+          "probability_percent": 0.0417
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "2",
+      "probability": 0.001388888888888889,
+      "probability_percent": 0.1389,
+      "top_scores": [
+        {
+          "score": "5-2",
+          "probability": 0.0011111111111111111,
+          "probability_percent": 0.1111
+        },
+        {
+          "score": "6-2",
+          "probability": 0.0002777777777777778,
+          "probability_percent": 0.0278
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "3",
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "top_scores": [
+        {
+          "score": "5-3",
+          "probability": 0.0006944444444444445,
+          "probability_percent": 0.0694
+        },
+        {
+          "score": "6-3",
+          "probability": 0.0001388888888888889,
+          "probability_percent": 0.0139
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "4",
+      "probability": 0.0001388888888888889,
+      "probability_percent": 0.0139,
+      "top_scores": [
+        {
+          "score": "5-4",
+          "probability": 0.0001388888888888889,
+          "probability_percent": 0.0139
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "5+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    }
+  ],
+  "rows": [
+    {
+      "score": "1-1",
+      "goals_a": 1,
+      "goals_b": 1,
+      "probability": 0.14083333333333334,
+      "probability_percent": 14.0833,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.24488888888888888,
+      "position": 0.24488888888888888,
+      "x": 0.24488888888888888,
+      "y": 0.14083333333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-1",
+      "goals_a": 0,
+      "goals_b": 1,
+      "probability": 0.10972222222222222,
+      "probability_percent": 10.9722,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.11176388888888888,
+      "position": 0.11176388888888888,
+      "x": 0.11176388888888888,
+      "y": 0.10972222222222222,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-0",
+      "goals_a": 1,
+      "goals_b": 0,
+      "probability": 0.10972222222222222,
+      "probability_percent": 10.9722,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.11234722222222224,
+      "position": 0.11234722222222224,
+      "x": 0.11234722222222224,
+      "y": 0.10972222222222222,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-0",
+      "goals_a": 0,
+      "goals_b": 0,
+      "probability": 0.10472222222222222,
+      "probability_percent": 10.4722,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.1248888888888889,
+      "position": 0.1248888888888889,
+      "x": 0.1248888888888889,
+      "y": 0.10472222222222222,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-2",
+      "goals_a": 1,
+      "goals_b": 2,
+      "probability": 0.07833333333333334,
+      "probability_percent": 7.8333,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.3517638888888889,
+      "position": 0.3517638888888889,
+      "x": 0.3517638888888889,
+      "y": 0.07833333333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-1",
+      "goals_a": 2,
+      "goals_b": 1,
+      "probability": 0.07666666666666666,
+      "probability_percent": 7.6667,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.3523472222222222,
+      "position": 0.3523472222222222,
+      "x": 0.3523472222222222,
+      "y": 0.07666666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-0",
+      "goals_a": 2,
+      "goals_b": 0,
+      "probability": 0.060833333333333336,
+      "probability_percent": 6.0833,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.39234722222222224,
+      "position": 0.39234722222222224,
+      "x": 0.39234722222222224,
+      "y": 0.060833333333333336,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-2",
+      "goals_a": 0,
+      "goals_b": 2,
+      "probability": 0.05875,
+      "probability_percent": 5.875,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.3917638888888889,
+      "position": 0.3917638888888889,
+      "x": 0.3917638888888889,
+      "y": 0.05875,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-2",
+      "goals_a": 2,
+      "goals_b": 2,
+      "probability": 0.05486111111111111,
+      "probability_percent": 5.4861,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.48488888888888887,
+      "position": 0.48488888888888887,
+      "x": 0.48488888888888887,
+      "y": 0.05486111111111111,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-3",
+      "goals_a": 1,
+      "goals_b": 3,
+      "probability": 0.02861111111111111,
+      "probability_percent": 2.8611,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6317638888888889,
+      "position": 0.6317638888888889,
+      "x": 0.6317638888888889,
+      "y": 0.02861111111111111,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-1",
+      "goals_a": 3,
+      "goals_b": 1,
+      "probability": 0.02861111111111111,
+      "probability_percent": 2.8611,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6323472222222222,
+      "position": 0.6323472222222222,
+      "x": 0.6323472222222222,
+      "y": 0.02861111111111111,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-3",
+      "goals_a": 0,
+      "goals_b": 3,
+      "probability": 0.02236111111111111,
+      "probability_percent": 2.2361,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6717638888888888,
+      "position": 0.6717638888888888,
+      "x": 0.6717638888888888,
+      "y": 0.02236111111111111,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-2",
+      "goals_a": 3,
+      "goals_b": 2,
+      "probability": 0.01972222222222222,
+      "probability_percent": 1.9722,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.5923472222222221,
+      "position": 0.5923472222222221,
+      "x": 0.5923472222222221,
+      "y": 0.01972222222222222,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-3",
+      "goals_a": 2,
+      "goals_b": 3,
+      "probability": 0.019166666666666665,
+      "probability_percent": 1.9167,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.5917638888888889,
+      "position": 0.5917638888888889,
+      "x": 0.5917638888888889,
+      "y": 0.019166666666666665,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-0",
+      "goals_a": 3,
+      "goals_b": 0,
+      "probability": 0.01861111111111111,
+      "probability_percent": 1.8611,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6723472222222221,
+      "position": 0.6723472222222221,
+      "x": 0.6723472222222221,
+      "y": 0.01861111111111111,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-3",
+      "goals_a": 3,
+      "goals_b": 3,
+      "probability": 0.007916666666666667,
+      "probability_percent": 0.7917,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.7248888888888888,
+      "position": 0.7248888888888888,
+      "x": 0.7248888888888888,
+      "y": 0.007916666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-1",
+      "goals_a": 4,
+      "goals_b": 1,
+      "probability": 0.007916666666666667,
+      "probability_percent": 0.7917,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9123472222222221,
+      "position": 0.9123472222222221,
+      "x": 0.9123472222222221,
+      "y": 0.007916666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-4",
+      "goals_a": 0,
+      "goals_b": 4,
+      "probability": 0.0077777777777777776,
+      "probability_percent": 0.7778,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9517638888888889,
+      "position": 0.9517638888888889,
+      "x": 0.9517638888888889,
+      "y": 0.0077777777777777776,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-4",
+      "goals_a": 1,
+      "goals_b": 4,
+      "probability": 0.006666666666666667,
+      "probability_percent": 0.6667,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9117638888888888,
+      "position": 0.9117638888888888,
+      "x": 0.9117638888888888,
+      "y": 0.006666666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-4",
+      "goals_a": 2,
+      "goals_b": 4,
+      "probability": 0.00625,
+      "probability_percent": 0.625,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8717638888888889,
+      "position": 0.8717638888888889,
+      "x": 0.8717638888888889,
+      "y": 0.00625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-0",
+      "goals_a": 4,
+      "goals_b": 0,
+      "probability": 0.006111111111111111,
+      "probability_percent": 0.6111,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9523472222222221,
+      "position": 0.9523472222222221,
+      "x": 0.9523472222222221,
+      "y": 0.006111111111111111,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-2",
+      "goals_a": 4,
+      "goals_b": 2,
+      "probability": 0.0059722222222222225,
+      "probability_percent": 0.5972,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8723472222222222,
+      "position": 0.8723472222222222,
+      "x": 0.8723472222222222,
+      "y": 0.0059722222222222225,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-0",
+      "goals_a": 5,
+      "goals_b": 0,
+      "probability": 0.002777777777777778,
+      "probability_percent": 0.2778,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.002777777777777778,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-3",
+      "goals_a": 4,
+      "goals_b": 3,
+      "probability": 0.0025,
+      "probability_percent": 0.25,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8323472222222221,
+      "position": 0.8323472222222221,
+      "x": 0.8323472222222221,
+      "y": 0.0025,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-1",
+      "goals_a": 5,
+      "goals_b": 1,
+      "probability": 0.0022222222222222222,
+      "probability_percent": 0.2222,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0022222222222222222,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-5",
+      "goals_a": 1,
+      "goals_b": 5,
+      "probability": 0.0020833333333333333,
+      "probability_percent": 0.2083,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0020833333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-5",
+      "goals_a": 2,
+      "goals_b": 5,
+      "probability": 0.0016666666666666668,
+      "probability_percent": 0.1667,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0016666666666666668,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-4",
+      "goals_a": 3,
+      "goals_b": 4,
+      "probability": 0.00125,
+      "probability_percent": 0.125,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8317638888888889,
+      "position": 0.8317638888888889,
+      "x": 0.8317638888888889,
+      "y": 0.00125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-2",
+      "goals_a": 5,
+      "goals_b": 2,
+      "probability": 0.0011111111111111111,
+      "probability_percent": 0.1111,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0011111111111111111,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-5",
+      "goals_a": 0,
+      "goals_b": 5,
+      "probability": 0.0008333333333333334,
+      "probability_percent": 0.0833,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0008333333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-5",
+      "goals_a": 3,
+      "goals_b": 5,
+      "probability": 0.0006944444444444445,
+      "probability_percent": 0.0694,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0006944444444444445,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-3",
+      "goals_a": 5,
+      "goals_b": 3,
+      "probability": 0.0006944444444444445,
+      "probability_percent": 0.0694,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0006944444444444445,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-6",
+      "goals_a": 2,
+      "goals_b": 6,
+      "probability": 0.0005555555555555556,
+      "probability_percent": 0.0556,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0005555555555555556,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-4",
+      "goals_a": 4,
+      "goals_b": 4,
+      "probability": 0.0005555555555555556,
+      "probability_percent": 0.0556,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9648888888888888,
+      "position": 0.9648888888888888,
+      "x": 0.9648888888888888,
+      "y": 0.0005555555555555556,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-5",
+      "goals_a": 4,
+      "goals_b": 5,
+      "probability": 0.0005555555555555556,
+      "probability_percent": 0.0556,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0005555555555555556,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-6",
+      "goals_a": 1,
+      "goals_b": 6,
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-1",
+      "goals_a": 6,
+      "goals_b": 1,
+      "probability": 0.0004166666666666667,
+      "probability_percent": 0.0417,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0004166666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-6",
+      "goals_a": 0,
+      "goals_b": 6,
+      "probability": 0.0002777777777777778,
+      "probability_percent": 0.0278,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0002777777777777778,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-8",
+      "goals_a": 1,
+      "goals_b": 8,
+      "probability": 0.0002777777777777778,
+      "probability_percent": 0.0278,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0002777777777777778,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-0",
+      "goals_a": 6,
+      "goals_b": 0,
+      "probability": 0.0002777777777777778,
+      "probability_percent": 0.0278,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0002777777777777778,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-2",
+      "goals_a": 6,
+      "goals_b": 2,
+      "probability": 0.0002777777777777778,
+      "probability_percent": 0.0278,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0002777777777777778,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-7",
+      "goals_a": 1,
+      "goals_b": 7,
+      "probability": 0.0001388888888888889,
+      "probability_percent": 0.0139,
+      "outcome_key": "team_b",
+      "outcome_cn": "Morocco胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0001388888888888889,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Morocco win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-4",
+      "goals_a": 5,
+      "goals_b": 4,
+      "probability": 0.0001388888888888889,
+      "probability_percent": 0.0139,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0001388888888888889,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-3",
+      "goals_a": 6,
+      "goals_b": 3,
+      "probability": 0.0001388888888888889,
+      "probability_percent": 0.0139,
+      "outcome_key": "team_a",
+      "outcome_cn": "Canada胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0001388888888888889,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Canada win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    }
+  ],
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.14083333333333334,
+      "goals_a": 1,
+      "goals_b": 1
+    },
+    {
+      "score": "0-1",
+      "probability": 0.10972222222222222,
+      "goals_a": 0,
+      "goals_b": 1
+    },
+    {
+      "score": "1-0",
+      "probability": 0.10972222222222222,
+      "goals_a": 1,
+      "goals_b": 0
+    },
+    {
+      "score": "0-0",
+      "probability": 0.10472222222222222,
+      "goals_a": 0,
+      "goals_b": 0
+    },
+    {
+      "score": "1-2",
+      "probability": 0.07833333333333334,
+      "goals_a": 1,
+      "goals_b": 2
+    },
+    {
+      "score": "2-1",
+      "probability": 0.07666666666666666,
+      "goals_a": 2,
+      "goals_b": 1
+    },
+    {
+      "score": "2-0",
+      "probability": 0.060833333333333336,
+      "goals_a": 2,
+      "goals_b": 0
+    },
+    {
+      "score": "0-2",
+      "probability": 0.05875,
+      "goals_a": 0,
+      "goals_b": 2
+    }
+  ],
+  "source": "latest_state_v7.distribution.score_matrix + score_space_data if available",
+  "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties.",
+  "axis_note_en": "Rows show Canada 90-minute goals and columns show Morocco 90-minute goals; 5+ means at least five goals. Probabilities are full-match 90-minute score probabilities."
+}

@@ -478,7 +478,7 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M86", "M87", "M88"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M89", "M90"];
 
 window.WORLD_CUP_KNOCKOUT_PROGRESS = {
   rounds: {
@@ -591,6 +591,22 @@ window.WORLD_CUP_KNOCKOUT_PROGRESS = {
         matchTime: "7月3日 18:00 UTC",
         kickoffUtc: "2026-07-03T18:00:00Z",
         source: "D2 vs G2"
+      }
+    },
+    round16: {
+      M89: {
+        status: "scheduled",
+        teams: ["PAR", "FRA"],
+        matchTime: "7月4日 21:00 UTC",
+        kickoffUtc: "2026-07-04T21:00:00Z",
+        source: "M74 winner vs M77 winner"
+      },
+      M90: {
+        status: "scheduled",
+        teams: ["CAN", "MAR"],
+        matchTime: "7月4日 17:00 UTC",
+        kickoffUtc: "2026-07-04T17:00:00Z",
+        source: "M73 winner vs M75 winner"
       }
     }
   }

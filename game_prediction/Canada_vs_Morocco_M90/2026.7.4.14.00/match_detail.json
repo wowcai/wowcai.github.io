@@ -1,0 +1,1248 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M90",
+    "team_a": "Canada",
+    "team_b": "Morocco",
+    "kickoff_utc": "2026-07-04T12:00:00-05:00",
+    "venue": "Houston Stadium, Houston",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.49839743589743596,
+      "team_b": 0.5016025641025641,
+      "favorite": "Morocco"
+    },
+    "resolution": {
+      "normal_time": 0.7051282051282051,
+      "extra_time": 0.1224358974358974,
+      "penalties": 0.17243589743589724
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.14083333333333334,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "0-1",
+        "probability": 0.10972222222222222,
+        "goals_a": 0,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.10972222222222222,
+        "goals_a": 1,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Morocco常规时间晋级。",
+        "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+        "probability": 0.11346153846153846,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Morocco",
+        "path_id": "BMC_018e5170ac37",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: Morocco advances in normal time.",
+        "summary_en": "90 minutes 0-1: Morocco advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "BMC_3605edea60bb",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008333333333333333,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "2-4",
+        "advancer_team": "Morocco",
+        "path_id": "BMC_cfdae3d71f2e",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Morocco常规时间晋级。",
+        "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+        "probability": 0.11346153846153846,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Morocco",
+        "path_id": "BMC_018e5170ac37",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: Morocco advances in normal time.",
+        "summary_en": "90 minutes 0-1: Morocco advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "BMC_3605edea60bb",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008333333333333333,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "2-4",
+        "advancer_team": "Morocco",
+        "path_id": "BMC_cfdae3d71f2e",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+      }
+    ],
+    "favorite": "Morocco",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.17243589743589724,
+        "probability_band": "17.2%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008333333333333333,
+            "path_probability": 0.008333333333333333,
+            "path_id": "BMC_cfdae3d71f2e",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008012820512820512,
+            "path_probability": 0.008012820512820512,
+            "path_id": "BMC_16f5dfdaa525",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007692307692307693,
+            "path_probability": 0.007692307692307693,
+            "path_id": "BMC_46f8ec78aae9",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Morocco点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After both 90 minutes and extra time remain level, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.1224358974358974,
+        "probability_band": "12.2%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Canada",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.023076923076923078,
+            "path_probability": 0.023076923076923078,
+            "path_id": "BMC_3605edea60bb",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.01858974358974359,
+            "path_probability": 0.01858974358974359,
+            "path_id": "BMC_eef1f5f63571",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Morocco加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; Morocco advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Canada",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.01826923076923077,
+            "path_probability": 0.01826923076923077,
+            "path_id": "BMC_ec3b47a694bd",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Canada加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk appetite become magnified in extra time and create resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.3567307692307693,
+        "probability_band": "35.7%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Canada",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "1-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.10384615384615385,
+            "path_probability": 0.10384615384615385,
+            "path_id": "BMC_d4d0b45c971e",
+            "summary_cn": "90分钟1-0，Canada常规时间晋级。",
+            "summary_en": "90 minutes 1-0: Canada advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Canada",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07403846153846154,
+            "path_probability": 0.07403846153846154,
+            "path_id": "BMC_30eaf9f86319",
+            "summary_cn": "90分钟2-1，Canada常规时间晋级。",
+            "summary_en": "90 minutes 2-1: Canada advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Canada",
+            "after_extra_time_score": "2-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07019230769230769,
+            "path_probability": 0.07019230769230769,
+            "path_id": "BMC_893ca6cb8ecf",
+            "summary_cn": "90分钟2-0，Canada常规时间晋级。",
+            "summary_en": "90 minutes 2-0: Canada advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can advance through a normal-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 188,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Morocco",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.11346153846153846,
+          "path_probability": 0.11346153846153846,
+          "path_id": "BMC_018e5170ac37",
+          "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Morocco advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Canada",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10384615384615385,
+          "path_probability": 0.10384615384615385,
+          "path_id": "BMC_d4d0b45c971e",
+          "summary_cn": "90分钟1-0，Canada常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Canada advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Morocco",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08397435897435897,
+          "path_probability": 0.08397435897435897,
+          "path_id": "BMC_f0be441b14d3",
+          "summary_cn": "90分钟1-2，Morocco常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Morocco advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Canada",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07403846153846154,
+          "path_probability": 0.07403846153846154,
+          "path_id": "BMC_30eaf9f86319",
+          "summary_cn": "90分钟2-1，Canada常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Canada advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Canada",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07019230769230769,
+          "path_probability": 0.07019230769230769,
+          "path_id": "BMC_893ca6cb8ecf",
+          "summary_cn": "90分钟2-0，Canada常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Canada advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟0-1，Morocco常规时间晋级。",
+          "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+          "probability": 0.11346153846153846,
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-1",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-1",
+          "penalty_score": null,
+          "advancer_team": "Morocco",
+          "path_id": "BMC_018e5170ac37",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 0-1: Morocco advances in normal time.",
+          "summary_en": "90 minutes 0-1: Morocco advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+          "probability": 0.023076923076923078,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Canada",
+          "path_id": "BMC_3605edea60bb",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+          "probability": 0.008333333333333333,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "2-4",
+          "advancer_team": "Morocco",
+          "path_id": "BMC_cfdae3d71f2e",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Morocco常规时间晋级。",
+        "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+        "probability": 0.11346153846153846,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Morocco",
+        "path_id": "BMC_018e5170ac37",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: Morocco advances in normal time.",
+        "summary_en": "90 minutes 0-1: Morocco advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Canada加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Canada",
+        "path_id": "BMC_3605edea60bb",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Canada advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008333333333333333,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "2-4",
+        "advancer_team": "Morocco",
+        "path_id": "BMC_cfdae3d71f2e",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.21944444444444441,
+          "base_event_probability": 0.21944444444444441,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.05486111111111111,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open back-and-forth, with both attacks converting chances."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.02861111111111111,
+              "rationale_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Morocco fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.02861111111111111,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；Canada打破对方防守后扩大领先优势。",
+              "rationale_en": "Compact defending compresses attacking space; Canada extends the lead after breaking through the opposition defense."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.01972222222222222,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Compact defending compresses attacking space; the match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.019166666666666665,
+              "rationale_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Key player form and role changes; the match is pulled into a high-risk, open tempo, with space behind the defense continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "1-3",
+            "3-1"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "Total goals at least 4.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or extra space after a lead pushing total goals well above the main low-score prediction."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.08291666666666665,
+          "base_event_probability": 0.08291666666666665,
+          "attention_level": "low",
+          "selected_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.02236111111111111,
+              "rationale_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Morocco fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "3-0",
+              "probability": 0.01861111111111111,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；Canada打破对方防守后扩大领先优势。",
+              "rationale_en": "Compact defending compresses attacking space; Canada extends the lead after breaking through the opposition defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.007916666666666667,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Compact defending compresses attacking space; the match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "0-4",
+              "probability": 0.0077777777777777776,
+              "rationale_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Morocco fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.006666666666666667,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk, open tempo, with space behind the defense continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "0-3",
+            "3-0",
+            "4-1"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fitness issues, or defensive imbalance breaks the match open, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.34472222222222226,
+          "base_event_probability": 0.34472222222222226,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "probability": 0.10972222222222222,
+              "rationale_cn": "Canada在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Canada has a slight edge in key matchups and closes out the match by one goal."
+            },
+            {
+              "score": "2-1",
+              "probability": 0.07666666666666666,
+              "rationale_cn": "Canada在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Canada has a slight edge in key matchups and closes out the match by one goal."
+            },
+            {
+              "score": "2-0",
+              "probability": 0.060833333333333336,
+              "rationale_cn": "Canada打破对方防守后扩大领先优势。",
+              "rationale_en": "Canada extends the lead after breaking down the opposing defense."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.02861111111111111,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；Canada打破对方防守后扩大领先优势。",
+              "rationale_en": "Compact defending compresses attacking space; Canada extends the lead after breaking through the opposition defense."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.01972222222222222,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Compact defending compresses attacking space; the match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "2-1",
+            "2-0"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side relatively less favored pre-match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog can shift the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key errors by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "Davies状态",
+          "impact_cn": "Davies已伤愈回归，但是否首发或被控制出场时间仍有不确定。如果他受限，加拿大早段左路爆点会下降，比赛更依赖压迫、转换和小比分细节。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Davies availability",
+          "impact_en": "Davies has returned from injury, but the reports still leave open whether he starts or is managed from the bench. If he is limited, Canada’s early left-side ball carrying is reduced and the match leans more toward pressing, transition and narrow margins.",
+          "text_cn": "Davies已伤愈回归，但是否首发或被控制出场时间仍有不确定。如果他受限，加拿大早段左路爆点会下降，比赛更依赖压迫、转换和小比分细节。",
+          "text_en": "Davies has returned from injury, but the reports still leave open whether he starts or is managed from the bench. If he is limited, Canada’s early left-side ball carrying is reduced and the match leans more toward pressing, transition and narrow margins."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "摩洛哥低风险路径",
+          "impact_cn": "摩洛哥上一轮通过平局后点球晋级，说明低比分和耐心比赛并不是负面分支。这支持模型给出的近五五开结构，而不是加拿大明显优势。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Morocco low-risk path",
+          "impact_en": "Morocco advanced from a drawn knockout match on penalties, so a low-score, patient game state is not a negative branch for them. This supports the model’s near-even advancement split rather than a clear Canada edge.",
+          "text_cn": "摩洛哥上一轮通过平局后点球晋级，说明低比分和耐心比赛并不是负面分支。这支持模型给出的近五五开结构，而不是加拿大明显优势。",
+          "text_en": "Morocco advanced from a drawn knockout match on penalties, so a low-score, patient game state is not a negative branch for them. This supports the model’s near-even advancement split rather than a clear Canada edge."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "摩洛哥中位防守",
+          "impact_cn": "摩洛哥具备中位防守和触发式压迫能力。如果中路被压缩，加拿大更可能依赖Buchanan、David和边路转换，而不是稳定中路渗透。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Morocco mid-block defense",
+          "impact_en": "Morocco have a credible mid-block and trigger-pressing profile. If they close the middle well, Canada may need Buchanan, David and wide transitions rather than steady central penetration.",
+          "text_cn": "摩洛哥具备中位防守和触发式压迫能力。如果中路被压缩，加拿大更可能依赖Buchanan、David和边路转换，而不是稳定中路渗透。",
+          "text_en": "Morocco have a credible mid-block and trigger-pressing profile. If they close the middle well, Canada may need Buchanan, David and wide transitions rather than steady central penetration."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "Hakimi侧压力",
+          "impact_cn": "Hakimi是摩洛哥冲击加拿大左侧的重要出口。如果Davies不完全首发，摩洛哥可以更早测试这一侧防线。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Hakimi-side pressure",
+          "impact_en": "Hakimi is a major outlet against Canada’s left side. If Davies is not fully used from the start, Morocco can test that flank earlier and create crossing or cutback pressure.",
+          "text_cn": "Hakimi是摩洛哥冲击加拿大左侧的重要出口。如果Davies不完全首发，摩洛哥可以更早测试这一侧防线。",
+          "text_en": "Hakimi is a major outlet against Canada’s left side. If Davies is not fully used from the start, Morocco can test that flank earlier and create crossing or cutback pressure."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "加拿大势头",
+          "impact_cn": "加拿大带着淘汰赛胜利进入本场，紧凑防守、压迫和定位球让他们保留一球胜出的现实路径。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Canada momentum",
+          "impact_en": "Canada enter with a knockout win and a compact defensive base, which keeps their advancement path alive through pressing, set pieces and one-goal scenarios.",
+          "text_cn": "加拿大带着淘汰赛胜利进入本场，紧凑防守、压迫和定位球让他们保留一球胜出的现实路径。",
+          "text_en": "Canada enter with a knockout win and a compact defensive base, which keeps their advancement path alive through pressing, set pieces and one-goal scenarios."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "细节决胜形态",
+          "impact_cn": "模型把这场视为极接近的比赛，1-1、1-0、0-1都很突出。转换和定位球的小差异比整体实力差距更重要。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Fine-margin profile",
+          "impact_en": "The match is modeled as extremely balanced, with 1-1, 1-0 and 0-1 all prominent. Small execution differences in transitions and set pieces carry more weight than broad team-strength gaps.",
+          "text_cn": "模型把这场视为极接近的比赛，1-1、1-0、0-1都很突出。转换和定位球的小差异比整体实力差距更重要。",
+          "text_en": "The match is modeled as extremely balanced, with 1-1, 1-0 and 0-1 all prominent. Small execution differences in transitions and set pieces carry more weight than broad team-strength gaps."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.29487179487179466,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.17391304347826098,
+          "joint_probability": 0.05128205128205129,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.17391304347826098
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.14565217391304355
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "Canada凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal result in 30 minutes of extra time via counterattacks, set pieces, or substitute impact.",
+          "rationale_en": "Canada wins extra time by one goal through fitness, substitutions, or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.05217391304347832,
+          "joint_probability": 0.015384615384615394,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.05217391304347832
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.013043478260869571
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.00978260869565218
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.005434782608695655
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides scored in extra time, as the match shifted from cautious play into open exchanges.",
+          "rationale_en": "The match opened up in extra time, with each side converting one chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.034782608695652195,
+          "joint_probability": 0.010256410256410256,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.034782608695652195
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.028260869565217405
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.013043478260869571
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.00978260869565218
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "Canada在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A path where one side wins extra time by at least 2 goals, or total goals reach 3+.",
+          "rationale_en": "Canada pulls away after the opponent breaks down physically or mentally."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "平局基线",
+          "impact_cn": "加时判断以90分钟平局为前提。只剩30分钟且双方知道点球仍可用，因此谨慎的0-0加时路径仍然重要。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Draw baseline",
+          "impact_en": "The extra-time view starts from a 90-minute draw. With only 30 minutes left and both teams aware that penalties remain available, a cautious 0-0 extra-time branch stays structurally important.",
+          "text_cn": "加时判断以90分钟平局为前提。只剩30分钟且双方知道点球仍可用，因此谨慎的0-0加时路径仍然重要。",
+          "text_en": "The extra-time view starts from a 90-minute draw. With only 30 minutes left and both teams aware that penalties remain available, a cautious 0-0 extra-time branch stays structurally important."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "加拿大体能分支",
+          "impact_cn": "加拿大可通过压迫、二点球和边路后插上在加时制造一球胜出路径，但这是一球分支，不是压倒性优势。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Canada energy branch",
+          "impact_en": "Canada can win extra time through pressing, second balls and late wide runs, especially if fresh legs keep the game vertical. This is a narrow one-goal branch rather than a dominant path.",
+          "text_cn": "加拿大可通过压迫、二点球和边路后插上在加时制造一球胜出路径，但这是一球分支，不是压倒性优势。",
+          "text_en": "Canada can win extra time through pressing, second balls and late wide runs, especially if fresh legs keep the game vertical. This is a narrow one-goal branch rather than a dominant path."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "摩洛哥替补质量",
+          "impact_cn": "摩洛哥可通过技术控制、Hakimi侧推进和替补体能在加时获得现实优势，主路径同样是一球解决。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Morocco substitute quality",
+          "impact_en": "Morocco retain a realistic extra-time edge through technical control, Hakimi-side progression and substitute freshness. Their best branch is also a one-goal resolution, not an open collapse.",
+          "text_cn": "摩洛哥可通过技术控制、Hakimi侧推进和替补体能在加时获得现实优势，主路径同样是一球解决。",
+          "text_en": "Morocco retain a realistic extra-time edge through technical control, Hakimi-side progression and substitute freshness. Their best branch is also a one-goal resolution, not an open collapse."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "反击偷袭",
+          "impact_cn": "如果一方为了避免点球而压上过深，另一方的反击窗口会扩大，因此双方都保留后程偷袭路径。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Counterattack steal",
+          "impact_en": "If one side pushes too hard to avoid penalties, the opponent’s counterattack window expands. This keeps both Canada and Morocco live in late transition scenarios.",
+          "text_cn": "如果一方为了避免点球而压上过深，另一方的反击窗口会扩大，因此双方都保留后程偷袭路径。",
+          "text_en": "If one side pushes too hard to avoid penalties, the opponent’s counterattack window expands. This keeps both Canada and Morocco live in late transition scenarios."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "拖入点球",
+          "impact_cn": "由于基础盘接近，双方都不会轻易暴露身后空间，加时继续拖入点球的概率不可忽略。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Penalty drag",
+          "impact_en": "Because the baseline is balanced, both teams have incentives to avoid overexposure. That raises the probability that extra time does not fully resolve the tie.",
+          "text_cn": "由于基础盘接近，双方都不会轻易暴露身后空间，加时继续拖入点球的概率不可忽略。",
+          "text_en": "Because the baseline is balanced, both teams have incentives to avoid overexposure. That raises the probability that extra time does not fully resolve the tie."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "崩盘尾部",
+          "impact_cn": "加时多球崩盘只作为尾部分支保留，主形态仍是紧、慢、低比分。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Collapse tail only",
+          "impact_en": "A multi-goal extra-time swing is kept as a tail branch. The main extra-time shape remains tight, physical and low-scoring.",
+          "text_cn": "加时多球崩盘只作为尾部分支保留，主形态仍是紧、慢、低比分。",
+          "text_en": "A multi-goal extra-time swing is kept as a tail branch. The main extra-time shape remains tight, physical and low-scoring."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration, four expert agents, committee aggregation, conditional rollout, conditional Monte Carlo matrix, extra-time tail audit and report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.17243589743589724,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Consecutive penalty saves by the goalkeeper change the outcome."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "Consecutive penalty saves by the goalkeeper change the outcome."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper saves multiple penalties in a row, or the opponent misses repeatedly, quickly widening the shootout score.",
+          "rationale_en": "Consecutive penalty saves by the goalkeeper change the outcome."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "Key penalty taker from the favored team misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "Key penalty taker from the favored team misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides showed high quality in the first five rounds, sending the shootout into extra rounds."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides showed high quality in the first five rounds, with the result decided only after sudden death from round 6 onward.",
+          "rationale_en": "Both sides showed high quality in the first five rounds, sending the shootout into extra rounds."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "主罚顺序缺口",
+          "impact_cn": "公开信息无法确认加拿大或摩洛哥的具体点球顺序，前端应把主罚名单视为候选，而不是确定战术信息。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Taker-order uncertainty",
+          "impact_en": "Public pre-match information does not confirm the exact penalty order for Canada or Morocco. The frontend should treat taker lists as candidate-based, not confirmed tactical information.",
+          "text_cn": "公开信息无法确认加拿大或摩洛哥的具体点球顺序，前端应把主罚名单视为候选，而不是确定战术信息。",
+          "text_en": "Public pre-match information does not confirm the exact penalty order for Canada or Morocco. The frontend should treat taker lists as candidate-based, not confirmed tactical information."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "门将波动",
+          "impact_cn": "点球分支对一次扑救或一次失误极其敏感，应展示为波动性，而不是固定优势。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Keeper volatility",
+          "impact_en": "The shootout branch is sensitive to a single goalkeeper save or one poor strike. The model should present this as volatility rather than a strong deterministic edge.",
+          "text_cn": "点球分支对一次扑救或一次失误极其敏感，应展示为波动性，而不是固定优势。",
+          "text_en": "The shootout branch is sensitive to a single goalkeeper save or one poor strike. The model should present this as volatility rather than a strong deterministic edge."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差路径",
+          "impact_cn": "多数点球路径落在一球差或延长点球区间，前端重点应是边际极小。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "One-kick margins",
+          "impact_en": "Most shootout paths sit within one kick or extended-penalty territory. The useful frontend message is fine margins, not a confident shootout winner.",
+          "text_cn": "多数点球路径落在一球差或延长点球区间，前端重点应是边际极小。",
+          "text_en": "Most shootout paths sit within one kick or extended-penalty territory. The useful frontend message is fine margins, not a confident shootout winner."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "摩洛哥经验路径",
+          "impact_cn": "摩洛哥近期点球晋级提供了压力管理叙事，但没有确认主罚和门将数据时不能放大。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Morocco experience path",
+          "impact_en": "Morocco’s recent penalty survival gives them a credible pressure-management narrative, but it should not be overstated without confirmed takers and goalkeeper data.",
+          "text_cn": "摩洛哥近期点球晋级提供了压力管理叙事，但没有确认主罚和门将数据时不能放大。",
+          "text_en": "Morocco’s recent penalty survival gives them a credible pressure-management narrative, but it should not be overstated without confirmed takers and goalkeeper data."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "加拿大压力路径",
+          "impact_cn": "加拿大路径依赖前五轮稳定命中并避免先罚丢，主场区域关注度也可能带来额外压力。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Canada pressure path",
+          "impact_en": "Canada’s route depends on clean first-five execution and avoiding the first miss. Home-region attention can add pressure, but the effect is conditional.",
+          "text_cn": "加拿大路径依赖前五轮稳定命中并避免先罚丢，主场区域关注度也可能带来额外压力。",
+          "text_en": "Canada’s route depends on clean first-five execution and avoiding the first miss. Home-region attention can add pressure, but the effect is conditional."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "保守校准",
+          "impact_cn": "由于点球细节数据不完整，点球模块应保守展示，避免编造球员级确定性。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Conservative calibration",
+          "impact_en": "Because detailed penalty data is incomplete, the penalty module should remain conservative and avoid inventing player-specific shootout certainty.",
+          "text_cn": "由于点球细节数据不完整，点球模块应保守展示，避免编造球员级确定性。",
+          "text_en": "Because detailed penalty data is incomplete, the penalty module should remain conservative and avoid inventing player-specific shootout certainty."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration, four expert agents, committee aggregation, penalty-sequence rollout, shootout score matrix, penalty tail audit and report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-03T18:16:19.140643Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-stage mechanisms; MAS rollout jointly models 90 minutes, extra time if level, and penalties if still level; Monte Carlo samples the complete path tree.",
+  "architecture_en": "Extra time and penalties are not independent post-processing outputs; they are driven by the same MAS conditional rollout. The frontend tabs are different slices of one complete path distribution while the JSON schema remains compatible with v6.2.2."
+}
