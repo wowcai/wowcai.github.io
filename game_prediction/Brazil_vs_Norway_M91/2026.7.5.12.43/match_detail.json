@@ -1,0 +1,1248 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M91",
+    "team_a": "Brazil",
+    "team_b": "Norway",
+    "kickoff_utc": "2026-07-05T16:00:00-04:00",
+    "venue": "New York New Jersey Stadium, East Rutherford",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.5396153846153854,
+      "team_b": 0.46038461538461456,
+      "favorite": "Brazil"
+    },
+    "resolution": {
+      "normal_time": 0.7207692307692308,
+      "extra_time": 0.11884615384615385,
+      "penalties": 0.16038461538461482
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.12816666666666668,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.11016666666666666,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "0-1",
+        "probability": 0.10233333333333333,
+        "goals_a": 0,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Brazil常规时间晋级。",
+        "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+        "probability": 0.10923076923076923,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "BMC_52287d0902cb",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Brazil advances in normal time.",
+        "summary_en": "90 minutes 1-0: Brazil advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+        "probability": 0.020384615384615383,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Norway",
+        "path_id": "BMC_f67010b7143a",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+        "probability": 0.009230769230769232,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Norway",
+        "path_id": "BMC_8b80a2797853",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Brazil常规时间晋级。",
+        "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+        "probability": 0.10923076923076923,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "BMC_52287d0902cb",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Brazil advances in normal time.",
+        "summary_en": "90 minutes 1-0: Brazil advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+        "probability": 0.020384615384615383,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Norway",
+        "path_id": "BMC_f67010b7143a",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+        "probability": 0.009230769230769232,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Norway",
+        "path_id": "BMC_8b80a2797853",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties."
+      }
+    ],
+    "favorite": "Brazil",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.16038461538461482,
+        "probability_band": "16.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009230769230769232,
+            "path_probability": 0.009230769230769232,
+            "path_id": "BMC_8b80a2797853",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Brazil",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "5-4",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.006923076923076923,
+            "path_probability": 0.006923076923076923,
+            "path_id": "BMC_8d58db16e67a",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Brazil点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Brazil advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006538461538461538,
+            "path_probability": 0.006538461538461538,
+            "path_id": "BMC_42238385f5fd",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After both 90 minutes and extra time remain level, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.11884615384615385,
+        "probability_band": "11.9%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.020384615384615383,
+            "path_probability": 0.020384615384615383,
+            "path_id": "BMC_f67010b7143a",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Brazil",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.019615384615384614,
+            "path_probability": 0.019615384615384614,
+            "path_id": "BMC_b57aa3f5a65b",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Brazil加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Brazil advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Brazil",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.019615384615384614,
+            "path_probability": 0.019615384615384614,
+            "path_id": "BMC_487b1a0b5afe",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Brazil加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Brazil advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk appetite become magnified in extra time and create resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.3380769230769231,
+        "probability_band": "33.8%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.09807692307692308,
+            "path_probability": 0.09807692307692308,
+            "path_id": "BMC_61de438e5b4d",
+            "summary_cn": "90分钟0-1，Norway常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Norway advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07461538461538461,
+            "path_probability": 0.07461538461538461,
+            "path_id": "BMC_8bcc9fddb161",
+            "summary_cn": "90分钟1-2，Norway常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Norway advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Norway",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.057692307692307696,
+            "path_probability": 0.057692307692307696,
+            "path_id": "BMC_e692e423e7c5",
+            "summary_cn": "90分钟0-2，Norway常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Norway advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can advance through a normal-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 177,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Brazil",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10923076923076923,
+          "path_probability": 0.10923076923076923,
+          "path_id": "BMC_52287d0902cb",
+          "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Brazil advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Norway",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09807692307692308,
+          "path_probability": 0.09807692307692308,
+          "path_id": "BMC_61de438e5b4d",
+          "summary_cn": "90分钟0-1，Norway常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Norway advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Brazil",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09076923076923077,
+          "path_probability": 0.09076923076923077,
+          "path_id": "BMC_d9a7bebcad09",
+          "summary_cn": "90分钟2-1，Brazil常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Brazil advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Norway",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07461538461538461,
+          "path_probability": 0.07461538461538461,
+          "path_id": "BMC_8bcc9fddb161",
+          "summary_cn": "90分钟1-2，Norway常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Norway advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Brazil",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06346153846153846,
+          "path_probability": 0.06346153846153846,
+          "path_id": "BMC_cd7e813cafc9",
+          "summary_cn": "90分钟2-0，Brazil常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Brazil advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Brazil常规时间晋级。",
+          "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+          "probability": 0.10923076923076923,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Brazil",
+          "path_id": "BMC_52287d0902cb",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Brazil advances in normal time.",
+          "summary_en": "90 minutes 1-0: Brazil advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+          "probability": 0.020384615384615383,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-1",
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "Norway",
+          "path_id": "BMC_f67010b7143a",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+          "probability": 0.009230769230769232,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Norway",
+          "path_id": "BMC_8b80a2797853",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Brazil常规时间晋级。",
+        "summary_cn": "90分钟1-0，Brazil常规时间晋级。",
+        "probability": 0.10923076923076923,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Brazil",
+        "path_id": "BMC_52287d0902cb",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Brazil advances in normal time.",
+        "summary_en": "90 minutes 1-0: Brazil advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Norway加时晋级。",
+        "probability": 0.020384615384615383,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Norway",
+        "path_id": "BMC_f67010b7143a",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Norway advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Norway点球晋级。",
+        "probability": 0.009230769230769232,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Norway",
+        "path_id": "BMC_8b80a2797853",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Norway advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.25000000000000006,
+          "base_event_probability": 0.25000000000000006,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0535,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open back-and-forth, with both attacks converting chances."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.042333333333333334,
+              "rationale_cn": "Brazil打破对方防守后扩大领先优势。",
+              "rationale_en": "Brazil extends the lead after breaking down the opponent's defense."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.027833333333333335,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive lines continually expanding."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.026166666666666668,
+              "rationale_cn": "Norway充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Norway fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.016833333333333332,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive lines continually expanding."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-1",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead, making total goals significantly higher than the main low-score forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.09016666666666664,
+          "base_event_probability": 0.09016666666666664,
+          "attention_level": "low",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0255,
+              "rationale_cn": "Brazil打破对方防守后扩大领先优势。",
+              "rationale_en": "Brazil extends the lead after breaking down the opponent's defense."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.016166666666666666,
+              "rationale_cn": "Norway充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Norway fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0095,
+              "rationale_cn": "Brazil打破对方防守后扩大领先优势。",
+              "rationale_en": "Brazil extends the lead after breaking down the opponent's defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0095,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive lines continually expanding."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.008,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive lines continually expanding."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "0-3",
+            "4-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "Early goals, card pressure, fitness issues, or defensive imbalance cause the match to lose balance, with one side pulling clear within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.31733333333333325,
+          "base_event_probability": 0.31733333333333325,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.10233333333333333,
+              "rationale_cn": "Norway通过压迫或转换取得一球优势。",
+              "rationale_en": "Norway takes a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.07716666666666666,
+              "rationale_cn": "Norway通过压迫或转换取得一球优势。",
+              "rationale_en": "Norway takes a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.0485,
+              "rationale_cn": "Norway充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Norway fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.026166666666666668,
+              "rationale_cn": "Norway充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Norway fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.016833333333333332,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive lines continually expanding."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored pre-match or in the main prediction wins within 90 minutes.",
+          "rationale_en": "The underdog can change the outcome within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "哈兰德体能信号",
+          "impact_cn": "挪威核心和哈兰德状态让其反击出口危险但也存在体能风险。如果挪威直线威胁后程下降，巴西会受益。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Haaland fitness signal",
+          "impact_en": "Reports around Norway’s core players and Haaland’s condition make Norway’s outlet dangerous but not risk-free. Brazil can benefit if Norway’s direct threat fades late.",
+          "text_cn": "挪威核心和哈兰德状态让其反击出口危险但也存在体能风险。如果挪威直线威胁后程下降，巴西会受益。",
+          "text_en": "Reports around Norway’s core players and Haaland’s condition make Norway’s outlet dangerous but not risk-free. Brazil can benefit if Norway’s direct threat fades late."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "巴西破解低位",
+          "impact_cn": "巴西可能掌握场面，但近期破解低位并非总是顺畅，因此更像小比分优势，而非轻松大胜。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Brazil versus low block",
+          "impact_en": "Brazil may control territory, but recent analysis suggests they can need time to break compact defenses. That supports a close scoreline rather than an easy blowout.",
+          "text_cn": "巴西可能掌握场面，但近期破解低位并非总是顺畅，因此更像小比分优势，而非轻松大胜。",
+          "text_en": "Brazil may control territory, but recent analysis suggests they can need time to break compact defenses. That supports a close scoreline rather than an easy blowout."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "挪威直传威胁",
+          "impact_cn": "挪威强势晋级背景和哈兰德直线威胁让爆冷路径存在，尤其来自早段直传和转换。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Norway direct threat",
+          "impact_en": "Norway’s clean qualifying profile and Haaland-led vertical threat keep the upset path alive, especially through early direct balls and transition attacks.",
+          "text_cn": "挪威强势晋级背景和哈兰德直线威胁让爆冷路径存在，尤其来自早段直传和转换。",
+          "text_en": "Norway’s clean qualifying profile and Haaland-led vertical threat keep the upset path alive, especially through early direct balls and transition attacks."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "中立场节奏",
+          "impact_cn": "东卢瑟福按中立场处理，草皮和节奏可能同时影响巴西短传与挪威长传落点。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Neutral venue tempo",
+          "impact_en": "The East Rutherford venue is treated as neutral. Surface and tempo effects can influence both Brazil’s short combinations and Norway’s long-ball timing.",
+          "text_cn": "东卢瑟福按中立场处理，草皮和节奏可能同时影响巴西短传与挪威长传落点。",
+          "text_en": "The East Rutherford venue is treated as neutral. Surface and tempo effects can influence both Brazil’s short combinations and Norway’s long-ball timing."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "巴西阵容深度",
+          "impact_cn": "巴西阵容深度让他们在僵持到60分钟后仍有更多解题方式。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Brazil squad depth",
+          "impact_en": "Brazil’s defensive and attacking depth gives them more ways to solve a tight match, especially if the game is still level after the first hour.",
+          "text_cn": "巴西阵容深度让他们在僵持到60分钟后仍有更多解题方式。",
+          "text_en": "Brazil’s defensive and attacking depth gives them more ways to solve a tight match, especially if the game is still level after the first hour."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "小幅热门形态",
+          "impact_cn": "模型给巴西优势但不是碾压，挪威的一球和点球拖延路径仍足够大。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Close favorite profile",
+          "impact_en": "The model has Brazil ahead but not dominant. Norway’s one-goal and penalty-drag routes remain large enough that the frontend should avoid a hard favorite narrative.",
+          "text_cn": "模型给巴西优势但不是碾压，挪威的一球和点球拖延路径仍足够大。",
+          "text_en": "The model has Brazil ahead but not dominant. Norway’s one-goal and penalty-drag routes remain large enough that the frontend should avoid a hard favorite narrative."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.27923076923076867,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.18181818181818205,
+          "joint_probability": 0.05076923076923077,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.18181818181818205
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.15289256198347126
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "Brazil凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "Decided by 1 goal in 30 minutes of extra time through a counterattack, set piece, or substitute impact.",
+          "rationale_en": "Brazil wins extra time by one goal through fitness, bench, or pressing advantages."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.05922865013774111,
+          "joint_probability": 0.016538461538461537,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.05922865013774111
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.011019283746556488
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.008264462809917364
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.006887052341597805
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "1-2",
+            "2-1"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both teams score in extra time, as the match shifts from cautious play into open attacking exchanges.",
+          "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.0316804407713499,
+          "joint_probability": 0.008846153846153846,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.0316804407713499
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.03030303030303034
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.011019283746556488
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.008264462809917364
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "1-2"
+          ],
+          "rationale_cn": "Brazil在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A side covers by winning extra time by at least 2 goals, or by taking total goals to over 3.",
+          "rationale_en": "Brazil pulls away after the opponent collapses physically or mentally."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "1-1入口",
+          "impact_cn": "加时最主要入口是1-1，这让巴西技术压迫和挪威直线出口在90分钟后都仍然重要。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "1-1 entry point",
+          "impact_en": "The main extra-time doorway is a 1-1 normal-time draw. That keeps both Brazil’s technical pressure and Norway’s direct outlet relevant after 90 minutes.",
+          "text_cn": "加时最主要入口是1-1，这让巴西技术压迫和挪威直线出口在90分钟后都仍然重要。",
+          "text_en": "The main extra-time doorway is a 1-1 normal-time draw. That keeps both Brazil’s technical pressure and Norway’s direct outlet relevant after 90 minutes."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "巴西一球路径",
+          "impact_cn": "巴西加时最佳路径是持续压迫、边路单挑和替补冲击制造一个决定性进球。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Brazil one-goal route",
+          "impact_en": "Brazil’s best extra-time path is sustained pressure, wing isolation and substitute impact producing a single decisive goal.",
+          "text_cn": "巴西加时最佳路径是持续压迫、边路单挑和替补冲击制造一个决定性进球。",
+          "text_en": "Brazil’s best extra-time path is sustained pressure, wing isolation and substitute impact producing a single decisive goal."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "挪威反击路径",
+          "impact_cn": "挪威加时路径来自长传、哈兰德牵制和巴西压上后的身后空间。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Norway counter route",
+          "impact_en": "Norway’s extra-time route comes from direct balls, Haaland gravity and attacks into space after Brazil push numbers forward.",
+          "text_cn": "挪威加时路径来自长传、哈兰德牵制和巴西压上后的身后空间。",
+          "text_en": "Norway’s extra-time route comes from direct balls, Haaland gravity and attacks into space after Brazil push numbers forward."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "疲劳平衡",
+          "impact_cn": "挪威长期低位会产生疲劳缺口；但如果巴西过度压上，同样会给挪威转换空间。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Fatigue balance",
+          "impact_en": "If Norway defend deep for long stretches, fatigue can open gaps. If Brazil overcommit, the same fatigue can leave transition space behind them.",
+          "text_cn": "挪威长期低位会产生疲劳缺口；但如果巴西过度压上，同样会给挪威转换空间。",
+          "text_en": "If Norway defend deep for long stretches, fatigue can open gaps. If Brazil overcommit, the same fatigue can leave transition space behind them."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "点球拖延仍存在",
+          "impact_cn": "由于比赛接近且1-1权重较高，不能假定双方一定能在点球前解决。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Penalty drag remains live",
+          "impact_en": "Because the matchup is close and the top draw score is prominent, neither side can be assumed to resolve it before penalties.",
+          "text_cn": "由于比赛接近且1-1权重较高，不能假定双方一定能在点球前解决。",
+          "text_en": "Because the matchup is close and the top draw score is prominent, neither side can be assumed to resolve it before penalties."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "开放加时为尾部",
+          "impact_cn": "双向开放加时可能发生，但低于0-0、1-0或0-1这类一球增量路径。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Open extra time is a tail",
+          "impact_en": "A two-way extra-time exchange is possible, but it remains lower frequency than 0-0, 1-0 or 0-1 increments.",
+          "text_cn": "双向开放加时可能发生，但低于0-0、1-0或0-1这类一球增量路径。",
+          "text_en": "A two-way extra-time exchange is possible, but it remains lower frequency than 0-0, 1-0 or 0-1 increments."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration, four expert agents, committee aggregation, conditional rollout, conditional Monte Carlo matrix, extra-time tail audit and report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.16038461538461482,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper’s repeated penalty saves changed the outcome."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper’s repeated penalty saves changed the outcome."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive saves or the opponent misses consecutive penalties, quickly widening the shootout score.",
+          "rationale_en": "The goalkeeper’s repeated penalty saves changed the outcome."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "The favored team's key penalty taker misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "The favored team's key penalty taker misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides are strong through the first five rounds, sending it to extended penalties."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides are strong through the first five rounds, with the result decided only in 6+ round sudden death.",
+          "rationale_en": "Both sides are strong through the first five rounds, sending it to extended penalties."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "点球顺序未知",
+          "impact_cn": "具体点球顺序未确认，主罚逻辑只能作为候选处理。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Penalty order unknown",
+          "impact_en": "The exact penalty sequence is not confirmed, so named taker logic should remain candidate-based rather than definitive.",
+          "text_cn": "具体点球顺序未确认，主罚逻辑只能作为候选处理。",
+          "text_en": "The exact penalty sequence is not confirmed, so named taker logic should remain candidate-based rather than definitive."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "巴西热门压力",
+          "impact_cn": "如果巴西没能提前解决比赛，点球中会承受热门压力。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Brazil favorite pressure",
+          "impact_en": "Brazil would carry favorite pressure if the match reaches penalties, especially after failing to resolve a close game earlier.",
+          "text_cn": "如果巴西没能提前解决比赛，点球中会承受热门压力。",
+          "text_en": "Brazil would carry favorite pressure if the match reaches penalties, especially after failing to resolve a close game earlier."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "挪威弱势方释放",
+          "impact_cn": "挪威作为压力较小的一方，一次扑救或一次巴西罚丢就足以改变走势。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Norway underdog freedom",
+          "impact_en": "Norway’s penalty path benefits from a lower-expectation profile: one save or one Brazil miss can flip the tie.",
+          "text_cn": "挪威作为压力较小的一方，一次扑救或一次巴西罚丢就足以改变走势。",
+          "text_en": "Norway’s penalty path benefits from a lower-expectation profile: one save or one Brazil miss can flip the tie."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "门将变量",
+          "impact_cn": "点球大战中一次门将扑救就可能主导结果，应被视为波动性而非大幅固定优势。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Goalkeeper swing",
+          "impact_en": "The shootout result is highly sensitive to goalkeeper timing and first-five execution, so the frontend should present it as a volatility branch.",
+          "text_cn": "点球大战中一次门将扑救就可能主导结果，应被视为波动性而非大幅固定优势。",
+          "text_en": "The shootout result is highly sensitive to goalkeeper timing and first-five execution, so the frontend should present it as a volatility branch."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "一球差路径",
+          "impact_cn": "多数点球路径落在一球差或延长点球区间，前端重点应是边际极小。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "One-kick margins",
+          "impact_en": "Most penalty outcomes should be explained as narrow-margin results rather than evidence of a large underlying advantage.",
+          "text_cn": "多数点球路径落在一球差或延长点球区间，前端重点应是边际极小。",
+          "text_en": "Most penalty outcomes should be explained as narrow-margin results rather than evidence of a large underlying advantage."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "保守展示",
+          "impact_cn": "缺少确认主罚顺序和该场点球细节时，不应新增球员级确定性。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Conservative display",
+          "impact_en": "Without confirmed taker order and match-specific penalty records, no player-specific certainty should be added.",
+          "text_cn": "缺少确认主罚顺序和该场点球细节时，不应新增球员级确定性。",
+          "text_en": "Without confirmed taker order and match-specific penalty records, no player-specific certainty should be added."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration, four expert agents, committee aggregation, penalty-sequence rollout, shootout score matrix, penalty tail audit and report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-03T19:48:05.126741Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-stage mechanisms; MAS rollout jointly models 90 minutes, extra time if level, and penalties if still level; Monte Carlo samples the complete path tree.",
+  "architecture_en": "Extra time and penalties are not independent post-processing outputs; they are driven by the same MAS conditional rollout. The frontend tabs are different slices of one complete path distribution while the JSON schema remains compatible with v6.2.2."
+}

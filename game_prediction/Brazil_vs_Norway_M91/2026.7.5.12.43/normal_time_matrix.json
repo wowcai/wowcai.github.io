@@ -1,0 +1,1651 @@
+{
+  "schema_version": "2.0",
+  "phase": "normal_time",
+  "matrix_type": "normal_time_score_dense_6x6_bucketed",
+  "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+  "axis_note_cn": "纵轴为team_a 90分钟进球，横轴为team_b 90分钟进球；5+表示至少5球。概率为90分钟比分的整场概率。",
+  "row_axis": {
+    "team": "Brazil",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "column_axis": {
+    "team": "Norway",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.4005,
+    "draw": 0.2821666666666667,
+    "team_b_win": 0.31733333333333336
+  },
+  "matrix": [
+    [
+      0.09016666666666667,
+      0.10233333333333333,
+      0.0485,
+      0.016166666666666666,
+      0.006333333333333333,
+      0.0021666666666666666
+    ],
+    [
+      0.11016666666666666,
+      0.12816666666666668,
+      0.07716666666666666,
+      0.026166666666666668,
+      0.008,
+      0.002833333333333333
+    ],
+    [
+      0.06933333333333333,
+      0.0825,
+      0.0535,
+      0.016833333333333332,
+      0.005333333333333333,
+      0.0013333333333333335
+    ],
+    [
+      0.0255,
+      0.042333333333333334,
+      0.027833333333333335,
+      0.009833333333333333,
+      0.0023333333333333335,
+      0.0008333333333333333
+    ],
+    [
+      0.0095,
+      0.0095,
+      0.0085,
+      0.004666666666666667,
+      0.0003333333333333333,
+      0.001
+    ],
+    [
+      0.003,
+      0.0038333333333333336,
+      0.0016666666666666668,
+      0.0016666666666666668,
+      0.0005,
+      0.00016666666666666666
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "0",
+      "probability": 0.09016666666666667,
+      "probability_percent": 9.0167,
+      "top_scores": [
+        {
+          "score": "0-0",
+          "probability": 0.09016666666666667,
+          "probability_percent": 9.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "1",
+      "probability": 0.10233333333333333,
+      "probability_percent": 10.2333,
+      "top_scores": [
+        {
+          "score": "0-1",
+          "probability": 0.10233333333333333,
+          "probability_percent": 10.2333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "2",
+      "probability": 0.0485,
+      "probability_percent": 4.85,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.0485,
+          "probability_percent": 4.85
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "3",
+      "probability": 0.016166666666666666,
+      "probability_percent": 1.6167,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.016166666666666666,
+          "probability_percent": 1.6167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "4",
+      "probability": 0.006333333333333333,
+      "probability_percent": 0.6333,
+      "top_scores": [
+        {
+          "score": "0-4",
+          "probability": 0.006333333333333333,
+          "probability_percent": 0.6333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "5+",
+      "probability": 0.0021666666666666666,
+      "probability_percent": 0.2167,
+      "top_scores": [
+        {
+          "score": "0-5",
+          "probability": 0.0015,
+          "probability_percent": 0.15
+        },
+        {
+          "score": "0-6",
+          "probability": 0.0006666666666666666,
+          "probability_percent": 0.0667
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "0",
+      "probability": 0.11016666666666666,
+      "probability_percent": 11.0167,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.11016666666666666,
+          "probability_percent": 11.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "1",
+      "probability": 0.12816666666666668,
+      "probability_percent": 12.8167,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.12816666666666668,
+          "probability_percent": 12.8167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "2",
+      "probability": 0.07716666666666666,
+      "probability_percent": 7.7167,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.07716666666666666,
+          "probability_percent": 7.7167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "3",
+      "probability": 0.026166666666666668,
+      "probability_percent": 2.6167,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.026166666666666668,
+          "probability_percent": 2.6167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "4",
+      "probability": 0.008,
+      "probability_percent": 0.8,
+      "top_scores": [
+        {
+          "score": "1-4",
+          "probability": 0.008,
+          "probability_percent": 0.8
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "5+",
+      "probability": 0.002833333333333333,
+      "probability_percent": 0.2833,
+      "top_scores": [
+        {
+          "score": "1-5",
+          "probability": 0.0026666666666666666,
+          "probability_percent": 0.2667
+        },
+        {
+          "score": "1-6",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "0",
+      "probability": 0.06933333333333333,
+      "probability_percent": 6.9333,
+      "top_scores": [
+        {
+          "score": "2-0",
+          "probability": 0.06933333333333333,
+          "probability_percent": 6.9333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "1",
+      "probability": 0.0825,
+      "probability_percent": 8.25,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.0825,
+          "probability_percent": 8.25
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "2",
+      "probability": 0.0535,
+      "probability_percent": 5.35,
+      "top_scores": [
+        {
+          "score": "2-2",
+          "probability": 0.0535,
+          "probability_percent": 5.35
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "3",
+      "probability": 0.016833333333333332,
+      "probability_percent": 1.6833,
+      "top_scores": [
+        {
+          "score": "2-3",
+          "probability": 0.016833333333333332,
+          "probability_percent": 1.6833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "4",
+      "probability": 0.005333333333333333,
+      "probability_percent": 0.5333,
+      "top_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.005333333333333333,
+          "probability_percent": 0.5333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "5+",
+      "probability": 0.0013333333333333335,
+      "probability_percent": 0.1333,
+      "top_scores": [
+        {
+          "score": "2-5",
+          "probability": 0.001,
+          "probability_percent": 0.1
+        },
+        {
+          "score": "2-6",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        },
+        {
+          "score": "2-7",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "0",
+      "probability": 0.0255,
+      "probability_percent": 2.55,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.0255,
+          "probability_percent": 2.55
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "1",
+      "probability": 0.042333333333333334,
+      "probability_percent": 4.2333,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.042333333333333334,
+          "probability_percent": 4.2333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "2",
+      "probability": 0.027833333333333335,
+      "probability_percent": 2.7833,
+      "top_scores": [
+        {
+          "score": "3-2",
+          "probability": 0.027833333333333335,
+          "probability_percent": 2.7833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "3",
+      "probability": 0.009833333333333333,
+      "probability_percent": 0.9833,
+      "top_scores": [
+        {
+          "score": "3-3",
+          "probability": 0.009833333333333333,
+          "probability_percent": 0.9833
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "4",
+      "probability": 0.0023333333333333335,
+      "probability_percent": 0.2333,
+      "top_scores": [
+        {
+          "score": "3-4",
+          "probability": 0.0023333333333333335,
+          "probability_percent": 0.2333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "5+",
+      "probability": 0.0008333333333333333,
+      "probability_percent": 0.0833,
+      "top_scores": [
+        {
+          "score": "3-5",
+          "probability": 0.0006666666666666666,
+          "probability_percent": 0.0667
+        },
+        {
+          "score": "3-7",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "0",
+      "probability": 0.0095,
+      "probability_percent": 0.95,
+      "top_scores": [
+        {
+          "score": "4-0",
+          "probability": 0.0095,
+          "probability_percent": 0.95
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "1",
+      "probability": 0.0095,
+      "probability_percent": 0.95,
+      "top_scores": [
+        {
+          "score": "4-1",
+          "probability": 0.0095,
+          "probability_percent": 0.95
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "2",
+      "probability": 0.0085,
+      "probability_percent": 0.85,
+      "top_scores": [
+        {
+          "score": "4-2",
+          "probability": 0.0085,
+          "probability_percent": 0.85
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "3",
+      "probability": 0.004666666666666667,
+      "probability_percent": 0.4667,
+      "top_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.004666666666666667,
+          "probability_percent": 0.4667
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "4",
+      "probability": 0.0003333333333333333,
+      "probability_percent": 0.0333,
+      "top_scores": [
+        {
+          "score": "4-4",
+          "probability": 0.0003333333333333333,
+          "probability_percent": 0.0333
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "5+",
+      "probability": 0.001,
+      "probability_percent": 0.1,
+      "top_scores": [
+        {
+          "score": "4-5",
+          "probability": 0.001,
+          "probability_percent": 0.1
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "0",
+      "probability": 0.003,
+      "probability_percent": 0.3,
+      "top_scores": [
+        {
+          "score": "5-0",
+          "probability": 0.0025,
+          "probability_percent": 0.25
+        },
+        {
+          "score": "6-0",
+          "probability": 0.0003333333333333333,
+          "probability_percent": 0.0333
+        },
+        {
+          "score": "7-0",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "1",
+      "probability": 0.0038333333333333336,
+      "probability_percent": 0.3833,
+      "top_scores": [
+        {
+          "score": "5-1",
+          "probability": 0.0028333333333333335,
+          "probability_percent": 0.2833
+        },
+        {
+          "score": "6-1",
+          "probability": 0.001,
+          "probability_percent": 0.1
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "2",
+      "probability": 0.0016666666666666668,
+      "probability_percent": 0.1667,
+      "top_scores": [
+        {
+          "score": "5-2",
+          "probability": 0.0015,
+          "probability_percent": 0.15
+        },
+        {
+          "score": "6-2",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "3",
+      "probability": 0.0016666666666666668,
+      "probability_percent": 0.1667,
+      "top_scores": [
+        {
+          "score": "5-3",
+          "probability": 0.0015,
+          "probability_percent": 0.15
+        },
+        {
+          "score": "6-3",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "4",
+      "probability": 0.0005,
+      "probability_percent": 0.05,
+      "top_scores": [
+        {
+          "score": "5-4",
+          "probability": 0.0003333333333333333,
+          "probability_percent": 0.0333
+        },
+        {
+          "score": "6-4",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "5+",
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "top_scores": [
+        {
+          "score": "5-5",
+          "probability": 0.00016666666666666666,
+          "probability_percent": 0.0167
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "score": "1-1",
+      "goals_a": 1,
+      "goals_b": 1,
+      "probability": 0.12816666666666668,
+      "probability_percent": 12.8167,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.25424166666666664,
+      "position": 0.25424166666666664,
+      "x": 0.25424166666666664,
+      "y": 0.12816666666666668,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-0",
+      "goals_a": 1,
+      "goals_b": 0,
+      "probability": 0.11016666666666666,
+      "probability_percent": 11.0167,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.1,
+      "position": 0.1,
+      "x": 0.1,
+      "y": 0.11016666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-1",
+      "goals_a": 0,
+      "goals_b": 1,
+      "probability": 0.10233333333333333,
+      "probability_percent": 10.2333,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.12193333333333334,
+      "position": 0.12193333333333334,
+      "x": 0.12193333333333334,
+      "y": 0.10233333333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-0",
+      "goals_a": 0,
+      "goals_b": 0,
+      "probability": 0.09016666666666667,
+      "probability_percent": 9.0167,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.13424166666666668,
+      "position": 0.13424166666666668,
+      "x": 0.13424166666666668,
+      "y": 0.09016666666666667,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-1",
+      "goals_a": 2,
+      "goals_b": 1,
+      "probability": 0.0825,
+      "probability_percent": 8.25,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.33999999999999997,
+      "position": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.0825,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-2",
+      "goals_a": 1,
+      "goals_b": 2,
+      "probability": 0.07716666666666666,
+      "probability_percent": 7.7167,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.3619333333333333,
+      "position": 0.3619333333333333,
+      "x": 0.3619333333333333,
+      "y": 0.07716666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-0",
+      "goals_a": 2,
+      "goals_b": 0,
+      "probability": 0.06933333333333333,
+      "probability_percent": 6.9333,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.38,
+      "position": 0.38,
+      "x": 0.38,
+      "y": 0.06933333333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-2",
+      "goals_a": 2,
+      "goals_b": 2,
+      "probability": 0.0535,
+      "probability_percent": 5.35,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.49424166666666663,
+      "position": 0.49424166666666663,
+      "x": 0.49424166666666663,
+      "y": 0.0535,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-2",
+      "goals_a": 0,
+      "goals_b": 2,
+      "probability": 0.0485,
+      "probability_percent": 4.85,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.4019333333333333,
+      "position": 0.4019333333333333,
+      "x": 0.4019333333333333,
+      "y": 0.0485,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-1",
+      "goals_a": 3,
+      "goals_b": 1,
+      "probability": 0.042333333333333334,
+      "probability_percent": 4.2333,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.62,
+      "position": 0.62,
+      "x": 0.62,
+      "y": 0.042333333333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-2",
+      "goals_a": 3,
+      "goals_b": 2,
+      "probability": 0.027833333333333335,
+      "probability_percent": 2.7833,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.58,
+      "position": 0.58,
+      "x": 0.58,
+      "y": 0.027833333333333335,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-3",
+      "goals_a": 1,
+      "goals_b": 3,
+      "probability": 0.026166666666666668,
+      "probability_percent": 2.6167,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6419333333333334,
+      "position": 0.6419333333333334,
+      "x": 0.6419333333333334,
+      "y": 0.026166666666666668,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-0",
+      "goals_a": 3,
+      "goals_b": 0,
+      "probability": 0.0255,
+      "probability_percent": 2.55,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6599999999999999,
+      "position": 0.6599999999999999,
+      "x": 0.6599999999999999,
+      "y": 0.0255,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-3",
+      "goals_a": 2,
+      "goals_b": 3,
+      "probability": 0.016833333333333332,
+      "probability_percent": 1.6833,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6019333333333333,
+      "position": 0.6019333333333333,
+      "x": 0.6019333333333333,
+      "y": 0.016833333333333332,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-3",
+      "goals_a": 0,
+      "goals_b": 3,
+      "probability": 0.016166666666666666,
+      "probability_percent": 1.6167,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6819333333333333,
+      "position": 0.6819333333333333,
+      "x": 0.6819333333333333,
+      "y": 0.016166666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-3",
+      "goals_a": 3,
+      "goals_b": 3,
+      "probability": 0.009833333333333333,
+      "probability_percent": 0.9833,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.7342416666666666,
+      "position": 0.7342416666666666,
+      "x": 0.7342416666666666,
+      "y": 0.009833333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-0",
+      "goals_a": 4,
+      "goals_b": 0,
+      "probability": 0.0095,
+      "probability_percent": 0.95,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.94,
+      "position": 0.94,
+      "x": 0.94,
+      "y": 0.0095,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-1",
+      "goals_a": 4,
+      "goals_b": 1,
+      "probability": 0.0095,
+      "probability_percent": 0.95,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8999999999999999,
+      "position": 0.8999999999999999,
+      "x": 0.8999999999999999,
+      "y": 0.0095,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-2",
+      "goals_a": 4,
+      "goals_b": 2,
+      "probability": 0.0085,
+      "probability_percent": 0.85,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.86,
+      "position": 0.86,
+      "x": 0.86,
+      "y": 0.0085,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-4",
+      "goals_a": 1,
+      "goals_b": 4,
+      "probability": 0.008,
+      "probability_percent": 0.8,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9219333333333333,
+      "position": 0.9219333333333333,
+      "x": 0.9219333333333333,
+      "y": 0.008,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-4",
+      "goals_a": 0,
+      "goals_b": 4,
+      "probability": 0.006333333333333333,
+      "probability_percent": 0.6333,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9619333333333333,
+      "position": 0.9619333333333333,
+      "x": 0.9619333333333333,
+      "y": 0.006333333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-4",
+      "goals_a": 2,
+      "goals_b": 4,
+      "probability": 0.005333333333333333,
+      "probability_percent": 0.5333,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8819333333333333,
+      "position": 0.8819333333333333,
+      "x": 0.8819333333333333,
+      "y": 0.005333333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-3",
+      "goals_a": 4,
+      "goals_b": 3,
+      "probability": 0.004666666666666667,
+      "probability_percent": 0.4667,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.82,
+      "position": 0.82,
+      "x": 0.82,
+      "y": 0.004666666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-1",
+      "goals_a": 5,
+      "goals_b": 1,
+      "probability": 0.0028333333333333335,
+      "probability_percent": 0.2833,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0028333333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-5",
+      "goals_a": 1,
+      "goals_b": 5,
+      "probability": 0.0026666666666666666,
+      "probability_percent": 0.2667,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0026666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-0",
+      "goals_a": 5,
+      "goals_b": 0,
+      "probability": 0.0025,
+      "probability_percent": 0.25,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0025,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-4",
+      "goals_a": 3,
+      "goals_b": 4,
+      "probability": 0.0023333333333333335,
+      "probability_percent": 0.2333,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8419333333333333,
+      "position": 0.8419333333333333,
+      "x": 0.8419333333333333,
+      "y": 0.0023333333333333335,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-5",
+      "goals_a": 0,
+      "goals_b": 5,
+      "probability": 0.0015,
+      "probability_percent": 0.15,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0015,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-2",
+      "goals_a": 5,
+      "goals_b": 2,
+      "probability": 0.0015,
+      "probability_percent": 0.15,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0015,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-3",
+      "goals_a": 5,
+      "goals_b": 3,
+      "probability": 0.0015,
+      "probability_percent": 0.15,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0015,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-5",
+      "goals_a": 2,
+      "goals_b": 5,
+      "probability": 0.001,
+      "probability_percent": 0.1,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.001,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-5",
+      "goals_a": 4,
+      "goals_b": 5,
+      "probability": 0.001,
+      "probability_percent": 0.1,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.001,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-1",
+      "goals_a": 6,
+      "goals_b": 1,
+      "probability": 0.001,
+      "probability_percent": 0.1,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.001,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-6",
+      "goals_a": 0,
+      "goals_b": 6,
+      "probability": 0.0006666666666666666,
+      "probability_percent": 0.0667,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0006666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-5",
+      "goals_a": 3,
+      "goals_b": 5,
+      "probability": 0.0006666666666666666,
+      "probability_percent": 0.0667,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0006666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-4",
+      "goals_a": 4,
+      "goals_b": 4,
+      "probability": 0.0003333333333333333,
+      "probability_percent": 0.0333,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9742416666666666,
+      "position": 0.9742416666666666,
+      "x": 0.9742416666666666,
+      "y": 0.0003333333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-4",
+      "goals_a": 5,
+      "goals_b": 4,
+      "probability": 0.0003333333333333333,
+      "probability_percent": 0.0333,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0003333333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-0",
+      "goals_a": 6,
+      "goals_b": 0,
+      "probability": 0.0003333333333333333,
+      "probability_percent": 0.0333,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0003333333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-6",
+      "goals_a": 1,
+      "goals_b": 6,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-6",
+      "goals_a": 2,
+      "goals_b": 6,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-7",
+      "goals_a": 2,
+      "goals_b": 7,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-7",
+      "goals_a": 3,
+      "goals_b": 7,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "team_b",
+      "outcome_cn": "Norway胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Norway win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-5",
+      "goals_a": 5,
+      "goals_b": 5,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-2",
+      "goals_a": 6,
+      "goals_b": 2,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-3",
+      "goals_a": 6,
+      "goals_b": 3,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-4",
+      "goals_a": 6,
+      "goals_b": 4,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-0",
+      "goals_a": 7,
+      "goals_b": 0,
+      "probability": 0.00016666666666666666,
+      "probability_percent": 0.0167,
+      "outcome_key": "team_a",
+      "outcome_cn": "Brazil胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00016666666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Brazil win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    }
+  ],
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.12816666666666668,
+      "goals_a": 1,
+      "goals_b": 1
+    },
+    {
+      "score": "1-0",
+      "probability": 0.11016666666666666,
+      "goals_a": 1,
+      "goals_b": 0
+    },
+    {
+      "score": "0-1",
+      "probability": 0.10233333333333333,
+      "goals_a": 0,
+      "goals_b": 1
+    },
+    {
+      "score": "0-0",
+      "probability": 0.09016666666666667,
+      "goals_a": 0,
+      "goals_b": 0
+    },
+    {
+      "score": "2-1",
+      "probability": 0.0825,
+      "goals_a": 2,
+      "goals_b": 1
+    },
+    {
+      "score": "1-2",
+      "probability": 0.07716666666666666,
+      "goals_a": 1,
+      "goals_b": 2
+    },
+    {
+      "score": "2-0",
+      "probability": 0.06933333333333333,
+      "goals_a": 2,
+      "goals_b": 0
+    },
+    {
+      "score": "2-2",
+      "probability": 0.0535,
+      "goals_a": 2,
+      "goals_b": 2
+    }
+  ],
+  "source": "latest_state_v7.distribution.score_matrix + score_space_data if available",
+  "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties.",
+  "axis_note_en": "Rows show Brazil 90-minute goals and columns show Norway 90-minute goals; 5+ means at least five goals. Probabilities are full-match 90-minute score probabilities."
+}

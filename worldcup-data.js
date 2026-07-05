@@ -423,7 +423,51 @@ const knockoutScheduleUtc = {
   M104: "2026-07-19T19:00:00Z"
 };
 const knockoutMatchStatusByNo = {
-  M73: "finished"
+  M73: "finished",
+  M74: "finished",
+  M75: "finished",
+  M76: "finished",
+  M77: "finished",
+  M78: "finished",
+  M79: "finished",
+  M80: "finished",
+  M81: "finished",
+  M82: "finished",
+  M83: "finished",
+  M84: "finished",
+  M85: "finished",
+  M86: "finished",
+  M87: "finished",
+  M88: "finished",
+  M89: "finished",
+  M90: "finished"
+};
+const knockoutMatchTeamsByNo = {
+  M73: ["RSA", "CAN"],
+  M74: ["GER", "PAR"],
+  M75: ["NED", "MAR"],
+  M76: ["BRA", "JPN"],
+  M77: ["FRA", "SWE"],
+  M78: ["CIV", "NOR"],
+  M79: ["MEX", "ECU"],
+  M80: ["ENG", "COD"],
+  M81: ["BEL", "SEN"],
+  M82: ["USA", "BIH"],
+  M83: ["POR", "CRO"],
+  M84: ["ESP", "AUT"],
+  M85: ["SUI", "ALG"],
+  M86: ["ARG", "CPV"],
+  M87: ["COL", "GHA"],
+  M88: ["AUS", "EGY"],
+  M89: ["PAR", "FRA"],
+  M90: ["CAN", "MAR"],
+  M91: ["BRA", "NOR"],
+  M92: ["MEX", "ENG"],
+  M93: ["POR", "ESP"],
+  M94: ["BEL", "USA"],
+  M95: ["ARG", "EGY"],
+  M96: ["SUI", "COL"],
+  M97: ["FRA", "MAR"]
 };
 const formatKnockoutUtcTime = (value) => {
   const date = new Date(value);
@@ -450,6 +494,9 @@ const knockoutMatches = [
   const matchNo = nextKnockoutId++;
   const matchId = `M${matchNo}`;
   const kickoffUtc = knockoutScheduleUtc[matchId] || "";
+  const teamIds = knockoutMatchTeamsByNo[matchId] || [];
+  const homeTeam = window.WORLD_CUP_TEAMS[teamIds[0]] || null;
+  const awayTeam = window.WORLD_CUP_TEAMS[teamIds[1]] || null;
 
   return {
     id: matchId,
@@ -459,10 +506,10 @@ const knockoutMatches = [
     matchTime: formatKnockoutUtcTime(kickoffUtc),
     kickoffUtc,
     venue: "",
-    homeTeam: "",
-    awayTeam: "",
-    homeTeamId: "",
-    awayTeamId: "",
+    homeTeam: homeTeam?.nameZh || "",
+    awayTeam: awayTeam?.nameZh || "",
+    homeTeamId: teamIds[0] || "",
+    awayTeamId: teamIds[1] || "",
     predictionStatus: "pending",
     matchStatus: knockoutMatchStatusByNo[matchId] || "upcoming",
     predictedScore: "",
@@ -473,12 +520,42 @@ const knockoutMatches = [
   };
 }));
 
+const finishedKnockoutResults = {
+  M73: { actualResult: "南非 0-1 加拿大", actualScore: "0-1", hitStatus: "待复核" },
+  M74: { actualResult: "德国 1-1 巴拉圭（点球 3-4）", actualScore: "1-1", hitStatus: "待复核" },
+  M75: { actualResult: "荷兰 1-1 摩洛哥（点球 2-3）", actualScore: "1-1", hitStatus: "待复核" },
+  M76: { actualResult: "巴西 2-1 日本", actualScore: "2-1", hitStatus: "待复核" },
+  M77: { actualResult: "法国 3-0 瑞典", actualScore: "3-0", hitStatus: "待复核" },
+  M78: { actualResult: "科特迪瓦 1-2 挪威", actualScore: "1-2", hitStatus: "待复核" },
+  M79: { actualResult: "墨西哥 2-0 厄瓜多尔", actualScore: "2-0", hitStatus: "待复核" },
+  M80: { actualResult: "英格兰 2-1 刚果民主共和国", actualScore: "2-1", hitStatus: "待复核" },
+  M81: { actualResult: "比利时 3-2 塞内加尔", actualScore: "3-2", hitStatus: "待复核" },
+  M82: { actualResult: "美国 2-0 波黑", actualScore: "2-0", hitStatus: "待复核" },
+  M83: { actualResult: "葡萄牙 2-1 克罗地亚", actualScore: "2-1", hitStatus: "待复核" },
+  M84: { actualResult: "西班牙 3-0 奥地利", actualScore: "3-0", hitStatus: "待复核" },
+  M85: { actualResult: "瑞士 2-0 阿尔及利亚", actualScore: "2-0", hitStatus: "待复核" },
+  M86: { actualResult: "阿根廷 3-2 佛得角", actualScore: "3-2", hitStatus: "待复核" },
+  M87: { actualResult: "哥伦比亚 1-0 加纳", actualScore: "1-0", hitStatus: "待复核" },
+  M88: { actualResult: "澳大利亚 1-1 埃及（点球 2-4）", actualScore: "1-1", hitStatus: "待复核" },
+  M89: { actualResult: "巴拉圭 0-1 法国", actualScore: "0-1", hitStatus: "待复核" },
+  M90: { actualResult: "加拿大 0-3 摩洛哥", actualScore: "0-3", hitStatus: "待复核" }
+};
+
+knockoutMatches.forEach((match) => {
+  if (finishedKnockoutResults[match.id]) {
+    Object.assign(match, {
+      ...finishedKnockoutResults[match.id],
+      matchStatus: "finished"
+    });
+  }
+});
+
 window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...groupMatches,
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M89", "M90"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M91", "M92"];
 
 window.WORLD_CUP_KNOCKOUT_PROGRESS = {
   rounds: {
@@ -595,18 +672,73 @@ window.WORLD_CUP_KNOCKOUT_PROGRESS = {
     },
     round16: {
       M89: {
-        status: "scheduled",
+        status: "finished",
         teams: ["PAR", "FRA"],
         matchTime: "7月4日 21:00 UTC",
         kickoffUtc: "2026-07-04T21:00:00Z",
-        source: "M74 winner vs M77 winner"
+        source: "M74 winner vs M77 winner",
+        actualResult: "巴拉圭 0-1 法国",
+        winner: "FRA"
       },
       M90: {
-        status: "scheduled",
+        status: "finished",
         teams: ["CAN", "MAR"],
         matchTime: "7月4日 17:00 UTC",
         kickoffUtc: "2026-07-04T17:00:00Z",
-        source: "M73 winner vs M75 winner"
+        source: "M73 winner vs M75 winner",
+        actualResult: "加拿大 0-3 摩洛哥",
+        winner: "MAR"
+      },
+      M91: {
+        status: "scheduled",
+        teams: ["BRA", "NOR"],
+        matchTime: "7月5日 20:00 UTC",
+        kickoffUtc: "2026-07-05T20:00:00Z",
+        source: "M76 winner vs M78 winner"
+      },
+      M92: {
+        status: "scheduled",
+        teams: ["MEX", "ENG"],
+        matchTime: "7月6日 00:00 UTC",
+        kickoffUtc: "2026-07-06T00:00:00Z",
+        source: "M79 winner vs M80 winner"
+      },
+      M93: {
+        status: "scheduled",
+        teams: ["POR", "ESP"],
+        matchTime: "7月6日 19:00 UTC",
+        kickoffUtc: "2026-07-06T19:00:00Z",
+        source: "M83 winner vs M84 winner"
+      },
+      M94: {
+        status: "scheduled",
+        teams: ["BEL", "USA"],
+        matchTime: "7月7日 00:00 UTC",
+        kickoffUtc: "2026-07-07T00:00:00Z",
+        source: "M81 winner vs M82 winner"
+      },
+      M95: {
+        status: "scheduled",
+        teams: ["ARG", "EGY"],
+        matchTime: "7月7日 16:00 UTC",
+        kickoffUtc: "2026-07-07T16:00:00Z",
+        source: "M86 winner vs M88 winner"
+      },
+      M96: {
+        status: "scheduled",
+        teams: ["SUI", "COL"],
+        matchTime: "7月7日 20:00 UTC",
+        kickoffUtc: "2026-07-07T20:00:00Z",
+        source: "M85 winner vs M87 winner"
+      }
+    },
+    quarterfinal: {
+      M97: {
+        status: "scheduled",
+        teams: ["FRA", "MAR"],
+        matchTime: "7月9日 20:00 UTC",
+        kickoffUtc: "2026-07-09T20:00:00Z",
+        source: "M89 winner vs M90 winner"
       }
     }
   }

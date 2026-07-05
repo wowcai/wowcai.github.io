@@ -7,79 +7,159 @@
       "teams": ["RSA", "CAN"],
       "matchTime": "6月28日 19:00 UTC",
       "kickoffUtc": "2026-06-28T19:00:00Z",
-      "source": "A2 vs B2"
+      "source": "A2 vs B2",
+      "actualResult": "南非 0-1 加拿大",
+      "winner": "CAN"
     },
     {
       "matchNo": "M74",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["GER", "PAR"],
       "matchTime": "6月29日 20:30 UTC",
       "kickoffUtc": "2026-06-29T20:30:00Z",
-      "source": "E1 vs D2"
+      "source": "E1 vs D2",
+      "actualResult": "德国 1-1 巴拉圭（点球 3-4）",
+      "winner": "PAR"
     },
     {
       "matchNo": "M75",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["NED", "MAR"],
       "matchTime": "6月30日 01:00 UTC",
       "kickoffUtc": "2026-06-30T01:00:00Z",
-      "source": "F1 vs C2"
+      "source": "F1 vs C2",
+      "actualResult": "荷兰 1-1 摩洛哥（点球 2-3）",
+      "winner": "MAR"
     },
     {
       "matchNo": "M76",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["BRA", "JPN"],
       "matchTime": "6月29日 17:00 UTC",
       "kickoffUtc": "2026-06-29T17:00:00Z",
-      "source": "C1 vs F2"
+      "source": "C1 vs F2",
+      "actualResult": "巴西 2-1 日本",
+      "winner": "BRA"
     },
     {
       "matchNo": "M77",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["FRA", "SWE"],
       "matchTime": "6月30日 21:00 UTC",
       "kickoffUtc": "2026-06-30T21:00:00Z",
-      "source": "I1 vs F3"
+      "source": "I1 vs F3",
+      "actualResult": "法国 3-0 瑞典",
+      "winner": "FRA"
     },
     {
       "matchNo": "M78",
-      "status": "scheduled",
-      "teams": ["NOR", "CIV"],
+      "status": "finished",
+      "teams": ["CIV", "NOR"],
       "matchTime": "6月30日 17:00 UTC",
       "kickoffUtc": "2026-06-30T17:00:00Z",
-      "source": "I2 vs E2"
+      "source": "E2 vs I2",
+      "actualResult": "科特迪瓦 1-2 挪威",
+      "winner": "NOR"
     },
     {
       "matchNo": "M79",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["MEX", "ECU"],
       "matchTime": "7月1日 01:00 UTC",
       "kickoffUtc": "2026-07-01T01:00:00Z",
-      "source": "A1 vs E3"
+      "source": "A1 vs E3",
+      "actualResult": "墨西哥 2-0 厄瓜多尔",
+      "winner": "MEX"
     },
     {
       "matchNo": "M80",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["ENG", "COD"],
       "matchTime": "7月1日 16:00 UTC",
       "kickoffUtc": "2026-07-01T16:00:00Z",
-      "source": "L1 vs K3"
+      "source": "L1 vs K3",
+      "actualResult": "英格兰 2-1 刚果民主共和国",
+      "winner": "ENG"
     },
     {
       "matchNo": "M81",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["BEL", "SEN"],
       "matchTime": "7月1日 20:00 UTC",
       "kickoffUtc": "2026-07-01T20:00:00Z",
-      "source": "G1 vs I3"
+      "source": "G1 vs I3",
+      "actualResult": "比利时 3-2 塞内加尔",
+      "winner": "BEL"
     },
     {
       "matchNo": "M82",
-      "status": "scheduled",
+      "status": "finished",
       "teams": ["USA", "BIH"],
       "matchTime": "7月2日 00:00 UTC",
       "kickoffUtc": "2026-07-02T00:00:00Z",
-      "source": "D1 vs B3"
+      "source": "D1 vs B3",
+      "actualResult": "美国 2-0 波黑",
+      "winner": "USA"
+    },
+    {
+      "matchNo": "M83",
+      "status": "finished",
+      "teams": ["POR", "CRO"],
+      "matchTime": "7月2日 23:00 UTC",
+      "kickoffUtc": "2026-07-02T23:00:00Z",
+      "source": "K2 vs L2",
+      "actualResult": "葡萄牙 2-1 克罗地亚",
+      "winner": "POR"
+    },
+    {
+      "matchNo": "M84",
+      "status": "finished",
+      "teams": ["ESP", "AUT"],
+      "matchTime": "7月2日 19:00 UTC",
+      "kickoffUtc": "2026-07-02T19:00:00Z",
+      "source": "H1 vs J2",
+      "actualResult": "西班牙 3-0 奥地利",
+      "winner": "ESP"
+    },
+    {
+      "matchNo": "M85",
+      "status": "finished",
+      "teams": ["SUI", "ALG"],
+      "matchTime": "7月3日 03:00 UTC",
+      "kickoffUtc": "2026-07-03T03:00:00Z",
+      "source": "B1 vs J3",
+      "actualResult": "瑞士 2-0 阿尔及利亚",
+      "winner": "SUI"
+    },
+    {
+      "matchNo": "M86",
+      "status": "finished",
+      "teams": ["ARG", "CPV"],
+      "matchTime": "7月3日 22:00 UTC",
+      "kickoffUtc": "2026-07-03T22:00:00Z",
+      "source": "J1 vs H2",
+      "actualResult": "阿根廷 3-2 佛得角",
+      "winner": "ARG"
+    },
+    {
+      "matchNo": "M87",
+      "status": "finished",
+      "teams": ["COL", "GHA"],
+      "matchTime": "7月4日 01:30 UTC",
+      "kickoffUtc": "2026-07-04T01:30:00Z",
+      "source": "K1 vs L3",
+      "actualResult": "哥伦比亚 1-0 加纳",
+      "winner": "COL"
+    },
+    {
+      "matchNo": "M88",
+      "status": "finished",
+      "teams": ["AUS", "EGY"],
+      "matchTime": "7月3日 18:00 UTC",
+      "kickoffUtc": "2026-07-03T18:00:00Z",
+      "source": "D2 vs G2",
+      "actualResult": "澳大利亚 1-1 埃及（点球 2-4）",
+      "winner": "EGY"
     }
   ]
 }

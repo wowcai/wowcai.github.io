@@ -1,0 +1,1248 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M92",
+    "team_a": "Mexico",
+    "team_b": "England",
+    "kickoff_utc": "2026-07-05T18:00:00-06:00",
+    "venue": "Mexico City Stadium, Mexico City",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.40240384615384606,
+      "team_b": 0.597596153846154,
+      "favorite": "England"
+    },
+    "resolution": {
+      "normal_time": 0.7307692307692305,
+      "extra_time": 0.12067307692307688,
+      "penalties": 0.14855769230769214
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.12125,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "1-2",
+        "probability": 0.09875,
+        "goals_a": 1,
+        "goals_b": 2
+      },
+      {
+        "score": "0-1",
+        "probability": 0.08791666666666667,
+        "goals_a": 0,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，England常规时间晋级。",
+        "summary_cn": "90分钟0-1，England常规时间晋级。",
+        "probability": 0.10480769230769231,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_f0cecaacc136",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: England advances in normal time.",
+        "summary_en": "90 minutes 0-1: England advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+        "probability": 0.02403846153846154,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_73633dcab292",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+        "probability": 0.008653846153846154,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "England",
+        "path_id": "BMC_f343c0de38e3",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，England常规时间晋级。",
+        "summary_cn": "90分钟0-1，England常规时间晋级。",
+        "probability": 0.10480769230769231,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_f0cecaacc136",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: England advances in normal time.",
+        "summary_en": "90 minutes 0-1: England advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+        "probability": 0.02403846153846154,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_73633dcab292",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+        "probability": 0.008653846153846154,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "England",
+        "path_id": "BMC_f343c0de38e3",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties."
+      }
+    ],
+    "favorite": "England",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.14855769230769214,
+        "probability_band": "14.9%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "England",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008653846153846154,
+            "path_probability": 0.008653846153846154,
+            "path_id": "BMC_f343c0de38e3",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "England",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008173076923076924,
+            "path_probability": 0.008173076923076924,
+            "path_id": "BMC_833677b2c14a",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "England",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_0c04e701fc68",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，England点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, England advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "After both 90 minutes and extra time remain level, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12067307692307688,
+        "probability_band": "12.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "England",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.02403846153846154,
+            "path_probability": 0.02403846153846154,
+            "path_id": "BMC_73633dcab292",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Mexico",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.01730769230769231,
+            "path_probability": 0.01730769230769231,
+            "path_id": "BMC_9bc19242c322",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Mexico加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Mexico advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "England",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.015384615384615385,
+            "path_probability": 0.015384615384615385,
+            "path_id": "BMC_ceeb08ee7ea1",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，England加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; England advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk appetite become magnified in extra time and create resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2865384615384616,
+        "probability_band": "28.7%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Mexico",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07115384615384615,
+            "path_probability": 0.07115384615384615,
+            "path_id": "BMC_37eb5912b1d5",
+            "summary_cn": "90分钟2-1，Mexico常规时间晋级。",
+            "summary_en": "90 minutes 2-1: Mexico advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Mexico",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "1-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07067307692307692,
+            "path_probability": 0.07067307692307692,
+            "path_id": "BMC_2cccc2f2ab3d",
+            "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+            "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Mexico",
+            "after_extra_time_score": "2-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.04423076923076923,
+            "path_probability": 0.04423076923076923,
+            "path_id": "BMC_2ca8e7784725",
+            "summary_cn": "90分钟2-0，Mexico常规时间晋级。",
+            "summary_en": "90 minutes 2-0: Mexico advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can advance through a normal-time steal, an extra-time counterattack or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 168,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "England",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10480769230769231,
+          "path_probability": 0.10480769230769231,
+          "path_id": "BMC_f0cecaacc136",
+          "summary_cn": "90分钟0-1，England常规时间晋级。",
+          "summary_en": "90 minutes 0-1: England advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "England",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08990384615384615,
+          "path_probability": 0.08990384615384615,
+          "path_id": "BMC_354d3616ca06",
+          "summary_cn": "90分钟1-2，England常规时间晋级。",
+          "summary_en": "90 minutes 1-2: England advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Mexico",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07115384615384615,
+          "path_probability": 0.07115384615384615,
+          "path_id": "BMC_37eb5912b1d5",
+          "summary_cn": "90分钟2-1，Mexico常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Mexico advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Mexico",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07067307692307692,
+          "path_probability": 0.07067307692307692,
+          "path_id": "BMC_2cccc2f2ab3d",
+          "summary_cn": "90分钟1-0，Mexico常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Mexico advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "England",
+          "after_extra_time_score": "0-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.0673076923076923,
+          "path_probability": 0.0673076923076923,
+          "path_id": "BMC_e041e45e6f17",
+          "summary_cn": "90分钟0-2，England常规时间晋级。",
+          "summary_en": "90 minutes 0-2: England advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟0-1，England常规时间晋级。",
+          "summary_cn": "90分钟0-1，England常规时间晋级。",
+          "probability": 0.10480769230769231,
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-1",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-1",
+          "penalty_score": null,
+          "advancer_team": "England",
+          "path_id": "BMC_f0cecaacc136",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 0-1: England advances in normal time.",
+          "summary_en": "90 minutes 0-1: England advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+          "probability": 0.02403846153846154,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-1",
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "England",
+          "path_id": "BMC_73633dcab292",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+          "probability": 0.008653846153846154,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "3-4",
+          "advancer_team": "England",
+          "path_id": "BMC_f343c0de38e3",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，England常规时间晋级。",
+        "summary_cn": "90分钟0-1，England常规时间晋级。",
+        "probability": 0.10480769230769231,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_f0cecaacc136",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: England advances in normal time.",
+        "summary_en": "90 minutes 0-1: England advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，England加时晋级。",
+        "probability": 0.02403846153846154,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "England",
+        "path_id": "BMC_73633dcab292",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; England advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，England点球晋级。",
+        "probability": 0.008653846153846154,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "England",
+        "path_id": "BMC_f343c0de38e3",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, England advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.3191666666666665,
+          "base_event_probability": 0.3191666666666665,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.06354166666666666,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match opens up end to end, with both attacks converting chances."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.04604166666666667,
+              "rationale_cn": "England充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "England fully capitalizes on counterattacks or attacking efficiency to extend the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.031875,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk, open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.029375,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk, open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.02666666666666667,
+              "rationale_cn": "英格兰中路推进与定位球对冲墨西哥宽度轮转，平局后风险偏好；Mexico打破对方防守后扩大领先优势。",
+              "rationale_en": "England’s central progression and set pieces counter Mexico’s wide rotations, with risk appetite after a draw; Mexico extends the lead after breaking down the defense."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "1-3",
+            "2-3"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or space after a lead pushing total goals well above the main low-score lean."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.12041666666666669,
+          "base_event_probability": 0.12041666666666669,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.03145833333333333,
+              "rationale_cn": "英格兰中路推进与定位球对冲墨西哥宽度轮转，平局后风险偏好；England充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "England's central progression and set pieces offset Mexico's width rotations, with risk appetite after a draw; England fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.01875,
+              "rationale_cn": "英格兰中路推进与定位球对冲墨西哥宽度轮转，平局后风险偏好；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "England’s central progression and set pieces counter Mexico’s wide rotations, with risk appetite after a draw; the match shifts into a high-risk open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "3-0",
+              "probability": 0.017083333333333332,
+              "rationale_cn": "关键球员状态与角色变化、点球分支偏向英格兰准备体系，但墨西哥主场情绪与门将方案保；Mexico打破对方防守后扩大领先优势。",
+              "rationale_en": "Key player form, role changes, and penalty scenarios lean toward England’s preparation system, but Mexico’s home energy and goalkeeper plan provide cover; Mexico extends the lead after breaking through the defense."
+            },
+            {
+              "score": "0-4",
+              "probability": 0.012708333333333334,
+              "rationale_cn": "点球分支偏向英格兰准备体系，但墨西哥主场情绪与门将方案保；England充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "The penalty branch leans toward England’s preparation system, while Mexico’s home emotion and goalkeeper plan keep them in it; England fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0077083333333333335,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk, open tempo, with space behind the defense continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "0-3",
+            "1-4",
+            "3-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fitness issues, or defensive imbalance breaks the game open, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.2929166666666666,
+          "base_event_probability": 0.2929166666666666,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-1",
+              "probability": 0.07583333333333334,
+              "rationale_cn": "Mexico在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Mexico edge the key matchups and close out the match by one goal."
+            },
+            {
+              "score": "1-0",
+              "probability": 0.0675,
+              "rationale_cn": "英格兰中路推进与定位球对冲墨西哥宽度轮转，平局后风险偏好；Mexico在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "England's central progression and set pieces offset Mexico's width rotations, with risk appetite after a draw; Mexico edges the key matchups and closes the match with a one-goal advantage."
+            },
+            {
+              "score": "2-0",
+              "probability": 0.042916666666666665,
+              "rationale_cn": "点球分支偏向英格兰准备体系，但墨西哥主场情绪与门将方案保；Mexico打破对方防守后扩大领先优势。",
+              "rationale_en": "The penalty branch leans toward England’s preparation system, while Mexico’s home emotion and goalkeeper plan keep them in it; Mexico breaks down the opposing defense and extends the lead."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.029375,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk, open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.02666666666666667,
+              "rationale_cn": "英格兰中路推进与定位球对冲墨西哥宽度轮转，平局后风险偏好；Mexico打破对方防守后扩大领先优势。",
+              "rationale_en": "England’s central progression and set pieces counter Mexico’s wide rotations, with risk appetite after a draw; Mexico extends the lead after breaking down the defense."
+            }
+          ],
+          "display_scores": [
+            "2-1",
+            "1-0",
+            "2-0"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored pre-match or in the main prediction wins within 90 minutes.",
+          "rationale_en": "The underdog changes the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "墨西哥城高原",
+          "impact_cn": "比赛在墨西哥城约7000英尺海拔进行，未充分适应的球员更易疲劳。虽然赛制名义中立，但这是墨西哥真实环境优势。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Mexico City altitude",
+          "impact_en": "The match is in Mexico City at roughly 7,000 feet, where unadapted players can tire faster. This is a real environmental edge for Mexico even though the tournament format is nominally neutral.",
+          "text_cn": "比赛在墨西哥城约7000英尺海拔进行，未充分适应的球员更易疲劳。虽然赛制名义中立，但这是墨西哥真实环境优势。",
+          "text_en": "The match is in Mexico City at roughly 7,000 feet, where unadapted players can tire faster. This is a real environmental edge for Mexico even though the tournament format is nominally neutral."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "墨西哥压迫与宽度",
+          "impact_cn": "墨西哥的高位压迫、快速组合和宽度轮转能在早段制造扰动，尤其当英格兰仍在适应高原和球迷环境时。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Mexico pressing and width",
+          "impact_en": "Mexico’s high pressing, quick combinations and wide rotations can create early disruption, especially if England need time to adapt to altitude and crowd conditions.",
+          "text_cn": "墨西哥的高位压迫、快速组合和宽度轮转能在早段制造扰动，尤其当英格兰仍在适应高原和球迷环境时。",
+          "text_en": "Mexico’s high pressing, quick combinations and wide rotations can create early disruption, especially if England need time to adapt to altitude and crowd conditions."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "英格兰点球准备",
+          "impact_cn": "英格兰的门将和点球准备是后程因素，尤其在墨西哥能把比赛拖出常规时间时变得重要。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "England penalty preparation",
+          "impact_en": "England’s goalkeeper and penalty-preparation profile is a real late-game factor, but it matters most if Mexico can drag the match beyond normal time.",
+          "text_cn": "英格兰的门将和点球准备是后程因素，尤其在墨西哥能把比赛拖出常规时间时变得重要。",
+          "text_en": "England’s goalkeeper and penalty-preparation profile is a real late-game factor, but it matters most if Mexico can drag the match beyond normal time."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "赖斯可出战",
+          "impact_cn": "Declan Rice预计可出战有助于英格兰稳定中场，降低单纯被高原因素击穿的风险。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Rice availability",
+          "impact_en": "Declan Rice being expected to play stabilizes England’s midfield and reduces the chance that the altitude factor alone overwhelms their control structure.",
+          "text_cn": "Declan Rice预计可出战有助于英格兰稳定中场，降低单纯被高原因素击穿的风险。",
+          "text_en": "Declan Rice being expected to play stabilizes England’s midfield and reduces the chance that the altitude factor alone overwhelms their control structure."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "墨西哥主场区域优势",
+          "impact_cn": "墨西哥的经验、球迷支持和环境熟悉度提升爆冷路径，尤其体现在强度和定位球上。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Mexico host-region edge",
+          "impact_en": "Mexico’s experience, crowd support and familiarity with the environment improve their upset path, especially through intensity and set pieces.",
+          "text_cn": "墨西哥的经验、球迷支持和环境熟悉度提升爆冷路径，尤其体现在强度和定位球上。",
+          "text_en": "Mexico’s experience, crowd support and familiarity with the environment improve their upset path, especially through intensity and set pieces."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "英格兰实力差距",
+          "impact_cn": "英格兰整体阵容深度仍更强，因此模型保留英格兰热门，但没有抹掉墨西哥城风险。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "England quality gap",
+          "impact_en": "England still carry the stronger squad-depth profile. The model therefore keeps England as favorite, but not in a way that erases Mexico City risk.",
+          "text_cn": "英格兰整体阵容深度仍更强，因此模型保留英格兰热门，但没有抹掉墨西哥城风险。",
+          "text_en": "England still carry the stronger squad-depth profile. The model therefore keeps England as favorite, but not in a way that erases Mexico City risk."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.26923076923076905,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.19642857142857156,
+          "joint_probability": 0.052884615384615384,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.19642857142857156
+            },
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.12500000000000008
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-0"
+          ],
+          "rationale_cn": "England凭借体能、替补或反击效率在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A 1-goal result in 30 minutes of extra time comes through counters, set pieces, or substitute impact.",
+          "rationale_en": "England wins extra time by one goal through fitness, substitutes, or counterattack efficiency."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.07857142857142856,
+          "joint_probability": 0.021153846153846134,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.07857142857142856
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.021428571428571443
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.01250000000000001
+            },
+            {
+              "score": "1-3",
+              "increment": "1-3",
+              "probability": 0.003571428571428574
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "1-2",
+            "2-1"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, with the match shifting from caution into open end-to-end play.",
+          "rationale_en": "The game opened up in extra time, with each side converting one good chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.05000000000000004,
+          "joint_probability": 0.013461538461538462,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.05000000000000004
+            },
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.02857142857142859
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.021428571428571443
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.01250000000000001
+            }
+          ],
+          "display_scores": [
+            "0-2",
+            "2-0",
+            "1-2"
+          ],
+          "rationale_cn": "England在对手压上后连续制造转换机会。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A side wins extra time by at least 2 goals, or breaks through with total goals reaching 3 or more.",
+          "rationale_en": "England repeatedly creates transition chances after the opponent pushes up."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "高原后程因素",
+          "impact_cn": "若进入加时，墨西哥城海拔会更关键，冲刺恢复、注意力和肌肉疲劳都会被放大。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Altitude late-game factor",
+          "impact_en": "If the match reaches extra time, Mexico City altitude becomes more important because repeated sprints, recovery and concentration all decline late.",
+          "text_cn": "若进入加时，墨西哥城海拔会更关键，冲刺恢复、注意力和肌肉疲劳都会被放大。",
+          "text_en": "If the match reaches extra time, Mexico City altitude becomes more important because repeated sprints, recovery and concentration all decline late."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "墨西哥加时前段冲击",
+          "impact_cn": "墨西哥加时最佳路径是利用球迷能量、定位球和边路进攻，在英格兰完全稳定前先发力。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Mexico early-extra push",
+          "impact_en": "Mexico’s best extra-time route is an immediate pressure spell before England fully settle, using crowd energy, set pieces and wide attacks.",
+          "text_cn": "墨西哥加时最佳路径是利用球迷能量、定位球和边路进攻，在英格兰完全稳定前先发力。",
+          "text_en": "Mexico’s best extra-time route is an immediate pressure spell before England fully settle, using crowd energy, set pieces and wide attacks."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "英格兰深度回应",
+          "impact_cn": "英格兰最强加时路径是依靠替补深度和中场控制，熬过墨西哥前段冲击后接管比赛。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "England depth response",
+          "impact_en": "England’s strongest extra-time route is bench depth and midfield control after surviving Mexico’s initial pressure wave.",
+          "text_cn": "英格兰最强加时路径是依靠替补深度和中场控制，熬过墨西哥前段冲击后接管比赛。",
+          "text_en": "England’s strongest extra-time route is bench depth and midfield control after surviving Mexico’s initial pressure wave."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "点球前谨慎",
+          "impact_cn": "双方都知道点球存在，因此加时可能更谨慎，而不是完全开放。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Penalty-aware caution",
+          "impact_en": "Both sides know penalties remain available, so the extra-time branch may become cautious rather than wide open.",
+          "text_cn": "双方都知道点球存在，因此加时可能更谨慎，而不是完全开放。",
+          "text_en": "Both sides know penalties remain available, so the extra-time branch may become cautious rather than wide open."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "关键人在场",
+          "impact_cn": "加时天平取决于墨西哥创造者和英格兰中场核心是否仍在场且保持身体效率。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Key players on pitch",
+          "impact_en": "The extra-time balance depends heavily on whether Mexico’s creators and England’s midfield spine are still on the field and physically effective.",
+          "text_cn": "加时天平取决于墨西哥创造者和英格兰中场核心是否仍在场且保持身体效率。",
+          "text_en": "The extra-time balance depends heavily on whether Mexico’s creators and England’s midfield spine are still on the field and physically effective."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "一球分胜负",
+          "impact_cn": "加时主分支是一球分胜负，多球崩盘只应作为尾部情景。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "One-goal resolution",
+          "impact_en": "The main extra-time winning branch is a one-goal margin. A multi-goal collapse should be treated as a tail scenario.",
+          "text_cn": "加时主分支是一球分胜负，多球崩盘只应作为尾部情景。",
+          "text_en": "The main extra-time winning branch is a one-goal margin. A multi-goal collapse should be treated as a tail scenario."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration, four expert agents, committee aggregation, conditional rollout, conditional Monte Carlo matrix, extra-time tail audit and report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.14855769230769214,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper makes consecutive penalty saves to change the result."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper makes consecutive penalty saves to change the result."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One keeper makes consecutive penalty saves or the opponent misses several in a row, quickly widening the shootout score.",
+          "rationale_en": "The goalkeeper makes consecutive penalty saves to change the result."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误。",
+              "rationale_en": "Key penalty taker from the favored team misses under pressure."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "Key penalty taker from the favored team misses under pressure."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides were strong through the first five rounds, sending it to extended penalties."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides were strong through the first five rounds, with the match decided only after entering 6+ sudden death.",
+          "rationale_en": "Both sides were strong through the first five rounds, sending it to extended penalties."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "英格兰准备优势",
+          "impact_cn": "英格兰近期点球准备和门将配置给他们一个可信结构，但不足以把点球变成确定优势。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "England preparation edge",
+          "impact_en": "England’s recent penalty preparation and goalkeeper profile give them a credible shootout structure, but not enough to make penalties deterministic.",
+          "text_cn": "英格兰近期点球准备和门将配置给他们一个可信结构，但不足以把点球变成确定优势。",
+          "text_en": "England’s recent penalty preparation and goalkeeper profile give them a credible shootout structure, but not enough to make penalties deterministic."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "墨西哥球迷压力",
+          "impact_cn": "墨西哥城点球大战会形成强烈球迷压力，这可能帮助墨西哥，也会给双方主罚手制造噪声。",
+          "direction": "team_a",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Mexico crowd pressure",
+          "impact_en": "A shootout in Mexico City creates a strong crowd-pressure environment that can help Mexico emotionally while adding noise for both taker groups.",
+          "text_cn": "墨西哥城点球大战会形成强烈球迷压力，这可能帮助墨西哥，也会给双方主罚手制造噪声。",
+          "text_en": "A shootout in Mexico City creates a strong crowd-pressure environment that can help Mexico emotionally while adding noise for both taker groups."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差点球主线",
+          "impact_cn": "点球主形态是一球差，而不是大比分点球差距。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "One-goal shootout line",
+          "impact_en": "The main penalty shape is a one-kick margin rather than a blowout sequence. Frontend copy should emphasize fine margins.",
+          "text_cn": "点球主形态是一球差，而不是大比分点球差距。",
+          "text_en": "The main penalty shape is a one-kick margin rather than a blowout sequence. Frontend copy should emphasize fine margins."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "主罚顺序未固定",
+          "impact_cn": "具体点球顺序未公开确认，前端不应锁定主罚序列。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Taker order not fixed",
+          "impact_en": "The exact taker order is not publicly confirmed, so the display should avoid naming a locked sequence unless later evidence supports it.",
+          "text_cn": "具体点球顺序未公开确认，前端不应锁定主罚序列。",
+          "text_en": "The exact taker order is not publicly confirmed, so the display should avoid naming a locked sequence unless later evidence supports it."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "阵容深度因素",
+          "impact_cn": "英格兰可能拥有更多成熟主罚人选，但优势取决于换人和120分钟后谁还在场。",
+          "direction": "team_b",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Squad-depth factor",
+          "impact_en": "England may have more established penalty candidates, but that advantage depends on substitutions and who remains on the pitch after 120 minutes.",
+          "text_cn": "英格兰可能拥有更多成熟主罚人选，但优势取决于换人和120分钟后谁还在场。",
+          "text_en": "England may have more established penalty candidates, but that advantage depends on substitutions and who remains on the pitch after 120 minutes."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "延长点球尾部",
+          "impact_cn": "若前五轮都稳定命中，延长点球有可能出现，但这是波动尾部。",
+          "direction": "neutral",
+          "evidence_ids": [],
+          "source_names": [
+            "manual_web_display_fix"
+          ],
+          "label_en": "Extended-penalty tail",
+          "impact_en": "Extended penalties are possible if the first five are clean. This is a volatility tail rather than the central forecast.",
+          "text_cn": "若前五轮都稳定命中，延长点球有可能出现，但这是波动尾部。",
+          "text_en": "Extended penalties are possible if the first five are clean. This is a volatility tail rather than the central forecast."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration, four expert agents, committee aggregation, penalty-sequence rollout, shootout score matrix, penalty tail audit and report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-03T20:32:51.262302Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-stage mechanisms; MAS rollout jointly models 90 minutes, extra time if level, and penalties if still level; Monte Carlo samples the complete path tree.",
+  "architecture_en": "Extra time and penalties are not independent post-processing outputs; they are driven by the same MAS conditional rollout. The frontend tabs are different slices of one complete path distribution while the JSON schema remains compatible with v6.2.2."
+}

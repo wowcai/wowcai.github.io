@@ -1,0 +1,747 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "matrix_type": "extra_time_increment_dense_4x4",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "axis_note_cn": "纵轴为加时阶段team_a增量进球，横轴为team_b增量进球；3+表示至少3球。概率为进入加时后的条件概率。",
+  "row_axis": {
+    "team": "Brazil",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3+"
+    ]
+  },
+  "column_axis": {
+    "team": "Norway",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3+"
+    ]
+  },
+  "matrix": [
+    [
+      0.5082644628099169,
+      0.15289256198347126,
+      0.03030303030303034,
+      0.0
+    ],
+    [
+      0.18181818181818205,
+      0.05922865013774111,
+      0.011019283746556488,
+      0.0027548209366391216
+    ],
+    [
+      0.0316804407713499,
+      0.008264462809917364,
+      0.006887052341597805,
+      0.0
+    ],
+    [
+      0.006887052341597805,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "0",
+      "probability": 0.5082644628099169,
+      "probability_percent": 50.8264,
+      "top_scores": [
+        {
+          "score": "0-0",
+          "probability": 0.5082644628099169
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "1",
+      "probability": 0.15289256198347126,
+      "probability_percent": 15.2893,
+      "top_scores": [
+        {
+          "score": "0-1",
+          "probability": 0.15289256198347126
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "2",
+      "probability": 0.03030303030303034,
+      "probability_percent": 3.0303,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.03030303030303034
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "0",
+      "probability": 0.18181818181818205,
+      "probability_percent": 18.1818,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.18181818181818205
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "1",
+      "probability": 0.05922865013774111,
+      "probability_percent": 5.9229,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.05922865013774111
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "2",
+      "probability": 0.011019283746556488,
+      "probability_percent": 1.1019,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.011019283746556488
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0027548209366391216,
+      "probability_percent": 0.2755,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.0027548209366391216
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "0",
+      "probability": 0.0316804407713499,
+      "probability_percent": 3.168,
+      "top_scores": [
+        {
+          "score": "2-0",
+          "probability": 0.0316804407713499
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "1",
+      "probability": 0.008264462809917364,
+      "probability_percent": 0.8264,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.008264462809917364
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "2",
+      "probability": 0.006887052341597805,
+      "probability_percent": 0.6887,
+      "top_scores": [
+        {
+          "score": "2-2",
+          "probability": 0.006887052341597805
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "0",
+      "probability": 0.006887052341597805,
+      "probability_percent": 0.6887,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.006887052341597805
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    }
+  ],
+  "rows": [
+    {
+      "increment": "0-0",
+      "score": "0-0",
+      "extra_goals_a": 0,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.5082644628099169,
+      "joint_probability": 0.14192307692307662,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.5082644628099169,
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "rationale_en": "Extra time is short and knockout risk appetite falls, so remaining level is a high-probability base branch."
+    },
+    {
+      "increment": "1-0",
+      "score": "1-0",
+      "extra_goals_a": 1,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.18181818181818205,
+      "joint_probability": 0.05076923076923077,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_resolution",
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.18181818181818205,
+      "rationale_cn": "Brazil凭借体能、替补或压迫优势在加时净胜一球。",
+      "rationale_en": "Brazil wins extra time by one goal through fitness, bench, or pressing advantages."
+    },
+    {
+      "increment": "0-1",
+      "score": "0-1",
+      "extra_goals_a": 0,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.15289256198347126,
+      "joint_probability": 0.042692307692307696,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_resolution",
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.15289256198347126,
+      "rationale_cn": "Norway凭借体能、替补或反击效率在加时净胜一球。",
+      "rationale_en": "Norway wins extra time by one goal through fitness, substitutes or counterattack efficiency."
+    },
+    {
+      "increment": "1-1",
+      "score": "1-1",
+      "extra_goals_a": 1,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.05922865013774111,
+      "joint_probability": 0.016538461538461537,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.05922865013774111,
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+    },
+    {
+      "increment": "2-0",
+      "score": "2-0",
+      "extra_goals_a": 2,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.0316804407713499,
+      "joint_probability": 0.008846153846153846,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.0316804407713499,
+      "rationale_cn": "Brazil在对手体能或心理崩盘后拉开比分。",
+      "rationale_en": "Brazil pulls away after the opponent collapses physically or mentally."
+    },
+    {
+      "increment": "0-2",
+      "score": "0-2",
+      "extra_goals_a": 0,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.03030303030303034,
+      "joint_probability": 0.008461538461538461,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.03030303030303034,
+      "rationale_cn": "Norway在对手压上后连续制造转换机会。",
+      "rationale_en": "Norway creates repeated transition chances after the opponent pushes forward."
+    },
+    {
+      "increment": "1-2",
+      "score": "1-2",
+      "extra_goals_a": 1,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.011019283746556488,
+      "joint_probability": 0.0030769230769230774,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.011019283746556488,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "2-1",
+      "score": "2-1",
+      "extra_goals_a": 2,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.008264462809917364,
+      "joint_probability": 0.0023076923076923075,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.008264462809917364,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "3-0",
+      "score": "3-0",
+      "extra_goals_a": 3,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.006887052341597805,
+      "joint_probability": 0.0019230769230769232,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.006887052341597805,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "2-2",
+      "score": "2-2",
+      "extra_goals_a": 2,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.006887052341597805,
+      "joint_probability": 0.0019230769230769232,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.006887052341597805,
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "increment": "1-3",
+      "score": "1-3",
+      "extra_goals_a": 1,
+      "extra_goals_b": 3,
+      "conditional_probability": 0.0027548209366391216,
+      "joint_probability": 0.0007692307692307692,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0027548209366391216,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    }
+  ],
+  "after_extra_time_top": [
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.5082644628099169,
+      "after_extra_time_score": "1-1",
+      "joint_branch_probability": 0.06514256198347101,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.5082644628099169,
+      "after_extra_time_score": "0-0",
+      "joint_branch_probability": 0.04582851239669417,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0535,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.5082644628099169,
+      "after_extra_time_score": "2-2",
+      "joint_branch_probability": 0.02719214876033055,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.18181818181818205,
+      "after_extra_time_score": "2-1",
+      "joint_branch_probability": 0.023303030303030336,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.15289256198347126,
+      "after_extra_time_score": "1-2",
+      "joint_branch_probability": 0.019595730027548233,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.18181818181818205,
+      "after_extra_time_score": "1-0",
+      "joint_branch_probability": 0.016393939393939416,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.15289256198347126,
+      "after_extra_time_score": "0-1",
+      "joint_branch_probability": 0.013785812672176326,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0535,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.18181818181818205,
+      "after_extra_time_score": "3-2",
+      "joint_branch_probability": 0.009727272727272739,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0535,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.15289256198347126,
+      "after_extra_time_score": "2-3",
+      "joint_branch_probability": 0.008179752066115712,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.05922865013774111,
+      "after_extra_time_score": "2-2",
+      "joint_branch_probability": 0.007591138659320486,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.05922865013774111,
+      "after_extra_time_score": "1-1",
+      "joint_branch_probability": 0.0053404499540863236,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.009833333333333333,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.5082644628099169,
+      "after_extra_time_score": "3-3",
+      "joint_branch_probability": 0.004997933884297516,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.0316804407713499,
+      "after_extra_time_score": "3-1",
+      "joint_branch_probability": 0.004060376492194679,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.03030303030303034,
+      "after_extra_time_score": "1-3",
+      "joint_branch_probability": 0.0038838383838383887,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0535,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.05922865013774111,
+      "after_extra_time_score": "3-3",
+      "joint_branch_probability": 0.0031687327823691496,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.0316804407713499,
+      "after_extra_time_score": "2-0",
+      "joint_branch_probability": 0.0028565197428833825,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.03030303030303034,
+      "after_extra_time_score": "0-2",
+      "joint_branch_probability": 0.0027323232323232358,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.009833333333333333,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.18181818181818205,
+      "after_extra_time_score": "4-3",
+      "joint_branch_probability": 0.0017878787878787901,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0535,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.0316804407713499,
+      "after_extra_time_score": "4-2",
+      "joint_branch_probability": 0.0016949035812672195,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0535,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.03030303030303034,
+      "after_extra_time_score": "2-4",
+      "joint_branch_probability": 0.0016212121212121232,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.009833333333333333,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.15289256198347126,
+      "after_extra_time_score": "3-4",
+      "joint_branch_probability": 0.0015034435261708006,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.011019283746556488,
+      "after_extra_time_score": "2-3",
+      "joint_branch_probability": 0.0014123048668503234,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "2-1",
+      "extra_time_increment_probability": 0.008264462809917364,
+      "after_extra_time_score": "3-2",
+      "joint_branch_probability": 0.0010592286501377422,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.011019283746556488,
+      "after_extra_time_score": "1-2",
+      "joint_branch_probability": 0.0009935720844811767,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "3-0",
+      "extra_time_increment_probability": 0.006887052341597805,
+      "after_extra_time_score": "4-1",
+      "joint_branch_probability": 0.000882690541781452,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12816666666666668,
+      "extra_time_increment": "2-2",
+      "extra_time_increment_probability": 0.006887052341597805,
+      "after_extra_time_score": "3-3",
+      "joint_branch_probability": 0.000882690541781452,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "2-1",
+      "extra_time_increment_probability": 0.008264462809917364,
+      "after_extra_time_score": "2-1",
+      "joint_branch_probability": 0.0007451790633608824,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "3-0",
+      "extra_time_increment_probability": 0.006887052341597805,
+      "after_extra_time_score": "3-0",
+      "joint_branch_probability": 0.0006209825528007355,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.09016666666666667,
+      "extra_time_increment": "2-2",
+      "extra_time_increment_probability": 0.006887052341597805,
+      "after_extra_time_score": "2-2",
+      "joint_branch_probability": 0.0006209825528007355,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0535,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.011019283746556488,
+      "after_extra_time_score": "3-4",
+      "joint_branch_probability": 0.0005895316804407721,
+      "extra_time_outcome": "team_b"
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "1-1入口",
+      "impact_cn": "加时最主要入口是1-1，这让巴西技术压迫和挪威直线出口在90分钟后都仍然重要。",
+      "direction": "neutral",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_display_fix"
+      ],
+      "label_en": "1-1 entry point",
+      "impact_en": "The main extra-time doorway is a 1-1 normal-time draw. That keeps both Brazil’s technical pressure and Norway’s direct outlet relevant after 90 minutes.",
+      "text_cn": "加时最主要入口是1-1，这让巴西技术压迫和挪威直线出口在90分钟后都仍然重要。",
+      "text_en": "The main extra-time doorway is a 1-1 normal-time draw. That keeps both Brazil’s technical pressure and Norway’s direct outlet relevant after 90 minutes."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "巴西一球路径",
+      "impact_cn": "巴西加时最佳路径是持续压迫、边路单挑和替补冲击制造一个决定性进球。",
+      "direction": "team_a",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_display_fix"
+      ],
+      "label_en": "Brazil one-goal route",
+      "impact_en": "Brazil’s best extra-time path is sustained pressure, wing isolation and substitute impact producing a single decisive goal.",
+      "text_cn": "巴西加时最佳路径是持续压迫、边路单挑和替补冲击制造一个决定性进球。",
+      "text_en": "Brazil’s best extra-time path is sustained pressure, wing isolation and substitute impact producing a single decisive goal."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "挪威反击路径",
+      "impact_cn": "挪威加时路径来自长传、哈兰德牵制和巴西压上后的身后空间。",
+      "direction": "team_b",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_display_fix"
+      ],
+      "label_en": "Norway counter route",
+      "impact_en": "Norway’s extra-time route comes from direct balls, Haaland gravity and attacks into space after Brazil push numbers forward.",
+      "text_cn": "挪威加时路径来自长传、哈兰德牵制和巴西压上后的身后空间。",
+      "text_en": "Norway’s extra-time route comes from direct balls, Haaland gravity and attacks into space after Brazil push numbers forward."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "疲劳平衡",
+      "impact_cn": "挪威长期低位会产生疲劳缺口；但如果巴西过度压上，同样会给挪威转换空间。",
+      "direction": "neutral",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_display_fix"
+      ],
+      "label_en": "Fatigue balance",
+      "impact_en": "If Norway defend deep for long stretches, fatigue can open gaps. If Brazil overcommit, the same fatigue can leave transition space behind them.",
+      "text_cn": "挪威长期低位会产生疲劳缺口；但如果巴西过度压上，同样会给挪威转换空间。",
+      "text_en": "If Norway defend deep for long stretches, fatigue can open gaps. If Brazil overcommit, the same fatigue can leave transition space behind them."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "点球拖延仍存在",
+      "impact_cn": "由于比赛接近且1-1权重较高，不能假定双方一定能在点球前解决。",
+      "direction": "neutral",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_display_fix"
+      ],
+      "label_en": "Penalty drag remains live",
+      "impact_en": "Because the matchup is close and the top draw score is prominent, neither side can be assumed to resolve it before penalties.",
+      "text_cn": "由于比赛接近且1-1权重较高，不能假定双方一定能在点球前解决。",
+      "text_en": "Because the matchup is close and the top draw score is prominent, neither side can be assumed to resolve it before penalties."
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "开放加时为尾部",
+      "impact_cn": "双向开放加时可能发生，但低于0-0、1-0或0-1这类一球增量路径。",
+      "direction": "neutral",
+      "evidence_ids": [],
+      "source_names": [
+        "manual_web_display_fix"
+      ],
+      "label_en": "Open extra time is a tail",
+      "impact_en": "A two-way extra-time exchange is possible, but it remains lower frequency than 0-0, 1-0 or 0-1 increments.",
+      "text_cn": "双向开放加时可能发生，但低于0-0、1-0或0-1这类一球增量路径。",
+      "text_en": "A two-way extra-time exchange is possible, but it remains lower frequency than 0-0, 1-0 or 0-1 increments."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+  "axis_note_en": "Rows show Brazil extra-time goals and columns show Norway extra-time goals; 3+ means at least three goals. Probabilities are conditional on reaching extra time."
+}

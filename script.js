@@ -727,14 +727,17 @@ function updateWorldCupPredictionRangeBadges() {
   updateTournamentPredictionRangeBadge(worldCupTournamentEvidenceFiles);
 }
 
-function updateGamePredictionRangeBadge(specs = []) {
+function updateGamePredictionRangeBadge(specs = [], matches = []) {
   const node = document.querySelector("[data-worldcup-game-prediction-range]");
 
   if (!node) {
     return;
   }
 
-  setRangeBadge(node, formatPredictionRangeLabel(getGamePredictionVersionLabels(specs)));
+  const loadedLabels = getGamePredictionUpdatedAtLabels(matches);
+  const fallbackLabels = getGamePredictionVersionLabels(specs);
+
+  setRangeBadge(node, formatLatestPredictionTimeLabel(loadedLabels.length ? loadedLabels : fallbackLabels));
 }
 
 function updateTournamentPredictionRangeBadge(files = []) {
@@ -764,6 +767,13 @@ function getGamePredictionVersionLabels(specs = []) {
 function getTournamentEvidenceTimeLabels(files = []) {
   return (files || [])
     .map((fileName) => extractTournamentEvidenceDate(fileName))
+    .filter(Boolean)
+    .sort(comparePredictionTimeLabels);
+}
+
+function getGamePredictionUpdatedAtLabels(matches = []) {
+  return (matches || [])
+    .map((match) => match?.updatedAt || getLatestMatchPredictionVersion(match)?.timeLabel || getLatestMatchPredictionVersion(match)?.time || "")
     .filter(Boolean)
     .sort(comparePredictionTimeLabels);
 }
@@ -867,7 +877,7 @@ async function loadWorldCupGamePredictions(baseMatches = worldCupMatches || []) 
     latestMatches.querySelectorAll("[data-open-match-modal]").forEach((button) => {
       button.addEventListener("click", () => openMatchPredictionModal(button.dataset.matchId));
     });
-    updateGamePredictionRangeBadge(getLatestGamePredictionSpecs(specs));
+    updateGamePredictionRangeBadge(getLatestGamePredictionSpecs(specs), sortedMatches.slice(0, WORLD_CUP_LATEST_MATCH_LIMIT));
   } catch (error) {
     console.warn("Failed to load game prediction folders.", error);
   }
@@ -1280,6 +1290,7 @@ async function loadKnockoutProgressData() {
   const stageFiles = [
     "32强/teams.json",
     "16强/teams.json",
+    "8强/teams.json",
     "4强/teams.json",
     "决赛/teams.json"
   ];
