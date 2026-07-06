@@ -1,12 +1,12 @@
 window.WORLD_CUP_LATEST_GAME_PREDICTIONS = [
   {
-    matchNo: "M91",
-    matchFolder: "Brazil_vs_Norway_M91",
-    versions: ["2026.7.5.12.43"]
+    matchNo: "M93",
+    matchFolder: "Portugal_vs_Spain_M93",
+    versions: ["2026.7.6.17.00"]
   },
   {
-    matchNo: "M92",
-    matchFolder: "Mexico_vs_England_M92",
-    versions: ["2026.7.5.13.58"]
+    matchNo: "M94",
+    matchFolder: "United_States_vs_Belgium_M94",
+    versions: ["2026.7.6.17.00"]
   }
 ];

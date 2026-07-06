@@ -1,0 +1,1285 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M93",
+    "team_a": "Portugal",
+    "team_b": "Spain",
+    "kickoff_utc": "2026-07-06T14:00:00-05:00",
+    "venue": "Dallas Stadium, Arlington",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.43028846153846145,
+      "team_b": 0.5697115384615385,
+      "favorite": "Spain"
+    },
+    "resolution": {
+      "normal_time": 0.7379807692307688,
+      "extra_time": 0.12163461538461535,
+      "penalties": 0.14038461538461522
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13145833333333334,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "0-1",
+        "probability": 0.0975,
+        "goals_a": 0,
+        "goals_b": 1
+      },
+      {
+        "score": "1-2",
+        "probability": 0.0925,
+        "goals_a": 1,
+        "goals_b": 2
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-2，Spain常规时间晋级。",
+        "summary_cn": "90分钟1-2，Spain常规时间晋级。",
+        "probability": 0.09951923076923076,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-2",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_cf791d492436",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-2: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-2: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "probability": 0.02548076923076923,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_c95cb7e10cc6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Spain",
+        "path_id": "BMC_43dfed49f1a1",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-2，Spain常规时间晋级。",
+        "summary_cn": "90分钟1-2，Spain常规时间晋级。",
+        "probability": 0.09951923076923076,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-2",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_cf791d492436",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-2: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-2: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "probability": 0.02548076923076923,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_c95cb7e10cc6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Spain",
+        "path_id": "BMC_43dfed49f1a1",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+      }
+    ],
+    "favorite": "Spain",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.14038461538461522,
+        "probability_band": "14.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007211538461538462,
+            "path_probability": 0.007211538461538462,
+            "path_id": "BMC_43dfed49f1a1",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Portugal",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "5-3",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.0057692307692307696,
+            "path_probability": 0.0057692307692307696,
+            "path_id": "BMC_8f119491d010",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Portugal点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Portugal advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Portugal",
+            "after_extra_time_score": "2-2",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "2-2",
+            "penalty_score": "5-3",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.005288461538461539,
+            "path_probability": 0.005288461538461539,
+            "path_id": "BMC_c2c75ed285a9",
+            "summary_cn": "90分钟2-2、加时0-0后仍平，Portugal点球晋级。",
+            "summary_en": "After 2-2 in 90 minutes and 0-0 in extra time, Portugal advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "When neither 90 minutes nor extra time separates the teams, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12163461538461535,
+        "probability_band": "12.2%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.02548076923076923,
+            "path_probability": 0.02548076923076923,
+            "path_id": "BMC_c95cb7e10cc6",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Portugal",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.01826923076923077,
+            "path_probability": 0.01826923076923077,
+            "path_id": "BMC_0df6e39d13d7",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Portugal加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Portugal advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.016346153846153847,
+            "path_probability": 0.016346153846153847,
+            "path_id": "BMC_6fa8ff06db88",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Spain加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth and risk appetite become amplified in extra time, creating a route to a decisive result."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2956730769230769,
+        "probability_band": "29.6%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Portugal",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "1-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07596153846153846,
+            "path_probability": 0.07596153846153846,
+            "path_id": "BMC_5b4ff00a2e11",
+            "summary_cn": "90分钟1-0，Portugal常规时间晋级。",
+            "summary_en": "90 minutes 1-0: Portugal advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Portugal",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.06826923076923076,
+            "path_probability": 0.06826923076923076,
+            "path_id": "BMC_ab667541f475",
+            "summary_cn": "90分钟2-1，Portugal常规时间晋级。",
+            "summary_en": "90 minutes 2-1: Portugal advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Portugal",
+            "after_extra_time_score": "2-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.05480769230769231,
+            "path_probability": 0.05480769230769231,
+            "path_id": "BMC_9c8bb0505b62",
+            "summary_cn": "90分钟2-0，Portugal常规时间晋级。",
+            "summary_en": "90 minutes 2-0: Portugal advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can still advance through a normal-time steal, an extra-time counterattack or penalty-shootout randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 163,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09951923076923076,
+          "path_probability": 0.09951923076923076,
+          "path_id": "BMC_cf791d492436",
+          "summary_cn": "90分钟1-2，Spain常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09711538461538462,
+          "path_probability": 0.09711538461538462,
+          "path_id": "BMC_98522fa65414",
+          "summary_cn": "90分钟0-1，Spain常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Portugal",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07596153846153846,
+          "path_probability": 0.07596153846153846,
+          "path_id": "BMC_5b4ff00a2e11",
+          "summary_cn": "90分钟1-0，Portugal常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Portugal advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "0-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07163461538461538,
+          "path_probability": 0.07163461538461538,
+          "path_id": "BMC_7011b27f9e21",
+          "summary_cn": "90分钟0-2，Spain常规时间晋级。",
+          "summary_en": "90 minutes 0-2: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Portugal",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06826923076923076,
+          "path_probability": 0.06826923076923076,
+          "path_id": "BMC_ab667541f475",
+          "summary_cn": "90分钟2-1，Portugal常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Portugal advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-2，Spain常规时间晋级。",
+          "summary_cn": "90分钟1-2，Spain常规时间晋级。",
+          "probability": 0.09951923076923076,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-2",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "Spain",
+          "path_id": "BMC_cf791d492436",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-2: Spain advances in normal time.",
+          "summary_en": "90 minutes 1-2: Spain advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+          "probability": 0.02548076923076923,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-1",
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "Spain",
+          "path_id": "BMC_c95cb7e10cc6",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+          "probability": 0.007211538461538462,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Spain",
+          "path_id": "BMC_43dfed49f1a1",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-2，Spain常规时间晋级。",
+        "summary_cn": "90分钟1-2，Spain常规时间晋级。",
+        "probability": 0.09951923076923076,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-2",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_cf791d492436",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-2: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-2: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "probability": 0.02548076923076923,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_c95cb7e10cc6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Spain",
+        "path_id": "BMC_43dfed49f1a1",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.2912499999999999,
+          "base_event_probability": 0.2912499999999999,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.05625,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes open end-to-end, with both attacks converting."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.041875,
+              "rationale_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Spain fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.029166666666666667,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match moves into a high-risk open tempo, with space behind the defenses continuing to grow."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.027708333333333335,
+              "rationale_cn": "Portugal打破对方防守后扩大领先优势。",
+              "rationale_en": "Portugal extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.024583333333333332,
+              "rationale_cn": "点球：葡萄牙有近期直接样本优势，但必须向随机性收缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Penalties: Portugal have a recent direct-sample edge, but it must be pulled back toward randomness; the match is being dragged into a high-risk open tempo, with space behind the back line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "1-3",
+            "2-3"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead pushing total goals well above the main low-score projection."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.11229166666666668,
+          "base_event_probability": 0.11229166666666668,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.03,
+              "rationale_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Spain fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.017708333333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match moves into a high-risk open tempo, with space behind the defenses continuing to grow."
+            },
+            {
+              "score": "3-0",
+              "probability": 0.015,
+              "rationale_cn": "70分钟仍平：西班牙更主动，葡萄牙更愿保留加时/点球入口；Portugal打破对方防守后扩大领先优势。",
+              "rationale_en": "Still level at 70 minutes: Spain are more proactive, while Portugal prefer to keep extra time/penalties as an option; Portugal extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "0-4",
+              "probability": 0.013958333333333333,
+              "rationale_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Spain fully converts its counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.007083333333333333,
+              "rationale_cn": "点球：葡萄牙有近期直接样本优势，但必须向随机性收缩、边路突破与肋部防守对位；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Penalties: Portugal have a recent direct-sample edge, but it must be pulled back toward randomness, wide breakthroughs, and half-space defensive matchups; the match is being dragged into a high-risk open tempo, with space behind the back line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "0-3",
+            "1-4",
+            "3-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fitness issues, or defensive imbalance disrupts the match, with one side pulling clear within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.2881249999999999,
+          "base_event_probability": 0.2881249999999999,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "probability": 0.07833333333333334,
+              "rationale_cn": "边路突破与肋部防守对位、点球：葡萄牙有近期直接样本优势，但必须向随机性收缩；Portugal在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Wing breakthroughs, half-space defensive matchups, penalties: Portugal has a recent direct sample edge, but it must be adjusted toward randomness; Portugal has a slight edge in key matchups and closes the match with a one-goal advantage."
+            },
+            {
+              "score": "2-1",
+              "probability": 0.07291666666666667,
+              "rationale_cn": "边路突破与肋部防守对位、点球：葡萄牙有近期直接样本优势，但必须向随机性收缩；Portugal在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Wing breakthroughs, half-space defensive matchups, penalties: Portugal has a recent direct sample edge, but it must be adjusted toward randomness; Portugal has a slight edge in key matchups and closes the match with a one-goal advantage."
+            },
+            {
+              "score": "2-0",
+              "probability": 0.04041666666666666,
+              "rationale_cn": "Portugal打破对方防守后扩大领先优势。",
+              "rationale_en": "Portugal extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.027708333333333335,
+              "rationale_cn": "Portugal打破对方防守后扩大领先优势。",
+              "rationale_en": "Portugal extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.024583333333333332,
+              "rationale_cn": "点球：葡萄牙有近期直接样本优势，但必须向随机性收缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Penalties: Portugal have a recent direct-sample edge, but it must be pulled back toward randomness; the match is being dragged into a high-risk open tempo, with space behind the back line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "2-1",
+            "2-0"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The less favored side pre-match or in the main prediction wins within 90 minutes.",
+          "rationale_en": "The underdog can directly change the result within 90 minutes through deep defensive resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "证据因素 1",
+          "impact_cn": "WhoScored称西班牙本届仍未失球，近三战全胜并打进8球。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_0336d7b10308"
+          ],
+          "source_names": [
+            "WhoScored"
+          ],
+          "label_en": "Evidence factor 1",
+          "impact_en": "WhoScored says Spain have still not conceded in this tournament, winning their last three matches and scoring 8 goals.",
+          "text_cn": "WhoScored称西班牙本届仍未失球，近三战全胜并打进8球。",
+          "text_en": "WhoScored says Spain have still not conceded in this tournament, winning their last three matches and scoring 8 goals."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "战术",
+          "impact_cn": "葡萄牙聘Austin MacPhee负责定位球，上轮Ramos补时头球绝杀克罗地亚。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_4266cf099810",
+            "E_437501847149"
+          ],
+          "source_names": [
+            "The New York Times Athletic",
+            "ESPN"
+          ],
+          "label_en": "Tactics",
+          "impact_en": "Portugal hired Austin MacPhee to handle set pieces, and Ramos scored a stoppage-time headed winner against Croatia in the previous round.",
+          "text_cn": "葡萄牙聘Austin MacPhee负责定位球，上轮Ramos补时头球绝杀克罗地亚。",
+          "text_en": "Portugal hired Austin MacPhee to handle set pieces, and Ramos scored a stoppage-time headed winner against Croatia in the previous round."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "战术",
+          "impact_cn": "Coaches' Voice指出西班牙常用半空间推进，可把葡萄牙中卫拉向边路。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_73e6cd39e2d5"
+          ],
+          "source_names": [
+            "Coaches' Voice"
+          ],
+          "label_en": "Tactics",
+          "impact_en": "Coaches' Voice notes that Spain often progress through the half-spaces, which can pull Portugal's center-backs toward the flanks.",
+          "text_cn": "Coaches' Voice指出西班牙常用半空间推进，可把葡萄牙中卫拉向边路。",
+          "text_en": "Coaches' Voice notes that Spain often progress through the half-spaces, which can pull Portugal's center-backs toward the flanks."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "体能",
+          "impact_cn": "两队近年有2-2进加时和点球样本，葡萄牙曾5-3点球击败西班牙。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_cdfccc0fadb4",
+            "E_63552cd28c5a"
+          ],
+          "source_names": [
+            "UEFA",
+            "Sportsnet"
+          ],
+          "label_en": "Fitness",
+          "impact_en": "Recent meetings include a 2-2 match that went to extra time and penalties, with Portugal once beating Spain 5-3 on penalties.",
+          "text_cn": "两队近年有2-2进加时和点球样本，葡萄牙曾5-3点球击败西班牙。",
+          "text_en": "Recent meetings include a 2-2 match that went to extra time and penalties, with Portugal once beating Spain 5-3 on penalties."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "证据因素 5",
+          "impact_cn": "双方上轮都90分钟晋级并休息4天，但葡萄牙2-1战克罗地亚时射正3比6落后。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "PATH_TRANSFER_M93_TEAM_A_LOAD",
+            "PATH_TRANSFER_M93_TEAM_B_LOAD",
+            "E_4f398ea65ece"
+          ],
+          "source_names": [
+            "structured_previous_path_context",
+            "ESPN"
+          ],
+          "label_en": "Evidence factor 5",
+          "impact_en": "Both sides advanced in 90 minutes last round and had 4 days' rest, but Portugal were outshot on target 3-6 in their 2-1 win over Croatia.",
+          "text_cn": "双方上轮都90分钟晋级并休息4天，但葡萄牙2-1战克罗地亚时射正3比6落后。",
+          "text_en": "Both sides advanced in 90 minutes last round and had 4 days' rest, but Portugal were outshot on target 3-6 in their 2-1 win over Croatia."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "市场",
+          "impact_cn": "阿灵顿赛地预报接近99°F高温，Climate Central称有98%概率影响球员表现。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_F_b6c0b760b5c0",
+            "E_9b075238085f"
+          ],
+          "source_names": [
+            "National Weather Service",
+            "Climate Central"
+          ],
+          "label_en": "Market signal",
+          "impact_en": "The Arlington venue is forecast to be near 99°F, with Climate Central saying there is a 98% chance it affects player performance.",
+          "text_cn": "阿灵顿赛地预报接近99°F高温，Climate Central称有98%概率影响球员表现。",
+          "text_en": "The Arlington venue is forecast to be near 99°F, with Climate Central saying there is a 98% chance it affects player performance."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.26201923076923056,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.21100917431192673,
+          "joint_probability": 0.055288461538461536,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.21100917431192673
+            },
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.14862385321100924
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-0"
+          ],
+          "rationale_cn": "Spain凭借体能、替补或反击效率在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal result in 30 minutes of extra time via counterattacks, set pieces, or substitute impact.",
+          "rationale_en": "Spain win by one goal in extra time through fitness, substitutes, or counterattack efficiency."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.07706422018348622,
+          "joint_probability": 0.020192307692307676,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.07706422018348622
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.023853211009174327
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.014678899082568817
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.003669724770642204
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "1-2",
+            "2-1"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, as the match shifts from caution into open end-to-end play.",
+          "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.031192660550458735,
+          "joint_probability": 0.008173076923076924,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.031192660550458735
+            },
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.029357798165137634
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.023853211009174327
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.014678899082568817
+            }
+          ],
+          "display_scores": [
+            "0-2",
+            "2-0",
+            "1-2"
+          ],
+          "rationale_cn": "Spain在对手压上后连续制造转换机会。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "Extra-time win by at least 2 goals, or a side breaks through with total goals reaching 3 or more.",
+          "rationale_en": "Spain create repeated transition chances after the opponent pushes up."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "平局入口",
+          "impact_cn": "加时只在90分钟打平后触发；常规时间模型为Portugal胜28.8%、平28.4%、Spain胜42.8%，说明Spain更强但并非压倒性打穿。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Draw entry",
+          "impact_en": "Extra time is only triggered if it is level after 90 minutes; the regular-time model gives Portugal 28.8%, draw 28.4%, Spain 42.8%, suggesting Spain are stronger but not overwhelmingly dominant.",
+          "text_cn": "加时只在90分钟打平后触发；常规时间模型为Portugal胜28.8%、平28.4%、Spain胜42.8%，说明Spain更强但并非压倒性打穿。",
+          "text_en": "Extra time is only triggered if it is level after 90 minutes; the regular-time model gives Portugal 28.8%, draw 28.4%, Spain 42.8%, suggesting Spain are stronger but not overwhelmingly dominant."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "西班牙宽度",
+          "impact_cn": "若高温或强度累积让Portugal防线与中场横移下降，Spain可通过控球、半空间推进和边路宽度获得加时小幅优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Spain width",
+          "impact_en": "If heat or accumulated intensity reduces Portugal’s defensive and midfield lateral movement, Spain can gain a slight extra-time edge through possession, half-space progression, and wide play.",
+          "text_cn": "若高温或强度累积让Portugal防线与中场横移下降，Spain可通过控球、半空间推进和边路宽度获得加时小幅优势。",
+          "text_en": "If heat or accumulated intensity reduces Portugal’s defensive and midfield lateral movement, Spain can gain a slight extra-time edge through possession, half-space progression, and wide play."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "葡萄牙生存",
+          "impact_cn": "Portugal的加时路径是中低位压缩、定位球高点和反击速度点，并接受把比赛拖向点球；但需确认场上是否仍保留这些资源。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Portugal survival route",
+          "impact_en": "Portugal’s extra-time route is a compact mid-to-low block, set-piece aerial targets, and pace on the counter, while accepting a path toward penalties; but it must be confirmed whether these resources are still on the pitch.",
+          "text_cn": "Portugal的加时路径是中低位压缩、定位球高点和反击速度点，并接受把比赛拖向点球；但需确认场上是否仍保留这些资源。",
+          "text_en": "Portugal’s extra-time route is a compact mid-to-low block, set-piece aerial targets, and pace on the counter, while accepting a path toward penalties; but it must be confirmed whether these resources are still on the pitch."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "边路伤疑",
+          "impact_cn": "Spain的Nico Williams、Yeremy Pino、Yamal身体状态仍不确定；若健康边路冲击点无法留到加时，Spain宽度优势会明显回落。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Wide-player fitness doubt",
+          "impact_en": "Spain’s Nico Williams, Yeremy Pino, and Yamal remain fitness doubts; if fit wide threats cannot be kept for extra time, Spain’s width advantage will drop significantly.",
+          "text_cn": "Spain的Nico Williams、Yeremy Pino、Yamal身体状态仍不确定；若健康边路冲击点无法留到加时，Spain宽度优势会明显回落。",
+          "text_en": "Spain’s Nico Williams, Yeremy Pino, and Yamal remain fitness doubts; if fit wide threats cannot be kept for extra time, Spain’s width advantage will drop significantly."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "Dias状态",
+          "impact_cn": "Ruben Dias仅有身体监控信号，缺少赛前医学确认和训练强度反馈；若90分钟末段移动下降，将直接削弱Portugal加时防线可靠性。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Dias status",
+          "impact_en": "Ruben Dias only has fitness monitoring signals, with no pre-match medical confirmation or training intensity feedback; if his movement drops late in the 90 minutes, it will directly weaken Portugal’s extra-time defensive reliability.",
+          "text_cn": "Ruben Dias仅有身体监控信号，缺少赛前医学确认和训练强度反馈；若90分钟末段移动下降，将直接削弱Portugal加时防线可靠性。",
+          "text_en": "Ruben Dias only has fitness monitoring signals, with no pre-match medical confirmation or training intensity feedback; if his movement drops late in the 90 minutes, it will directly weaken Portugal’s extra-time defensive reliability."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "数据缺口",
+          "impact_cn": "缺少官方首发、最终替补名单、Dallas Stadium屋顶空调和实际热负荷信息，无法精细判断加时体能分化与换人冲击。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Data gap",
+          "impact_en": "Without official lineups, final substitute lists, Dallas Stadium roof/AC status, and actual heat-load data, extra-time fitness gaps and substitution impact cannot be assessed in detail.",
+          "text_cn": "缺少官方首发、最终替补名单、Dallas Stadium屋顶空调和实际热负荷信息，无法精细判断加时体能分化与换人冲击。",
+          "text_en": "Without official lineups, final substitute lists, Dallas Stadium roof/AC status, and actual heat-load data, extra-time fitness gaps and substitution impact cannot be assessed in detail."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration -> four expert agents -> committee aggregation -> conditional rollout -> conditional Monte Carlo matrix -> extra-time tail audit -> report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.14038461538461522,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.06083462132921175,
+          "probability_band": "low",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.06083462132921175,
+              "winner_side": "team_a",
+              "rationale_cn": "该比分在矩阵中对应Portugal4-2胜出，概率需按矩阵校准为0.0608。4-2符合点球大战提前终止规则，通常意味着Spain至少出现两次罚失或被扑，适合作为Portugal门将关键扑点的低中概率尾部情景。",
+              "rationale_en": "In the matrix, this score corresponds to Portugal winning 4-2, with the probability calibrated to 0.0608. A 4-2 fits the early-ending rule in a penalty shootout, usually meaning Spain missed or had at least two penalties saved, making it a low-to-medium probability tail scenario for key saves by Portugal's goalkeeper."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.06281298299845439,
+              "winner_side": "team_b",
+              "rationale_cn": "该比分在矩阵中对应Spain2-4胜出，概率需按矩阵校准为0.0628。2-4符合点球大战提前终止规则，通常意味着Portugal多次罚失或被扑，适合作为Spain门将发挥决定胜负的低中概率尾部情景。",
+              "rationale_en": "In the matrix, this score corresponds to Spain winning 2-4, with the probability calibrated to 0.0628. A 2-4 fits the early-ending rule in a penalty shootout, usually meaning Portugal missed or had multiple penalties saved, making it a low-to-medium probability tail scenario where Spain's goalkeeper decides the outcome."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "该比分在矩阵中对应Portugal4-2胜出，概率需按矩阵校准为0.0608。4-2符合点球大战提前终止规则，通常意味着Spain至少出现两次罚失或被扑，适合作为Portugal门将关键扑点的低中概率尾部情景。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive penalty saves or the opponent misses repeatedly, quickly widening the shootout score.",
+          "rationale_en": "In the matrix, this score corresponds to Portugal winning 4-2, with the probability calibrated to 0.0608. A 4-2 fits the early-ending rule in a penalty shootout, usually meaning Spain missed or had at least two penalties saved, making it a low-to-medium probability tail scenario for key saves by Portugal's goalkeeper."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "5-3",
+          "winner_side": "team_a",
+          "probability": 0.11986301369863016,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "5-3",
+              "probability": 0.11986301369863016,
+              "winner_side": "team_a",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, and the underdog advances on penalties."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.07534246575342468,
+              "winner_side": "team_a",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, and the underdog advances on penalties."
+            },
+            {
+              "score": "4-3",
+              "probability": 0.07534246575342468,
+              "winner_side": "team_a",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, and the underdog advances on penalties."
+            }
+          ],
+          "display_scores": [
+            "5-3",
+            "4-1",
+            "4-3"
+          ],
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "The favored side misses in a key round, and the underdog advances on penalties."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.030417310664605873,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.030417310664605873,
+              "winner_side": "team_a",
+              "rationale_cn": "该比分在矩阵中对应Portugal6-5胜出，概率需按矩阵校准为0.0304。6-5必须进入第五轮后仍未分胜负并通过突然死亡阶段决出，符合点球规则，属于低概率延长点球尾部情景。",
+              "rationale_en": "In the matrix, this score corresponds to Portugal winning 6-5, with the probability calibrated to 0.0304. A 6-5 requires the shootout to remain tied after the fifth round and be decided in sudden death, consistent with penalty rules, making it a low-probability extended shootout tail scenario."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "该比分在矩阵中对应Portugal6-5胜出，概率需按矩阵校准为0.0304。6-5必须进入第五轮后仍未分胜负并通过突然死亡阶段决出，符合点球规则，属于低概率延长点球尾部情景。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides are strong through the first five rounds, with the winner decided only after sudden death from round 6 onward.",
+          "rationale_en": "In the matrix, this score corresponds to Portugal winning 6-5, with the probability calibrated to 0.0304. A 6-5 requires the shootout to remain tied after the fifth round and be decided in sudden death, consistent with penalty rules, making it a low-probability extended shootout tail scenario."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "点球顺序缺口",
+          "impact_cn": "葡萄牙与西班牙赛前公开资料无法可靠确认具体点球顺序，主罚手只能视作经验候选；前端展示应标明证据缺口，避免把候选名单当成确定执行路径。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty order gap",
+          "impact_en": "Public pre-match information for Portugal and Spain cannot reliably confirm the exact penalty order; takers should only be treated as experience-based candidates. The frontend should note the evidence gap and avoid presenting the candidate list as a confirmed sequence.",
+          "text_cn": "葡萄牙与西班牙赛前公开资料无法可靠确认具体点球顺序，主罚手只能视作经验候选；前端展示应标明证据缺口，避免把候选名单当成确定执行路径。",
+          "text_en": "Public pre-match information for Portugal and Spain cannot reliably confirm the exact penalty order; takers should only be treated as experience-based candidates. The frontend should note the evidence gap and avoid presenting the candidate list as a confirmed sequence."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "门将小幅调整",
+          "impact_cn": "点球大战随机性很强，葡萄牙与西班牙的胜负判断只能围绕门将状态、连续扑点可能与压力失误作小幅条件调整，不能据此放大单边优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Minor goalkeeper adjustment",
+          "impact_en": "Penalty shootouts are highly random, so Portugal vs Spain outcome calls should only make small conditional adjustments for goalkeeper form, possible consecutive saves, and pressure errors, not inflate either side's edge.",
+          "text_cn": "点球大战随机性很强，葡萄牙与西班牙的胜负判断只能围绕门将状态、连续扑点可能与压力失误作小幅条件调整，不能据此放大单边优势。",
+          "text_en": "Penalty shootouts are highly random, so Portugal vs Spain outcome calls should only make small conditional adjustments for goalkeeper form, possible consecutive saves, and pressure errors, not inflate either side's edge."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差主路径",
+          "impact_cn": "rollout 汇总显示，葡萄牙与西班牙的点球结局以一球差和延长点球为主，说明前端应突出拉锯与突然死亡路径，而非单方面轻松胜出的叙事。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Main one-goal margin path",
+          "impact_en": "The rollout summary shows that Portugal vs Spain penalty outcomes are mainly one-goal margins and extended shootouts, so the frontend should highlight a tug-of-war and sudden-death path rather than a one-sided easy win narrative.",
+          "text_cn": "rollout 汇总显示，葡萄牙与西班牙的点球结局以一球差和延长点球为主，说明前端应突出拉锯与突然死亡路径，而非单方面轻松胜出的叙事。",
+          "text_en": "The rollout summary shows that Portugal vs Spain penalty outcomes are mainly one-goal margins and extended shootouts, so the frontend should highlight a tug-of-war and sudden-death path rather than a one-sided easy win narrative."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "葡萄牙4比2尾部",
+          "impact_cn": "矩阵校准中葡萄牙4-2胜出的概率为0.0608，该路径符合提前终止规则，通常意味着西班牙至少两次罚失或被扑，属于门将关键发挥的低中概率尾部情景。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Portugal 4-2 tail",
+          "impact_en": "In the matrix calibration, Portugal winning 4-2 has a probability of 0.0608. This path meets the early-termination rule and usually means Spain miss or have at least two penalties saved, a low-to-mid probability tail scenario driven by key goalkeeper impact.",
+          "text_cn": "矩阵校准中葡萄牙4-2胜出的概率为0.0608，该路径符合提前终止规则，通常意味着西班牙至少两次罚失或被扑，属于门将关键发挥的低中概率尾部情景。",
+          "text_en": "In the matrix calibration, Portugal winning 4-2 has a probability of 0.0608. This path meets the early-termination rule and usually means Spain miss or have at least two penalties saved, a low-to-mid probability tail scenario driven by key goalkeeper impact."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "西班牙4比2尾部",
+          "impact_cn": "矩阵校准中西班牙4-2胜出的概率为0.0628，该路径同样符合提前终止规则，通常对应葡萄牙多次罚失或被扑，适合作为西班牙门将决定胜负的尾部情景。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Spain 4-2 tail",
+          "impact_en": "In the matrix calibration, Spain winning 4-2 has a probability of 0.0628. This path also meets the early-termination rule and usually corresponds to Portugal missing or having multiple penalties saved, fitting a tail scenario where Spain's goalkeeper decides the outcome.",
+          "text_cn": "矩阵校准中西班牙4-2胜出的概率为0.0628，该路径同样符合提前终止规则，通常对应葡萄牙多次罚失或被扑，适合作为西班牙门将决定胜负的尾部情景。",
+          "text_en": "In the matrix calibration, Spain winning 4-2 has a probability of 0.0628. This path also meets the early-termination rule and usually corresponds to Portugal missing or having multiple penalties saved, fitting a tail scenario where Spain's goalkeeper decides the outcome."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "延长点球风险",
+          "impact_cn": "葡萄牙6-5胜出的矩阵校准概率为0.0304，必须经历第五轮后仍未分胜负并进入突然死亡，前端可将其呈现为低概率但具戏剧性的延长点球路径。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Extended penalty shootout risk",
+          "impact_en": "The matrix-calibrated probability of Portugal winning 6-5 is 0.0304; it requires the shootout to remain tied after five rounds and enter sudden death, so the frontend can show it as a low-probability but dramatic extended penalty path.",
+          "text_cn": "葡萄牙6-5胜出的矩阵校准概率为0.0304，必须经历第五轮后仍未分胜负并进入突然死亡，前端可将其呈现为低概率但具戏剧性的延长点球路径。",
+          "text_en": "The matrix-calibrated probability of Portugal winning 6-5 is 0.0304; it requires the shootout to remain tied after five rounds and enter sudden death, so the frontend can show it as a low-probability but dramatic extended penalty path."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration -> four expert agents -> committee aggregation -> shootout-sequence rollout -> penalty score matrix -> penalty tail audit -> report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-06T05:08:29.501182Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline uses pre-match evidence and committee synthesis to build cross-phase mechanisms. MAS rollouts jointly produce 90-minute paths, conditional extra-time paths if level, and conditional penalty paths if still level; Monte Carlo samples the full path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs. They are driven by the same MAS conditional rollout, while the frontend's three tabs are slices of the same complete path distribution; the JSON structure remains compatible with v6.2.2."
+}

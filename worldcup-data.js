@@ -464,7 +464,7 @@ const knockoutMatchTeamsByNo = {
   M91: ["BRA", "NOR"],
   M92: ["MEX", "ENG"],
   M93: ["POR", "ESP"],
-  M94: ["BEL", "USA"],
+  M94: ["USA", "BEL"],
   M95: ["ARG", "EGY"],
   M96: ["SUI", "COL"],
   M97: ["FRA", "MAR"]
@@ -555,7 +555,7 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M91", "M92"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M91", "M92", "M93", "M94"];
 
 window.WORLD_CUP_KNOCKOUT_PROGRESS = {
   rounds: {
@@ -712,7 +712,7 @@ window.WORLD_CUP_KNOCKOUT_PROGRESS = {
       },
       M94: {
         status: "scheduled",
-        teams: ["BEL", "USA"],
+        teams: ["USA", "BEL"],
         matchTime: "7月7日 00:00 UTC",
         kickoffUtc: "2026-07-07T00:00:00Z",
         source: "M81 winner vs M82 winner"
