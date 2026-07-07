@@ -1,0 +1,1259 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M96",
+    "team_a": "Switzerland",
+    "team_b": "Colombia",
+    "kickoff_utc": "2026-07-07T13:00:00-07:00",
+    "venue": "Vancouver Stadium, Vancouver",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.3999999999999999,
+      "team_b": 0.6000000000000002,
+      "favorite": "Colombia"
+    },
+    "resolution": {
+      "normal_time": 0.7110576923076921,
+      "extra_time": 0.12788461538461535,
+      "penalties": 0.1610576923076921
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13083333333333333,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "0-1",
+        "probability": 0.12625,
+        "goals_a": 0,
+        "goals_b": 1
+      },
+      {
+        "score": "0-0",
+        "probability": 0.09833333333333333,
+        "goals_a": 0,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Colombia常规时间晋级。",
+        "summary_cn": "90分钟0-1，Colombia常规时间晋级。",
+        "probability": 0.12115384615384615,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_12f4fb80e072",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: Colombia advances in normal time.",
+        "summary_en": "90 minutes 0-1: Colombia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "probability": 0.02548076923076923,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_8c8a3671ce35",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+        "probability": 0.009134615384615385,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "2-4",
+        "advancer_team": "Colombia",
+        "path_id": "BMC_de40fbb4583a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Colombia常规时间晋级。",
+        "summary_cn": "90分钟0-1，Colombia常规时间晋级。",
+        "probability": 0.12115384615384615,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_12f4fb80e072",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: Colombia advances in normal time.",
+        "summary_en": "90 minutes 0-1: Colombia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "probability": 0.02548076923076923,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_8c8a3671ce35",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+        "probability": 0.009134615384615385,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "2-4",
+        "advancer_team": "Colombia",
+        "path_id": "BMC_de40fbb4583a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties."
+      }
+    ],
+    "favorite": "Colombia",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.1610576923076921,
+        "probability_band": "16.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Colombia",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009134615384615385,
+            "path_probability": 0.009134615384615385,
+            "path_id": "BMC_de40fbb4583a",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Colombia",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.009134615384615385,
+            "path_probability": 0.009134615384615385,
+            "path_id": "BMC_310c306cfe5f",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Colombia",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008653846153846154,
+            "path_probability": 0.008653846153846154,
+            "path_id": "BMC_dc29563b2a67",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "If neither 90 minutes nor extra time separates the teams, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12788461538461535,
+        "probability_band": "12.8%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.02548076923076923,
+            "path_probability": 0.02548076923076923,
+            "path_id": "BMC_8c8a3671ce35",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Colombia",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.019230769230769232,
+            "path_probability": 0.019230769230769232,
+            "path_id": "BMC_0439023fd4cf",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Colombia加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Colombia advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Colombia",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.017788461538461538,
+            "path_probability": 0.017788461538461538,
+            "path_id": "BMC_ac38ffd0be3f",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Colombia加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; Colombia advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth, and risk preference become amplified in extra time and can create a decisive path."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.28076923076923077,
+        "probability_band": "28.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "1-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07932692307692307,
+            "path_probability": 0.07932692307692307,
+            "path_id": "BMC_427f80c4fc92",
+            "summary_cn": "90分钟1-0，Switzerland常规时间晋级。",
+            "summary_en": "90 minutes 1-0: Switzerland advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.06346153846153846,
+            "path_probability": 0.06346153846153846,
+            "path_id": "BMC_f700d9b5fa23",
+            "summary_cn": "90分钟2-1，Switzerland常规时间晋级。",
+            "summary_en": "90 minutes 2-1: Switzerland advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "2-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.041826923076923074,
+            "path_probability": 0.041826923076923074,
+            "path_id": "BMC_6788acd21694",
+            "summary_cn": "90分钟2-0，Switzerland常规时间晋级。",
+            "summary_en": "90 minutes 2-0: Switzerland advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can still advance through a normal-time strike, an extra-time counterattack, or penalty variance."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 153,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Colombia",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.12115384615384615,
+          "path_probability": 0.12115384615384615,
+          "path_id": "BMC_12f4fb80e072",
+          "summary_cn": "90分钟0-1，Colombia常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Colombia advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Colombia",
+          "after_extra_time_score": "0-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08798076923076924,
+          "path_probability": 0.08798076923076924,
+          "path_id": "BMC_6d29152e7b5d",
+          "summary_cn": "90分钟0-2，Colombia常规时间晋级。",
+          "summary_en": "90 minutes 0-2: Colombia advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Colombia",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08701923076923077,
+          "path_probability": 0.08701923076923077,
+          "path_id": "BMC_f7a764380f99",
+          "summary_cn": "90分钟1-2，Colombia常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Colombia advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Switzerland",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07932692307692307,
+          "path_probability": 0.07932692307692307,
+          "path_id": "BMC_427f80c4fc92",
+          "summary_cn": "90分钟1-0，Switzerland常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Switzerland advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Switzerland",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06346153846153846,
+          "path_probability": 0.06346153846153846,
+          "path_id": "BMC_f700d9b5fa23",
+          "summary_cn": "90分钟2-1，Switzerland常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Switzerland advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟0-1，Colombia常规时间晋级。",
+          "summary_cn": "90分钟0-1，Colombia常规时间晋级。",
+          "probability": 0.12115384615384615,
+          "resolution_type": "normal_time",
+          "normal_time_score": "0-1",
+          "extra_time_increment": null,
+          "after_extra_time_score": "0-1",
+          "penalty_score": null,
+          "advancer_team": "Colombia",
+          "path_id": "BMC_12f4fb80e072",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 0-1: Colombia advances in normal time.",
+          "summary_en": "90 minutes 0-1: Colombia advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+          "probability": 0.02548076923076923,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Switzerland",
+          "path_id": "BMC_8c8a3671ce35",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+          "probability": 0.009134615384615385,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "2-4",
+          "advancer_team": "Colombia",
+          "path_id": "BMC_de40fbb4583a",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟0-1，Colombia常规时间晋级。",
+        "summary_cn": "90分钟0-1，Colombia常规时间晋级。",
+        "probability": 0.12115384615384615,
+        "resolution_type": "normal_time",
+        "normal_time_score": "0-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "0-1",
+        "penalty_score": null,
+        "advancer_team": "Colombia",
+        "path_id": "BMC_12f4fb80e072",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 0-1: Colombia advances in normal time.",
+        "summary_en": "90 minutes 0-1: Colombia advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Switzerland加时晋级。",
+        "probability": 0.02548076923076923,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_8c8a3671ce35",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Switzerland advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Colombia点球晋级。",
+        "probability": 0.009134615384615385,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "2-4",
+        "advancer_team": "Colombia",
+        "path_id": "BMC_de40fbb4583a",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Colombia advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.23083333333333345,
+          "base_event_probability": 0.23083333333333345,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.048125,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match opens up end to end, with both attacks converting chances."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.036041666666666666,
+              "rationale_cn": "Colombia充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Colombia make full use of counterattacks or attacking efficiency to extend the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.02625,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the back line continuing to grow."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.02,
+              "rationale_cn": "双方上一轮均未透支，90分钟路径偏谨慎；70分钟仍平时哥；Switzerland打破对方防守后扩大领先优势。",
+              "rationale_en": "Neither side was overextended in the previous round, and the 90-minute path leans cautious; if still level at 70 minutes, Colombia; Switzerland breaks down the opposing defense and extends the lead."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.017916666666666668,
+              "rationale_cn": "双方上一轮均未透支，90分钟路径偏谨慎；70分钟仍平时哥；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Neither side was overextended in the previous round, and the 90-minute path leans cautious; if still level at 70 minutes, Colombia; the match is pulled into a high-risk open tempo, with space behind the defenses continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "1-3",
+            "2-3"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or space after a lead increasing total goals well above the main low-score prediction."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.09833333333333334,
+          "base_event_probability": 0.09833333333333334,
+          "attention_level": "low",
+          "selected_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.035208333333333335,
+              "rationale_cn": "Colombia充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Colombia make full use of counterattacks or attacking efficiency to extend the lead."
+            },
+            {
+              "score": "0-4",
+              "probability": 0.014583333333333334,
+              "rationale_cn": "瑞士前场健康不确定性×哥伦比亚低失球结构，推高低比分与9；Colombia充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Switzerland front-line fitness uncertainty × Colombia's low-concession structure raises low-score outcomes and 9; Colombia fully converts counterattacks or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "3-0",
+              "probability": 0.014166666666666666,
+              "rationale_cn": "Switzerland打破对方防守后扩大领先优势。",
+              "rationale_en": "Switzerland extend the lead after breaking down the opposing defense."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.012291666666666666,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the back line continuing to grow."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.004166666666666667,
+              "rationale_cn": "双方上一轮均未透支，90分钟路径偏谨慎；70分钟仍平时哥；Switzerland打破对方防守后扩大领先优势。",
+              "rationale_en": "Neither side was overextended in the previous round, and the 90-minute path leans cautious; if still level at 70 minutes, Colombia; Switzerland breaks down the opposing defense and extends the lead."
+            }
+          ],
+          "display_scores": [
+            "0-3",
+            "0-4",
+            "3-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fatigue, or defensive imbalance causes the match to lose balance, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.27083333333333326,
+          "base_event_probability": 0.27083333333333326,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "probability": 0.095,
+              "rationale_cn": "双方上一轮均未透支，90分钟路径偏谨慎；70分钟仍平时哥；Switzerland在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Neither side was overextended in the previous round, and the 90-minute path leans cautious; if still level at 70 minutes, Colombia; Switzerland holds a slight edge in key matchups and closes the match by one goal."
+            },
+            {
+              "score": "2-1",
+              "probability": 0.06875,
+              "rationale_cn": "Switzerland在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Switzerland edge the key matchups and close out the match by one goal."
+            },
+            {
+              "score": "2-0",
+              "probability": 0.034583333333333334,
+              "rationale_cn": "Switzerland打破对方防守后扩大领先优势。",
+              "rationale_en": "Switzerland extend the lead after breaking down the opposing defense."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.02,
+              "rationale_cn": "双方上一轮均未透支，90分钟路径偏谨慎；70分钟仍平时哥；Switzerland打破对方防守后扩大领先优势。",
+              "rationale_en": "Neither side was overextended in the previous round, and the 90-minute path leans cautious; if still level at 70 minutes, Colombia; Switzerland breaks down the opposing defense and extends the lead."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.017916666666666668,
+              "rationale_cn": "双方上一轮均未透支，90分钟路径偏谨慎；70分钟仍平时哥；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Neither side was overextended in the previous round, and the 90-minute path leans cautious; if still level at 70 minutes, Colombia; the match is pulled into a high-risk open tempo, with space behind the defenses continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "2-1",
+            "2-0"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored pre-match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog changes the outcome within 90 minutes through deep defensive resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "瑞士防守结构",
+          "impact_cn": "瑞士小组赛防守机会质量控制表现靠前，常规时间开局更可能优先保护中路，迫使哥伦比亚从边路或转换中寻找机会。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_bc79b468a1aa",
+            "E_2e069d6a05f3",
+            "E_b82f085d587e",
+            "E_78d177ddaccd",
+            "E_3a98bd6faa6d",
+            "PATH_TRANSFER_M96_TEAM_A_LATE_STATE",
+            "PATH_TRANSFER_M96_TEAM_B_LATE_STATE",
+            "E_778cae10a79d",
+            "E_aba293ad2122",
+            "E_d431f829d917"
+          ],
+          "source_names": [
+            "ESPN",
+            "FIFA",
+            "Sports Illustrated"
+          ],
+          "label_en": "Swiss defensive structure",
+          "impact_en": "Switzerland's group-stage defensive chance-quality control was strong, so the opening phase is more likely to prioritize protecting the middle and forcing Colombia toward wide or transition routes.",
+          "text_cn": "瑞士小组赛防守机会质量控制表现靠前，常规时间开局更可能优先保护中路，迫使哥伦比亚从边路或转换中寻找机会。",
+          "text_en": "Switzerland's group-stage defensive chance-quality control was strong, so the opening phase is more likely to prioritize protecting the middle and forcing Colombia toward wide or transition routes."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "瑞士阵容不确定性",
+          "impact_cn": "Manzambi、Vargas、Sow 赛前提前结束训练但原因未明，不能直接等同于缺阵；若其中有人首发，冲刺、转身、对抗和回防强度应作为实时观察点。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_d129c3242b07",
+            "E_85a1ef135011",
+            "E_d79a13b7075e",
+            "E_7369c922306a",
+            "E_6288e7960430",
+            "E_3a98bd6faa6d",
+            "E_53561e304022",
+            "PATH_TRANSFER_M96_TEAM_A_LOAD",
+            "PATH_TRANSFER_M96_TEAM_B_LOAD"
+          ],
+          "source_names": [
+            "Reuters",
+            "KENS5 / Associated Press",
+            "Washington Post"
+          ],
+          "label_en": "Swiss lineup uncertainty",
+          "impact_en": "Manzambi, Vargas, and Sow reportedly ended training early, but the reason is unclear and should not be treated as confirmed absences. If any of them start, sprinting, turning, duels, and tracking intensity should be watched in real time.",
+          "text_cn": "Manzambi、Vargas、Sow 赛前提前结束训练但原因未明，不能直接等同于缺阵；若其中有人首发，冲刺、转身、对抗和回防强度应作为实时观察点。",
+          "text_en": "Manzambi, Vargas, and Sow reportedly ended training early, but the reason is unclear and should not be treated as confirmed absences. If any of them start, sprinting, turning, duels, and tracking intensity should be watched in real time."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "谨慎开局",
+          "impact_cn": "双方进入本场前均保持不败势头，常规时间前段更可能先试探防线，而不是无保护对攻。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_19b9bddb2d42",
+            "E_ee78354de5ff",
+            "E_535a36ab1745",
+            "PATH_TRANSFER_M96_TEAM_A_LOAD",
+            "PATH_TRANSFER_M96_TEAM_B_LOAD",
+            "E_7ad9a4fa61d7",
+            "E_2e069d6a05f3",
+            "E_9da5771c29d1",
+            "PATH_TRANSFER_M96_TEAM_A_LATE_STATE",
+            "PATH_TRANSFER_M96_TEAM_B_LATE_STATE"
+          ],
+          "source_names": [
+            "FIFA",
+            "Reuters",
+            "ESPN"
+          ],
+          "label_en": "Cautious unbeaten start",
+          "impact_en": "Both teams enter this match with an unbeaten run, so the early normal-time phase is more likely to be cautious probing than an unprotected end-to-end exchange.",
+          "text_cn": "双方进入本场前均保持不败势头，常规时间前段更可能先试探防线，而不是无保护对攻。",
+          "text_en": "Both teams enter this match with an unbeaten run, so the early normal-time phase is more likely to be cautious probing than an unprotected end-to-end exchange."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "温哥华室内环境",
+          "impact_cn": "比赛在温哥华进行，室内或半室内环境降低天气随机性，使比赛更依赖结构、转换效率和定位球执行。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_7aeaca189d67"
+          ],
+          "source_names": [
+            "FIFA"
+          ],
+          "label_en": "Vancouver indoor conditions",
+          "impact_en": "The match in Vancouver reduces weather randomness if played under controlled roof conditions, making structure, transition efficiency, and set-piece execution more important.",
+          "text_cn": "比赛在温哥华进行，室内或半室内环境降低天气随机性，使比赛更依赖结构、转换效率和定位球执行。",
+          "text_en": "The match in Vancouver reduces weather randomness if played under controlled roof conditions, making structure, transition efficiency, and set-piece execution more important."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "闭顶场地",
+          "impact_cn": "BC Place 的闭顶环境会削弱风雨变量，节奏更可能由双方压迫强度和中场出球质量决定。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_38dedfe2e95e"
+          ],
+          "source_names": [
+            "Facebook / FIFA"
+          ],
+          "label_en": "Closed-roof environment",
+          "impact_en": "BC Place's closed-roof setting reduces wind and rain variables, so tempo is more likely to be shaped by pressing intensity and midfield buildup quality.",
+          "text_cn": "BC Place 的闭顶环境会削弱风雨变量，节奏更可能由双方压迫强度和中场出球质量决定。",
+          "text_en": "BC Place's closed-roof setting reduces wind and rain variables, so tempo is more likely to be shaped by pressing intensity and midfield buildup quality."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "中性场地因素",
+          "impact_cn": "场地因素整体偏中性，不构成任何一方的明确主场优势；更应关注旅行、适应和球迷分布带来的小幅影响。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_f78b3f21fc15"
+          ],
+          "source_names": [
+            "Instagram / FIFA"
+          ],
+          "label_en": "Controlled venue context",
+          "impact_en": "The venue factor is broadly neutral rather than a clear home-field edge for either side; travel, adaptation, and crowd distribution should be treated as small modifiers.",
+          "text_cn": "场地因素整体偏中性，不构成任何一方的明确主场优势；更应关注旅行、适应和球迷分布带来的小幅影响。",
+          "text_en": "The venue factor is broadly neutral rather than a clear home-field edge for either side; travel, adaptation, and crowd distribution should be treated as small modifiers."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.28894230769230744,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.17470881863560744,
+          "joint_probability": 0.05048076923076923,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.17470881863560744
+            },
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.1663893510815309
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-0"
+          ],
+          "rationale_cn": "Colombia凭借体能、替补或反击效率在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal result in 30 minutes of extra time via counters, set pieces, or substitute impact.",
+          "rationale_en": "Colombia win by one goal in extra time through fitness, substitutes, or counterattack efficiency."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.06322795341098171,
+          "joint_probability": 0.01826923076923076,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.06322795341098171
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.0183028286189684
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.011647254575707163
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both teams score in extra time, and the match shifts from caution into open end-to-end play.",
+          "rationale_en": "The match opens up in extra time, with each side converting once."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.0366056572379368,
+          "joint_probability": 0.010576923076923078,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.0366056572379368
+            },
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.023294509151414327
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.0183028286189684
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.011647254575707163
+            }
+          ],
+          "display_scores": [
+            "0-2",
+            "2-0",
+            "2-1"
+          ],
+          "rationale_cn": "Colombia在对手压上后连续制造转换机会。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A side covers by winning extra time by at least 2 goals, or with total goals reaching more than 3.",
+          "rationale_en": "Colombia create repeated transition chances after the opponent pushes up."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "加时平局基线",
+          "impact_cn": "加时被定义为90分钟平局后的分支，现有rollout以0-0保守路径为基础；瑞士与哥伦比亚在短时间内风险偏好下降，仍平并拖向点球是核心底盘。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Extra-time draw baseline",
+          "impact_en": "Extra time is defined as the branch after a 90-minute draw, with the current rollout based on a cautious 0-0 path; Switzerland and Colombia lower their risk appetite in a short window, with staying level and moving toward penalties as the core baseline.",
+          "text_cn": "加时被定义为90分钟平局后的分支，现有rollout以0-0保守路径为基础；瑞士与哥伦比亚在短时间内风险偏好下降，仍平并拖向点球是核心底盘。",
+          "text_en": "Extra time is defined as the branch after a 90-minute draw, with the current rollout based on a cautious 0-0 path; Switzerland and Colombia lower their risk appetite in a short window, with staying level and moving toward penalties as the core baseline."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "哥伦比亚转换",
+          "impact_cn": "哥伦比亚的正向分支来自体能、替补或反击效率，在瑞士压上避免点球时，可能通过转换机会净胜一球；但缺少可靠球员级执行数据支撑。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Colombia transition path",
+          "impact_en": "Colombia’s positive path comes from fitness, substitutes, or counterattack efficiency. If Switzerland push up to avoid penalties, Colombia could win by one through transition chances, but there is no reliable player-level execution data to support it.",
+          "text_cn": "哥伦比亚的正向分支来自体能、替补或反击效率，在瑞士压上避免点球时，可能通过转换机会净胜一球；但缺少可靠球员级执行数据支撑。",
+          "text_en": "Colombia’s positive path comes from fitness, substitutes, or counterattack efficiency. If Switzerland push up to avoid penalties, Colombia could win by one through transition chances, but there is no reliable player-level execution data to support it."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "瑞士压迫",
+          "impact_cn": "瑞士的加时胜出路径依赖体能、替补或压迫优势，在哥伦比亚主动降速拖点球时抢到一球；目前仅有条件先验，缺少可靠结构化证据。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Switzerland pressing path",
+          "impact_en": "Switzerland’s extra-time win path depends on fitness, substitutes, or pressing advantages, scoring while Colombia deliberately slow the game toward penalties. For now, this is only a conditional prior and lacks reliable structured evidence.",
+          "text_cn": "瑞士的加时胜出路径依赖体能、替补或压迫优势，在哥伦比亚主动降速拖点球时抢到一球；目前仅有条件先验，缺少可靠结构化证据。",
+          "text_en": "Switzerland’s extra-time win path depends on fitness, substitutes, or pressing advantages, scoring while Colombia deliberately slow the game toward penalties. For now, this is only a conditional prior and lacks reliable structured evidence."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "加时互相打开",
+          "impact_cn": "若双方都不愿进入点球，加时可能从保守分支转向开放，瑞士和哥伦比亚各有一次有效转化；该路径存在但不是基础设定，依赖风险偏好变化。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Open extra-time branch",
+          "impact_en": "If neither side wants penalties, extra time could shift from a conservative branch to a more open one, with Switzerland and Colombia each converting one clear chance. This path exists but is not the baseline setting and depends on changing risk preferences.",
+          "text_cn": "若双方都不愿进入点球，加时可能从保守分支转向开放，瑞士和哥伦比亚各有一次有效转化；该路径存在但不是基础设定，依赖风险偏好变化。",
+          "text_en": "If neither side wants penalties, extra time could shift from a conservative branch to a more open one, with Switzerland and Colombia each converting one clear chance. This path exists but is not the baseline setting and depends on changing risk preferences."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "球员级证据缺口",
+          "impact_cn": "素材未提供具体球员体能、替补质量、点球能力或伤停信息，加时判断主要来自专家委员会与条件rollout校准，前端应标注为保守整合结论。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Player-level evidence gap",
+          "impact_en": "The material does not provide specific player fitness, substitute quality, penalty ability, or injury/suspension information. The extra-time view mainly comes from expert-panel and conditional rollout calibration, so the frontend should label it as a conservative integrated conclusion.",
+          "text_cn": "素材未提供具体球员体能、替补质量、点球能力或伤停信息，加时判断主要来自专家委员会与条件rollout校准，前端应标注为保守整合结论。",
+          "text_en": "The material does not provide specific player fitness, substitute quality, penalty ability, or injury/suspension information. The extra-time view mainly comes from expert-panel and conditional rollout calibration, so the frontend should label it as a conservative integrated conclusion."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → specialist agents → expert-panel aggregation → conditional rollout → extra-time matrix → tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.1610576923076921,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper saves consecutive penalties to change the result."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper saves consecutive penalties to change the result."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive penalty saves, or the opponent misses multiple penalties, quickly opening up the shootout score.",
+          "rationale_en": "The goalkeeper saves consecutive penalties to change the result."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "4-3",
+          "winner_side": "team_a",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-3",
+              "probability": 0.07,
+              "winner_side": "team_a",
+              "rationale_cn": "热门球队压力下核心罚手失误，非热门方点球晋级。",
+              "rationale_en": "Under pressure, the favored team's key penalty taker misses, and the underdog advances on penalties."
+            }
+          ],
+          "display_scores": [
+            "4-3"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "Under pressure, the favored team's key penalty taker misses, and the underdog advances on penalties."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides were strong through the first five rounds, sending it to extra penalty rounds."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides were strong through the first five rounds, with the winner decided only after 6+ rounds of sudden death.",
+          "rationale_en": "Both sides were strong through the first five rounds, sending it to extra penalty rounds."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "门将连续扑点",
+          "impact_cn": "Switzerland与Colombia若进入点球大战，胜负可能被门将连续扑点瞬间改写；现有结论明确保留这一尾部路径，但缺少可靠数据确认哪一方门将状态更占优。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper save swing",
+          "impact_en": "If Switzerland and Colombia go to penalties, the result could be changed by a goalkeeper making consecutive saves; the current conclusion keeps this tail scenario, but lacks reliable data to confirm which goalkeeper is in better form.",
+          "text_cn": "Switzerland与Colombia若进入点球大战，胜负可能被门将连续扑点瞬间改写；现有结论明确保留这一尾部路径，但缺少可靠数据确认哪一方门将状态更占优。",
+          "text_en": "If Switzerland and Colombia go to penalties, the result could be changed by a goalkeeper making consecutive saves; the current conclusion keeps this tail scenario, but lacks reliable data to confirm which goalkeeper is in better form."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "主罚顺序缺口",
+          "impact_cn": "公开赛前资料无法确认Switzerland和Colombia的具体点球顺序，点球手只能作为经验候选处理；前端展示应强调这是证据缺口，而非已知名单优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty-order data gap",
+          "impact_en": "Public pre-match sources cannot confirm the exact penalty order for Switzerland and Colombia, so takers should only be treated as experience-based candidates; the frontend should stress this is an evidence gap, not a known lineup advantage.",
+          "text_cn": "公开赛前资料无法确认Switzerland和Colombia的具体点球顺序，点球手只能作为经验候选处理；前端展示应强调这是证据缺口，而非已知名单优势。",
+          "text_en": "Public pre-match sources cannot confirm the exact penalty order for Switzerland and Colombia, so takers should only be treated as experience-based candidates; the frontend should stress this is an evidence gap, not a known lineup advantage."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差路径",
+          "impact_cn": "点球rollout显示Switzerland对Colombia更常落在一球差或延长点球的比分族，说明模型并未给出清晰碾压路径，单次主罚质量波动会被放大。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "One-goal shootout path",
+          "impact_en": "The penalty rollout shows Switzerland vs Colombia more often landing in one-goal margins or extended shootout scorelines, meaning the model does not show a clear dominant path and each taker's quality variance is amplified.",
+          "text_cn": "点球rollout显示Switzerland对Colombia更常落在一球差或延长点球的比分族，说明模型并未给出清晰碾压路径，单次主罚质量波动会被放大。",
+          "text_en": "The penalty rollout shows Switzerland vs Colombia more often landing in one-goal margins or extended shootout scorelines, meaning the model does not show a clear dominant path and each taker's quality variance is amplified."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "压力失误路径",
+          "impact_cn": "现有尾部情景保留热门球队在压力下核心罚手失误、非热门方晋级的路径；但素材未说明哪队是热门，也缺少可靠数据锁定具体球员风险。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Pressure-error path",
+          "impact_en": "The current tail scenario keeps the path where the favored team's key taker misses under pressure and the underdog advances; however, the material does not state which team is favored and lacks reliable data to identify specific player risk.",
+          "text_cn": "现有尾部情景保留热门球队在压力下核心罚手失误、非热门方晋级的路径；但素材未说明哪队是热门，也缺少可靠数据锁定具体球员风险。",
+          "text_en": "The current tail scenario keeps the path where the favored team's key taker misses under pressure and the underdog advances; however, the material does not state which team is favored and lacks reliable data to identify specific player risk."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "延长点球风险",
+          "impact_cn": "若Switzerland和Colombia前五轮主罚质量都较高，比赛可能进入延长点球；此时主罚手深度与替补候选经验更关键，但现有资料未给出完整名单证据。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Sudden-death shootout risk",
+          "impact_en": "If Switzerland and Colombia both show high taker quality in the first five penalties, the shootout may go to sudden death. At that point, taker depth and substitute-candidate experience become more important, but the current material does not provide complete squad-list evidence.",
+          "text_cn": "若Switzerland和Colombia前五轮主罚质量都较高，比赛可能进入延长点球；此时主罚手深度与替补候选经验更关键，但现有资料未给出完整名单证据。",
+          "text_en": "If Switzerland and Colombia both show high taker quality in the first five penalties, the shootout may go to sudden death. At that point, taker depth and substitute-candidate experience become more important, but the current material does not provide complete squad-list evidence."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → specialist agents → expert-panel aggregation → penalty-sequence rollout → shootout score matrix → tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-07T04:49:52.569343Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline combines pre-match evidence, expert-panel reasoning, conditional MAS rollout, and Monte Carlo sampling across normal time, extra time, and penalties.",
+  "architecture_en": "Extra time and penalties are modeled as conditional branches of the same knockout path tree rather than as separate post-processing outputs. The frontend tabs show different slices of one unified path distribution."
+}

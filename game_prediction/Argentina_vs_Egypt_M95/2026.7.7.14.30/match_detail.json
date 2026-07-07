@@ -1,0 +1,1295 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M95",
+    "team_a": "Argentina",
+    "team_b": "Egypt",
+    "kickoff_utc": "2026-07-07T12:00:00-04:00",
+    "venue": "Atlanta Stadium, Atlanta",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.7903846153846159,
+      "team_b": 0.20961538461538406,
+      "favorite": "Argentina"
+    },
+    "resolution": {
+      "normal_time": 0.7753846153846154,
+      "extra_time": 0.11000000000000004,
+      "penalties": 0.11461538461538481
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.12766666666666668,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "2-0",
+        "probability": 0.11366666666666667,
+        "goals_a": 2,
+        "goals_b": 0
+      },
+      {
+        "score": "2-1",
+        "probability": 0.10416666666666667,
+        "goals_a": 2,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+        "probability": 0.11923076923076924,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_f9a10f649da1",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.02346153846153846,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_0be11dd42952",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "probability": 0.007307692307692308,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Egypt",
+        "path_id": "BMC_d8da10794021",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+        "probability": 0.11923076923076924,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_f9a10f649da1",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.02346153846153846,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_0be11dd42952",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "probability": 0.007307692307692308,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Egypt",
+        "path_id": "BMC_d8da10794021",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+      }
+    ],
+    "favorite": "Argentina",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.11461538461538481,
+        "probability_band": "11.5%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007307692307692308,
+            "path_probability": 0.007307692307692308,
+            "path_id": "BMC_d8da10794021",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.005,
+            "path_probability": 0.005,
+            "path_id": "BMC_049b5790b664",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.005,
+            "path_probability": 0.005,
+            "path_id": "BMC_d2fcaeab6edf",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "If neither 90 minutes nor extra time separates the teams, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.11000000000000004,
+        "probability_band": "11.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.02346153846153846,
+            "path_probability": 0.02346153846153846,
+            "path_id": "BMC_0be11dd42952",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.021153846153846155,
+            "path_probability": 0.021153846153846155,
+            "path_id": "BMC_015e1dc9bf31",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.009615384615384616,
+            "path_probability": 0.009615384615384616,
+            "path_id": "BMC_f6aa9e2f84ad",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Egypt加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Egypt advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth, and risk preference become amplified in extra time and can create a decisive path."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.14153846153846153,
+        "probability_band": "14.2%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.04461538461538461,
+            "path_probability": 0.04461538461538461,
+            "path_id": "BMC_04f8948ce453",
+            "summary_cn": "90分钟0-1，Egypt常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Egypt advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.039615384615384615,
+            "path_probability": 0.039615384615384615,
+            "path_id": "BMC_475ed8fc6676",
+            "summary_cn": "90分钟1-2，Egypt常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Egypt advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Egypt",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.014615384615384615,
+            "path_probability": 0.014615384615384615,
+            "path_id": "BMC_45fb3fe8b6c8",
+            "summary_cn": "90分钟0-2，Egypt常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Egypt advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can still advance through a normal-time strike, an extra-time counterattack, or penalty variance."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 169,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.11923076923076924,
+          "path_probability": 0.11923076923076924,
+          "path_id": "BMC_f9a10f649da1",
+          "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.11423076923076923,
+          "path_probability": 0.11423076923076923,
+          "path_id": "BMC_6b985ab1778b",
+          "summary_cn": "90分钟2-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10230769230769231,
+          "path_probability": 0.10230769230769231,
+          "path_id": "BMC_92c9b56d23ed",
+          "summary_cn": "90分钟2-1，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "3-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07653846153846154,
+          "path_probability": 0.07653846153846154,
+          "path_id": "BMC_9205e47b5725",
+          "summary_cn": "90分钟3-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 3-0: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "3-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.05846153846153846,
+          "path_probability": 0.05846153846153846,
+          "path_id": "BMC_010dc1ba4d43",
+          "summary_cn": "90分钟3-1，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 3-1: Argentina advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Argentina常规时间晋级。",
+          "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+          "probability": 0.11923076923076924,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Argentina",
+          "path_id": "BMC_f9a10f649da1",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Argentina advances in normal time.",
+          "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+          "probability": 0.02346153846153846,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Argentina",
+          "path_id": "BMC_0be11dd42952",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+          "probability": 0.007307692307692308,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "3-4",
+          "advancer_team": "Egypt",
+          "path_id": "BMC_d8da10794021",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+        "probability": 0.11923076923076924,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_f9a10f649da1",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.02346153846153846,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_0be11dd42952",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Egypt点球晋级。",
+        "probability": 0.007307692307692308,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "3-4",
+        "advancer_team": "Egypt",
+        "path_id": "BMC_d8da10794021",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Egypt advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.3136666666666665,
+          "base_event_probability": 0.3136666666666665,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.06333333333333334,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking through the opposition defense."
+            },
+            {
+              "score": "2-2",
+              "probability": 0.04416666666666667,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open back-and-forth, with both attacks converting."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.033666666666666664,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking through the opposition defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.033,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.024833333333333332,
+              "rationale_cn": "后段定位球与纪律风险放大低比分分支；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Late set-piece and disciplinary risks increase the low-score branch; the match shifts into a high-risk open tempo, with space behind the defensive lines continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "2-2",
+            "4-0"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead pushing total goals well above the main low-score forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.1978333333333334,
+          "base_event_probability": 0.1978333333333334,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.07,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking through the opposition defense."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.033666666666666664,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking through the opposition defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.033,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "5-1",
+              "probability": 0.014833333333333334,
+              "rationale_cn": "加时与点球：阿根廷门将优势被埃及近期点球准备对冲；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Extra time and penalties: Argentina's goalkeeper edge is offset by Egypt's recent penalty preparation; the match shifts into a high-risk open tempo, with space behind the defenses continuing to grow."
+            },
+            {
+              "score": "5-0",
+              "probability": 0.014333333333333333,
+              "rationale_cn": "加时与点球：阿根廷门将优势被埃及近期点球准备对冲、后段定位球与纪律风险放大低比分分支；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Extra time and penalties: Argentina's goalkeeper edge is offset by Egypt's recent penalty preparation, while late set pieces and discipline risks amplify the low-score branch; the match shifts into a high-risk open tempo, with space behind the defenses continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-0",
+            "4-1"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, red/yellow card pressure, fitness issues, or defensive imbalance disrupts the match, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.13750000000000004,
+          "base_event_probability": 0.13750000000000004,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.0525,
+              "rationale_cn": "Egypt通过压迫或转换取得一球优势。",
+              "rationale_en": "Egypt take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.036,
+              "rationale_cn": "抢断后的快速转换；Egypt通过压迫或转换取得一球优势。",
+              "rationale_en": "Quick transitions after tackles; Egypt gains a one-goal edge through pressing or transitions."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.015666666666666666,
+              "rationale_cn": "Egypt充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Egypt make full use of counterattacks or attacking efficiency to extend their advantage."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.010666666666666666,
+              "rationale_cn": "抢断后的快速转换；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Quick transitions after tackles won; the match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0095,
+              "rationale_cn": "抢断后的快速转换、紧凑防守对进攻空间的压缩；Egypt充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Quick transitions after tackles and compact defending compress attacking space; Egypt fully converts counterattacks or attacking efficiency to extend the lead."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored before the match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog can directly change the outcome within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "进攻",
+          "impact_cn": "阿根廷排名、进球产量和前期防守限制质量都有强证据支撑，因此normal_time 0-30：阿根廷更可能控球推进并压迫禁区前沿，埃及优先收缩中路，等待反击、长传或定位球。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_f68a2ad9c3cb",
+            "E_3d71caf3ee0d",
+            "E_c087a8f60f00",
+            "E_47edb5df86ef",
+            "PATH_TRANSFER_M95_TEAM_A_LOAD",
+            "PATH_TRANSFER_M95_TEAM_B_LOAD",
+            "PATH_TRANSFER_M95_TEAM_A_LATE_STATE",
+            "PATH_TRANSFER_M95_TEAM_B_LATE_STATE",
+            "E_0e9dab911a7b"
+          ],
+          "source_names": [
+            "Inside FIFA",
+            "The Athletic",
+            "ESPN"
+          ],
+          "label_en": "Argentina attacking pressure",
+          "impact_en": "Argentina's ranking, goal output, and early defensive containment quality are all strongly supported by evidence, so normal_time 0-30: Argentina are more likely to advance with possession and press the edge of the box, while Egypt prioritize compacting the middle and waiting for counters, long balls, or set pieces.",
+          "text_cn": "阿根廷排名、进球产量和前期防守限制质量都有强证据支撑，因此normal_time 0-30：阿根廷更可能控球推进并压迫禁区前沿，埃及优先收缩中路，等待反击、长传或定位球。",
+          "text_en": "Argentina's ranking, goal output, and early defensive containment quality are all strongly supported by evidence, so normal_time 0-30: Argentina are more likely to advance with possession and press the edge of the box, while Egypt prioritize compacting the middle and waiting for counters, long balls, or set pieces."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "防守",
+          "impact_cn": "Martínez有明确的国家队点球扑救数据，给阿根廷门将端带来信心，因此normal_time 0-30：点球机制尚不直接触发，但阿根廷若无法早早领先，埃及会逐渐接受低比分消耗。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_784b7127ea20",
+            "PATH_TRANSFER_M95_TEAM_B_PENALTY_EXPERIENCE",
+            "E_fce0e4ca7891",
+            "E_d66da61176f2",
+            "PATH_TRANSFER_M95_TEAM_A_LOAD",
+            "PATH_TRANSFER_M95_TEAM_B_LOAD",
+            "E_13810e8b8c49",
+            "E_cb8a0a1b0ea7"
+          ],
+          "source_names": [
+            "Reuters",
+            "structured_previous_path_context",
+            "Yahoo Sports"
+          ],
+          "label_en": "Egypt defensive block",
+          "impact_en": "Martínez has clear national-team penalty save data, giving Argentina confidence in goal. So normal_time 0-30: penalties are not yet directly relevant, but if Argentina cannot lead early, Egypt will increasingly accept a low-scoring grind.",
+          "text_cn": "Martínez有明确的国家队点球扑救数据，给阿根廷门将端带来信心，因此normal_time 0-30：点球机制尚不直接触发，但阿根廷若无法早早领先，埃及会逐渐接受低比分消耗。",
+          "text_en": "Martínez has clear national-team penalty save data, giving Argentina confidence in goal. So normal_time 0-30: penalties are not yet directly relevant, but if Argentina cannot lead early, Egypt will increasingly accept a low-scoring grind."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "防守",
+          "impact_cn": "Salah有腿筋伤势和赛前身体状态监控信息，因此normal_time 0-30：若Salah首发且移动正常，埃及可用反击迫使阿根廷后场保留保护；若受限，埃及更容易被压成低位清球。",
+          "direction": "draw",
+          "evidence_ids": [
+            "PATH_TRANSFER_M95_TEAM_B_INJURY_CARRYOVER",
+            "E_a700a11f98c9",
+            "E_10cee1456761",
+            "E_3e09b2c871d1",
+            "E_440ae05a5ead",
+            "E_c087a8f60f00",
+            "E_a64bb39c2166"
+          ],
+          "source_names": [
+            "structured_previous_path_context",
+            "The Straits Times",
+            "BBC Sport"
+          ],
+          "label_en": "Egypt defensive block",
+          "impact_en": "Salah has a hamstring issue and pre-match fitness monitoring, so normal_time 0-30: if Salah starts and moves normally, Egypt can use counters to force Argentina's back line to keep cover; if limited, Egypt are more likely to be pushed deep and clear the ball.",
+          "text_cn": "Salah有腿筋伤势和赛前身体状态监控信息，因此normal_time 0-30：若Salah首发且移动正常，埃及可用反击迫使阿根廷后场保留保护；若受限，埃及更容易被压成低位清球。",
+          "text_en": "Salah has a hamstring issue and pre-match fitness monitoring, so normal_time 0-30: if Salah starts and moves normally, Egypt can use counters to force Argentina's back line to keep cover; if limited, Egypt are more likely to be pushed deep and clear the ball."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "战术",
+          "impact_cn": "本届赛事VAR可介入角球和第二黄牌相关明确错误，因此normal_time 0-30：定位球风险主要来自阿根廷压制后的角球，以及埃及反击后制造犯规。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_7fe102344f86",
+            "E_fc5307742202",
+            "E_31d38f1a54e2",
+            "E_9b781b233b83",
+            "PATH_TRANSFER_M95_TEAM_A_LOAD",
+            "PATH_TRANSFER_M95_TEAM_B_LOAD",
+            "E_0e9dab911a7b"
+          ],
+          "source_names": [
+            "FIFA",
+            "BBC",
+            "Fox Sports"
+          ],
+          "label_en": "Game-state control",
+          "impact_en": "In this tournament, VAR can intervene on clear errors related to corners and second yellow cards, so normal_time 0-30: set-piece risk mainly comes from Argentina corners after sustained pressure and fouls won by Egypt after counters.",
+          "text_cn": "本届赛事VAR可介入角球和第二黄牌相关明确错误，因此normal_time 0-30：定位球风险主要来自阿根廷压制后的角球，以及埃及反击后制造犯规。",
+          "text_en": "In this tournament, VAR can intervene on clear errors related to corners and second yellow cards, so normal_time 0-30: set-piece risk mainly comes from Argentina corners after sustained pressure and fouls won by Egypt after counters."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "证据因素 5",
+          "impact_cn": "比赛环境：Argentina vs Egypt is listed as a FIFA World Cup 26 Round of 16 match at Atlanta Stadium / M…",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_c68d0704ee3b"
+          ],
+          "source_names": [
+            "Mercedes-Benz Stadium"
+          ],
+          "label_en": "Venue and travel context",
+          "impact_en": "Match context: Argentina vs Egypt is listed as a FIFA World Cup 26 Round of 16 match at Atlanta Stadium / M…",
+          "text_cn": "比赛环境：Argentina vs Egypt is listed as a FIFA World Cup 26 Round of 16 match at Atlanta Stadium / M…",
+          "text_en": "Match context: Argentina vs Egypt is listed as a FIFA World Cup 26 Round of 16 match at Atlanta Stadium / M…"
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "阵容",
+          "impact_cn": "阵容：FIFA's match preview lists Argentina v Egypt as a Round of 16 match on Tuesday, 7 July at Atla…",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_ba062ce903f1"
+          ],
+          "source_names": [
+            "FIFA"
+          ],
+          "label_en": "Lineup and minutes",
+          "impact_en": "Lineups: FIFA's match preview lists Argentina v Egypt as a Round of 16 match on Tuesday, 7 July at Atla…",
+          "text_cn": "阵容：FIFA's match preview lists Argentina v Egypt as a Round of 16 match on Tuesday, 7 July at Atla…",
+          "text_en": "Lineups: FIFA's match preview lists Argentina v Egypt as a Round of 16 match on Tuesday, 7 July at Atla…"
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.22461538461538486,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.2499999999999999,
+          "joint_probability": 0.05615384615384616,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.2499999999999999
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.08561643835616435
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "Argentina凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal margin in the 30 minutes of extra time via a counterattack, set piece, or substitute impact.",
+          "rationale_en": "Argentina win extra time by one goal through fitness, substitutions, or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.05993150684931501,
+          "joint_probability": 0.013461538461538455,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.05993150684931501
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.013698630136986294
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.011986301369863006
+            },
+            {
+              "score": "3-1",
+              "increment": "3-1",
+              "probability": 0.0034246575342465734
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, as the match shifts from caution into an open end-to-end battle.",
+          "rationale_en": "The match opens up in extra time, with each side converting once."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.08390410958904104,
+          "joint_probability": 0.018846153846153846,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.08390410958904104
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.015410958904109581
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.013698630136986294
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.013698630136986294
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "3-0",
+            "0-2"
+          ],
+          "rationale_cn": "Argentina在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A path where one side wins extra time by at least 2 goals, or total goals reach 3+.",
+          "rationale_en": "Argentina pull away after the opponent collapses physically or mentally."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "加时平局基线",
+          "impact_cn": "Argentina vs Egypt 的加时判断建立在90分钟平局分支上，素材明确指出加时阶段时间短、淘汰赛风险偏好下降，因此“仍平”是基础高概率路径。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Extra-time draw baseline",
+          "impact_en": "The extra-time call for Argentina vs Egypt is based on the 90-minute draw branch. The material clearly notes that extra time is short and risk appetite drops in knockout matches, so “still level” is the core high-probability path.",
+          "text_cn": "Argentina vs Egypt 的加时判断建立在90分钟平局分支上，素材明确指出加时阶段时间短、淘汰赛风险偏好下降，因此“仍平”是基础高概率路径。",
+          "text_en": "The extra-time call for Argentina vs Egypt is based on the 90-minute draw branch. The material clearly notes that extra time is short and risk appetite drops in knockout matches, so “still level” is the core high-probability path."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "阿根廷后程压上",
+          "impact_cn": "核心争议之一是Argentina是否会提前加大压迫，尝试在点球前解决比赛；若依靠体能、替补或压迫优势兑现，存在加时净胜一球分支。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Argentina late push",
+          "impact_en": "One key question is whether Argentina will increase pressure earlier and try to settle the match before penalties; if fitness, substitutes, or pressing advantages pay off, there is an extra-time one-goal win path.",
+          "text_cn": "核心争议之一是Argentina是否会提前加大压迫，尝试在点球前解决比赛；若依靠体能、替补或压迫优势兑现，存在加时净胜一球分支。",
+          "text_en": "One key question is whether Argentina will increase pressure earlier and try to settle the match before penalties; if fitness, substitutes, or pressing advantages pay off, there is an extra-time one-goal win path."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "埃及拖入点球",
+          "impact_cn": "Egypt的关键路径是保持防守纪律并主动把比赛拖向点球，素材提示弱势方可通过保守站位和降低开放度，压缩Argentina加时进球空间。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Egypt penalty-drag plan",
+          "impact_en": "Egypt's key path is to maintain defensive discipline and actively take the match to penalties. The material suggests the weaker side can use conservative positioning and reduce openness to limit Argentina's scoring space in extra time.",
+          "text_cn": "Egypt的关键路径是保持防守纪律并主动把比赛拖向点球，素材提示弱势方可通过保守站位和降低开放度，压缩Argentina加时进球空间。",
+          "text_en": "Egypt's key path is to maintain defensive discipline and actively take the match to penalties. The material suggests the weaker side can use conservative positioning and reduce openness to limit Argentina's scoring space in extra time."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "埃及转换偷袭",
+          "impact_cn": "若Argentina为避免点球选择压上，Egypt存在通过转换反击偷袭的分支；这一路径来自加时尾部风险，而非稳定进攻优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Egypt transition ambush",
+          "impact_en": "If Argentina push forward to avoid penalties, Egypt have a route to strike on transition; this comes from late extra-time risk, not a stable attacking edge.",
+          "text_cn": "若Argentina为避免点球选择压上，Egypt存在通过转换反击偷袭的分支；这一路径来自加时尾部风险，而非稳定进攻优势。",
+          "text_en": "If Argentina push forward to avoid penalties, Egypt have a route to strike on transition; this comes from late extra-time risk, not a stable attacking edge."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "尾段崩盘风险",
+          "impact_cn": "加时存在一方体能崩盘或连续换人失效导致被打穿的尾部情形，但素材未给出Argentina或Egypt具体体能、替补深度的可靠数据。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Late-collapse tail risk",
+          "impact_en": "A tail scenario in extra time where one side collapses physically or repeated substitutions fail and they are overrun, but the material provides no reliable data on Argentina or Egypt's fitness or bench depth.",
+          "text_cn": "加时存在一方体能崩盘或连续换人失效导致被打穿的尾部情形，但素材未给出Argentina或Egypt具体体能、替补深度的可靠数据。",
+          "text_en": "A tail scenario in extra time where one side collapses physically or repeated substitutions fail and they are overrun, but the material provides no reliable data on Argentina or Egypt's fitness or bench depth."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "球员级证据缺口",
+          "impact_cn": "当前素材没有提供Argentina或Egypt具体球员、点球手、替补名单或伤停信息，无法把加时优势绑定到某名球员，只能保留为证据缺口。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Player-level evidence gap",
+          "impact_en": "The current data does not provide specific Argentina or Egypt players, penalty takers, substitutes, or injury information, so any extra-time edge cannot be tied to a player and remains an evidence gap.",
+          "text_cn": "当前素材没有提供Argentina或Egypt具体球员、点球手、替补名单或伤停信息，无法把加时优势绑定到某名球员，只能保留为证据缺口。",
+          "text_en": "The current data does not provide specific Argentina or Egypt players, penalty takers, substitutes, or injury information, so any extra-time edge cannot be tied to a player and remains an evidence gap."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration → specialist agents → expert-panel aggregation → conditional rollout → extra-time matrix → tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.11461538461538481,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper makes consecutive penalty saves to change the result."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper makes consecutive penalty saves to change the result."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper saves multiple penalties in a row, or the opponent misses repeatedly, quickly widening the shootout score.",
+          "rationale_en": "The goalkeeper makes consecutive penalty saves to change the result."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误，非热门方点球晋级。",
+              "rationale_en": "The favored team's key penalty taker misses under pressure, and the underdog advances on penalties."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "The favored team's key penalty taker misses under pressure, and the underdog advances on penalties."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides show high quality in the first five rounds and go to extended penalties."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides show high quality in the first five rounds, with the winner decided only after 6+ rounds of sudden death.",
+          "rationale_en": "Both sides show high quality in the first five rounds and go to extended penalties."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "门将连续扑点",
+          "impact_cn": "Argentina 与 Egypt 的公开赛前资料无法确认具体点球顺序，主罚手只能作为经验候选处理，前端展示应强调这是证据缺口，而非已知名单。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper save swing",
+          "impact_en": "Public pre-match information for Argentina vs Egypt cannot confirm the exact penalty order. Takers should only be treated as experience-based candidates, and the frontend should highlight this as an evidence gap, not a known list.",
+          "text_cn": "Argentina 与 Egypt 的公开赛前资料无法确认具体点球顺序，主罚手只能作为经验候选处理，前端展示应强调这是证据缺口，而非已知名单。",
+          "text_en": "Public pre-match information for Argentina vs Egypt cannot confirm the exact penalty order. Takers should only be treated as experience-based candidates, and the frontend should highlight this as an evidence gap, not a known list."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "主罚顺序缺口",
+          "impact_cn": "点球rollout保留了门将连续扑点改变胜负的路径，因此 Argentina 与 Egypt 的点球判断不宜只看前五轮命中率，门将短时爆发会显著扰动结果。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty-order data gap",
+          "impact_en": "The penalty rollout keeps the path where a goalkeeper makes consecutive saves and changes the outcome, so Argentina vs Egypt penalty assessment should not rely only on the first five rounds’ conversion rate; a short goalkeeper surge can significantly disrupt the result.",
+          "text_cn": "点球rollout保留了门将连续扑点改变胜负的路径，因此 Argentina 与 Egypt 的点球判断不宜只看前五轮命中率，门将短时爆发会显著扰动结果。",
+          "text_en": "The penalty rollout keeps the path where a goalkeeper makes consecutive saves and changes the outcome, so Argentina vs Egypt penalty assessment should not rely only on the first five rounds’ conversion rate; a short goalkeeper surge can significantly disrupt the result."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差点球主线",
+          "impact_cn": "序列rollout显示点球结果以一球差和延长点球为主，Argentina 与 Egypt 的胜负边界很窄，任何单次失误或扑救都可能直接改写晋级方向。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "One-goal shootout mainline",
+          "impact_en": "Sequence rollouts show penalty outcomes mainly decided by one goal or extended shootouts. The margin between Argentina and Egypt is very narrow, and any single mistake or save could change who advances.",
+          "text_cn": "序列rollout显示点球结果以一球差和延长点球为主，Argentina 与 Egypt 的胜负边界很窄，任何单次失误或扑救都可能直接改写晋级方向。",
+          "text_en": "Sequence rollouts show penalty outcomes mainly decided by one goal or extended shootouts. The margin between Argentina and Egypt is very narrow, and any single mistake or save could change who advances."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "压力失误路径",
+          "impact_cn": "模型保留热门球队在压力下核心罚手失误、非热门方点球晋级的路径；但未给出具体球员证据，Argentina 与 Egypt 只能按压力因素保守呈现。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Pressure-error path",
+          "impact_en": "The model keeps a path where the favorite’s key penalty taker misses under pressure and the underdog advances on penalties; but without specific player evidence, Argentina and Egypt can only be presented conservatively based on pressure factors.",
+          "text_cn": "模型保留热门球队在压力下核心罚手失误、非热门方点球晋级的路径；但未给出具体球员证据，Argentina 与 Egypt 只能按压力因素保守呈现。",
+          "text_en": "The model keeps a path where the favorite’s key penalty taker misses under pressure and the underdog advances on penalties; but without specific player evidence, Argentina and Egypt can only be presented conservatively based on pressure factors."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "延长点球风险",
+          "impact_cn": "双方前五轮质量较高并进入延长点球是保留路径之一，Argentina 与 Egypt 若拖入第六轮后，主罚手深度和心理压力会成为更关键变量。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Extended shootout risk",
+          "impact_en": "One retained path is both sides showing high quality in the first five rounds and going to extended penalties. If Argentina and Egypt reach the sixth round, taker depth and psychological pressure become more decisive variables.",
+          "text_cn": "双方前五轮质量较高并进入延长点球是保留路径之一，Argentina 与 Egypt 若拖入第六轮后，主罚手深度和心理压力会成为更关键变量。",
+          "text_en": "One retained path is both sides showing high quality in the first five rounds and going to extended penalties. If Argentina and Egypt reach the sixth round, taker depth and psychological pressure become more decisive variables."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "保守校准",
+          "impact_cn": "点球比分族由专家委员会和序列rollout校准，并结合门将、主罚手深度、淘汰赛经验与心理压力，只能作为小幅条件调整而非确定预测。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Conservative calibration",
+          "impact_en": "The penalty scoreline family is calibrated by the expert panel and sequence rollout, factoring in goalkeepers, taker depth, knockout experience, and psychological pressure. It should only be used as a small conditional adjustment, not a firm prediction.",
+          "text_cn": "点球比分族由专家委员会和序列rollout校准，并结合门将、主罚手深度、淘汰赛经验与心理压力，只能作为小幅条件调整而非确定预测。",
+          "text_en": "The penalty scoreline family is calibrated by the expert panel and sequence rollout, factoring in goalkeepers, taker depth, knockout experience, and psychological pressure. It should only be used as a small conditional adjustment, not a firm prediction."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration → specialist agents → expert-panel aggregation → penalty-sequence rollout → shootout score matrix → tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-07T04:06:16.486001Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline combines pre-match evidence, expert-panel reasoning, conditional MAS rollout, and Monte Carlo sampling across normal time, extra time, and penalties.",
+  "architecture_en": "Extra time and penalties are modeled as conditional branches of the same knockout path tree rather than as separate post-processing outputs. The frontend tabs show different slices of one unified path distribution."
+}

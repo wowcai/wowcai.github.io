@@ -1,0 +1,413 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.49417637271214626,
+      "conditional_probability": 0.49417637271214626,
+      "joint_probability": 0.1427884615384614,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.49417637271214626,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "label_en": "0-0",
+      "rationale_en": "Because extra time is short and knockout risk appetite usually drops, remaining level is the high-probability baseline branch."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.17470881863560744,
+      "conditional_probability": 0.17470881863560744,
+      "joint_probability": 0.05048076923076923,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.17470881863560744,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Colombia凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Colombia win by one goal in extra time through fitness, substitutes, or counterattack efficiency."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.1663893510815309,
+      "conditional_probability": 0.1663893510815309,
+      "joint_probability": 0.04807692307692308,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.1663893510815309,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "Switzerland凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Switzerland wins extra time by one goal through fitness, substitute depth, or pressing advantages."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.06322795341098171,
+      "conditional_probability": 0.06322795341098171,
+      "joint_probability": 0.01826923076923076,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.06322795341098171,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "The match opens up in extra time, with each side converting once."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.0366056572379368,
+      "conditional_probability": 0.0366056572379368,
+      "joint_probability": 0.010576923076923078,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.0366056572379368,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "Colombia在对手压上后连续制造转换机会。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Colombia create repeated transition chances after the opponent pushes up."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.023294509151414327,
+      "conditional_probability": 0.023294509151414327,
+      "joint_probability": 0.006730769230769231,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.023294509151414327,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "Switzerland在对手体能或心理崩盘后拉开比分。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Switzerland pulls away after the opponent suffers a physical or psychological drop-off."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.0183028286189684,
+      "conditional_probability": 0.0183028286189684,
+      "joint_probability": 0.005288461538461539,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.0183028286189684,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.011647254575707163,
+      "conditional_probability": 0.011647254575707163,
+      "joint_probability": 0.0033653846153846156,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.011647254575707163,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.008319467554076546,
+      "conditional_probability": 0.008319467554076546,
+      "joint_probability": 0.002403846153846154,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.008319467554076546,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "0-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.003327787021630618,
+      "conditional_probability": 0.003327787021630618,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.003327787021630618,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.17470881863560744,
+      "joint_probability": 0.05048076923076923,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.17470881863560744
+        },
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.1663893510815309
+        }
+      ],
+      "display_scores": [
+        "0-1",
+        "1-0"
+      ],
+      "rationale_cn": "Colombia凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal result in 30 minutes of extra time via counters, set pieces, or substitute impact.",
+      "rationale_en": "Colombia win by one goal in extra time through fitness, substitutes, or counterattack efficiency."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.06322795341098171,
+      "joint_probability": 0.01826923076923076,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.06322795341098171
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.0183028286189684
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.011647254575707163
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both teams score in extra time, and the match shifts from caution into open end-to-end play.",
+      "rationale_en": "The match opens up in extra time, with each side converting once."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.0366056572379368,
+      "joint_probability": 0.010576923076923078,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.0366056572379368
+        },
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.023294509151414327
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.0183028286189684
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.011647254575707163
+        }
+      ],
+      "display_scores": [
+        "0-2",
+        "2-0",
+        "2-1"
+      ],
+      "rationale_cn": "Colombia在对手压上后连续制造转换机会。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A side covers by winning extra time by at least 2 goals, or with total goals reaching more than 3.",
+      "rationale_en": "Colombia create repeated transition chances after the opponent pushes up."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "加时平局基线",
+      "impact_cn": "加时被定义为90分钟平局后的分支，现有rollout以0-0保守路径为基础；瑞士与哥伦比亚在短时间内风险偏好下降，仍平并拖向点球是核心底盘。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Extra-time draw baseline",
+      "impact_en": "Extra time is defined as the branch after a 90-minute draw, with the current rollout based on a cautious 0-0 path; Switzerland and Colombia lower their risk appetite in a short window, with staying level and moving toward penalties as the core baseline.",
+      "text_cn": "加时被定义为90分钟平局后的分支，现有rollout以0-0保守路径为基础；瑞士与哥伦比亚在短时间内风险偏好下降，仍平并拖向点球是核心底盘。",
+      "text_en": "Extra time is defined as the branch after a 90-minute draw, with the current rollout based on a cautious 0-0 path; Switzerland and Colombia lower their risk appetite in a short window, with staying level and moving toward penalties as the core baseline."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "哥伦比亚转换",
+      "impact_cn": "哥伦比亚的正向分支来自体能、替补或反击效率，在瑞士压上避免点球时，可能通过转换机会净胜一球；但缺少可靠球员级执行数据支撑。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Colombia transition path",
+      "impact_en": "Colombia’s positive path comes from fitness, substitutes, or counterattack efficiency. If Switzerland push up to avoid penalties, Colombia could win by one through transition chances, but there is no reliable player-level execution data to support it.",
+      "text_cn": "哥伦比亚的正向分支来自体能、替补或反击效率，在瑞士压上避免点球时，可能通过转换机会净胜一球；但缺少可靠球员级执行数据支撑。",
+      "text_en": "Colombia’s positive path comes from fitness, substitutes, or counterattack efficiency. If Switzerland push up to avoid penalties, Colombia could win by one through transition chances, but there is no reliable player-level execution data to support it."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "瑞士压迫",
+      "impact_cn": "瑞士的加时胜出路径依赖体能、替补或压迫优势，在哥伦比亚主动降速拖点球时抢到一球；目前仅有条件先验，缺少可靠结构化证据。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Switzerland pressing path",
+      "impact_en": "Switzerland’s extra-time win path depends on fitness, substitutes, or pressing advantages, scoring while Colombia deliberately slow the game toward penalties. For now, this is only a conditional prior and lacks reliable structured evidence.",
+      "text_cn": "瑞士的加时胜出路径依赖体能、替补或压迫优势，在哥伦比亚主动降速拖点球时抢到一球；目前仅有条件先验，缺少可靠结构化证据。",
+      "text_en": "Switzerland’s extra-time win path depends on fitness, substitutes, or pressing advantages, scoring while Colombia deliberately slow the game toward penalties. For now, this is only a conditional prior and lacks reliable structured evidence."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "加时互相打开",
+      "impact_cn": "若双方都不愿进入点球，加时可能从保守分支转向开放，瑞士和哥伦比亚各有一次有效转化；该路径存在但不是基础设定，依赖风险偏好变化。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Open extra-time branch",
+      "impact_en": "If neither side wants penalties, extra time could shift from a conservative branch to a more open one, with Switzerland and Colombia each converting one clear chance. This path exists but is not the baseline setting and depends on changing risk preferences.",
+      "text_cn": "若双方都不愿进入点球，加时可能从保守分支转向开放，瑞士和哥伦比亚各有一次有效转化；该路径存在但不是基础设定，依赖风险偏好变化。",
+      "text_en": "If neither side wants penalties, extra time could shift from a conservative branch to a more open one, with Switzerland and Colombia each converting one clear chance. This path exists but is not the baseline setting and depends on changing risk preferences."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "球员级证据缺口",
+      "impact_cn": "素材未提供具体球员体能、替补质量、点球能力或伤停信息，加时判断主要来自专家委员会与条件rollout校准，前端应标注为保守整合结论。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Player-level evidence gap",
+      "impact_en": "The material does not provide specific player fitness, substitute quality, penalty ability, or injury/suspension information. The extra-time view mainly comes from expert-panel and conditional rollout calibration, so the frontend should label it as a conservative integrated conclusion.",
+      "text_cn": "素材未提供具体球员体能、替补质量、点球能力或伤停信息，加时判断主要来自专家委员会与条件rollout校准，前端应标注为保守整合结论。",
+      "text_en": "The material does not provide specific player fitness, substitute quality, penalty ability, or injury/suspension information. The extra-time view mainly comes from expert-panel and conditional rollout calibration, so the frontend should label it as a conservative integrated conclusion."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}

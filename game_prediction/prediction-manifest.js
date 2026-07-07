@@ -389,5 +389,15 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
     matchNo: "M94",
     matchFolder: "United_States_vs_Belgium_M94",
     versions: ["2026.7.6.17.00"]
+  },
+  {
+    matchNo: "M95",
+    matchFolder: "Argentina_vs_Egypt_M95",
+    versions: ["2026.7.7.14.30"]
+  },
+  {
+    matchNo: "M96",
+    matchFolder: "Switzerland_vs_Colombia_M96",
+    versions: ["2026.7.7.14.30"]
   }
 ];
