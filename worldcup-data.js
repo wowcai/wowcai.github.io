@@ -469,7 +469,8 @@ const knockoutMatchTeamsByNo = {
   M96: ["SUI", "COL"],
   M97: ["FRA", "MAR"],
   M98: ["ESP", "BEL"],
-  M99: ["NOR", "ENG"]
+  M99: ["NOR", "ENG"],
+  M100: ["ARG", "SUI"]
 };
 const formatKnockoutUtcTime = (value) => {
   const date = new Date(value);
@@ -557,7 +558,7 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M95", "M96"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M97"];
 
 window.WORLD_CUP_KNOCKOUT_PROGRESS = {
   rounds: {
@@ -755,6 +756,13 @@ window.WORLD_CUP_KNOCKOUT_PROGRESS = {
         matchTime: "7月11日 21:00 UTC",
         kickoffUtc: "2026-07-11T21:00:00Z",
         source: "M91 winner vs M92 winner"
+      },
+      M100: {
+        status: "scheduled",
+        teams: ["ARG", "SUI"],
+        matchTime: "7月12日 01:00 UTC",
+        kickoffUtc: "2026-07-12T01:00:00Z",
+        source: "M95 winner vs M96 winner"
       }
     }
   }

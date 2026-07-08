@@ -1,0 +1,1251 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M97",
+    "team_a": "France",
+    "team_b": "Morocco",
+    "kickoff_utc": "2026-07-09T16:00:00-04:00",
+    "venue": "Boston Stadium, Boston",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.6057692307692308,
+      "team_b": 0.3942307692307692,
+      "favorite": "France"
+    },
+    "resolution": {
+      "normal_time": 0.7235576923076923,
+      "extra_time": 0.12644230769230766,
+      "penalties": 0.14999999999999986
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13145833333333334,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "1-0",
+        "probability": 0.118125,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09354166666666666,
+        "goals_a": 2,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，France常规时间晋级。",
+        "summary_cn": "90分钟1-0，France常规时间晋级。",
+        "probability": 0.11153846153846154,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_d378b39d6a30",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: France advances in normal time.",
+        "summary_en": "90 minutes 1-0: France advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+        "probability": 0.025,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_4156831531c6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008653846153846154,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Morocco",
+        "path_id": "BMC_16f5dfdaa525",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，France常规时间晋级。",
+        "summary_cn": "90分钟1-0，France常规时间晋级。",
+        "probability": 0.11153846153846154,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_d378b39d6a30",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: France advances in normal time.",
+        "summary_en": "90 minutes 1-0: France advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+        "probability": 0.025,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_4156831531c6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008653846153846154,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Morocco",
+        "path_id": "BMC_16f5dfdaa525",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+      }
+    ],
+    "favorite": "France",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.14999999999999986,
+        "probability_band": "15.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008653846153846154,
+            "path_probability": 0.008653846153846154,
+            "path_id": "BMC_16f5dfdaa525",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "France",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-3",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.007211538461538462,
+            "path_probability": 0.007211538461538462,
+            "path_id": "BMC_a99cc692a81f",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，France点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, France advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_cfdae3d71f2e",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+          }
+        ],
+        "rationale_cn": "若90分钟和加时都未分胜负，摩洛哥仍可通过防守紧凑性和点球随机性，把一场法国略占优的比赛拖成点球路径。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "If neither 90 minutes nor extra time separates the teams, Morocco can still use defensive compactness and penalty randomness to turn a France-leaning match into a shootout path."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12644230769230766,
+        "probability_band": "12.6%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "France",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.025,
+            "path_probability": 0.025,
+            "path_id": "BMC_4156831531c6",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.016826923076923076,
+            "path_probability": 0.016826923076923076,
+            "path_id": "BMC_3bf72ab0b503",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Morocco加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Morocco advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "France",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.015384615384615385,
+            "path_probability": 0.015384615384615385,
+            "path_id": "BMC_c5cdef77a91e",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，France加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; France advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，法国仍有更强的加时破局路径；但由于本次rollout回退偏高，应展示为条件情景而非强结论。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, France still have the higher-quality extra-time breakthrough route, but the fallback-heavy rollout means this should be shown as a conditional scenario rather than a firm prediction."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.2793269230769231,
+        "probability_band": "27.9%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08557692307692308,
+            "path_probability": 0.08557692307692308,
+            "path_id": "BMC_018e5170ac37",
+            "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Morocco advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.06490384615384616,
+            "path_probability": 0.06490384615384616,
+            "path_id": "BMC_f0be441b14d3",
+            "summary_cn": "90分钟1-2，Morocco常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Morocco advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Morocco",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.041826923076923074,
+            "path_probability": 0.041826923076923074,
+            "path_id": "BMC_1fd74655ddae",
+            "summary_cn": "90分钟0-2，Morocco常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Morocco advances in normal time."
+          }
+        ],
+        "rationale_cn": "摩洛哥的爆冷路径不可忽略：低位紧凑、转换反击、定位球或点球都可能把悬念保留到比赛后段。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "Morocco’s upset path is not negligible: a compact block, transition attack, set pieces, or penalties can keep the match live deep into the tie."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 153,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "France",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.11153846153846154,
+          "path_probability": 0.11153846153846154,
+          "path_id": "BMC_d378b39d6a30",
+          "summary_cn": "90分钟1-0，France常规时间晋级。",
+          "summary_en": "90 minutes 1-0: France advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "France",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09711538461538462,
+          "path_probability": 0.09711538461538462,
+          "path_id": "BMC_741fa17224fa",
+          "summary_cn": "90分钟2-1，France常规时间晋级。",
+          "summary_en": "90 minutes 2-1: France advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Morocco",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08557692307692308,
+          "path_probability": 0.08557692307692308,
+          "path_id": "BMC_018e5170ac37",
+          "summary_cn": "90分钟0-1，Morocco常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Morocco advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "France",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07548076923076923,
+          "path_probability": 0.07548076923076923,
+          "path_id": "BMC_8e5047dfd2e1",
+          "summary_cn": "90分钟2-0，France常规时间晋级。",
+          "summary_en": "90 minutes 2-0: France advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Morocco",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06490384615384616,
+          "path_probability": 0.06490384615384616,
+          "path_id": "BMC_f0be441b14d3",
+          "summary_cn": "90分钟1-2，Morocco常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Morocco advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，France常规时间晋级。",
+          "summary_cn": "90分钟1-0，France常规时间晋级。",
+          "probability": 0.11153846153846154,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "France",
+          "path_id": "BMC_d378b39d6a30",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: France advances in normal time.",
+          "summary_en": "90 minutes 1-0: France advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+          "probability": 0.025,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "France",
+          "path_id": "BMC_4156831531c6",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+          "probability": 0.008653846153846154,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Morocco",
+          "path_id": "BMC_16f5dfdaa525",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，France常规时间晋级。",
+        "summary_cn": "90分钟1-0，France常规时间晋级。",
+        "probability": 0.11153846153846154,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_d378b39d6a30",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: France advances in normal time.",
+        "summary_en": "90 minutes 1-0: France advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+        "probability": 0.025,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_4156831531c6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Morocco点球晋级。",
+        "probability": 0.008653846153846154,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Morocco",
+        "path_id": "BMC_16f5dfdaa525",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Morocco advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.25979166666666664,
+          "base_event_probability": 0.25979166666666664,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.050625,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open back-and-forth, with both attacks converting."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.04541666666666667,
+              "rationale_cn": "France打破对方防守后扩大领先优势。",
+              "rationale_en": "France break through the defense and extend their lead."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.027708333333333335,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Compact defending restricts attacking space; the match shifts into a high-risk, open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.019791666666666666,
+              "rationale_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Morocco make full use of counterattacks or attacking efficiency to extend their lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.018333333333333333,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Compact defending restricts attacking space; the match shifts into a high-risk, open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-1",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "Total goals at least 4.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead, pushing total goals well above the main low-score prediction."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.10979166666666666,
+          "base_event_probability": 0.10979166666666666,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.036041666666666666,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；France打破对方防守后扩大领先优势。",
+              "rationale_en": "Compact defending restricts attacking space; France extend their lead after breaking through the opponent’s defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.018333333333333333,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Compact defending restricts attacking space; the match shifts into a high-risk, open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.017083333333333332,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；France打破对方防守后扩大领先优势。",
+              "rationale_en": "Compact defending restricts attacking space; France extend their lead after breaking through the opponent’s defense."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.01125,
+              "rationale_cn": "加时与点球路径：摩洛哥经验略增生存，点球优势需收缩；Morocco充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Extra-time and penalty route: Morocco's experience slightly improves survival, while any penalty edge should be narrowed; Morocco fully converts counterattacking or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0060416666666666665,
+              "rationale_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Key player form and role changes; the match shifts into a high-risk, open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-1",
+            "4-0"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fitness issues, or defensive imbalance disrupts the match balance, allowing one side to pull clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.24854166666666663,
+          "base_event_probability": 0.24854166666666663,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.08395833333333333,
+              "rationale_cn": "Morocco通过压迫或转换取得一球优势。",
+              "rationale_en": "Morocco take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.06125,
+              "rationale_cn": "Morocco通过压迫或转换取得一球优势。",
+              "rationale_en": "Morocco take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.035416666666666666,
+              "rationale_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Morocco make full use of counterattacks or attacking efficiency to extend their lead."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.019791666666666666,
+              "rationale_cn": "Morocco充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Morocco make full use of counterattacks or attacking efficiency to extend their lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.015,
+              "rationale_cn": "紧凑防守对进攻空间的压缩；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Compact defending restricts attacking space; the match shifts into a high-risk, open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side relatively less favored pre-match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog changes the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "证据因素 1",
+          "impact_cn": "法国本届14球、仅丢2球且5场3零封，攻守数据都有支撑。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_6713cbbeb4ef",
+            "E_4a62c72dd57d"
+          ],
+          "source_names": [
+            "FOX Sports",
+            "FIFA"
+          ],
+          "label_en": "Evidence Factor 1",
+          "impact_en": "France have scored 14 goals, conceded only 2, and kept 3 clean sheets in 5 matches, with support from both attacking and defensive data.",
+          "text_cn": "法国本届14球、仅丢2球且5场3零封，攻守数据都有支撑。",
+          "text_en": "France have scored 14 goals, conceded only 2, and kept 3 clean sheets in 5 matches, with support from both attacking and defensive data."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "防守",
+          "impact_cn": "FIFA称摩洛哥低中位紧凑防守，并能短传摆脱反压后反击。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_35d9b66a2536",
+            "E_F_24b015d188f5",
+            "E_F_43c0d747bde8"
+          ],
+          "source_names": [
+            "FIFA Training Centre"
+          ],
+          "label_en": "Defensive structure",
+          "impact_en": "FIFA says Morocco defend compactly in a low-to-mid block and can use short passes to escape counter-pressing before counterattacking.",
+          "text_cn": "FIFA称摩洛哥低中位紧凑防守，并能短传摆脱反压后反击。",
+          "text_en": "FIFA says Morocco defend compactly in a low-to-mid block and can use short passes to escape counter-pressing before counterattacking."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "阵容",
+          "impact_cn": "ESPN称楚阿梅尼因大腿伤势可能缺席，法国中场推进需重组。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_5edd5ddd4375"
+          ],
+          "source_names": [
+            "ESPN"
+          ],
+          "label_en": "Squad availability",
+          "impact_en": "ESPN says Tchouameni may miss out with a thigh injury, forcing France to reshape midfield progression.",
+          "text_cn": "ESPN称楚阿梅尼因大腿伤势可能缺席，法国中场推进需重组。",
+          "text_en": "ESPN says Tchouameni may miss out with a thigh injury, forcing France to reshape midfield progression."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "进攻",
+          "impact_cn": "两队上轮均90分钟晋级；法国1-0偏紧，摩洛哥3-0后段进球。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "PATH_TRANSFER_M97_TEAM_A_LOAD",
+            "E_c1fecaf3ef77",
+            "PATH_TRANSFER_M97_TEAM_B_LATE_STATE"
+          ],
+          "source_names": [
+            "structured_previous_path_context",
+            "FIFA"
+          ],
+          "label_en": "Current tournament form",
+          "impact_en": "Both teams advanced in 90 minutes last round; France's 1-0 was tight, while Morocco scored late in a 3-0 win.",
+          "text_cn": "两队上轮均90分钟晋级；法国1-0偏紧，摩洛哥3-0后段进球。",
+          "text_en": "Both teams advanced in 90 minutes last round; France's 1-0 was tight, while Morocco scored late in a 3-0 win."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "心理",
+          "impact_cn": "FIFA列哈基米、齐耶赫均有10场世界杯经验，摩洛哥抗压并非空白。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_3eaf8b53444f"
+          ],
+          "source_names": [
+            "FIFA"
+          ],
+          "label_en": "Knockout experience",
+          "impact_en": "FIFA lists Hakimi and Ziyech as having 10 World Cup appearances each, so Morocco are not untested under pressure.",
+          "text_cn": "FIFA列哈基米、齐耶赫均有10场世界杯经验，摩洛哥抗压并非空白。",
+          "text_en": "FIFA lists Hakimi and Ziyech as having 10 World Cup appearances each, so Morocco are not untested under pressure."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2764423076923075,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.18260869565217397,
+          "joint_probability": 0.05048076923076923,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.18260869565217397
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.14260869565217396
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "法国凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A 1-goal margin is decided in 30 minutes of extra time through counters, set pieces, or impact substitutes.",
+          "rationale_en": "France wins extra time by one goal through fitness, substitutes, or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.050434782608695675,
+          "joint_probability": 0.013942307692307693,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.050434782608695675
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.008695652173913047
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.005217391304347828
+            },
+            {
+              "score": "3-2",
+              "increment": "3-2",
+              "probability": 0.003478260869565219
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, as the match shifts from caution into open end-to-end play.",
+          "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.059130434782608716,
+          "joint_probability": 0.016346153846153847,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.059130434782608716
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.03478260869565219
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.012173913043478266
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.008695652173913047
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "3-0"
+          ],
+          "rationale_cn": "法国在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A side covers by winning extra time by at least 2 goals, or by total goals reaching over 3.",
+          "rationale_en": "France pulls clear after the opponent collapses physically or mentally."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "平局入口",
+          "impact_cn": "加时仅在90分钟打平后出现，法国常规时间胜率高于摩洛哥但平局概率不低；若来自1-1、0-0或2-2，开放度和风险偏好会明显不同。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Draw entry",
+          "impact_en": "Extra time only occurs after a 90-minute draw. France's regular-time win rate is higher than Morocco's, but the draw probability is still notable; if it comes from 1-1, 0-0, or 2-2, openness and risk preference will differ clearly.",
+          "text_cn": "加时仅在90分钟打平后出现，法国常规时间胜率高于摩洛哥但平局概率不低；若来自1-1、0-0或2-2，开放度和风险偏好会明显不同。",
+          "text_en": "Extra time only occurs after a 90-minute draw. France's regular-time win rate is higher than Morocco's, but the draw probability is still notable; if it comes from 1-1, 0-0, or 2-2, openness and risk preference will differ clearly."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "法国破局点",
+          "impact_cn": "若进入加时，法国仍可依靠替补深度、姆巴佩和登贝莱的个人突破以及整体攻守质量争取净胜一球，但需权衡压上后被反击的风险。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "France breakthrough route",
+          "impact_en": "If it goes to extra time, France can still rely on squad depth, Mbappé and Dembélé's individual breakthroughs, and overall attacking and defensive quality to seek a one-goal win, but must balance this against the risk of being countered after pushing forward.",
+          "text_cn": "若进入加时，法国仍可依靠替补深度、姆巴佩和登贝莱的个人突破以及整体攻守质量争取净胜一球，但需权衡压上后被反击的风险。",
+          "text_en": "If it goes to extra time, France can still rely on squad depth, Mbappé and Dembélé's individual breakthroughs, and overall attacking and defensive quality to seek a one-goal win, but must balance this against the risk of being countered after pushing forward."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "摩洛哥生存路",
+          "impact_cn": "摩洛哥的低位紧凑、防守经验和转换反击仍是加时生存路径，若法国105分钟后继续冒险压上，摩洛哥存在反击或定位球偷袭空间。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Morocco survival path",
+          "impact_en": "Morocco’s compact low block, defensive experience, and transition counterattacks remain a survival path in extra time. If France keep pushing high after 105 minutes, Morocco may have space to strike on the break or from set pieces.",
+          "text_cn": "摩洛哥的低位紧凑、防守经验和转换反击仍是加时生存路径，若法国105分钟后继续冒险压上，摩洛哥存在反击或定位球偷袭空间。",
+          "text_en": "Morocco’s compact low block, defensive experience, and transition counterattacks remain a survival path in extra time. If France keep pushing high after 105 minutes, Morocco may have space to strike on the break or from set pieces."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "伤情变量",
+          "impact_cn": "Saibari伤情会影响摩洛哥加时前场连接和点球主罚深度；Tchouaméni、Thuram状态则关系法国中场控制和替补冲击质量。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Injury variables",
+          "impact_en": "Saibari's injury affects Morocco's extra-time attacking links and penalty-taking depth; Tchouaméni and Thuram's fitness affects France's midfield control and bench impact.",
+          "text_cn": "Saibari伤情会影响摩洛哥加时前场连接和点球主罚深度；Tchouaméni、Thuram状态则关系法国中场控制和替补冲击质量。",
+          "text_en": "Saibari's injury affects Morocco's extra-time attacking links and penalty-taking depth; Tchouaméni and Thuram's fitness affects France's midfield control and bench impact."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "点球均势",
+          "impact_cn": "若120分钟仍平，点球应接近均势处理；缺少两队完整主罚顺序、训练点球数据和临场健康状态，不能给任一方显著加成。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Penalty balance",
+          "impact_en": "If it is still level after 120 minutes, penalties should be treated as close to even; without full taker orders, training penalty data, and matchday fitness status for both teams, neither side should receive a significant boost.",
+          "text_cn": "若120分钟仍平，点球应接近均势处理；缺少两队完整主罚顺序、训练点球数据和临场健康状态，不能给任一方显著加成。",
+          "text_en": "If it is still level after 120 minutes, penalties should be treated as close to even; without full taker orders, training penalty data, and matchday fitness status for both teams, neither side should receive a significant boost."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "证据缺口",
+          "impact_cn": "官方首发、裁判尺度、天气场地、摩洛哥四后卫或五后卫、法国左路组合及边后卫压上程度均未确认，会影响加时体能与空间判断。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Evidence gap",
+          "impact_en": "Official lineups, refereeing threshold, weather and pitch, Morocco's back four or back five, France's left-side pairing, and the full-backs' pushing height are all unconfirmed, affecting extra-time fitness and space assessments.",
+          "text_cn": "官方首发、裁判尺度、天气场地、摩洛哥四后卫或五后卫、法国左路组合及边后卫压上程度均未确认，会影响加时体能与空间判断。",
+          "text_en": "Official lineups, refereeing threshold, weather and pitch, Morocco's back four or back five, France's left-side pairing, and the full-backs' pushing height are all unconfirmed, affecting extra-time fitness and space assessments."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence synthesis → specialist agents → committee aggregation → conditional rollout → Monte Carlo matrix → tail audit → report output. Because this run used fallback support, extra-time paths should be displayed as low-confidence scenarios."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.14999999999999986,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.06271406491499228,
+          "probability_band": "low",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.06271406491499228,
+              "winner_side": "team_a",
+              "rationale_cn": "比分4-2、法国胜与矩阵一致，属于五轮内提前或末轮前后拉开差距的合法点球比分。概率按矩阵由0.08下修至0.06271406491499228；门将连续扑点可作为低中概率尾部叙事，但不额外抬高矩阵概率。",
+              "rationale_en": "The 4-2 score and France win match the matrix, a valid shootout score from an early finish within five rounds or a gap opening around the final round. The probability is adjusted down from 0.08 to 0.06271406491499228 by the matrix; consecutive goalkeeper saves can serve as a low-to-mid probability tail narrative, but do not further raise the matrix probability."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.060933539412673876,
+              "winner_side": "team_b",
+              "rationale_cn": "比分2-4、摩洛哥胜与矩阵一致，符合点球大战可提前结束或五轮内形成两球差的规则。概率按矩阵由0.08下修至0.060933539412673876；门将连续扑点叙事可解释该类低中概率结果。",
+              "rationale_en": "The 2-4 score and Morocco win match the matrix, consistent with shootout rules allowing an early finish or a two-goal gap within five rounds. The probability is adjusted down from 0.08 to 0.060933539412673876 by the matrix; a goalkeeper making consecutive penalty saves can explain this low-to-mid probability outcome."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "比分4-2、法国胜与矩阵一致，属于五轮内提前或末轮前后拉开差距的合法点球比分。概率按矩阵由0.08下修至0.06271406491499228；门将连续扑点可作为低中概率尾部叙事，但不额外抬高矩阵概率。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper saves multiple penalties in a row, or the opponent misses repeatedly, causing the shootout score to widen quickly.",
+          "rationale_en": "The 4-2 score and France win match the matrix, a valid shootout score from an early finish within five rounds or a gap opening around the final round. The probability is adjusted down from 0.08 to 0.06271406491499228 by the matrix; consecutive goalkeeper saves can serve as a low-to-mid probability tail narrative, but do not further raise the matrix probability."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "1-3",
+          "winner_side": "team_b",
+          "probability": 0.01904173106646059,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "1-3",
+              "probability": 0.01904173106646059,
+              "winner_side": "team_b",
+              "rationale_cn": "原提案3-4是矩阵中摩洛哥胜出的高频常见比分，概率应为0.13710046367851622且不属于tail；为保留“压力失误导致非预期出局”的尾部口径，修正为矩阵中的1-3、摩洛哥胜。该比分合法，代表法国多名罚手失手且摩洛哥在五轮内建立不可追差优势。若无赛前强弱证据，“热门”表述不应作为事实断言，因此标题改为法国压力失误。",
+              "rationale_en": "The original 3-4 proposal is a high-frequency common B-team win score in the matrix, with probability 0.13710046367851622, and is not in the tail. To keep the tail framing of an unexpected exit caused by pressure errors, it is revised to 1-3, B-team win, in the matrix. This score is valid and represents multiple A-team takers missing while B-team builds an uncatchable lead within five rounds. Without pre-match strength evidence, \"favorite\" should not be stated as fact, so the title is changed to A-team pressure errors."
+            }
+          ],
+          "display_scores": [
+            "1-3"
+          ],
+          "rationale_cn": "原提案3-4是矩阵中摩洛哥胜出的高频常见比分，概率应为0.13710046367851622且不属于tail；为保留“压力失误导致非预期出局”的尾部口径，修正为矩阵中的1-3、摩洛哥胜。该比分合法，代表法国多名罚手失手且摩洛哥在五轮内建立不可追差优势。若无赛前强弱证据，“热门”表述不应作为事实断言，因此标题改为法国压力失误。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "The original 3-4 proposal is a high-frequency common B-team win score in the matrix, with probability 0.13710046367851622, and is not in the tail. To keep the tail framing of an unexpected exit caused by pressure errors, it is revised to 1-3, B-team win, in the matrix. This score is valid and represents multiple A-team takers missing while B-team builds an uncatchable lead within five rounds. Without pre-match strength evidence, \"favorite\" should not be stated as fact, so the title is changed to A-team pressure errors."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.03135703245749614,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.03135703245749614,
+              "winner_side": "team_a",
+              "rationale_cn": "比分6-5、法国胜与矩阵一致，符合前五轮战平后进入一轮一罚 sudden death 的点球规则。概率按矩阵由0.05下修至0.03135703245749614；该情景依赖双方前五轮整体命中率较高并在延长轮分出胜负，属于低概率尾部剧情。",
+              "rationale_en": "The 6-5 score and France win match the matrix, consistent with penalty rules where the shootout is level after five rounds and goes to one-kick sudden death. The probability is adjusted down from 0.05 to 0.03135703245749614 by the matrix; this scenario depends on high overall conversion by both sides in the first five rounds and a winner in extra rounds, making it a low-probability tail outcome."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "比分6-5、法国胜与矩阵一致，符合前五轮战平后进入一轮一罚 sudden death 的点球规则。概率按矩阵由0.05下修至0.03135703245749614；该情景依赖双方前五轮整体命中率较高并在延长轮分出胜负，属于低概率尾部剧情。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides are strong through the first five rounds, with the result decided only after 6+ rounds of sudden death.",
+          "rationale_en": "The 6-5 score and France win match the matrix, consistent with penalty rules where the shootout is level after five rounds and goes to one-kick sudden death. The probability is adjusted down from 0.05 to 0.03135703245749614 by the matrix; this scenario depends on high overall conversion by both sides in the first five rounds and a winner in extra rounds, making it a low-probability tail outcome."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "顺序缺口",
+          "impact_cn": "法国与摩洛哥的具体点球顺序赛前公开资料无法确认，主罚手只能作为经验候选处理，前端不宜展示固定名单或暗示某名球员必然主罚。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Taker-order uncertainty",
+          "impact_en": "The exact penalty order for France vs Morocco cannot be confirmed from public pre-match information. Takers should only be treated as experience-based candidates; the frontend should not show a fixed list or imply any player is certain to take one.",
+          "text_cn": "法国与摩洛哥的具体点球顺序赛前公开资料无法确认，主罚手只能作为经验候选处理，前端不宜展示固定名单或暗示某名球员必然主罚。",
+          "text_en": "The exact penalty order for France vs Morocco cannot be confirmed from public pre-match information. Takers should only be treated as experience-based candidates; the frontend should not show a fixed list or imply any player is certain to take one."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "门将路径",
+          "impact_cn": "点球大战校准保留法国或摩洛哥门将连续扑点的路径，但该叙事只用于解释低中概率比分，不应额外抬高任何一方的矩阵概率。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper path",
+          "impact_en": "The penalty shootout calibration keeps scenarios where the France or Morocco goalkeeper makes consecutive saves, but this narrative should only explain low-to-mid probability scorelines and should not further raise either side’s matrix probability.",
+          "text_cn": "点球大战校准保留法国或摩洛哥门将连续扑点的路径，但该叙事只用于解释低中概率比分，不应额外抬高任何一方的矩阵概率。",
+          "text_en": "The penalty shootout calibration keeps scenarios where the France or Morocco goalkeeper makes consecutive saves, but this narrative should only explain low-to-mid probability scorelines and should not further raise either side’s matrix probability."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "一球差主线",
+          "impact_cn": "rollout显示点球大战以一球差和延长点球为主，法国与摩洛哥更适合展示为细节拉锯，而不是五轮内迅速失衡的确定剧本。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "One-goal shootout mainline",
+          "impact_en": "The rollout shows shootouts mostly decided by one goal or extended penalties, so France vs Morocco is better shown as a detail-driven tug-of-war rather than a fixed script that quickly tilts within five rounds.",
+          "text_cn": "rollout显示点球大战以一球差和延长点球为主，法国与摩洛哥更适合展示为细节拉锯，而不是五轮内迅速失衡的确定剧本。",
+          "text_en": "The rollout shows shootouts mostly decided by one goal or extended penalties, so France vs Morocco is better shown as a detail-driven tug-of-war rather than a fixed script that quickly tilts within five rounds."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "压力失误",
+          "impact_cn": "已有尾部口径保留法国多名罚手失手、摩洛哥五轮内建立不可追差优势的路径，但不得把“热门出局”作为事实断言。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Pressure-error path",
+          "impact_en": "The tail scenario keeps the path where multiple France takers miss and Morocco build an uncatchable lead within five rounds, but must not state the “favorite is eliminated” as fact.",
+          "text_cn": "已有尾部口径保留法国多名罚手失手、摩洛哥五轮内建立不可追差优势的路径，但不得把“热门出局”作为事实断言。",
+          "text_en": "The tail scenario keeps the path where multiple France takers miss and Morocco build an uncatchable lead within five rounds, but must not state the “favorite is eliminated” as fact."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "延长点球",
+          "impact_cn": "6-5法国胜属于前五轮战平后进入一轮一罚的合法低概率尾部剧情，依赖双方前五轮整体命中率较高并在延长轮分出胜负。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Sudden-death penalties",
+          "impact_en": "A 6-5 France win is a valid low-probability tail scenario after the first five rounds are tied, requiring high overall conversion in the first five kicks and a winner in sudden death.",
+          "text_cn": "6-5法国胜属于前五轮战平后进入一轮一罚的合法低概率尾部剧情，依赖双方前五轮整体命中率较高并在延长轮分出胜负。",
+          "text_en": "A 6-5 France win is a valid low-probability tail scenario after the first five rounds are tied, requiring high overall conversion in the first five kicks and a winner in sudden death."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "证据保守",
+          "impact_cn": "整合结论明确点球随机性强，只能围绕门将、主罚手深度、淘汰赛经验和心理压力做小幅条件调整，缺少可靠数据支持更强判断。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Evidence conservatism",
+          "impact_en": "The integrated conclusion is clear that penalties are highly random, so only small conditional adjustments can be made around goalkeepers, taker depth, knockout experience, and psychological pressure, with insufficient reliable data for a stronger call.",
+          "text_cn": "整合结论明确点球随机性强，只能围绕门将、主罚手深度、淘汰赛经验和心理压力做小幅条件调整，缺少可靠数据支持更强判断。",
+          "text_en": "The integrated conclusion is clear that penalties are highly random, so only small conditional adjustments can be made around goalkeepers, taker depth, knockout experience, and psychological pressure, with insufficient reliable data for a stronger call."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence synthesis → specialist agents → committee aggregation → shootout-sequence rollout → penalty matrix → tail audit → report output. Treat the penalty tab as scenario distribution, not a confident taker-by-taker forecast."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-08T06:12:56.639914Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline uses pre-match evidence, specialist-agent reasoning, and conditional Monte Carlo over 90 minutes, extra time, and penalties. For this France vs Morocco run, the evidence layer is complete, but the rollout/committee layer required fallback support, so the frontend should present it as a low-confidence reference rather than a final high-confidence call.",
+  "architecture_en": "Extra time and penalties are slices of the same conditional path tree rather than separate post-processing outputs. Because this run had elevated rollout fallback, the displayed tail paths should be treated as scenario guidance, not precise game-state simulation."
+}

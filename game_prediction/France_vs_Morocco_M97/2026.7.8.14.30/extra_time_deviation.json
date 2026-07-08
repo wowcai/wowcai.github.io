@@ -1,0 +1,551 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.4904347826086955,
+      "conditional_probability": 0.4904347826086955,
+      "joint_probability": 0.13557692307692298,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.4904347826086955,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段时间短且淘汰赛风险偏好下降，仍平是基础高概率分支。",
+      "label_en": "0-0",
+      "rationale_en": "Because extra time is short and knockout risk appetite declines, remaining level is the base high-probability branch."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.18260869565217397,
+      "conditional_probability": 0.18260869565217397,
+      "joint_probability": 0.05048076923076923,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.18260869565217397,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "法国凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "France wins extra time by one goal through fitness, substitutes, or pressing advantage."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.14260869565217396,
+      "conditional_probability": 0.14260869565217396,
+      "joint_probability": 0.03942307692307692,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.14260869565217396,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "摩洛哥凭借体能、替补或反击效率在加时净胜一球。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Morocco win extra time by one goal through fitness, bench impact, or counterattacking efficiency."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.059130434782608716,
+      "conditional_probability": 0.059130434782608716,
+      "joint_probability": 0.016346153846153847,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.059130434782608716,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "法国在对手体能或心理崩盘后拉开比分。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "France pulls clear after the opponent collapses physically or mentally."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.050434782608695675,
+      "conditional_probability": 0.050434782608695675,
+      "joint_probability": 0.013942307692307693,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.050434782608695675,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.03478260869565219,
+      "conditional_probability": 0.03478260869565219,
+      "joint_probability": 0.009615384615384616,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.03478260869565219,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "摩洛哥在对手压上后连续制造转换机会。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Morocco create repeated transition chances after France push too high."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.012173913043478266,
+      "conditional_probability": 0.012173913043478266,
+      "joint_probability": 0.0033653846153846156,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.012173913043478266,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.008695652173913047,
+      "conditional_probability": 0.008695652173913047,
+      "joint_probability": 0.002403846153846154,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.008695652173913047,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.005217391304347828,
+      "conditional_probability": 0.005217391304347828,
+      "joint_probability": 0.0014423076923076924,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.005217391304347828,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "3-2",
+      "score": "3-2",
+      "increment": "3-2",
+      "probability": 0.003478260869565219,
+      "conditional_probability": 0.003478260869565219,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.003478260869565219,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-4",
+      "score": "1-4",
+      "increment": "1-4",
+      "probability": 0.0017391304347826094,
+      "conditional_probability": 0.0017391304347826094,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017391304347826094,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "1-4",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "3-1",
+      "score": "3-1",
+      "increment": "3-1",
+      "probability": 0.0017391304347826094,
+      "conditional_probability": 0.0017391304347826094,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017391304347826094,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-1",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.0017391304347826094,
+      "conditional_probability": 0.0017391304347826094,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.0017391304347826094,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "label": "2-3",
+      "score": "2-3",
+      "increment": "2-3",
+      "probability": 0.0017391304347826094,
+      "conditional_probability": 0.0017391304347826094,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017391304347826094,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "5-0",
+      "score": "5-0",
+      "increment": "5-0",
+      "probability": 0.0017391304347826094,
+      "conditional_probability": 0.0017391304347826094,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017391304347826094,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "5-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "4-0",
+      "score": "4-0",
+      "increment": "4-0",
+      "probability": 0.0017391304347826094,
+      "conditional_probability": 0.0017391304347826094,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017391304347826094,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.18260869565217397,
+      "joint_probability": 0.05048076923076923,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.18260869565217397
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.14260869565217396
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "法国凭借体能、替补或压迫优势在加时净胜一球。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A 1-goal margin is decided in 30 minutes of extra time through counters, set pieces, or impact substitutes.",
+      "rationale_en": "France wins extra time by one goal through fitness, substitutes, or pressing advantage."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.050434782608695675,
+      "joint_probability": 0.013942307692307693,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.050434782608695675
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.008695652173913047
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.005217391304347828
+        },
+        {
+          "score": "3-2",
+          "increment": "3-2",
+          "probability": 0.003478260869565219
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both sides score in extra time, as the match shifts from caution into open end-to-end play.",
+      "rationale_en": "The match opens up in extra time, with each side converting one clear chance."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.059130434782608716,
+      "joint_probability": 0.016346153846153847,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.059130434782608716
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.03478260869565219
+        },
+        {
+          "score": "3-0",
+          "increment": "3-0",
+          "probability": 0.012173913043478266
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.008695652173913047
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "0-2",
+        "3-0"
+      ],
+      "rationale_cn": "法国在对手体能或心理崩盘后拉开比分。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A side covers by winning extra time by at least 2 goals, or by total goals reaching over 3.",
+      "rationale_en": "France pulls clear after the opponent collapses physically or mentally."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "平局入口",
+      "impact_cn": "加时仅在90分钟打平后出现，法国常规时间胜率高于摩洛哥但平局概率不低；若来自1-1、0-0或2-2，开放度和风险偏好会明显不同。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Draw entry",
+      "impact_en": "Extra time only occurs after a 90-minute draw. France's regular-time win rate is higher than Morocco's, but the draw probability is still notable; if it comes from 1-1, 0-0, or 2-2, openness and risk preference will differ clearly.",
+      "text_cn": "加时仅在90分钟打平后出现，法国常规时间胜率高于摩洛哥但平局概率不低；若来自1-1、0-0或2-2，开放度和风险偏好会明显不同。",
+      "text_en": "Extra time only occurs after a 90-minute draw. France's regular-time win rate is higher than Morocco's, but the draw probability is still notable; if it comes from 1-1, 0-0, or 2-2, openness and risk preference will differ clearly."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "法国破局点",
+      "impact_cn": "若进入加时，法国仍可依靠替补深度、姆巴佩和登贝莱的个人突破以及整体攻守质量争取净胜一球，但需权衡压上后被反击的风险。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "France breakthrough route",
+      "impact_en": "If it goes to extra time, France can still rely on squad depth, Mbappé and Dembélé's individual breakthroughs, and overall attacking and defensive quality to seek a one-goal win, but must balance this against the risk of being countered after pushing forward.",
+      "text_cn": "若进入加时，法国仍可依靠替补深度、姆巴佩和登贝莱的个人突破以及整体攻守质量争取净胜一球，但需权衡压上后被反击的风险。",
+      "text_en": "If it goes to extra time, France can still rely on squad depth, Mbappé and Dembélé's individual breakthroughs, and overall attacking and defensive quality to seek a one-goal win, but must balance this against the risk of being countered after pushing forward."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "摩洛哥生存路",
+      "impact_cn": "摩洛哥的低位紧凑、防守经验和转换反击仍是加时生存路径，若法国105分钟后继续冒险压上，摩洛哥存在反击或定位球偷袭空间。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Morocco survival path",
+      "impact_en": "Morocco’s compact low block, defensive experience, and transition counterattacks remain a survival path in extra time. If France keep pushing high after 105 minutes, Morocco may have space to strike on the break or from set pieces.",
+      "text_cn": "摩洛哥的低位紧凑、防守经验和转换反击仍是加时生存路径，若法国105分钟后继续冒险压上，摩洛哥存在反击或定位球偷袭空间。",
+      "text_en": "Morocco’s compact low block, defensive experience, and transition counterattacks remain a survival path in extra time. If France keep pushing high after 105 minutes, Morocco may have space to strike on the break or from set pieces."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "伤情变量",
+      "impact_cn": "Saibari伤情会影响摩洛哥加时前场连接和点球主罚深度；Tchouaméni、Thuram状态则关系法国中场控制和替补冲击质量。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Injury variables",
+      "impact_en": "Saibari's injury affects Morocco's extra-time attacking links and penalty-taking depth; Tchouaméni and Thuram's fitness affects France's midfield control and bench impact.",
+      "text_cn": "Saibari伤情会影响摩洛哥加时前场连接和点球主罚深度；Tchouaméni、Thuram状态则关系法国中场控制和替补冲击质量。",
+      "text_en": "Saibari's injury affects Morocco's extra-time attacking links and penalty-taking depth; Tchouaméni and Thuram's fitness affects France's midfield control and bench impact."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "点球均势",
+      "impact_cn": "若120分钟仍平，点球应接近均势处理；缺少两队完整主罚顺序、训练点球数据和临场健康状态，不能给任一方显著加成。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Penalty balance",
+      "impact_en": "If it is still level after 120 minutes, penalties should be treated as close to even; without full taker orders, training penalty data, and matchday fitness status for both teams, neither side should receive a significant boost.",
+      "text_cn": "若120分钟仍平，点球应接近均势处理；缺少两队完整主罚顺序、训练点球数据和临场健康状态，不能给任一方显著加成。",
+      "text_en": "If it is still level after 120 minutes, penalties should be treated as close to even; without full taker orders, training penalty data, and matchday fitness status for both teams, neither side should receive a significant boost."
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "证据缺口",
+      "impact_cn": "官方首发、裁判尺度、天气场地、摩洛哥四后卫或五后卫、法国左路组合及边后卫压上程度均未确认，会影响加时体能与空间判断。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Evidence gap",
+      "impact_en": "Official lineups, refereeing threshold, weather and pitch, Morocco's back four or back five, France's left-side pairing, and the full-backs' pushing height are all unconfirmed, affecting extra-time fitness and space assessments.",
+      "text_cn": "官方首发、裁判尺度、天气场地、摩洛哥四后卫或五后卫、法国左路组合及边后卫压上程度均未确认，会影响加时体能与空间判断。",
+      "text_en": "Official lineups, refereeing threshold, weather and pitch, Morocco's back four or back five, France's left-side pairing, and the full-backs' pushing height are all unconfirmed, affecting extra-time fitness and space assessments."
+    }
+  ],
+  "condition_en": "Conditional on the match reaching extra time. France have the stronger breakthrough route, but Morocco’s low block and counterattacks keep the branch live; rollout fallback means this tab should be read as scenario guidance."
+}
