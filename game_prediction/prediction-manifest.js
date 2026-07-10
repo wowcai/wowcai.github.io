@@ -404,5 +404,10 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
     matchNo: "M97",
     matchFolder: "France_vs_Morocco_M97",
     versions: ["2026.7.8.14.30"]
+  },
+  {
+    matchNo: "M98",
+    matchFolder: "Spain_vs_Belgium_M98",
+    versions: ["2026.7.10.13.30"]
   }
 ];

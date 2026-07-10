@@ -1,0 +1,1271 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。 本场证据层基本可用，但rollout确定性回退比例较高；页面应作为低置信情景预测展示，不要写成强确定结论。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。 本场证据层基本可用，但rollout确定性回退比例较高；页面应作为低置信情景预测展示，不要写成强确定结论。",
+  "match": {
+    "match_id": "M98",
+    "team_a": "Spain",
+    "team_b": "Belgium",
+    "kickoff_utc": "2026-07-10T12:00:00-07:00",
+    "venue": "Los Angeles Stadium, Los Angeles",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.6903846153846154,
+      "team_b": 0.3096153846153847,
+      "favorite": "Spain"
+    },
+    "resolution": {
+      "normal_time": 0.725480769230769,
+      "extra_time": 0.13124999999999995,
+      "penalties": 0.14326923076923057
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.12958333333333333,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12604166666666666,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "2-0",
+        "probability": 0.10666666666666667,
+        "goals_a": 2,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Spain常规时间晋级。",
+        "summary_cn": "90分钟1-0，Spain常规时间晋级。",
+        "probability": 0.12163461538461538,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_3f557cac71a5",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-0: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "probability": 0.032692307692307694,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_0510b1e9acfe",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+        "probability": 0.01201923076923077,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Belgium",
+        "path_id": "BMC_7ae4a979fc94",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Spain常规时间晋级。",
+        "summary_cn": "90分钟1-0，Spain常规时间晋级。",
+        "probability": 0.12163461538461538,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_3f557cac71a5",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-0: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "probability": 0.032692307692307694,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_0510b1e9acfe",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+        "probability": 0.01201923076923077,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Belgium",
+        "path_id": "BMC_7ae4a979fc94",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties."
+      }
+    ],
+    "favorite": "Spain",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.14326923076923057,
+        "probability_band": "14.3%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Belgium",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.01201923076923077,
+            "path_probability": 0.01201923076923077,
+            "path_id": "BMC_7ae4a979fc94",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Belgium",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_e146356be24f",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Belgium点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Belgium advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Belgium",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006730769230769231,
+            "path_probability": 0.006730769230769231,
+            "path_id": "BMC_24788e9cf091",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "If neither normal time nor extra time separates the teams, the match is compressed into penalty randomness plus goalkeeper and psychological margins."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.13124999999999995,
+        "probability_band": "13.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.032692307692307694,
+            "path_probability": 0.032692307692307694,
+            "path_id": "BMC_0510b1e9acfe",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.023076923076923078,
+            "path_probability": 0.023076923076923078,
+            "path_id": "BMC_c948578347af",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Spain加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Belgium",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.014423076923076924,
+            "path_probability": 0.014423076923076924,
+            "path_id": "BMC_dbb24e64d354",
+            "summary_cn": "90分钟0-0后进入加时，加时增量0-1，Belgium加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 0-1; Belgium advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a draw in normal time, fitness, bench depth and risk preference become amplified in extra time and can create a decisive path."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.21057692307692308,
+        "probability_band": "21.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Belgium",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.07692307692307693,
+            "path_probability": 0.07692307692307693,
+            "path_id": "BMC_e8d48e91e78a",
+            "summary_cn": "90分钟0-1，Belgium常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Belgium advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Belgium",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.04567307692307692,
+            "path_probability": 0.04567307692307692,
+            "path_id": "BMC_4344cf45fef3",
+            "summary_cn": "90分钟1-2，Belgium常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Belgium advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Belgium",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.025961538461538463,
+            "path_probability": 0.025961538461538463,
+            "path_id": "BMC_97aadbad0f96",
+            "summary_cn": "90分钟0-2，Belgium常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Belgium advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can advance through a normal-time steal, an extra-time counterattack or penalty variance."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 154,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.12163461538461538,
+          "path_probability": 0.12163461538461538,
+          "path_id": "BMC_3f557cac71a5",
+          "summary_cn": "90分钟1-0，Spain常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09807692307692308,
+          "path_probability": 0.09807692307692308,
+          "path_id": "BMC_99ba9dd286ca",
+          "summary_cn": "90分钟2-1，Spain常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.09615384615384616,
+          "path_probability": 0.09615384615384616,
+          "path_id": "BMC_f1455ffc145f",
+          "summary_cn": "90分钟2-0，Spain常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Belgium",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07692307692307693,
+          "path_probability": 0.07692307692307693,
+          "path_id": "BMC_e8d48e91e78a",
+          "summary_cn": "90分钟0-1，Belgium常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Belgium advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "3-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06346153846153846,
+          "path_probability": 0.06346153846153846,
+          "path_id": "BMC_1b8fd450e23a",
+          "summary_cn": "90分钟3-0，Spain常规时间晋级。",
+          "summary_en": "90 minutes 3-0: Spain advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Spain常规时间晋级。",
+          "summary_cn": "90分钟1-0，Spain常规时间晋级。",
+          "probability": 0.12163461538461538,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Spain",
+          "path_id": "BMC_3f557cac71a5",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Spain advances in normal time.",
+          "summary_en": "90 minutes 1-0: Spain advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+          "probability": 0.032692307692307694,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "Spain",
+          "path_id": "BMC_0510b1e9acfe",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+          "probability": 0.01201923076923077,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Belgium",
+          "path_id": "BMC_7ae4a979fc94",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Spain常规时间晋级。",
+        "summary_cn": "90分钟1-0，Spain常规时间晋级。",
+        "probability": 0.12163461538461538,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_3f557cac71a5",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Spain advances in normal time.",
+        "summary_en": "90 minutes 1-0: Spain advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Spain加时晋级。",
+        "probability": 0.032692307692307694,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_0510b1e9acfe",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Belgium点球晋级。",
+        "probability": 0.01201923076923077,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Belgium",
+        "path_id": "BMC_7ae4a979fc94",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Belgium advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.2495833333333333,
+          "base_event_probability": 0.2495833333333333,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.05395833333333333,
+              "rationale_cn": "Spain打破对方防守后扩大领先优势。",
+              "rationale_en": "Spain extend their lead after breaking through the opponent's defense."
+            },
+            {
+              "score": "2-2",
+              "probability": 0.03833333333333333,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open back-and-forth, with both attacks converting chances."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.025208333333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.022916666666666665,
+              "rationale_cn": "Spain打破对方防守后扩大领先优势。",
+              "rationale_en": "Spain extend their lead after breaking through the opponent's defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.021666666666666667,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "2-2",
+            "3-2"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open game / high score",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match is pulled into a more open tempo, with transitions, set pieces, or expanded space after a lead, pushing total goals well above the main low-score forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.13520833333333335,
+          "base_event_probability": 0.13520833333333335,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.051666666666666666,
+              "rationale_cn": "关键球员状态与角色变化；Spain打破对方防守后扩大领先优势。",
+              "rationale_en": "Key player form and role changes; Spain extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.022916666666666665,
+              "rationale_cn": "Spain打破对方防守后扩大领先优势。",
+              "rationale_en": "Spain extend their lead after breaking through the opponent's defense."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.021666666666666667,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match is pulled into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "5-0",
+              "probability": 0.008125,
+              "rationale_cn": "关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Key player form and role changes; the match is pulled into a high-risk open tempo, with space behind the defensive lines continually expanding."
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0077083333333333335,
+              "rationale_cn": "关键球员状态与角色变化、点球分支门将与主罚证据近似对称；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Key player form and role changes, plus near-symmetric evidence for keepers and takers in the penalty branch; the match is pulled into a high-risk open tempo, with space behind the defensive lines continually expanding."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-0",
+            "4-1"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided collapse",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fitness issues, or defensive imbalance makes the match uneven, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.19020833333333334,
+          "base_event_probability": 0.19020833333333334,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.06916666666666667,
+              "rationale_cn": "Belgium通过压迫或转换取得一球优势。",
+              "rationale_en": "Belgium gains a one-goal edge through pressing or transitions."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.05229166666666667,
+              "rationale_cn": "Belgium通过压迫或转换取得一球优势。",
+              "rationale_en": "Belgium gains a one-goal edge through pressing or transitions."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.026041666666666668,
+              "rationale_cn": "Belgium充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Belgium makes full use of counterattacks or attacking efficiency to extend the lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.01375,
+              "rationale_cn": "点球分支门将与主罚证据近似对称、关键球员状态与角色变化；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "In the penalty branch, goalkeeper and taker evidence is nearly balanced, with key player form and role changes; the match is pulled into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.010416666666666666,
+              "rationale_cn": "Belgium充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Belgium makes full use of counterattacks or attacking efficiency to extend the lead."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored pre-match or in the main prediction wins within 90 minutes.",
+          "rationale_en": "The underdog directly swings the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "进攻",
+          "impact_cn": "西班牙至16强仍零失球，被射门19次、被射正3次均为赛事最低。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_ed78b890f28d",
+            "E_f3aa54282f6d",
+            "E_49ed26c28aae"
+          ],
+          "source_names": [
+            "BBC Sport"
+          ],
+          "label_en": "Attack",
+          "impact_en": "Spain have reached this stage without conceding; 19 shots faced and only three on target are among the lowest figures in the tournament.",
+          "text_cn": "西班牙至16强仍零失球，被射门19次、被射正3次均为赛事最低。",
+          "text_en": "Spain have reached this stage without conceding; 19 shots faced and only three on target are among the lowest figures in the tournament."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "防守",
+          "impact_cn": "The Athletic称西班牙丢球后压迫已改善，可限制比利时高位反抢转化。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_81a291cb023b",
+            "E_bc5a5628d927"
+          ],
+          "source_names": [
+            "The Athletic",
+            "The Guardian"
+          ],
+          "label_en": "Defense",
+          "impact_en": "The Athletic notes that Spain’s counter-pressing after losing the ball has improved, which can limit Belgium’s high-turnover transition threat.",
+          "text_cn": "The Athletic称西班牙丢球后压迫已改善，可限制比利时高位反抢转化。",
+          "text_en": "The Athletic notes that Spain’s counter-pressing after losing the ball has improved, which can limit Belgium’s high-turnover transition threat."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "进攻",
+          "impact_cn": "比利时41次高位夺回后形成射门，4球来自高位反抢为本届最高。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_bc5a5628d927"
+          ],
+          "source_names": [
+            "The Guardian"
+          ],
+          "label_en": "Attack",
+          "impact_en": "Belgium have produced shots after 41 high recoveries, and four goals from high pressing are among the tournament-leading signals.",
+          "text_cn": "比利时41次高位夺回后形成射门，4球来自高位反抢为本届最高。",
+          "text_en": "Belgium have produced shots after 41 high recoveries, and four goals from high pressing are among the tournament-leading signals."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "阵容",
+          "impact_cn": "Amadou Onana右膝受伤退出本届世界杯，削弱比利时中场轮换。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_fd4335e441ff",
+            "E_cd0fc8dfc499"
+          ],
+          "source_names": [
+            "ESPN",
+            "MyNorthwest / AP"
+          ],
+          "label_en": "Lineup",
+          "impact_en": "Amadou Onana is out of the World Cup with a right-knee injury, reducing Belgium’s midfield rotation depth.",
+          "text_cn": "Amadou Onana右膝受伤退出本届世界杯，削弱比利时中场轮换。",
+          "text_en": "Amadou Onana is out of the World Cup with a right-knee injury, reducing Belgium’s midfield rotation depth."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "体能",
+          "impact_cn": "比利时替补被评为本届影响最大，且上一轮曾靠晚球拖入加时。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_fece4bb6c4fb",
+            "E_adaeb324dd02",
+            "E_2b016ae1390c"
+          ],
+          "source_names": [
+            "The Athletic",
+            "ESPN",
+            "Fox Sports"
+          ],
+          "label_en": "Fitness",
+          "impact_en": "Belgium’s bench has been one of the tournament’s most impactful, and the previous round also featured a late-goal path toward extra time.",
+          "text_cn": "比利时替补被评为本届影响最大，且上一轮曾靠晚球拖入加时。",
+          "text_en": "Belgium’s bench has been one of the tournament’s most impactful, and the previous round also featured a late-goal path toward extra time."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "证据因素 6",
+          "impact_cn": "双方上一轮均90分钟解决且休4天；西班牙1-0，比利时4-1路径不同。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "PATH_TRANSFER_M98_TEAM_A_LOAD",
+            "PATH_TRANSFER_M98_TEAM_B_LOAD"
+          ],
+          "source_names": [
+            "structured_previous_path_context"
+          ],
+          "label_en": "Evidence factor 6",
+          "impact_en": "Both teams resolved the previous round in 90 minutes and have four days of rest, but their paths differed: Spain won 1-0 while Belgium won 4-1.",
+          "text_cn": "双方上一轮均90分钟解决且休4天；西班牙1-0，比利时4-1路径不同。",
+          "text_en": "Both teams resolved the previous round in 90 minutes and have four days of rest, but their paths differed: Spain won 1-0 while Belgium won 4-1."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.2745192307692305,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.24343257443082328,
+          "joint_probability": 0.06682692307692308,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.24343257443082328
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.11033274956217169
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "Spain凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal result in extra time from a counterattack, set piece, or substitute impact.",
+          "rationale_en": "Spain wins extra time by one goal through fitness, bench depth, or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.05429071803852894,
+          "joint_probability": 0.014903846153846155,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.05429071803852894
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.019264448336252203
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.0052539404553415105
+            },
+            {
+              "score": "3-1",
+              "increment": "3-1",
+              "probability": 0.0035026269702276734
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, with the match shifting from caution to open attacks.",
+          "rationale_en": "The match opens up in extra time, with each side converting once."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.061295971978984294,
+          "joint_probability": 0.01682692307692308,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.061295971978984294
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.024518388791593713
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.019264448336252203
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.007005253940455347
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "Spain在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakaway",
+          "definition_en": "A side wins extra time by at least 2 goals, or total goals reach over 3.",
+          "rationale_en": "Spain pulls clear after the opponent collapses physically or mentally."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "低比分主线",
+          "impact_cn": "仅在90分钟打平后评估加时；入口以1-1为主、0-0次之。加时30分钟且淘汰赛风险偏好下降，西班牙与比利时更可能谨慎管理，0-0仍平是基础高概率分支。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Low-score baseline",
+          "impact_en": "Extra time is evaluated only if the match is level after 90 minutes; the entry path is mainly 1-1, followed by 0-0. With only 30 minutes and lower knockout risk appetite, Spain and Belgium are more likely to manage the period cautiously, making 0-0 in extra time the base high-probability branch.",
+          "text_cn": "仅在90分钟打平后评估加时；入口以1-1为主、0-0次之。加时30分钟且淘汰赛风险偏好下降，西班牙与比利时更可能谨慎管理，0-0仍平是基础高概率分支。",
+          "text_en": "Extra time is evaluated only if the match is level after 90 minutes; the entry path is mainly 1-1, followed by 0-0. With only 30 minutes and lower knockout risk appetite, Spain and Belgium are more likely to manage the period cautiously, making 0-0 in extra time the base high-probability branch."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "西班牙中路",
+          "impact_cn": "西班牙在加时仍有控场、防守稳定和Rodri/Pedri中路节奏优势，可争取二点与节奏主动；但进入加时已说明90分钟优势未兑现，不能外推成碾压。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Spain central control",
+          "impact_en": "Spain can still lean on control, defensive stability and Rodri/Pedri central tempo in extra time, winning second balls and dictating rhythm. But reaching extra time already means the 90-minute edge did not fully convert, so it should not be framed as domination.",
+          "text_cn": "西班牙在加时仍有控场、防守稳定和Rodri/Pedri中路节奏优势，可争取二点与节奏主动；但进入加时已说明90分钟优势未兑现，不能外推成碾压。",
+          "text_en": "Spain can still lean on control, defensive stability and Rodri/Pedri central tempo in extra time, winning second balls and dictating rhythm. But reaching extra time already means the 90-minute edge did not fully convert, so it should not be framed as domination."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "Yamal边路",
+          "impact_cn": "西班牙的单点破局路径包括Yamal对De Cuyper一侧制造高质量机会；关键在于加时是否仍有速度优势，或比利时是否已通过换人、协防完成限制。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Yamal flank route",
+          "impact_en": "Spain’s one-v-one breakthrough path includes Yamal creating high-quality chances against De Cuyper’s side. The key question is whether that pace edge remains in extra time or Belgium has already adjusted through substitutions and cover.",
+          "text_cn": "西班牙的单点破局路径包括Yamal对De Cuyper一侧制造高质量机会；关键在于加时是否仍有速度优势，或比利时是否已通过换人、协防完成限制。",
+          "text_en": "Spain’s one-v-one breakthrough path includes Yamal creating high-quality chances against De Cuyper’s side. The key question is whether that pace edge remains in extra time or Belgium has already adjusted through substitutions and cover."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "比利时反击",
+          "impact_cn": "比利时生存路径来自Doku转换、Lukaku支点、De Bruyne最后一传、Tielemans后插上和替补冲击；若一次转换或定位球打成，存在加时净胜一球分支。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Belgium transition threat",
+          "impact_en": "Belgium’s survival path comes from Doku transitions, Lukaku as a target, De Bruyne’s final pass, Tielemans arriving late and substitute impact. One successful transition or set piece can create a one-goal extra-time win branch.",
+          "text_cn": "比利时生存路径来自Doku转换、Lukaku支点、De Bruyne最后一传、Tielemans后插上和替补冲击；若一次转换或定位球打成，存在加时净胜一球分支。",
+          "text_en": "Belgium’s survival path comes from Doku transitions, Lukaku as a target, De Bruyne’s final pass, Tielemans arriving late and substitute impact. One successful transition or set piece can create a one-goal extra-time win branch."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "核心体能缺口",
+          "impact_cn": "De Bruyne与Lukaku实际首发、可用分钟和90分钟后体能状态仍是关键不确定项；缺少可靠数据确认二人能否在加时继续提供高质量进攻。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Core fitness uncertainty",
+          "impact_en": "De Bruyne and Lukaku’s actual starting status, available minutes and post-90 fitness remain key uncertainties; there is not enough reliable evidence to confirm whether they can keep providing high-quality attack in extra time.",
+          "text_cn": "De Bruyne与Lukaku实际首发、可用分钟和90分钟后体能状态仍是关键不确定项；缺少可靠数据确认二人能否在加时继续提供高质量进攻。",
+          "text_en": "De Bruyne and Lukaku’s actual starting status, available minutes and post-90 fitness remain key uncertainties; there is not enough reliable evidence to confirm whether they can keep providing high-quality attack in extra time."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "点球准备缺口",
+          "impact_cn": "若105分钟后仍平，点球分支应向接近五五收缩；目前缺少西班牙点球主罚顺序与近期主罚状态，也无法确认其点球深度是否优于比利时。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Penalty preparation gap",
+          "impact_en": "If it is still level after 105 minutes, the penalty branch should compress toward nearly even. Spain’s penalty order and recent taker form are not clearly confirmed, and it is not possible to verify a clear penalty-depth edge over Belgium.",
+          "text_cn": "若105分钟后仍平，点球分支应向接近五五收缩；目前缺少西班牙点球主罚顺序与近期主罚状态，也无法确认其点球深度是否优于比利时。",
+          "text_en": "If it is still level after 105 minutes, the penalty branch should compress toward nearly even. Spain’s penalty order and recent taker form are not clearly confirmed, and it is not possible to verify a clear penalty-depth edge over Belgium."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。 本场证据层基本可用，但rollout确定性回退比例较高；页面应作为低置信情景预测展示，不要写成强确定结论。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration -> four expert agents -> expert committee aggregation -> conditional rollout -> conditional Monte Carlo matrix -> extra-time tail audit -> report output. Evidence coverage is broadly usable, but rollout deterministic fallback is high; display this as a low-confidence scenario forecast, not as a high-certainty call."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.14326923076923057,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.06132921174652242,
+          "probability_band": "low",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.06132921174652242,
+              "winner_side": "team_a",
+              "rationale_cn": "比分与矩阵中的4-2、team_a一致，概率按矩阵校准。4-2属于五轮内可成立的点球比分，通常需要Belgium至少两次罚失或被扑；在无额外门将证据时，仅可表述为关键扑点或多次失误共同造成差距，不应强断言连续扑点。",
+              "rationale_en": "The score matches 4-2 and team_a in the matrix, with probability calibrated to the matrix. 4-2 is a penalty score possible within five rounds and usually requires Belgium to miss or be saved at least twice; without additional goalkeeper evidence, describe the gap as caused by key saves or multiple errors together, not by asserting consecutive saves."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.06231839258114376,
+              "winner_side": "team_b",
+              "rationale_cn": "比分与矩阵中的2-4、team_b一致，概率按矩阵校准。2-4属于五轮内可成立的点球比分，反映Spain多次罚失或被扑、Belgium较稳定命中；在证据口径上应避免把结果完全归因于门将连续扑点。",
+              "rationale_en": "The score matches 2-4 and team_b in the matrix, with probability calibrated to the matrix. 2-4 is a penalty score possible within five rounds, reflecting multiple misses or saves by Spain and steadier conversions by Belgium; based on the evidence, avoid attributing the result entirely to consecutive goalkeeper saves."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "比分与矩阵中的4-2、team_a一致，概率按矩阵校准。4-2属于五轮内可成立的点球比分，通常需要Belgium至少两次罚失或被扑；在无额外门将证据时，仅可表述为关键扑点或多次失误共同造成差距，不应强断言连续扑点。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One keeper makes consecutive penalty saves or the opponent misses several in a row, quickly widening the shootout score.",
+          "rationale_en": "The score matches 4-2 and team_a in the matrix, with probability calibrated to the matrix. 4-2 is a penalty score possible within five rounds and usually requires Belgium to miss or be saved at least twice; without additional goalkeeper evidence, describe the gap as caused by key saves or multiple errors together, not by asserting consecutive saves."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.14021638330757344,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.14021638330757344,
+              "winner_side": "team_b",
+              "rationale_cn": "比分与矩阵中的3-4、team_b一致，概率需从0.07上调至矩阵值。3-4是矩阵最高概率比分族之一，不应标为低概率tail；可保留热门方压力失误叙事，但应定位为常见险胜路径而非极端冷门。",
+              "rationale_en": "The score matches 3-4 and team_b in the matrix, and the probability should be raised from 0.07 to the matrix value. 3-4 is one of the highest-probability score groups in the matrix and should not be labeled a low-probability tail; the favorite's pressure errors narrative can remain, but it should be framed as a common narrow-win path rather than an extreme upset."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "比分与矩阵中的3-4、team_b一致，概率需从0.07上调至矩阵值。3-4是矩阵最高概率比分族之一，不应标为低概率tail；可保留热门方压力失误叙事，但应定位为常见险胜路径而非极端冷门。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "The score matches 3-4 and team_b in the matrix, and the probability should be raised from 0.07 to the matrix value. 3-4 is one of the highest-probability score groups in the matrix and should not be labeled a low-probability tail; the favorite's pressure errors narrative can remain, but it should be framed as a common narrow-win path rather than an extreme upset."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.03066460587326121,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.03066460587326121,
+              "winner_side": "team_a",
+              "rationale_cn": "比分与矩阵中的6-5、team_a一致，概率按矩阵校准。6-5符合点球规则，通常表示前五轮战平后进入一轮或多轮突然死亡；该路径低频但合法，尾部属性强于3-4、4-2等常规比分。",
+              "rationale_en": "The score matches 6-5 and team_a in the matrix, with probability calibrated to the matrix. 6-5 is valid under penalty rules and usually means the first five rounds were tied before one or more sudden-death rounds; this path is low-frequency but legal, with a stronger tail profile than regular scores such as 3-4 or 4-2."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "比分与矩阵中的6-5、team_a一致，概率按矩阵校准。6-5符合点球规则，通常表示前五轮战平后进入一轮或多轮突然死亡；该路径低频但合法，尾部属性强于3-4、4-2等常规比分。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both are strong through the first five rounds, with the winner decided only after sudden death from round 6 onward.",
+          "rationale_en": "The score matches 6-5 and team_a in the matrix, with probability calibrated to the matrix. 6-5 is valid under penalty rules and usually means the first five rounds were tied before one or more sudden-death rounds; this path is low-frequency but legal, with a stronger tail profile than regular scores such as 3-4 or 4-2."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "顺序证据缺口",
+          "impact_cn": "Spain与Belgium的公开赛前资料无法确认具体点球顺序，点球手只能作为经验候选处理；前端应强调这是证据缺口，不能据此推断某名球员必定主罚。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty-order evidence gap",
+          "impact_en": "Public pre-match evidence for Spain and Belgium does not confirm the exact penalty order, so takers should only be treated as experience-based candidates. The frontend should mark this as an evidence gap and not imply any player is certain to take a penalty.",
+          "text_cn": "Spain与Belgium的公开赛前资料无法确认具体点球顺序，点球手只能作为经验候选处理；前端应强调这是证据缺口，不能据此推断某名球员必定主罚。",
+          "text_en": "Public pre-match evidence for Spain and Belgium does not confirm the exact penalty order, so takers should only be treated as experience-based candidates. The frontend should mark this as an evidence gap and not imply any player is certain to take a penalty."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "门将小幅调整",
+          "impact_cn": "点球大战随机性强，Spain与Belgium只能围绕门将状态做小幅条件调整；现有材料没有可靠证据支持连续扑点叙事，需避免把比分差完全归因于门将。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper adjustment",
+          "impact_en": "Shootouts are highly random, so Spain and Belgium can only be adjusted slightly around goalkeeper status. Current evidence does not reliably support a consecutive-save narrative, so score gaps should not be attributed entirely to goalkeeper heroics.",
+          "text_cn": "点球大战随机性强，Spain与Belgium只能围绕门将状态做小幅条件调整；现有材料没有可靠证据支持连续扑点叙事，需避免把比分差完全归因于门将。",
+          "text_en": "Shootouts are highly random, so Spain and Belgium can only be adjusted slightly around goalkeeper status. Current evidence does not reliably support a consecutive-save narrative, so score gaps should not be attributed entirely to goalkeeper heroics."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "主罚深度",
+          "impact_cn": "委员会口径将Spain与Belgium的主罚手深度列为关键变量，但没有给出具体球员名单或顺位；展示时应写成深度与经验候选影响，而非指定主罚人。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty-taker depth",
+          "impact_en": "The committee framing treats penalty-taker depth as a key variable for Spain and Belgium, but does not provide a confirmed taker list or order. Display this as depth and experience-candidate impact, not as named taker certainty.",
+          "text_cn": "委员会口径将Spain与Belgium的主罚手深度列为关键变量，但没有给出具体球员名单或顺位；展示时应写成深度与经验候选影响，而非指定主罚人。",
+          "text_en": "The committee framing treats penalty-taker depth as a key variable for Spain and Belgium, but does not provide a confirmed taker list or order. Display this as depth and experience-candidate impact, not as named taker certainty."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "一球差路径",
+          "impact_cn": "rollout显示点球路径以一球差和延长点球为主，Spain与Belgium都可能进入突然死亡；这类结果更依赖单轮命中、压力失误与关键扑点的组合。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "One-goal shootout path",
+          "impact_en": "The rollout shows that shootout paths are mostly one-goal margins or extended shootouts, with both Spain and Belgium capable of entering sudden death. These outcomes depend on single-round conversion, pressure misses and key saves.",
+          "text_cn": "rollout显示点球路径以一球差和延长点球为主，Spain与Belgium都可能进入突然死亡；这类结果更依赖单轮命中、压力失误与关键扑点的组合。",
+          "text_en": "The rollout shows that shootout paths are mostly one-goal margins or extended shootouts, with both Spain and Belgium capable of entering sudden death. These outcomes depend on single-round conversion, pressure misses and key saves."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "常规比分族",
+          "impact_cn": "常见比分族需结合门将、主罚手和心理压力保守校准；Spain 4-2或Belgium 2-4这类五轮内比分，通常对应一方多次罚失或被扑。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Standard shootout score family",
+          "impact_en": "Standard shootout score families should be conservatively calibrated with goalkeepers, takers and pressure. Scores such as Spain 4-2 or Belgium 2-4 within five rounds usually imply multiple misses or saves by one side.",
+          "text_cn": "常见比分族需结合门将、主罚手和心理压力保守校准；Spain 4-2或Belgium 2-4这类五轮内比分，通常对应一方多次罚失或被扑。",
+          "text_en": "Standard shootout score families should be conservatively calibrated with goalkeepers, takers and pressure. Scores such as Spain 4-2 or Belgium 2-4 within five rounds usually imply multiple misses or saves by one side."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "压力失误",
+          "impact_cn": "Spain与Belgium的淘汰赛经验和心理压力只适合做保守后备整合；现有证据不足以量化单队抗压优势，只能保留压力失误作为可能路径。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Pressure miss",
+          "impact_en": "Spain and Belgium’s knockout experience and psychological pressure are only suitable as conservative backup signals. Current evidence is insufficient to quantify a single-team pressure edge, so pressure misses should remain only a possible path.",
+          "text_cn": "Spain与Belgium的淘汰赛经验和心理压力只适合做保守后备整合；现有证据不足以量化单队抗压优势，只能保留压力失误作为可能路径。",
+          "text_en": "Spain and Belgium’s knockout experience and psychological pressure are only suitable as conservative backup signals. Current evidence is insufficient to quantify a single-team pressure edge, so pressure misses should remain only a possible path."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。 本场证据层基本可用，但rollout确定性回退比例较高；页面应作为低置信情景预测展示，不要写成强确定结论。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration -> four expert agents -> expert committee aggregation -> shootout sequence rollout -> penalty score matrix -> penalty tail audit -> report output. Evidence coverage is broadly usable, but rollout deterministic fallback is high; display this as a low-confidence scenario forecast, not as a high-certainty call."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-10T05:07:25.733473Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and expert committee reasoning generate cross-phase mechanisms; MAS rollout estimates conditional paths for 90 minutes, extra time if level, and penalties if still level; Monte Carlo samples the full path tree. For this match, evidence coverage is usable but rollout fallback is high, so present it as a low-confidence conditional scenario rather than a high-certainty forecast.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs; they are driven by the same conditional MAS rollout. The three frontend tabs are different slices of one full path distribution, while the JSON structure remains compatible with v6.2.2. Because rollout fallback is high here, the frontend should use cautious wording."
+}

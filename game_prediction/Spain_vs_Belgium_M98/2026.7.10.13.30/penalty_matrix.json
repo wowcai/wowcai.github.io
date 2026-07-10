@@ -1,0 +1,1101 @@
+{
+  "schema_version": "2.0",
+  "phase": "penalties",
+  "matrix_type": "penalty_score_dense_7x7_bucketed_6plus",
+  "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+  "axis_note_cn": "纵轴为team_a点球命中数，横轴为team_b点球命中数；6+表示进入第6轮及之后的延长点球。概率为进入点球大战后的条件概率。",
+  "row_axis": {
+    "team": "Spain",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6+"
+    ]
+  },
+  "column_axis": {
+    "team": "Belgium",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6+"
+    ]
+  },
+  "winner_probability": {
+    "team_a": 0.49599999999999994,
+    "team_b": 0.504
+  },
+  "matrix": [
+    [
+      0.0,
+      0.0,
+      0.003355704697986579,
+      0.010067114093959736,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.003355704697986579,
+      0.020134228187919472,
+      0.016778523489932893,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.02684563758389263,
+      0.0939597315436242,
+      0.0,
+      0.0
+    ],
+    [
+      0.006711409395973158,
+      0.010067114093959736,
+      0.020134228187919472,
+      0.0,
+      0.11409395973154365,
+      0.036912751677852365,
+      0.0
+    ],
+    [
+      0.003355704697986579,
+      0.08053691275167789,
+      0.08053691275167789,
+      0.033557046979865786,
+      0.0,
+      0.15771812080536918,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.006711409395973158,
+      0.08389261744966447,
+      0.07046979865771816,
+      0.0,
+      0.033557046979865786
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02348993288590605,
+      0.063758389261745
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "2",
+      "probability": 0.003355704697986579,
+      "probability_percent": 0.3356,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.003355704697986579
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "3",
+      "probability": 0.010067114093959736,
+      "probability_percent": 1.0067,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.010067114093959736
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "2",
+      "probability": 0.003355704697986579,
+      "probability_percent": 0.3356,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.003355704697986579
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "3",
+      "probability": 0.020134228187919472,
+      "probability_percent": 2.0134,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.020134228187919472
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "4",
+      "probability": 0.016778523489932893,
+      "probability_percent": 1.6779,
+      "top_scores": [
+        {
+          "score": "1-4",
+          "probability": 0.016778523489932893
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "3",
+      "probability": 0.02684563758389263,
+      "probability_percent": 2.6846,
+      "top_scores": [
+        {
+          "score": "2-3",
+          "probability": 0.02684563758389263
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "4",
+      "probability": 0.0939597315436242,
+      "probability_percent": 9.396,
+      "top_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.0939597315436242
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "0",
+      "probability": 0.006711409395973158,
+      "probability_percent": 0.6711,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.006711409395973158
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "1",
+      "probability": 0.010067114093959736,
+      "probability_percent": 1.0067,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.010067114093959736
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "2",
+      "probability": 0.020134228187919472,
+      "probability_percent": 2.0134,
+      "top_scores": [
+        {
+          "score": "3-2",
+          "probability": 0.020134228187919472
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "3",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "4",
+      "probability": 0.11409395973154365,
+      "probability_percent": 11.4094,
+      "top_scores": [
+        {
+          "score": "3-4",
+          "probability": 0.11409395973154365
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "5",
+      "probability": 0.036912751677852365,
+      "probability_percent": 3.6913,
+      "top_scores": [
+        {
+          "score": "3-5",
+          "probability": 0.036912751677852365
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "0",
+      "probability": 0.003355704697986579,
+      "probability_percent": 0.3356,
+      "top_scores": [
+        {
+          "score": "4-0",
+          "probability": 0.003355704697986579
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "1",
+      "probability": 0.08053691275167789,
+      "probability_percent": 8.0537,
+      "top_scores": [
+        {
+          "score": "4-1",
+          "probability": 0.08053691275167789
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "2",
+      "probability": 0.08053691275167789,
+      "probability_percent": 8.0537,
+      "top_scores": [
+        {
+          "score": "4-2",
+          "probability": 0.08053691275167789
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "3",
+      "probability": 0.033557046979865786,
+      "probability_percent": 3.3557,
+      "top_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.033557046979865786
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "5",
+      "probability": 0.15771812080536918,
+      "probability_percent": 15.7718,
+      "top_scores": [
+        {
+          "score": "4-5",
+          "probability": 0.15771812080536918
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "2",
+      "probability": 0.006711409395973158,
+      "probability_percent": 0.6711,
+      "top_scores": [
+        {
+          "score": "5-2",
+          "probability": 0.006711409395973158
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "3",
+      "probability": 0.08389261744966447,
+      "probability_percent": 8.3893,
+      "top_scores": [
+        {
+          "score": "5-3",
+          "probability": 0.08389261744966447
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "4",
+      "probability": 0.07046979865771816,
+      "probability_percent": 7.047,
+      "top_scores": [
+        {
+          "score": "5-4",
+          "probability": 0.07046979865771816
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "6+",
+      "probability": 0.033557046979865786,
+      "probability_percent": 3.3557,
+      "top_scores": [
+        {
+          "score": "5-6",
+          "probability": 0.033557046979865786
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "3",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "5",
+      "probability": 0.02348993288590605,
+      "probability_percent": 2.349,
+      "top_scores": [
+        {
+          "score": "6-5",
+          "probability": 0.02348993288590605
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "6+",
+      "probability": 0.063758389261745,
+      "probability_percent": 6.3758,
+      "top_scores": [
+        {
+          "score": "8-7",
+          "probability": 0.020134228187919472
+        },
+        {
+          "score": "7-8",
+          "probability": 0.013422818791946315
+        },
+        {
+          "score": "6-7",
+          "probability": 0.010067114093959736
+        },
+        {
+          "score": "9-8",
+          "probability": 0.006711409395973158
+        },
+        {
+          "score": "9-10",
+          "probability": 0.006711409395973158
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "penalty_score": "4-5",
+      "score": "4-5",
+      "team_a_penalties": 4,
+      "team_b_penalties": 5,
+      "winner_side": "team_b",
+      "conditional_probability": 0.15771812080536918,
+      "joint_probability": 0.022596153846153842,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.15771812080536918,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "3-4",
+      "score": "3-4",
+      "team_a_penalties": 3,
+      "team_b_penalties": 4,
+      "winner_side": "team_b",
+      "conditional_probability": 0.11409395973154365,
+      "joint_probability": 0.016346153846153844,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.11409395973154365,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "2-4",
+      "score": "2-4",
+      "team_a_penalties": 2,
+      "team_b_penalties": 4,
+      "winner_side": "team_b",
+      "conditional_probability": 0.0939597315436242,
+      "joint_probability": 0.013461538461538462,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.0939597315436242,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "5-3",
+      "score": "5-3",
+      "team_a_penalties": 5,
+      "team_b_penalties": 3,
+      "winner_side": "team_a",
+      "conditional_probability": 0.08389261744966447,
+      "joint_probability": 0.01201923076923077,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.08389261744966447,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "4-2",
+      "score": "4-2",
+      "team_a_penalties": 4,
+      "team_b_penalties": 2,
+      "winner_side": "team_a",
+      "conditional_probability": 0.08053691275167789,
+      "joint_probability": 0.011538461538461539,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.08053691275167789,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "4-1",
+      "score": "4-1",
+      "team_a_penalties": 4,
+      "team_b_penalties": 1,
+      "winner_side": "team_a",
+      "conditional_probability": 0.08053691275167789,
+      "joint_probability": 0.011538461538461539,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.08053691275167789,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "5-4",
+      "score": "5-4",
+      "team_a_penalties": 5,
+      "team_b_penalties": 4,
+      "winner_side": "team_a",
+      "conditional_probability": 0.07046979865771816,
+      "joint_probability": 0.010096153846153847,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.07046979865771816,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "3-5",
+      "score": "3-5",
+      "team_a_penalties": 3,
+      "team_b_penalties": 5,
+      "winner_side": "team_b",
+      "conditional_probability": 0.036912751677852365,
+      "joint_probability": 0.005288461538461539,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.036912751677852365,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "5-6",
+      "score": "5-6",
+      "team_a_penalties": 5,
+      "team_b_penalties": 6,
+      "winner_side": "team_b",
+      "conditional_probability": 0.033557046979865786,
+      "joint_probability": 0.004807692307692308,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.32,
+      "x": 0.32,
+      "y": 0.033557046979865786,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "4-3",
+      "score": "4-3",
+      "team_a_penalties": 4,
+      "team_b_penalties": 3,
+      "winner_side": "team_a",
+      "conditional_probability": 0.033557046979865786,
+      "joint_probability": 0.004807692307692308,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.033557046979865786,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "2-3",
+      "score": "2-3",
+      "team_a_penalties": 2,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.02684563758389263,
+      "joint_probability": 0.0038461538461538464,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.02684563758389263,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "6-5",
+      "score": "6-5",
+      "team_a_penalties": 6,
+      "team_b_penalties": 5,
+      "winner_side": "team_a",
+      "conditional_probability": 0.02348993288590605,
+      "joint_probability": 0.0033653846153846156,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.32,
+      "x": 0.32,
+      "y": 0.02348993288590605,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "3-2",
+      "score": "3-2",
+      "team_a_penalties": 3,
+      "team_b_penalties": 2,
+      "winner_side": "team_a",
+      "conditional_probability": 0.020134228187919472,
+      "joint_probability": 0.0028846153846153848,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.020134228187919472,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "1-3",
+      "score": "1-3",
+      "team_a_penalties": 1,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.020134228187919472,
+      "joint_probability": 0.0028846153846153848,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.020134228187919472,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "8-7",
+      "score": "8-7",
+      "team_a_penalties": 8,
+      "team_b_penalties": 7,
+      "winner_side": "team_a",
+      "conditional_probability": 0.020134228187919472,
+      "joint_probability": 0.0028846153846153848,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.6000000000000001,
+      "x": 0.6000000000000001,
+      "y": 0.020134228187919472,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "1-4",
+      "score": "1-4",
+      "team_a_penalties": 1,
+      "team_b_penalties": 4,
+      "winner_side": "team_b",
+      "conditional_probability": 0.016778523489932893,
+      "joint_probability": 0.002403846153846154,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.016778523489932893,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "7-8",
+      "score": "7-8",
+      "team_a_penalties": 7,
+      "team_b_penalties": 8,
+      "winner_side": "team_b",
+      "conditional_probability": 0.013422818791946315,
+      "joint_probability": 0.0019230769230769232,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.6000000000000001,
+      "x": 0.6000000000000001,
+      "y": 0.013422818791946315,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "3-1",
+      "score": "3-1",
+      "team_a_penalties": 3,
+      "team_b_penalties": 1,
+      "winner_side": "team_a",
+      "conditional_probability": 0.010067114093959736,
+      "joint_probability": 0.0014423076923076924,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.010067114093959736,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "0-3",
+      "score": "0-3",
+      "team_a_penalties": 0,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.010067114093959736,
+      "joint_probability": 0.0014423076923076924,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.010067114093959736,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "6-7",
+      "score": "6-7",
+      "team_a_penalties": 6,
+      "team_b_penalties": 7,
+      "winner_side": "team_b",
+      "conditional_probability": 0.010067114093959736,
+      "joint_probability": 0.0014423076923076924,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.46,
+      "x": 0.46,
+      "y": 0.010067114093959736,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "3-0",
+      "score": "3-0",
+      "team_a_penalties": 3,
+      "team_b_penalties": 0,
+      "winner_side": "team_a",
+      "conditional_probability": 0.006711409395973158,
+      "joint_probability": 0.0009615384615384616,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.006711409395973158,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "A common penalty-shootout score family, conservatively calibrated using goalkeepers, takers and psychological pressure."
+    },
+    {
+      "penalty_score": "5-2",
+      "score": "5-2",
+      "team_a_penalties": 5,
+      "team_b_penalties": 2,
+      "winner_side": "team_a",
+      "conditional_probability": 0.006711409395973158,
+      "joint_probability": 0.0009615384615384616,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.006711409395973158,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "9-8",
+      "score": "9-8",
+      "team_a_penalties": 9,
+      "team_b_penalties": 8,
+      "winner_side": "team_a",
+      "conditional_probability": 0.006711409395973158,
+      "joint_probability": 0.0009615384615384616,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.006711409395973158,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "9-10",
+      "score": "9-10",
+      "team_a_penalties": 9,
+      "team_b_penalties": 10,
+      "winner_side": "team_b",
+      "conditional_probability": 0.006711409395973158,
+      "joint_probability": 0.0009615384615384616,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.8800000000000001,
+      "x": 0.8800000000000001,
+      "y": 0.006711409395973158,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "0-2",
+      "score": "0-2",
+      "team_a_penalties": 0,
+      "team_b_penalties": 2,
+      "winner_side": "team_b",
+      "conditional_probability": 0.003355704697986579,
+      "joint_probability": 0.0004807692307692308,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.003355704697986579,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "4-0",
+      "score": "4-0",
+      "team_a_penalties": 4,
+      "team_b_penalties": 0,
+      "winner_side": "team_a",
+      "conditional_probability": 0.003355704697986579,
+      "joint_probability": 0.0004807692307692308,
+      "category": "penalty_tail",
+      "deviation_score": 0.8400000000000001,
+      "x": 0.8400000000000001,
+      "y": 0.003355704697986579,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "1-2",
+      "score": "1-2",
+      "team_a_penalties": 1,
+      "team_b_penalties": 2,
+      "winner_side": "team_b",
+      "conditional_probability": 0.003355704697986579,
+      "joint_probability": 0.0004807692307692308,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.003355704697986579,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "7-6",
+      "score": "7-6",
+      "team_a_penalties": 7,
+      "team_b_penalties": 6,
+      "winner_side": "team_a",
+      "conditional_probability": 0.003355704697986579,
+      "joint_probability": 0.0004807692307692308,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.46,
+      "x": 0.46,
+      "y": 0.003355704697986579,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "penalty_score": "11-10",
+      "score": "11-10",
+      "team_a_penalties": 11,
+      "team_b_penalties": 10,
+      "winner_side": "team_a",
+      "conditional_probability": 0.003355704697986579,
+      "joint_probability": 0.0004807692307692308,
+      "category": "normal_penalty_win",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.003355704697986579,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "顺序证据缺口",
+      "impact_cn": "Spain与Belgium的公开赛前资料无法确认具体点球顺序，点球手只能作为经验候选处理；前端应强调这是证据缺口，不能据此推断某名球员必定主罚。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Penalty-order evidence gap",
+      "impact_en": "Public pre-match evidence for Spain and Belgium does not confirm the exact penalty order, so takers should only be treated as experience-based candidates. The frontend should mark this as an evidence gap and not imply any player is certain to take a penalty.",
+      "text_cn": "Spain与Belgium的公开赛前资料无法确认具体点球顺序，点球手只能作为经验候选处理；前端应强调这是证据缺口，不能据此推断某名球员必定主罚。",
+      "text_en": "Public pre-match evidence for Spain and Belgium does not confirm the exact penalty order, so takers should only be treated as experience-based candidates. The frontend should mark this as an evidence gap and not imply any player is certain to take a penalty."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "门将小幅调整",
+      "impact_cn": "点球大战随机性强，Spain与Belgium只能围绕门将状态做小幅条件调整；现有材料没有可靠证据支持连续扑点叙事，需避免把比分差完全归因于门将。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Goalkeeper adjustment",
+      "impact_en": "Shootouts are highly random, so Spain and Belgium can only be adjusted slightly around goalkeeper status. Current evidence does not reliably support a consecutive-save narrative, so score gaps should not be attributed entirely to goalkeeper heroics.",
+      "text_cn": "点球大战随机性强，Spain与Belgium只能围绕门将状态做小幅条件调整；现有材料没有可靠证据支持连续扑点叙事，需避免把比分差完全归因于门将。",
+      "text_en": "Shootouts are highly random, so Spain and Belgium can only be adjusted slightly around goalkeeper status. Current evidence does not reliably support a consecutive-save narrative, so score gaps should not be attributed entirely to goalkeeper heroics."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "主罚深度",
+      "impact_cn": "委员会口径将Spain与Belgium的主罚手深度列为关键变量，但没有给出具体球员名单或顺位；展示时应写成深度与经验候选影响，而非指定主罚人。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Penalty-taker depth",
+      "impact_en": "The committee framing treats penalty-taker depth as a key variable for Spain and Belgium, but does not provide a confirmed taker list or order. Display this as depth and experience-candidate impact, not as named taker certainty.",
+      "text_cn": "委员会口径将Spain与Belgium的主罚手深度列为关键变量，但没有给出具体球员名单或顺位；展示时应写成深度与经验候选影响，而非指定主罚人。",
+      "text_en": "The committee framing treats penalty-taker depth as a key variable for Spain and Belgium, but does not provide a confirmed taker list or order. Display this as depth and experience-candidate impact, not as named taker certainty."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "一球差路径",
+      "impact_cn": "rollout显示点球路径以一球差和延长点球为主，Spain与Belgium都可能进入突然死亡；这类结果更依赖单轮命中、压力失误与关键扑点的组合。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "One-goal shootout path",
+      "impact_en": "The rollout shows that shootout paths are mostly one-goal margins or extended shootouts, with both Spain and Belgium capable of entering sudden death. These outcomes depend on single-round conversion, pressure misses and key saves.",
+      "text_cn": "rollout显示点球路径以一球差和延长点球为主，Spain与Belgium都可能进入突然死亡；这类结果更依赖单轮命中、压力失误与关键扑点的组合。",
+      "text_en": "The rollout shows that shootout paths are mostly one-goal margins or extended shootouts, with both Spain and Belgium capable of entering sudden death. These outcomes depend on single-round conversion, pressure misses and key saves."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "常规比分族",
+      "impact_cn": "常见比分族需结合门将、主罚手和心理压力保守校准；Spain 4-2或Belgium 2-4这类五轮内比分，通常对应一方多次罚失或被扑。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Standard shootout score family",
+      "impact_en": "Standard shootout score families should be conservatively calibrated with goalkeepers, takers and pressure. Scores such as Spain 4-2 or Belgium 2-4 within five rounds usually imply multiple misses or saves by one side.",
+      "text_cn": "常见比分族需结合门将、主罚手和心理压力保守校准；Spain 4-2或Belgium 2-4这类五轮内比分，通常对应一方多次罚失或被扑。",
+      "text_en": "Standard shootout score families should be conservatively calibrated with goalkeepers, takers and pressure. Scores such as Spain 4-2 or Belgium 2-4 within five rounds usually imply multiple misses or saves by one side."
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "压力失误",
+      "impact_cn": "Spain与Belgium的淘汰赛经验和心理压力只适合做保守后备整合；现有证据不足以量化单队抗压优势，只能保留压力失误作为可能路径。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Pressure miss",
+      "impact_en": "Spain and Belgium’s knockout experience and psychological pressure are only suitable as conservative backup signals. Current evidence is insufficient to quantify a single-team pressure edge, so pressure misses should remain only a possible path.",
+      "text_cn": "Spain与Belgium的淘汰赛经验和心理压力只适合做保守后备整合；现有证据不足以量化单队抗压优势，只能保留压力失误作为可能路径。",
+      "text_en": "Spain and Belgium’s knockout experience and psychological pressure are only suitable as conservative backup signals. Current evidence is insufficient to quantify a single-team pressure edge, so pressure misses should remain only a possible path."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+  "axis_note_en": "Rows show Spain penalty goals and columns show Belgium penalty goals; 6+ means the shootout reaches round six or later. Probabilities are conditional on reaching penalties."
+}
