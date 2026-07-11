@@ -1,8 +1,8 @@
 window.WORLD_CUP_LATEST_GAME_PREDICTIONS = [
   {
-    matchNo: "M90",
-    matchFolder: "Canada_vs_Morocco_M90",
-    versions: ["2026.7.4.14.00"]
+    matchNo: "M99",
+    matchFolder: "Norway_vs_England_M99",
+    versions: ["2026.7.11.15.00"]
   },
   {
     matchNo: "M100",
