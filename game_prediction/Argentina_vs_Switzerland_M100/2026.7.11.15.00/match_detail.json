@@ -1,0 +1,1262 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M100",
+    "team_a": "Argentina",
+    "team_b": "Switzerland",
+    "kickoff_utc": "2026-07-11T20:00:00-05:00",
+    "venue": "Kansas City Stadium, Kansas City",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.6625000000000001,
+      "team_b": 0.3374999999999999,
+      "favorite": "Argentina"
+    },
+    "resolution": {
+      "normal_time": 0.7206730769230768,
+      "extra_time": 0.12740384615384612,
+      "penalties": 0.15192307692307672
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-0",
+        "probability": 0.14291666666666666,
+        "goals_a": 1,
+        "goals_b": 0
+      },
+      {
+        "score": "1-1",
+        "probability": 0.12104166666666667,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "0-0",
+        "probability": 0.09916666666666667,
+        "goals_a": 0,
+        "goals_b": 0
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+        "probability": 0.13221153846153846,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_f9a10f649da1",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.025961538461538463,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_015e1dc9bf31",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+        "probability": 0.008173076923076924,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_a997119740d7",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+        "probability": 0.13221153846153846,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_f9a10f649da1",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.025961538461538463,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_015e1dc9bf31",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+        "probability": 0.008173076923076924,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_a997119740d7",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties."
+      }
+    ],
+    "favorite": "Argentina",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.15192307692307672,
+        "probability_band": "15.2%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.008173076923076924,
+            "path_probability": 0.008173076923076924,
+            "path_id": "BMC_a997119740d7",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007692307692307693,
+            "path_probability": 0.007692307692307693,
+            "path_id": "BMC_d7755ec4c54c",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-3",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.00625,
+            "path_probability": 0.00625,
+            "path_id": "BMC_531cefdacd8e",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "If neither 90 minutes nor extra time separates the teams, the match compresses into shootout randomness, goalkeeper edge, and psychological pressure."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12740384615384612,
+        "probability_band": "12.7%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.025961538461538463,
+            "path_probability": 0.025961538461538463,
+            "path_id": "BMC_015e1dc9bf31",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.02548076923076923,
+            "path_probability": 0.02548076923076923,
+            "path_id": "BMC_0be11dd42952",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，Argentina加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.014903846153846155,
+            "path_probability": 0.014903846153846155,
+            "path_id": "BMC_900e1a882473",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Switzerland加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Switzerland advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a draw in 90 minutes, fatigue, bench depth, and risk appetite become amplified in extra time and can create a decisive path."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.23125,
+        "probability_band": "23.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08173076923076923,
+            "path_probability": 0.08173076923076923,
+            "path_id": "BMC_c13eba5cc0a9",
+            "summary_cn": "90分钟0-1，Switzerland常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Switzerland advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.04951923076923077,
+            "path_probability": 0.04951923076923077,
+            "path_id": "BMC_75268e398946",
+            "summary_cn": "90分钟1-2，Switzerland常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Switzerland advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Switzerland",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.03076923076923077,
+            "path_probability": 0.03076923076923077,
+            "path_id": "BMC_3e676894da3d",
+            "summary_cn": "90分钟0-2，Switzerland常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Switzerland advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The underdog can still advance through a normal-time steal, an extra-time counterattack, or shootout randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 150,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.13221153846153846,
+          "path_probability": 0.13221153846153846,
+          "path_id": "BMC_f9a10f649da1",
+          "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.10192307692307692,
+          "path_probability": 0.10192307692307692,
+          "path_id": "BMC_92c9b56d23ed",
+          "summary_cn": "90分钟2-1，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 2-1: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "2-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08413461538461539,
+          "path_probability": 0.08413461538461539,
+          "path_id": "BMC_6b985ab1778b",
+          "summary_cn": "90分钟2-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 2-0: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Switzerland",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08173076923076923,
+          "path_probability": 0.08173076923076923,
+          "path_id": "BMC_c13eba5cc0a9",
+          "summary_cn": "90分钟0-1，Switzerland常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Switzerland advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "3-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "3-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.05096153846153846,
+          "path_probability": 0.05096153846153846,
+          "path_id": "BMC_9205e47b5725",
+          "summary_cn": "90分钟3-0，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 3-0: Argentina advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-0，Argentina常规时间晋级。",
+          "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+          "probability": 0.13221153846153846,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-0",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Argentina",
+          "path_id": "BMC_f9a10f649da1",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-0: Argentina advances in normal time.",
+          "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+          "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+          "probability": 0.025961538461538463,
+          "resolution_type": "extra_time",
+          "normal_time_score": "0-0",
+          "extra_time_increment": "1-0",
+          "after_extra_time_score": "1-0",
+          "penalty_score": null,
+          "advancer_team": "Argentina",
+          "path_id": "BMC_015e1dc9bf31",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+          "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+          "probability": 0.008173076923076924,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Switzerland",
+          "path_id": "BMC_a997119740d7",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-0，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-0，Argentina常规时间晋级。",
+        "probability": 0.13221153846153846,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-0",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_f9a10f649da1",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-0: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-0: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "summary_cn": "90分钟0-0后进入加时，加时增量1-0，Argentina加时晋级。",
+        "probability": 0.025961538461538463,
+        "resolution_type": "extra_time",
+        "normal_time_score": "0-0",
+        "extra_time_increment": "1-0",
+        "after_extra_time_score": "1-0",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_015e1dc9bf31",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time.",
+        "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Switzerland点球晋级。",
+        "probability": 0.008173076923076924,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Switzerland",
+        "path_id": "BMC_a997119740d7",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Switzerland advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.22666666666666668,
+          "base_event_probability": 0.22666666666666668,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.050833333333333335,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "2-2",
+              "probability": 0.03833333333333333,
+              "rationale_cn": "抢断后的快速转换；比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "Fast transitions after tackles won; the match becomes open and end-to-end, with both attacks converting."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.021875,
+              "rationale_cn": "后段犯规与定位球成为低比分僵局的破局入口；Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Late fouls and set pieces became the way through a low-scoring stalemate; Argentina broke the opposition defense and extended the lead."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.021041666666666667,
+              "rationale_cn": "后段犯规与定位球成为低比分僵局的破局入口；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Late fouls and set pieces became the way through a low-scoring stalemate; the match shifted into a high-risk open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.017708333333333333,
+              "rationale_cn": "后段犯规与定位球成为低比分僵局的破局入口；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Late fouls and set pieces became the way through a low-scoring stalemate; the match shifted into a high-risk open tempo, with space behind the defense continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "3-1",
+            "2-2",
+            "4-0"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead pushing total goals well above the main low-score forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.11895833333333333,
+          "base_event_probability": 0.11895833333333333,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.045,
+              "rationale_cn": "Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Argentina extend their lead after breaking down the opposing defense."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.021875,
+              "rationale_cn": "后段犯规与定位球成为低比分僵局的破局入口；Argentina打破对方防守后扩大领先优势。",
+              "rationale_en": "Late fouls and set pieces became the way through a low-scoring stalemate; Argentina broke the opposition defense and extended the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.017708333333333333,
+              "rationale_cn": "后段犯规与定位球成为低比分僵局的破局入口；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Late fouls and set pieces became the way through a low-scoring stalemate; the match shifted into a high-risk open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.009791666666666667,
+              "rationale_cn": "抢断后的快速转换、点球分支应向均势收缩，马丁内斯威慑只给阿根廷小幅门将边际；Switzerland充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Fast transitions after tackles won and penalty branches should narrow toward even; Martinez’s deterrence gives Argentina only a small goalkeeper edge; Switzerland fully converts counters or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "5-0",
+              "probability": 0.005416666666666667,
+              "rationale_cn": "若进入加时，瑞士上一轮120分钟负荷使阿根廷加时边际更好、后段犯规与定位球成为低比分僵局的破局入口；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "If it goes to extra time, Switzerland's 120-minute load from the last round gives Argentina a better extra-time edge, with late fouls and set pieces as routes to break a low-score deadlock; the match shifts into a high-risk open tempo, with space behind the defense widening."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "4-0",
+            "4-1"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "Early goals, card pressure, fatigue, or defensive imbalance cause the match to lose balance, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.2047916666666667,
+          "base_event_probability": 0.2047916666666667,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.08083333333333333,
+              "rationale_cn": "Switzerland通过压迫或转换取得一球优势。",
+              "rationale_en": "Switzerland takes a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.05479166666666667,
+              "rationale_cn": "Switzerland通过压迫或转换取得一球优势。",
+              "rationale_en": "Switzerland takes a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.024583333333333332,
+              "rationale_cn": "若进入加时，瑞士上一轮120分钟负荷使阿根廷加时边际更好；Switzerland充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "If it goes to extra time, Switzerland's 120-minute load from the last round gives Argentina a better extra-time edge; Switzerland fully converts counterattacks or attacking efficiency and extends the advantage."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.012291666666666666,
+              "rationale_cn": "点球分支应向均势收缩，马丁内斯威慑只给阿根廷小幅门将边际；Switzerland充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "The penalty branch should tighten toward even, with Martínez’s presence giving Argentina only a small goalkeeper edge; Switzerland fully converts counterattacks or attacking efficiency and extends the advantage."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.009791666666666667,
+              "rationale_cn": "抢断后的快速转换、点球分支应向均势收缩，马丁内斯威慑只给阿根廷小幅门将边际；Switzerland充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Fast transitions after tackles won and penalty branches should narrow toward even; Martinez’s deterrence gives Argentina only a small goalkeeper edge; Switzerland fully converts counters or attacking efficiency and extends the lead."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side less favored pre-match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog can change the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "证据因素 1",
+          "impact_cn": "阿根廷16强3-2逆转埃及，Enzo Fernández补时制胜，赛前实力榜仍列第3。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_a5d1d264708c",
+            "E_86d91cf2932a",
+            "E_cf1d390c246d"
+          ],
+          "source_names": [
+            "FIFA",
+            "ESPN"
+          ],
+          "label_en": "Current tournament form",
+          "impact_en": "Argentina came through a 3-2 comeback against Egypt, with Enzo Fernandez deciding it late, and remain high in the model power ranking. That supports Argentina as the main favorite but not a blowout default.",
+          "text_cn": "阿根廷16强3-2逆转埃及，Enzo Fernández补时制胜，赛前实力榜仍列第3。",
+          "text_en": "Argentina came through a 3-2 comeback against Egypt, with Enzo Fernandez deciding it late, and remain high in the model power ranking. That supports Argentina as the main favorite but not a blowout default."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "证据因素 2",
+          "impact_cn": "瑞士预选赛6场仅丢2球，上轮又守到120分钟0-0，低比分存活证据很强。",
+          "direction": "draw",
+          "evidence_ids": [
+            "E_bebc5c8ed28a",
+            "E_4cb362310fbb",
+            "E_84c19bc71f5d"
+          ],
+          "source_names": [
+            "UEFA",
+            "FIFA",
+            "ESPN"
+          ],
+          "label_en": "Defensive structure",
+          "impact_en": "Switzerland conceded very little in qualification and just survived a 120-minute 0-0 before penalties. Their low-score survival evidence is strong and keeps 1-0, 1-1, and 0-0 paths live.",
+          "text_cn": "瑞士预选赛6场仅丢2球，上轮又守到120分钟0-0，低比分存活证据很强。",
+          "text_en": "Switzerland conceded very little in qualification and just survived a 120-minute 0-0 before penalties. Their low-score survival evidence is strong and keeps 1-0, 1-1, and 0-0 paths live."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "阵容",
+          "impact_cn": "瑞士攻击中场兼头号射手Johan Manzambi膝伤缺席，反击和落后追分选择受限。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_326bdcbba9f1",
+            "E_893702eb9898"
+          ],
+          "source_names": [
+            "ESPN",
+            "Reuters"
+          ],
+          "label_en": "Attack availability",
+          "impact_en": "Switzerland lose attacking midfielder and leading scorer Johan Manzambi to a knee injury, which limits their counterattacking and chase-game options if they fall behind.",
+          "text_cn": "瑞士攻击中场兼头号射手Johan Manzambi膝伤缺席，反击和落后追分选择受限。",
+          "text_en": "Switzerland lose attacking midfielder and leading scorer Johan Manzambi to a knee injury, which limits their counterattacking and chase-game options if they fall behind."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "证据因素 4",
+          "impact_cn": "阿根廷上轮90分钟解决，瑞士踢满120分钟再点球，同为短休下负荷差明显。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "PATH_TRANSFER_M100_TEAM_A_LOAD",
+            "PATH_TRANSFER_M100_TEAM_B_LOAD"
+          ],
+          "source_names": [
+            "structured_previous_path_context"
+          ],
+          "label_en": "Fatigue gap",
+          "impact_en": "Argentina resolved the previous round in 90 minutes, while Switzerland played 120 minutes plus penalties. On short rest, that workload gap gives Argentina a clearer late-game and extra-time edge.",
+          "text_cn": "阿根廷上轮90分钟解决，瑞士踢满120分钟再点球，同为短休下负荷差明显。",
+          "text_en": "Argentina resolved the previous round in 90 minutes, while Switzerland played 120 minutes plus penalties. On short rest, that workload gap gives Argentina a clearer late-game and extra-time edge."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "证据因素 5",
+          "impact_cn": "瑞士刚以4-3赢点球大战，Yakin强调耐心和换人，拖入点球是可执行入口。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "E_4cb362310fbb",
+            "E_16a6828adc6c",
+            "PATH_TRANSFER_M100_TEAM_B_PENALTY_EXPERIENCE"
+          ],
+          "source_names": [
+            "FIFA",
+            "Reuters",
+            "structured_previous_path_context"
+          ],
+          "label_en": "Penalty route",
+          "impact_en": "Switzerland just won a 4-3 shootout and have a credible route to drag the match there. This should be displayed as a real survival path, not as the main branch.",
+          "text_cn": "瑞士刚以4-3赢点球大战，Yakin强调耐心和换人，拖入点球是可执行入口。",
+          "text_en": "Switzerland just won a 4-3 shootout and have a credible route to drag the match there. This should be displayed as a real survival path, not as the main branch."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "市场",
+          "impact_cn": "堪萨斯城预计晴天最高85°F，清晨降雨概率20%；若8英里内闪电将延迟。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_806e41c07903",
+            "E_ab3a15bd1556"
+          ],
+          "source_names": [
+            "National Weather Service",
+            "Yahoo Sports"
+          ],
+          "label_en": "Match environment",
+          "impact_en": "Kansas City weather is manageable but can still affect tempo. Lightning-delay rules and heat should be treated as small event-risk modifiers rather than core directional factors.",
+          "text_cn": "堪萨斯城预计晴天最高85°F，清晨降雨概率20%；若8英里内闪电将延迟。",
+          "text_en": "Kansas City weather is manageable but can still affect tempo. Lightning-delay rules and heat should be treated as small event-risk modifiers rather than core directional factors."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.27932692307692286,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.2203098106712566,
+          "joint_probability": 0.061538461538461535,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.2203098106712566
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.134251290877797
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "Argentina凭借体能、替补或压迫优势在加时净胜一球。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "In 30 minutes of extra time, a counterattack, set piece, or substitute impact decides it by one goal.",
+          "rationale_en": "Argentina win extra time by one goal through fitness, substitutes, or pressing advantage."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.030981067125645464,
+          "joint_probability": 0.008653846153846154,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.030981067125645464
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.017211703958691926
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.003442340791738385
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.003442340791738385
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "加时阶段比赛打开，双方各有一次有效转化。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides scored in extra time, as the match shifted from cautious to open end-to-end play.",
+          "rationale_en": "The match opened up in extra time, with each side converting once."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.046471600688468194,
+          "joint_probability": 0.012980769230769231,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.046471600688468194
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.017211703958691926
+            },
+            {
+              "score": "3-0",
+              "increment": "3-0",
+              "probability": 0.015490533562822732
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.01376936316695354
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "2-1",
+            "3-0"
+          ],
+          "rationale_cn": "Argentina在对手体能或心理崩盘后拉开比分。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "In extra time, one side wins by at least 2 goals, or a team with 3+ total goals covers the path.",
+          "rationale_en": "Argentina pull away after the opponent collapses physically or mentally."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "梅西后段处理",
+          "impact_cn": "若90分钟战平进入加时，阿根廷的小到中等边际主要来自整体实力与梅西驱动的后段处理，但这只能支持加时争胜优势，不能写成碾压或确定破局。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Extra-time entry state",
+          "impact_en": "The 90-minute base distribution gives Argentina the stronger normal-time win branch, but a draw remains plausible enough to keep extra time visible.",
+          "text_cn": "若90分钟战平进入加时，阿根廷的小到中等边际主要来自整体实力与梅西驱动的后段处理，但这只能支持加时争胜优势，不能写成碾压或确定破局。",
+          "text_en": "The 90-minute base distribution gives Argentina the stronger normal-time win branch, but a draw remains plausible enough to keep extra time visible."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "瑞士拖点入口",
+          "impact_cn": "瑞士仍有清晰拖入点球的路径：低位防守、科贝尔门将状态、上一轮点球晋级经验和弱势方生存策略，使加时仍平是基础高概率分支。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Evidence gap",
+          "impact_en": "Specific minute-by-minute workload and sprint-decline data are limited, so extra-time conclusions should remain conditional rather than overconfident.",
+          "text_cn": "瑞士仍有清晰拖入点球的路径：低位防守、科贝尔门将状态、上一轮点球晋级经验和弱势方生存策略，使加时仍平是基础高概率分支。",
+          "text_en": "Specific minute-by-minute workload and sprint-decline data are limited, so extra-time conclusions should remain conditional rather than overconfident."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "120分钟负荷",
+          "impact_cn": "瑞士上一轮120分钟负荷是阿根廷加时边际的重要依据，但缺少主力出场分钟、跑动和冲刺下降数据，体能影响幅度目前无法精确量化。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Late-game Argentina edge",
+          "impact_en": "If the match reaches extra time, Argentina's overall quality, Messi-led late-game management, set pieces, and Switzerland's previous 120-minute load create a small-to-medium Argentina edge.",
+          "text_cn": "瑞士上一轮120分钟负荷是阿根廷加时边际的重要依据，但缺少主力出场分钟、跑动和冲刺下降数据，体能影响幅度目前无法精确量化。",
+          "text_en": "If the match reaches extra time, Argentina's overall quality, Messi-led late-game management, set pieces, and Switzerland's previous 120-minute load create a small-to-medium Argentina edge."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "比分情境缺口",
+          "impact_cn": "90分钟平局比分仍是关键证据缺口：0-0或1-1更支持瑞士低位与点球路径，若是2-2则更可能带来开放加时和转换风险。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Swiss survival route",
+          "impact_en": "Switzerland's low block, Kobel's goalkeeper form, recent shootout experience, and underdog knockout pathway give them a clear route to penalties.",
+          "text_cn": "90分钟平局比分仍是关键证据缺口：0-0或1-1更支持瑞士低位与点球路径，若是2-2则更可能带来开放加时和转换风险。",
+          "text_en": "Switzerland's low block, Kobel's goalkeeper form, recent shootout experience, and underdog knockout pathway give them a clear route to penalties."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "替补冲刺质量",
+          "impact_cn": "阿根廷加时能否通过替补提供速度、禁区占位和二点回收，而非只依赖梅西单点处理，是其净胜一球分支能否上升的关键证据缺口。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Risk preference after 105 minutes",
+          "impact_en": "Do not frame Argentina's extra-time edge as dominance, and do not turn Martinez's penalty reputation into a deterministic advantage.",
+          "text_cn": "阿根廷加时能否通过替补提供速度、禁区占位和二点回收，而非只依赖梅西单点处理，是其净胜一球分支能否上升的关键证据缺口。",
+          "text_en": "Do not frame Argentina's extra-time edge as dominance, and do not turn Martinez's penalty reputation into a deterministic advantage."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "105后收缩",
+          "impact_cn": "若105分钟后仍未分胜负，分支应明显向点球均势收缩；不能把阿根廷整体优势或马丁内斯点球声望扩大成确定性优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Drops deeper after 105'",
+          "impact_en": "If it is still level after 105 minutes, the branch should clearly narrow toward a balanced penalty outlook; Argentina's overall edge or Martínez's penalty reputation should not be inflated into certainty.",
+          "text_cn": "若105分钟后仍未分胜负，分支应明显向点球均势收缩；不能把阿根廷整体优势或马丁内斯点球声望扩大成确定性优势。",
+          "text_en": "If it is still level after 105 minutes, the branch should clearly narrow toward a balanced penalty outlook; Argentina's overall edge or Martínez's penalty reputation should not be inflated into certainty."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration -> expert agents -> committee aggregation -> conditional rollout -> Monte Carlo matrix -> tail-risk audit -> report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.15192307692307672,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.08,
+          "probability_band": "low-medium",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.08,
+              "winner_side": "team_a",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper saves multiple penalties to change the result."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08,
+              "winner_side": "team_b",
+              "rationale_cn": "门将连续扑点改变胜负。",
+              "rationale_en": "The goalkeeper saves multiple penalties to change the result."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "门将连续扑点改变胜负。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive penalty saves, or the opponent misses multiple penalties, quickly widening the shootout score.",
+          "rationale_en": "The goalkeeper saves multiple penalties to change the result."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "3-4",
+          "winner_side": "team_b",
+          "probability": 0.07,
+          "probability_band": "low",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "3-4",
+              "probability": 0.07,
+              "winner_side": "team_b",
+              "rationale_cn": "热门球队压力下核心罚手失误，非热门方点球晋级。",
+              "rationale_en": "Under pressure, the favored team's key penalty taker missed, and the underdog advanced on penalties."
+            }
+          ],
+          "display_scores": [
+            "3-4"
+          ],
+          "rationale_cn": "热门球队压力下核心罚手失误，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "Under pressure, the favored team's key penalty taker missed, and the underdog advanced on penalties."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.05,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.05,
+              "winner_side": "team_a",
+              "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+              "rationale_en": "Both sides showed high quality in the first five rounds, taking the shootout into extra kicks."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "双方前五轮质量较高，进入延长点球。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides showed high quality in the first five rounds, with the winner decided only after 6+ sudden-death rounds.",
+          "rationale_en": "Both sides showed high quality in the first five rounds, taking the shootout into extra kicks."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "点球顺序缺口",
+          "impact_cn": "阿根廷与瑞士的公开赛前资料无法确认具体点球顺序，主罚手只能作为经验候选处理，前五轮谁先承担高压球存在证据缺口。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty-win probability framing",
+          "impact_en": "The shootout branch should contract toward parity. Martinez gives Argentina a small goalkeeper edge, but Switzerland's recent shootout success keeps the branch live.",
+          "text_cn": "阿根廷与瑞士的公开赛前资料无法确认具体点球顺序，主罚手只能作为经验候选处理，前五轮谁先承担高压球存在证据缺口。",
+          "text_en": "The shootout branch should contract toward parity. Martinez gives Argentina a small goalkeeper edge, but Switzerland's recent shootout success keeps the branch live."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "门将连续扑点",
+          "impact_cn": "点球rollout保留了阿根廷或瑞士门将连续扑点改变胜负的路径，这类小样本事件随机性强，但可能直接打破一球差格局。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty taker depth",
+          "impact_en": "Argentina have star taker quality, while Switzerland have fresh positive shootout evidence. Treat taker depth as a marginal edge, not a decisive certainty.",
+          "text_cn": "点球rollout保留了阿根廷或瑞士门将连续扑点改变胜负的路径，这类小样本事件随机性强，但可能直接打破一球差格局。",
+          "text_en": "Argentina have star taker quality, while Switzerland have fresh positive shootout evidence. Treat taker depth as a marginal edge, not a decisive certainty."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "延长点球路径",
+          "impact_cn": "模型汇总显示阿根廷对瑞士的点球大战以一球差和延长点球为主，若双方前五轮质量较高，胜负可能拖入第六轮后。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Negative samples and evidence gaps",
+          "impact_en": "The exact penalty order is unknown before the match, so likely takers should be displayed as candidates rather than a fixed sequence.",
+          "text_cn": "模型汇总显示阿根廷对瑞士的点球大战以一球差和延长点球为主，若双方前五轮质量较高，胜负可能拖入第六轮后。",
+          "text_en": "The exact penalty order is unknown before the match, so likely takers should be displayed as candidates rather than a fixed sequence."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "热门压力失误",
+          "impact_cn": "尾部情景保留了热门球队在压力下核心罚手失误、非热门方点球晋级的路径；但具体核心罚手身份缺少可靠数据。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper penalty evidence",
+          "impact_en": "Martinez's reputation matters, but Kobel and Switzerland's recent shootout rhythm prevent the shootout from becoming a one-team conclusion.",
+          "text_cn": "尾部情景保留了热门球队在压力下核心罚手失误、非热门方点球晋级的路径；但具体核心罚手身份缺少可靠数据。",
+          "text_en": "Martinez's reputation matters, but Kobel and Switzerland's recent shootout rhythm prevent the shootout from becoming a one-team conclusion."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "保守小幅调整",
+          "impact_cn": "点球专家委员会仅依据门将、主罚手深度、淘汰赛经验与心理压力作小幅条件调整，未把任何单一因素放大为决定性优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Pressure context",
+          "impact_en": "Penalty score families should remain conservative, centered on one-goal margins and extended drama rather than a guaranteed favorite win.",
+          "text_cn": "点球专家委员会仅依据门将、主罚手深度、淘汰赛经验与心理压力作小幅条件调整，未把任何单一因素放大为决定性优势。",
+          "text_en": "Penalty score families should remain conservative, centered on one-goal margins and extended drama rather than a guaranteed favorite win."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration -> expert agents -> committee aggregation -> shootout sequence rollout -> penalty score matrix -> tail-risk audit -> report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "partial_fallback",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-11T05:12:11.343476Z",
+  "method_en": "The v6.3 branch-aware knockout pipeline integrates completed-tournament form, expert committee reasoning, conditional MAS rollout, and Monte Carlo path sampling. This match can be presented as Argentina favored, but Switzerland's low-block and penalty route should remain visible.",
+  "architecture_en": "Normal time, extra time, and penalties are conditional slices of the same full path tree. Argentina's 90-minute edge, Switzerland's low-score survival route, and the shootout tail should be shown together rather than as separate predictions."
+}
