@@ -4387,6 +4387,43 @@ button.team-route-card:focus-visible {
   top: 0;
 }
 
+@media (min-width: 1181px) {
+  .tournament-prediction-modal .tournament-history-card {
+    max-height: calc(min(92vh, 980px) - 174px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .tournament-prediction-modal .tournament-history-card .panel-section-head {
+    flex: 0 0 auto;
+  }
+
+  .tournament-prediction-modal .tournament-history-card .history-timeline {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 8px;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(13, 122, 86, 0.5) rgba(13, 122, 86, 0.08);
+  }
+
+  .tournament-prediction-modal .tournament-history-card .history-timeline::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .tournament-prediction-modal .tournament-history-card .history-timeline::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: rgba(13, 122, 86, 0.08);
+  }
+
+  .tournament-prediction-modal .tournament-history-card .history-timeline::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(13, 122, 86, 0.5);
+  }
+}
+
 .tournament-evidence-body {
   display: grid;
   gap: 14px;

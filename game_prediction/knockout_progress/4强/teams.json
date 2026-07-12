@@ -1,4 +1,21 @@
 {
   "round": "semifinal",
-  "matches": []
+  "matches": [
+    {
+      "matchNo": "M101",
+      "status": "scheduled",
+      "teams": ["FRA", "ESP"],
+      "matchTime": "7月14日 19:00 UTC",
+      "kickoffUtc": "2026-07-14T19:00:00Z",
+      "source": "M97 winner vs M98 winner"
+    },
+    {
+      "matchNo": "M102",
+      "status": "scheduled",
+      "teams": ["ENG", "ARG"],
+      "matchTime": "7月15日 19:00 UTC",
+      "kickoffUtc": "2026-07-15T19:00:00Z",
+      "source": "M99 winner vs M100 winner"
+    }
+  ]
 }

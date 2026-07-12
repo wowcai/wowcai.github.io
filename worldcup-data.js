@@ -470,7 +470,9 @@ const knockoutMatchTeamsByNo = {
   M97: ["FRA", "MAR"],
   M98: ["ESP", "BEL"],
   M99: ["NOR", "ENG"],
-  M100: ["ARG", "SUI"]
+  M100: ["ARG", "SUI"],
+  M101: ["FRA", "ESP"],
+  M102: ["ENG", "ARG"]
 };
 const formatKnockoutUtcTime = (value) => {
   const date = new Date(value);
@@ -764,6 +766,22 @@ window.WORLD_CUP_KNOCKOUT_PROGRESS = {
         kickoffUtc: "2026-07-12T01:00:00Z",
         source: "M95 winner vs M96 winner"
       }
+    },
+    semifinal: {
+      M101: {
+        status: "scheduled",
+        teams: ["FRA", "ESP"],
+        matchTime: "7月14日 19:00 UTC",
+        kickoffUtc: "2026-07-14T19:00:00Z",
+        source: "M97 winner vs M98 winner"
+      },
+      M102: {
+        status: "scheduled",
+        teams: ["ENG", "ARG"],
+        matchTime: "7月15日 19:00 UTC",
+        kickoffUtc: "2026-07-15T19:00:00Z",
+        source: "M99 winner vs M100 winner"
+      }
     }
   }
 };
@@ -812,7 +830,7 @@ window.WORLD_CUP_ROUTE_DATA = {
         name: "SEMIFINALS",
         nameZh: "半决赛",
         nodes: [
-          { id: "left-sf-1", round: "semifinal", status: "empty", matchNo: "M101", slotLabel: "M97胜者 vs M98胜者", descriptionZh: "半决赛 · M101" }
+          { id: "left-sf-1", round: "semifinal", status: "scheduled", matchNo: "M101", teamIds: ["FRA", "ESP"], slotLabel: "法国 vs 西班牙", descriptionZh: "半决赛 · M101" }
         ]
       }
     ]
@@ -825,7 +843,7 @@ window.WORLD_CUP_ROUTE_DATA = {
         name: "SEMIFINALS",
         nameZh: "半决赛",
         nodes: [
-          { id: "right-sf-1", round: "semifinal", status: "empty", matchNo: "M102", slotLabel: "M99胜者 vs M100胜者", descriptionZh: "半决赛 · M102" }
+          { id: "right-sf-1", round: "semifinal", status: "scheduled", matchNo: "M102", teamIds: ["ENG", "ARG"], slotLabel: "英格兰 vs 阿根廷", descriptionZh: "半决赛 · M102" }
         ]
       },
       {
