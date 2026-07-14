@@ -1,0 +1,530 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.4144851657940661,
+      "conditional_probability": 0.4144851657940661,
+      "joint_probability": 0.11418269230769218,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.4144851657940661,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "最大单项路径。条件于90分钟已打平后，主入口为1-1、0-0和2-2，其中1-1与0-0合计权重很高；淘汰赛加时通常先控制被转换打穿的风险。两队上轮均90分钟解决且休息四天，缺少单边体能崩盘证据，因此120分钟仍平、进入点球应保留为最高概率。",
+      "label_en": "0-0",
+      "rationale_en": "Largest single conditional path. After a 90-minute draw, the main entries are 1-1, 0-0, and 2-2, with 1-1 and 0-0 carrying substantial weight. Extra time in knockout football usually starts by controlling transition risk. Because both teams advanced in 90 minutes last round and have four days of rest, there is no clear one-sided fatigue-collapse signal, so a 120-minute draw and penalties remain the highest-probability route."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.19720767888307167,
+      "conditional_probability": 0.19720767888307167,
+      "joint_probability": 0.05432692307692308,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.19720767888307167,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "西班牙加时净胜一球略高于法国1-0。Merino后插上、Fabian或中场二点球、控球压迫和避免点球的运动战动机，使西班牙在90-120分钟有轻微更明确的主动解决路径；但幅度很小，不能视作单边优势。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "Spain winning extra time by one goal is slightly higher than France 1-0. Merino's late midfield runs, Fabian or second balls in midfield, possession pressure, and the incentive to avoid penalties give Spain a slightly clearer open-play route in minutes 90-120; but the margin is very small and not a one-sided edge."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.16492146596858648,
+      "conditional_probability": 0.16492146596858648,
+      "joint_probability": 0.045432692307692306,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.16492146596858648,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "法国加时净胜一球接近西班牙方向。核心来自姆巴佩、登贝莱、Olise或高速替补在西班牙前压后的纵深反击窗口；若西班牙105分钟后因点球历史压力提高边后卫和中场线高度，法国单次高价值机会会上升。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "A one-goal France edge in extra time is close to Spain's corresponding path. It mainly comes from the vertical counterattacking window for Mbappe, Dembele, Olise, or fast substitutes behind Spain's high line. If Spain raise their full-backs and midfield line after 105 minutes because of penalty-history pressure, France's single high-value chance can increase."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.09336823734729488,
+      "conditional_probability": 0.09336823734729488,
+      "joint_probability": 0.025721153846153817,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.09336823734729488,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "中低概率但必须保留。若90分钟入口为2-2或更高比分，说明比赛已出现空间拉大、换人后结构不稳或首球后开放的迹象；加时一方先进球后，落后方会提高风险，形成双方各进一球但仍未分胜负的路径。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Low-to-mid probability but must be kept. If the 90-minute entry is 2-2 or higher, it suggests the match has already shown wider spaces, instability after substitutions, or openness after the first goal; if one side scores first in extra time, the trailing side will take more risks, creating a path where both teams score once but the match remains level."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.035776614310645743,
+      "conditional_probability": 0.035776614310645743,
+      "joint_probability": 0.00985576923076923,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.035776614310645743,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "法国两球分离为尾部。通常需要法国先通过反击或边路单挑破门，随后西班牙为追平极端压上，再被姆巴佩、登贝莱或其他速度点打第二次身后。该路径有机制支持，但需要首球和追赶态势叠加。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A two-goal France separation is a tail outcome. It usually requires France to score first through a counter or wide 1v1, then Spain to push extremely high for an equalizer and get hit in behind again by Mbappe, Dembele, or another pace outlet. This path has a clear mechanism, but needs the first goal and chasing game state to stack together."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.03315881326352532,
+      "conditional_probability": 0.03315881326352532,
+      "joint_probability": 0.009134615384615383,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.03315881326352532,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "西班牙两球分离略高于法国2-0但仍属尾部。需要西班牙先由后插上、二点球或定位球二次进攻取得领先，随后法国追赶导致中场覆盖或身后空间暴露，西班牙再通过控球消耗和连续压迫扩大比分。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A two-goal Spain separation is slightly above France's 2-0 path but remains a tail scenario. It requires Spain to lead first through late midfield runs, second balls, or set-piece follow-ups, then exploit France chasing the match, with midfield cover or space behind exposed, before Spain widen the margin through possession control and repeated pressure."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.019197207678883083,
+      "conditional_probability": 0.019197207678883083,
+      "joint_probability": 0.005288461538461539,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.019197207678883083,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.019197207678883083,
+      "conditional_probability": 0.019197207678883083,
+      "joint_probability": 0.005288461538461539,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.019197207678883083,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-3",
+      "score": "1-3",
+      "increment": "1-3",
+      "probability": 0.006108202443280981,
+      "conditional_probability": 0.006108202443280981,
+      "joint_probability": 0.0016826923076923078,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.006108202443280981,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-3",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.005235602094240841,
+      "conditional_probability": 0.005235602094240841,
+      "joint_probability": 0.0014423076923076924,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.005235602094240841,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.004363001745200701,
+      "conditional_probability": 0.004363001745200701,
+      "joint_probability": 0.001201923076923077,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.004363001745200701,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "0-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.0034904013961605607,
+      "conditional_probability": 0.0034904013961605607,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.0034904013961605607,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "label": "3-1",
+      "score": "3-1",
+      "increment": "3-1",
+      "probability": 0.0017452006980802803,
+      "conditional_probability": 0.0017452006980802803,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0017452006980802803,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-1",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "4-0",
+      "score": "4-0",
+      "increment": "4-0",
+      "probability": 0.0008726003490401402,
+      "conditional_probability": 0.0008726003490401402,
+      "joint_probability": 0.0002403846153846154,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0008726003490401402,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-0",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    },
+    {
+      "label": "0-4",
+      "score": "0-4",
+      "increment": "0-4",
+      "probability": 0.0008726003490401402,
+      "conditional_probability": 0.0008726003490401402,
+      "joint_probability": 0.0002403846153846154,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0008726003490401402,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "0-4",
+      "rationale_en": "Derived from the unified knockout path distribution."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.19720767888307167,
+      "joint_probability": 0.05432692307692308,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.19720767888307167
+        },
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.16492146596858648
+        }
+      ],
+      "display_scores": [
+        "0-1",
+        "1-0"
+      ],
+      "rationale_cn": "西班牙加时净胜一球略高于法国1-0。Merino后插上、Fabian或中场二点球、控球压迫和避免点球的运动战动机，使西班牙在90-120分钟有轻微更明确的主动解决路径；但幅度很小，不能视作单边优势。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A 1-goal decider in 30 minutes of extra time via counters, set pieces, or substitute impact.",
+      "rationale_en": "Spain winning extra time by one goal is slightly higher than France 1-0. Merino's late midfield runs, Fabian or second balls in midfield, possession pressure, and the incentive to avoid penalties give Spain a slightly clearer open-play route in minutes 90-120; but the margin is very small and not a one-sided edge."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.09336823734729488,
+      "joint_probability": 0.025721153846153817,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.09336823734729488
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.019197207678883083
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.019197207678883083
+        },
+        {
+          "score": "1-3",
+          "increment": "1-3",
+          "probability": 0.006108202443280981
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "中低概率但必须保留。若90分钟入口为2-2或更高比分，说明比赛已出现空间拉大、换人后结构不稳或首球后开放的迹象；加时一方先进球后，落后方会提高风险，形成双方各进一球但仍未分胜负的路径。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both sides score in extra time, with the match shifting from caution into open end-to-end play.",
+      "rationale_en": "Low-to-mid probability but must be kept. If the 90-minute entry is 2-2 or higher, it suggests the match has already shown wider spaces, instability after substitutions, or openness after the first goal; if one side scores first in extra time, the trailing side will take more risks, creating a path where both teams score once but the match remains level."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.035776614310645743,
+      "joint_probability": 0.00985576923076923,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.035776614310645743
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.03315881326352532
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.019197207678883083
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.019197207678883083
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "0-2",
+        "2-1"
+      ],
+      "rationale_cn": "法国两球分离为尾部。通常需要法国先通过反击或边路单挑破门，随后西班牙为追平极端压上，再被姆巴佩、登贝莱或其他速度点打第二次身后。该路径有机制支持，但需要首球和追赶态势叠加。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A side covers by winning extra time by at least 2 goals, or with total goals reaching over 3.",
+      "rationale_en": "A two-goal France separation is a tail outcome. It usually requires France to score first through a counter or wide 1v1, then Spain to push extremely high for an equalizer and get hit in behind again by Mbappe, Dembele, or another pace outlet. This path has a clear mechanism, but needs the first goal and chasing game state to stack together."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "点球入口偏高",
+      "impact_cn": "加时分支仅在90分钟打平后启用，当前增量矩阵最大单项是0-0约39.5%，说明120分钟仍平、进入点球仍是最高概率路径。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "High penalty-entry risk",
+      "impact_en": "The extra-time branch only applies after a 90-minute draw. The largest item in the current incremental matrix is 0-0 at about 39.5%, indicating that a 120-minute draw and penalties remain the most likely path.",
+      "text_cn": "加时分支仅在90分钟打平后启用，当前增量矩阵最大单项是0-0约39.5%，说明120分钟仍平、进入点球仍是最高概率路径。",
+      "text_en": "The extra-time branch only applies after a 90-minute draw. The largest item in the current incremental matrix is 0-0 at about 39.5%, indicating that a 120-minute draw and penalties remain the most likely path."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "平局入口差异",
+      "impact_cn": "90分钟平局入口以1-1约12.1%为主，其次是2-2约6.8%和0-0约6.5%，不同入口会明显改变加时开放程度。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Draw-entry profile",
+      "impact_en": "The 90-minute draw entry is led by 1-1 at about 12.1%, followed by 2-2 at about 6.8% and 0-0 at about 6.5%; different entries will clearly affect how open extra time becomes.",
+      "text_cn": "90分钟平局入口以1-1约12.1%为主，其次是2-2约6.8%和0-0约6.5%，不同入口会明显改变加时开放程度。",
+      "text_en": "The 90-minute draw entry is led by 1-1 at about 12.1%, followed by 2-2 at about 6.8% and 0-0 at about 6.5%; different entries will clearly affect how open extra time becomes."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "西班牙后插上",
+      "impact_cn": "西班牙若仍有Merino承担中场后插上，叠加Fabian或中场二点球、控球压迫，会小幅抬高加时一球分离路径。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Spain late midfield runs",
+      "impact_en": "If Spain still have Merino making late runs from midfield, combined with Fabian or midfield second balls and possession pressure, it slightly raises the extra-time one-goal separation path.",
+      "text_cn": "西班牙若仍有Merino承担中场后插上，叠加Fabian或中场二点球、控球压迫，会小幅抬高加时一球分离路径。",
+      "text_en": "If Spain still have Merino making late runs from midfield, combined with Fabian or midfield second balls and possession pressure, it slightly raises the extra-time one-goal separation path."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "法国纵深反击",
+      "impact_cn": "法国的加时一球路径依赖姆巴佩、登贝莱、Olise或高速替补仍在场且冲刺质量正常，利用西班牙前压后的身后空间。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "France vertical counterattack",
+      "impact_en": "France’s extra-time one-goal route depends on Mbappe, Dembele, Olise, or fast substitutes still being on the pitch with normal sprint quality, exploiting the space behind Spain’s high press.",
+      "text_cn": "法国的加时一球路径依赖姆巴佩、登贝莱、Olise或高速替补仍在场且冲刺质量正常，利用西班牙前压后的身后空间。",
+      "text_en": "France’s extra-time one-goal route depends on Mbappe, Dembele, Olise, or fast substitutes still being on the pitch with normal sprint quality, exploiting the space behind Spain’s high press."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "体能牌面缺口",
+      "impact_cn": "缺少90分钟结束时两队实际体能、冲刺衰减、抽筋、伤情和黄牌分布，因此不能预设法国或西班牙有加时体能优势。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Fitness evidence gap",
+      "impact_en": "Without the actual fitness levels, sprint drop-off, cramps, injuries, and yellow-card distribution for both teams at 90 minutes, no extra-time fitness edge should be assumed for France or Spain.",
+      "text_cn": "缺少90分钟结束时两队实际体能、冲刺衰减、抽筋、伤情和黄牌分布，因此不能预设法国或西班牙有加时体能优势。",
+      "text_en": "Without the actual fitness levels, sprint drop-off, cramps, injuries, and yellow-card distribution for both teams at 90 minutes, no extra-time fitness edge should be assumed for France or Spain."
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "点球证据缺口",
+      "impact_cn": "若120分钟仍平，西班牙世界杯点球历史弱势只给法国轻微方向；缺少本届主罚顺序、门将准备和临场伤情，不能强判。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Penalty evidence gap",
+      "impact_en": "If it is still level after 120 minutes, Spain's weaker World Cup penalty history only gives France a slight lean; without the current penalty order, goalkeeper preparation, and live injury status, no firm call can be made.",
+      "text_cn": "若120分钟仍平，西班牙世界杯点球历史弱势只给法国轻微方向；缺少本届主罚顺序、门将准备和临场伤情，不能强判。",
+      "text_en": "If it is still level after 120 minutes, Spain's weaker World Cup penalty history only gives France a slight lean; without the current penalty order, goalkeeper preparation, and live injury status, no firm call can be made."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}

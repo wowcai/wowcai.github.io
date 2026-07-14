@@ -560,7 +560,7 @@ window.WORLD_CUP_MATCH_PREDICTIONS = [
   ...knockoutMatches
 ];
 
-window.WORLD_CUP_LATEST_MATCH_IDS = ["M99", "M100"];
+window.WORLD_CUP_LATEST_MATCH_IDS = ["M101"];
 
 window.WORLD_CUP_KNOCKOUT_PROGRESS = {
   rounds: {

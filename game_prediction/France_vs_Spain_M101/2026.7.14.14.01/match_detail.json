@@ -1,0 +1,1284 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M101",
+    "team_a": "France",
+    "team_b": "Spain",
+    "kickoff_utc": "2026-07-14T14:00:00-05:00",
+    "venue": "Dallas Stadium, Arlington",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.5045673076923082,
+      "team_b": 0.4954326923076918,
+      "favorite": "France"
+    },
+    "resolution": {
+      "normal_time": 0.7245192307692316,
+      "extra_time": 0.13461538461538458,
+      "penalties": 0.1408653846153844
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.12125,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "2-1",
+        "probability": 0.084375,
+        "goals_a": 2,
+        "goals_b": 1
+      },
+      {
+        "score": "0-1",
+        "probability": 0.08109375,
+        "goals_a": 0,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，France常规时间晋级。",
+        "summary_cn": "90分钟2-1，France常规时间晋级。",
+        "probability": 0.08629807692307692,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_741fa17224fa",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-1: France advances in normal time.",
+        "summary_en": "90 minutes 2-1: France advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "probability": 0.027884615384615386,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_c95cb7e10cc6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Spain",
+        "path_id": "BMC_43dfed49f1a1",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，France常规时间晋级。",
+        "summary_cn": "90分钟2-1，France常规时间晋级。",
+        "probability": 0.08629807692307692,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_741fa17224fa",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-1: France advances in normal time.",
+        "summary_en": "90 minutes 2-1: France advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "probability": 0.027884615384615386,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_c95cb7e10cc6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Spain",
+        "path_id": "BMC_43dfed49f1a1",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+      }
+    ],
+    "favorite": "France",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.1408653846153844,
+        "probability_band": "14.1%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.007211538461538462,
+            "path_probability": 0.007211538461538462,
+            "path_id": "BMC_43dfed49f1a1",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.005528846153846154,
+            "path_probability": 0.005528846153846154,
+            "path_id": "BMC_c1764b7d69b2",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "France",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "5-4",
+            "penalty_winner": "team_a",
+            "resolution_type": "penalties",
+            "probability": 0.004326923076923077,
+            "path_probability": 0.004326923076923077,
+            "path_id": "BMC_4488d5e1a8ea",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，France点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, France advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "If neither 90 minutes nor extra time separates the teams, the match is compressed into penalty randomness plus goalkeeper and psychological edges."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.13461538461538458,
+        "probability_band": "13.5%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.027884615384615386,
+            "path_probability": 0.027884615384615386,
+            "path_id": "BMC_c95cb7e10cc6",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "France",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.019230769230769232,
+            "path_probability": 0.019230769230769232,
+            "path_id": "BMC_4156831531c6",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，France加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; France advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "France",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.012259615384615384,
+            "path_probability": 0.012259615384615384,
+            "path_id": "BMC_c5cdef77a91e",
+            "summary_cn": "90分钟0-0后进入加时，加时增量1-0，France加时晋级。",
+            "summary_en": "After a 0-0 draw in 90 minutes, extra time adds 1-0; France advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth, and risk appetite become amplified in extra time and create the separation paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.3471153846153847,
+        "probability_band": "34.7%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "0-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08100961538461539,
+            "path_probability": 0.08100961538461539,
+            "path_id": "BMC_98522fa65414",
+            "summary_cn": "90分钟0-1，Spain常规时间晋级。",
+            "summary_en": "90 minutes 0-1: Spain advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "1-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08028846153846154,
+            "path_probability": 0.08028846153846154,
+            "path_id": "BMC_cf791d492436",
+            "summary_cn": "90分钟1-2，Spain常规时间晋级。",
+            "summary_en": "90 minutes 1-2: Spain advances in normal time."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Spain",
+            "after_extra_time_score": "0-2",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_b",
+            "normal_time_score": "0-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.05480769230769231,
+            "path_probability": 0.05480769230769231,
+            "path_id": "BMC_7011b27f9e21",
+            "summary_cn": "90分钟0-2，Spain常规时间晋级。",
+            "summary_en": "90 minutes 0-2: Spain advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The non-favored side can still advance through a normal-time strike, an extra-time counterattack, or penalty randomness."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 241,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "France",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08629807692307692,
+          "path_probability": 0.08629807692307692,
+          "path_id": "BMC_741fa17224fa",
+          "summary_cn": "90分钟2-1，France常规时间晋级。",
+          "summary_en": "90 minutes 2-1: France advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08100961538461539,
+          "path_probability": 0.08100961538461539,
+          "path_id": "BMC_98522fa65414",
+          "summary_cn": "90分钟0-1，Spain常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08028846153846154,
+          "path_probability": 0.08028846153846154,
+          "path_id": "BMC_cf791d492436",
+          "summary_cn": "90分钟1-2，Spain常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Spain advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "France",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.07716346153846154,
+          "path_probability": 0.07716346153846154,
+          "path_id": "BMC_d378b39d6a30",
+          "summary_cn": "90分钟1-0，France常规时间晋级。",
+          "summary_en": "90 minutes 1-0: France advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Spain",
+          "after_extra_time_score": "0-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.05480769230769231,
+          "path_probability": 0.05480769230769231,
+          "path_id": "BMC_7011b27f9e21",
+          "summary_cn": "90分钟0-2，Spain常规时间晋级。",
+          "summary_en": "90 minutes 0-2: Spain advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟2-1，France常规时间晋级。",
+          "summary_cn": "90分钟2-1，France常规时间晋级。",
+          "probability": 0.08629807692307692,
+          "resolution_type": "normal_time",
+          "normal_time_score": "2-1",
+          "extra_time_increment": null,
+          "after_extra_time_score": "2-1",
+          "penalty_score": null,
+          "advancer_team": "France",
+          "path_id": "BMC_741fa17224fa",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 2-1: France advances in normal time.",
+          "summary_en": "90 minutes 2-1: France advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+          "probability": 0.027884615384615386,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-1",
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "Spain",
+          "path_id": "BMC_c95cb7e10cc6",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+          "probability": 0.007211538461538462,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Spain",
+          "path_id": "BMC_43dfed49f1a1",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟2-1，France常规时间晋级。",
+        "summary_cn": "90分钟2-1，France常规时间晋级。",
+        "probability": 0.08629807692307692,
+        "resolution_type": "normal_time",
+        "normal_time_score": "2-1",
+        "extra_time_increment": null,
+        "after_extra_time_score": "2-1",
+        "penalty_score": null,
+        "advancer_team": "France",
+        "path_id": "BMC_741fa17224fa",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 2-1: France advances in normal time.",
+        "summary_en": "90 minutes 2-1: France advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+        "probability": 0.027884615384615386,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Spain",
+        "path_id": "BMC_c95cb7e10cc6",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+        "probability": 0.007211538461538462,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Spain",
+        "path_id": "BMC_43dfed49f1a1",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.33614583333333337,
+          "base_event_probability": 0.33614583333333337,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.06807291666666666,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open back-and-forth, with both attacks converting chances."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.04041666666666666,
+              "rationale_cn": "France打破对方防守后扩大领先优势。",
+              "rationale_en": "France extend their lead after breaking through the opposing defense."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.034583333333333334,
+              "rationale_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Spain fully convert their counterattacking or attacking efficiency and extend their advantage."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.033177083333333336,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.029739583333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "3-1",
+            "1-3"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "Total goals at least 4.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead pushing total goals well above the main low-score prediction."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.11432291666666662,
+          "base_event_probability": 0.11432291666666662,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.023854166666666666,
+              "rationale_cn": "抢断后的快速转换；France打破对方防守后扩大领先优势。",
+              "rationale_en": "Quick transition after a tackle; France extend their lead after breaking through the opposing defense."
+            },
+            {
+              "score": "0-3",
+              "probability": 0.0228125,
+              "rationale_cn": "抢断后的快速转换；Spain充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Quick transition after a tackle; Spain fully converts counterattack or attacking efficiency and extends the lead."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.013125,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.012135416666666666,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            },
+            {
+              "score": "4-0",
+              "probability": 0.009166666666666667,
+              "rationale_cn": "France打破对方防守后扩大领先优势。",
+              "rationale_en": "France extend their lead after breaking through the opposing defense."
+            }
+          ],
+          "display_scores": [
+            "3-0",
+            "0-3",
+            "4-1"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fitness issues, or defensive imbalance makes the match uneven, with one side pulling clearly ahead within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.3538020833333334,
+          "base_event_probability": 0.3538020833333334,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "probability": 0.08109375,
+              "rationale_cn": "Spain通过压迫或转换取得一球优势。",
+              "rationale_en": "Spain take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "1-2",
+              "probability": 0.08078125,
+              "rationale_cn": "Spain通过压迫或转换取得一球优势。",
+              "rationale_en": "Spain take a one-goal lead through pressing or transitions."
+            },
+            {
+              "score": "0-2",
+              "probability": 0.05203125,
+              "rationale_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Spain fully convert their counterattacking or attacking efficiency and extend their advantage."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.034583333333333334,
+              "rationale_cn": "Spain充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Spain fully convert their counterattacking or attacking efficiency and extend their advantage."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.029739583333333333,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defensive line continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-2",
+            "0-2"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side rated less likely pre-match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog changes the result in 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key errors by the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "心理与替补后段",
+          "impact_cn": "Merino连续两轮淘汰赛替补制胜，西班牙需保留后段换人增益。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "PATH_TRANSFER_M101_TEAM_B_PROFILE_03_KNOCKOUT_BENCH_DEPTH"
+          ],
+          "source_names": [
+            "FIFA France v Spain semi-final preview"
+          ],
+          "label_en": "Mentality and late substitution edge",
+          "impact_en": "Merino has come off the bench to decide two straight knockout rounds, so Spain need to preserve their late substitution upside.",
+          "text_cn": "Merino连续两轮淘汰赛替补制胜，西班牙需保留后段换人增益。",
+          "text_en": "Merino has come off the bench to decide two straight knockout rounds, so Spain need to preserve their late substitution upside."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "法国淘汰赛分离能力",
+          "impact_cn": "法国对摩洛哥点球被扑后仍2-0取胜，Mbappe与Dembele完成分离。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "PATH_TRANSFER_M101_TEAM_A_PROFILE_04_KNOCKOUT_LATE_GAME_STATE_BEHAVIOR",
+            "PATH_TRANSFER_M101_TEAM_A_LATE_STATE"
+          ],
+          "source_names": [
+            "FIFA Fantasy Matchday 28 review",
+            "structured_previous_path_context"
+          ],
+          "label_en": "France knockout separation ability",
+          "impact_en": "France still beat Morocco 2-0 after a saved penalty, with Mbappe and Dembele creating the separation.",
+          "text_cn": "法国对摩洛哥点球被扑后仍2-0取胜，Mbappe与Dembele完成分离。",
+          "text_en": "France still beat Morocco 2-0 after a saved penalty, with Mbappe and Dembele creating the separation."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "控球对反击",
+          "impact_cn": "西班牙控球要经受法国纵向反击检验，控球本身不等于早早领先。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "PATH_TRANSFER_M101_TEAM_B_PROFILE_02_TACTICS",
+            "PATH_TRANSFER_M101_MATCHUP_PROFILE_01_TACTICS"
+          ],
+          "source_names": [
+            "FIFA France v Spain semi-final preview"
+          ],
+          "label_en": "Possession versus counterattack",
+          "impact_en": "Spain's possession must withstand France's vertical counters; possession alone does not mean an early lead.",
+          "text_cn": "西班牙控球要经受法国纵向反击检验，控球本身不等于早早领先。",
+          "text_en": "Spain's possession must withstand France's vertical counters; possession alone does not mean an early lead."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "体能均衡",
+          "impact_cn": "两队上轮均90分钟晋级且休息四天，不宜制造单边体能劣势。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "PATH_TRANSFER_M101_MATCHUP_PROFILE_03_KNOCKOUT_FITNESS_SCHEDULE",
+            "PATH_TRANSFER_M101_TEAM_A_LOAD",
+            "PATH_TRANSFER_M101_TEAM_B_LOAD"
+          ],
+          "source_names": [
+            "FIFA World Cup match schedule and reports",
+            "structured_previous_path_context"
+          ],
+          "label_en": "Fitness balance",
+          "impact_en": "Both teams advanced in 90 minutes last round and have had four days' rest, so there is no clear one-sided fitness disadvantage.",
+          "text_cn": "两队上轮均90分钟晋级且休息四天，不宜制造单边体能劣势。",
+          "text_en": "Both teams advanced in 90 minutes last round and have had four days' rest, so there is no clear one-sided fitness disadvantage."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "西班牙点球历史",
+          "impact_cn": "西班牙世界杯点球大战五次输四次，拖入点球会带来历史包袱。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "E_95d59297a1a4"
+          ],
+          "source_names": [
+            "The Athletic"
+          ],
+          "label_en": "Spain penalty history",
+          "impact_en": "Spain have lost four of five World Cup penalty shootouts, so being dragged into penalties brings historical baggage.",
+          "text_cn": "西班牙世界杯点球大战五次输四次，拖入点球会带来历史包袱。",
+          "text_en": "Spain have lost four of five World Cup penalty shootouts, so being dragged into penalties brings historical baggage."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "达拉斯环境",
+          "impact_cn": "比赛在达拉斯球场进行，预报无雨且多云间晴，天气干扰有限。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_5acc8f15d4a9",
+            "E_b01d796268d1"
+          ],
+          "source_names": [
+            "FIFA",
+            "AccuWeather"
+          ],
+          "label_en": "Dallas environment",
+          "impact_en": "The match is at Dallas Stadium, with no rain forecast and partly cloudy to mostly clear conditions, so weather impact is limited.",
+          "text_cn": "比赛在达拉斯球场进行，预报无雨且多云间晴，天气干扰有限。",
+          "text_en": "The match is at Dallas Stadium, with no rain forecast and partly cloudy to mostly clear conditions, so weather impact is limited."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.275480769230769,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.19720767888307167,
+          "joint_probability": 0.05432692307692308,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.19720767888307167
+            },
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.16492146596858648
+            }
+          ],
+          "display_scores": [
+            "0-1",
+            "1-0"
+          ],
+          "rationale_cn": "西班牙加时净胜一球略高于法国1-0。Merino后插上、Fabian或中场二点球、控球压迫和避免点球的运动战动机，使西班牙在90-120分钟有轻微更明确的主动解决路径；但幅度很小，不能视作单边优势。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A 1-goal decider in 30 minutes of extra time via counters, set pieces, or substitute impact.",
+          "rationale_en": "Spain winning extra time by one goal is slightly higher than France 1-0. Merino's late midfield runs, Fabian or second balls in midfield, possession pressure, and the incentive to avoid penalties give Spain a slightly clearer open-play route in minutes 90-120; but the margin is very small and not a one-sided edge."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.09336823734729488,
+          "joint_probability": 0.025721153846153817,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.09336823734729488
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.019197207678883083
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.019197207678883083
+            },
+            {
+              "score": "1-3",
+              "increment": "1-3",
+              "probability": 0.006108202443280981
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "中低概率但必须保留。若90分钟入口为2-2或更高比分，说明比赛已出现空间拉大、换人后结构不稳或首球后开放的迹象；加时一方先进球后，落后方会提高风险，形成双方各进一球但仍未分胜负的路径。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, with the match shifting from caution into open end-to-end play.",
+          "rationale_en": "Low-to-mid probability but must be kept. If the 90-minute entry is 2-2 or higher, it suggests the match has already shown wider spaces, instability after substitutions, or openness after the first goal; if one side scores first in extra time, the trailing side will take more risks, creating a path where both teams score once but the match remains level."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.035776614310645743,
+          "joint_probability": 0.00985576923076923,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.035776614310645743
+            },
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.03315881326352532
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.019197207678883083
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.019197207678883083
+            }
+          ],
+          "display_scores": [
+            "2-0",
+            "0-2",
+            "2-1"
+          ],
+          "rationale_cn": "法国两球分离为尾部。通常需要法国先通过反击或边路单挑破门，随后西班牙为追平极端压上，再被姆巴佩、登贝莱或其他速度点打第二次身后。该路径有机制支持，但需要首球和追赶态势叠加。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A side covers by winning extra time by at least 2 goals, or with total goals reaching over 3.",
+          "rationale_en": "A two-goal France separation is a tail outcome. It usually requires France to score first through a counter or wide 1v1, then Spain to push extremely high for an equalizer and get hit in behind again by Mbappe, Dembele, or another pace outlet. This path has a clear mechanism, but needs the first goal and chasing game state to stack together."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "点球入口偏高",
+          "impact_cn": "加时分支仅在90分钟打平后启用，当前增量矩阵最大单项是0-0约39.5%，说明120分钟仍平、进入点球仍是最高概率路径。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "High penalty-entry risk",
+          "impact_en": "The extra-time branch only applies after a 90-minute draw. The largest item in the current incremental matrix is 0-0 at about 39.5%, indicating that a 120-minute draw and penalties remain the most likely path.",
+          "text_cn": "加时分支仅在90分钟打平后启用，当前增量矩阵最大单项是0-0约39.5%，说明120分钟仍平、进入点球仍是最高概率路径。",
+          "text_en": "The extra-time branch only applies after a 90-minute draw. The largest item in the current incremental matrix is 0-0 at about 39.5%, indicating that a 120-minute draw and penalties remain the most likely path."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "平局入口差异",
+          "impact_cn": "90分钟平局入口以1-1约12.1%为主，其次是2-2约6.8%和0-0约6.5%，不同入口会明显改变加时开放程度。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Draw-entry profile",
+          "impact_en": "The 90-minute draw entry is led by 1-1 at about 12.1%, followed by 2-2 at about 6.8% and 0-0 at about 6.5%; different entries will clearly affect how open extra time becomes.",
+          "text_cn": "90分钟平局入口以1-1约12.1%为主，其次是2-2约6.8%和0-0约6.5%，不同入口会明显改变加时开放程度。",
+          "text_en": "The 90-minute draw entry is led by 1-1 at about 12.1%, followed by 2-2 at about 6.8% and 0-0 at about 6.5%; different entries will clearly affect how open extra time becomes."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "西班牙后插上",
+          "impact_cn": "西班牙若仍有Merino承担中场后插上，叠加Fabian或中场二点球、控球压迫，会小幅抬高加时一球分离路径。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Spain late midfield runs",
+          "impact_en": "If Spain still have Merino making late runs from midfield, combined with Fabian or midfield second balls and possession pressure, it slightly raises the extra-time one-goal separation path.",
+          "text_cn": "西班牙若仍有Merino承担中场后插上，叠加Fabian或中场二点球、控球压迫，会小幅抬高加时一球分离路径。",
+          "text_en": "If Spain still have Merino making late runs from midfield, combined with Fabian or midfield second balls and possession pressure, it slightly raises the extra-time one-goal separation path."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "法国纵深反击",
+          "impact_cn": "法国的加时一球路径依赖姆巴佩、登贝莱、Olise或高速替补仍在场且冲刺质量正常，利用西班牙前压后的身后空间。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "France vertical counterattack",
+          "impact_en": "France’s extra-time one-goal route depends on Mbappe, Dembele, Olise, or fast substitutes still being on the pitch with normal sprint quality, exploiting the space behind Spain’s high press.",
+          "text_cn": "法国的加时一球路径依赖姆巴佩、登贝莱、Olise或高速替补仍在场且冲刺质量正常，利用西班牙前压后的身后空间。",
+          "text_en": "France’s extra-time one-goal route depends on Mbappe, Dembele, Olise, or fast substitutes still being on the pitch with normal sprint quality, exploiting the space behind Spain’s high press."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "体能牌面缺口",
+          "impact_cn": "缺少90分钟结束时两队实际体能、冲刺衰减、抽筋、伤情和黄牌分布，因此不能预设法国或西班牙有加时体能优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Fitness evidence gap",
+          "impact_en": "Without the actual fitness levels, sprint drop-off, cramps, injuries, and yellow-card distribution for both teams at 90 minutes, no extra-time fitness edge should be assumed for France or Spain.",
+          "text_cn": "缺少90分钟结束时两队实际体能、冲刺衰减、抽筋、伤情和黄牌分布，因此不能预设法国或西班牙有加时体能优势。",
+          "text_en": "Without the actual fitness levels, sprint drop-off, cramps, injuries, and yellow-card distribution for both teams at 90 minutes, no extra-time fitness edge should be assumed for France or Spain."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "点球证据缺口",
+          "impact_cn": "若120分钟仍平，西班牙世界杯点球历史弱势只给法国轻微方向；缺少本届主罚顺序、门将准备和临场伤情，不能强判。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Penalty evidence gap",
+          "impact_en": "If it is still level after 120 minutes, Spain's weaker World Cup penalty history only gives France a slight lean; without the current penalty order, goalkeeper preparation, and live injury status, no firm call can be made.",
+          "text_cn": "若120分钟仍平，西班牙世界杯点球历史弱势只给法国轻微方向；缺少本届主罚顺序、门将准备和临场伤情，不能强判。",
+          "text_en": "If it is still level after 120 minutes, Spain's weaker World Cup penalty history only gives France a slight lean; without the current penalty order, goalkeeper preparation, and live injury status, no firm call can be made."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time workflow: evidence integration -> four expert agents -> expert-committee aggregation -> conditional rollout -> conditional Monte Carlo matrix -> extra-time tail audit -> report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.1408653846153844,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.062145285935085004,
+          "probability_band": "low",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.062145285935085004,
+              "winner_side": "team_a",
+              "rationale_cn": "比分与矩阵中的4-2、法国胜出一致，属于相对低频但规则上可成立的点球大战结束形态。原提案将概率高估为0.08，已按矩阵校准；叙事从“门将连续扑点”修正为“扑救或对手失点”，避免超出比分证据。",
+              "rationale_en": "The score matches 4-2 in the matrix, with France winning. It is a relatively rare but valid penalty shootout ending under the rules. The original proposal overestimated the probability at 0.08 and has been calibrated to the matrix; the narrative is revised from “consecutive goalkeeper saves” to “saves or opponent misses,” avoiding claims beyond the score evidence."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.06150231839258116,
+              "winner_side": "team_b",
+              "rationale_cn": "比分与矩阵中的2-4、西班牙胜出一致，符合点球大战提前分出胜负的规则口径。原提案概率0.08高于矩阵，已校准；原因表述改为扑救或失点共同作用，避免仅凭比分断言门将连续扑救。",
+              "rationale_en": "The score matches 2-4 in the matrix, with Spain winning, and fits the rules for a penalty shootout decided early. The original proposed probability of 0.08 was higher than the matrix and has been calibrated; the explanation is revised to a combination of saves or missed penalties, avoiding claims of consecutive goalkeeper saves based only on the score."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "比分与矩阵中的4-2、法国胜出一致，属于相对低频但规则上可成立的点球大战结束形态。原提案将概率高估为0.08，已按矩阵校准；叙事从“门将连续扑点”修正为“扑救或对手失点”，避免超出比分证据。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive penalty saves, or the opponent misses several in a row, quickly widening the shootout score.",
+          "rationale_en": "The score matches 4-2 in the matrix, with France winning. It is a relatively rare but valid penalty shootout ending under the rules. The original proposal overestimated the probability at 0.08 and has been calibrated to the matrix; the narrative is revised from “consecutive goalkeeper saves” to “saves or opponent misses,” avoiding claims beyond the score evidence."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "4-5",
+          "winner_side": "team_b",
+          "probability": 0.12457337883959047,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-5",
+              "probability": 0.12457337883959047,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, and the underdog advances on penalties."
+            },
+            {
+              "score": "3-4",
+              "probability": 0.11092150170648468,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, and the underdog advances on penalties."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.08020477815699656,
+              "winner_side": "team_b",
+              "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+              "rationale_en": "The favored side misses in a key round, and the underdog advances on penalties."
+            }
+          ],
+          "display_scores": [
+            "4-5",
+            "3-4",
+            "2-4"
+          ],
+          "rationale_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "The favored side misses in a key round, and the underdog advances on penalties."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.031072642967542502,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.031072642967542502,
+              "winner_side": "team_a",
+              "rationale_cn": "比分与矩阵中的6-5、法国胜出一致，表示前五轮后仍未分出胜负并进入单轮决胜，符合点球规则。原提案概率0.05偏高，已按矩阵下调为0.0311，仍保留为低概率延长点球尾部情景。",
+              "rationale_en": "The score matches 6-5 in the matrix, with France winning, indicating the shootout was still tied after the first five rounds and went to sudden death, consistent with penalty rules. The original proposed probability of 0.05 was high and has been lowered to 0.0311 according to the matrix, while remaining a low-probability extended-penalty tail scenario."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "比分与矩阵中的6-5、法国胜出一致，表示前五轮后仍未分出胜负并进入单轮决胜，符合点球规则。原提案概率0.05偏高，已按矩阵下调为0.0311，仍保留为低概率延长点球尾部情景。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides were strong through the first five rounds; it was decided only after entering 6+ rounds of sudden death.",
+          "rationale_en": "The score matches 6-5 in the matrix, with France winning, indicating the shootout was still tied after the first five rounds and went to sudden death, consistent with penalty rules. The original proposed probability of 0.05 was high and has been lowered to 0.0311 according to the matrix, while remaining a low-probability extended-penalty tail scenario."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "法国点球微优",
+          "impact_cn": "若120分钟后仍平，点球分支只能给法国轻微上调；依据主要是西班牙世界杯点球大战五次输四次，但这只是历史与心理背景，不能强判当前阵容必然失利。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "France slight penalty lean",
+          "impact_en": "If it is still level after 120 minutes, the penalty branch only slightly raises France; this is mainly based on Spain losing four of five World Cup shootouts, but that is only historical and psychological context, not proof this squad must lose.",
+          "text_cn": "若120分钟后仍平，点球分支只能给法国轻微上调；依据主要是西班牙世界杯点球大战五次输四次，但这只是历史与心理背景，不能强判当前阵容必然失利。",
+          "text_en": "If it is still level after 120 minutes, the penalty branch only slightly raises France; this is mainly based on Spain losing four of five World Cup shootouts, but that is only historical and psychological context, not proof this squad must lose."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "主罚顺位缺口",
+          "impact_cn": "两队本届前五主罚顺序缺少可靠数据；法国的Mbappe、Dembele、Olise、Rabiot、Tchouameni，西班牙的Rodri、Oyarzabal、Olmo、Pedri等都需看120分钟实际在场。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty-taker order gap",
+          "impact_en": "There is limited reliable data on each team's first five penalty takers in this tournament; for France, Mbappe, Dembele, Olise, Rabiot, Tchouameni, and for Spain, Rodri, Oyarzabal, Olmo, Pedri and others all depend on who is actually on the pitch after 120 minutes.",
+          "text_cn": "两队本届前五主罚顺序缺少可靠数据；法国的Mbappe、Dembele、Olise、Rabiot、Tchouameni，西班牙的Rodri、Oyarzabal、Olmo、Pedri等都需看120分钟实际在场。",
+          "text_en": "There is limited reliable data on each team's first five penalty takers in this tournament; for France, Mbappe, Dembele, Olise, Rabiot, Tchouameni, and for Spain, Rodri, Oyarzabal, Olmo, Pedri and others all depend on who is actually on the pitch after 120 minutes."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "姆巴佩变量",
+          "impact_cn": "Mbappe有近期点球被扑线索，会削弱法国单边点球优势；但缺少证据说明他是否仍会担任法国第一主罚，若伤情、抽筋或心理波动出现，顺位可能被调整。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Mbappe penalty variable",
+          "impact_en": "Mbappe has a recent penalty-save clue, which weakens France's one-sided penalty edge; however, there is no evidence that he will still be France's first taker, and the order may change if injury, cramp, or psychological swings occur.",
+          "text_cn": "Mbappe有近期点球被扑线索，会削弱法国单边点球优势；但缺少证据说明他是否仍会担任法国第一主罚，若伤情、抽筋或心理波动出现，顺位可能被调整。",
+          "text_en": "Mbappe has a recent penalty-save clue, which weakens France's one-sided penalty edge; however, there is no evidence that he will still be France's first taker, and the order may change if injury, cramp, or psychological swings occur."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "门将证据缺口",
+          "impact_cn": "Maignan被预测为法国首发且状态评价较稳，Unai Simon也有西班牙首发线索；但双方都缺少点球专项准备、扑救习惯、教练组研究和训练表现的可靠证据。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper evidence gap",
+          "impact_en": "Maignan is projected to start for France and is rated as relatively steady, while there are also clues that Unai Simon starts for Spain; however, both sides lack reliable evidence on penalty-specific preparation, save tendencies, coaching staff analysis, and training performance.",
+          "text_cn": "Maignan被预测为法国首发且状态评价较稳，Unai Simon也有西班牙首发线索；但双方都缺少点球专项准备、扑救习惯、教练组研究和训练表现的可靠证据。",
+          "text_en": "Maignan is projected to start for France and is rated as relatively steady, while there are also clues that Unai Simon starts for Spain; however, both sides lack reliable evidence on penalty-specific preparation, save tendencies, coaching staff analysis, and training performance."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "在场名单重估",
+          "impact_cn": "点球前必须重新确认120分钟结束时的在场名单；Dembele、Olise、Oyarzabal、Olmo、Pedri等可能已被换下，体能、伤情、黄牌压力和门将临场信心都会改变定价。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "On-field lineup reassessment",
+          "impact_en": "Before penalties, the players on the pitch at 120 minutes must be rechecked; Dembele, Olise, Oyarzabal, Olmo, Pedri, and others may have been substituted, while fitness, injuries, yellow-card pressure, and the goalkeeper’s in-game confidence can all change pricing.",
+          "text_cn": "点球前必须重新确认120分钟结束时的在场名单；Dembele、Olise、Oyarzabal、Olmo、Pedri等可能已被换下，体能、伤情、黄牌压力和门将临场信心都会改变定价。",
+          "text_en": "Before penalties, the players on the pitch at 120 minutes must be rechecked; Dembele, Olise, Oyarzabal, Olmo, Pedri, and others may have been substituted, while fitness, injuries, yellow-card pressure, and the goalkeeper’s in-game confidence can all change pricing."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "尾部比分路径",
+          "impact_cn": "点球rollout以一球差和延长点球为主，也保留4-2、2-4、6-5等低频情景；叙事只能写成扑救或对手失点共同作用，不能仅凭比分断言门将连续扑点。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Shootout tail-score path",
+          "impact_en": "Penalty rollout is mainly decided by one goal or extended shootouts, while also keeping low-frequency scenarios such as 4-2, 2-4, and 6-5; the narrative should only describe a mix of saves and opponent misses, not infer consecutive goalkeeper saves from the score alone.",
+          "text_cn": "点球rollout以一球差和延长点球为主，也保留4-2、2-4、6-5等低频情景；叙事只能写成扑救或对手失点共同作用，不能仅凭比分断言门将连续扑点。",
+          "text_en": "Penalty rollout is mainly decided by one goal or extended shootouts, while also keeping low-frequency scenarios such as 4-2, 2-4, and 6-5; the narrative should only describe a mix of saves and opponent misses, not infer consecutive goalkeeper saves from the score alone."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty workflow: evidence integration -> four expert agents -> expert-committee aggregation -> penalty-sequence rollout -> shootout score matrix -> penalty tail audit -> report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "ready",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-14T05:22:48.241836Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-stage mechanisms; MAS rollout produces conditional paths for 90 minutes, extra time if level, and penalties if still level, while Monte Carlo samples the complete path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs. They are driven by the same conditional MAS rollout, and the three frontend tabs are different slices of one complete path distribution while keeping the v6.2.2 JSON structure compatible."
+}

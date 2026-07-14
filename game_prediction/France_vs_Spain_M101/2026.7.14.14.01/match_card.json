@@ -1,0 +1,204 @@
+{
+  "schema_version": "2.1",
+  "display_contract": "knockout_card_unified_v6_1",
+  "stage": "knockout",
+  "match_id": "M101",
+  "round_label": "knockout",
+  "team_a": "France",
+  "team_b": "Spain",
+  "kickoff_utc": "2026-07-14T14:00:00-05:00",
+  "venue": "Dallas Stadium, Arlington",
+  "advancement": {
+    "team_a": 0.5045673076923082,
+    "team_b": 0.4954326923076918,
+    "favorite": "France"
+  },
+  "resolution": {
+    "normal_time": 0.7245192307692316,
+    "extra_time": 0.13461538461538458,
+    "penalties": 0.1408653846153844
+  },
+  "normal_time_top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.12125,
+      "goals_a": 1,
+      "goals_b": 1
+    },
+    {
+      "score": "2-1",
+      "probability": 0.084375,
+      "goals_a": 2,
+      "goals_b": 1
+    },
+    {
+      "score": "0-1",
+      "probability": 0.08109375,
+      "goals_a": 0,
+      "goals_b": 1
+    }
+  ],
+  "entry_probability": {
+    "extra_time": 0.275480769230769,
+    "penalties": 0.1408653846153844
+  },
+  "path_top": [
+    {
+      "rank": 1,
+      "display_slot": "normal_time",
+      "display_slot_cn": "90分钟解决",
+      "label": "90分钟2-1，France常规时间晋级。",
+      "summary_cn": "90分钟2-1，France常规时间晋级。",
+      "probability": 0.08629807692307692,
+      "resolution_type": "normal_time",
+      "normal_time_score": "2-1",
+      "extra_time_increment": null,
+      "after_extra_time_score": "2-1",
+      "penalty_score": null,
+      "advancer_team": "France",
+      "path_id": "BMC_741fa17224fa",
+      "display_slot_en": "Resolved in 90 minutes",
+      "label_en": "90 minutes 2-1: France advances in normal time.",
+      "summary_en": "90 minutes 2-1: France advances in normal time."
+    },
+    {
+      "rank": 2,
+      "display_slot": "extra_time",
+      "display_slot_cn": "加时解决",
+      "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+      "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+      "probability": 0.027884615384615386,
+      "resolution_type": "extra_time",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-1",
+      "after_extra_time_score": "1-2",
+      "penalty_score": null,
+      "advancer_team": "Spain",
+      "path_id": "BMC_c95cb7e10cc6",
+      "display_slot_en": "Resolved in extra time",
+      "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+      "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+    },
+    {
+      "rank": 3,
+      "display_slot": "penalties",
+      "display_slot_cn": "点球解决",
+      "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+      "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+      "probability": 0.007211538461538462,
+      "resolution_type": "penalties",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-0",
+      "after_extra_time_score": "1-1",
+      "penalty_score": "4-5",
+      "advancer_team": "Spain",
+      "path_id": "BMC_43dfed49f1a1",
+      "display_slot_en": "Resolved on penalties",
+      "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+      "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+    }
+  ],
+  "updated_at": "2026-07-14T05:22:48.241836Z",
+  "method": "unified_knockout_path_distribution",
+  "path_distribution_source": "knockout_path_distribution",
+  "display_path_top3": [
+    {
+      "rank": 1,
+      "display_slot": "normal_time",
+      "display_slot_cn": "90分钟解决",
+      "label": "90分钟2-1，France常规时间晋级。",
+      "summary_cn": "90分钟2-1，France常规时间晋级。",
+      "probability": 0.08629807692307692,
+      "resolution_type": "normal_time",
+      "normal_time_score": "2-1",
+      "extra_time_increment": null,
+      "after_extra_time_score": "2-1",
+      "penalty_score": null,
+      "advancer_team": "France",
+      "path_id": "BMC_741fa17224fa",
+      "display_slot_en": "Resolved in 90 minutes",
+      "label_en": "90 minutes 2-1: France advances in normal time.",
+      "summary_en": "90 minutes 2-1: France advances in normal time."
+    },
+    {
+      "rank": 2,
+      "display_slot": "extra_time",
+      "display_slot_cn": "加时解决",
+      "label": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+      "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Spain加时晋级。",
+      "probability": 0.027884615384615386,
+      "resolution_type": "extra_time",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-1",
+      "after_extra_time_score": "1-2",
+      "penalty_score": null,
+      "advancer_team": "Spain",
+      "path_id": "BMC_c95cb7e10cc6",
+      "display_slot_en": "Resolved in extra time",
+      "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time.",
+      "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Spain advances in extra time."
+    },
+    {
+      "rank": 3,
+      "display_slot": "penalties",
+      "display_slot_cn": "点球解决",
+      "label": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+      "summary_cn": "90分钟1-1、加时0-0后仍平，Spain点球晋级。",
+      "probability": 0.007211538461538462,
+      "resolution_type": "penalties",
+      "normal_time_score": "1-1",
+      "extra_time_increment": "0-0",
+      "after_extra_time_score": "1-1",
+      "penalty_score": "4-5",
+      "advancer_team": "Spain",
+      "path_id": "BMC_43dfed49f1a1",
+      "display_slot_en": "Resolved on penalties",
+      "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties.",
+      "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Spain advances on penalties."
+    }
+  ],
+  "raw_path_top": [
+    {
+      "rank": 1,
+      "label": "90分钟2-1，France常规时间晋级。",
+      "probability": 0.08629807692307692,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 2-1: France advances in normal time."
+    },
+    {
+      "rank": 2,
+      "label": "90分钟0-1，Spain常规时间晋级。",
+      "probability": 0.08100961538461539,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 0-1: Spain advances in normal time."
+    },
+    {
+      "rank": 3,
+      "label": "90分钟1-2，Spain常规时间晋级。",
+      "probability": 0.08028846153846154,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 1-2: Spain advances in normal time."
+    },
+    {
+      "rank": 4,
+      "label": "90分钟1-0，France常规时间晋级。",
+      "probability": 0.07716346153846154,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 1-0: France advances in normal time."
+    },
+    {
+      "rank": 5,
+      "label": "90分钟0-2，Spain常规时间晋级。",
+      "probability": 0.05480769230769231,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 0-2: Spain advances in normal time."
+    },
+    {
+      "rank": 6,
+      "label": "90分钟2-0，France常规时间晋级。",
+      "probability": 0.04639423076923077,
+      "resolution_type": "normal_time",
+      "label_en": "90 minutes 2-0: France advances in normal time."
+    }
+  ]
+}
