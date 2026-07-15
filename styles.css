@@ -5061,7 +5061,9 @@ button.team-route-card:focus-visible {
 
 .match-prediction-modal.is-game-prediction .match-modal-body {
   flex: 1;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   min-height: 0;
   padding: 14px 22px 16px;
 }
