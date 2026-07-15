@@ -1,0 +1,2041 @@
+{
+  "schema_version": "2.0",
+  "phase": "normal_time",
+  "matrix_type": "normal_time_score_dense_6x6_bucketed",
+  "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+  "axis_note_cn": "纵轴为team_a 90分钟进球，横轴为team_b 90分钟进球；5+表示至少5球。概率为90分钟比分的整场概率。",
+  "row_axis": {
+    "team": "England",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "column_axis": {
+    "team": "Argentina",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5+"
+    ]
+  },
+  "win_draw_loss": {
+    "team_a_win": 0.33880208333333334,
+    "draw": 0.26645833333333335,
+    "team_b_win": 0.3947395833333333
+  },
+  "matrix": [
+    [
+      0.059166666666666666,
+      0.08364583333333334,
+      0.0565625,
+      0.027291666666666665,
+      0.00984375,
+      0.0046875
+    ],
+    [
+      0.07401041666666666,
+      0.12520833333333334,
+      0.08817708333333334,
+      0.040677083333333336,
+      0.016197916666666666,
+      0.0062499999999999995
+    ],
+    [
+      0.04625,
+      0.08078125,
+      0.06234375,
+      0.03197916666666667,
+      0.011875,
+      0.00609375
+    ],
+    [
+      0.021510416666666667,
+      0.03661458333333333,
+      0.0290625,
+      0.016875,
+      0.00640625,
+      0.0033333333333333335
+    ],
+    [
+      0.0065625,
+      0.011302083333333334,
+      0.0109375,
+      0.0069791666666666665,
+      0.0027083333333333334,
+      0.0014583333333333334
+    ],
+    [
+      0.0025,
+      0.005416666666666667,
+      0.00328125,
+      0.0024479166666666664,
+      0.0010937499999999999,
+      0.00046875
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "0",
+      "probability": 0.059166666666666666,
+      "probability_percent": 5.9167,
+      "top_scores": [
+        {
+          "score": "0-0",
+          "probability": 0.059166666666666666,
+          "probability_percent": 5.9167
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "1",
+      "probability": 0.08364583333333334,
+      "probability_percent": 8.3646,
+      "top_scores": [
+        {
+          "score": "0-1",
+          "probability": 0.08364583333333334,
+          "probability_percent": 8.3646
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "2",
+      "probability": 0.0565625,
+      "probability_percent": 5.6562,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.0565625,
+          "probability_percent": 5.6562
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "3",
+      "probability": 0.027291666666666665,
+      "probability_percent": 2.7292,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.027291666666666665,
+          "probability_percent": 2.7292
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "4",
+      "probability": 0.00984375,
+      "probability_percent": 0.9844,
+      "top_scores": [
+        {
+          "score": "0-4",
+          "probability": 0.00984375,
+          "probability_percent": 0.9844
+        }
+      ]
+    },
+    {
+      "team_a_goals": "0",
+      "team_b_goals": "5+",
+      "probability": 0.0046875,
+      "probability_percent": 0.4688,
+      "top_scores": [
+        {
+          "score": "0-5",
+          "probability": 0.00328125,
+          "probability_percent": 0.3281
+        },
+        {
+          "score": "0-6",
+          "probability": 0.0009895833333333334,
+          "probability_percent": 0.099
+        },
+        {
+          "score": "0-7",
+          "probability": 0.0003125,
+          "probability_percent": 0.0312
+        },
+        {
+          "score": "0-8",
+          "probability": 0.00010416666666666667,
+          "probability_percent": 0.0104
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "0",
+      "probability": 0.07401041666666666,
+      "probability_percent": 7.401,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.07401041666666666,
+          "probability_percent": 7.401
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "1",
+      "probability": 0.12520833333333334,
+      "probability_percent": 12.5208,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.12520833333333334,
+          "probability_percent": 12.5208
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "2",
+      "probability": 0.08817708333333334,
+      "probability_percent": 8.8177,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.08817708333333334,
+          "probability_percent": 8.8177
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "3",
+      "probability": 0.040677083333333336,
+      "probability_percent": 4.0677,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.040677083333333336,
+          "probability_percent": 4.0677
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "4",
+      "probability": 0.016197916666666666,
+      "probability_percent": 1.6198,
+      "top_scores": [
+        {
+          "score": "1-4",
+          "probability": 0.016197916666666666,
+          "probability_percent": 1.6198
+        }
+      ]
+    },
+    {
+      "team_a_goals": "1",
+      "team_b_goals": "5+",
+      "probability": 0.0062499999999999995,
+      "probability_percent": 0.625,
+      "top_scores": [
+        {
+          "score": "1-5",
+          "probability": 0.005052083333333333,
+          "probability_percent": 0.5052
+        },
+        {
+          "score": "1-6",
+          "probability": 0.00078125,
+          "probability_percent": 0.0781
+        },
+        {
+          "score": "1-7",
+          "probability": 0.0003125,
+          "probability_percent": 0.0312
+        },
+        {
+          "score": "1-8",
+          "probability": 0.00010416666666666667,
+          "probability_percent": 0.0104
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "0",
+      "probability": 0.04625,
+      "probability_percent": 4.625,
+      "top_scores": [
+        {
+          "score": "2-0",
+          "probability": 0.04625,
+          "probability_percent": 4.625
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "1",
+      "probability": 0.08078125,
+      "probability_percent": 8.0781,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.08078125,
+          "probability_percent": 8.0781
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "2",
+      "probability": 0.06234375,
+      "probability_percent": 6.2344,
+      "top_scores": [
+        {
+          "score": "2-2",
+          "probability": 0.06234375,
+          "probability_percent": 6.2344
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "3",
+      "probability": 0.03197916666666667,
+      "probability_percent": 3.1979,
+      "top_scores": [
+        {
+          "score": "2-3",
+          "probability": 0.03197916666666667,
+          "probability_percent": 3.1979
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "4",
+      "probability": 0.011875,
+      "probability_percent": 1.1875,
+      "top_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.011875,
+          "probability_percent": 1.1875
+        }
+      ]
+    },
+    {
+      "team_a_goals": "2",
+      "team_b_goals": "5+",
+      "probability": 0.00609375,
+      "probability_percent": 0.6094,
+      "top_scores": [
+        {
+          "score": "2-5",
+          "probability": 0.004322916666666667,
+          "probability_percent": 0.4323
+        },
+        {
+          "score": "2-6",
+          "probability": 0.00109375,
+          "probability_percent": 0.1094
+        },
+        {
+          "score": "2-7",
+          "probability": 0.0005208333333333333,
+          "probability_percent": 0.0521
+        },
+        {
+          "score": "2-8",
+          "probability": 0.00015625,
+          "probability_percent": 0.0156
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "0",
+      "probability": 0.021510416666666667,
+      "probability_percent": 2.151,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.021510416666666667,
+          "probability_percent": 2.151
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "1",
+      "probability": 0.03661458333333333,
+      "probability_percent": 3.6615,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.03661458333333333,
+          "probability_percent": 3.6615
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "2",
+      "probability": 0.0290625,
+      "probability_percent": 2.9062,
+      "top_scores": [
+        {
+          "score": "3-2",
+          "probability": 0.0290625,
+          "probability_percent": 2.9062
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "3",
+      "probability": 0.016875,
+      "probability_percent": 1.6875,
+      "top_scores": [
+        {
+          "score": "3-3",
+          "probability": 0.016875,
+          "probability_percent": 1.6875
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "4",
+      "probability": 0.00640625,
+      "probability_percent": 0.6406,
+      "top_scores": [
+        {
+          "score": "3-4",
+          "probability": 0.00640625,
+          "probability_percent": 0.6406
+        }
+      ]
+    },
+    {
+      "team_a_goals": "3",
+      "team_b_goals": "5+",
+      "probability": 0.0033333333333333335,
+      "probability_percent": 0.3333,
+      "top_scores": [
+        {
+          "score": "3-5",
+          "probability": 0.00234375,
+          "probability_percent": 0.2344
+        },
+        {
+          "score": "3-6",
+          "probability": 0.00078125,
+          "probability_percent": 0.0781
+        },
+        {
+          "score": "3-7",
+          "probability": 0.00015625,
+          "probability_percent": 0.0156
+        },
+        {
+          "score": "3-8",
+          "probability": 5.208333333333334e-05,
+          "probability_percent": 0.0052
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "0",
+      "probability": 0.0065625,
+      "probability_percent": 0.6562,
+      "top_scores": [
+        {
+          "score": "4-0",
+          "probability": 0.0065625,
+          "probability_percent": 0.6562
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "1",
+      "probability": 0.011302083333333334,
+      "probability_percent": 1.1302,
+      "top_scores": [
+        {
+          "score": "4-1",
+          "probability": 0.011302083333333334,
+          "probability_percent": 1.1302
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "2",
+      "probability": 0.0109375,
+      "probability_percent": 1.0938,
+      "top_scores": [
+        {
+          "score": "4-2",
+          "probability": 0.0109375,
+          "probability_percent": 1.0938
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "3",
+      "probability": 0.0069791666666666665,
+      "probability_percent": 0.6979,
+      "top_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.0069791666666666665,
+          "probability_percent": 0.6979
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "4",
+      "probability": 0.0027083333333333334,
+      "probability_percent": 0.2708,
+      "top_scores": [
+        {
+          "score": "4-4",
+          "probability": 0.0027083333333333334,
+          "probability_percent": 0.2708
+        }
+      ]
+    },
+    {
+      "team_a_goals": "4",
+      "team_b_goals": "5+",
+      "probability": 0.0014583333333333334,
+      "probability_percent": 0.1458,
+      "top_scores": [
+        {
+          "score": "4-5",
+          "probability": 0.0011458333333333333,
+          "probability_percent": 0.1146
+        },
+        {
+          "score": "4-6",
+          "probability": 0.0003125,
+          "probability_percent": 0.0312
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "0",
+      "probability": 0.0025,
+      "probability_percent": 0.25,
+      "top_scores": [
+        {
+          "score": "5-0",
+          "probability": 0.00171875,
+          "probability_percent": 0.1719
+        },
+        {
+          "score": "6-0",
+          "probability": 0.0007291666666666667,
+          "probability_percent": 0.0729
+        },
+        {
+          "score": "7-0",
+          "probability": 5.208333333333334e-05,
+          "probability_percent": 0.0052
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "1",
+      "probability": 0.005416666666666667,
+      "probability_percent": 0.5417,
+      "top_scores": [
+        {
+          "score": "5-1",
+          "probability": 0.004114583333333333,
+          "probability_percent": 0.4115
+        },
+        {
+          "score": "6-1",
+          "probability": 0.00109375,
+          "probability_percent": 0.1094
+        },
+        {
+          "score": "7-1",
+          "probability": 0.00015625,
+          "probability_percent": 0.0156
+        },
+        {
+          "score": "8-1",
+          "probability": 5.208333333333334e-05,
+          "probability_percent": 0.0052
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "2",
+      "probability": 0.00328125,
+      "probability_percent": 0.3281,
+      "top_scores": [
+        {
+          "score": "5-2",
+          "probability": 0.002447916666666667,
+          "probability_percent": 0.2448
+        },
+        {
+          "score": "6-2",
+          "probability": 0.0007291666666666667,
+          "probability_percent": 0.0729
+        },
+        {
+          "score": "7-2",
+          "probability": 0.00010416666666666667,
+          "probability_percent": 0.0104
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "3",
+      "probability": 0.0024479166666666664,
+      "probability_percent": 0.2448,
+      "top_scores": [
+        {
+          "score": "5-3",
+          "probability": 0.0015625,
+          "probability_percent": 0.1562
+        },
+        {
+          "score": "6-3",
+          "probability": 0.0005729166666666667,
+          "probability_percent": 0.0573
+        },
+        {
+          "score": "7-3",
+          "probability": 0.0003125,
+          "probability_percent": 0.0312
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "4",
+      "probability": 0.0010937499999999999,
+      "probability_percent": 0.1094,
+      "top_scores": [
+        {
+          "score": "5-4",
+          "probability": 0.00078125,
+          "probability_percent": 0.0781
+        },
+        {
+          "score": "6-4",
+          "probability": 0.00026041666666666666,
+          "probability_percent": 0.026
+        },
+        {
+          "score": "7-4",
+          "probability": 5.208333333333334e-05,
+          "probability_percent": 0.0052
+        }
+      ]
+    },
+    {
+      "team_a_goals": "5+",
+      "team_b_goals": "5+",
+      "probability": 0.00046875,
+      "probability_percent": 0.0469,
+      "top_scores": [
+        {
+          "score": "5-6",
+          "probability": 0.00026041666666666666,
+          "probability_percent": 0.026
+        },
+        {
+          "score": "5-5",
+          "probability": 0.00015625,
+          "probability_percent": 0.0156
+        },
+        {
+          "score": "7-5",
+          "probability": 5.208333333333334e-05,
+          "probability_percent": 0.0052
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "score": "1-1",
+      "goals_a": 1,
+      "goals_b": 1,
+      "probability": 0.12520833333333334,
+      "probability_percent": 12.5208,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.25973958333333336,
+      "position": 0.25973958333333336,
+      "x": 0.25973958333333336,
+      "y": 0.12520833333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-2",
+      "goals_a": 1,
+      "goals_b": 2,
+      "probability": 0.08817708333333334,
+      "probability_percent": 8.8177,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.33999999999999997,
+      "position": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.08817708333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-1",
+      "goals_a": 0,
+      "goals_b": 1,
+      "probability": 0.08364583333333334,
+      "probability_percent": 8.3646,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.1,
+      "position": 0.1,
+      "x": 0.1,
+      "y": 0.08364583333333334,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-1",
+      "goals_a": 2,
+      "goals_b": 1,
+      "probability": 0.08078125,
+      "probability_percent": 8.0781,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.3544192708333333,
+      "position": 0.3544192708333333,
+      "x": 0.3544192708333333,
+      "y": 0.08078125,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-0",
+      "goals_a": 1,
+      "goals_b": 0,
+      "probability": 0.07401041666666666,
+      "probability_percent": 7.401,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.11441927083333334,
+      "position": 0.11441927083333334,
+      "x": 0.11441927083333334,
+      "y": 0.07401041666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-2",
+      "goals_a": 2,
+      "goals_b": 2,
+      "probability": 0.06234375,
+      "probability_percent": 6.2344,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.4997395833333333,
+      "position": 0.4997395833333333,
+      "x": 0.4997395833333333,
+      "y": 0.06234375,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-0",
+      "goals_a": 0,
+      "goals_b": 0,
+      "probability": 0.059166666666666666,
+      "probability_percent": 5.9167,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "接近主流",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.13973958333333333,
+      "position": 0.13973958333333333,
+      "x": 0.13973958333333333,
+      "y": 0.059166666666666666,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "Close to the mainstream path",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-2",
+      "goals_a": 0,
+      "goals_b": 2,
+      "probability": 0.0565625,
+      "probability_percent": 5.6562,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.38,
+      "position": 0.38,
+      "x": 0.38,
+      "y": 0.0565625,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-0",
+      "goals_a": 2,
+      "goals_b": 0,
+      "probability": 0.04625,
+      "probability_percent": 4.625,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.39441927083333334,
+      "position": 0.39441927083333334,
+      "x": 0.39441927083333334,
+      "y": 0.04625,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-3",
+      "goals_a": 1,
+      "goals_b": 3,
+      "probability": 0.040677083333333336,
+      "probability_percent": 4.0677,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.62,
+      "position": 0.62,
+      "x": 0.62,
+      "y": 0.040677083333333336,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-1",
+      "goals_a": 3,
+      "goals_b": 1,
+      "probability": 0.03661458333333333,
+      "probability_percent": 3.6615,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6344192708333334,
+      "position": 0.6344192708333334,
+      "x": 0.6344192708333334,
+      "y": 0.03661458333333333,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-3",
+      "goals_a": 2,
+      "goals_b": 3,
+      "probability": 0.03197916666666667,
+      "probability_percent": 3.1979,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.58,
+      "position": 0.58,
+      "x": 0.58,
+      "y": 0.03197916666666667,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-2",
+      "goals_a": 3,
+      "goals_b": 2,
+      "probability": 0.0290625,
+      "probability_percent": 2.9062,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.5944192708333333,
+      "position": 0.5944192708333333,
+      "x": 0.5944192708333333,
+      "y": 0.0290625,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-3",
+      "goals_a": 0,
+      "goals_b": 3,
+      "probability": 0.027291666666666665,
+      "probability_percent": 2.7292,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6599999999999999,
+      "position": 0.6599999999999999,
+      "x": 0.6599999999999999,
+      "y": 0.027291666666666665,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-0",
+      "goals_a": 3,
+      "goals_b": 0,
+      "probability": 0.021510416666666667,
+      "probability_percent": 2.151,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "中等偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.6744192708333333,
+      "position": 0.6744192708333333,
+      "x": 0.6744192708333333,
+      "y": 0.021510416666666667,
+      "display_group": "main",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "Moderate deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-3",
+      "goals_a": 3,
+      "goals_b": 3,
+      "probability": 0.016875,
+      "probability_percent": 1.6875,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.7397395833333333,
+      "position": 0.7397395833333333,
+      "x": 0.7397395833333333,
+      "y": 0.016875,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-4",
+      "goals_a": 1,
+      "goals_b": 4,
+      "probability": 0.016197916666666666,
+      "probability_percent": 1.6198,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8999999999999999,
+      "position": 0.8999999999999999,
+      "x": 0.8999999999999999,
+      "y": 0.016197916666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-4",
+      "goals_a": 2,
+      "goals_b": 4,
+      "probability": 0.011875,
+      "probability_percent": 1.1875,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.86,
+      "position": 0.86,
+      "x": 0.86,
+      "y": 0.011875,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-1",
+      "goals_a": 4,
+      "goals_b": 1,
+      "probability": 0.011302083333333334,
+      "probability_percent": 1.1302,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9144192708333333,
+      "position": 0.9144192708333333,
+      "x": 0.9144192708333333,
+      "y": 0.011302083333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-2",
+      "goals_a": 4,
+      "goals_b": 2,
+      "probability": 0.0109375,
+      "probability_percent": 1.0938,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8744192708333334,
+      "position": 0.8744192708333334,
+      "x": 0.8744192708333334,
+      "y": 0.0109375,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-4",
+      "goals_a": 0,
+      "goals_b": 4,
+      "probability": 0.00984375,
+      "probability_percent": 0.9844,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.94,
+      "position": 0.94,
+      "x": 0.94,
+      "y": 0.00984375,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-3",
+      "goals_a": 4,
+      "goals_b": 3,
+      "probability": 0.0069791666666666665,
+      "probability_percent": 0.6979,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.8344192708333333,
+      "position": 0.8344192708333333,
+      "x": 0.8344192708333333,
+      "y": 0.0069791666666666665,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-0",
+      "goals_a": 4,
+      "goals_b": 0,
+      "probability": 0.0065625,
+      "probability_percent": 0.6562,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9544192708333333,
+      "position": 0.9544192708333333,
+      "x": 0.9544192708333333,
+      "y": 0.0065625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-4",
+      "goals_a": 3,
+      "goals_b": 4,
+      "probability": 0.00640625,
+      "probability_percent": 0.6406,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.82,
+      "position": 0.82,
+      "x": 0.82,
+      "y": 0.00640625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-5",
+      "goals_a": 1,
+      "goals_b": 5,
+      "probability": 0.005052083333333333,
+      "probability_percent": 0.5052,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.005052083333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-5",
+      "goals_a": 2,
+      "goals_b": 5,
+      "probability": 0.004322916666666667,
+      "probability_percent": 0.4323,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.004322916666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-1",
+      "goals_a": 5,
+      "goals_b": 1,
+      "probability": 0.004114583333333333,
+      "probability_percent": 0.4115,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.004114583333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-5",
+      "goals_a": 0,
+      "goals_b": 5,
+      "probability": 0.00328125,
+      "probability_percent": 0.3281,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00328125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-4",
+      "goals_a": 4,
+      "goals_b": 4,
+      "probability": 0.0027083333333333334,
+      "probability_percent": 0.2708,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 0.9797395833333333,
+      "position": 0.9797395833333333,
+      "x": 0.9797395833333333,
+      "y": 0.0027083333333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-2",
+      "goals_a": 5,
+      "goals_b": 2,
+      "probability": 0.002447916666666667,
+      "probability_percent": 0.2448,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.002447916666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-5",
+      "goals_a": 3,
+      "goals_b": 5,
+      "probability": 0.00234375,
+      "probability_percent": 0.2344,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00234375,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-0",
+      "goals_a": 5,
+      "goals_b": 0,
+      "probability": 0.00171875,
+      "probability_percent": 0.1719,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00171875,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-3",
+      "goals_a": 5,
+      "goals_b": 3,
+      "probability": 0.0015625,
+      "probability_percent": 0.1562,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0015625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-5",
+      "goals_a": 4,
+      "goals_b": 5,
+      "probability": 0.0011458333333333333,
+      "probability_percent": 0.1146,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0011458333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-6",
+      "goals_a": 2,
+      "goals_b": 6,
+      "probability": 0.00109375,
+      "probability_percent": 0.1094,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00109375,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-1",
+      "goals_a": 6,
+      "goals_b": 1,
+      "probability": 0.00109375,
+      "probability_percent": 0.1094,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00109375,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-6",
+      "goals_a": 0,
+      "goals_b": 6,
+      "probability": 0.0009895833333333334,
+      "probability_percent": 0.099,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0009895833333333334,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-6",
+      "goals_a": 1,
+      "goals_b": 6,
+      "probability": 0.00078125,
+      "probability_percent": 0.0781,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00078125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-6",
+      "goals_a": 3,
+      "goals_b": 6,
+      "probability": 0.00078125,
+      "probability_percent": 0.0781,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00078125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-4",
+      "goals_a": 5,
+      "goals_b": 4,
+      "probability": 0.00078125,
+      "probability_percent": 0.0781,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00078125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-0",
+      "goals_a": 6,
+      "goals_b": 0,
+      "probability": 0.0007291666666666667,
+      "probability_percent": 0.0729,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0007291666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-2",
+      "goals_a": 6,
+      "goals_b": 2,
+      "probability": 0.0007291666666666667,
+      "probability_percent": 0.0729,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0007291666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-3",
+      "goals_a": 6,
+      "goals_b": 3,
+      "probability": 0.0005729166666666667,
+      "probability_percent": 0.0573,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0005729166666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-7",
+      "goals_a": 2,
+      "goals_b": 7,
+      "probability": 0.0005208333333333333,
+      "probability_percent": 0.0521,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0005208333333333333,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-7",
+      "goals_a": 0,
+      "goals_b": 7,
+      "probability": 0.0003125,
+      "probability_percent": 0.0312,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0003125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-7",
+      "goals_a": 1,
+      "goals_b": 7,
+      "probability": 0.0003125,
+      "probability_percent": 0.0312,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0003125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "4-6",
+      "goals_a": 4,
+      "goals_b": 6,
+      "probability": 0.0003125,
+      "probability_percent": 0.0312,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0003125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-3",
+      "goals_a": 7,
+      "goals_b": 3,
+      "probability": 0.0003125,
+      "probability_percent": 0.0312,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.0003125,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-6",
+      "goals_a": 5,
+      "goals_b": 6,
+      "probability": 0.00026041666666666666,
+      "probability_percent": 0.026,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00026041666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "6-4",
+      "goals_a": 6,
+      "goals_b": 4,
+      "probability": 0.00026041666666666666,
+      "probability_percent": 0.026,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00026041666666666666,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "2-8",
+      "goals_a": 2,
+      "goals_b": 8,
+      "probability": 0.00015625,
+      "probability_percent": 0.0156,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00015625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-7",
+      "goals_a": 3,
+      "goals_b": 7,
+      "probability": 0.00015625,
+      "probability_percent": 0.0156,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00015625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "5-5",
+      "goals_a": 5,
+      "goals_b": 5,
+      "probability": 0.00015625,
+      "probability_percent": 0.0156,
+      "outcome_key": "draw",
+      "outcome_cn": "平局",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00015625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Draw",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-1",
+      "goals_a": 7,
+      "goals_b": 1,
+      "probability": 0.00015625,
+      "probability_percent": 0.0156,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00015625,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "0-8",
+      "goals_a": 0,
+      "goals_b": 8,
+      "probability": 0.00010416666666666667,
+      "probability_percent": 0.0104,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00010416666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "1-8",
+      "goals_a": 1,
+      "goals_b": 8,
+      "probability": 0.00010416666666666667,
+      "probability_percent": 0.0104,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00010416666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-2",
+      "goals_a": 7,
+      "goals_b": 2,
+      "probability": 0.00010416666666666667,
+      "probability_percent": 0.0104,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 0.00010416666666666667,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "3-8",
+      "goals_a": 3,
+      "goals_b": 8,
+      "probability": 5.208333333333334e-05,
+      "probability_percent": 0.0052,
+      "outcome_key": "team_b",
+      "outcome_cn": "Argentina胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 5.208333333333334e-05,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "Argentina win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-0",
+      "goals_a": 7,
+      "goals_b": 0,
+      "probability": 5.208333333333334e-05,
+      "probability_percent": 0.0052,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 5.208333333333334e-05,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-4",
+      "goals_a": 7,
+      "goals_b": 4,
+      "probability": 5.208333333333334e-05,
+      "probability_percent": 0.0052,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 5.208333333333334e-05,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "7-5",
+      "goals_a": 7,
+      "goals_b": 5,
+      "probability": 5.208333333333334e-05,
+      "probability_percent": 0.0052,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 5.208333333333334e-05,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    },
+    {
+      "score": "8-1",
+      "goals_a": 8,
+      "goals_b": 1,
+      "probability": 5.208333333333334e-05,
+      "probability_percent": 0.0052,
+      "outcome_key": "team_a",
+      "outcome_cn": "England胜",
+      "label_cn": "高偏离",
+      "short_reason_cn": "由90分钟主预测比分分布派生。",
+      "deviation_score": 1.0,
+      "position": 1.0,
+      "x": 1.0,
+      "y": 5.208333333333334e-05,
+      "display_group": "tail",
+      "estimated_sample_count": null,
+      "distinguishing_mechanism_ids": [],
+      "outcome_en": "England win",
+      "label_en": "High deviation",
+      "short_reason_en": "Derived from the 90-minute score distribution."
+    }
+  ],
+  "top_scores": [
+    {
+      "score": "1-1",
+      "probability": 0.12520833333333334,
+      "goals_a": 1,
+      "goals_b": 1
+    },
+    {
+      "score": "1-2",
+      "probability": 0.08817708333333334,
+      "goals_a": 1,
+      "goals_b": 2
+    },
+    {
+      "score": "0-1",
+      "probability": 0.08364583333333334,
+      "goals_a": 0,
+      "goals_b": 1
+    },
+    {
+      "score": "2-1",
+      "probability": 0.08078125,
+      "goals_a": 2,
+      "goals_b": 1
+    },
+    {
+      "score": "1-0",
+      "probability": 0.07401041666666666,
+      "goals_a": 1,
+      "goals_b": 0
+    },
+    {
+      "score": "2-2",
+      "probability": 0.06234375,
+      "goals_a": 2,
+      "goals_b": 2
+    },
+    {
+      "score": "0-0",
+      "probability": 0.059166666666666666,
+      "goals_a": 0,
+      "goals_b": 0
+    },
+    {
+      "score": "0-2",
+      "probability": 0.0565625,
+      "goals_a": 0,
+      "goals_b": 2
+    }
+  ],
+  "source": "latest_state_v7.distribution.score_matrix + score_space_data if available",
+  "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties.",
+  "axis_note_en": "Rows show England 90-minute goals and columns show Argentina 90-minute goals; 5+ means at least five goals. Probabilities are full-match 90-minute score probabilities."
+}

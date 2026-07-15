@@ -1,0 +1,1275 @@
+{
+  "schema_version": "3.0",
+  "display_contract": "knockout_detail_phase_semantics_v6_2",
+  "method_cn": "v6.3 branch-aware 淘汰赛pipeline：赛前证据与专家委员会生成跨阶段机制，MAS rollout同时给出90分钟、若平进入加时、若仍平进入点球的条件路径，Monte Carlo在完整路径树上采样。",
+  "architecture_cn": "加时和点球不再是独立后处理输出；它们由同一条MAS条件rollout驱动，前端三Tab只是同一完整路径分布的不同切片，JSON结构保持v6.2.2兼容。",
+  "match": {
+    "match_id": "M102",
+    "team_a": "England",
+    "team_b": "Argentina",
+    "kickoff_utc": "2026-07-15T15:00:00-04:00",
+    "venue": "Atlanta Stadium, Atlanta",
+    "stage": "knockout",
+    "group": "",
+    "neutral_site": true,
+    "freeze_time": ""
+  },
+  "summary": {
+    "advancement": {
+      "team_a": 0.4649038461538448,
+      "team_b": 0.5350961538461553,
+      "favorite": "Argentina"
+    },
+    "resolution": {
+      "normal_time": 0.7336538461538469,
+      "extra_time": 0.12788461538461535,
+      "penalties": 0.13846153846153822
+    },
+    "normal_time_top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.12520833333333334,
+        "goals_a": 1,
+        "goals_b": 1
+      },
+      {
+        "score": "1-2",
+        "probability": 0.08817708333333334,
+        "goals_a": 1,
+        "goals_b": 2
+      },
+      {
+        "score": "0-1",
+        "probability": 0.08364583333333334,
+        "goals_a": 0,
+        "goals_b": 1
+      }
+    ],
+    "display_path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-2，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-2，Argentina常规时间晋级。",
+        "probability": 0.08557692307692308,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-2",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_989d539bbc02",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-2: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-2: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_0b7fb95f582e",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+        "probability": 0.006490384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Argentina",
+        "path_id": "BMC_a76a4bfc8eeb",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+      }
+    ],
+    "path_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-2，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-2，Argentina常规时间晋级。",
+        "probability": 0.08557692307692308,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-2",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_989d539bbc02",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-2: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-2: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_0b7fb95f582e",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+        "probability": 0.006490384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Argentina",
+        "path_id": "BMC_a76a4bfc8eeb",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+      }
+    ],
+    "favorite": "Argentina",
+    "full_path_tail": [
+      {
+        "scenario_id": "FULL_PATH_PENALTY_DRAG",
+        "title_cn": "强行拖入点球路径",
+        "resolution_type": "penalties",
+        "probability": 0.13846153846153822,
+        "probability_band": "13.8%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "4-5",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.006490384615384616,
+            "path_probability": 0.006490384615384616,
+            "path_id": "BMC_a76a4bfc8eeb",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "1-1",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": "2-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.005528846153846154,
+            "path_probability": 0.005528846153846154,
+            "path_id": "BMC_3a38d45a38f1",
+            "summary_cn": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+            "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+          },
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "0-0",
+            "extra_time_increment": "0-0",
+            "extra_time_result": "draw",
+            "normal_time_result": "draw",
+            "normal_time_score": "0-0",
+            "penalty_score": "3-4",
+            "penalty_winner": "team_b",
+            "resolution_type": "penalties",
+            "probability": 0.004326923076923077,
+            "path_probability": 0.004326923076923077,
+            "path_id": "BMC_22ab8996e1d4",
+            "summary_cn": "90分钟0-0、加时0-0后仍平，Argentina点球晋级。",
+            "summary_en": "After 0-0 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+          }
+        ],
+        "rationale_cn": "90分钟和加时均未分胜负，比赛被压缩为点球随机性与门将/心理优势。",
+        "title_en": "Forced path to penalties",
+        "rationale_en": "If neither 90 minutes nor extra time separates the teams, the match is compressed into penalty randomness, goalkeeper margins, and psychological execution."
+      },
+      {
+        "scenario_id": "FULL_PATH_EXTRA_TIME_DECISION",
+        "title_cn": "加时阶段分胜负路径",
+        "resolution_type": "extra_time",
+        "probability": 0.12788461538461535,
+        "probability_band": "12.8%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_b",
+            "advancer_team": "Argentina",
+            "after_extra_time_score": "1-2",
+            "extra_time_increment": "0-1",
+            "extra_time_result": "team_b",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.023076923076923078,
+            "path_probability": 0.023076923076923078,
+            "path_id": "BMC_0b7fb95f582e",
+            "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "England",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "1-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.020673076923076922,
+            "path_probability": 0.020673076923076922,
+            "path_id": "BMC_416828dc4222",
+            "summary_cn": "90分钟1-1后进入加时，加时增量1-0，England加时晋级。",
+            "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 1-0; England advances in extra time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "England",
+            "after_extra_time_score": "3-2",
+            "extra_time_increment": "1-0",
+            "extra_time_result": "team_a",
+            "normal_time_result": "draw",
+            "normal_time_score": "2-2",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "extra_time",
+            "probability": 0.014182692307692308,
+            "path_probability": 0.014182692307692308,
+            "path_id": "BMC_e77a5332f98a",
+            "summary_cn": "90分钟2-2后进入加时，加时增量1-0，England加时晋级。",
+            "summary_en": "After a 2-2 draw in 90 minutes, extra time adds 1-0; England advances in extra time."
+          }
+        ],
+        "rationale_cn": "90分钟打平后，体能、替补深度和风险偏好在加时阶段放大，形成分胜负路径。",
+        "title_en": "Extra-time resolution path",
+        "rationale_en": "After a 90-minute draw, fitness, bench depth, and risk appetite become amplified in extra time and create the main non-penalty resolution paths."
+      },
+      {
+        "scenario_id": "FULL_PATH_UNDERDOG_ADVANCE",
+        "title_cn": "非热门方晋级路径",
+        "resolution_type": "mixed",
+        "probability": 0.3197115384615385,
+        "probability_band": "32.0%",
+        "representative_paths": [
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "England",
+            "after_extra_time_score": "2-1",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-1",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.08245192307692308,
+            "path_probability": 0.08245192307692308,
+            "path_id": "BMC_38708b134e0a",
+            "summary_cn": "90分钟2-1，England常规时间晋级。",
+            "summary_en": "90 minutes 2-1: England advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "England",
+            "after_extra_time_score": "1-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "1-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.06586538461538462,
+            "path_probability": 0.06586538461538462,
+            "path_id": "BMC_4707276168fb",
+            "summary_cn": "90分钟1-0，England常规时间晋级。",
+            "summary_en": "90 minutes 1-0: England advances in normal time."
+          },
+          {
+            "advancer_side": "team_a",
+            "advancer_team": "England",
+            "after_extra_time_score": "2-0",
+            "extra_time_increment": null,
+            "extra_time_result": "not_needed",
+            "normal_time_result": "team_a",
+            "normal_time_score": "2-0",
+            "penalty_score": null,
+            "penalty_winner": null,
+            "resolution_type": "normal_time",
+            "probability": 0.05,
+            "path_probability": 0.05,
+            "path_id": "BMC_c692aa79eded",
+            "summary_cn": "90分钟2-0，England常规时间晋级。",
+            "summary_en": "90 minutes 2-0: England advances in normal time."
+          }
+        ],
+        "rationale_cn": "非热门方可能通过常规时间偷袭、加时反击或点球随机性晋级。",
+        "title_en": "Underdog advancement path",
+        "rationale_en": "The less-favoured side can still advance through a normal-time steal, an extra-time counterattack, or penalty variance."
+      }
+    ],
+    "path_distribution": {
+      "path_count": 232,
+      "raw_top_paths": [
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "1-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "1-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08557692307692308,
+          "path_probability": 0.08557692307692308,
+          "path_id": "BMC_989d539bbc02",
+          "summary_cn": "90分钟1-2，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 1-2: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "England",
+          "after_extra_time_score": "2-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "2-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08245192307692308,
+          "path_probability": 0.08245192307692308,
+          "path_id": "BMC_38708b134e0a",
+          "summary_cn": "90分钟2-1，England常规时间晋级。",
+          "summary_en": "90 minutes 2-1: England advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "0-1",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-1",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.08076923076923077,
+          "path_probability": 0.08076923076923077,
+          "path_id": "BMC_2a2b2a3964a1",
+          "summary_cn": "90分钟0-1，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 0-1: Argentina advances in normal time."
+        },
+        {
+          "advancer_side": "team_a",
+          "advancer_team": "England",
+          "after_extra_time_score": "1-0",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_a",
+          "normal_time_score": "1-0",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.06586538461538462,
+          "path_probability": 0.06586538461538462,
+          "path_id": "BMC_4707276168fb",
+          "summary_cn": "90分钟1-0，England常规时间晋级。",
+          "summary_en": "90 minutes 1-0: England advances in normal time."
+        },
+        {
+          "advancer_side": "team_b",
+          "advancer_team": "Argentina",
+          "after_extra_time_score": "0-2",
+          "extra_time_increment": null,
+          "extra_time_result": "not_needed",
+          "normal_time_result": "team_b",
+          "normal_time_score": "0-2",
+          "penalty_score": null,
+          "penalty_winner": null,
+          "resolution_type": "normal_time",
+          "probability": 0.057451923076923074,
+          "path_probability": 0.057451923076923074,
+          "path_id": "BMC_9a216da4c809",
+          "summary_cn": "90分钟0-2，Argentina常规时间晋级。",
+          "summary_en": "90 minutes 0-2: Argentina advances in normal time."
+        }
+      ],
+      "display_path_top3": [
+        {
+          "rank": 1,
+          "display_slot": "normal_time",
+          "display_slot_cn": "90分钟解决",
+          "label": "90分钟1-2，Argentina常规时间晋级。",
+          "summary_cn": "90分钟1-2，Argentina常规时间晋级。",
+          "probability": 0.08557692307692308,
+          "resolution_type": "normal_time",
+          "normal_time_score": "1-2",
+          "extra_time_increment": null,
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "Argentina",
+          "path_id": "BMC_989d539bbc02",
+          "display_slot_en": "Resolved in 90 minutes",
+          "label_en": "90 minutes 1-2: Argentina advances in normal time.",
+          "summary_en": "90 minutes 1-2: Argentina advances in normal time."
+        },
+        {
+          "rank": 2,
+          "display_slot": "extra_time",
+          "display_slot_cn": "加时解决",
+          "label": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+          "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+          "probability": 0.023076923076923078,
+          "resolution_type": "extra_time",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-1",
+          "after_extra_time_score": "1-2",
+          "penalty_score": null,
+          "advancer_team": "Argentina",
+          "path_id": "BMC_0b7fb95f582e",
+          "display_slot_en": "Resolved in extra time",
+          "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time.",
+          "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time."
+        },
+        {
+          "rank": 3,
+          "display_slot": "penalties",
+          "display_slot_cn": "点球解决",
+          "label": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+          "summary_cn": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+          "probability": 0.006490384615384616,
+          "resolution_type": "penalties",
+          "normal_time_score": "1-1",
+          "extra_time_increment": "0-0",
+          "after_extra_time_score": "1-1",
+          "penalty_score": "4-5",
+          "advancer_team": "Argentina",
+          "path_id": "BMC_a76a4bfc8eeb",
+          "display_slot_en": "Resolved on penalties",
+          "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties.",
+          "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+        }
+      ]
+    }
+  },
+  "left_panel": {
+    "path_focus_top3": [
+      {
+        "rank": 1,
+        "display_slot": "normal_time",
+        "display_slot_cn": "90分钟解决",
+        "label": "90分钟1-2，Argentina常规时间晋级。",
+        "summary_cn": "90分钟1-2，Argentina常规时间晋级。",
+        "probability": 0.08557692307692308,
+        "resolution_type": "normal_time",
+        "normal_time_score": "1-2",
+        "extra_time_increment": null,
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_989d539bbc02",
+        "display_slot_en": "Resolved in 90 minutes",
+        "label_en": "90 minutes 1-2: Argentina advances in normal time.",
+        "summary_en": "90 minutes 1-2: Argentina advances in normal time."
+      },
+      {
+        "rank": 2,
+        "display_slot": "extra_time",
+        "display_slot_cn": "加时解决",
+        "label": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+        "summary_cn": "90分钟1-1后进入加时，加时增量0-1，Argentina加时晋级。",
+        "probability": 0.023076923076923078,
+        "resolution_type": "extra_time",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-1",
+        "after_extra_time_score": "1-2",
+        "penalty_score": null,
+        "advancer_team": "Argentina",
+        "path_id": "BMC_0b7fb95f582e",
+        "display_slot_en": "Resolved in extra time",
+        "label_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time.",
+        "summary_en": "After a 1-1 draw in 90 minutes, extra time adds 0-1; Argentina advances in extra time."
+      },
+      {
+        "rank": 3,
+        "display_slot": "penalties",
+        "display_slot_cn": "点球解决",
+        "label": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+        "summary_cn": "90分钟1-1、加时0-0后仍平，Argentina点球晋级。",
+        "probability": 0.006490384615384616,
+        "resolution_type": "penalties",
+        "normal_time_score": "1-1",
+        "extra_time_increment": "0-0",
+        "after_extra_time_score": "1-1",
+        "penalty_score": "4-5",
+        "advancer_team": "Argentina",
+        "path_id": "BMC_a76a4bfc8eeb",
+        "display_slot_en": "Resolved on penalties",
+        "label_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties.",
+        "summary_en": "After 1-1 in 90 minutes and 0-0 in extra time, Argentina advances on penalties."
+      }
+    ],
+    "history_mode": "normal_time_prediction_history"
+  },
+  "tabs": {
+    "normal_time": {
+      "title": "常规时间（90分钟）",
+      "condition_cn": "完整比赛的90分钟主预测，不含加时和点球。",
+      "matrix_file": "normal_time_matrix.json",
+      "deviation_file": "normal_time_deviation.json",
+      "tail_focus_type": "normal_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "high_scoring",
+          "label_cn": "开放 / 大比分",
+          "definition_cn": "总进球至少4球。",
+          "probability": 0.33739583333333345,
+          "base_event_probability": 0.33739583333333345,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.06234375,
+              "rationale_cn": "比赛进入开放往返，双方进攻均有兑现。",
+              "rationale_en": "The match becomes an open end-to-end contest, with both attacks converting chances."
+            },
+            {
+              "score": "1-3",
+              "probability": 0.040677083333333336,
+              "rationale_cn": "Argentina充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Argentina fully capitalize on counterattacks or attacking efficiency to extend their lead."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.03661458333333333,
+              "rationale_cn": "England打破对方防守后扩大领先优势。",
+              "rationale_en": "England break through the opposition defence and extend their lead."
+            },
+            {
+              "score": "2-3",
+              "probability": 0.03197916666666667,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defense continuing to expand."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0290625,
+              "rationale_cn": "定位球与纪律把后段未分胜负路径推向高波动、点球分支：阿根廷门将证据占优，Pickford降低英格兰；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Set pieces and discipline push the late unresolved path toward high volatility and penalties: Argentina's goalkeeper evidence is stronger, while Pickford lowers England; the match is pulled into a high-risk open tempo, with space behind the back lines continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-2",
+            "1-3",
+            "3-1"
+          ],
+          "rationale_cn": "比赛被拉入更开放节奏，转换、定位球或领先后空间放大，总进球显著高于主预测低比分重心。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Open / high-scoring game",
+          "definition_en": "At least 4 total goals.",
+          "rationale_en": "The match shifts into a more open tempo, with transitions, set pieces, or expanded space after a lead, pushing total goals well above the main low-score forecast."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "blowout",
+          "label_cn": "一边倒 / 崩盘",
+          "definition_cn": "任一方净胜至少3球。",
+          "probability": 0.12286458333333332,
+          "base_event_probability": 0.12286458333333332,
+          "attention_level": "medium",
+          "selected_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.027291666666666665,
+              "rationale_cn": "Argentina充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Argentina fully capitalize on counterattacks or attacking efficiency to extend their lead."
+            },
+            {
+              "score": "3-0",
+              "probability": 0.021510416666666667,
+              "rationale_cn": "定位球与纪律把后段未分胜负路径推向高波动；England打破对方防守后扩大领先优势。",
+              "rationale_en": "Set pieces and discipline make a late-level scenario highly volatile; England extend their lead after breaking down the opponent's defense."
+            },
+            {
+              "score": "1-4",
+              "probability": 0.016197916666666666,
+              "rationale_cn": "比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "The match shifts into a high-risk open tempo, with space behind the defense continuing to expand."
+            },
+            {
+              "score": "4-1",
+              "probability": 0.011302083333333334,
+              "rationale_cn": "定位球与纪律把后段未分胜负路径推向高波动；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Set pieces and discipline make a late-level scenario highly volatile; the match shifts into a high-risk, open tempo, with space behind the defense continuing to grow."
+            },
+            {
+              "score": "0-4",
+              "probability": 0.00984375,
+              "rationale_cn": "Argentina充分兑现反击或进攻效率并扩大优势。",
+              "rationale_en": "Argentina fully capitalize on counterattacks or attacking efficiency to extend their lead."
+            }
+          ],
+          "display_scores": [
+            "0-3",
+            "3-0",
+            "1-4"
+          ],
+          "rationale_cn": "早段进球、红黄牌压力、体能或防线失衡导致比赛失去均衡，一方在90分钟内明显拉开。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "One-sided / collapse scenario",
+          "definition_en": "Either side wins by at least 3 goals.",
+          "rationale_en": "An early goal, card pressure, fitness issues, or defensive imbalance disrupts the match, with one side pulling clearly away within 90 minutes."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "upset",
+          "label_cn": "爆冷 / 非热门方取胜",
+          "definition_cn": "赛前或主预测中相对不被看好的一方在90分钟获胜。",
+          "probability": 0.33880208333333334,
+          "base_event_probability": 0.33880208333333334,
+          "attention_level": "high",
+          "selected_scores": [
+            {
+              "score": "2-1",
+              "probability": 0.08078125,
+              "rationale_cn": "边路突破与肋部防守对位；England在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "Wide breaks and half-space defensive matchups; England have a slight edge in key duels and close the match with a one-goal margin."
+            },
+            {
+              "score": "1-0",
+              "probability": 0.07401041666666666,
+              "rationale_cn": "England在关键对位中略占上风，以一球优势收束比赛。",
+              "rationale_en": "England edge the key matchups and close out the match by one goal."
+            },
+            {
+              "score": "2-0",
+              "probability": 0.04625,
+              "rationale_cn": "England打破对方防守后扩大领先优势。",
+              "rationale_en": "England break through the opposition defence and extend their lead."
+            },
+            {
+              "score": "3-1",
+              "probability": 0.03661458333333333,
+              "rationale_cn": "England打破对方防守后扩大领先优势。",
+              "rationale_en": "England break through the opposition defence and extend their lead."
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0290625,
+              "rationale_cn": "定位球与纪律把后段未分胜负路径推向高波动、点球分支：阿根廷门将证据占优，Pickford降低英格兰；比赛被拉入高风险开放节奏，防线身后空间持续放大。",
+              "rationale_en": "Set pieces and discipline push the late unresolved path toward high volatility and penalties: Argentina's goalkeeper evidence is stronger, while Pickford lowers England; the match is pulled into a high-risk open tempo, with space behind the back lines continuing to grow."
+            }
+          ],
+          "display_scores": [
+            "2-1",
+            "1-0",
+            "2-0"
+          ],
+          "rationale_cn": "非热门方通过低位韧性、反击效率、定位球或热门方关键失误，在90分钟直接改变胜负方向。",
+          "source": "synthetic_from_dense_score_matrix",
+          "label_en": "Upset / underdog win",
+          "definition_en": "The side rated less likely before the match or in the main prediction wins in 90 minutes.",
+          "rationale_en": "The underdog can change the result within 90 minutes through low-block resilience, counterattack efficiency, set pieces, or key mistakes from the favorite."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "PF_01",
+          "label_cn": "心理",
+          "impact_cn": "英格兰淘汰赛多靠Kane、Bellingham后段改写，但不等于开局压制。",
+          "direction": "team_a",
+          "evidence_ids": [
+            "PATH_TRANSFER_M102_TEAM_A_PROFILE_01_CURRENT_TOURNAMENT_FORM",
+            "PATH_TRANSFER_M102_TEAM_A_PROFILE_02_KEY_PLAYERS",
+            "PATH_TRANSFER_M102_TEAM_A_PROFILE_04_KNOCKOUT_LATE_GAME_STATE_BEHAVIOR"
+          ],
+          "source_names": [
+            "FIFA England v Congo DR report and Sky Sports Norway report",
+            "Sky Sports Norway v England report"
+          ],
+          "label_en": "Psychology and pressure",
+          "impact_en": "England often rely on Kane and Bellingham to change knockout matches late, but that does not mean they dominate from the start.",
+          "text_cn": "英格兰淘汰赛多靠Kane、Bellingham后段改写，但不等于开局压制。",
+          "text_en": "England often rely on Kane and Bellingham to change knockout matches late, but that does not mean they dominate from the start."
+        },
+        {
+          "factor_id": "PF_02",
+          "label_cn": "证据因素 2",
+          "impact_cn": "阿根廷可让Messi组织，Alvarez与Lautaro加禁区终结点。",
+          "direction": "team_b",
+          "evidence_ids": [
+            "PATH_TRANSFER_M102_TEAM_B_PROFILE_03_KEY_PLAYERS",
+            "PATH_TRANSFER_M102_TEAM_B_PROFILE_05_KNOCKOUT_BENCH_DEPTH"
+          ],
+          "source_names": [
+            "Sky Sports Argentina v Switzerland report",
+            "El Pais Argentina v Switzerland report"
+          ],
+          "label_en": "Evidence factor 2",
+          "impact_en": "Argentina can have Messi create, with Alvarez and Lautaro adding finishing targets in the box.",
+          "text_cn": "阿根廷可让Messi组织，Alvarez与Lautaro加禁区终结点。",
+          "text_en": "Argentina can have Messi create, with Alvarez and Lautaro adding finishing targets in the box."
+        },
+        {
+          "factor_id": "PF_03",
+          "label_cn": "体能",
+          "impact_cn": "双方八强都踢满120分钟且只休3天，阿根廷淘汰赛加时更多。",
+          "direction": "draw",
+          "evidence_ids": [
+            "PATH_TRANSFER_M102_TEAM_A_LOAD",
+            "PATH_TRANSFER_M102_TEAM_B_LOAD",
+            "PATH_TRANSFER_M102_MATCHUP_PROFILE_01_KNOCKOUT_FITNESS_SCHEDULE",
+            "E_f66859e49032"
+          ],
+          "source_names": [
+            "structured_previous_path_context",
+            "Sky Sports and England Football quarter-final reports",
+            "The Athletic"
+          ],
+          "label_en": "Fitness and schedule",
+          "impact_en": "Both quarterfinals went 120 minutes with only 3 days' rest, and Argentina have played more extra time in knockouts.",
+          "text_cn": "双方八强都踢满120分钟且只休3天，阿根廷淘汰赛加时更多。",
+          "text_en": "Both quarterfinals went 120 minutes with only 3 days' rest, and Argentina have played more extra time in knockouts."
+        },
+        {
+          "factor_id": "PF_04",
+          "label_cn": "进攻",
+          "impact_cn": "Rice已被报道可首发，英格兰74%进攻威胁来自两翼。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_d71272f17ef5",
+            "E_7de14194f0f5"
+          ],
+          "source_names": [
+            "Sky Sports"
+          ],
+          "label_en": "Attacking route",
+          "impact_en": "Rice has been reported fit to start, and 74% of England's attacking threat comes from the wings.",
+          "text_cn": "Rice已被报道可首发，英格兰74%进攻威胁来自两翼。",
+          "text_en": "Rice has been reported fit to start, and 74% of England's attacking threat comes from the wings."
+        },
+        {
+          "factor_id": "PF_05",
+          "label_cn": "战术",
+          "impact_cn": "阿根廷宽位常更像边前卫，压迫转换会考验英格兰一二传。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_3ba1deb4b253",
+            "PATH_TRANSFER_M102_MATCHUP_PROFILE_02_TACTICS"
+          ],
+          "source_names": [
+            "Sky Sports",
+            "England Football Argentina profile and Sky Sports Norway report"
+          ],
+          "label_en": "Tactical matchup",
+          "impact_en": "Argentina’s wide players often look more like wide midfielders, and their pressing transitions will test England’s first and second passes.",
+          "text_cn": "阿根廷宽位常更像边前卫，压迫转换会考验英格兰一二传。",
+          "text_en": "Argentina’s wide players often look more like wide midfielders, and their pressing transitions will test England’s first and second passes."
+        },
+        {
+          "factor_id": "PF_06",
+          "label_cn": "进攻",
+          "impact_cn": "阿根廷比赛犯规和被犯规都多，Messi角球曾制造八强进球。",
+          "direction": "neutral",
+          "evidence_ids": [
+            "E_eee3eab47bbb",
+            "PATH_TRANSFER_M102_TEAM_B_PROFILE_03_KEY_PLAYERS"
+          ],
+          "source_names": [
+            "Sky Sports",
+            "Sky Sports Argentina v Switzerland report"
+          ],
+          "label_en": "Attacking route",
+          "impact_en": "Argentina matches feature many fouls for and against, and Messi’s corner once created a quarter-final goal.",
+          "text_cn": "阿根廷比赛犯规和被犯规都多，Messi角球曾制造八强进球。",
+          "text_en": "Argentina matches feature many fouls for and against, and Messi’s corner once created a quarter-final goal."
+        }
+      ],
+      "title_en": "Normal time (90 minutes)",
+      "condition_en": "The main 90-minute prediction for the match, excluding extra time and penalties."
+    },
+    "extra_time": {
+      "title": "加时赛（如进入）",
+      "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+      "entry_probability": 0.26634615384615357,
+      "matrix_file": "extra_time_matrix.json",
+      "deviation_file": "extra_time_deviation.json",
+      "tail_focus_type": "extra_time_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "ET_ONE_GOAL_STEAL",
+          "label": "加时偷袭 / 一球决胜",
+          "label_cn": "加时偷袭 / 一球决胜",
+          "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.18501805054151643,
+          "joint_probability": 0.04927884615384615,
+          "deviation_score": 0.33999999999999997,
+          "category": "et_one_goal_steal",
+          "selected_scores": [
+            {
+              "score": "1-0",
+              "increment": "1-0",
+              "probability": 0.18501805054151643
+            },
+            {
+              "score": "0-1",
+              "increment": "0-1",
+              "probability": 0.16696750902527094
+            }
+          ],
+          "display_scores": [
+            "1-0",
+            "0-1"
+          ],
+          "rationale_cn": "英格兰加时一球胜的核心路径。主要依赖105分钟后主动避免点球：Kane回撤后再次进入禁区、Bellingham后插上、Saka/Gordon/James侧传中、角球、任意球以及Rice/Bellingham二点球。阿根廷累计加时负荷若显性化，英格兰边路和定位球破局权重上升。",
+          "label_en": "Extra-time steal / one-goal decider",
+          "definition_en": "A one-goal result in 30 minutes of extra time via counterattacks, set pieces, or substitute impact.",
+          "rationale_en": "England's core path to a one-goal extra-time win. It mainly depends on actively avoiding penalties after 105 minutes: Kane dropping deep then re-entering the box, Bellingham making late runs, wide crosses from Saka/Gordon/James, corners, free kicks, and second balls from Rice/Bellingham. If Argentina's accumulated extra-time workload becomes visible, England's wide play and set-piece breakthrough weight increases."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "ET_OPEN_BOTH_SCORE",
+          "label": "加时开放 / 双方进球",
+          "label_cn": "加时开放 / 双方进球",
+          "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.09927797833935016,
+          "joint_probability": 0.02644230769230766,
+          "deviation_score": 0.3,
+          "category": "et_open_both_score",
+          "selected_scores": [
+            {
+              "score": "1-1",
+              "increment": "1-1",
+              "probability": 0.09927797833935016
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.015342960288808681
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.013537906137184131
+            },
+            {
+              "score": "2-2",
+              "increment": "2-2",
+              "probability": 0.004512635379061377
+            }
+          ],
+          "display_scores": [
+            "1-1",
+            "2-1",
+            "1-2"
+          ],
+          "rationale_cn": "双方各进一球但120分钟仍平的中等概率分支。更适用于90分钟1-1、2-2或3-3入口，体现双向晚段回应、定位球、二点球和体能下降导致的防守波动。30分钟窗口限制了持续大比分，因此1-1是开放入口下的主要平局增量，而不是2-2以上。",
+          "label_en": "Open extra time / both teams score",
+          "definition_en": "Both sides score in extra time, shifting the match from cautious to open end-to-end play.",
+          "rationale_en": "A medium-probability branch where both sides score once but remain level after 120 minutes. More applicable from 90-minute 1-1, 2-2, or 3-3 states, reflecting late responses from both sides, set pieces, second balls, and defensive volatility from fatigue. The 30-minute window limits sustained high scoring, so 1-1 is the main draw increase in an open extra-time setup, rather than 2-2 or higher."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "ET_FATIGUE_COLLAPSE",
+          "label": "体能崩盘 / 加时打穿",
+          "label_cn": "体能崩盘 / 加时打穿",
+          "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.039711191335740116,
+          "joint_probability": 0.010576923076923078,
+          "deviation_score": 0.74,
+          "category": "et_fatigue_collapse",
+          "selected_scores": [
+            {
+              "score": "0-2",
+              "increment": "0-2",
+              "probability": 0.039711191335740116
+            },
+            {
+              "score": "2-0",
+              "increment": "2-0",
+              "probability": 0.03880866425992784
+            },
+            {
+              "score": "2-1",
+              "increment": "2-1",
+              "probability": 0.015342960288808681
+            },
+            {
+              "score": "1-2",
+              "increment": "1-2",
+              "probability": 0.013537906137184131
+            }
+          ],
+          "display_scores": [
+            "0-2",
+            "2-0",
+            "2-1"
+          ],
+          "rationale_cn": "阿根廷单方两球尾部，高于英格兰对称项。常见机制是阿根廷先由Messi连接、定位球或Alvarez/Lautaro终结破局，随后英格兰为追平或避免点球投入更多禁区人数，阿根廷利用转换和身后空间打入第二球。属于低频但有清晰比赛状态支撑的分支。",
+          "label_en": "Fatigue collapse / extra-time breakthrough",
+          "definition_en": "A side wins extra time by at least 2 goals, or total goals reach 3+.",
+          "rationale_en": "Argentina’s one-sided two-goal tail is higher than England’s equivalent. A common path is Argentina breaking through via Messi’s link play, a set piece, or an Alvarez/Lautaro finish, then England pushing more players into the box to equalize or avoid penalties, allowing Argentina to use transitions and space in behind to score a second. This is a low-frequency branch, but one with clear match-state support."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "仍平主路径",
+          "impact_cn": "加时30分钟内运动战接近均势，120分钟仍平约50%，0-0增量是最大单一路径；双方上一轮都踢120分钟且同休3天，90-105分钟没有明确单边体能优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Still-level main path",
+          "impact_en": "Open play is close to even over 30 minutes of extra time, with about a 50% chance of still being level after 120 minutes. The 0-0 increase is the largest single path; both sides played 120 minutes in the previous round and both had 3 days' rest, with no clear one-sided fitness edge from 90-105 minutes.",
+          "text_cn": "加时30分钟内运动战接近均势，120分钟仍平约50%，0-0增量是最大单一路径；双方上一轮都踢120分钟且同休3天，90-105分钟没有明确单边体能优势。",
+          "text_en": "Open play is close to even over 30 minutes of extra time, with about a 50% chance of still being level after 120 minutes. The 0-0 increase is the largest single path; both sides played 120 minutes in the previous round and both had 3 days' rest, with no clear one-sided fitness edge from 90-105 minutes."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "英格兰破局",
+          "impact_cn": "英格兰的主动入口在105分钟后加大边路传中、角球和任意球密度，由Kane回撤后二次进禁区、Bellingham后插上和Rice二点球来避免进入点球分支。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "England breakthrough route",
+          "impact_en": "England's proactive route is to increase wide crosses, corners, and free-kick volume after 105 minutes, using Kane dropping deep then re-entering the box, Bellingham's late runs, and Rice on second balls to avoid the penalty branch.",
+          "text_cn": "英格兰的主动入口在105分钟后加大边路传中、角球和任意球密度，由Kane回撤后二次进禁区、Bellingham后插上和Rice二点球来避免进入点球分支。",
+          "text_en": "England's proactive route is to increase wide crosses, corners, and free-kick volume after 105 minutes, using Kane dropping deep then re-entering the box, Bellingham's late runs, and Rice on second balls to avoid the penalty branch."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "阿根廷连接",
+          "impact_cn": "阿根廷若在加时打破均势，主要依赖Messi最后三区创造和定位球连接，配合Alvarez冲刺、Lautaro禁区占位，以及Mac Allister/Enzo后插上。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Argentina final-third connection",
+          "impact_en": "If Argentina break the deadlock in extra time, it will likely rely on Messi’s final-third creation and set-piece links, with Alvarez’s runs, Lautaro’s box positioning, and late arrivals from Mac Allister/Enzo.",
+          "text_cn": "阿根廷若在加时打破均势，主要依赖Messi最后三区创造和定位球连接，配合Alvarez冲刺、Lautaro禁区占位，以及Mac Allister/Enzo后插上。",
+          "text_en": "If Argentina break the deadlock in extra time, it will likely rely on Messi’s final-third creation and set-piece links, with Alvarez’s runs, Lautaro’s box positioning, and late arrivals from Mac Allister/Enzo."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "入口比分开关",
+          "impact_cn": "90分钟入口比分会改变加时开放度：0-0会抬高加时0-0和点球权重，1-1采用中性偏开放基准，2-2或3-3则提高1-1、尾部进球和纪律波动。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Entry score toggle",
+          "impact_en": "The score at the 90-minute entry point changes extra-time openness: 0-0 raises the weight of extra-time 0-0 and penalties, 1-1 uses a neutral but slightly open baseline, while 2-2 or 3-3 increases 1-1, tail goals, and discipline volatility.",
+          "text_cn": "90分钟入口比分会改变加时开放度：0-0会抬高加时0-0和点球权重，1-1采用中性偏开放基准，2-2或3-3则提高1-1、尾部进球和纪律波动。",
+          "text_en": "The score at the 90-minute entry point changes extra-time openness: 0-0 raises the weight of extra-time 0-0 and penalties, 1-1 uses a neutral but slightly open baseline, while 2-2 or 3-3 increases 1-1, tail goals, and discipline volatility."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "体能证据缺口",
+          "impact_cn": "缺少官方首发、实际替补名单和120分钟前换人计划；Rice可踢满时间、Saka或James边路冲击，以及Messi、Romero、Paredes加时对抗强度都仍不确定。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Fitness evidence gap",
+          "impact_en": "Official lineups, actual benches, and substitution plans before 120 minutes are unavailable; Rice’s ability to play the full match, Saka or James’ wing impact, and the extra-time intensity of Messi, Romero, and Paredes all remain uncertain.",
+          "text_cn": "缺少官方首发、实际替补名单和120分钟前换人计划；Rice可踢满时间、Saka或James边路冲击，以及Messi、Romero、Paredes加时对抗强度都仍不确定。",
+          "text_en": "Official lineups, actual benches, and substitution plans before 120 minutes are unavailable; Rice’s ability to play the full match, Saka or James’ wing impact, and the extra-time intensity of Messi, Romero, and Paredes all remain uncertain."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "点球边际",
+          "impact_cn": "若120分钟仍平，阿根廷点球分支约54%、英格兰约46%；Martinez提供小到中等门将边际，但Pickford近年扑点履历削弱英格兰传统劣势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "extra_time_mini_pipeline"
+          ],
+          "label_en": "Penalty edge",
+          "impact_en": "If it is still level after 120 minutes, Argentina’s penalty branch is about 54% and England’s about 46%; Martinez gives a small to moderate goalkeeper edge, but Pickford’s recent penalty-saving record reduces England’s traditional disadvantage.",
+          "text_cn": "若120分钟仍平，阿根廷点球分支约54%、英格兰约46%；Martinez提供小到中等门将边际，但Pickford近年扑点履历削弱英格兰传统劣势。",
+          "text_en": "If it is still level after 120 minutes, Argentina’s penalty branch is about 54% and England’s about 46%; Martinez gives a small to moderate goalkeeper edge, but Pickford’s recent penalty-saving record reduces England’s traditional disadvantage."
+        }
+      ],
+      "workflow_cn": "加时专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 条件Rollout → 条件蒙特卡洛矩阵 → 加时Tail审计 → 报告输出。",
+      "title_en": "Extra time (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+      "workflow_en": "Extra-time-specific flow: evidence integration → four expert agents → expert committee aggregation → conditional rollouts → conditional Monte Carlo matrix → extra-time tail audit → report output."
+    },
+    "penalties": {
+      "title": "点球大战（如进入）",
+      "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+      "entry_probability": 0.13846153846153822,
+      "matrix_file": "penalty_matrix.json",
+      "deviation_file": "penalty_deviation.json",
+      "tail_focus_type": "penalty_three_scenarios",
+      "tail_focus": [
+        {
+          "rank": 1,
+          "scenario_id": "PEN_KEEPER_HERO",
+          "label": "门将连续扑点",
+          "label_cn": "门将连续扑点",
+          "definition_cn": "一方门将连续扑点或对手连续罚丢，点球比分被迅速拉开。",
+          "score": "4-2",
+          "winner_side": "team_a",
+          "probability": 0.06006800618238023,
+          "probability_band": "low",
+          "deviation_score": 0.72,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-2",
+              "probability": 0.06006800618238023,
+              "winner_side": "team_a",
+              "rationale_cn": "4-2与矩阵中英格兰获胜比分一致，属于低中概率尾部场景。该比分通常意味着阿根廷在前五轮内出现多次未进，但仅凭比分不能确认均为门将连续扑出，因此将口径修正为对手多次罚失或被扑。",
+              "rationale_en": "4-2 matches the England win scoreline in the matrix and is a low-to-medium probability tail scenario. This score usually means Argentina failed to score multiple times in the first five rounds, but the score alone cannot confirm they were all consecutive goalkeeper saves, so the wording is adjusted to multiple opponent misses or saves."
+            },
+            {
+              "score": "2-4",
+              "probability": 0.06357959814528594,
+              "winner_side": "team_b",
+              "rationale_cn": "2-4与矩阵中阿根廷获胜比分一致，属于低中概率尾部场景。该比分通常意味着英格兰在前五轮内出现多次未进，但仅凭比分不能确认均为门将连续扑出，因此将口径修正为对手多次罚失或被扑。",
+              "rationale_en": "2-4 matches the Argentina win scoreline in the matrix and is a low-to-medium probability tail scenario. This score usually means England failed to score multiple times in the first five rounds, but the score alone cannot confirm they were all consecutive goalkeeper saves, so the wording is adjusted to multiple opponent misses or saves."
+            }
+          ],
+          "display_scores": [
+            "4-2",
+            "2-4"
+          ],
+          "rationale_cn": "4-2与矩阵中英格兰获胜比分一致，属于低中概率尾部场景。该比分通常意味着阿根廷在前五轮内出现多次未进，但仅凭比分不能确认均为门将连续扑出，因此将口径修正为对手多次罚失或被扑。",
+          "label_en": "Goalkeeper heroics",
+          "definition_en": "One goalkeeper makes consecutive penalty saves or the opponent misses several in a row, quickly widening the shootout score.",
+          "rationale_en": "4-2 matches the England win scoreline in the matrix and is a low-to-medium probability tail scenario. This score usually means Argentina failed to score multiple times in the first five rounds, but the score alone cannot confirm they were all consecutive goalkeeper saves, so the wording is adjusted to multiple opponent misses or saves."
+        },
+        {
+          "rank": 2,
+          "scenario_id": "PEN_FAVORITE_PRESSURE",
+          "label": "热门方压力失误",
+          "label_cn": "热门方压力失误",
+          "definition_cn": "更被看好的一方在关键轮次罚丢，非热门方点球晋级。",
+          "score": "4-3",
+          "winner_side": "team_a",
+          "probability": 0.1351530139103555,
+          "probability_band": "low-medium",
+          "deviation_score": 0.64,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "4-3",
+              "probability": 0.1351530139103555,
+              "winner_side": "team_a",
+              "rationale_cn": "4-3与矩阵中英格兰获胜比分一致，但该比分是矩阵中的高频常见比分族之一，不应按低概率尾部处理。原提案关于热门球队压力失误、非热门方晋级的表述缺少阵容强弱或临场证据支撑，修正为常规险胜口径。",
+              "rationale_en": "4-3 matches the England win scoreline in the matrix, but it is one of the common high-frequency scoreline groups and should not be treated as a low-probability tail. The original wording about the favorite making pressure errors and the underdog advancing lacks support from squad strength or in-game evidence, so it is revised to a standard narrow-win framing."
+            }
+          ],
+          "display_scores": [
+            "4-3"
+          ],
+          "rationale_cn": "4-3与矩阵中英格兰获胜比分一致，但该比分是矩阵中的高频常见比分族之一，不应按低概率尾部处理。原提案关于热门球队压力失误、非热门方晋级的表述缺少阵容强弱或临场证据支撑，修正为常规险胜口径。",
+          "label_en": "Favorite pressure miss",
+          "definition_en": "The favored side misses in a key round, and the underdog advances on penalties.",
+          "rationale_en": "4-3 matches the England win scoreline in the matrix, but it is one of the common high-frequency scoreline groups and should not be treated as a low-probability tail. The original wording about the favorite making pressure errors and the underdog advancing lacks support from squad strength or in-game evidence, so it is revised to a standard narrow-win framing."
+        },
+        {
+          "rank": 3,
+          "scenario_id": "PEN_EXTENDED_DRAMA",
+          "label": "延长点球决胜",
+          "label_cn": "延长点球决胜",
+          "definition_cn": "双方前五轮质量较高，进入6+轮突然死亡后才分胜负。",
+          "score": "6-5",
+          "winner_side": "team_a",
+          "probability": 0.030034003091190115,
+          "probability_band": "low",
+          "deviation_score": 0.58,
+          "category": "penalty_tail_scenario",
+          "selected_scores": [
+            {
+              "score": "6-5",
+              "probability": 0.030034003091190115,
+              "winner_side": "team_a",
+              "rationale_cn": "6-5与矩阵中英格兰获胜比分一致，属于进入突然死亡后的低概率尾部场景。该比分符合点球规则：前五轮打平后继续逐轮主罚，最终英格兰以一球优势胜出。",
+              "rationale_en": "6-5 matches the England win scoreline in the matrix and is a low-probability tail scenario after sudden death. This score fits penalty rules: after the first five rounds are level, teams continue one kick at a time, with England eventually winning by one goal."
+            }
+          ],
+          "display_scores": [
+            "6-5"
+          ],
+          "rationale_cn": "6-5与矩阵中英格兰获胜比分一致，属于进入突然死亡后的低概率尾部场景。该比分符合点球规则：前五轮打平后继续逐轮主罚，最终英格兰以一球优势胜出。",
+          "label_en": "Extended shootout decider",
+          "definition_en": "Both sides are strong through the first five rounds, with the result decided only after sudden death in round 6+.",
+          "rationale_en": "6-5 matches the England win scoreline in the matrix and is a low-probability tail scenario after sudden death. This score fits penalty rules: after the first five rounds are level, teams continue one kick at a time, with England eventually winning by one goal."
+        }
+      ],
+      "key_factors": [
+        {
+          "factor_id": "KF_01",
+          "label_cn": "门将边际",
+          "impact_cn": "阿根廷在点球分支的主要边际来自Emiliano Martinez，他有代表队扑点和迫使对手罚失记录；但点球样本有限，只能构成小到中等优势，不能视为确定性胜负证据。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Goalkeeper edge",
+          "impact_en": "Argentina’s main edge in the penalty branch comes from Emiliano Martinez, who has a national-team record of saves and forcing misses; however, penalty samples are limited, so this is only a small to moderate edge, not decisive evidence.",
+          "text_cn": "阿根廷在点球分支的主要边际来自Emiliano Martinez，他有代表队扑点和迫使对手罚失记录；但点球样本有限，只能构成小到中等优势，不能视为确定性胜负证据。",
+          "text_en": "Argentina’s main edge in the penalty branch comes from Emiliano Martinez, who has a national-team record of saves and forcing misses; however, penalty samples are limited, so this is only a small to moderate edge, not decisive evidence."
+        },
+        {
+          "factor_id": "KF_02",
+          "label_cn": "皮克福德反制",
+          "impact_cn": "英格兰并非传统叙事中的明显短板，Jordan Pickford近年代表英格兰的点球表现被评估为显著正面，能通过预判和准备削弱Martinez带来的阿根廷门将优势。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Pickford counter",
+          "impact_en": "England are not the clear weak point suggested by the usual narrative. Jordan Pickford's recent penalty record for England is rated strongly positive, and his anticipation and preparation can reduce the goalkeeper edge Martinez gives Argentina.",
+          "text_cn": "英格兰并非传统叙事中的明显短板，Jordan Pickford近年代表英格兰的点球表现被评估为显著正面，能通过预判和准备削弱Martinez带来的阿根廷门将优势。",
+          "text_en": "England are not the clear weak point suggested by the usual narrative. Jordan Pickford's recent penalty record for England is rated strongly positive, and his anticipation and preparation can reduce the goalkeeper edge Martinez gives Argentina."
+        },
+        {
+          "factor_id": "KF_03",
+          "label_cn": "主罚名单缺口",
+          "impact_cn": "当前缺少双方官方前五罚顺序、替补后主罚顺位和训练命中率；Kane、Bellingham、Messi、Alvarez、Lautaro等只能按角色与经验推断，不能视为已确认点球手。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Penalty taker list gap",
+          "impact_en": "Official first-five penalty orders, post-substitution taker hierarchy, and training conversion rates are currently unavailable for both teams; Kane, Bellingham, Messi, Alvarez, Lautaro and others can only be inferred by role and experience, not treated as confirmed penalty takers.",
+          "text_cn": "当前缺少双方官方前五罚顺序、替补后主罚顺位和训练命中率；Kane、Bellingham、Messi、Alvarez、Lautaro等只能按角色与经验推断，不能视为已确认点球手。",
+          "text_en": "Official first-five penalty orders, post-substitution taker hierarchy, and training conversion rates are currently unavailable for both teams; Kane, Bellingham, Messi, Alvarez, Lautaro and others can only be inferred by role and experience, not treated as confirmed penalty takers."
+        },
+        {
+          "factor_id": "KF_04",
+          "label_cn": "核心留场",
+          "impact_cn": "120分钟结束时Kane、Bellingham、Messi、Alvarez、Lautaro是否仍在场是关键证据缺口；若其中核心被换下或疲劳明显，双方前五罚结构和点球质量都需重估。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Core takers staying on",
+          "impact_en": "Whether Kane, Bellingham, Messi, Alvarez, and Lautaro are still on the pitch at 120 minutes is a key evidence gap; if any core player has been substituted or is clearly fatigued, both teams' first-five penalty order and penalty quality need reassessment.",
+          "text_cn": "120分钟结束时Kane、Bellingham、Messi、Alvarez、Lautaro是否仍在场是关键证据缺口；若其中核心被换下或疲劳明显，双方前五罚结构和点球质量都需重估。",
+          "text_en": "Whether Kane, Bellingham, Messi, Alvarez, and Lautaro are still on the pitch at 120 minutes is a key evidence gap; if any core player has been substituted or is clearly fatigued, both teams' first-five penalty order and penalty quality need reassessment."
+        },
+        {
+          "factor_id": "KF_05",
+          "label_cn": "加时换人链",
+          "impact_cn": "Declan Rice、Reece James、Messi、Romero、Paredes等人的体能与健康状态会影响加时换人，进而改变点球名单；目前缺少可靠数据确认他们能否稳定留到120分钟。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Extra-time substitution chain",
+          "impact_en": "The fitness and health of Declan Rice, Reece James, Messi, Romero, Paredes and others could affect extra-time substitutions and change the penalty taker list; there is currently no reliable data confirming they can consistently last to 120 minutes.",
+          "text_cn": "Declan Rice、Reece James、Messi、Romero、Paredes等人的体能与健康状态会影响加时换人，进而改变点球名单；目前缺少可靠数据确认他们能否稳定留到120分钟。",
+          "text_en": "The fitness and health of Declan Rice, Reece James, Messi, Romero, Paredes and others could affect extra-time substitutions and change the penalty taker list; there is currently no reliable data confirming they can consistently last to 120 minutes."
+        },
+        {
+          "factor_id": "KF_06",
+          "label_cn": "节奏与压力",
+          "impact_cn": "若进入点球，Martinez的站位、拖延、语言和心理干扰可能影响英格兰前两罚节奏；但Pickford也可能维持英格兰竞争性，因此该因素只能作为小幅条件调整。",
+          "direction": null,
+          "evidence_ids": [],
+          "source_names": [
+            "penalties_mini_pipeline"
+          ],
+          "label_en": "Rhythm and pressure",
+          "impact_en": "If it goes to penalties, Martinez's positioning, delays, verbal pressure, and mind games could disrupt England's rhythm on the first two kicks. But Pickford could also keep England competitive, so this factor should only be a small conditional adjustment.",
+          "text_cn": "若进入点球，Martinez的站位、拖延、语言和心理干扰可能影响英格兰前两罚节奏；但Pickford也可能维持英格兰竞争性，因此该因素只能作为小幅条件调整。",
+          "text_en": "If it goes to penalties, Martinez's positioning, delays, verbal pressure, and mind games could disrupt England's rhythm on the first two kicks. But Pickford could also keep England competitive, so this factor should only be a small conditional adjustment."
+        }
+      ],
+      "workflow_cn": "点球专属流程：证据整合 → 4个专家Agent → 专家委员会聚合 → 点球序列Rollout → 点球比分矩阵 → 点球Tail审计 → 报告输出。",
+      "title_en": "Penalty shootout (if reached)",
+      "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+      "workflow_en": "Penalty-specific flow: evidence integration → four expert agents → expert committee aggregation → penalty-sequence rollouts → penalty score matrix → penalty tail audit → report output."
+    }
+  },
+  "files": {
+    "match_card": "match_card.json",
+    "match_detail": "match_detail.json",
+    "normal_time_matrix": "normal_time_matrix.json",
+    "normal_time_deviation": "normal_time_deviation.json",
+    "extra_time_matrix": "extra_time_matrix.json",
+    "extra_time_deviation": "extra_time_deviation.json",
+    "penalty_matrix": "penalty_matrix.json",
+    "penalty_deviation": "penalty_deviation.json"
+  },
+  "pipeline_status": {
+    "unified_knockout_pipeline": "ready",
+    "branch_aware_rollout_mc": "ready",
+    "normal_time_pipeline": "main_pipeline_stage_aware",
+    "extra_time_condition_calibrator": "ready",
+    "penalty_condition_calibrator": "partial_fallback",
+    "full_path_tail": "ready",
+    "unified_tail_tree": "pass"
+  },
+  "updated_at": "2026-07-15T05:15:19.532496Z",
+  "method_en": "v6.3 branch-aware knockout pipeline: pre-match evidence and the expert committee generate cross-phase mechanisms; MAS rollouts produce conditional paths for 90 minutes, extra time if level, and penalties if still level; Monte Carlo sampling is then performed on the full path tree.",
+  "architecture_en": "Extra time and penalties are no longer independent post-processing outputs. They are driven by the same MAS conditional rollout; the three frontend tabs are different slices of one complete path distribution, while the JSON structure remains compatible with v6.2.2."
+}

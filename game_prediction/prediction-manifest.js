@@ -424,5 +424,10 @@ window.WORLD_CUP_GAME_PREDICTION_MANIFEST = [
     matchNo: "M101",
     matchFolder: "France_vs_Spain_M101",
     versions: ["2026.7.14.14.01"]
+  },
+  {
+    matchNo: "M102",
+    matchFolder: "England_vs_Argentina_M102",
+    versions: ["2026.7.15.13.30"]
   }
 ];
