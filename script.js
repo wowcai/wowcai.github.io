@@ -613,7 +613,8 @@ function parseTournamentEvidenceMarkdown(markdown, fileName) {
   let current = null;
 
   String(markdown || "").split(/\r?\n/).forEach((line) => {
-    const heading = line.match(/^##\s+(.+?)(?::|：)\s*(.+)$/);
+    const heading = line.match(/^##\s+(.+?)(?::|\uFF1A)\s*(.+)$/);
+    const anyHeading = line.match(/^##\s+/);
     const bullet = line.match(/^-\s+(.+)$/);
 
     if (heading) {
@@ -623,6 +624,11 @@ function parseTournamentEvidenceMarkdown(markdown, fileName) {
         evidence: []
       };
       sections.push(current);
+      return;
+    }
+
+    if (anyHeading) {
+      current = null;
       return;
     }
 
