@@ -1,31 +1,5 @@
 # 2026 世界杯全量长期预测四模型综合报告（中文版）
 
-## 最终综合预测清单
-
-| 项目 | 综合预测 |
-| --- | --- |
-| 冠军 | Spain |
-| 亚军 | England |
-| 第三名 | France |
-| 第四名 | Argentina |
-| 金球奖 | Lionel Messi (Argentina) |
-| 金靴奖 | Lionel Messi (Argentina) |
-| 金手套奖 | Unai Simon (Spain) |
-| 最佳年轻球员 | Lamine Yamal (Spain) |
-| 决赛最佳球员 | Lamine Yamal (Spain) |
-| 最佳进球 | Lionel Messi (Argentina) |
-| 公平竞赛球队 | Spain |
-| 最具观赏性球队 | Spain |
-
-## 当前晋级概率摘要
-
-| 球队 | 四强 | 决赛 | 冠军 |
-| --- | ---: | ---: | ---: |
-| Spain | 100.0% | 100.0% | 56.9% |
-| England | 100.0% | 52.0% | 22.0% |
-| Argentina | 100.0% | 48.0% | 21.1% |
-| France | 100.0% | 0.0% | 0.0% |
-
 ## 冠军: Spain
 1. 四个模型都把 Spain 放在冠军位，这是当前最强的团队级共识。
 2. Spain 已 2-0 淘汰 France，进决赛概率固定为 100%，冠军概率约为 56.9%。
