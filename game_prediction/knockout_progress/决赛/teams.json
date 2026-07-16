@@ -1,4 +1,21 @@
 {
   "round": "final",
-  "matches": []
+  "matches": [
+    {
+      "matchNo": "M103",
+      "status": "scheduled",
+      "teams": ["FRA", "ENG"],
+      "matchTime": "7月18日 21:00 UTC",
+      "kickoffUtc": "2026-07-18T21:00:00Z",
+      "source": "M101 loser vs M102 loser"
+    },
+    {
+      "matchNo": "M104",
+      "status": "scheduled",
+      "teams": ["ESP", "ARG"],
+      "matchTime": "7月19日 19:00 UTC",
+      "kickoffUtc": "2026-07-19T19:00:00Z",
+      "source": "M101 winner vs M102 winner"
+    }
+  ]
 }

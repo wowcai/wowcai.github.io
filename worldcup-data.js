@@ -472,7 +472,9 @@ const knockoutMatchTeamsByNo = {
   M99: ["NOR", "ENG"],
   M100: ["ARG", "SUI"],
   M101: ["FRA", "ESP"],
-  M102: ["ENG", "ARG"]
+  M102: ["ENG", "ARG"],
+  M103: ["FRA", "ENG"],
+  M104: ["ESP", "ARG"]
 };
 const formatKnockoutUtcTime = (value) => {
   const date = new Date(value);
@@ -782,6 +784,22 @@ window.WORLD_CUP_KNOCKOUT_PROGRESS = {
         kickoffUtc: "2026-07-15T19:00:00Z",
         source: "M99 winner vs M100 winner"
       }
+    },
+    final: {
+      M103: {
+        status: "scheduled",
+        teams: ["FRA", "ENG"],
+        matchTime: "7月18日 21:00 UTC",
+        kickoffUtc: "2026-07-18T21:00:00Z",
+        source: "M101 loser vs M102 loser"
+      },
+      M104: {
+        status: "scheduled",
+        teams: ["ESP", "ARG"],
+        matchTime: "7月19日 19:00 UTC",
+        kickoffUtc: "2026-07-19T19:00:00Z",
+        source: "M101 winner vs M102 winner"
+      }
     }
   }
 };
@@ -886,11 +904,19 @@ window.WORLD_CUP_ROUTE_DATA = {
   final: {
     id: "route-final",
     round: "final",
-    status: "empty",
+    status: "scheduled",
     matchNo: "M104",
     teams: [
-      { id: "final-left", round: "final", status: "empty", slotLabel: "M101胜者", descriptionZh: "决赛左侧席位" },
-      { id: "final-right", round: "final", status: "empty", slotLabel: "M102胜者", descriptionZh: "决赛右侧席位" }
+      { id: "final-title", round: "final", status: "scheduled", matchNo: "M104", teamIds: ["ESP", "ARG"], slotLabel: "西班牙 vs 阿根廷", descriptionZh: "冠军争夺 · M104" }
+    ]
+  },
+  thirdPlace: {
+    id: "route-third-place",
+    round: "thirdPlace",
+    status: "scheduled",
+    matchNo: "M103",
+    teams: [
+      { id: "third-place-title", round: "thirdPlace", status: "scheduled", matchNo: "M103", teamIds: ["FRA", "ENG"], slotLabel: "法国 vs 英格兰", descriptionZh: "季军争夺 · M103" }
     ]
   },
   champion: {

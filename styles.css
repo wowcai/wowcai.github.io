@@ -2585,7 +2585,7 @@ button.group-result-line:hover {
   grid-column: span 1;
   min-width: 0;
   display: grid;
-  grid-template-rows: auto 18px auto;
+  grid-template-rows: auto 20px auto;
   align-content: center;
   gap: 8px;
   padding: 0;
@@ -2642,27 +2642,12 @@ button.group-result-line:hover {
 }
 
 .champion-node-wrap .team-route-card {
-  min-height: clamp(64px, 5.8vw, 90px);
-  border-color: rgba(246, 196, 83, 0.58);
+  min-height: clamp(58px, 5vw, 78px);
+  border-color: rgba(58, 176, 255, 0.34);
   background:
-    radial-gradient(circle at 50% 0%, rgba(246, 196, 83, 0.2), transparent 7rem),
-    linear-gradient(180deg, rgba(255, 247, 214, 0.22), rgba(255, 255, 255, 0.1));
-  box-shadow: 0 0 0 1px rgba(246, 196, 83, 0.2), 0 16px 46px rgba(246, 196, 83, 0.18);
-}
-
-.champion-node-wrap .team-route-card::after {
-  content: "";
-  position: absolute;
-  top: -18px;
-  right: -8px;
-  width: 24px;
-  height: 24px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #f6c453;
-  box-shadow: 0 0 24px rgba(246, 196, 83, 0.8);
-  font-size: 14px;
+    radial-gradient(circle at 50% 0%, rgba(58, 176, 255, 0.16), transparent 7rem),
+    linear-gradient(180deg, rgba(239, 246, 255, 0.22), rgba(255, 255, 255, 0.1));
+  box-shadow: 0 0 0 1px rgba(58, 176, 255, 0.14), 0 16px 38px rgba(58, 176, 255, 0.12);
 }
 
 .route-round-column {

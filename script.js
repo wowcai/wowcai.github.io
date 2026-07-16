@@ -2102,7 +2102,7 @@ function renderTournamentRouteMap(routeData, matches = worldCupMatches || [], kn
       </div>
       <div class="bidirectional-route-map">
         ${renderBracketSidePanel(enrichedRouteData.leftBracket, matches)}
-        ${renderFinalChampionPanel(enrichedRouteData.final, enrichedRouteData.champion, matches)}
+        ${renderFinalChampionPanel(enrichedRouteData.final, enrichedRouteData.champion, matches, enrichedRouteData.thirdPlace)}
         ${renderBracketSidePanel(enrichedRouteData.rightBracket, matches)}
       </div>
       ${renderGroupStageSnapshot(worldCupGroups || [], matches)}
@@ -2138,6 +2138,10 @@ function enrichTournamentRouteData(routeData, progress = {}) {
     final: {
       ...(routeData.final || {}),
       teams: (routeData.final?.teams || []).map(enrichNode)
+    },
+    thirdPlace: {
+      ...(routeData.thirdPlace || {}),
+      teams: (routeData.thirdPlace?.teams || []).map(enrichNode)
     },
     champion: enrichNode(routeData.champion)
   };
@@ -2342,25 +2346,27 @@ function renderBracketSidePanel(sideData, matches = worldCupMatches || []) {
   `;
 }
 
-function renderFinalChampionPanel(finalData, championNode, matches = worldCupMatches || []) {
+function renderFinalChampionPanel(finalData, championNode, matches = worldCupMatches || [], thirdPlaceData = {}) {
   return `
     <section class="final-champion-panel">
       <div class="final-node-group">
         <div class="route-round-head final-head">
           <span>FINAL</span>
-          <h3 ${biAttrs("决赛", "Final")}>${L("决赛", "Final")}</h3>
+          <h3 ${biAttrs("冠军争夺", "Title match")}>${L("冠军争夺", "Title match")}</h3>
         </div>
         <div class="final-team-list">
-          ${(finalData.teams || []).map((node) => renderRouteNode({ ...node, matchNo: finalData.matchNo }, "center", matches)).join("")}
+          ${(finalData.teams || []).map((node) => renderRouteNode({ ...node, matchNo: node.matchNo || finalData.matchNo }, "center", matches)).join("")}
         </div>
       </div>
       <div class="champion-connector" aria-hidden="true"></div>
       <div class="champion-node-wrap">
         <div class="route-round-head champion-head">
-          <span>CHAMPION</span>
-          <h3 ${biAttrs("冠军", "Champion")}>${L("冠军", "Champion")}</h3>
+          <span>THIRD PLACE</span>
+          <h3 ${biAttrs("季军争夺", "Third-place match")}>${L("季军争夺", "Third-place match")}</h3>
         </div>
-        ${renderRouteNode(championNode, "center", matches)}
+        <div class="final-team-list">
+          ${(thirdPlaceData.teams || []).map((node) => renderRouteNode({ ...node, matchNo: node.matchNo || thirdPlaceData.matchNo }, "center", matches)).join("")}
+        </div>
       </div>
     </section>
   `;
