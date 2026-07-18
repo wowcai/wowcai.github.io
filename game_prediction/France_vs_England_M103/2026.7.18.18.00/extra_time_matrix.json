@@ -1,0 +1,844 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "matrix_type": "extra_time_increment_dense_4x4",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "axis_note_cn": "纵轴为加时阶段team_a增量进球，横轴为team_b增量进球；3+表示至少3球。概率为进入加时后的条件概率。",
+  "row_axis": {
+    "team": "France",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3+"
+    ]
+  },
+  "column_axis": {
+    "team": "England",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3+"
+    ]
+  },
+  "matrix": [
+    [
+      0.4440400363967241,
+      0.16014558689717937,
+      0.03275705186533214,
+      0.008189262966333035
+    ],
+    [
+      0.1710646041856234,
+      0.07825295723384892,
+      0.018198362147406746,
+      0.0018198362147406745
+    ],
+    [
+      0.04458598726114652,
+      0.02001819836214742,
+      0.004549590536851686,
+      0.0
+    ],
+    [
+      0.010919017288444048,
+      0.005459508644222024,
+      0.0,
+      0.0
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "0",
+      "probability": 0.4440400363967241,
+      "probability_percent": 44.404,
+      "top_scores": [
+        {
+          "score": "0-0",
+          "probability": 0.4440400363967241
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "1",
+      "probability": 0.16014558689717937,
+      "probability_percent": 16.0146,
+      "top_scores": [
+        {
+          "score": "0-1",
+          "probability": 0.16014558689717937
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "2",
+      "probability": 0.03275705186533214,
+      "probability_percent": 3.2757,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.03275705186533214
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "3+",
+      "probability": 0.008189262966333035,
+      "probability_percent": 0.8189,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.007279344858962698
+        },
+        {
+          "score": "0-4",
+          "probability": 0.0009099181073703372
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "0",
+      "probability": 0.1710646041856234,
+      "probability_percent": 17.1065,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.1710646041856234
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "1",
+      "probability": 0.07825295723384892,
+      "probability_percent": 7.8253,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.07825295723384892
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "2",
+      "probability": 0.018198362147406746,
+      "probability_percent": 1.8198,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.018198362147406746
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0018198362147406745,
+      "probability_percent": 0.182,
+      "top_scores": [
+        {
+          "score": "1-5",
+          "probability": 0.0009099181073703372
+        },
+        {
+          "score": "1-3",
+          "probability": 0.0009099181073703372
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "0",
+      "probability": 0.04458598726114652,
+      "probability_percent": 4.4586,
+      "top_scores": [
+        {
+          "score": "2-0",
+          "probability": 0.04458598726114652
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "1",
+      "probability": 0.02001819836214742,
+      "probability_percent": 2.0018,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.02001819836214742
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "2",
+      "probability": 0.004549590536851686,
+      "probability_percent": 0.455,
+      "top_scores": [
+        {
+          "score": "2-2",
+          "probability": 0.004549590536851686
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "0",
+      "probability": 0.010919017288444048,
+      "probability_percent": 1.0919,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.010919017288444048
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "1",
+      "probability": 0.005459508644222024,
+      "probability_percent": 0.546,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.004549590536851686
+        },
+        {
+          "score": "4-1",
+          "probability": 0.0009099181073703372
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    }
+  ],
+  "rows": [
+    {
+      "increment": "0-0",
+      "score": "0-0",
+      "extra_goals_a": 0,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.4440400363967241,
+      "joint_probability": 0.1173076923076922,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.4440400363967241,
+      "rationale_cn": "最大单一加时增量路径。条件样本来自90分钟打平，入口比分主要为1-1、2-2、0-0，但加时只有30分钟，且体能下降、换人后进攻连接下降、双方对点球入口的认知都会压低冒险强度。0-0入口、核心攻击手提前下场、英格兰珍惜Pickford点球准备价值时，该项上调。",
+      "rationale_en": "0-0 is a conservative extra-time increment after a 90-minute draw. Extra time is only 30 minutes, fatigue and substitution patterns can reduce attacking continuity, and both sides may protect the penalty-entry path. The model assigns this path about 44.4% within the relevant distribution. France's route leans on transition speed and wide/half-space quality, while England's route leans on Kane, Bellingham, set pieces and late-game response capacity."
+    },
+    {
+      "increment": "1-0",
+      "score": "1-0",
+      "extra_goals_a": 1,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.1710646041856234,
+      "joint_probability": 0.04519230769230769,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_resolution",
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.1710646041856234,
+      "rationale_cn": "法国加时一球胜是最主要胜负路径。法国多一天恢复，若姆巴佩、登贝莱、奥利塞、杜埃或切尔基等边路/半空间资源仍在场，面对James缺阵后英格兰右路和中卫轮换、Rice体能存疑与短恢复，加时阶段更容易通过边路隔离、禁区二点或一次高质量个人动作破局。",
+      "rationale_en": "A one-goal France win in extra time is the main outcome path. France have one extra day of recovery, and if wide/half-space options such as Mbappé, Dembélé, Olise, Doué or Cherki are still on the pitch, they are more likely in extra time to break through via wide isolations, second balls in the box, or one high-quality individual action against an England side missing James, rotating on the right and at centre-back, with Rice’s fitness uncertain and shorter recovery."
+    },
+    {
+      "increment": "0-1",
+      "score": "0-1",
+      "extra_goals_a": 0,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.16014558689717937,
+      "joint_probability": 0.04230769230769231,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_resolution",
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.16014558689717937,
+      "rationale_cn": "英格兰加时一球胜是现实但低于法国1-0的路径。若Kane、Bellingham和Gordon/Saka/Rogers等仍在场，且Tuchel没有重复半决赛后段过深低位，英格兰可通过中路推进、转换、定位球、Kane禁区终结或Bellingham后插上完成加时小胜。",
+      "rationale_en": "0-1 is a decisive extra-time increment for England. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 16.0% within the relevant distribution. France's route leans on transition speed and wide/half-space quality, while England's route leans on Kane, Bellingham, set pieces and late-game response capacity."
+    },
+    {
+      "increment": "1-1",
+      "score": "1-1",
+      "extra_goals_a": 1,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.07825295723384892,
+      "joint_probability": 0.0206730769230769,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.07825295723384892,
+      "rationale_cn": "双方加时各进一球但120分钟仍平。该路径主要在90分钟入口为1-1、2-2或更开放平局时上升，说明前90分钟已经出现转换空间、防线波动或双方进攻兑现。疲劳会降低防守回追，但双方仍具备回应能力，因此加时有进球后仍可能回到点球入口。",
+      "rationale_en": "Both teams score once in extra time but remain level after 120 minutes. This path mainly rises when the 90-minute score is 1-1, 2-2, or a more open draw, suggesting transition space, defensive instability, or attacking execution has already appeared in the first 90 minutes. Fatigue reduces defensive recovery runs, but both sides can still respond, so goals in extra time can still lead back to penalties."
+    },
+    {
+      "increment": "2-0",
+      "score": "2-0",
+      "extra_goals_a": 2,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.04458598726114652,
+      "joint_probability": 0.011778846153846154,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.04458598726114652,
+      "rationale_cn": "法国加时两球胜的低频尾部。通常需要法国先得分后英格兰被迫压上，同时英格兰右路/中卫连续性、Rice覆盖或体能出现明显断档，法国再利用姆巴佩、登贝莱、奥利塞或替补速度点获得转换空间扩大比分。",
+      "rationale_en": "A two-goal France win in extra time is a low-frequency tail outcome. It would usually require France to score first, forcing England to push up, while England show clear gaps in right-side/centre-back continuity, Rice’s coverage or fitness, allowing France to use Mbappé, Dembélé, Olise or substitute pace to find transition space and extend the lead."
+    },
+    {
+      "increment": "0-2",
+      "score": "0-2",
+      "extra_goals_a": 0,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.03275705186533214,
+      "joint_probability": 0.008653846153846154,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.03275705186533214,
+      "rationale_cn": "英格兰加时两球胜的弱势尾部。需要法国为了避免点球主动提高风险、后场保护不足，英格兰先通过Bellingham推进、长传转换或定位球取得领先，随后法国追分压上再被Kane或速度型边锋打入第二球。",
+      "rationale_en": "0-2 is a decisive extra-time increment for England. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 3.3% within the relevant distribution. France's route leans on transition speed and wide/half-space quality, while England's route leans on Kane, Bellingham, set pieces and late-game response capacity."
+    },
+    {
+      "increment": "2-1",
+      "score": "2-1",
+      "extra_goals_a": 2,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.02001819836214742,
+      "joint_probability": 0.005288461538461539,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.02001819836214742,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "1-2",
+      "score": "1-2",
+      "extra_goals_a": 1,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.018198362147406746,
+      "joint_probability": 0.004807692307692308,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.018198362147406746,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "3-0",
+      "score": "3-0",
+      "extra_goals_a": 3,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.010919017288444048,
+      "joint_probability": 0.0028846153846153848,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.010919017288444048,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "0-3",
+      "score": "0-3",
+      "extra_goals_a": 0,
+      "extra_goals_b": 3,
+      "conditional_probability": 0.007279344858962698,
+      "joint_probability": 0.0019230769230769232,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.007279344858962698,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "3-1",
+      "score": "3-1",
+      "extra_goals_a": 3,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.004549590536851686,
+      "joint_probability": 0.001201923076923077,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.004549590536851686,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "2-2",
+      "score": "2-2",
+      "extra_goals_a": 2,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.004549590536851686,
+      "joint_probability": 0.001201923076923077,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.004549590536851686,
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "increment": "4-1",
+      "score": "4-1",
+      "extra_goals_a": 4,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.0009099181073703372,
+      "joint_probability": 0.0002403846153846154,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0009099181073703372,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "4-1 is a decisive extra-time increment for France. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 0.1% within the relevant distribution. France's route leans on transition speed and wide/half-space quality, while England's route leans on Kane, Bellingham, set pieces and late-game response capacity."
+    },
+    {
+      "increment": "1-5",
+      "score": "1-5",
+      "extra_goals_a": 1,
+      "extra_goals_b": 5,
+      "conditional_probability": 0.0009099181073703372,
+      "joint_probability": 0.0002403846153846154,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0009099181073703372,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "1-5 is a decisive extra-time increment for England. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 0.1% within the relevant distribution. France's route leans on transition speed and wide/half-space quality, while England's route leans on Kane, Bellingham, set pieces and late-game response capacity."
+    },
+    {
+      "increment": "0-4",
+      "score": "0-4",
+      "extra_goals_a": 0,
+      "extra_goals_b": 4,
+      "conditional_probability": 0.0009099181073703372,
+      "joint_probability": 0.0002403846153846154,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0009099181073703372,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "0-4 is a decisive extra-time increment for England. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 0.1% within the relevant distribution. France's route leans on transition speed and wide/half-space quality, while England's route leans on Kane, Bellingham, set pieces and late-game response capacity."
+    },
+    {
+      "increment": "1-3",
+      "score": "1-3",
+      "extra_goals_a": 1,
+      "extra_goals_b": 3,
+      "conditional_probability": 0.0009099181073703372,
+      "joint_probability": 0.0002403846153846154,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0009099181073703372,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    }
+  ],
+  "after_extra_time_top": [
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.4440400363967241,
+      "after_extra_time_score": "1-1",
+      "joint_branch_probability": 0.052336593873218054,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.06411458333333334,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.4440400363967241,
+      "after_extra_time_score": "2-2",
+      "joint_branch_probability": 0.028469441916894135,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.060885416666666664,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.4440400363967241,
+      "after_extra_time_score": "0-0",
+      "joint_branch_probability": 0.02703556263269638,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.1710646041856234,
+      "after_extra_time_score": "2-1",
+      "joint_branch_probability": 0.02016245829542009,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.16014558689717937,
+      "after_extra_time_score": "1-2",
+      "joint_branch_probability": 0.01887549287230817,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.06411458333333334,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.1710646041856234,
+      "after_extra_time_score": "3-2",
+      "joint_branch_probability": 0.010967735820442833,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.060885416666666664,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.1710646041856234,
+      "after_extra_time_score": "1-0",
+      "joint_branch_probability": 0.01041533970276009,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.06411458333333334,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.16014558689717937,
+      "after_extra_time_score": "2-3",
+      "joint_branch_probability": 0.010267667576584781,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.060885416666666664,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.16014558689717937,
+      "after_extra_time_score": "0-1",
+      "joint_branch_probability": 0.00975053078556264,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.07825295723384892,
+      "after_extra_time_score": "2-2",
+      "joint_branch_probability": 0.009223252198968756,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.016458333333333332,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.4440400363967241,
+      "after_extra_time_score": "3-3",
+      "joint_branch_probability": 0.007308158932362751,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.04458598726114652,
+      "after_extra_time_score": "3-1",
+      "joint_branch_probability": 0.005255108811040342,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.06411458333333334,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.07825295723384892,
+      "after_extra_time_score": "3-3",
+      "joint_branch_probability": 0.005017155747649376,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.060885416666666664,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.07825295723384892,
+      "after_extra_time_score": "1-1",
+      "joint_branch_probability": 0.004764463906581739,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.03275705186533214,
+      "after_extra_time_score": "1-3",
+      "joint_branch_probability": 0.003860896269335762,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.06411458333333334,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.04458598726114652,
+      "after_extra_time_score": "4-2",
+      "joint_branch_probability": 0.0028586119957537174,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.016458333333333332,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.1710646041856234,
+      "after_extra_time_score": "4-3",
+      "joint_branch_probability": 0.0028154382772217178,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.060885416666666664,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.04458598726114652,
+      "after_extra_time_score": "2-0",
+      "joint_branch_probability": 0.002714636411889598,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.016458333333333332,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.16014558689717937,
+      "after_extra_time_score": "3-4",
+      "joint_branch_probability": 0.0026357294510160768,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "2-1",
+      "extra_time_increment_probability": 0.02001819836214742,
+      "after_extra_time_score": "3-2",
+      "joint_branch_probability": 0.0023594366090385213,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.018198362147406746,
+      "after_extra_time_score": "2-3",
+      "joint_branch_probability": 0.0021449423718532014,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.06411458333333334,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.03275705186533214,
+      "after_extra_time_score": "2-4",
+      "joint_branch_probability": 0.00210020473157416,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.060885416666666664,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.03275705186533214,
+      "after_extra_time_score": "0-2",
+      "joint_branch_probability": 0.001994426751592358,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "4-4",
+      "normal_time_draw_probability": 0.0030208333333333333,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.4440400363967241,
+      "after_extra_time_score": "4-4",
+      "joint_branch_probability": 0.0013413709432817708,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.016458333333333332,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.07825295723384892,
+      "after_extra_time_score": "4-4",
+      "joint_branch_probability": 0.0012879132544737634,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.11786458333333333,
+      "extra_time_increment": "3-0",
+      "extra_time_increment_probability": 0.010919017288444048,
+      "after_extra_time_score": "4-1",
+      "joint_branch_probability": 0.0012869654231119209,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.06411458333333334,
+      "extra_time_increment": "2-1",
+      "extra_time_increment_probability": 0.02001819836214742,
+      "after_extra_time_score": "4-3",
+      "joint_branch_probability": 0.0012834584470730976,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.060885416666666664,
+      "extra_time_increment": "2-1",
+      "extra_time_increment_probability": 0.02001819836214742,
+      "after_extra_time_score": "2-1",
+      "joint_branch_probability": 0.00121881634819533,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.06411458333333334,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.018198362147406746,
+      "after_extra_time_score": "3-4",
+      "joint_branch_probability": 0.0011667804064300889,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.060885416666666664,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.018198362147406746,
+      "after_extra_time_score": "1-2",
+      "joint_branch_probability": 0.0011080148619957543,
+      "extra_time_outcome": "team_b"
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "低比分主轴",
+      "impact_cn": "仅在90分钟打平后进入加时；加时30分钟仍以低增量为主，120分钟仍平为最大分支，0-0增量概率0.41，尤其在核心攻击手下场或双方保护点球入口时上调。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Low-score baseline",
+      "impact_en": "Extra time only occurs if it is level after 90 minutes; the 30 minutes of extra time still has low added-scoring upside, with still level after 120 minutes the largest branch. The 0-0 added probability is 0.41, rising especially if key attackers go off or both sides protect the path to penalties.",
+      "text_cn": "仅在90分钟打平后进入加时；加时30分钟仍以低增量为主，120分钟仍平为最大分支，0-0增量概率0.41，尤其在核心攻击手下场或双方保护点球入口时上调。",
+      "text_en": "Extra time only occurs if it is level after 90 minutes; the 30 minutes of extra time still has low added-scoring upside, with still level after 120 minutes the largest branch. The 0-0 added probability is 0.41, rising especially if key attackers go off or both sides protect the path to penalties."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "法国边路小优",
+      "impact_cn": "若姆巴佩、登贝莱、奥利塞、杜埃或切尔基仍有体能，法国可利用多一天恢复和边路/半空间质量，针对英格兰James缺阵后的右路与中卫轮换风险制造1-0路径。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Slight France edge out wide",
+      "impact_en": "If Mbappé, Dembélé, Olise, Doué or Cherki still have legs, France can use the extra day of recovery and their wide/half-space quality to target England's right side after James's absence and centre-back rotation risk, creating a 1-0 path.",
+      "text_cn": "若姆巴佩、登贝莱、奥利塞、杜埃或切尔基仍有体能，法国可利用多一天恢复和边路/半空间质量，针对英格兰James缺阵后的右路与中卫轮换风险制造1-0路径。",
+      "text_en": "If Mbappé, Dembélé, Olise, Doué or Cherki still have legs, France can use the extra day of recovery and their wide/half-space quality to target England's right side after James's absence and centre-back rotation risk, creating a 1-0 path."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "英格兰破局",
+      "impact_cn": "英格兰加时并非只能拖点球；若Kane、Bellingham与Gordon/Saka/Rogers仍在场，且Tuchel避免半决赛后段过深低位，可通过转换、定位球和中路推进争取0-1路径。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "England breakthrough route",
+      "impact_en": "England do not have to just play for penalties in extra time; if Kane, Bellingham and Gordon/Saka/Rogers are still on, and Tuchel avoids sitting too deep as in the late semi-final phase, they can seek a 0-1 path through transitions, set pieces and central progression.",
+      "text_cn": "英格兰加时并非只能拖点球；若Kane、Bellingham与Gordon/Saka/Rogers仍在场，且Tuchel避免半决赛后段过深低位，可通过转换、定位球和中路推进争取0-1路径。",
+      "text_en": "England do not have to just play for penalties in extra time; if Kane, Bellingham and Gordon/Saka/Rogers are still on, and Tuchel avoids sitting too deep as in the late semi-final phase, they can seek a 0-1 path through transitions, set pieces and central progression."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "赖斯状态缺口",
+      "impact_cn": "Rice是否首发、替补登场及体能状态仍是证据缺口；他的覆盖质量会直接影响英格兰加时中场保护、禁区前二点控制，以及法国边路冲击能否持续放大。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Rice form gap",
+      "impact_en": "Whether Rice starts, comes on as a substitute, and his fitness remain evidence gaps; his coverage quality will directly affect England's extra-time midfield protection, control of second balls in front of the box, and whether France's wide threat can keep growing.",
+      "text_cn": "Rice是否首发、替补登场及体能状态仍是证据缺口；他的覆盖质量会直接影响英格兰加时中场保护、禁区前二点控制，以及法国边路冲击能否持续放大。",
+      "text_en": "Whether Rice starts, comes on as a substitute, and his fitness remain evidence gaps; his coverage quality will directly affect England's extra-time midfield protection, control of second balls in front of the box, and whether France's wide threat can keep growing."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "换人与留场",
+      "impact_cn": "90分钟时双方换人名额和主罚手留场情况缺少可靠数据；姆巴佩、Kane、Bellingham、Pickford等是否仍在场，会改变加时胜负路径与点球入口权重。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Substitutions and key players staying on",
+      "impact_en": "Reliable data is lacking on substitutions remaining and penalty takers still on the pitch at 90 minutes; whether Mbappe, Kane, Bellingham, Pickford and others remain on will affect extra-time win paths and penalty-shootout entry weight.",
+      "text_cn": "90分钟时双方换人名额和主罚手留场情况缺少可靠数据；姆巴佩、Kane、Bellingham、Pickford等是否仍在场，会改变加时胜负路径与点球入口权重。",
+      "text_en": "Reliable data is lacking on substitutions remaining and penalty takers still on the pitch at 90 minutes; whether Mbappe, Kane, Bellingham, Pickford and others remain on will affect extra-time win paths and penalty-shootout entry weight."
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "点球入口约束",
+      "impact_cn": "若120分钟仍平，Pickford准备与英格兰点球流程带来有限门将端优势；但这只在点球阶段生效，且受英格兰历史点球劣势和法国点球准备证据不足约束。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Penalty-entry constraint",
+      "impact_en": "If it is still level after 120 minutes, Pickford's preparation and England's penalty process give a limited goalkeeper-side edge; but this only applies in the shootout and is constrained by England's historical penalty weakness and limited evidence on France's penalty preparation.",
+      "text_cn": "若120分钟仍平，Pickford准备与英格兰点球流程带来有限门将端优势；但这只在点球阶段生效，且受英格兰历史点球劣势和法国点球准备证据不足约束。",
+      "text_en": "If it is still level after 120 minutes, Pickford's preparation and England's penalty process give a limited goalkeeper-side edge; but this only applies in the shootout and is constrained by England's historical penalty weakness and limited evidence on France's penalty preparation."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+  "axis_note_en": "Rows show France's extra-time goals and columns show England's extra-time goals; 3+ means at least three goals. Probabilities are conditional on reaching extra time."
+}

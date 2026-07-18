@@ -1,0 +1,825 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "matrix_type": "extra_time_increment_dense_4x4",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "axis_note_cn": "纵轴为加时阶段team_a增量进球，横轴为team_b增量进球；3+表示至少3球。概率为进入加时后的条件概率。",
+  "row_axis": {
+    "team": "Spain",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3+"
+    ]
+  },
+  "column_axis": {
+    "team": "Argentina",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3+"
+    ]
+  },
+  "matrix": [
+    [
+      0.44566133108677325,
+      0.16933445661331095,
+      0.02611625947767483,
+      0.0033698399326032038
+    ],
+    [
+      0.1836562763268746,
+      0.08087615838247682,
+      0.01600673967986522,
+      0.0016849199663016019
+    ],
+    [
+      0.040438079191238444,
+      0.01600673967986522,
+      0.0050547598989048054,
+      0.0
+    ],
+    [
+      0.00842459983150801,
+      0.0033698399326032038,
+      0.0,
+      0.0
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "0",
+      "probability": 0.44566133108677325,
+      "probability_percent": 44.5661,
+      "top_scores": [
+        {
+          "score": "0-0",
+          "probability": 0.44566133108677325
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "1",
+      "probability": 0.16933445661331095,
+      "probability_percent": 16.9334,
+      "top_scores": [
+        {
+          "score": "0-1",
+          "probability": 0.16933445661331095
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "2",
+      "probability": 0.02611625947767483,
+      "probability_percent": 2.6116,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.02611625947767483
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "0",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0033698399326032038,
+      "probability_percent": 0.337,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.0025273799494524027
+        },
+        {
+          "score": "0-4",
+          "probability": 0.0008424599831508009
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "0",
+      "probability": 0.1836562763268746,
+      "probability_percent": 18.3656,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.1836562763268746
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "1",
+      "probability": 0.08087615838247682,
+      "probability_percent": 8.0876,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.08087615838247682
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "2",
+      "probability": 0.01600673967986522,
+      "probability_percent": 1.6007,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.01600673967986522
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "1",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0016849199663016019,
+      "probability_percent": 0.1685,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.0016849199663016019
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "0",
+      "probability": 0.040438079191238444,
+      "probability_percent": 4.0438,
+      "top_scores": [
+        {
+          "score": "2-0",
+          "probability": 0.040438079191238444
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "1",
+      "probability": 0.01600673967986522,
+      "probability_percent": 1.6007,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.01600673967986522
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "2",
+      "probability": 0.0050547598989048054,
+      "probability_percent": 0.5055,
+      "top_scores": [
+        {
+          "score": "2-2",
+          "probability": 0.0050547598989048054
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "2",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "0",
+      "probability": 0.00842459983150801,
+      "probability_percent": 0.8425,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.007582139848357208
+        },
+        {
+          "score": "4-0",
+          "probability": 0.0008424599831508009
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "1",
+      "probability": 0.0033698399326032038,
+      "probability_percent": 0.337,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.0033698399326032038
+        }
+      ]
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_extra_goals": "3+",
+      "team_b_extra_goals": "3+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    }
+  ],
+  "rows": [
+    {
+      "increment": "0-0",
+      "score": "0-0",
+      "extra_goals_a": 0,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.44566133108677325,
+      "joint_probability": 0.12716346153846142,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.44566133108677325,
+      "rationale_cn": "最大单一分支。90分钟打平后的主入口多为1-1和0-0，决赛属性、双方失误控制、西班牙控球降节奏以及阿根廷接受点球树的战略价值共同抬高120分钟仍平概率。90-105分钟尤其偏谨慎，105分钟后即使西班牙小幅加码，也未必足以打穿阿根廷低位与二点保护。",
+      "rationale_en": "0-0 is a conservative extra-time increment after a 90-minute draw. Extra time is only 30 minutes, fatigue and substitution patterns can reduce attacking continuity, and both sides may protect the penalty-entry path. The model assigns this path about 44.6% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    },
+    {
+      "increment": "1-0",
+      "score": "1-0",
+      "extra_goals_a": 1,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.1836562763268746,
+      "joint_probability": 0.052403846153846155,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_resolution",
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.1836562763268746,
+      "rationale_cn": "加时内分胜负的首要方向略偏西班牙。依据是西班牙控场、全员可用、多一天恢复和替补质量；若105分钟仍平，西班牙更不愿进入阿根廷优势明显的点球分支，可能提高右路压上、传中、二点球和前场压迫频率，以一球解决比赛。",
+      "rationale_en": "The primary extra-time winner direction leans slightly toward Spain. This is based on Spain's control, full squad availability, one extra day of recovery, and substitute quality. If it is still level at 105 minutes, Spain may be more reluctant to enter a penalty shootout path where Argentina has a clear edge, and could increase right-side pushes, crosses, second-ball pressure, and high pressing to settle the match by one goal."
+    },
+    {
+      "increment": "0-1",
+      "score": "0-1",
+      "extra_goals_a": 0,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.16933445661331095,
+      "joint_probability": 0.04831730769230769,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_resolution",
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.16933445661331095,
+      "rationale_cn": "阿根廷的加时赢球路径主要不是持续压制，而是低频高杠杆事件：梅西单点创造、禁区前任意球、角球二点、劳塔罗终结或西班牙105分钟后压上留下的身后空间。该分支略低于西班牙1-0，但厚尾真实。",
+      "rationale_en": "0-1 is a decisive extra-time increment for Argentina. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 16.9% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    },
+    {
+      "increment": "1-1",
+      "score": "1-1",
+      "extra_goals_a": 1,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.08087615838247682,
+      "joint_probability": 0.023076923076923057,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.08087615838247682,
+      "rationale_cn": "主要来自105分钟后风险切换，而非加时基准节奏。一方先通过边路、定位球或转换破局后，另一方被迫提速，形成一次对冲进球。若90分钟入口是2-2，该分支会相对上调；若入口是0-0，则应下调。",
+      "rationale_en": "Mainly driven by a risk shift after 105 minutes, not the baseline extra-time tempo. After one side breaks through via the flank, a set piece, or a transition, the other is forced to raise the pace, creating a counterbalancing goal. If the 90-minute entry is 2-2, this branch is adjusted up; if it is 0-0, it should be adjusted down."
+    },
+    {
+      "increment": "2-0",
+      "score": "2-0",
+      "extra_goals_a": 2,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.040438079191238444,
+      "joint_probability": 0.011538461538461539,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.040438079191238444,
+      "rationale_cn": "低频但可解释的西班牙扩大分支：西班牙先凭体能、控场或定位球取得1-0，随后阿根廷被迫前压追平，身后空间增大，西班牙利用替补冲击或控球反击再进一球。证据只支持小概率，不能作为主路径。",
+      "rationale_en": "Low-frequency but explainable Spain extension path: Spain first makes it 1-0 through fitness, control, or a set piece, then Argentina is forced to push up for an equalizer, leaving more space behind. Spain uses substitute impact or a possession-based counter to score again. The evidence only supports a small probability, not a main path."
+    },
+    {
+      "increment": "0-2",
+      "score": "0-2",
+      "extra_goals_a": 0,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.02611625947767483,
+      "joint_probability": 0.007451923076923077,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.02611625947767483,
+      "rationale_cn": "阿根廷先通过反击、定位球或梅西连接取得0-1后，西班牙因时间不足继续冒险，给阿根廷第二次转换或终结机会。该分支覆盖西班牙过度压上被惩罚的尾部，但整体低于0-1和2-0。",
+      "rationale_en": "0-2 is a decisive extra-time increment for Argentina. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 2.6% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    },
+    {
+      "increment": "2-1",
+      "score": "2-1",
+      "extra_goals_a": 2,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.01600673967986522,
+      "joint_probability": 0.0045673076923076926,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.01600673967986522,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "1-2",
+      "score": "1-2",
+      "extra_goals_a": 1,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.01600673967986522,
+      "joint_probability": 0.0045673076923076926,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.01600673967986522,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "3-0",
+      "score": "3-0",
+      "extra_goals_a": 3,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.007582139848357208,
+      "joint_probability": 0.0021634615384615386,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.007582139848357208,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "2-2",
+      "score": "2-2",
+      "extra_goals_a": 2,
+      "extra_goals_b": 2,
+      "conditional_probability": 0.0050547598989048054,
+      "joint_probability": 0.0014423076923076924,
+      "extra_time_outcome": "draw",
+      "category": "penalty_entry",
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.0050547598989048054,
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "increment": "3-1",
+      "score": "3-1",
+      "extra_goals_a": 3,
+      "extra_goals_b": 1,
+      "conditional_probability": 0.0033698399326032038,
+      "joint_probability": 0.0009615384615384616,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0033698399326032038,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "0-3",
+      "score": "0-3",
+      "extra_goals_a": 0,
+      "extra_goals_b": 3,
+      "conditional_probability": 0.0025273799494524027,
+      "joint_probability": 0.0007211538461538462,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0025273799494524027,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "1-3",
+      "score": "1-3",
+      "extra_goals_a": 1,
+      "extra_goals_b": 3,
+      "conditional_probability": 0.0016849199663016019,
+      "joint_probability": 0.0004807692307692308,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0016849199663016019,
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "increment": "4-0",
+      "score": "4-0",
+      "extra_goals_a": 4,
+      "extra_goals_b": 0,
+      "conditional_probability": 0.0008424599831508009,
+      "joint_probability": 0.0002403846153846154,
+      "extra_time_outcome": "team_a",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0008424599831508009,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "4-0 is a decisive extra-time increment for Spain. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 0.1% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    },
+    {
+      "increment": "0-4",
+      "score": "0-4",
+      "extra_goals_a": 0,
+      "extra_goals_b": 4,
+      "conditional_probability": 0.0008424599831508009,
+      "joint_probability": 0.0002403846153846154,
+      "extra_time_outcome": "team_b",
+      "category": "extra_time_breakout",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0008424599831508009,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "0-4 is a decisive extra-time increment for Argentina. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 0.1% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    }
+  ],
+  "after_extra_time_top": [
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.44566133108677325,
+      "after_extra_time_score": "1-1",
+      "joint_branch_probability": 0.055080955139005884,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.07546875,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.44566133108677325,
+      "after_extra_time_score": "0-0",
+      "joint_branch_probability": 0.03363350358045492,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0584375,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.44566133108677325,
+      "after_extra_time_score": "2-2",
+      "joint_branch_probability": 0.026043334035383312,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.1836562763268746,
+      "after_extra_time_score": "2-1",
+      "joint_branch_probability": 0.022698767902274656,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.16933445661331095,
+      "after_extra_time_score": "1-2",
+      "joint_branch_probability": 0.0209286804970514,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.07546875,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.1836562763268746,
+      "after_extra_time_score": "1-0",
+      "joint_branch_probability": 0.013860309604043816,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.07546875,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.16933445661331095,
+      "after_extra_time_score": "0-1",
+      "joint_branch_probability": 0.012779459772535811,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0584375,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.1836562763268746,
+      "after_extra_time_score": "3-2",
+      "joint_branch_probability": 0.010732413647851734,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.08087615838247682,
+      "after_extra_time_score": "2-2",
+      "joint_branch_probability": 0.009995787700084245,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0584375,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.16933445661331095,
+      "after_extra_time_score": "2-3",
+      "joint_branch_probability": 0.009895482308340359,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.01390625,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.44566133108677325,
+      "after_extra_time_score": "3-3",
+      "joint_branch_probability": 0.00619747788542544,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.07546875,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.08087615838247682,
+      "after_extra_time_score": "1-1",
+      "joint_branch_probability": 0.006103622577927547,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.040438079191238444,
+      "after_extra_time_score": "3-1",
+      "joint_branch_probability": 0.004997893850042127,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0584375,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.08087615838247682,
+      "after_extra_time_score": "3-3",
+      "joint_branch_probability": 0.004726200505475989,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.02611625947767483,
+      "after_extra_time_score": "1-3",
+      "joint_branch_probability": 0.0032278064448188733,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.07546875,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.040438079191238444,
+      "after_extra_time_score": "2-0",
+      "joint_branch_probability": 0.0030518112889637763,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.01390625,
+      "extra_time_increment": "1-0",
+      "extra_time_increment_probability": 0.1836562763268746,
+      "after_extra_time_score": "4-3",
+      "joint_branch_probability": 0.0025539700926706,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0584375,
+      "extra_time_increment": "2-0",
+      "extra_time_increment_probability": 0.040438079191238444,
+      "after_extra_time_score": "4-2",
+      "joint_branch_probability": 0.0023631002527379967,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.01390625,
+      "extra_time_increment": "0-1",
+      "extra_time_increment_probability": 0.16933445661331095,
+      "after_extra_time_score": "3-4",
+      "joint_branch_probability": 0.0023548072872788556,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "2-1",
+      "extra_time_increment_probability": 0.01600673967986522,
+      "after_extra_time_score": "3-2",
+      "joint_branch_probability": 0.001978332982308342,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.01600673967986522,
+      "after_extra_time_score": "2-3",
+      "joint_branch_probability": 0.001978332982308342,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.07546875,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.02611625947767483,
+      "after_extra_time_score": "0-2",
+      "joint_branch_probability": 0.0019709614574557723,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0584375,
+      "extra_time_increment": "0-2",
+      "extra_time_increment_probability": 0.02611625947767483,
+      "after_extra_time_score": "2-4",
+      "joint_branch_probability": 0.0015261689132266229,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.07546875,
+      "extra_time_increment": "2-1",
+      "extra_time_increment_probability": 0.01600673967986522,
+      "after_extra_time_score": "2-1",
+      "joint_branch_probability": 0.0012080086352148282,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "0-0",
+      "normal_time_draw_probability": 0.07546875,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.01600673967986522,
+      "after_extra_time_score": "1-2",
+      "joint_branch_probability": 0.0012080086352148282,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "3-3",
+      "normal_time_draw_probability": 0.01390625,
+      "extra_time_increment": "1-1",
+      "extra_time_increment_probability": 0.08087615838247682,
+      "after_extra_time_score": "4-4",
+      "joint_branch_probability": 0.0011246840775063183,
+      "extra_time_outcome": "draw"
+    },
+    {
+      "normal_time_score": "1-1",
+      "normal_time_draw_probability": 0.12359375,
+      "extra_time_increment": "3-0",
+      "extra_time_increment_probability": 0.007582139848357208,
+      "after_extra_time_score": "4-1",
+      "joint_branch_probability": 0.0009371050968828988,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0584375,
+      "extra_time_increment": "2-1",
+      "extra_time_increment_probability": 0.01600673967986522,
+      "after_extra_time_score": "4-3",
+      "joint_branch_probability": 0.0009353938500421238,
+      "extra_time_outcome": "team_a"
+    },
+    {
+      "normal_time_score": "2-2",
+      "normal_time_draw_probability": 0.0584375,
+      "extra_time_increment": "1-2",
+      "extra_time_increment_probability": 0.01600673967986522,
+      "after_extra_time_score": "3-4",
+      "joint_branch_probability": 0.0009353938500421238,
+      "extra_time_outcome": "team_b"
+    },
+    {
+      "normal_time_score": "4-4",
+      "normal_time_draw_probability": 0.00171875,
+      "extra_time_increment": "0-0",
+      "extra_time_increment_probability": 0.44566133108677325,
+      "after_extra_time_score": "4-4",
+      "joint_branch_probability": 0.0007659804128053915,
+      "extra_time_outcome": "draw"
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "低事件延续",
+      "impact_cn": "若西班牙与阿根廷90分钟战平，加时基调仍是低事件延续；90-105分钟双方更重视失误控制、节奏管理，定位球、转换和单点创造权重上升。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Low-event continuation",
+      "impact_en": "If Spain and Argentina are level after 90 minutes, extra time is likely to remain low-event; from 90-105 minutes, both sides will focus more on error control and tempo management, with set pieces, transitions, and individual creation gaining weight.",
+      "text_cn": "若西班牙与阿根廷90分钟战平，加时基调仍是低事件延续；90-105分钟双方更重视失误控制、节奏管理，定位球、转换和单点创造权重上升。",
+      "text_en": "If Spain and Argentina are level after 90 minutes, extra time is likely to remain low-event; from 90-105 minutes, both sides will focus more on error control and tempo management, with set pieces, transitions, and individual creation gaining weight."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "西班牙小优",
+      "impact_cn": "加时内分胜负方向略偏西班牙，依据是控场、恢复多一天、全员可用和替补质量；但优势很小，不支持单边碾压或明显扩大比分判断。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Slight Spain edge",
+      "impact_en": "The extra-time winner leans slightly toward Spain, based on control, one extra day of recovery, a full squad, and substitute quality; but the edge is very small and does not support a one-sided win or a clear score expansion.",
+      "text_cn": "加时内分胜负方向略偏西班牙，依据是控场、恢复多一天、全员可用和替补质量；但优势很小，不支持单边碾压或明显扩大比分判断。",
+      "text_en": "The extra-time winner leans slightly toward Spain, based on control, one extra day of recovery, a full squad, and substitute quality; but the edge is very small and does not support a one-sided win or a clear score expansion."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "105后加码",
+      "impact_cn": "若105分钟仍平，西班牙可能因不愿进入阿根廷更强的点球分支，提高边路压上、传中、二点球和前场压迫，带来1-0或被反击的分叉。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Increased after 105'",
+      "impact_en": "If it is still level at 105 minutes, Spain may avoid Argentina's stronger penalty branch by pushing the flanks higher, crossing more, attacking second balls, and pressing high, creating a path to 1-0 or a counterattack against them.",
+      "text_cn": "若105分钟仍平，西班牙可能因不愿进入阿根廷更强的点球分支，提高边路压上、传中、二点球和前场压迫，带来1-0或被反击的分叉。",
+      "text_en": "If it is still level at 105 minutes, Spain may avoid Argentina's stronger penalty branch by pushing the flanks higher, crossing more, attacking second balls, and pressing high, creating a path to 1-0 or a counterattack against them."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "阿根廷厚尾",
+      "impact_cn": "阿根廷加时赢球路径主要来自低频高杠杆事件，包括梅西单点、禁区前任意球、角球二点、劳塔罗终结，以及西班牙压上后的身后空间。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Argentina fat-tail path",
+      "impact_en": "Argentina's extra-time win path mainly comes from low-frequency, high-impact events, including a Messi penalty, a free kick near the box, second balls from corners, Lautaro finishing, and space behind Spain after they push up.",
+      "text_cn": "阿根廷加时赢球路径主要来自低频高杠杆事件，包括梅西单点、禁区前任意球、角球二点、劳塔罗终结，以及西班牙压上后的身后空间。",
+      "text_en": "Argentina's extra-time win path mainly comes from low-frequency, high-impact events, including a Messi penalty, a free kick near the box, second balls from corners, Lautaro finishing, and space behind Spain after they push up."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "点球后置",
+      "impact_cn": "若120分钟仍平，阿根廷门将与点球历史优势才显著放大；该优势不应提前转化为阿根廷加时进球优势，加时仍平概率约为53%。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Delayed path to penalties",
+      "impact_en": "If it is still level after 120 minutes, Argentina's goalkeeper and historical penalty edge become much more significant; this should not be converted early into an Argentina extra-time scoring edge, with the chance of extra time staying level around 53%.",
+      "text_cn": "若120分钟仍平，阿根廷门将与点球历史优势才显著放大；该优势不应提前转化为阿根廷加时进球优势，加时仍平概率约为53%。",
+      "text_en": "If it is still level after 120 minutes, Argentina's goalkeeper and historical penalty edge become much more significant; this should not be converted early into an Argentina extra-time scoring edge, with the chance of extra time staying level around 53%."
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "证据缺口",
+      "impact_cn": "官方首发仍为预测状态，亚马尔、波罗、劳塔罗、德保罗等人的出场与换人时点未知；裁判尺度、黄牌、补时和临场xG尾部也缺少可靠数据。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Evidence gap",
+      "impact_en": "Official starting XIs are still projections; appearances and substitution timing for Yamal, Porro, Lautaro, De Paul, etc. are unknown. Referee leniency, yellow cards, stoppage time, and in-match xG tail risk also lack reliable data.",
+      "text_cn": "官方首发仍为预测状态，亚马尔、波罗、劳塔罗、德保罗等人的出场与换人时点未知；裁判尺度、黄牌、补时和临场xG尾部也缺少可靠数据。",
+      "text_en": "Official starting XIs are still projections; appearances and substitution timing for Yamal, Porro, Lautaro, De Paul, etc. are unknown. Referee leniency, yellow cards, stoppage time, and in-match xG tail risk also lack reliable data."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions.",
+  "axis_note_en": "Rows show Spain's extra-time goals and columns show Argentina's extra-time goals; 3+ means at least three goals. Probabilities are conditional on reaching extra time."
+}

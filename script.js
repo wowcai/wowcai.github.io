@@ -2567,7 +2567,7 @@ function renderLatestKnockoutPredictionCard(match) {
   const homeTeam = getWorldCupTeam(match.homeTeamId);
   const awayTeam = getWorldCupTeam(match.awayTeamId);
   const card = getStructuredMatchCard(match);
-  const stage = matchStagePair(match);
+  const stage = getLatestKnockoutCardStagePair(match, card);
   const homeName = teamPair(homeTeam, match.homeTeam || card.team_a);
   const awayName = teamPair(awayTeam, match.awayTeam || card.team_b);
   const advancement = getStructuredAdvancement(match);
@@ -2617,6 +2617,16 @@ function renderLatestKnockoutPredictionCard(match) {
       </div>
     </button>
   `;
+}
+
+function getLatestKnockoutCardStagePair(match, card) {
+  const roundLabel = String(card?.round_label || match?.matchDetail?.match?.stage || "").toLowerCase();
+  const specialStages = {
+    third_place: { zh: "季军争夺", en: "Third-place match" },
+    final: { zh: "冠军争夺", en: "Title match" }
+  };
+
+  return specialStages[roundLabel] || matchStagePair(match);
 }
 
 function renderKnockoutCardTeam(team, fallbackName) {

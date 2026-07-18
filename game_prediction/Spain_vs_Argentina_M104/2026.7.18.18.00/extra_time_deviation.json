@@ -1,0 +1,530 @@
+{
+  "schema_version": "2.0",
+  "phase": "extra_time",
+  "space_type": "extra_time_deviation_space_semantic_tail",
+  "condition_cn": "条件：90分钟常规时间打平；输入包括完整90分钟预测、平局比分分布、淘汰赛证据、常规时间Tail与MAS结论。",
+  "points": [
+    {
+      "label": "0-0",
+      "score": "0-0",
+      "increment": "0-0",
+      "probability": 0.44566133108677325,
+      "conditional_probability": 0.44566133108677325,
+      "joint_probability": 0.12716346153846142,
+      "deviation_score": 0.12,
+      "x": 0.12,
+      "y": 0.44566133108677325,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "最大单一分支。90分钟打平后的主入口多为1-1和0-0，决赛属性、双方失误控制、西班牙控球降节奏以及阿根廷接受点球树的战略价值共同抬高120分钟仍平概率。90-105分钟尤其偏谨慎，105分钟后即使西班牙小幅加码，也未必足以打穿阿根廷低位与二点保护。",
+      "label_en": "0-0",
+      "rationale_en": "0-0 is a conservative extra-time increment after a 90-minute draw. Extra time is only 30 minutes, fatigue and substitution patterns can reduce attacking continuity, and both sides may protect the penalty-entry path. The model assigns this path about 44.6% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    },
+    {
+      "label": "1-0",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.1836562763268746,
+      "conditional_probability": 0.1836562763268746,
+      "joint_probability": 0.052403846153846155,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.1836562763268746,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "加时内分胜负的首要方向略偏西班牙。依据是西班牙控场、全员可用、多一天恢复和替补质量；若105分钟仍平，西班牙更不愿进入阿根廷优势明显的点球分支，可能提高右路压上、传中、二点球和前场压迫频率，以一球解决比赛。",
+      "label_en": "1-0",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "The primary extra-time winner direction leans slightly toward Spain. This is based on Spain's control, full squad availability, one extra day of recovery, and substitute quality. If it is still level at 105 minutes, Spain may be more reluctant to enter a penalty shootout path where Argentina has a clear edge, and could increase right-side pushes, crosses, second-ball pressure, and high pressing to settle the match by one goal."
+    },
+    {
+      "label": "0-1",
+      "score": "0-1",
+      "increment": "0-1",
+      "probability": 0.16933445661331095,
+      "conditional_probability": 0.16933445661331095,
+      "joint_probability": 0.04831730769230769,
+      "deviation_score": 0.33999999999999997,
+      "x": 0.33999999999999997,
+      "y": 0.16933445661331095,
+      "category": "extra_time_resolution",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_ONE_GOAL_STEAL"
+      ],
+      "tail_title_cn": "加时偷袭 / 一球决胜",
+      "rationale_cn": "阿根廷的加时赢球路径主要不是持续压制，而是低频高杠杆事件：梅西单点创造、禁区前任意球、角球二点、劳塔罗终结或西班牙105分钟后压上留下的身后空间。该分支略低于西班牙1-0，但厚尾真实。",
+      "label_en": "0-1",
+      "tail_title_en": "Extra-time steal / one-goal decider",
+      "rationale_en": "0-1 is a decisive extra-time increment for Argentina. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 16.9% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    },
+    {
+      "label": "1-1",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.08087615838247682,
+      "conditional_probability": 0.08087615838247682,
+      "joint_probability": 0.023076923076923057,
+      "deviation_score": 0.3,
+      "x": 0.3,
+      "y": 0.08087615838247682,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "主要来自105分钟后风险切换，而非加时基准节奏。一方先通过边路、定位球或转换破局后，另一方被迫提速，形成一次对冲进球。若90分钟入口是2-2，该分支会相对上调；若入口是0-0，则应下调。",
+      "label_en": "1-1",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "Mainly driven by a risk shift after 105 minutes, not the baseline extra-time tempo. After one side breaks through via the flank, a set piece, or a transition, the other is forced to raise the pace, creating a counterbalancing goal. If the 90-minute entry is 2-2, this branch is adjusted up; if it is 0-0, it should be adjusted down."
+    },
+    {
+      "label": "2-0",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.040438079191238444,
+      "conditional_probability": 0.040438079191238444,
+      "joint_probability": 0.011538461538461539,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.040438079191238444,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "低频但可解释的西班牙扩大分支：西班牙先凭体能、控场或定位球取得1-0，随后阿根廷被迫前压追平，身后空间增大，西班牙利用替补冲击或控球反击再进一球。证据只支持小概率，不能作为主路径。",
+      "label_en": "2-0",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "Low-frequency but explainable Spain extension path: Spain first makes it 1-0 through fitness, control, or a set piece, then Argentina is forced to push up for an equalizer, leaving more space behind. Spain uses substitute impact or a possession-based counter to score again. The evidence only supports a small probability, not a main path."
+    },
+    {
+      "label": "0-2",
+      "score": "0-2",
+      "increment": "0-2",
+      "probability": 0.02611625947767483,
+      "conditional_probability": 0.02611625947767483,
+      "joint_probability": 0.007451923076923077,
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.02611625947767483,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "体能崩盘 / 加时打穿",
+      "rationale_cn": "阿根廷先通过反击、定位球或梅西连接取得0-1后，西班牙因时间不足继续冒险，给阿根廷第二次转换或终结机会。该分支覆盖西班牙过度压上被惩罚的尾部，但整体低于0-1和2-0。",
+      "label_en": "0-2",
+      "tail_title_en": "Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "0-2 is a decisive extra-time increment for Argentina. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 2.6% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    },
+    {
+      "label": "2-1",
+      "score": "2-1",
+      "increment": "2-1",
+      "probability": 0.01600673967986522,
+      "conditional_probability": 0.01600673967986522,
+      "joint_probability": 0.0045673076923076926,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.01600673967986522,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "2-1",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-2",
+      "score": "1-2",
+      "increment": "1-2",
+      "probability": 0.01600673967986522,
+      "conditional_probability": 0.01600673967986522,
+      "joint_probability": 0.0045673076923076926,
+      "deviation_score": 0.7,
+      "x": 0.7,
+      "y": 0.01600673967986522,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE",
+        "ET_FATIGUE_COLLAPSE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球，体能崩盘 / 加时打穿",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-2",
+      "tail_title_en": "Open extra time / both teams score, Fatigue collapse / extra-time breakthrough",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "3-0",
+      "score": "3-0",
+      "increment": "3-0",
+      "probability": 0.007582139848357208,
+      "conditional_probability": 0.007582139848357208,
+      "joint_probability": 0.0021634615384615386,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.007582139848357208,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-0",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "2-2",
+      "score": "2-2",
+      "increment": "2-2",
+      "probability": 0.0050547598989048054,
+      "conditional_probability": 0.0050547598989048054,
+      "joint_probability": 0.0014423076923076924,
+      "deviation_score": 0.66,
+      "x": 0.66,
+      "y": 0.0050547598989048054,
+      "category": "penalty_entry",
+      "extra_time_outcome": "draw",
+      "is_tail_focus": true,
+      "tail_tags": [
+        "ET_OPEN_BOTH_SCORE"
+      ],
+      "tail_title_cn": "加时开放 / 双方进球",
+      "rationale_cn": "双方加时互有进球但仍未分胜负的补充覆盖路径。",
+      "label_en": "2-2",
+      "tail_title_en": "Open extra time / both teams score",
+      "rationale_en": "A supplementary extra-time path where both teams score but the match remains level."
+    },
+    {
+      "label": "3-1",
+      "score": "3-1",
+      "increment": "3-1",
+      "probability": 0.0033698399326032038,
+      "conditional_probability": 0.0033698399326032038,
+      "joint_probability": 0.0009615384615384616,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0033698399326032038,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "3-1",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "0-3",
+      "score": "0-3",
+      "increment": "0-3",
+      "probability": 0.0025273799494524027,
+      "conditional_probability": 0.0025273799494524027,
+      "joint_probability": 0.0007211538461538462,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0025273799494524027,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "0-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "1-3",
+      "score": "1-3",
+      "increment": "1-3",
+      "probability": 0.0016849199663016019,
+      "conditional_probability": 0.0016849199663016019,
+      "joint_probability": 0.0004807692307692308,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0016849199663016019,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "加时阶段体能崩溃或开放对攻形成的低频高偏离路径。",
+      "label_en": "1-3",
+      "rationale_en": "A low-frequency tail path where fatigue or open extra-time play creates a wider scoring swing."
+    },
+    {
+      "label": "4-0",
+      "score": "4-0",
+      "increment": "4-0",
+      "probability": 0.0008424599831508009,
+      "conditional_probability": 0.0008424599831508009,
+      "joint_probability": 0.0002403846153846154,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0008424599831508009,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_a",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "4-0",
+      "rationale_en": "4-0 is a decisive extra-time increment for Spain. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 0.1% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    },
+    {
+      "label": "0-4",
+      "score": "0-4",
+      "increment": "0-4",
+      "probability": 0.0008424599831508009,
+      "conditional_probability": 0.0008424599831508009,
+      "joint_probability": 0.0002403846153846154,
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0008424599831508009,
+      "category": "extra_time_breakout",
+      "extra_time_outcome": "team_b",
+      "is_tail_focus": false,
+      "tail_tags": [],
+      "tail_title_cn": "",
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "label_en": "0-4",
+      "rationale_en": "0-4 is a decisive extra-time increment for Argentina. It requires one side to convert a late transition, set piece, second ball or substitute-driven attacking window while the opponent is forced to chase. The model assigns this path about 0.1% within the relevant distribution. Spain's route leans on possession pressure and midfield control, while Argentina's route leans on Messi-led chance creation, tournament experience and high-leverage finishing."
+    }
+  ],
+  "tail_focus_type": "extra_time_three_scenarios",
+  "tail_focus": [
+    {
+      "rank": 1,
+      "scenario_id": "ET_ONE_GOAL_STEAL",
+      "label": "加时偷袭 / 一球决胜",
+      "label_cn": "加时偷袭 / 一球决胜",
+      "definition_cn": "加时30分钟内通过反击、定位球或替补冲击形成1球胜负。",
+      "score": "1-0",
+      "increment": "1-0",
+      "probability": 0.1836562763268746,
+      "joint_probability": 0.052403846153846155,
+      "deviation_score": 0.33999999999999997,
+      "category": "et_one_goal_steal",
+      "selected_scores": [
+        {
+          "score": "1-0",
+          "increment": "1-0",
+          "probability": 0.1836562763268746
+        },
+        {
+          "score": "0-1",
+          "increment": "0-1",
+          "probability": 0.16933445661331095
+        }
+      ],
+      "display_scores": [
+        "1-0",
+        "0-1"
+      ],
+      "rationale_cn": "加时内分胜负的首要方向略偏西班牙。依据是西班牙控场、全员可用、多一天恢复和替补质量；若105分钟仍平，西班牙更不愿进入阿根廷优势明显的点球分支，可能提高右路压上、传中、二点球和前场压迫频率，以一球解决比赛。",
+      "label_en": "Extra-time steal / one-goal decider",
+      "definition_en": "A one-goal result in the 30 minutes of extra time through a counterattack, set piece, or substitute impact.",
+      "rationale_en": "The primary extra-time winner direction leans slightly toward Spain. This is based on Spain's control, full squad availability, one extra day of recovery, and substitute quality. If it is still level at 105 minutes, Spain may be more reluctant to enter a penalty shootout path where Argentina has a clear edge, and could increase right-side pushes, crosses, second-ball pressure, and high pressing to settle the match by one goal."
+    },
+    {
+      "rank": 2,
+      "scenario_id": "ET_OPEN_BOTH_SCORE",
+      "label": "加时开放 / 双方进球",
+      "label_cn": "加时开放 / 双方进球",
+      "definition_cn": "加时阶段双方均有进球，比赛从谨慎拖入开放对攻。",
+      "score": "1-1",
+      "increment": "1-1",
+      "probability": 0.08087615838247682,
+      "joint_probability": 0.023076923076923057,
+      "deviation_score": 0.3,
+      "category": "et_open_both_score",
+      "selected_scores": [
+        {
+          "score": "1-1",
+          "increment": "1-1",
+          "probability": 0.08087615838247682
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.01600673967986522
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.01600673967986522
+        },
+        {
+          "score": "2-2",
+          "increment": "2-2",
+          "probability": 0.0050547598989048054
+        }
+      ],
+      "display_scores": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "rationale_cn": "主要来自105分钟后风险切换，而非加时基准节奏。一方先通过边路、定位球或转换破局后，另一方被迫提速，形成一次对冲进球。若90分钟入口是2-2，该分支会相对上调；若入口是0-0，则应下调。",
+      "label_en": "Open extra time / both teams score",
+      "definition_en": "Both teams scored in extra time, turning a cautious match into an open attacking exchange.",
+      "rationale_en": "Mainly driven by a risk shift after 105 minutes, not the baseline extra-time tempo. After one side breaks through via the flank, a set piece, or a transition, the other is forced to raise the pace, creating a counterbalancing goal. If the 90-minute entry is 2-2, this branch is adjusted up; if it is 0-0, it should be adjusted down."
+    },
+    {
+      "rank": 3,
+      "scenario_id": "ET_FATIGUE_COLLAPSE",
+      "label": "体能崩盘 / 加时打穿",
+      "label_cn": "体能崩盘 / 加时打穿",
+      "definition_cn": "加时净胜至少2球，或总进球达到3球以上的一方打穿路径。",
+      "score": "2-0",
+      "increment": "2-0",
+      "probability": 0.040438079191238444,
+      "joint_probability": 0.011538461538461539,
+      "deviation_score": 0.74,
+      "category": "et_fatigue_collapse",
+      "selected_scores": [
+        {
+          "score": "2-0",
+          "increment": "2-0",
+          "probability": 0.040438079191238444
+        },
+        {
+          "score": "0-2",
+          "increment": "0-2",
+          "probability": 0.02611625947767483
+        },
+        {
+          "score": "2-1",
+          "increment": "2-1",
+          "probability": 0.01600673967986522
+        },
+        {
+          "score": "1-2",
+          "increment": "1-2",
+          "probability": 0.01600673967986522
+        }
+      ],
+      "display_scores": [
+        "2-0",
+        "0-2",
+        "2-1"
+      ],
+      "rationale_cn": "低频但可解释的西班牙扩大分支：西班牙先凭体能、控场或定位球取得1-0，随后阿根廷被迫前压追平，身后空间增大，西班牙利用替补冲击或控球反击再进一球。证据只支持小概率，不能作为主路径。",
+      "label_en": "Fatigue collapse / extra-time breakthrough",
+      "definition_en": "A cover path where one side wins extra time by at least 2 goals, or the total goals reach over 3.",
+      "rationale_en": "Low-frequency but explainable Spain extension path: Spain first makes it 1-0 through fitness, control, or a set piece, then Argentina is forced to push up for an equalizer, leaving more space behind. Spain uses substitute impact or a possession-based counter to score again. The evidence only supports a small probability, not a main path."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "低事件延续",
+      "impact_cn": "若西班牙与阿根廷90分钟战平，加时基调仍是低事件延续；90-105分钟双方更重视失误控制、节奏管理，定位球、转换和单点创造权重上升。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Low-event continuation",
+      "impact_en": "If Spain and Argentina are level after 90 minutes, extra time is likely to remain low-event; from 90-105 minutes, both sides will focus more on error control and tempo management, with set pieces, transitions, and individual creation gaining weight.",
+      "text_cn": "若西班牙与阿根廷90分钟战平，加时基调仍是低事件延续；90-105分钟双方更重视失误控制、节奏管理，定位球、转换和单点创造权重上升。",
+      "text_en": "If Spain and Argentina are level after 90 minutes, extra time is likely to remain low-event; from 90-105 minutes, both sides will focus more on error control and tempo management, with set pieces, transitions, and individual creation gaining weight."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "西班牙小优",
+      "impact_cn": "加时内分胜负方向略偏西班牙，依据是控场、恢复多一天、全员可用和替补质量；但优势很小，不支持单边碾压或明显扩大比分判断。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Slight Spain edge",
+      "impact_en": "The extra-time winner leans slightly toward Spain, based on control, one extra day of recovery, a full squad, and substitute quality; but the edge is very small and does not support a one-sided win or a clear score expansion.",
+      "text_cn": "加时内分胜负方向略偏西班牙，依据是控场、恢复多一天、全员可用和替补质量；但优势很小，不支持单边碾压或明显扩大比分判断。",
+      "text_en": "The extra-time winner leans slightly toward Spain, based on control, one extra day of recovery, a full squad, and substitute quality; but the edge is very small and does not support a one-sided win or a clear score expansion."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "105后加码",
+      "impact_cn": "若105分钟仍平，西班牙可能因不愿进入阿根廷更强的点球分支，提高边路压上、传中、二点球和前场压迫，带来1-0或被反击的分叉。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Increased after 105'",
+      "impact_en": "If it is still level at 105 minutes, Spain may avoid Argentina's stronger penalty branch by pushing the flanks higher, crossing more, attacking second balls, and pressing high, creating a path to 1-0 or a counterattack against them.",
+      "text_cn": "若105分钟仍平，西班牙可能因不愿进入阿根廷更强的点球分支，提高边路压上、传中、二点球和前场压迫，带来1-0或被反击的分叉。",
+      "text_en": "If it is still level at 105 minutes, Spain may avoid Argentina's stronger penalty branch by pushing the flanks higher, crossing more, attacking second balls, and pressing high, creating a path to 1-0 or a counterattack against them."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "阿根廷厚尾",
+      "impact_cn": "阿根廷加时赢球路径主要来自低频高杠杆事件，包括梅西单点、禁区前任意球、角球二点、劳塔罗终结，以及西班牙压上后的身后空间。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Argentina fat-tail path",
+      "impact_en": "Argentina's extra-time win path mainly comes from low-frequency, high-impact events, including a Messi penalty, a free kick near the box, second balls from corners, Lautaro finishing, and space behind Spain after they push up.",
+      "text_cn": "阿根廷加时赢球路径主要来自低频高杠杆事件，包括梅西单点、禁区前任意球、角球二点、劳塔罗终结，以及西班牙压上后的身后空间。",
+      "text_en": "Argentina's extra-time win path mainly comes from low-frequency, high-impact events, including a Messi penalty, a free kick near the box, second balls from corners, Lautaro finishing, and space behind Spain after they push up."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "点球后置",
+      "impact_cn": "若120分钟仍平，阿根廷门将与点球历史优势才显著放大；该优势不应提前转化为阿根廷加时进球优势，加时仍平概率约为53%。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Delayed path to penalties",
+      "impact_en": "If it is still level after 120 minutes, Argentina's goalkeeper and historical penalty edge become much more significant; this should not be converted early into an Argentina extra-time scoring edge, with the chance of extra time staying level around 53%.",
+      "text_cn": "若120分钟仍平，阿根廷门将与点球历史优势才显著放大；该优势不应提前转化为阿根廷加时进球优势，加时仍平概率约为53%。",
+      "text_en": "If it is still level after 120 minutes, Argentina's goalkeeper and historical penalty edge become much more significant; this should not be converted early into an Argentina extra-time scoring edge, with the chance of extra time staying level around 53%."
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "证据缺口",
+      "impact_cn": "官方首发仍为预测状态，亚马尔、波罗、劳塔罗、德保罗等人的出场与换人时点未知；裁判尺度、黄牌、补时和临场xG尾部也缺少可靠数据。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "extra_time_mini_pipeline"
+      ],
+      "label_en": "Evidence gap",
+      "impact_en": "Official starting XIs are still projections; appearances and substitution timing for Yamal, Porro, Lautaro, De Paul, etc. are unknown. Referee leniency, yellow cards, stoppage time, and in-match xG tail risk also lack reliable data.",
+      "text_cn": "官方首发仍为预测状态，亚马尔、波罗、劳塔罗、德保罗等人的出场与换人时点未知；裁判尺度、黄牌、补时和临场xG尾部也缺少可靠数据。",
+      "text_en": "Official starting XIs are still projections; appearances and substitution timing for Yamal, Porro, Lautaro, De Paul, etc. are unknown. Referee leniency, yellow cards, stoppage time, and in-match xG tail risk also lack reliable data."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes; inputs include the full 90-minute prediction, draw score distribution, knockout evidence, normal-time tail scenarios and MAS conclusions."
+}

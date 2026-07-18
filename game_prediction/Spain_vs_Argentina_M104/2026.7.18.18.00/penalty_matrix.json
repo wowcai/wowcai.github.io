@@ -1,0 +1,1176 @@
+{
+  "schema_version": "2.0",
+  "phase": "penalties",
+  "matrix_type": "penalty_score_dense_7x7_bucketed_6plus",
+  "condition_cn": "条件：90分钟打平且加时仍平。输入包括90分钟预测、加时Mini-Pipeline结果、点球证据、门将/主罚手/压力因素。",
+  "axis_note_cn": "纵轴为team_a点球命中数，横轴为team_b点球命中数；6+表示进入第6轮及之后的延长点球。概率为进入点球大战后的条件概率。",
+  "row_axis": {
+    "team": "Spain",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6+"
+    ]
+  },
+  "column_axis": {
+    "team": "Argentina",
+    "buckets": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6+"
+    ]
+  },
+  "winner_probability": {
+    "team_a": 0.4894,
+    "team_b": 0.5106
+  },
+  "matrix": [
+    [
+      0.0,
+      0.0,
+      0.003169572107765453,
+      0.00950871632329636,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.003169572107765453,
+      0.030110935023771806,
+      0.017432646592709992,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.003169572107765453,
+      0.0,
+      0.030110935023771806,
+      0.10301109350237722,
+      0.0,
+      0.0
+    ],
+    [
+      0.0015847860538827265,
+      0.007923930269413633,
+      0.01426307448494454,
+      0.0,
+      0.13946117274167993,
+      0.03169572107765453,
+      0.0
+    ],
+    [
+      0.0,
+      0.05229793977812997,
+      0.0855784469096672,
+      0.05071315372424725,
+      0.0,
+      0.11885895404120447,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.012678288431061812,
+      0.09191759112519815,
+      0.053882725832012694,
+      0.0,
+      0.025356576862123625
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.034865293185419984,
+      0.07923930269413632
+    ]
+  ],
+  "cells": [
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "2",
+      "probability": 0.003169572107765453,
+      "probability_percent": 0.317,
+      "top_scores": [
+        {
+          "score": "0-2",
+          "probability": 0.003169572107765453
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "3",
+      "probability": 0.00950871632329636,
+      "probability_percent": 0.9509,
+      "top_scores": [
+        {
+          "score": "0-3",
+          "probability": 0.00950871632329636
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "0",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "2",
+      "probability": 0.003169572107765453,
+      "probability_percent": 0.317,
+      "top_scores": [
+        {
+          "score": "1-2",
+          "probability": 0.003169572107765453
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "3",
+      "probability": 0.030110935023771806,
+      "probability_percent": 3.0111,
+      "top_scores": [
+        {
+          "score": "1-3",
+          "probability": 0.030110935023771806
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "4",
+      "probability": 0.017432646592709992,
+      "probability_percent": 1.7433,
+      "top_scores": [
+        {
+          "score": "1-4",
+          "probability": 0.017432646592709992
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "1",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "1",
+      "probability": 0.003169572107765453,
+      "probability_percent": 0.317,
+      "top_scores": [
+        {
+          "score": "2-1",
+          "probability": 0.003169572107765453
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "3",
+      "probability": 0.030110935023771806,
+      "probability_percent": 3.0111,
+      "top_scores": [
+        {
+          "score": "2-3",
+          "probability": 0.030110935023771806
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "4",
+      "probability": 0.10301109350237722,
+      "probability_percent": 10.3011,
+      "top_scores": [
+        {
+          "score": "2-4",
+          "probability": 0.10301109350237722
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "2",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "0",
+      "probability": 0.0015847860538827265,
+      "probability_percent": 0.1585,
+      "top_scores": [
+        {
+          "score": "3-0",
+          "probability": 0.0015847860538827265
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "1",
+      "probability": 0.007923930269413633,
+      "probability_percent": 0.7924,
+      "top_scores": [
+        {
+          "score": "3-1",
+          "probability": 0.007923930269413633
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "2",
+      "probability": 0.01426307448494454,
+      "probability_percent": 1.4263,
+      "top_scores": [
+        {
+          "score": "3-2",
+          "probability": 0.01426307448494454
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "3",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "4",
+      "probability": 0.13946117274167993,
+      "probability_percent": 13.9461,
+      "top_scores": [
+        {
+          "score": "3-4",
+          "probability": 0.13946117274167993
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "5",
+      "probability": 0.03169572107765453,
+      "probability_percent": 3.1696,
+      "top_scores": [
+        {
+          "score": "3-5",
+          "probability": 0.03169572107765453
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "3",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "1",
+      "probability": 0.05229793977812997,
+      "probability_percent": 5.2298,
+      "top_scores": [
+        {
+          "score": "4-1",
+          "probability": 0.05229793977812997
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "2",
+      "probability": 0.0855784469096672,
+      "probability_percent": 8.5578,
+      "top_scores": [
+        {
+          "score": "4-2",
+          "probability": 0.0855784469096672
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "3",
+      "probability": 0.05071315372424725,
+      "probability_percent": 5.0713,
+      "top_scores": [
+        {
+          "score": "4-3",
+          "probability": 0.05071315372424725
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "5",
+      "probability": 0.11885895404120447,
+      "probability_percent": 11.8859,
+      "top_scores": [
+        {
+          "score": "4-5",
+          "probability": 0.11885895404120447
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "4",
+      "team_b_penalties": "6+",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "2",
+      "probability": 0.012678288431061812,
+      "probability_percent": 1.2678,
+      "top_scores": [
+        {
+          "score": "5-2",
+          "probability": 0.012678288431061812
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "3",
+      "probability": 0.09191759112519815,
+      "probability_percent": 9.1918,
+      "top_scores": [
+        {
+          "score": "5-3",
+          "probability": 0.09191759112519815
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "4",
+      "probability": 0.053882725832012694,
+      "probability_percent": 5.3883,
+      "top_scores": [
+        {
+          "score": "5-4",
+          "probability": 0.053882725832012694
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "5",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "5",
+      "team_b_penalties": "6+",
+      "probability": 0.025356576862123625,
+      "probability_percent": 2.5357,
+      "top_scores": [
+        {
+          "score": "5-6",
+          "probability": 0.025356576862123625
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "0",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "1",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "2",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "3",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "4",
+      "probability": 0.0,
+      "probability_percent": 0.0,
+      "top_scores": []
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "5",
+      "probability": 0.034865293185419984,
+      "probability_percent": 3.4865,
+      "top_scores": [
+        {
+          "score": "6-5",
+          "probability": 0.034865293185419984
+        }
+      ]
+    },
+    {
+      "team_a_penalties": "6+",
+      "team_b_penalties": "6+",
+      "probability": 0.07923930269413632,
+      "probability_percent": 7.9239,
+      "top_scores": [
+        {
+          "score": "6-7",
+          "probability": 0.022187004754358173
+        },
+        {
+          "score": "7-6",
+          "probability": 0.01901743264659272
+        },
+        {
+          "score": "7-8",
+          "probability": 0.007923930269413633
+        },
+        {
+          "score": "9-8",
+          "probability": 0.006339144215530906
+        },
+        {
+          "score": "8-9",
+          "probability": 0.00475435816164818
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "penalty_score": "3-4",
+      "score": "3-4",
+      "team_a_penalties": 3,
+      "team_b_penalties": 4,
+      "winner_side": "team_b",
+      "conditional_probability": 0.13946117274167993,
+      "joint_probability": 0.021153846153846155,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.13946117274167993,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "3-4 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 13.9% within the relevant distribution."
+    },
+    {
+      "penalty_score": "4-5",
+      "score": "4-5",
+      "team_a_penalties": 4,
+      "team_b_penalties": 5,
+      "winner_side": "team_b",
+      "conditional_probability": 0.11885895404120447,
+      "joint_probability": 0.018028846153846152,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.11885895404120447,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "4-5 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 11.9% within the relevant distribution."
+    },
+    {
+      "penalty_score": "2-4",
+      "score": "2-4",
+      "team_a_penalties": 2,
+      "team_b_penalties": 4,
+      "winner_side": "team_b",
+      "conditional_probability": 0.10301109350237722,
+      "joint_probability": 0.015625,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.10301109350237722,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "2-4 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 10.3% within the relevant distribution."
+    },
+    {
+      "penalty_score": "5-3",
+      "score": "5-3",
+      "team_a_penalties": 5,
+      "team_b_penalties": 3,
+      "winner_side": "team_a",
+      "conditional_probability": 0.09191759112519815,
+      "joint_probability": 0.013942307692307695,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.09191759112519815,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "5-3 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 9.2% within the relevant distribution."
+    },
+    {
+      "penalty_score": "4-2",
+      "score": "4-2",
+      "team_a_penalties": 4,
+      "team_b_penalties": 2,
+      "winner_side": "team_a",
+      "conditional_probability": 0.0855784469096672,
+      "joint_probability": 0.012980769230769226,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.0855784469096672,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "4-2 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 8.6% within the relevant distribution."
+    },
+    {
+      "penalty_score": "5-4",
+      "score": "5-4",
+      "team_a_penalties": 5,
+      "team_b_penalties": 4,
+      "winner_side": "team_a",
+      "conditional_probability": 0.053882725832012694,
+      "joint_probability": 0.008173076923076922,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.053882725832012694,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "5-4 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 5.4% within the relevant distribution."
+    },
+    {
+      "penalty_score": "4-1",
+      "score": "4-1",
+      "team_a_penalties": 4,
+      "team_b_penalties": 1,
+      "winner_side": "team_a",
+      "conditional_probability": 0.05229793977812997,
+      "joint_probability": 0.007932692307692307,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.05229793977812997,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "4-1 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 5.2% within the relevant distribution."
+    },
+    {
+      "penalty_score": "4-3",
+      "score": "4-3",
+      "team_a_penalties": 4,
+      "team_b_penalties": 3,
+      "winner_side": "team_a",
+      "conditional_probability": 0.05071315372424725,
+      "joint_probability": 0.007692307692307693,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.05071315372424725,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "4-3 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 5.1% within the relevant distribution."
+    },
+    {
+      "penalty_score": "6-5",
+      "score": "6-5",
+      "team_a_penalties": 6,
+      "team_b_penalties": 5,
+      "winner_side": "team_a",
+      "conditional_probability": 0.034865293185419984,
+      "joint_probability": 0.005288461538461539,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.32,
+      "x": 0.32,
+      "y": 0.034865293185419984,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "6-5 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 3.5% within the relevant distribution."
+    },
+    {
+      "penalty_score": "3-5",
+      "score": "3-5",
+      "team_a_penalties": 3,
+      "team_b_penalties": 5,
+      "winner_side": "team_b",
+      "conditional_probability": 0.03169572107765453,
+      "joint_probability": 0.004807692307692308,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.03169572107765453,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "3-5 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 3.2% within the relevant distribution."
+    },
+    {
+      "penalty_score": "1-3",
+      "score": "1-3",
+      "team_a_penalties": 1,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.030110935023771806,
+      "joint_probability": 0.0045673076923076926,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.030110935023771806,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "1-3 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 3.0% within the relevant distribution."
+    },
+    {
+      "penalty_score": "2-3",
+      "score": "2-3",
+      "team_a_penalties": 2,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.030110935023771806,
+      "joint_probability": 0.0045673076923076926,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.030110935023771806,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "2-3 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 3.0% within the relevant distribution."
+    },
+    {
+      "penalty_score": "5-6",
+      "score": "5-6",
+      "team_a_penalties": 5,
+      "team_b_penalties": 6,
+      "winner_side": "team_b",
+      "conditional_probability": 0.025356576862123625,
+      "joint_probability": 0.0038461538461538464,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.32,
+      "x": 0.32,
+      "y": 0.025356576862123625,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "5-6 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 2.5% within the relevant distribution."
+    },
+    {
+      "penalty_score": "6-7",
+      "score": "6-7",
+      "team_a_penalties": 6,
+      "team_b_penalties": 7,
+      "winner_side": "team_b",
+      "conditional_probability": 0.022187004754358173,
+      "joint_probability": 0.0033653846153846156,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.46,
+      "x": 0.46,
+      "y": 0.022187004754358173,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "6-7 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 2.2% within the relevant distribution."
+    },
+    {
+      "penalty_score": "7-6",
+      "score": "7-6",
+      "team_a_penalties": 7,
+      "team_b_penalties": 6,
+      "winner_side": "team_a",
+      "conditional_probability": 0.01901743264659272,
+      "joint_probability": 0.0028846153846153848,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.46,
+      "x": 0.46,
+      "y": 0.01901743264659272,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "7-6 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 1.9% within the relevant distribution."
+    },
+    {
+      "penalty_score": "1-4",
+      "score": "1-4",
+      "team_a_penalties": 1,
+      "team_b_penalties": 4,
+      "winner_side": "team_b",
+      "conditional_probability": 0.017432646592709992,
+      "joint_probability": 0.0026442307692307694,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.017432646592709992,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "1-4 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 1.7% within the relevant distribution."
+    },
+    {
+      "penalty_score": "3-2",
+      "score": "3-2",
+      "team_a_penalties": 3,
+      "team_b_penalties": 2,
+      "winner_side": "team_a",
+      "conditional_probability": 0.01426307448494454,
+      "joint_probability": 0.0021634615384615386,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.01426307448494454,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "3-2 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 1.4% within the relevant distribution."
+    },
+    {
+      "penalty_score": "5-2",
+      "score": "5-2",
+      "team_a_penalties": 5,
+      "team_b_penalties": 2,
+      "winner_side": "team_a",
+      "conditional_probability": 0.012678288431061812,
+      "joint_probability": 0.0019230769230769232,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.012678288431061812,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "5-2 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 1.3% within the relevant distribution."
+    },
+    {
+      "penalty_score": "0-3",
+      "score": "0-3",
+      "team_a_penalties": 0,
+      "team_b_penalties": 3,
+      "winner_side": "team_b",
+      "conditional_probability": 0.00950871632329636,
+      "joint_probability": 0.0014423076923076924,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.00950871632329636,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "0-3 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 1.0% within the relevant distribution."
+    },
+    {
+      "penalty_score": "7-8",
+      "score": "7-8",
+      "team_a_penalties": 7,
+      "team_b_penalties": 8,
+      "winner_side": "team_b",
+      "conditional_probability": 0.007923930269413633,
+      "joint_probability": 0.001201923076923077,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.6000000000000001,
+      "x": 0.6000000000000001,
+      "y": 0.007923930269413633,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "7-8 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.8% within the relevant distribution."
+    },
+    {
+      "penalty_score": "3-1",
+      "score": "3-1",
+      "team_a_penalties": 3,
+      "team_b_penalties": 1,
+      "winner_side": "team_a",
+      "conditional_probability": 0.007923930269413633,
+      "joint_probability": 0.001201923076923077,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.007923930269413633,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "3-1 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.8% within the relevant distribution."
+    },
+    {
+      "penalty_score": "9-8",
+      "score": "9-8",
+      "team_a_penalties": 9,
+      "team_b_penalties": 8,
+      "winner_side": "team_a",
+      "conditional_probability": 0.006339144215530906,
+      "joint_probability": 0.0009615384615384616,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.006339144215530906,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "9-8 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.6% within the relevant distribution."
+    },
+    {
+      "penalty_score": "8-9",
+      "score": "8-9",
+      "team_a_penalties": 8,
+      "team_b_penalties": 9,
+      "winner_side": "team_b",
+      "conditional_probability": 0.00475435816164818,
+      "joint_probability": 0.0007211538461538462,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.74,
+      "x": 0.74,
+      "y": 0.00475435816164818,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "8-9 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.5% within the relevant distribution."
+    },
+    {
+      "penalty_score": "8-7",
+      "score": "8-7",
+      "team_a_penalties": 8,
+      "team_b_penalties": 7,
+      "winner_side": "team_a",
+      "conditional_probability": 0.00475435816164818,
+      "joint_probability": 0.0007211538461538462,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.6000000000000001,
+      "x": 0.6000000000000001,
+      "y": 0.00475435816164818,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "8-7 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.5% within the relevant distribution."
+    },
+    {
+      "penalty_score": "9-10",
+      "score": "9-10",
+      "team_a_penalties": 9,
+      "team_b_penalties": 10,
+      "winner_side": "team_b",
+      "conditional_probability": 0.00475435816164818,
+      "joint_probability": 0.0007211538461538462,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.8800000000000001,
+      "x": 0.8800000000000001,
+      "y": 0.00475435816164818,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "9-10 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.5% within the relevant distribution."
+    },
+    {
+      "penalty_score": "0-2",
+      "score": "0-2",
+      "team_a_penalties": 0,
+      "team_b_penalties": 2,
+      "winner_side": "team_b",
+      "conditional_probability": 0.003169572107765453,
+      "joint_probability": 0.0004807692307692308,
+      "category": "penalty_tail",
+      "deviation_score": 0.4,
+      "x": 0.4,
+      "y": 0.003169572107765453,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "0-2 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.3% within the relevant distribution."
+    },
+    {
+      "penalty_score": "10-11",
+      "score": "10-11",
+      "team_a_penalties": 10,
+      "team_b_penalties": 11,
+      "winner_side": "team_b",
+      "conditional_probability": 0.003169572107765453,
+      "joint_probability": 0.0004807692307692308,
+      "category": "normal_penalty_win",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.003169572107765453,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "10-11 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.3% within the relevant distribution."
+    },
+    {
+      "penalty_score": "2-1",
+      "score": "2-1",
+      "team_a_penalties": 2,
+      "team_b_penalties": 1,
+      "winner_side": "team_a",
+      "conditional_probability": 0.003169572107765453,
+      "joint_probability": 0.0004807692307692308,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.003169572107765453,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "2-1 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.3% within the relevant distribution."
+    },
+    {
+      "penalty_score": "1-2",
+      "score": "1-2",
+      "team_a_penalties": 1,
+      "team_b_penalties": 2,
+      "winner_side": "team_b",
+      "conditional_probability": 0.003169572107765453,
+      "joint_probability": 0.0004807692307692308,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.18,
+      "x": 0.18,
+      "y": 0.003169572107765453,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "1-2 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.3% within the relevant distribution."
+    },
+    {
+      "penalty_score": "12-13",
+      "score": "12-13",
+      "team_a_penalties": 12,
+      "team_b_penalties": 13,
+      "winner_side": "team_b",
+      "conditional_probability": 0.0015847860538827265,
+      "joint_probability": 0.0002403846153846154,
+      "category": "normal_penalty_win",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0015847860538827265,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "12-13 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.2% within the relevant distribution."
+    },
+    {
+      "penalty_score": "11-12",
+      "score": "11-12",
+      "team_a_penalties": 11,
+      "team_b_penalties": 12,
+      "winner_side": "team_b",
+      "conditional_probability": 0.0015847860538827265,
+      "joint_probability": 0.0002403846153846154,
+      "category": "normal_penalty_win",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0015847860538827265,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "11-12 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.2% within the relevant distribution."
+    },
+    {
+      "penalty_score": "3-0",
+      "score": "3-0",
+      "team_a_penalties": 3,
+      "team_b_penalties": 0,
+      "winner_side": "team_a",
+      "conditional_probability": 0.0015847860538827265,
+      "joint_probability": 0.0002403846153846154,
+      "category": "penalty_tail",
+      "deviation_score": 0.62,
+      "x": 0.62,
+      "y": 0.0015847860538827265,
+      "rationale_cn": "点球大战常见比分族，结合门将、主罚手和心理压力作保守校准。",
+      "rationale_en": "3-0 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.2% within the relevant distribution."
+    },
+    {
+      "penalty_score": "10-9",
+      "score": "10-9",
+      "team_a_penalties": 10,
+      "team_b_penalties": 9,
+      "winner_side": "team_a",
+      "conditional_probability": 0.0015847860538827265,
+      "joint_probability": 0.0002403846153846154,
+      "category": "normal_penalty_win",
+      "deviation_score": 0.8800000000000001,
+      "x": 0.8800000000000001,
+      "y": 0.0015847860538827265,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "10-9 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.2% within the relevant distribution."
+    },
+    {
+      "penalty_score": "12-11",
+      "score": "12-11",
+      "team_a_penalties": 12,
+      "team_b_penalties": 11,
+      "winner_side": "team_a",
+      "conditional_probability": 0.0015847860538827265,
+      "joint_probability": 0.0002403846153846154,
+      "category": "normal_penalty_win",
+      "deviation_score": 1.0,
+      "x": 1.0,
+      "y": 0.0015847860538827265,
+      "rationale_cn": "由统一淘汰赛路径分布派生。",
+      "rationale_en": "12-11 is a conditional shootout path. It should be treated as a penalty-sequence scenario driven by taker order, goalkeeper reads, pressure handling and sudden-death variance rather than open-play superiority. The model assigns this path about 0.2% within the relevant distribution."
+    }
+  ],
+  "key_factors": [
+    {
+      "factor_id": "KF_01",
+      "label_cn": "门将心理差",
+      "impact_cn": "若120分钟仍平进入点球，阿根廷优势主要由埃米利亚诺·马丁内斯放大；其门将扑点与心理压迫影响是现有证据中最明确的分歧点。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Goalkeeper and mentality gap",
+      "impact_en": "If it is still level after 120 minutes and goes to penalties, Argentina's edge is mainly amplified by Emiliano Martinez; his penalty-saving and psychological pressure impact is the clearest differentiator in the available evidence.",
+      "text_cn": "若120分钟仍平进入点球，阿根廷优势主要由埃米利亚诺·马丁内斯放大；其门将扑点与心理压迫影响是现有证据中最明确的分歧点。",
+      "text_en": "If it is still level after 120 minutes and goes to penalties, Argentina's edge is mainly amplified by Emiliano Martinez; his penalty-saving and psychological pressure impact is the clearest differentiator in the available evidence."
+    },
+    {
+      "factor_id": "KF_02",
+      "label_cn": "历史经验差",
+      "impact_cn": "阿根廷拥有世界杯点球大战经验与公开86%成功率支撑，而西班牙世界杯点球历史为五次输四次，这使点球分支明显偏向阿根廷。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Historical experience gap",
+      "impact_en": "Argentina are supported by World Cup shootout experience and a publicly reported 86% success rate, while Spain have lost four of five World Cup shootouts, making the penalty branch clearly favor Argentina.",
+      "text_cn": "阿根廷拥有世界杯点球大战经验与公开86%成功率支撑，而西班牙世界杯点球历史为五次输四次，这使点球分支明显偏向阿根廷。",
+      "text_en": "Argentina are supported by World Cup shootout experience and a publicly reported 86% success rate, while Spain have lost four of five World Cup shootouts, making the penalty branch clearly favor Argentina."
+    },
+    {
+      "factor_id": "KF_03",
+      "label_cn": "西班牙手池",
+      "impact_cn": "西班牙并非无反击空间，罗德里、奥亚萨瓦尔、奥尔莫、法比安、梅里诺、亚马尔等候选具备技术执行力，可部分抵消历史压力。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Spain penalty-taker pool",
+      "impact_en": "Spain are not without counterattacking space, and options such as Rodri, Oyarzabal, Olmo, Fabian, Merino, and Yamal have the technical execution to partly offset the historical pressure.",
+      "text_cn": "西班牙并非无反击空间，罗德里、奥亚萨瓦尔、奥尔莫、法比安、梅里诺、亚马尔等候选具备技术执行力，可部分抵消历史压力。",
+      "text_en": "Spain are not without counterattacking space, and options such as Rodri, Oyarzabal, Olmo, Fabian, Merino, and Yamal have the technical execution to partly offset the historical pressure."
+    },
+    {
+      "factor_id": "KF_04",
+      "label_cn": "顺序缺口",
+      "impact_cn": "目前缺少双方本场点球前五罚顺序、候补顺序和训练命中率，梅西、劳塔罗、阿尔瓦雷斯、罗德里等是否主罚仍只能候选推断。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Penalty-order gap",
+      "impact_en": "The current first five penalty order, backup order, and training conversion rates for both teams are unavailable, so whether Messi, Lautaro, Alvarez, Rodri and others take penalties can only be inferred as candidates.",
+      "text_cn": "目前缺少双方本场点球前五罚顺序、候补顺序和训练命中率，梅西、劳塔罗、阿尔瓦雷斯、罗德里等是否主罚仍只能候选推断。",
+      "text_en": "The current first five penalty order, backup order, and training conversion rates for both teams are unavailable, so whether Messi, Lautaro, Alvarez, Rodri and others take penalties can only be inferred as candidates."
+    },
+    {
+      "factor_id": "KF_05",
+      "label_cn": "在场名单变量",
+      "impact_cn": "点球候选高度依赖120分钟谁仍在场；亚马尔、奥亚萨瓦尔、奥尔莫、劳塔罗、阿尔瓦雷斯、帕雷德斯的换人时点会改变排序。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Lineup variables",
+      "impact_en": "Penalty taker candidates depend heavily on who is still on the pitch after 120 minutes; substitution timing for Yamal, Oyarzabal, Olmo, Lautaro, Alvarez, and Paredes would change the order.",
+      "text_cn": "点球候选高度依赖120分钟谁仍在场；亚马尔、奥亚萨瓦尔、奥尔莫、劳塔罗、阿尔瓦雷斯、帕雷德斯的换人时点会改变排序。",
+      "text_en": "Penalty taker candidates depend heavily on who is still on the pitch after 120 minutes; substitution timing for Yamal, Oyarzabal, Olmo, Lautaro, Alvarez, and Paredes would change the order."
+    },
+    {
+      "factor_id": "KF_06",
+      "label_cn": "西蒙证据缺",
+      "impact_cn": "缺少乌奈·西蒙在本届或近期点球大战中的专门扑点数据，因此西班牙门将侧只能标记为证据不足，不能臆测为个人能力劣势。",
+      "direction": null,
+      "evidence_ids": [],
+      "source_names": [
+        "penalties_mini_pipeline"
+      ],
+      "label_en": "Unclear evidence on Simón",
+      "impact_en": "There is no specific penalty-shootout save data for Unai Simon in this tournament or recent matches, so Spain's goalkeeper side can only be marked as insufficient evidence, not assumed to be an individual weakness.",
+      "text_cn": "缺少乌奈·西蒙在本届或近期点球大战中的专门扑点数据，因此西班牙门将侧只能标记为证据不足，不能臆测为个人能力劣势。",
+      "text_en": "There is no specific penalty-shootout save data for Unai Simon in this tournament or recent matches, so Spain's goalkeeper side can only be marked as insufficient evidence, not assumed to be an individual weakness."
+    }
+  ],
+  "condition_en": "Condition: the match is level after 90 minutes and remains level after extra time; inputs include the 90-minute prediction, extra-time mini-pipeline results, penalty evidence, goalkeepers, takers and pressure factors.",
+  "axis_note_en": "Rows show Spain's penalty goals and columns show Argentina's penalty goals; 6+ means the shootout reaches round six or later. Probabilities are conditional on reaching penalties."
+}
