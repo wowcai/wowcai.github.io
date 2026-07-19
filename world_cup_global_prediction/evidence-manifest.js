@@ -8,5 +8,6 @@ window.WORLD_CUP_TOURNAMENT_EVIDENCE_FILES = [
   "known_full_baseline_20260711_awards_display_evidence_cards_zh.md",
   "known_full_baseline_20260712_awards_display_evidence_cards_zh.md",
   "known_full_baseline_20260715_awards_display_evidence_cards_zh.md",
-  "known_full_baseline_20260716_awards_display_evidence_cards_zh.md"
+  "known_full_baseline_20260716_awards_display_evidence_cards_zh.md",
+  "known_full_baseline_20260719_awards_display_evidence_cards_zh.md"
 ];
